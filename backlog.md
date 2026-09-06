@@ -12,3 +12,4 @@ Anything out of v1 scope gets one line here instead of getting built.
 - Batch API for bulk extraction (50% cost) once item lists are long.
 - `corpus:verify` task that checks on-disk sha256 against `MANIFEST.md`.
 - G items: awaiting Verifier answer on Maine instrument; if G-via-OSA, acquire RAI v1.17.1 + OSA item set with their own manifest keys and extract from those editions.
+- Sub-item files repeat parent interview-level rules (~12 rules x 10 D0500 sub-items); consider a template line restricting sub-items to sub-item-specific content, decision pending Verifier's answer on whether Maine audits stems individually.
