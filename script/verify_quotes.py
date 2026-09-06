@@ -9,8 +9,10 @@ For each `source` with a `quote`: normalises whitespace/dashes/quotes, splits on
   VERBATIM        found on the cited page
   WRONG PAGE      found verbatim, but on a different page label
   NOT VERBATIM    not found; prints the closest window on the cited page
-  IMAGE PAGE      the cited page has (almost) no text layer — check the rendered
-                  page by eye; the text check cannot see what the model saw
+  IMAGE PAGE      the cited page has (almost) no text layer, or has an embedded
+                  image (the item form) and the quote is not in its text layer —
+                  check the rendered page by eye; the text check cannot see what
+                  the model saw
   NO QUOTE        citation without a quote
 Exit status is 1 if any WRONG PAGE / NOT VERBATIM remains.
 """
@@ -31,7 +33,7 @@ def load_pages(pdf):
     for i, p in enumerate(PdfReader(pdf).pages):
         raw = p.extract_text() or ""
         m = re.search(r"Page ([A-Z]+-\d+)", raw)
-        pages[m.group(1) if m else str(i + 1)] = (norm(raw), len(raw))
+        pages[m.group(1) if m else str(i + 1)] = (norm(raw), len(raw), len(p.images))
     return pages
 
 def citations(node, path=()):
@@ -65,13 +67,13 @@ def main(item_path, pdf_path):
             counts["NO QUOTE"] += 1; print(f"NO QUOTE      {path}  {c['loc']}"); continue
         if label not in pages:
             counts["NOT VERBATIM"] += 1; print(f"NOT VERBATIM  {path}  {c['loc']} — label not in this PDF"); continue
-        text, raw_len = pages[label]
+        text, raw_len, n_images = pages[label]
         for frag in (norm(f) for f in q.split("...") if f.strip()):
             if frag in text:
                 counts["VERBATIM"] += 1; continue
-            if raw_len < IMAGE_PAGE_MAX_CHARS:
-                counts["IMAGE PAGE"] += 1; print(f"IMAGE PAGE    {path}  {c['loc']}  ({raw_len} text chars) — verify by eye:\n    {frag[:160]}"); continue
-            elsewhere = [l for l, (t, _) in pages.items() if frag in t]
+            elsewhere = [l for l, (t, _, _) in pages.items() if frag in t]
+            if not elsewhere and (raw_len < IMAGE_PAGE_MAX_CHARS or n_images):
+                counts["IMAGE PAGE"] += 1; print(f"IMAGE PAGE    {path}  {c['loc']}  ({raw_len} text chars, {n_images} image) — verify by eye:\n    {frag[:160]}"); continue
             if elsewhere:
                 counts["WRONG PAGE"] += 1; print(f"WRONG PAGE    {path}  cited {c['loc']}, found on {elsewhere}\n    {frag[:160]}"); continue
             ratio, win = closest(frag, text)
