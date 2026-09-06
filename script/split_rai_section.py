@@ -9,6 +9,7 @@ Usage:
   python3 script/split_rai_section.py --section G
   python3 script/split_rai_section.py --section GG --dry-run
   python3 script/split_rai_section.py --pdf corpus/federal/<other>.pdf --section G --out <path>
+  python3 script/split_rai_section.py --pages 79-83 --out corpus/federal/rai-manual-v1.20.1-ch3-conventions.pdf
 
 Locating the range: prefers the PDF outline (top-level entry titled
 "SECTION <X>: ..."; the range ends where the next top-level entry begins).
@@ -75,7 +76,7 @@ def locate_via_text(reader, section):
 def page_labels(reader, first, last):
     labels = []
     for i in (first, last):
-        m = re.search(r"Page ([A-Z]+-\d+)", reader.pages[i].extract_text() or "")
+        m = re.search(r"Page ([A-Z0-9]+-\d+)", reader.pages[i].extract_text() or "")
         labels.append(m.group(1) if m else "?")
     return labels
 
@@ -84,6 +85,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--pdf", type=Path, default=DEFAULT_PDF)
     ap.add_argument("--section", default="G", help="section letter(s), e.g. G or GG")
+    ap.add_argument("--pages", help="explicit 1-indexed PDF page range, e.g. 79-83 (overrides --section)")
     ap.add_argument("--out", type=Path, help="default: <pdf stem>-ch3-sec<X>.pdf beside the source")
     ap.add_argument("--dry-run", action="store_true", help="locate and report only; write nothing")
     args = ap.parse_args()
@@ -91,10 +93,16 @@ def main():
     section = args.section.upper()
     if not args.pdf.exists():
         sys.exit(f"Source PDF not found: {args.pdf}")
-    out = args.out or args.pdf.with_name(f"{args.pdf.stem}-ch3-sec{section}.pdf")
+    out = args.out or args.pdf.with_name(f"{args.pdf.stem}-sec{section}.pdf")
 
     reader = PdfReader(str(args.pdf))
-    found = locate_via_outline(reader, section) or locate_via_text(reader, section)
+    if args.pages:
+        a, b = (int(x) for x in args.pages.split("-"))
+        found = (a - 1, b - 1, f"explicit --pages {args.pages}")
+        if not args.out:
+            sys.exit("--pages requires --out")
+    else:
+        found = locate_via_outline(reader, section) or locate_via_text(reader, section)
     if not found:
         sections = [t for t, _ in top_level_outline(reader) if t.upper().startswith("SECTION ")]
         print(f"Section {section} not found in {args.pdf} (outline and page-text scan).", file=sys.stderr)

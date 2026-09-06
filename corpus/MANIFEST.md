@@ -34,13 +34,15 @@ The full manual (33 MB, 1001 pages) exceeds the Anthropic native-PDF limit (32 M
 | `rai-manual-v1.20.1-seco` | Section O | 502-551 | O-1 .. O-50 | 2.5 MB | `a4bed125601877585ccf810d5320c4776066fa7aa1fecb89e54bb99a4251802d` | downloaded |
 | `rai-manual-v1.20.1-secgg` | Section GG | 257-323 | GG-1 .. GG-67 | 7.6 MB | `5ec11e95bd8beb02b162acc9465f208c90dae18aa5cab1991843e1647a6e45dc` | downloaded |
 | `rai-manual-v1.20.1-seci` | Section I | 339-356 | I-1 .. I-18 | 1.6 MB | `22933649c3bcf097fa3892b616fd93b541a88d5373da081bff3a88aff6b7bbb4` | downloaded |
+| `rai-manual-v1.20.1-ch2-observation-period` | Chapter 2 pp. 2-9–2-21: assessment types, ARD, observation/look-back period definitions and the assessment summary table | 30-42 | 2-9 .. 2-21 | 0.4 MB | `32fb27639aec37e101e806da6db6c54a5b91867953f87e595bf2c7548a16d7c5` | downloaded |
+| `rai-manual-v1.20.1-ch3-conventions` | Chapter 3 pp. 3-1–3-4: 3.1–3.3 including Coding Conventions | 80-83 | 3-1 .. 3-4 | 0.4 MB | `7ddccea53bb7e0b22bb509cb7df5e22f3a0049c97ce94f36b598c03950b5d8e1` | downloaded |
 
 ## Maine (`corpus/maine/`)
 
 | key | title | version / date | source (likely) | downloaded | sha256 | status |
 |---|---|---|---|---|---|---|
-| `mainecare-101-ii-67` | MaineCare Benefits Manual, Chapter 101, Chapter II, Section 67: Nursing Facility Services | current adopted rule (record effective date) | https://www.maine.gov/sos/cec/rules/10/ch101.htm (Ch. II §67) | | | TODO |
-| `mainecare-101-iii-67` | MaineCare Benefits Manual, Chapter 101, Chapter III, Section 67: Principles of Reimbursement for Nursing Facilities (case-mix, RUG/PDPM rules, MDS audit) | current adopted rule | https://www.maine.gov/sos/cec/rules/10/ch101.htm (Ch. III §67) | | | TODO |
+| `mainecare-101-ii-67` | MaineCare Benefits Manual, Chapter 101, Chapter II, Section 67: Nursing Facility Services | LUP 09.15.2014 (per filename; confirm effective date inside) | https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/c2s067-LUP%2009.15.2014%20NSC.docx — Word file; save as `corpus/maine/mainecare-101-ii-67.docx`, convert with `script/docx_to_txt.py` | | | TODO |
+| `mainecare-101-iii-67` | MaineCare Benefits Manual, Chapter 101, Chapter III, Section 67: Principles of Reimbursement for Nursing Facilities (case-mix, RUG/PDPM rules, MDS audit) | 2025-091 (per filename; confirm effective date inside) | https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/c3s067-2025-091%20NSC.docx — Word file; save as `corpus/maine/mainecare-101-iii-67.docx`, convert with `script/docx_to_txt.py` | | | TODO |
 | `mainecare-101-ii-97` | MaineCare Benefits Manual, Chapter 101, Chapter II, Section 97: Private Non-Medical Institution Services | current adopted rule | https://www.maine.gov/sos/cec/rules/10/ch101.htm (Ch. II §97) | | | TODO |
 | `mainecare-101-ii-97-appx-c` | Section 97 Appendix C: Residential Care Facilities (MDS-RCA requirement lives here) | current adopted rule | https://www.maine.gov/sos/cec/rules/10/ch101.htm (Ch. II §97 Appendix C) | | | TODO |
 | `mainecare-101-iii-97` | MaineCare Benefits Manual, Chapter 101, Chapter III, Section 97: Principles of Reimbursement for PNMIs (Appendix C rates / case-mix) | current adopted rule | https://www.maine.gov/sos/cec/rules/10/ch101.htm (Ch. III §97) | | | TODO |
