@@ -57,6 +57,9 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Loads .env (git-ignored) so local pipeline runs pick up ANTHROPIC_API_KEY. Never used in production.
+  gem "dotenv-rails"
 end
 
 group :development do
