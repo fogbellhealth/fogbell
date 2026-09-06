@@ -33,3 +33,12 @@
 # Ignore key files for decrypting credentials and more.
 /config/*.key
 
+
+# Corpus: large public PDFs and possibly non-public Verifier materials.
+# MANIFEST.md (with sha256) is the integrity record; the bytes are not tracked.
+/corpus/**
+!/corpus/MANIFEST.md
+!/corpus/*/
+!/corpus/*/README.md
+
+# Rejected (schema-invalid) extractions and smoke output live in tmp/ (already ignored).
