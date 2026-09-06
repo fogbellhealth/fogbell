@@ -74,3 +74,4 @@ Each item file: `item_id`, `item_name`, `section`, `instrument` ("MDS-3.0" | "MD
 - **Nothing fake in `rulebook/items/`.** Smoke runs write to `tmp/`. The fake item X0100 exists only under `test/fixtures/`. The changelog is appended beside `OUT` (`OUT/../changelog.md`), so smoke runs never touch `rulebook/changelog.md`.
 - **Rejected extractions** (schema-invalid model output) are written to `tmp/rulebook_rejects/` for inspection; nothing invalid is ever written into the rulebook.
 - **Loader fails fast at boot** if any item in `rulebook/items/` is schema-invalid.
+- **Throwaway corpus tooling lives in `script/`** (e.g. `script/split_rai_section.py`). Python is permitted there only; the no-Python rule covers the product, not disposable corpus utilities.
