@@ -218,7 +218,8 @@ module Fogbell
 
       # The extractor sometimes writes pipeline vocabulary into free text; keep the page in plain English.
       def plain(text)
-        text.to_s.gsub("NOT_FOUND", "Not found")
+        text = text.to_s.gsub("NOT_FOUND", "Not found")
+        NOT_FOUND_LABELS.sort_by { |k, _| -k.length }.reduce(text) { |t, (k, label)| t.gsub("`#{k}`", label).gsub(k, label) }
       end
 
       def md(text)

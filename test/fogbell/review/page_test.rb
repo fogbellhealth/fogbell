@@ -41,6 +41,13 @@ module Fogbell
         assert_no_match(/lookback_days|federal_coding_rules|supportive_documentation|not_found/, @page)
       end
 
+      test "field names inside free text are rendered as plain English" do
+        data = JSON.parse(file_fixture("rulebook/valid_item.json").read)
+        data["lookback_notes"] = "NOT_FOUND: lookback_days is not stated; see lookback_source."
+        page = Page.new(Rulebook::Item.from_hash(data), manifest: @manifest).render
+        assert_match(/Not found: the look-back window is not stated; see a citation for the look-back window\./, page)
+      end
+
       test "manifest shows a readable document name" do
         assert_equal "RAI Manual v1.20.1 (Oct 2025)", @manifest.name("rai-manual-v1.20.1")
         assert_equal "unknown-key", @manifest.name("unknown-key")
