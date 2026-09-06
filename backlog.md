@@ -13,3 +13,4 @@ Anything out of v1 scope gets one line here instead of getting built.
 - `corpus:verify` task that checks on-disk sha256 against `MANIFEST.md`.
 - G items: awaiting Verifier answer on Maine instrument; if G-via-OSA, acquire RAI v1.17.1 + OSA item set with their own manifest keys and extract from those editions.
 - Sub-item files repeat parent interview-level rules (~12 rules x 10 D0500 sub-items); consider a template line restricting sub-items to sub-item-specific content, decision pending Verifier's answer on whether Maine audits stems individually.
+- Chapter-level definitions are invisible to item extraction: the resident mood interview (D0150) is 'conducted during the look-back period of the ARD' (p. D-2) with no day count on its pages, so lookback_days is honestly null; the general 7-day observation period is defined in Chapter 2/3.3. Consider a document-wide conventions preamble or a 'general conventions' item that items can cite.
