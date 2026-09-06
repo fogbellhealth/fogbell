@@ -2,7 +2,8 @@
 
 # Rulebook pipeline. Run locally, by hand. Never runs in production.
 #
-#   bin/rails rulebook:extract DOC=corpus/federal/rai-manual-v1.20.1.pdf ITEMS=G0110A,G0110B
+#   bin/rails rulebook:extract DOC=corpus/federal/rai-manual-v1.20.1-secD.pdf DOC_ID=rai-manual-v1.20.1 ITEMS=D0500,D0600 MODE=pdf
+#   bin/rails rulebook:review_pages [OUT=review] [ITEMS=D0500,D0600]
 #
 # Arguments are environment variables (rake bracket args split on commas):
 #   DOC         path to the source document (.pdf or .txt)                         required
@@ -77,9 +78,21 @@ namespace :rulebook do
     abort "rulebook:layer_state is not implemented yet — see backlog.md"
   end
 
-  desc "Generate review/<ID>.md one-pagers for the Verifier (not implemented)"
+  desc "Generate review/<ID>.md one-pagers for the Verifier from the promoted rulebook (OUT=review, ITEMS=ID,ID)"
   task review_pages: :environment do
-    abort "rulebook:review_pages is not implemented yet — see backlog.md"
+    out_dir = Pathname(ENV.fetch("OUT", Rails.root.join("review").to_s))
+    registry = Fogbell::Rulebook.load
+    wanted = ENV["ITEMS"].to_s.split(",").map(&:strip).reject(&:empty?)
+    items = wanted.empty? ? registry.items : wanted.map { |id| registry.fetch(id) }
+    abort "no items in #{Fogbell::Rulebook.items_dir}" if items.empty?
+
+    manifest = Fogbell::Review::Manifest.default
+    out_dir.mkpath
+    items.each do |item|
+      path = out_dir.join("#{item.item_id}.md")
+      path.write(Fogbell::Review::Page.new(item, manifest: manifest).render)
+      puts "wrote #{path.relative_path_from(Rails.root)}"
+    end
   end
 
   desc "Run evals/scenarios against the rulebook (not implemented)"
