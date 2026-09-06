@@ -19,6 +19,22 @@ URLs marked "likely" were not verified at the time of writing; confirm the landi
 | `mds3-section-s-state-items` | Section S state-optional items: list of which states use which S items | current | https://qtso.cms.gov/ (Section S / state items) — confirm; Maine's own S items are in the Maine submission spec below | | | TODO |
 | `pdpm-classification-walkthrough` | PDPM case-mix classification materials (nursing component item mapping) | current | https://www.cms.gov/medicare/payment/prospective-payment-systems/skilled-nursing-facility-snf/patient-driven-payment-model | | | TODO |
 
+### Section cuts of `rai-manual-v1.20.1` (transport artifacts, not sources)
+
+The full manual (33 MB, 1001 pages) exceeds the Anthropic native-PDF limit (32 MB / 600 pages), so each Chapter 3 section is cut into its own file with `script/split_rai_section.py --section <X> --out corpus/federal/rai-manual-v1.20.1-sec<X>.pdf`. **Citations still use doc key `rai-manual-v1.20.1`** with the manual's printed page labels (`p. D-4`); pass `DOC_ID=rai-manual-v1.20.1` to `rulebook:extract`. These keys exist only so the bytes actually sent to the model are on record. All cuts made 2026-09-06 from the sha256 above; every cut starts at label `<X>-1` and its page count equals its last label, so the cut is exactly the labeled section. Section GG is cut but NOT in v1 scope — do not extract from it until the Verifier rules.
+
+| key | section | PDF pages (1-indexed) | printed labels | size | sha256 | status |
+|---|---|---|---|---|---|---|
+| `rai-manual-v1.20.1-secd` | Section D | 197-215 | D-1 .. D-19 | 1.3 MB | `acc12effc56d810febcbe8c52032daf0d8fdb8f1787361b304110a22c64ca582` | downloaded |
+| `rai-manual-v1.20.1-sece` | Section E | 216-238 | E-1 .. E-23 | 1.3 MB | `19a39fe19070f227a673156e935b9d03a69d73e8ff6dcc6455dc2e77a423718f` | downloaded |
+| `rai-manual-v1.20.1-secc` | Section C | 162-196 | C-1 .. C-35 | 1.9 MB | `d0a885fed13b5c099b31f5d096b3f8ced26d1b9e2cd70b4d836124dd95a2ebb1` | downloaded |
+| `rai-manual-v1.20.1-seck` | Section K | 408-426 | K-1 .. K-19 | 1.1 MB | `21087d2b29a9aceb222f30b69f8718ab85197bfd396fa7e5212677267b59b703` | downloaded |
+| `rai-manual-v1.20.1-secm` | Section M | 430-473 | M-1 .. M-44 | 2.2 MB | `96bfb0e63ea4593a49d30ea41523ff142a1b62d2ff649c95cc43f82423321327` | downloaded |
+| `rai-manual-v1.20.1-secn` | Section N | 474-501 | N-1 .. N-28 | 1.4 MB | `c900467f16563c3ebbd54c8acb026cc96487525ff913fcd21d2fdcd721d8ff23` | downloaded |
+| `rai-manual-v1.20.1-seco` | Section O | 502-551 | O-1 .. O-50 | 2.5 MB | `a4bed125601877585ccf810d5320c4776066fa7aa1fecb89e54bb99a4251802d` | downloaded |
+| `rai-manual-v1.20.1-secgg` | Section GG | 257-323 | GG-1 .. GG-67 | 7.6 MB | `5ec11e95bd8beb02b162acc9465f208c90dae18aa5cab1991843e1647a6e45dc` | downloaded |
+| `rai-manual-v1.20.1-seci` | Section I | 339-356 | I-1 .. I-18 | 1.6 MB | `22933649c3bcf097fa3892b616fd93b541a88d5373da081bff3a88aff6b7bbb4` | downloaded |
+
 ## Maine (`corpus/maine/`)
 
 | key | title | version / date | source (likely) | downloaded | sha256 | status |
