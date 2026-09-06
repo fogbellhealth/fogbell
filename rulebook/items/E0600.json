@@ -1,0 +1,212 @@
+{
+  "item_id": "E0600",
+  "item_name": "Impact on Others",
+  "section": "E",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. E-11",
+    "quote": "Consider the previous review of the clinical record, staff interviews across all shifts and disciplines, interviews with others who had close interactions with the resident and previous observations of the behaviors identified in E0200 for the 7-day look-back period."
+  },
+  "lookback_notes": "The Steps for Assessment for E0600 direct the assessor to consider the previously reviewed record, interviews, and observations of the behaviors identified in E0200 for the 7-day look-back period. The document does not state on this page how the 7 days are counted relative to the ARD.",
+  "coding_levels": [
+    {
+      "code": "A-0",
+      "label": "E0600A — No",
+      "definition": "None of the identified behavioral symptom(s) placed staff, visitors, or other residents at significant risk for physical injury.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-11",
+        "quote": "Code 0, no: if none of the identified behavioral symptom(s) placed staff, visitors, or other residents at significant risk for physical injury."
+      }
+    },
+    {
+      "code": "A-1",
+      "label": "E0600A — Yes",
+      "definition": "Any of the identified behavioral symptom(s) placed staff, visitors, or other residents at significant risk for physical injury.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-11",
+        "quote": "Code 1, yes: if any of the identified behavioral symptom(s) placed staff, visitors, or other residents at significant risk for physical injury."
+      }
+    },
+    {
+      "code": "B-0",
+      "label": "E0600B — No",
+      "definition": "None of the identified behavioral symptom(s) significantly intruded on the privacy or activity of others.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-11",
+        "quote": "Code 0, no: if none of the identified behavioral symptom(s) significantly intruded on the privacy or activity of others."
+      }
+    },
+    {
+      "code": "B-1",
+      "label": "E0600B — Yes",
+      "definition": "Any of the identified behavioral symptom(s) kept other residents from enjoying privacy or engaging in informal activities (not organized or run by staff). Includes coming in uninvited, invading, or forcing oneself on others' private activities.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-11",
+        "quote": "Code 1, yes: if any of the identified behavioral symptom(s) kept other residents from enjoying privacy or engaging in informal activities (not organized or run by staff). Includes coming in uninvited, invading, or forcing oneself on others' private activities."
+      }
+    },
+    {
+      "code": "C-0",
+      "label": "E0600C — No",
+      "definition": "None of the identified behavioral symptom(s) significantly disrupted delivery of care or the living environment.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-12",
+        "quote": "Code 0, no: if none of the identified behavioral symptom(s) significantly disrupted delivery of care or the living environment."
+      }
+    },
+    {
+      "code": "C-1",
+      "label": "E0600C — Yes",
+      "definition": "Any of the identified behavioral symptom(s) created a climate of excessive noise or interfered with the receipt of care or participation in organized activities by other residents.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-12",
+        "quote": "Code 1, yes: if any of the identified behavioral symptom(s) created a climate of excessive noise or interfered with the receipt of care or participation in organized activities by other residents."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "E0600 is completed only when E0300 is coded 1, yes (any of E0200A, E0200B, or E0200C coded 1, 2, or 3); if E0300 is coded 0, skip to E0800.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-7",
+        "quote": "Code 1, yes: if any of E0200A, E0200B, or E0200C were coded 1, 2, or 3. Proceed to complete Impact on Resident item (E0500), and Impact on Others item (E0600)."
+      }
+    },
+    {
+      "rule": "To code E0600, determine if the behaviors identified (in E0200) put others at significant risk of physical illness or injury, intruded on their privacy or activities, and/or interfered with their care or living environments.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-11",
+        "quote": "To code E0600, determine if the behaviors identified put others at significant risk of physical illness or injury, intruded on their privacy or activities, and/or interfered with their care or living environments."
+      }
+    },
+    {
+      "rule": "E0600A: code 0 if none of the identified behavioral symptoms placed staff, visitors, or other residents at significant risk for physical injury; code 1 if any did.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-11",
+        "quote": "Code 1, yes: if any of the identified behavioral symptom(s) placed staff, visitors, or other residents at significant risk for physical injury."
+      }
+    },
+    {
+      "rule": "E0600B: code 1 if any identified behavioral symptom kept other residents from enjoying privacy or engaging in informal activities (not organized or run by staff), including coming in uninvited, invading, or forcing oneself on others' private activities.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-11",
+        "quote": "Code 1, yes: if any of the identified behavioral symptom(s) kept other residents from enjoying privacy or engaging in informal activities (not organized or run by staff). Includes coming in uninvited, invading, or forcing oneself on others' private activities."
+      }
+    },
+    {
+      "rule": "E0600C: code 1 if any identified behavioral symptom created a climate of excessive noise or interfered with the receipt of care or participation in organized activities by other residents.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-12",
+        "quote": "Code 1, yes: if any of the identified behavioral symptom(s) created a climate of excessive noise or interfered with the receipt of care or participation in organized activities by other residents."
+      }
+    },
+    {
+      "rule": "For E0600A, code based on whether the behavior placed others at significant risk for physical injury; physical injury is trauma that results in pain or other distressing physical symptoms, impaired organ function, physical disability or other adverse consequences, regardless of the need for medical, surgical, nursing, or rehabilitative intervention.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-12",
+        "quote": "For E0600A, code based on whether the behavior placed others at significant risk for physical injury. Physical injury is trauma that results in pain or other distressing physical symptoms, impaired organ function, physical disability or other adverse consequences, regardless of the need for medical, surgical, nursing, or rehabilitative intervention."
+      }
+    },
+    {
+      "rule": "For E0600B, code based on whether the behavior violates other residents' privacy or interrupts other residents' ADL performance or limits engagement in/enjoyment of informal social or recreational activities to such an extent that it causes the other residents distress or inconvenience, whether or not the other residents complain.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-12",
+        "quote": "For E0600B, code based on whether the behavior violates other residents’ privacy or interrupts other residents’ performance of activities of daily living or limits engagement in or enjoyment of informal social or recreational activities to such an extent that it causes the other residents to experience distress (e.g., displeasure or annoyance) or inconvenience, whether or not the other residents complain."
+      }
+    },
+    {
+      "rule": "For E0600C, code based on whether the behavior interferes with staff ability to deliver care or conduct organized activities, interrupts receipt of care or participation in organized activities by other residents, and/or causes other residents to experience distress or adverse consequences.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-12",
+        "quote": "For E0600C, code based on whether the behavior interferes with staff ability to deliver care or conduct organized activities, interrupts receipt of care or participation in organized activities by other residents, and/or causes other residents to experience distress or adverse consequences."
+      }
+    },
+    {
+      "rule": "E0600 is coded based on the behaviors identified in item E0200 and their impact on others.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-11",
+        "quote": "Behaviors identified in item E0200 put others at risk for significant injury, intrude on their privacy or activities and/or disrupt their care or living environments. The impact on others is coded here in item E0600."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review of the clinical record for the 7-day look-back period supporting the behaviors identified in E0200 and their impact on others.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-11",
+          "quote": "Consider the previous review of the clinical record, staff interviews across all shifts and disciplines, interviews with others who had close interactions with the resident and previous observations of the behaviors identified in E0200 for the 7-day look-back period."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Stated as a Step for Assessment; the document does not label it as required documentation."
+      },
+      {
+        "criterion": "Staff interviews across all shifts and disciplines, plus interviews with others who had close interactions with the resident, informing the impact determination.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-11",
+          "quote": "Consider the previous review of the clinical record, staff interviews across all shifts and disciplines, interviews with others who had close interactions with the resident and previous observations of the behaviors identified in E0200 for the 7-day look-back period."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Same Step for Assessment passage; interview sources for the impact assessment."
+      },
+      {
+        "criterion": "Documentation comparable to a baseline: subsequent assessments and documentation can be compared with a baseline to identify changes in the resident's behavior, including response to interventions.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-11",
+          "quote": "Subsequent assessments and documentation can be compared with a baseline to identify changes in the resident’s behavior, including response to interventions."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "low",
+        "notes": "Framed under Planning for Care rationale rather than as a documentation requirement."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The pages for E0600 do not tie this item to any payment or case-mix classification."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "case_mix_relevance",
+    "state_deltas",
+    "common_audit_citations",
+    "conflicts"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

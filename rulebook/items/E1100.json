@@ -1,0 +1,153 @@
+{
+  "item_id": "E1100",
+  "item_name": "Change in Behavior or Other Symptoms",
+  "section": "E",
+  "instrument": "MDS-3.0",
+  "lookback_days": null,
+  "lookback_notes": "No observation/look-back window in days is stated for E1100. The item is coded by comparing responses to items E0100–E1000 on the current MDS assessment with responses on the prior MDS assessment (\"Review responses provided to items E0100-E1000 on the current MDS assessment. Compare with responses provided on prior MDS assessment.\", p. E-22). The item header states the comparison is to the prior assessment (OBRA or Scheduled PPS), but no day count is given.",
+  "coding_levels": [
+    {
+      "code": "0",
+      "label": "Same",
+      "definition": "Overall behavior is the same (unchanged).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-22",
+        "quote": "Code 0, same: if overall behavior is the same (unchanged)."
+      }
+    },
+    {
+      "code": "1",
+      "label": "Improved",
+      "definition": "Overall behavior is improved.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-22",
+        "quote": "Code 1, improved: if overall behavior is improved."
+      }
+    },
+    {
+      "code": "2",
+      "label": "Worse",
+      "definition": "Overall behavior is worse.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-22",
+        "quote": "Code 2, worse: if overall behavior is worse."
+      }
+    },
+    {
+      "code": "3",
+      "label": "N/A because no prior MDS assessment",
+      "definition": "There was no prior MDS assessment of this resident.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-22",
+        "quote": "Code 3, N/A: if there was no prior MDS assessment of this resident."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Consider all of the symptoms assessed in items E0100 through E1000 when coding E1100.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-21",
+        "quote": "Change in Behavior or Other Symptoms\nConsider all of the symptoms assessed in items E0100 through E1000"
+      }
+    },
+    {
+      "rule": "Code how the resident's current behavior status, care rejection, or wandering compares to the prior assessment (OBRA or Scheduled PPS).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-21",
+        "quote": "How does resident's current behavior status, care rejection, or wandering compare to prior assessment (OBRA or Scheduled PPS)?"
+      }
+    },
+    {
+      "rule": "Review responses provided to items E0100-E1000 on the current MDS assessment and compare with responses provided on the prior MDS assessment.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-22",
+        "quote": "1. Review responses provided to items E0100-E1000 on the current MDS assessment.\n2. Compare with responses provided on prior MDS assessment."
+      }
+    },
+    {
+      "rule": "Taking all of these MDS items into consideration, make a global assessment of the change in behavior from the most recent to the current MDS, and rate the overall behavior as same, improved, or worse.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-22",
+        "quote": "3. Taking all of these MDS items into consideration, make a global assessment of the change in behavior from the most recent to the current MDS.\n4. Rate the overall behavior as same, improved, or worse."
+      }
+    },
+    {
+      "rule": "When a resident has multiple behavioral symptoms that vary in different directions, use clinical judgment to rate the item to reflect the overall direction of behavior change, estimating the net effects of multiple behaviors.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-22",
+        "quote": "Using clinical judgment, this item should be rated to reflect the overall direction of behavior change, estimating the net effects of multiple behaviors."
+      }
+    },
+    {
+      "rule": "E1100 is the item reached when E0900 Wandering—Presence & Frequency is coded 0, behavior not exhibited (skip to Change in Behavior or Other Symptoms item E1100).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-19",
+        "quote": "Code 0, behavior not exhibited: if wandering was not exhibited during the 7-day look-back period. Skip to Change in Behavior or Other Symptoms item (E1100)."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Responses to items E0100-E1000 on the current MDS assessment (the assessment record itself) must be available for review.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-22",
+          "quote": "1. Review responses provided to items E0100-E1000 on the current MDS assessment."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as step 1 of Steps for Assessment."
+      },
+      {
+        "criterion": "The prior MDS assessment responses must be available for comparison; if no prior MDS assessment exists, code 3, N/A.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-22",
+          "quote": "2. Compare with responses provided on prior MDS assessment."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Absence of a prior MDS assessment drives code 3."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The pages for E1100 do not tie this item to any payment or case-mix classification. The item header references comparison to a prior \"OBRA or Scheduled PPS\" assessment, but no payment/case-mix impact is stated."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "state_deltas",
+    "common_audit_citations",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

@@ -1,0 +1,129 @@
+{
+  "item_id": "E0500C",
+  "item_name": "Impact on Resident — Did any of the identified symptom(s) significantly interfere with the resident's participation in activities or social interactions?",
+  "section": "E",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. E-8",
+    "quote": "Consider the previous review of the medical record, staff interviews across all shifts and disciplines, interviews with others who had close interactions with the resident and previous observations of the behaviors identified in E0200 for the 7-day look-back period."
+  },
+  "lookback_notes": "The Steps for Assessment for E0500 direct the assessor to consider the review, interviews and observations of the behaviors identified in E0200 for the 7-day look-back period. The document does not state on this page how the 7 days are counted relative to the ARD.",
+  "coding_levels": [
+    {
+      "code": "0",
+      "label": "No",
+      "definition": "None of the identified symptom(s) significantly interfered with the resident's participation in activities or social interactions.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-9",
+        "quote": "Code 0, no: if none of the identified symptom(s) significantly interfered with the resident's participation in activities or social interactions."
+      }
+    },
+    {
+      "code": "1",
+      "label": "Yes",
+      "definition": "Any of the identified behavioral symptom(s) significantly interfered with or decreased the resident's participation or caused staff not to include residents in activities or social interactions.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-9",
+        "quote": "Code 1, yes: if any of the identified behavioral symptom(s) significantly interfered with or decreased the resident's participation or caused staff not to include residents in activities or social interactions."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Code E0500A, E0500B, and E0500C based on all of the behavioral symptoms coded in E0200.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-8",
+        "quote": "Code E0500A, E0500B, and E0500C based on all of the behavioral symptoms coded in E0200."
+      }
+    },
+    {
+      "rule": "Determine whether the behaviors significantly interfered with the resident's participation in activities or social interactions.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-8",
+        "quote": "Determine whether those behaviors put the resident at significant risk of physical illness or injury, whether the behaviors significantly interfered with the resident's care, and/or whether the behaviors significantly interfered with the resident's participation in activities or social interactions."
+      }
+    },
+    {
+      "rule": "For E0500C, code if the impact of the resident's behavior is limiting or keeping the resident from engaging in solitary activities or hobbies, joining groups, or attending programmed activities or having positive social encounters with visitors, other residents, or staff.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-9",
+        "quote": "For E0500C, code if the impact of the resident's behavior is limiting or keeping the resident from engaging in solitary activities or hobbies, joining groups, or attending programmed activities or having positive social encounters with visitors, other residents, or staff."
+      }
+    },
+    {
+      "rule": "E0500 (including E0500C) is completed only when E0300 is coded 1, yes (any of E0200A, E0200B, or E0200C coded 1, 2, or 3); if E0300 is coded 0, no, skip to E0800.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-7",
+        "quote": "Code 1, yes: if any of E0200A, E0200B, or E0200C were coded 1, 2, or 3. Proceed to complete Impact on Resident item (E0500), and Impact on Others item (E0600)."
+      }
+    },
+    {
+      "rule": "E0300 determines whether E0500 (Impact on Resident) and E0600 (Impact on Others) are required to be completed.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-7",
+        "quote": "To determine whether or not additional items E0500, Impact on Resident, and E0600, Impact on Others, are required to be completed."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review of the medical record, staff interviews across all shifts and disciplines, interviews with others who had close interactions with the resident, and observations of the behaviors identified in E0200 for the 7-day look-back period.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-8",
+          "quote": "Consider the previous review of the medical record, staff interviews across all shifts and disciplines, interviews with others who had close interactions with the resident and previous observations of the behaviors identified in E0200 for the 7-day look-back period."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as a numbered Step for Assessment for E0500."
+      },
+      {
+        "criterion": "Documentation of behavior can be compared with a baseline on subsequent assessments to identify changes in the resident's behavior, including response to interventions.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-8",
+          "quote": "Subsequent assessments and documentation can be compared to a baseline to identify changes in the resident's behavior, including response to interventions."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "low",
+        "notes": "Framed under Planning for Care rationale, not as a required record element."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages do not tie E0500C to any payment or case-mix classification."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "case_mix_relevance.level",
+    "state_deltas",
+    "common_audit_citations",
+    "conflicts"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

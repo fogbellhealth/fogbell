@@ -1,0 +1,170 @@
+{
+  "item_id": "E0900",
+  "item_name": "Wandering—Presence & Frequency",
+  "section": "E",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. E-19",
+    "quote": "Review the medical record and interview staff to determine whether wandering occurred during the 7-day look-back period."
+  },
+  "lookback_notes": "The manual repeatedly refers to a \"7-day look-back period\" for determining whether wandering occurred and its frequency. The document does not state on these pages how the 7 days are counted relative to the ARD.",
+  "coding_levels": [
+    {
+      "code": "0",
+      "label": "Behavior not exhibited",
+      "definition": "Wandering was not exhibited during the 7-day look-back period. Skip to Change in Behavior or Other Symptoms item (E1100).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-19",
+        "quote": "Code 0, behavior not exhibited: if wandering was not exhibited during the 7-day look-back period. Skip to Change in Behavior or Other Symptoms item (E1100)."
+      }
+    },
+    {
+      "code": "1",
+      "label": "Behavior of this type occurred 1-3 days",
+      "definition": "The resident wandered on 1-3 days during the 7-day look-back period, regardless of the number of episodes that occurred on any one of those days. Proceed to answer Wandering—Impact item (E1000).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-19",
+        "quote": "Code 1, behavior of this type occurred 1-3 days: if the resident wandered on 1-3 days during the 7-day look-back period, regardless of the number of episodes that occurred on any one of those days. Proceed to answer Wandering—Impact item (E1000)."
+      }
+    },
+    {
+      "code": "2",
+      "label": "Behavior of this type occurred 4-6 days, but less than daily",
+      "definition": "The resident wandered on 4-6 days during the 7-day look-back period, regardless of the number of episodes that occurred on any one of those days. Proceed to answer Wandering—Impact item (E1000).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-19",
+        "quote": "Code 2, behavior of this type occurred 4-6 days, but less than daily: if the resident wandered on 4-6 days during the 7-day look-back period, regardless of the number of episodes that occurred on any one of those days. Proceed to answer Wandering—Impact item (E1000)."
+      }
+    },
+    {
+      "code": "3",
+      "label": "Behavior of this type occurred daily",
+      "definition": "The resident wandered daily during the 7-day look-back period, regardless of the number of episodes that occurred on any one of those days. Proceed to answer Wandering—Impact item (E1000).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-19",
+        "quote": "Code 3, behavior of this type occurred daily: if the resident wandered daily during the 7-day look-back period, regardless of the number of episodes that occurred on any one of those days. Proceed to answer Wandering—Impact item (E1000)."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Wandering is defined as the act of moving (walking or locomotion in a wheelchair) from place to place with or without a specified course or known direction; it may or may not be aimless and may or may not be driven by confused thoughts or delusional ideas.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-19",
+        "quote": "Wandering is the act of moving (walking or locomotion in a wheelchair) from place to place with or without a specified course or known direction. Wandering may or may not be aimless."
+      }
+    },
+    {
+      "rule": "If wandering occurred, determine the frequency of the wandering during the 7-day look-back period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-19",
+        "quote": "If wandering occurred, determine the frequency of the wandering during the 7-day look-back period."
+      }
+    },
+    {
+      "rule": "Pacing (repetitive walking with a driven/pressured quality) within a constrained space is not included in wandering.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-19",
+        "quote": "Pacing (repetitive walking with a driven/pressured quality) within a constrained space is not included in wandering."
+      }
+    },
+    {
+      "rule": "Wandering may be coded even if the resident is in a locked unit.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-19",
+        "quote": "Wandering may occur even if resident is in a locked unit."
+      }
+    },
+    {
+      "rule": "Traveling via a planned course to another specific place (such as going to the dining room to eat a meal or to an activity) is not considered wandering.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-19",
+        "quote": "Traveling via a planned course to another specific place (such as going to the dining room to eat a meal or to an activity) is not considered wandering."
+      }
+    },
+    {
+      "rule": "Resident intent should not be taken into account when coding items in Section E; the section focuses on the resident's actions, not the intent of their behavior.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-1",
+        "quote": "Resident intent should not be taken into account when coding for items in this section."
+      }
+    },
+    {
+      "rule": "Wandering is excluded from item E0200C (other behavioral symptoms not directed toward others).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-5",
+        "quote": "Item E0200C does not include wandering."
+      }
+    },
+    {
+      "rule": "When E0900 is coded 1, 2, or 3, item E1000 (Wandering—Impact) must be answered; when coded 0, skip to E1100.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-20",
+        "quote": "Answer this item only if E0900, Wandering—Presence & Frequency, was coded 1 (behavior of this type occurred 1-3 days), 2 (behavior of this type occurred 4-6 days, but less than daily), or 3 (behavior of this type occurred daily)."
+      }
+    },
+    {
+      "rule": "E0900 is reached from E0300 when E0300 is coded 0 (skip to E0800) — the item follows E0800 in the sequence; the item stem asks \"Has the resident wandered?\" with codes 0-3.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-18",
+        "quote": "Has the resident wandered?"
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review the medical record and interview staff to determine whether wandering occurred during the 7-day look-back period.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-19",
+          "quote": "Review the medical record and interview staff to determine whether wandering occurred during the 7-day look-back period."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as step 1 of Steps for Assessment."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages do not tie E0900 to any payment or case-mix classification."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "case_mix_relevance.level",
+    "state_deltas",
+    "common_audit_citations",
+    "conflicts"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

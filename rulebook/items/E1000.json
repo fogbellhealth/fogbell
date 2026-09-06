@@ -1,0 +1,154 @@
+{
+  "item_id": "E1000",
+  "item_name": "Wandering—Impact",
+  "section": "E",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. E-20",
+    "quote": "Consider the previous review of the resident's wandering behaviors identified in E0900 for the 7-day look-back period."
+  },
+  "lookback_notes": "The Steps for Assessment direct the assessor to consider the wandering behaviors identified in E0900 for the 7-day look-back period. The manual does not state on this page how the 7 days are counted relative to the ARD.",
+  "coding_levels": [
+    {
+      "code": "A-0",
+      "label": "E1000A — No",
+      "definition": "Wandering does not place the resident at significant risk.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-20",
+        "quote": "Code 0, no: if wandering does not place the resident at significant risk."
+      }
+    },
+    {
+      "code": "A-1",
+      "label": "E1000A — Yes",
+      "definition": "The wandering places the resident at significant risk of getting to a dangerous place (e.g., wandering outside the facility where there is heavy traffic) or encountering a dangerous situation (e.g., wandering into the room of another resident with dementia who is known to become physically aggressive toward intruders).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-20",
+        "quote": "Code 1, yes: if the wandering places the resident at significant risk of getting to a dangerous place (e.g., wandering outside the facility where there is heavy traffic) or encountering a dangerous situation (e.g., wandering into the room of another resident with dementia who is known to become physically aggressive toward intruders)."
+      }
+    },
+    {
+      "code": "B-0",
+      "label": "E1000B — No",
+      "definition": "The wandering does not intrude on the privacy or activity of others.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-21",
+        "quote": "Code 0, no: if the wandering does not intrude on the privacy or activity of others."
+      }
+    },
+    {
+      "code": "B-1",
+      "label": "E1000B — Yes",
+      "definition": "The wandering intrudes on the privacy or activities of others (i.e., if the wandering violates other residents' privacy or interrupts other residents' performance of activities of daily living or limits engagement in or enjoyment of social or recreational activities), whether or not the other resident complains or communicates displeasure or annoyance.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-21",
+        "quote": "Code 1, yes: if the wandering intrudes on the privacy or activities of others (i.e., if the wandering violates other residents' privacy or interrupts other residents' performance of activities of daily living or limits engagement in or enjoyment of social or recreational activities), whether or not the other resident complains or communicates displeasure or annoyance."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Complete E1000 only if E0900 (Wandering—Presence & Frequency) was coded 1, 2, or 3.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-20",
+        "quote": "Answer this item only if E0900, Wandering—Presence & Frequency, was coded 1 (behavior of this type occurred 1-3 days), 2 (behavior of this type occurred 4-6 days, but less than daily), or 3 (behavior of this type occurred daily)."
+      }
+    },
+    {
+      "rule": "E1000 has two sub-items: A. Does the wandering place the resident at significant risk of getting to a potentially dangerous place (e.g., stairs, outside of the facility)? and B. Does the wandering significantly intrude on the privacy or activities of others? Each is coded 0. No or 1. Yes.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-20",
+        "quote": "A. Does the wandering place the resident at significant risk of getting to a potentially dangerous place (e.g., stairs, outside of the facility)?"
+      }
+    },
+    {
+      "rule": "Base the coding on the previous review of the resident's wandering behaviors identified in E0900 for the 7-day look-back period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-20",
+        "quote": "Consider the previous review of the resident's wandering behaviors identified in E0900 for the 7-day look-back period."
+      }
+    },
+    {
+      "rule": "Determine whether those behaviors put the resident at significant risk of getting into potentially dangerous places and/or whether wandering significantly intrudes on the privacy or activities of others, based on clinical judgment for the individual resident.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-20",
+        "quote": "Determine whether those behaviors put the resident at significant risk of getting into potentially dangerous places and/or whether wandering significantly intrudes on the privacy or activities of others based on clinical judgment for the individual resident."
+      }
+    },
+    {
+      "rule": "For E1000B, code 1 (yes) whether or not the other resident complains or communicates displeasure or annoyance.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-21",
+        "quote": "whether or not the other resident complains or communicates displeasure or annoyance."
+      }
+    },
+    {
+      "rule": "Wandering that results in elopement from the nursing home is coded as placing the resident at significant risk of getting into a dangerous situation (E1000A = 1).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-21",
+        "quote": "Rationale: Wandering that results in elopement from the nursing home places the resident at significant risk of getting into a dangerous situation."
+      }
+    },
+    {
+      "rule": "Moving about by propelling oneself in a wheelchair into another resident's room and blocking their bathroom door meets the definition of wandering and is coded E1000B = 1, yes.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-21",
+        "quote": "Rationale: Moving about in this manner with the use of a wheelchair meets the definition of wandering, and the resident has intruded on the privacy of another resident and has interfered with that resident's ability to use the bathroom."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review of the medical record and staff interview establishing whether wandering occurred during the 7-day look-back period (performed for E0900 and carried into E1000).",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-20",
+          "quote": "Consider the previous review of the resident's wandering behaviors identified in E0900 for the 7-day look-back period."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "The manual describes this as a step for assessment rather than an explicit documentation requirement."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages do not tie E1000 to any payment or case-mix classification."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "state_deltas",
+    "case_mix_relevance.source",
+    "common_audit_citations",
+    "supportive_documentation.federal (no explicitly required documentation sources stated for this item)"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

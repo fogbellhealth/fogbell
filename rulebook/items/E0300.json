@@ -1,0 +1,103 @@
+{
+  "item_id": "E0300",
+  "item_name": "Overall Presence of Behavioral Symptoms",
+  "section": "E",
+  "instrument": "MDS-3.0",
+  "lookback_days": null,
+  "lookback_notes": "The E0300 section (p. E-7) states no observation/look-back window of its own; it is coded entirely from the coding of item E0200. The E0200 section states a 7-day look-back period, but that window is stated for E0200, not for E0300, so lookback_days is NOT_FOUND for this item.",
+  "coding_levels": [
+    {
+      "code": "0",
+      "label": "No",
+      "definition": "Code 0, no: if E0200A, E0200B, and E0200C all are coded 0, not present. Skip to Rejection of Care—Presence & Frequency item (E0800).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-7",
+        "quote": "Code 0, no: if E0200A, E0200B, and E0200C all are coded 0, not present. Skip to Rejection of Care—Presence & Frequency item (E0800)."
+      }
+    },
+    {
+      "code": "1",
+      "label": "Yes",
+      "definition": "Code 1, yes: if any of E0200A, E0200B, or E0200C were coded 1, 2, or 3. Proceed to complete Impact on Resident item (E0500), and Impact on Others item (E0600).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-7",
+        "quote": "Code 1, yes: if any of E0200A, E0200B, or E0200C were coded 1, 2, or 3. Proceed to complete Impact on Resident item (E0500), and Impact on Others item (E0600)."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Code E0300 by reviewing the coding for item E0200 and following the E0300 coding instructions.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-7",
+        "quote": "Review coding for item E0200 and follow these coding instructions:"
+      }
+    },
+    {
+      "rule": "Code 0 (no) when E0200A, E0200B, and E0200C are all coded 0 (not present); then skip to E0800, Rejection of Care—Presence & Frequency.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-7",
+        "quote": "Code 0, no: if E0200A, E0200B, and E0200C all are coded 0, not present. Skip to Rejection of Care—Presence & Frequency item (E0800)."
+      }
+    },
+    {
+      "rule": "Code 1 (yes) when any of E0200A, E0200B, or E0200C were coded 1, 2, or 3; then proceed to complete E0500 (Impact on Resident) and E0600 (Impact on Others).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-7",
+        "quote": "Code 1, yes: if any of E0200A, E0200B, or E0200C were coded 1, 2, or 3. Proceed to complete Impact on Resident item (E0500), and Impact on Others item (E0600)."
+      }
+    },
+    {
+      "rule": "The item asks whether any behavioral symptoms in questions E0200 were coded 1, 2, or 3; response 0 = No (skip to E0800), 1 = Yes (considering all of E0200, answer E0500 and E0600 below).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-7",
+        "quote": "Were any behavioral symptoms in questions E0200 coded 1, 2, or 3?"
+      }
+    },
+    {
+      "rule": "E0300 determines whether items E0500 (Impact on Resident) and E0600 (Impact on Others) are required to be completed.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-7",
+        "quote": "To determine whether or not additional items E0500, Impact on Resident, and E0600, Impact on Others, are required to be completed."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages do not tie E0300 to any payment or case-mix classification."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "supportive_documentation.federal",
+    "state_deltas",
+    "common_audit_citations",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

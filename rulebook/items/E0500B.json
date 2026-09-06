@@ -1,0 +1,136 @@
+{
+  "item_id": "E0500B",
+  "item_name": "Impact on Resident — Did any of the identified symptom(s) significantly interfere with the resident's care?",
+  "section": "E",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. E-8",
+    "quote": "Consider the previous review of the medical record, staff interviews across all shifts and disciplines, interviews with others who had close interactions with the resident and previous observations of the behaviors identified in E0200 for the 7-day look-back period."
+  },
+  "lookback_notes": "The Steps for Assessment for E0500 direct the assessor to consider the behaviors identified in E0200 for the 7-day look-back period. The document does not state on this page how the 7 days are counted relative to the ARD.",
+  "coding_levels": [
+    {
+      "code": "0",
+      "label": "No",
+      "definition": "None of the identified behavioral symptom(s) significantly interfered with the resident's care.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-9",
+        "quote": "Code 0, no: if none of the identified behavioral symptom(s) significantly interfered with the resident's care."
+      }
+    },
+    {
+      "code": "1",
+      "label": "Yes",
+      "definition": "Any of the identified behavioral symptom(s) impeded the delivery of essential medical, nursing, rehabilitative or personal care, including but not limited to assistance with activities of daily living, such as bathing, dressing, feeding, or toileting.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-9",
+        "quote": "Code 1, yes: if any of the identified behavioral symptom(s) impeded the delivery of essential medical, nursing, rehabilitative or personal care, including but not limited to assistance with activities of daily living, such as bathing, dressing, feeding, or toileting."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Code E0500A, E0500B, and E0500C based on all of the behavioral symptoms coded in E0200.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-8",
+        "quote": "Code E0500A, E0500B, and E0500C based on all of the behavioral symptoms coded in E0200."
+      }
+    },
+    {
+      "rule": "E0500 (including E0500B) is completed only when E0300 is coded 1, yes (any of E0200A, E0200B, or E0200C coded 1, 2, or 3); if E0300 is coded 0, skip to E0800.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-7",
+        "quote": "Code 1, yes: if any of E0200A, E0200B, or E0200C were coded 1, 2, or 3. Proceed to complete Impact on Resident item (E0500), and Impact on Others item (E0600)."
+      }
+    },
+    {
+      "rule": "Determine whether the behaviors significantly interfered with the resident's care (along with the other E0500 determinations).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-8",
+        "quote": "Determine whether those behaviors put the resident at significant risk of physical illness or injury, whether the behaviors significantly interfered with the resident's care, and/or whether the behaviors significantly interfered with the resident's participation in activities or social interactions."
+      }
+    },
+    {
+      "rule": "Code 0, no, if none of the identified behavioral symptom(s) significantly interfered with the resident's care.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-9",
+        "quote": "Code 0, no: if none of the identified behavioral symptom(s) significantly interfered with the resident's care."
+      }
+    },
+    {
+      "rule": "Code 1, yes, if any of the identified behavioral symptom(s) impeded the delivery of essential medical, nursing, rehabilitative or personal care, including but not limited to ADL assistance such as bathing, dressing, feeding, or toileting.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-9",
+        "quote": "Code 1, yes: if any of the identified behavioral symptom(s) impeded the delivery of essential medical, nursing, rehabilitative or personal care, including but not limited to assistance with activities of daily living, such as bathing, dressing, feeding, or toileting."
+      }
+    },
+    {
+      "rule": "For E0500B, code if the impact of the resident's behavior is impeding delivery of care to such an extent that necessary or essential care cannot be received safely, completely, or in a timely way without more than a minimal accommodation, such as a simple change in care routines or environment.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-9",
+        "quote": "For E0500B, code if the impact of the resident's behavior is impeding the delivery of care to such an extent that necessary or essential care (medical, nursing, rehabilitative or personal that is required to achieve the resident's goals for health and well-being) cannot be received safely, completely, or in a timely way without more than a minimal accommodation, such as simple change in care routines or environment."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review of the medical record for the 7-day look-back period supporting the behaviors identified in E0200 and their impact on care.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-8",
+          "quote": "Consider the previous review of the medical record, staff interviews across all shifts and disciplines, interviews with others who had close interactions with the resident and previous observations of the behaviors identified in E0200 for the 7-day look-back period."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Stated as a Step for Assessment (record review, staff interviews across all shifts and disciplines, interviews with others, observations)."
+      },
+      {
+        "criterion": "Documentation comparable to a baseline: subsequent assessments and documentation can be compared to a baseline to identify changes in the resident's behavior, including response to interventions.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-8",
+          "quote": "Subsequent assessments and documentation can be compared to a baseline to identify changes in the resident's behavior, including response to interventions."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "low",
+        "notes": "Framed under Planning for Care rationale, not as required documentation."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages do not tie E0500B to any payment or case-mix classification."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "case_mix_relevance",
+    "state_deltas",
+    "common_audit_citations"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

@@ -1,0 +1,179 @@
+{
+  "item_id": "E0200B",
+  "item_name": "Behavioral Symptom—Presence & Frequency: Verbal behavioral symptoms directed toward others",
+  "section": "E",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. E-5",
+    "quote": "Review the medical record for the 7-day look-back period."
+  },
+  "lookback_notes": "The manual repeatedly refers to a 7-day look-back period for E0200 (record review, staff interview, and observation), and coding instructions refer to \"the last 7 days.\" The document pages supplied do not state how the 7 days are counted relative to the ARD.",
+  "coding_levels": [
+    {
+      "code": "0",
+      "label": "Behavior not exhibited",
+      "definition": "Code 0 if the behavioral symptoms were not present in the last 7 days. Use this code if the symptom has never been exhibited or if it previously has been exhibited but has been absent in the last 7 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-5",
+        "quote": "Code 0, behavior not exhibited: if the behavioral symptoms were not present in the last 7 days. Use this code if the symptom has never been exhibited or if it previously has been exhibited but has been absent in the last 7 days."
+      }
+    },
+    {
+      "code": "1",
+      "label": "Behavior of this type occurred 1-3 days",
+      "definition": "Code 1 if the behavior was exhibited 1-3 days of the last 7 days, regardless of the number or severity of episodes that occur on any one of those days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-5",
+        "quote": "Code 1, behavior of this type occurred 1-3 days: if the behavior was exhibited 1-3 days of the last 7 days, regardless of the number or severity of episodes that occur on any one of those days."
+      }
+    },
+    {
+      "code": "2",
+      "label": "Behavior of this type occurred 4-6 days, but less than daily",
+      "definition": "Code 2 if the behavior was exhibited 4-6 of the last 7 days, regardless of the number or severity of episodes that occur on any of those days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-5",
+        "quote": "Code 2, behavior of this type occurred 4-6 days, but less than daily: if the behavior was exhibited 4-6 of the last 7 days, regardless of the number or severity of episodes that occur on any of those days."
+      }
+    },
+    {
+      "code": "3",
+      "label": "Behavior of this type occurred daily",
+      "definition": "Code 3 if the behavior was exhibited daily, regardless of the number or severity of episodes that occur on any of those days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-5",
+        "quote": "Code 3, behavior of this type occurred daily: if the behavior was exhibited daily, regardless of the number or severity of episodes that occur on any of those days."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "E0200B captures verbal behavioral symptoms directed toward others (e.g., threatening others, screaming at others, cursing at others); enter a frequency code in the box.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-4",
+        "quote": "B. Verbal behavioral symptoms directed toward others (e.g., threatening others, screaming at others, cursing at others)"
+      }
+    },
+    {
+      "rule": "Code based on whether the symptoms occurred and not based on an interpretation of the behavior's meaning, cause or the assessor's judgment that the behavior can be explained or should be tolerated.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-5",
+        "quote": "Code based on whether the symptoms occurred and not based on an interpretation of the behavior's meaning, cause or the assessor's judgment that the behavior can be explained or should be tolerated."
+      }
+    },
+    {
+      "rule": "Code as present, even if staff have become used to the behavior or view it as typical or tolerable.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-5",
+        "quote": "Code as present, even if staff have become used to the behavior or view it as typical or tolerable."
+      }
+    },
+    {
+      "rule": "Behaviors in these categories should be coded as present or not present, whether or not they might represent a rejection of care.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-5",
+        "quote": "Behaviors in these categories should be coded as present or not present, whether or not they might represent a rejection of care."
+      }
+    },
+    {
+      "rule": "Resident intent should not be taken into account when coding items in Section E; the section focuses on the resident's actions, not the intent of their behavior.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-1",
+        "quote": "Resident intent should not be taken into account when coding for items in this section."
+      }
+    },
+    {
+      "rule": "The coding of E0200B (with E0200A and E0200C) drives E0300: code E0300 as 0 (no) if E0200A, E0200B, and E0200C are all coded 0; code E0300 as 1 (yes) if any of E0200A, E0200B, or E0200C were coded 1, 2, or 3, then complete E0500 and E0600.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-7",
+        "quote": "Code 1, yes: if any of E0200A, E0200B, or E0200C were coded 1, 2, or 3. Proceed to complete Impact on Resident item (E0500), and Impact on Others item (E0600)."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review the medical record for the 7-day look-back period.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-5",
+          "quote": "Review the medical record for the 7-day look-back period."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Listed as Step 1 for Assessment for E0200."
+      },
+      {
+        "criterion": "Interview staff, across all shifts and disciplines, as well as others who had close interactions with the resident during the 7-day look-back period, including family or friends who visit frequently or have frequent contact with the resident.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-5",
+          "quote": "Interview staff, across all shifts and disciplines, as well as others who had close interactions with the resident during the 7-day look-back period, including family or friends who visit frequently or have frequent contact with the resident."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Step 2 for Assessment."
+      },
+      {
+        "criterion": "Observe the resident in a variety of situations during the 7-day look-back period.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-5",
+          "quote": "Observe the resident in a variety of situations during the 7-day look-back period."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Step 3 for Assessment."
+      },
+      {
+        "criterion": "Subsequent assessments and documentation can be compared to baseline to identify changes in the resident's behavior, including response to interventions.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-5",
+          "quote": "Subsequent assessments and documentation can be compared to baseline to identify changes in the resident's behavior, including response to interventions."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "low",
+        "notes": "Framed under Planning for Care rationale, not as a required documentation element."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages do not tie E0200B to any payment or case-mix classification system."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "case_mix_relevance",
+    "state_deltas",
+    "common_audit_citations",
+    "item-specific examples for E0200B (examples on p. E-6 address E0200A and E0200C only)"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

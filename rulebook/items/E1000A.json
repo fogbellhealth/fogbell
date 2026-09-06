@@ -1,0 +1,135 @@
+{
+  "item_id": "E1000A",
+  "item_name": "Wandering—Impact: Does the wandering place the resident at significant risk of getting to a potentially dangerous place?",
+  "section": "E",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. E-20",
+    "quote": "Consider the previous review of the resident's wandering behaviors identified in E0900 for the 7-day look-back period."
+  },
+  "lookback_notes": "The Steps for Assessment for E1000 direct the assessor to consider the wandering behaviors identified in E0900 for the 7-day look-back period. The document does not state on this page how the 7 days are counted relative to the ARD.",
+  "coding_levels": [
+    {
+      "code": "0",
+      "label": "No",
+      "definition": "Wandering does not place the resident at significant risk.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-20",
+        "quote": "Code 0, no: if wandering does not place the resident at significant risk."
+      }
+    },
+    {
+      "code": "1",
+      "label": "Yes",
+      "definition": "The wandering places the resident at significant risk of getting to a dangerous place (e.g., wandering outside the facility where there is heavy traffic) or encountering a dangerous situation (e.g., wandering into the room of another resident with dementia who is known to become physically aggressive toward intruders).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-20",
+        "quote": "Code 1, yes: if the wandering places the resident at significant risk of getting to a dangerous place (e.g., wandering outside the facility where there is heavy traffic) or encountering a dangerous situation (e.g., wandering into the room of another resident with dementia who is known to become physically aggressive toward intruders)."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Answer E1000 (including E1000A) only if E0900, Wandering—Presence & Frequency, was coded 1, 2, or 3.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-20",
+        "quote": "Answer this item only if E0900, Wandering—Presence & Frequency, was coded 1 (behavior of this type occurred 1-3 days), 2 (behavior of this type occurred 4-6 days, but less than daily), or 3 (behavior of this type occurred daily)."
+      }
+    },
+    {
+      "rule": "Code 0, no, if wandering does not place the resident at significant risk.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-20",
+        "quote": "Code 0, no: if wandering does not place the resident at significant risk."
+      }
+    },
+    {
+      "rule": "Code 1, yes, if the wandering places the resident at significant risk of getting to a dangerous place or encountering a dangerous situation.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-20",
+        "quote": "Code 1, yes: if the wandering places the resident at significant risk of getting to a dangerous place (e.g., wandering outside the facility where there is heavy traffic) or encountering a dangerous situation"
+      }
+    },
+    {
+      "rule": "Determine whether the wandering behaviors put the resident at significant risk of getting into potentially dangerous places based on clinical judgment for the individual resident.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-20",
+        "quote": "Determine whether those behaviors put the resident at significant risk of getting into potentially dangerous places and/or whether wandering significantly intrudes on the privacy or activities of others based on clinical judgment for the individual resident."
+      }
+    },
+    {
+      "rule": "Wandering that results in elopement from the nursing home is coded 1, yes, for E1000A because it places the resident at significant risk of getting into a dangerous situation.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-21",
+        "quote": "Rationale: Wandering that results in elopement from the nursing home places the resident at significant risk of getting into a dangerous situation."
+      }
+    },
+    {
+      "rule": "Locomotion in a wheelchair from place to place meets the definition of wandering for purposes of these items (E0900/E1000).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-19",
+        "quote": "Wandering is the act of moving (walking or locomotion in a wheelchair) from place to place with or without a specified course or known direction."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review of the medical record for the 7-day look-back period supporting the wandering behaviors identified in E0900 (carried forward for coding E1000A).",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-20",
+          "quote": "Consider the previous review of the resident's wandering behaviors identified in E0900 for the 7-day look-back period."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "E0900 Steps for Assessment specify reviewing the medical record and interviewing staff to determine whether wandering occurred during the 7-day look-back period (p. E-19)."
+      },
+      {
+        "criterion": "Documentation of clinical judgment that the wandering placed the resident at significant risk of getting into a potentially dangerous place.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-20",
+          "quote": "Determine whether those behaviors put the resident at significant risk of getting into potentially dangerous places and/or whether wandering significantly intrudes on the privacy or activities of others based on clinical judgment for the individual resident."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium"
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages do not tie E1000A to any payment or case-mix classification."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "state_deltas",
+    "common_audit_citations",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

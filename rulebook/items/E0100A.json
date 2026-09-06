@@ -1,0 +1,140 @@
+{
+  "item_id": "E0100A",
+  "item_name": "Potential Indicators of Psychosis — Hallucinations",
+  "section": "E",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. E-2",
+    "quote": "Review the resident’s medical record for the 7-day look-back period."
+  },
+  "lookback_notes": "The manual states a 7-day look-back period for E0100; coding is based on behaviors observed and/or thoughts expressed \"in the last 7 days.\" The pages do not state how the 7 days are counted relative to the ARD.",
+  "coding_levels": [
+    {
+      "code": "Checked",
+      "label": "A. Hallucinations",
+      "definition": "Check E0100A if hallucinations were present in the last 7 days. A hallucination is the perception of the presence of something that is not actually there. It may be auditory or visual or involve smells, tastes or touch.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-2",
+        "quote": "Check E0100A, hallucinations: if hallucinations were present in the last 7 days. A hallucination is the perception of the presence of something that is not actually there. It may be auditory or visual or involve smells, tastes or touch."
+      }
+    },
+    {
+      "code": "Not checked",
+      "label": "Hallucinations not present",
+      "definition": "E0100Z, none of the above, is checked if no hallucinations or delusions were present in the last 7 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-2",
+        "quote": "Check E0100Z, none of the above: if no hallucinations or delusions were present in the last 7 days."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Code based on behaviors observed and/or thoughts expressed in the last 7 days rather than the presence of a medical diagnosis; check all that apply.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-2",
+        "quote": "Code based on behaviors observed and/or thoughts expressed in the last 7 days rather than the presence of a medical diagnosis. Check all that apply."
+      }
+    },
+    {
+      "rule": "Check E0100A (hallucinations) if hallucinations were present in the last 7 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-2",
+        "quote": "Check E0100A, hallucinations: if hallucinations were present in the last 7 days."
+      }
+    },
+    {
+      "rule": "Resident intent is not taken into account when coding items in Section E; code the resident's actions, not the intent of their behavior.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-1",
+        "quote": "Resident intent should not be taken into account when coding for items in this section."
+      }
+    },
+    {
+      "rule": "A report that reflects misinterpretation of a real external sound/stimulus is not coded as a hallucination (E0100Z checked instead).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-3",
+        "quote": "Rationale: They misinterpreted a real sound in the external environment."
+      }
+    },
+    {
+      "rule": "Reported auditory and visual sensations occurring in the absence of any external stimulus are coded as a hallucination (E0100A checked).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-3",
+        "quote": "Rationale: The resident reports auditory and visual sensations that occur in the absence of any external stimulus. Therefore, this is a hallucination."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review of the resident's medical record for the 7-day look-back period.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-2",
+          "quote": "Review the resident’s medical record for the 7-day look-back period."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Listed as Step 1 for Assessment."
+      },
+      {
+        "criterion": "Interview staff members and others who have had the opportunity to observe the resident in a variety of situations during the 7-day look-back period.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-2",
+          "quote": "Interview staff members and others who have had the opportunity to observe the resident in a variety of situations during the 7-day look-back period."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Listed as Step 2 for Assessment."
+      },
+      {
+        "criterion": "Observation of the resident during conversations and structured interviews in other assessment sections, listening for statements indicating an experience of hallucinations.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-2",
+          "quote": "Observe the resident during conversations and the structured interviews in other assessment sections and listen for statements indicating an experience of hallucinations, or the expression of false beliefs (delusions)."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Listed as Step 3 for Assessment."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages do not tie E0100A to any payment or case-mix classification."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "case_mix_relevance.level",
+    "state_deltas",
+    "common_audit_citations",
+    "conflicts"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}
