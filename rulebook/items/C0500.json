@@ -1,0 +1,190 @@
+{
+  "item_id": "C0500",
+  "item_name": "BIMS Summary Score",
+  "section": "C",
+  "instrument": "MDS-3.0",
+  "lookback_days": null,
+  "lookback_notes": "No numeric look-back window is stated for C0500 itself. The general BIMS guidance states the interview is conducted during the look-back period of the Assessment Reference Date (ARD) (p. C-2), but no number of days is given on the C0500 pages or the pages they reference.",
+  "coding_levels": [
+    {
+      "code": "00-15",
+      "label": "Total BIMS score",
+      "definition": "Enter the total score as a two-digit number; the total possible BIMS score ranges from 00 to 15, obtained by adding scores for questions C0200–C0400.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. C-17",
+        "quote": "Enter the total score as a two-digit number. The total possible BIMS score ranges from 00 to 15."
+      }
+    },
+    {
+      "code": "99",
+      "label": "Unable to complete interview",
+      "definition": "Code 99 if (a) the resident chooses not to participate in the BIMS, (b) if four or more items were coded 0 because the resident chose not to answer or gave a nonsensical response, or (c) if any but not all of the BIMS items are coded with a dash (—).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. C-17",
+        "quote": "Code 99, unable to complete interview: if (a) the resident chooses not to participate in the BIMS, (b) if four or more items were coded 0 because the resident chose not to answer or gave a nonsensical response, or (c) if any but not all of the BIMS items are coded with a dash (—)."
+      }
+    },
+    {
+      "code": "-",
+      "label": "Dash (no information)",
+      "definition": "If all of the BIMS items are coded with a dash, then C0500, BIMS Summary Score must also be coded with a dash.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. C-17",
+        "quote": "If all of the BIMS items are coded with a dash, then C0500, BIMS Summary Score must also be coded with a dash."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Add scores for questions C0200–C0400 and fill in the total score (00–15); enter 99 if the resident was unable to complete the interview.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. C-16",
+        "quote": "Add scores for questions C0200–C0400 and fill in total score (00–15) Enter 99 if the resident was unable to complete the interview"
+      }
+    },
+    {
+      "rule": "After completing C0200–C0400, add up the values for all questions from C0200 through C0400; do not add up the score while interviewing the resident.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. C-17",
+        "quote": "1. Add up the values for all questions from C0200 through C0400. 2. Do not add up the score while you are interviewing the resident. Instead, focus your full attention on the interview."
+      }
+    },
+    {
+      "rule": "If the resident chooses not to answer a specific question(s), that question is coded as incorrect and the item(s) counts in the total score; if the resident chooses not to answer four or more items, the interview is coded as incomplete and the Staff Assessment for Mental Status is completed.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. C-17",
+        "quote": "If the resident chooses not to answer a specific question(s), that question is coded as incorrect and the item(s) counts in the total score. If, however, the resident chooses not to answer four or more items, then the interview is coded as incomplete and the Staff Assessment for Mental Status is completed."
+      }
+    },
+    {
+      "rule": "To be considered a completed interview, the resident had to attempt and provide relevant answers to at least four of the questions included in C0200–C0400; a relevant response only has to be related to the question (logical), it does not have to be correct.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. C-17",
+        "quote": "To be considered a completed interview, the resident had to attempt and provide relevant answers to at least four of the questions included in C0200–C0400. To be relevant, a response only has to be related to the question (logical); it does not have to be correct."
+      }
+    },
+    {
+      "rule": "A 0 score does not mean the BIMS was incomplete; for the BIMS to be incomplete a resident must choose not to answer or must give completely unrelated, nonsensical responses to four or more items. If one or more of the 0s in C0200–C0300 are due to incorrect answers, the interview should continue.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. C-17",
+        "quote": "Note: a 0 score does not mean the BIMS was incomplete. For the BIMS to be incomplete, a resident must choose not to answer or must give completely unrelated, nonsensical responses to four or more items. If one or more of the 0s in C0200–C0300 are due to incorrect answers, the interview should continue."
+      }
+    },
+    {
+      "rule": "If a resident can communicate but chooses not to participate in the BIMS and does not attempt any items, this is an incomplete interview: enter 99 for C0500 and complete the Staff Assessment for Mental Status.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. C-17",
+        "quote": "Occasionally, a resident can communicate but chooses not to participate in the BIMS and therefore does not attempt any of the items in the section. This would be considered an incomplete interview; enter 99 for C0500, BIMS Summary Score, and complete the Staff Assessment for Mental Status."
+      }
+    },
+    {
+      "rule": "If all of the BIMS items are coded with a dash, C0500 must also be coded with a dash.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. C-17",
+        "quote": "If all of the BIMS items are coded with a dash, then C0500, BIMS Summary Score must also be coded with a dash."
+      }
+    },
+    {
+      "rule": "If the BIMS interview is stopped before completion, code 99 in the BIMS Summary Score (C0500); if the assessment is a stand-alone Part A PPS Discharge, continue to C1310, otherwise code 1, yes in C0600 and complete the Staff Assessment for Mental Status.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. C-6",
+        "quote": "Code 99 in the BIMS Summary Score (C0500), and if the assessment being completed is a stand-alone Part A PPS Discharge, continue to C1310. Signs and Symptoms of Delirium. Otherwise, proceed to step 3."
+      }
+    },
+    {
+      "rule": "When the BIMS is completed and scored between 00 and 15, C0600 is coded 0, no and the Staff Assessment for Mental Status is not completed; 00 is a legitimate value for C0500 indicating a complete interview.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. C-20",
+        "quote": "If a resident is scored 00 on C0500, the Staff Assessment for Mental Status should not be completed. 00 is a legitimate value for C0500 and indicates that the interview was complete."
+      }
+    },
+    {
+      "rule": "When C0600 is coded 1, yes (resident chose not to participate or four or more items coded 0 for refusal/nonsensical response), C0500 should be coded 99.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. C-20",
+        "quote": "Continue to C0700, Short-term Memory OK, to perform the Staff Assessment for Mental Status. Note: C0500 should be coded 99."
+      }
+    },
+    {
+      "rule": "If the resident interview was not conducted within the look-back period (preferably the day before or the day of) the ARD, C0100 must be coded 1, Yes, and the standard \"no information\" code (a dash \"-\") entered in the resident interview items.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. C-2",
+        "quote": "If the resident interview was not conducted within the look-back period (preferably the day before or the day of) the ARD, item C0100 must be coded 1, Yes, and the standard “no information” code (a dash “-”) entered in the resident interview items."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "medium",
+    "notes": "The C0500 pages themselves do not tie the summary score to payment. The related C0100 guidance states that a PDPM cognitive level is utilized in the SLP payment component of PDPM and permits the Staff Assessment for Mental Status for an interviewable resident on PPS assessments when the resident is unexpectedly discharged from a Part A stay prior to completion of the BIMS.",
+    "source": {
+      "doc": "rai-manual-v1.20.1",
+      "loc": "p. C-2",
+      "quote": "Because a PDPM cognitive level is utilized in the speech language pathology (SLP) payment component of PDPM, only in the case of PPS assessments, staff may complete the Staff Assessment for Mental Status for an interviewable resident when the resident is unexpectedly discharged from a Part A stay prior to the completion of the BIMS."
+    }
+  },
+  "conflicts": [
+    {
+      "topic": "Range of items counted toward the \"at least four relevant answers\" completeness rule (C0200–C0400 vs. C0200–C0400C)",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "The definition box states the BIMS is complete if the resident attempted and provided relevant answers to at least four of the questions included in C0200–C0400C.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. C-5",
+            "quote": "The BIMS is considered complete if the resident attempted and provided relevant answers to at least four of the questions included in C0200–C0400C."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "The C0500 coding instructions state the resident had to attempt and provide relevant answers to at least four of the questions included in C0200–C0400.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. C-17",
+            "quote": "To be considered a completed interview, the resident had to attempt and provide relevant answers to at least four of the questions included in C0200–C0400."
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "supportive_documentation.federal",
+    "state_deltas",
+    "common_audit_citations"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}
