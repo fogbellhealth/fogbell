@@ -39,7 +39,7 @@ Each item file: `item_id`, `item_name`, `section`, `instrument` ("MDS-3.0" | "MD
 
 ## Scope (v1 — resist expansion)
 
-~30 case-mix-driving MDS 3.0 items only: G0110A–J, G0120, G0300, G0400 (**BLOCKED — pending Verifier ruling on Maine's current case-mix instrument (G-via-OSA vs GG vs other)**; Section G was retired from the federal MDS 3.0 in Oct 2023 and is absent from RAI Manual v1.20.1 — do not extract or cite G items to any manual until she answers); E0100–E1100; D0200, D0300, D0500, D0600; C0500, C1000; K0510, K0710; M0300; O0100, O0400; N0350, N0410; Section I active diagnoses. Everything else → one line in `backlog.md`, move on. MDS-RCA core items follow as a separate-instrument pass.
+~30 case-mix-driving MDS 3.0 items only: G0110A–J, G0120, G0300, G0400 (**BLOCKED — pending Verifier ruling on Maine's current case-mix instrument (G-via-OSA vs GG vs other)**; Section G was retired from the federal MDS 3.0 in Oct 2023 and is absent from RAI Manual v1.20.1 — do not extract or cite G items to any manual until she answers); E0100–E1100; D0150, D0160 (D0200/D0300 retired from federal MDS; replaced by D0150/D0160 per v1.20.1), D0500, D0600; C0500, C1000; K0510, K0710; M0300; O0100, O0400; N0350, N0410; Section I active diagnoses. Everything else → one line in `backlog.md`, move on. MDS-RCA core items follow as a separate-instrument pass.
 
 ## Working agreements (non-negotiable)
 
@@ -75,4 +75,7 @@ Each item file: `item_id`, `item_name`, `section`, `instrument` ("MDS-3.0" | "MD
 - **Nothing fake in `rulebook/items/`.** Smoke runs write to `tmp/`. The fake item X0100 exists only under `test/fixtures/`. The changelog is appended beside `OUT` (`OUT/../changelog.md`), so smoke runs never touch `rulebook/changelog.md`.
 - **Rejected extractions** (schema-invalid model output) are written to `tmp/rulebook_rejects/` for inspection; nothing invalid is ever written into the rulebook.
 - **Loader fails fast at boot** if any item in `rulebook/items/` is schema-invalid.
+- **MODE=pdf is the default for `rai-manual-v1.20.1` section files.** The item forms are embedded images: page D-12 (the whole D0500 form) has a 210-character text layer, so `pdftotext` cannot see the item stems, codes or skip instructions at all. Text mode remains available for born-digital documents that verify well.
+- **Multi-part items are split into per-letter item files** (`D0500A.json` … `D0500J.json`), consistent with `G0110A`. The parent (`D0500.json`) holds the interview-level rules: conduct, lookback, gateway logic. The schema gets no `sub_items` field.
+- **Every extracted quote is checked** with `script/verify_quotes.py <item.json> <section.pdf>` before promotion; quotes on image pages are verified by eye against a rendered page.
 - **Throwaway corpus tooling lives in `script/`** (e.g. `script/split_rai_section.py`). Python is permitted there only; the no-Python rule covers the product, not disposable corpus utilities.
