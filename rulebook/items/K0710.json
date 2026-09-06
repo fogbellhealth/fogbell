@@ -1,0 +1,224 @@
+{
+  "item_id": "K0710",
+  "item_name": "Percent Intake by Artificial Route",
+  "section": "K",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. K-16",
+    "quote": "Review intake records within the last 7 days to determine actual intake through parenteral or tube feeding routes."
+  },
+  "lookback_notes": "The item is assessed over the last 7 days. The item's two columns each define a 7-day-based window: Column 2, \"While a Resident\" = \"Performed while a resident of this facility and within the last 7 days\"; Column 3, \"During Entire 7 Days\" = \"Performed during the entire last 7 days\" (p. K-15). K0710B steps also direct reviewing intake records from the last 7 days and dividing the week's total by 7 (p. K-17). The document does not state on this page how the 7 days are counted relative to the ARD.",
+  "coding_levels": [
+    {
+      "code": "A1",
+      "label": "25% or less",
+      "definition": "K0710A: Proportion of total calories the resident received through parenteral or tube feeding is 25% or less.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-16",
+        "quote": "Select the best response: 1. 25% or less"
+      }
+    },
+    {
+      "code": "A2",
+      "label": "26% to 50%",
+      "definition": "K0710A: Proportion of total calories the resident received through parenteral or tube feeding is 26% to 50%.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-16",
+        "quote": "2. 26% to 50%"
+      }
+    },
+    {
+      "code": "A3",
+      "label": "51% or more",
+      "definition": "K0710A: Proportion of total calories the resident received through parenteral or tube feeding is 51% or more.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-16",
+        "quote": "3. 51% or more"
+      }
+    },
+    {
+      "code": "B1",
+      "label": "500 cc/day or less",
+      "definition": "K0710B: Average fluid intake per day by IV or tube feeding is 500 cc/day or less.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-17",
+        "quote": "Code 1: 500 cc/day or less"
+      }
+    },
+    {
+      "code": "B2",
+      "label": "501 cc/day or more",
+      "definition": "K0710B: Average fluid intake per day by IV or tube feeding is 501 cc/day or more.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-17",
+        "quote": "Code 2: 501 cc/day or more"
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Complete K0710 only if Column 2 and/or Column 3 are checked for K0520A and/or K0520B.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-15",
+        "quote": "Complete K0710 only if Column 2 and/or Column 3 are checked for K0520A and/or K0520B."
+      }
+    },
+    {
+      "rule": "K0710 is coded in two columns: Column 2, While a Resident (performed while a resident of this facility and within the last 7 days), and Column 3, During Entire 7 Days (performed during the entire last 7 days).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-15",
+        "quote": "2. While a Resident ... Performed while a resident of this facility and within the last 7 days"
+      }
+    },
+    {
+      "rule": "For K0710A, review intake records within the last 7 days to determine actual intake through parenteral or tube feeding routes, then calculate the proportion of total calories received through these routes.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-16",
+        "quote": "1. Review intake records within the last 7 days to determine actual intake through parenteral or tube feeding routes. 2. Calculate proportion of total calories received through these routes."
+      }
+    },
+    {
+      "rule": "For K0710A, if the resident took no food or fluids by mouth or took just sips of fluid, stop and code 3, 51% or more.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-16",
+        "quote": "If the resident took no food or fluids by mouth or took just sips of fluid, stop here and code 3, 51% or more."
+      }
+    },
+    {
+      "rule": "For K0710A, if the resident had more substantial oral intake than sips of fluid, consult with the qualified dietitian or other clinically qualified nutrition professional.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-16",
+        "quote": "If the resident had more substantial oral intake than sips of fluid, consult with the qualified dietitian or other clinically qualified nutrition professional."
+      }
+    },
+    {
+      "rule": "For K0710A, select the best response among 1 (25% or less), 2 (26% to 50%), and 3 (51% or more).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-16",
+        "quote": "Select the best response: 1. 25% or less 2. 26% to 50% 3. 51% or more"
+      }
+    },
+    {
+      "rule": "For K0710B, review intake records from the last 7 days and add up the total amount of fluid received each day by IV and/or tube feedings only.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-17",
+        "quote": "1. Review intake records from the last 7 days. 2. Add up the total amount of fluid received each day by IV and/or tube feedings only."
+      }
+    },
+    {
+      "rule": "For K0710B, divide the week's total fluid intake by 7 to calculate the average fluid intake per day; divide by 7 even if the resident did not receive IV fluids and/or tube feeding on each of the 7 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-17",
+        "quote": "3. Divide the week's total fluid intake by 7 to calculate the average of fluid intake per day. 4. Divide by 7 even if the resident did not receive IV fluids and/or tube feeding on each of the 7 days."
+      }
+    },
+    {
+      "rule": "Code K0710B for the average number of cc per day of fluid the resident received via IV or tube feeding; record what was actually received by the resident, not what was ordered.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-17",
+        "quote": "Code for the average number of cc per day of fluid the resident received via IV or tube feeding. Record what was actually received by the resident, not what was ordered."
+      }
+    },
+    {
+      "rule": "For Column 3 (During Entire 7 Days), fluid intake includes fluid received while in the hospital as well as while a resident of the nursing home, and the total is divided by 7 days; for Column 2 (While a Resident), only fluid received while a resident is counted and averaged over the days as a resident (example divides 1,520 cc by 3 days).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-19",
+        "quote": "The total fluid intake during the entire 7 days (includes fluid intake while Resident K was in the hospital AND while Resident K was a resident of the nursing home) was 3,420 cc (1,900 cc + 1,520 cc)."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Intake records for the last 7 days documenting actual parenteral/tube feeding calorie intake (and oral intake) used to calculate the proportion of total calories; example shows dietitian-totaled daily oral and tube calories.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. K-17",
+          "quote": "Within the last 7 days, they have been receiving tube feedings for nutritional supplementation. The dietitian has totaled their calories per day as follows:"
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Derived from the K0710A Steps for Assessment directive to review intake records and the worked example."
+      },
+      {
+        "criterion": "Intake records for the last 7 days documenting the daily amount of fluid received by IV and/or tube feeding, supporting the daily average calculation.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. K-17",
+          "quote": "1. Review intake records from the last 7 days. 2. Add up the total amount of fluid received each day by IV and/or tube feedings only."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Coding must reflect what was actually received, not what was ordered (p. K-17)."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The pages for K0710 do not explicitly tie this item to a payment or case-mix classification. The related item K0520 references the SNF PPS Stay and the Interim Payment Assessment, but no such statement appears for K0710."
+  },
+  "conflicts": [
+    {
+      "topic": "Averaging denominator for K0710B Column 2 (While a Resident): divide by 7 vs. divide by the number of days as a resident",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "Steps for Assessment direct dividing the week's total fluid intake by 7, even if the resident did not receive IV fluids and/or tube feeding on each of the 7 days.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. K-17",
+            "quote": "Divide by 7 even if the resident did not receive IV fluids and/or tube feeding on each of the 7 days."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Example 2 computes the Column 2 (While a Resident) average by dividing the 1,520 cc resident-period total by 3 days rather than by 7.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. K-19",
+            "quote": "Average fluid intake while a resident totaled 507 cc (1,520 cc divided by 3 days)."
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "case_mix_relevance.source",
+    "state_deltas",
+    "common_audit_citations",
+    "how the 7-day window is counted relative to the ARD"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

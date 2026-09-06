@@ -1,0 +1,240 @@
+{
+  "item_id": "K0520D",
+  "item_name": "Nutritional Approaches — Therapeutic diet",
+  "section": "K",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. K-12",
+    "quote": "Check all nutritional approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period."
+  },
+  "lookback_notes": "K0520 columns 2 and 3 use a 7-day look-back period (Column 2 = performed prior to admission/entry or reentry and within the last 7 days; Column 3 = performed after admission/entry or reentry and within the last 7 days). Column 1 uses a different assessment period: days 1 through 3 of the SNF PPS Stay starting with A2400B. Column 4 uses the last 3 days of the SNF PPS Stay ending on A2400C. Note the item matrix on p. K-11 shows K0520C and K0520D with checkboxes only for columns 1, 3, and 4 (no column 2 box for row D). The 7-day figure recorded here is the assessor's observation window for the columns to which it applies.",
+  "coding_levels": [
+    {
+      "code": "D",
+      "label": "Therapeutic diet (e.g., low salt, diabetic, low cholesterol)",
+      "definition": "A therapeutic diet is a diet intervention prescribed by a physician or other authorized nonphysician practitioner that provides food or nutrients via oral, enteral, and parenteral routes as part of treatment of disease or clinical condition, to modify, eliminate, decrease, or increase identified micro- and macro-nutrients in the diet (Academy of Nutrition and Dietetics, 2020).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "THERAPEUTIC DIET A therapeutic diet is a diet intervention prescribed by a physician or other authorized nonphysician practitioner that provides food or nutrients via oral, enteral, and parenteral routes as part of treatment of disease or clinical condition, to modify, eliminate, decrease, or increase identified micro- and macro-nutrients in the diet (Academy of Nutrition and Dietetics, 2020)."
+      }
+    },
+    {
+      "code": "D-1",
+      "label": "Column 1 — On Admission",
+      "definition": "Assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B; check all nutritional approaches performed during the first 3 days of the SNF PPS Stay.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Coding Instructions for Column 1 • Check all nutritional approaches performed during the first 3 days of the SNF PPS Stay."
+      }
+    },
+    {
+      "code": "D-3",
+      "label": "Column 3 — While a Resident",
+      "definition": "Performed while a resident of this facility and within the last 7 days; check all nutritional approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Coding Instructions for Column 3 • Check all nutritional approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period."
+      }
+    },
+    {
+      "code": "D-4",
+      "label": "Column 4 — At Discharge",
+      "definition": "Assessment period is the last 3 days of the SNF PPS Stay ending on A2400C; check all nutritional approaches performed within the last 3 days of the SNF PPS Stay.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Coding Instructions for Column 4 • Check all nutritional approaches performed within the last 3 days of the SNF PPS Stay."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Check all that apply; if none of the K0520 nutritional approaches apply, check K0520Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Check all that apply. If none apply, check K0520Z, None of the above"
+      }
+    },
+    {
+      "rule": "Code K0520D for a therapeutic diet (e.g., low salt, diabetic, low cholesterol).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "K0520D, therapeutic diet (e.g., low salt, diabetic, low cholesterol)."
+      }
+    },
+    {
+      "rule": "Review the medical record to determine if any of the listed nutritional approaches were performed during the look-back period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Review the medical record to determine if any of the listed nutritional approaches were performed during the look-back period."
+      }
+    },
+    {
+      "rule": "Therapeutic diets are determined by why the diet is required, not by the content of what is provided or when it is served; the diet must provide corresponding treatment addressing a particular disease or clinical condition manifesting an altered nutritional status.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-14",
+        "quote": "Therapeutic diets are not defined by the content of what is provided or when it is served, but why the diet is required."
+      }
+    },
+    {
+      "rule": "A nutritional supplement (house or packaged) given as part of treatment for a disease or clinical condition manifesting an altered nutrition status does not by itself constitute a therapeutic diet; supplements are only coded in K0520D when administered as part of a therapeutic diet to manage problematic health conditions.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-14",
+        "quote": "Therefore, supplements (whether given with, in-between, or instead of meals) are only coded in K0520D, Therapeutic Diet when they are being administered as part of a therapeutic diet to manage problematic health conditions (e.g. supplement for protein-calorie malnutrition)."
+      }
+    },
+    {
+      "rule": "Food elimination diets related to food allergies (e.g., peanut allergy) can be coded as a therapeutic diet.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-14",
+        "quote": "Food elimination diets related to food allergies (e.g. peanut allergy) can be coded as a therapeutic diet."
+      }
+    },
+    {
+      "rule": "Enteral feeding formulas should only be coded as K0520D, Therapeutic Diet, when the enteral formula is altered to manage problematic health conditions (e.g., enteral formulas specific to residents with diabetes).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-13",
+        "quote": "Should only be coded as K0520D, Therapeutic Diet when the enteral formula is altered to manage problematic health conditions, e.g. enteral formulas specific to residents with diabetes."
+      }
+    },
+    {
+      "rule": "A mechanically altered diet should not automatically be considered a therapeutic diet.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "A mechanically altered diet should not automatically be considered a therapeutic diet."
+      }
+    },
+    {
+      "rule": "Example: a resident with celiac disease on a gluten-free diet in the last 7 days and at discharge is coded K0520D3 and K0520D4.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-15",
+        "quote": "Coding: K0520C3 and K0520C4, as well as K0520D3 and K0520D4, would be checked."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Medical record review supporting that the listed nutritional approach was performed during the look-back period.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. K-12",
+          "quote": "Review the medical record to determine if any of the listed nutritional approaches were performed during the look-back period."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as the assessment step for K0520."
+      },
+      {
+        "criterion": "Documentation that the diet is a physician- or authorized nonphysician practitioner-prescribed intervention treating a disease or clinical condition (per the therapeutic diet definition).",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. K-12",
+          "quote": "A therapeutic diet is a diet intervention prescribed by a physician or other authorized nonphysician practitioner"
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Derived from the definition box; the manual does not separately state a documentation requirement for K0520D."
+      },
+      {
+        "criterion": "For a resident coded with therapeutic diet based on dysphagia/disease, the record should document the clinical condition requiring the diet (e.g., documented celiac disease requiring gluten-free diet).",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. K-15",
+          "quote": "They have longstanding celiac disease and therefore were placed on a gluten-free diet."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "low",
+        "notes": "Illustrative example, not a stated requirement."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages tie K0520 columns 1 and 4 to the SNF PPS Stay and note IPA completion requirements for K0520A, K0520B, and K0520Z, but do not explicitly state that K0520D drives a payment/case-mix classification."
+  },
+  "conflicts": [
+    {
+      "topic": "Whether K0520D can be coded in Column 2 (While Not a Resident)",
+      "positions": [
+        {
+          "authority": "rai-manual-v1.20.1",
+          "claim": "The K0520 item matrix shows checkboxes for row D only under columns 1, 3, and 4; row D has no Column 2 checkbox (unlike rows A, B, and Z).",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. K-11",
+            "quote": "D. Therapeutic diet (e.g., low salt, diabetic, low cholesterol)"
+          }
+        },
+        {
+          "authority": "rai-manual-v1.20.1",
+          "claim": "The Column 2 coding instructions are written generally for \"all nutritional approaches\" performed prior to admission/entry or reentry and within the 7-day look-back period, without excluding K0520D.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. K-12",
+            "quote": "Check all nutritional approaches performed prior to admission/entry or reentry to the facility and within the 7-day look-back period."
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    },
+    {
+      "topic": "Multiple time windows apply to K0520D",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "Columns 2 and 3 use a 7-day look-back period.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. K-12",
+            "quote": "Check all nutritional approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Column 1 uses days 1 through 3 of the SNF PPS Stay and Column 4 uses the last 3 days of the SNF PPS Stay.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. K-12",
+            "quote": "Check all nutritional approaches performed during the first 3 days of the SNF PPS Stay."
+          }
+        }
+      ],
+      "resolution": "Not a contradiction: the document assigns different windows to different columns of the same item; both are recorded."
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "common_audit_citations",
+    "state_deltas",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

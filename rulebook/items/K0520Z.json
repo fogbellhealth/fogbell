@@ -1,0 +1,209 @@
+{
+  "item_id": "K0520Z",
+  "item_name": "Nutritional Approaches — Z. None of the above",
+  "section": "K",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. K-12",
+    "quote": "Check all nutritional approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period."
+  },
+  "lookback_notes": "The observation window for Columns 2 and 3 is stated as the 7-day look-back period (Column 2 = performed prior to admission/entry or reentry and within the 7-day look-back; Column 3 = performed after admission/entry or reentry and within the 7-day look-back). Two additional, different windows are stated for the other columns: Column 1 covers the first 3 days of the SNF PPS Stay (assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B) and Column 4 covers the last 3 days of the SNF PPS Stay (ending on A2400C). Because K0520Z is checked when none of K0520A–D apply in the applicable column, the window depends on the column being coded.",
+  "coding_levels": [
+    {
+      "code": "Z",
+      "label": "None of the above",
+      "definition": "Checked when none of the listed nutritional approaches (K0520A parenteral/IV feeding, K0520B feeding tube, K0520C mechanically altered diet, K0520D therapeutic diet) apply for the applicable column.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "K0520Z, none of the above."
+      }
+    },
+    {
+      "code": "Z1",
+      "label": "None of the above — Column 1, On Admission",
+      "definition": "No listed nutritional approach was performed during the first 3 days of the SNF PPS Stay (assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-11",
+        "quote": "Assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B"
+      }
+    },
+    {
+      "code": "Z2",
+      "label": "None of the above — Column 2, While Not a Resident",
+      "definition": "No listed nutritional approach was performed while NOT a resident of this facility and within the last 7 days; column left blank if resident last entered 7 or more days ago.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-11",
+        "quote": "Only check column 2 if resident entered (admission or reentry) IN THE LAST 7 DAYS. If resident last entered 7 or more days ago, leave column 2 blank."
+      }
+    },
+    {
+      "code": "Z3",
+      "label": "None of the above — Column 3, While a Resident",
+      "definition": "No listed nutritional approach was performed while a resident of this facility and within the last 7 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-11",
+        "quote": "Performed while a resident of this facility and within the last 7 days"
+      }
+    },
+    {
+      "code": "Z4",
+      "label": "None of the above — Column 4, At Discharge",
+      "definition": "No listed nutritional approach was performed within the last 3 days of the SNF PPS Stay ending on A2400C.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-11",
+        "quote": "Assessment period is the last 3 days of the SNF PPS Stay ending on A2400C"
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "K0520 is a check-all-that-apply item; if none of the listed nutritional approaches apply, check K0520Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Check all that apply. If none apply, check K0520Z, None of the above"
+      }
+    },
+    {
+      "rule": "During assessment, review the medical record to determine whether any listed nutritional approach was performed during the look-back period; if none apply, check K0520Z.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "If none apply, check K0520Z. None of the above."
+      }
+    },
+    {
+      "rule": "Column 1 (On Admission) reflects nutritional approaches performed during the first 3 days of the SNF PPS Stay.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Check all nutritional approaches performed during the first 3 days of the SNF PPS Stay."
+      }
+    },
+    {
+      "rule": "Column 2 (While Not a Resident) reflects approaches performed prior to admission/entry or reentry and within the 7-day look-back period; leave Column 2 blank if the resident was admitted/entered or reentered the facility more than 7 days ago.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Check all nutritional approaches performed prior to admission/entry or reentry to the facility and within the 7-day look-back period. Leave Column 2 blank if the resident was admitted/entered or reentered the facility more than 7 days ago."
+      }
+    },
+    {
+      "rule": "Column 3 (While a Resident) reflects approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Check all nutritional approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period."
+      }
+    },
+    {
+      "rule": "Column 4 (At Discharge) reflects approaches performed within the last 3 days of the SNF PPS Stay.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Check all nutritional approaches performed within the last 3 days of the SNF PPS Stay."
+      }
+    },
+    {
+      "rule": "When completing the Interim Payment Assessment (IPA), completion of K0520A, K0520B, and K0520Z is required.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "When completing the Interim Payment Assessment (IPA), the completion of items K0520A, K0520B, and K0520Z is required."
+      }
+    },
+    {
+      "rule": "The item table directs the assessor to check all of the nutritional approaches that apply, with Z. None of the above available in each of the four columns.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-11",
+        "quote": "Check all of the following nutritional approaches that apply"
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Medical record review must support that none of the listed nutritional approaches (parenteral/IV feeding, feeding tube, mechanically altered diet, therapeutic diet) were performed during the applicable look-back period before checking K0520Z.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. K-12",
+          "quote": "Review the medical record to determine if any of the listed nutritional approaches were performed during the look-back period."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as a Step for Assessment for K0520."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "medium",
+    "notes": "The manual explicitly requires completion of K0520Z on the Interim Payment Assessment (IPA), a payment assessment, and defines Columns 1 and 4 in terms of the SNF PPS Stay. The pages do not state that K0520Z itself drives a case-mix classification group.",
+    "source": {
+      "doc": "rai-manual-v1.20.1",
+      "loc": "p. K-12",
+      "quote": "When completing the Interim Payment Assessment (IPA), the completion of items K0520A, K0520B, and K0520Z is required."
+    }
+  },
+  "conflicts": [
+    {
+      "topic": "Coexisting observation windows for K0520 columns (7-day look-back vs. 3-day SNF PPS Stay windows)",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "Columns 2 and 3 use a 7-day look-back period.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. K-12",
+            "quote": "Check all nutritional approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Column 1 uses the first 3 days of the SNF PPS Stay and Column 4 uses the last 3 days of the SNF PPS Stay.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. K-12",
+            "quote": "Check all nutritional approaches performed during the first 3 days of the SNF PPS Stay."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "The item table states Column 4's assessment period is the last 3 days of the SNF PPS Stay ending on A2400C.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. K-11",
+            "quote": "Assessment period is the last 3 days of the SNF PPS Stay ending on A2400C"
+          }
+        }
+      ],
+      "resolution": "Not a contradiction in the document: the manual assigns a distinct window to each column, so the applicable window for K0520Z depends on which column is being coded. Surfaced so users apply the correct per-column window."
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "state_deltas",
+    "common_audit_citations"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

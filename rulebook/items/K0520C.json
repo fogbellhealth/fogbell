@@ -1,0 +1,242 @@
+{
+  "item_id": "K0520C",
+  "item_name": "Nutritional Approaches — Mechanically Altered Diet",
+  "section": "K",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. K-12",
+    "quote": "Check all nutritional approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period."
+  },
+  "lookback_notes": "The assessor's observation window for the resident-status columns is the 7-day look-back period (Column 2: performed prior to admission/entry or reentry and within the 7-day look-back period; Column 3: performed after admission/entry or reentry and within the 7-day look-back period). The item form additionally states Column 2 is \"the last 7 days\" and Column 3 is \"the last 7 days.\" Two other, different windows are stated for the SNF PPS Stay columns: Column 1 is days 1 through 3 of the SNF PPS Stay starting with A2400B, and Column 4 is the last 3 days of the SNF PPS Stay ending on A2400C. The pages do not state whether Column 2 is applicable to row C.",
+  "coding_levels": [
+    {
+      "code": "C (checked)",
+      "label": "Mechanically altered diet",
+      "definition": "Mechanically altered diet – require change in texture of food or liquids (e.g., pureed food, thickened liquids).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "K0520C, mechanically altered diet – require change in texture of food or liquids (e.g., pureed food, thickened liquids)."
+      }
+    },
+    {
+      "code": "Z (checked)",
+      "label": "None of the above",
+      "definition": "Check K0520Z, None of the above, if none of the listed nutritional approaches apply.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Check all that apply. If none apply, check K0520Z, None of the above"
+      }
+    },
+    {
+      "code": "Column 1",
+      "label": "On Admission",
+      "definition": "Assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-11",
+        "quote": "Assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B"
+      }
+    },
+    {
+      "code": "Column 2",
+      "label": "While Not a Resident",
+      "definition": "Performed while NOT a resident of this facility and within the last 7 days; only check column 2 if resident entered (admission or reentry) IN THE LAST 7 DAYS. If resident last entered 7 or more days ago, leave column 2 blank.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-11",
+        "quote": "Performed while NOT a resident of this facility and within the last 7 days"
+      }
+    },
+    {
+      "code": "Column 3",
+      "label": "While a Resident",
+      "definition": "Performed while a resident of this facility and within the last 7 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-11",
+        "quote": "Performed while a resident of this facility and within the last 7 days"
+      }
+    },
+    {
+      "code": "Column 4",
+      "label": "At Discharge",
+      "definition": "Assessment period is the last 3 days of the SNF PPS Stay ending on A2400C.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-11",
+        "quote": "Assessment period is the last 3 days of the SNF PPS Stay ending on A2400C"
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Check all nutritional approaches that apply; if none apply, check K0520Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Check all that apply. If none apply, check K0520Z, None of the above"
+      }
+    },
+    {
+      "rule": "Code K0520C for a mechanically altered diet, i.e., a diet that requires a change in texture of food or liquids (e.g., pureed food, thickened liquids).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "K0520C, mechanically altered diet – require change in texture of food or liquids (e.g., pureed food, thickened liquids)."
+      }
+    },
+    {
+      "rule": "A mechanically altered diet is a diet specifically prepared to alter the texture or consistency of food to facilitate oral intake (e.g., soft solids, puréed foods, ground meat, thickened liquids); it should not automatically be considered a therapeutic diet.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "A diet specifically prepared to alter the texture or consistency of food to facilitate oral intake. Examples include soft solids, puréed foods, ground meat, and thickened liquids. A mechanically altered diet should not automatically be considered a therapeutic diet."
+      }
+    },
+    {
+      "rule": "Do not capture a trial of a mechanically altered diet (e.g., pureed food, thickened liquids) during the observation period in K0520C.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-14",
+        "quote": "Assessors should not capture a trial of a mechanically altered diet (e.g., pureed food, thickened liquids) during the observation period in K0520C, mechanically altered diet."
+      }
+    },
+    {
+      "rule": "Enteral feeding formulas should not be coded as a mechanically altered diet.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-13",
+        "quote": "Enteral feeding formulas: — Should not be coded as a mechanically altered diet."
+      }
+    },
+    {
+      "rule": "Column 1: check all nutritional approaches performed during the first 3 days of the SNF PPS Stay.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Check all nutritional approaches performed during the first 3 days of the SNF PPS Stay."
+      }
+    },
+    {
+      "rule": "Column 2: check all nutritional approaches performed prior to admission/entry or reentry to the facility and within the 7-day look-back period; leave Column 2 blank if the resident was admitted/entered or reentered the facility more than 7 days ago.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Check all nutritional approaches performed prior to admission/entry or reentry to the facility and within the 7-day look-back period. Leave Column 2 blank if the resident was admitted/entered or reentered the facility more than 7 days ago."
+      }
+    },
+    {
+      "rule": "Column 3: check all nutritional approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Check all nutritional approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period."
+      }
+    },
+    {
+      "rule": "Column 4: check all nutritional approaches performed within the last 3 days of the SNF PPS Stay.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Check all nutritional approaches performed within the last 3 days of the SNF PPS Stay."
+      }
+    },
+    {
+      "rule": "A documented mechanical soft diet with honey-thick liquids required in the last 7 days and continuing at discharge is coded in K0520C for the While a Resident and At Discharge columns (example: K0520C3 and K0520C4 checked).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-15",
+        "quote": "Resident Q required both a mechanically altered diet (i.e., mechanical soft diet and honey-thick liquids) and a therapeutic diet (i.e., gluten free) for their celiac disease in the last 7 days as well as at discharge."
+      }
+    },
+    {
+      "rule": "A resident who was on a mechanical soft diet only during the acute hospital stay and was upgraded to a regular texture diet prior to hospital discharge, and who had a regular diet for the entire nursing home stay, is coded K0520Z (none of the above) rather than K0520C for the While a Resident and At Discharge columns.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-15",
+        "quote": "Coding: K0520Z3and K0520Z4 would be checked."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review the medical record to determine whether any of the listed nutritional approaches (including mechanically altered diet) were performed during the look-back period.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. K-12",
+          "quote": "Review the medical record to determine if any of the listed nutritional approaches were performed during the look-back period."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Stated as a Step for Assessment for K0520."
+      },
+      {
+        "criterion": "Documentation of the diagnosis/condition requiring the texture-altered diet (e.g., documented dysphagia requiring mechanical soft diet and honey-thick liquids) supports coding K0520C.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. K-15",
+          "quote": "Because of their recent stroke, they also have documented dysphagia requiring a mechanical soft diet and honey-thick liquids to prevent aspiration and will be discharged on this same diet."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "low",
+        "notes": "Drawn from a worked example, not from an explicit documentation requirement."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The pages do not tie K0520C to any payment or case-mix classification. The only payment-related statements in the K0520 section are that Column 1 and Column 4 assessment periods are defined by the first/last 3 days of the SNF PPS Stay, and that on the Interim Payment Assessment (IPA) the completion of K0520A, K0520B, and K0520Z (not K0520C) is required."
+  },
+  "conflicts": [
+    {
+      "topic": "Coexisting observation windows for K0520 columns (7-day look-back vs. 3-day SNF PPS Stay windows)",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "Columns 2 and 3 use a 7-day look-back period (before/after admission, entry or reentry).",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. K-12",
+            "quote": "Check all nutritional approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Columns 1 and 4 use 3-day windows tied to the SNF PPS Stay rather than the 7-day look-back.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. K-12",
+            "quote": "Check all nutritional approaches performed during the first 3 days of the SNF PPS Stay."
+          }
+        }
+      ],
+      "resolution": "Resolved by the document itself: the windows are column-specific — Columns 2 and 3 use the 7-day look-back, Column 1 uses days 1–3 of the SNF PPS Stay, and Column 4 uses the last 3 days of the SNF PPS Stay (p. K-11, p. K-12)."
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "state_deltas",
+    "common_audit_citations",
+    "case_mix_relevance.source",
+    "whether Column 2 is applicable to row K0520C (not stated in the text of the supplied pages)"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

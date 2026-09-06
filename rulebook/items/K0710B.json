@@ -1,0 +1,168 @@
+{
+  "item_id": "K0710B",
+  "item_name": "Average Fluid Intake per Day by IV or Tube Feeding",
+  "section": "K",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. K-17",
+    "quote": "1. Review intake records from the last 7 days."
+  },
+  "lookback_notes": "The document instructs the assessor to review intake records from the last 7 days. Two reporting columns each carry their own 7-day framing: Column 2, While a Resident — \"Performed while a resident of this facility and within the last 7 days\"; Column 3, During Entire 7 Days — \"Performed during the entire last 7 days\" (p. K-15).",
+  "coding_levels": [
+    {
+      "code": "1",
+      "label": "500 cc/day or less",
+      "definition": "Average fluid intake per day by IV or tube feeding of 500 cc/day or less.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-17",
+        "quote": "Code 1: 500 cc/day or less"
+      }
+    },
+    {
+      "code": "2",
+      "label": "501 cc/day or more",
+      "definition": "Average fluid intake per day by IV or tube feeding of 501 cc/day or more.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-17",
+        "quote": "Code 2: 501 cc/day or more"
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Complete K0710 (including K0710B) only if Column 2 and/or Column 3 are checked for K0520A and/or K0520B.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-15",
+        "quote": "Complete K0710 only if Column 2 and/or Column 3 are checked for K0520A and/or K0520B."
+      }
+    },
+    {
+      "rule": "Add up the total amount of fluid received each day by IV and/or tube feedings only.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-17",
+        "quote": "2. Add up the total amount of fluid received each day by IV and/or tube feedings only."
+      }
+    },
+    {
+      "rule": "Divide the week's total fluid intake by 7 to calculate the average fluid intake per day.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-17",
+        "quote": "3. Divide the week's total fluid intake by 7 to calculate the average of fluid intake per day."
+      }
+    },
+    {
+      "rule": "Divide by 7 even if the resident did not receive IV fluids and/or tube feeding on each of the 7 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-17",
+        "quote": "4. Divide by 7 even if the resident did not receive IV fluids and/or tube feeding on each of the 7 days."
+      }
+    },
+    {
+      "rule": "Code for the average number of cc per day of fluid the resident received via IV or tube feeding; record what was actually received by the resident, not what was ordered.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-17",
+        "quote": "Code for the average number of cc per day of fluid the resident received via IV or tube feeding. Record what was actually received by the resident, not what was ordered."
+      }
+    },
+    {
+      "rule": "Column 2 (While a Resident) captures fluid intake performed while a resident of this facility and within the last 7 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-15",
+        "quote": "2. While a Resident\nPerformed while a resident of this facility and within the last 7 days"
+      }
+    },
+    {
+      "rule": "Column 3 (During Entire 7 Days) captures fluid intake performed during the entire last 7 days, including intake received while in the hospital as well as while a resident of the nursing home.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-19",
+        "quote": "The total fluid intake during the entire 7 days (includes fluid intake while Resident K was in the hospital AND while Resident K was a resident of the nursing home) was 3,420 cc (1,900 cc + 1,520 cc)."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Intake records from the last 7 days documenting the amount of fluid received each day by IV and/or tube feeding, used to compute the daily average.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. K-17",
+          "quote": "1. Review intake records from the last 7 days."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "The manual directs the assessor to the intake records as the source for this item."
+      },
+      {
+        "criterion": "Coding must reflect fluid actually received by the resident, not amounts ordered; documentation should support actual administration.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. K-17",
+          "quote": "Record what was actually received by the resident, not what was ordered."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages for K0710B do not explicitly tie this item to a payment or case-mix classification. (The IPA completion requirement stated on p. K-12 applies to K0520A, K0520B, and K0520Z, not to K0710B.)"
+  },
+  "conflicts": [
+    {
+      "topic": "Denominator used to compute the daily average (divide by 7 vs. divide by number of days as a resident)",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "Steps for Assessment instruct dividing the week's total fluid intake by 7, even if the resident did not receive IV fluids and/or tube feeding on each of the 7 days.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. K-17",
+            "quote": "4. Divide by 7 even if the resident did not receive IV fluids and/or tube feeding on each of the 7 days."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "The worked example for Column 2 (While a Resident) divides the total fluid intake by 3 days (the number of days the person was a resident), not by 7.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. K-19",
+            "quote": "Average fluid intake while a resident totaled 507 cc (1,520 cc divided by 3 days)."
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "case_mix_relevance.source",
+    "state_deltas",
+    "common_audit_citations"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}
