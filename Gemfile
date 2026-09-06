@@ -17,6 +17,11 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Rulebook: JSON Schema validation of rulebook/items/*.json [https://github.com/davishmcclurg/json_schemer]
+gem "json_schemer", "~> 2.5"
+# Pipeline: Anthropic API client for rulebook extraction (rake tasks only; never runs in production requests)
+gem "anthropic", "~> 1.69"
+
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
