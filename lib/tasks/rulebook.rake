@@ -75,9 +75,52 @@ namespace :rulebook do
     abort "#{failures} of #{items.size} item(s) failed" if failures.positive?
   end
 
-  desc "Merge state-specific deltas into existing items and surface fed/state conflicts (not implemented)"
+  # Layer one state's document onto promoted items:
+  #   bin/rails rulebook:layer_state DOC=corpus/maine/mainecare-101-iii-67.txt DOC_ID=mainecare-101-iii-67 STATE=ME ITEMS=D0500,D0600
+  #   DOC / DOC_ID / STATE (two letters) / ITEMS (ids, or ALL)                      required
+  #   ITEMS_DIR  where the promoted items live                          default: rulebook/items
+  #   OUT        where merged items are written for review               default: tmp/layer_state
+  #   MODE auto|text|pdf, MODEL, LLM, DRY_RUN=1, FORCE=1 as for extract
+  desc "Layer a state document onto promoted items (state criteria, deltas, fed/state conflicts); see file header"
   task layer_state: :environment do
-    abort "rulebook:layer_state is not implemented yet — see backlog.md"
+    doc = ENV["DOC"] or abort "DOC=<path> is required"
+    state = ENV["STATE"].to_s.upcase
+    abort "STATE=<two-letter code> is required" unless state.match?(/\A[A-Z]{2}\z/)
+    items_dir = Pathname(ENV.fetch("ITEMS_DIR", Fogbell::Rulebook.items_dir.to_s))
+    items = ENV["ITEMS"].to_s == "ALL" ? items_dir.glob("*.json").map { |p| p.basename(".json").to_s }.sort : ENV["ITEMS"].to_s.split(",").map(&:strip).reject(&:empty?)
+    abort "ITEMS=<ID,ID,...> or ITEMS=ALL is required" if items.empty?
+
+    llm =
+      case ENV.fetch("LLM", "anthropic")
+      when "stub" then Fogbell::Pipeline::Llm::StubClient.new(ENV.fetch("STUB_RESPONSE", Rails.root.join(Fogbell::Pipeline::Llm::StubClient::DEFAULT_RESPONSE)))
+      when "anthropic" then Fogbell::Pipeline::Llm::AnthropicClient.new(model: ENV.fetch("MODEL", Fogbell::Pipeline::Llm::AnthropicClient::DEFAULT_MODEL))
+      else abort "LLM must be anthropic or stub"
+      end
+
+    layerer = Fogbell::Pipeline::StateLayerer.new(
+      doc: doc, doc_id: ENV.fetch("DOC_ID") { File.basename(doc, ".*") }, state: state, llm: llm,
+      items_dir: items_dir, out_dir: ENV.fetch("OUT", Rails.root.join("tmp/layer_state").to_s),
+      mode: ENV.fetch("MODE", "auto"), force: ENV["FORCE"] == "1", logger: $stdout
+    )
+
+    failures = 0
+    items.each do |item_id|
+      if ENV["DRY_RUN"] == "1"
+        prompt = layerer.prompt_for(item_id)
+        puts "===== SYSTEM (#{item_id}) =====", prompt.system, "", "===== USER (#{item_id}) =====", prompt.user, ""
+        next
+      end
+
+      layerer.run(item_id)
+    rescue Fogbell::Pipeline::Rejected => e
+      failures += 1
+      warn "REJECTED #{e.message}"
+    rescue Fogbell::Pipeline::Error, Fogbell::Rulebook::Error => e
+      failures += 1
+      warn "ERROR #{item_id}: #{e.message}"
+    end
+
+    abort "#{failures} of #{items.size} item(s) failed" if failures.positive?
   end
 
   desc "Generate review/<ID>.md one-pagers for the Verifier from the promoted rulebook (OUT=review, ITEMS=ID,ID)"

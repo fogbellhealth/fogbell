@@ -27,6 +27,26 @@ module Fogbell
           out
         end
 
+        # Schema for one state-layering call: the three kinds of finding plus case-mix notes,
+        # built from the same $defs so a layered fragment merges into a valid item.
+        def build_for_layer(schema = Rulebook::Schema.json)
+          cm = deep_dup(schema["properties"]["case_mix_relevance"])
+          node = {
+            "type" => "object", "additionalProperties" => false, "$defs" => schema["$defs"],
+            "required" => %w[state_supportive_documentation state_deltas conflicts case_mix_relevance not_found],
+            "properties" => {
+              "state_supportive_documentation" => { "type" => "array", "items" => { "$ref" => "#/$defs/criterion" },
+                                                    "description" => "Documentation the state requires or checks in the chart to support this item." },
+              "state_deltas" => { "type" => "array", "items" => { "$ref" => "#/$defs/state_delta" } },
+              "conflicts" => { "type" => "array", "items" => { "$ref" => "#/$defs/conflict" } },
+              "case_mix_relevance" => { "anyOf" => [ cm.except("description"), { "type" => "null" } ],
+                                        "description" => "Only when the document ties this item to case-mix/payment; otherwise null." },
+              "not_found" => deep_dup(schema["properties"]["not_found"])
+            }
+          }
+          transform(deep_dup(node))
+        end
+
         private
 
         def transform(node)

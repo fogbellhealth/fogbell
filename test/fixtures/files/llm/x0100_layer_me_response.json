@@ -1,0 +1,18 @@
+{
+  "state_supportive_documentation": [
+    { "criterion": "A dated nursing note for each fog visibility check, including the reading.", "source": { "doc": "me-fake-rule", "loc": "§99.02-1", "quote": "Each visibility check shall be recorded in a dated nursing note with the reading obtained." }, "verified_by_expert": false, "audit_weight": "high" }
+  ],
+  "state_deltas": [
+    { "state": "ME", "delta": "Maine reviews visibility checks over a 28-day window rather than the federal 7 days.", "kind": "lookback", "source": { "doc": "me-fake-rule", "loc": "§99.02-2", "quote": "The review period for visibility checks is the 28 days ending on the assessment reference date." } }
+  ],
+  "conflicts": [
+    { "topic": "Look-back window for visibility checks: federal 7 days vs Maine 28 days",
+      "positions": [
+        { "authority": "federal", "claim": "Look back over the 7-day period ending on the ARD.", "source": { "doc": "fake-manual", "loc": "p. 2", "quote": "Look back over the 7-day period ending on the ARD." } },
+        { "authority": "ME", "claim": "The review period is the 28 days ending on the ARD.", "source": { "doc": "me-fake-rule", "loc": "§99.02-2", "quote": "The review period for visibility checks is the 28 days ending on the assessment reference date." } }
+      ],
+      "resolution": "unresolved — surface to user" }
+  ],
+  "case_mix_relevance": { "level": "high", "notes": "Visibility checks drive the Fog case-mix group.", "source": { "doc": "me-fake-rule", "loc": "§99.05", "quote": "Residents with documented visibility checks classify to the Fog group." } },
+  "not_found": ["sanctions for missing checks"]
+}

@@ -22,14 +22,14 @@ module Fogbell
           @max_tokens = max_tokens
         end
 
-        def complete(system:, user:, output_schema:, pdf: nil, pdf_title: nil)
+        def complete(system:, user:, output_schema:, pdf: nil, pdf_title: nil, document_text: nil)
           message = client.messages.create(
             model: @model,
             max_tokens: @max_tokens,
             system_: system,
             thinking: { type: :adaptive },
             output_config: { format: { type: :json_schema, schema: output_schema } },
-            messages: [ { role: :user, content: content_blocks(user, pdf, pdf_title) } ]
+            messages: [ { role: :user, content: content_blocks(user, pdf, pdf_title, document_text) } ]
           )
           check_stop_reason!(message)
           Response.new(text: text_of(message), model: message.model.to_s, usage: message.usage.to_h)
@@ -56,8 +56,10 @@ module Fogbell
           end
         end
 
-        def content_blocks(user, pdf, pdf_title)
+        def content_blocks(user, pdf, pdf_title, document_text = nil)
           blocks = []
+          # A long text document (e.g. a converted .docx rule) gets the same cache breakpoint as a PDF.
+          blocks << { type: :text, text: document_text, cache_control: { type: :ephemeral } } if document_text
           if pdf
             # Cache breakpoint: system prompt + document form a stable prefix shared by every item
             # extracted from the same document; only the short user text after it varies.

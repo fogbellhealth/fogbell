@@ -8,7 +8,7 @@ module Fogbell
       class StubClient
         DEFAULT_RESPONSE = "test/fixtures/files/llm/x0100_response.json"
 
-        Call = Data.define(:system, :user, :output_schema, :pdf)
+        Call = Data.define(:system, :user, :output_schema, :pdf, :document_text)
 
         attr_reader :calls
 
@@ -19,8 +19,8 @@ module Fogbell
 
         def model = "stub"
 
-        def complete(system:, user:, output_schema:, pdf: nil, pdf_title: nil)
-          @calls << Call.new(system: system, user: user, output_schema: output_schema, pdf: pdf)
+        def complete(system:, user:, output_schema:, pdf: nil, pdf_title: nil, document_text: nil)
+          @calls << Call.new(system: system, user: user, output_schema: output_schema, pdf: pdf, document_text: document_text)
           Response.new(text: @text, model: model, usage: {})
         end
       end

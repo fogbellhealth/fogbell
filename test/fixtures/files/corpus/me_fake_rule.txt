@@ -1,0 +1,7 @@
+99.01 PURPOSE
+This section governs fog visibility checks in nursing facilities. It is long enough to stand alone as a part of the document for chunking purposes.
+99.02 DOCUMENTATION
+99.02-1 Each visibility check shall be recorded in a dated nursing note with the reading obtained.
+99.02-2 The review period for visibility checks is the 28 days ending on the assessment reference date.
+99.05 CASE MIX
+Residents with documented visibility checks classify to the Fog group.
