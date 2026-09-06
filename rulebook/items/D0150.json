@@ -1,0 +1,374 @@
+{
+  "item_id": "D0150",
+  "item_name": "Resident Mood Interview (PHQ-2 to 9©)",
+  "section": "D",
+  "instrument": "MDS-3.0",
+  "lookback_days": null,
+  "lookback_notes": "The pages for D0150 do not state an assessor observation/look-back window in days for this item. The interview questions themselves use a 2-week symptom-recall period (\"Over the last 2 weeks, have you been bothered by any of the following problems?\" — p. D-3), and D0100 notes that the resident interview \"is conducted during the look-back period of the Assessment Reference Date (ARD)\" without stating the number of days (p. D-2). A 7-day look-back is stated only for the staff assessment D0500 (p. D-13), not for D0150. Therefore lookback_days is NOT_FOUND.",
+  "coding_levels": [
+    {
+      "code": "1-0",
+      "label": "Column 1, Symptom Presence — Code 0, no",
+      "definition": "Resident indicates symptoms listed are not present. Enter 0 in Column 2 as well.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-6",
+        "quote": "Code 0, no: if resident indicates symptoms listed are not present. Enter 0 in Column 2 as well."
+      }
+    },
+    {
+      "code": "1-1",
+      "label": "Column 1, Symptom Presence — Code 1, yes",
+      "definition": "Resident indicates symptoms listed are present. Enter 0, 1, 2, or 3 in Column 2, Symptom Frequency.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-6",
+        "quote": "Code 1, yes: if resident indicates symptoms listed are present. Enter 0, 1, 2, or 3 in Column 2, Symptom Frequency."
+      }
+    },
+    {
+      "code": "1-9",
+      "label": "Column 1, Symptom Presence — Code 9, no response",
+      "definition": "Resident was unable or chose not to complete the assessment or responded nonsensically. Leave Column 2, Symptom Frequency, blank.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-6",
+        "quote": "Code 9, no response: if the resident was unable or chose not to complete the assessment or responded nonsensically. Leave Column 2, Symptom Frequency, blank."
+      }
+    },
+    {
+      "code": "1-dash",
+      "label": "Column 1, Symptom Presence — Dash",
+      "definition": "Enter a Dash in Column 1 if the symptom presence was not assessed.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-6",
+        "quote": "Enter a Dash in Column 1 if the symptom presence was not assessed."
+      }
+    },
+    {
+      "code": "2-0",
+      "label": "Column 2, Symptom Frequency — Code 0, never or 1 day",
+      "definition": "Resident indicates that during the past 2 weeks they have never been bothered by the symptom or have only been bothered by the symptom on 1 day.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-6",
+        "quote": "Code 0, never or 1 day: if the resident indicates that during the past 2 weeks they have never been bothered by the symptom or have only been bothered by the symptom on 1 day."
+      }
+    },
+    {
+      "code": "2-1",
+      "label": "Column 2, Symptom Frequency — Code 1, 2-6 days (several days)",
+      "definition": "Resident indicates that during the past 2 weeks they have been bothered by the symptom for 2-6 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-6",
+        "quote": "Code 1, 2-6 days (several days): if the resident indicates that during the past 2 weeks they have been bothered by the symptom for 2-6 days."
+      }
+    },
+    {
+      "code": "2-2",
+      "label": "Column 2, Symptom Frequency — Code 2, 7-11 days (half or more of the days)",
+      "definition": "Resident indicates during the past 2 weeks they have been bothered by the symptom for 7-11 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-6",
+        "quote": "Code 2, 7-11 days (half or more of the days): if the resident indicates during the past 2 weeks they have been bothered by the symptom for 7-11 days."
+      }
+    },
+    {
+      "code": "2-3",
+      "label": "Column 2, Symptom Frequency — Code 3, 12-14 days (nearly every day)",
+      "definition": "Resident indicates during the past 2 weeks they have been bothered by the symptom for 12-14 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-6",
+        "quote": "Code 3, 12-14 days (nearly every day): if the resident indicates during the past 2 weeks they have been bothered by the symptom for 12-14 days."
+      }
+    },
+    {
+      "code": "2-dash",
+      "label": "Column 2, Symptom Frequency — Dash",
+      "definition": "In the rare situation that the resident cannot provide a frequency following a yes response in Column 1, enter a dash in Column 2.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-7",
+        "quote": "In the rare situation that the resident cannot provide a frequency, following a yes response to a symptom in Column 1, enter a dash in Column 2. CMS expects a dash response to be rare."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Conduct the Resident Mood Interview for any resident when D0100 = 1.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-4",
+        "quote": "1. Interview any resident when D0100 = 1."
+      }
+    },
+    {
+      "rule": "Attempt to conduct the interview with ALL residents.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-6",
+        "quote": "Attempt to conduct the interview with ALL residents."
+      }
+    },
+    {
+      "rule": "Read the item as it is written; do not provide definitions because the meaning must be based on the resident's interpretation.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-5",
+        "quote": "Do not provide definitions because the meaning must be based on the resident's interpretation."
+      }
+    },
+    {
+      "rule": "Each question must be asked in sequence to assess Symptom Presence (column 1) and Symptom Frequency (column 2) before proceeding to the next question.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-5",
+        "quote": "Each question must be asked in sequence to assess Symptom Presence (column 1) and Symptom Frequency (column 2) before proceeding to the next question."
+      }
+    },
+    {
+      "rule": "Enter code 9 in Column 1 and leave Column 2 blank if the resident was unable or chose not to complete the assessment or responded nonsensically.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-5",
+        "quote": "Enter code 9 in Column 1 and leave Column 2 blank if the resident was unable or chose not to complete the assessment or responded nonsensically."
+      }
+    },
+    {
+      "rule": "If both D0150A1 and D0150B1 are coded 9, OR both D0150A2 and D0150B2 are coded 0 or 1, end the PHQ interview; otherwise continue with D0150C to D0150I.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-5",
+        "quote": "If both D0150A1 and D0150B1 are coded 9, OR both D0150A2 and D0150B2 are coded 0 or 1, end the PHQ interview; otherwise continue."
+      }
+    },
+    {
+      "rule": "If both D0150A1 and D0150B1 are coded 9, leave D0150A2 and D0150B2 blank, end the PHQ-2©, leave D0160 Total Severity Score blank, and skip to D0700, Social Isolation.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-5",
+        "quote": "If both D0150A1 and D0150B1 are coded 9, leave D0150A2 and D0150B2 blank, then end the PHQ-2©, leave D0160, Total Severity Score blank, and skip to D0700, Social Isolation."
+      }
+    },
+    {
+      "rule": "If both D0150A2 and D0150B2 are coded 0 or 1, end the PHQ-2© and enter the total score from D0150A2 and D0150B2 in D0160, Total Severity Score.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-5",
+        "quote": "If both D0150A2 and D0150B2 are coded 0 or 1, then end the PHQ-2© and enter the total score from D0150A2 and D0150B2 in D0160, Total Severity Score."
+      }
+    },
+    {
+      "rule": "For all other scenarios, proceed to ask the remaining seven questions (D0150C to D0150I of the PHQ-9©) and complete D0160, Total Severity Score.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-6",
+        "quote": "For all other scenarios, proceed to ask the remaining seven questions (D0150C to D0150I of the PHQ-9©) and complete D0160, Total Severity Score."
+      }
+    },
+    {
+      "rule": "Record the resident's responses as they are stated, regardless of whether the resident or the assessor attributes the symptom to something other than mood.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-6",
+        "quote": "Record the resident's responses as they are stated, regardless of whether the resident or the assessor attributes the symptom to something other than mood."
+      }
+    },
+    {
+      "rule": "If Column 1 equals 0, enter 0 in Column 2.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-6",
+        "quote": "If Column 1 equals 0, enter 0 in Column 2."
+      }
+    },
+    {
+      "rule": "If Column 1 equals 9 or dash, leave Column 2 blank.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-6",
+        "quote": "If Column 1 equals 9 or dash, leave Column 2 blank."
+      }
+    },
+    {
+      "rule": "Select only one frequency response per item.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-7",
+        "quote": "Select only one frequency response per item."
+      }
+    },
+    {
+      "rule": "If the resident has difficulty selecting between two frequency responses, code for the higher frequency.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-7",
+        "quote": "If the resident has difficulty selecting between two frequency responses, code for the higher frequency."
+      }
+    },
+    {
+      "rule": "For multi-phrase items (e.g., D0150F), if a resident gives different frequencies for the different parts of a single item, select the highest frequency as the score for that item.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-7",
+        "quote": "Some items (e.g., item D0150F) contain more than one phrase. If a resident gives different frequencies for the different parts of a single item, select the highest frequency as the score for that item."
+      }
+    },
+    {
+      "rule": "In the rare situation that the resident cannot provide a frequency following a yes response in Column 1, enter a dash in Column 2; CMS expects a dash response to be rare.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-7",
+        "quote": "In the rare situation that the resident cannot provide a frequency, following a yes response to a symptom in Column 1, enter a dash in Column 2. CMS expects a dash response to be rare."
+      }
+    },
+    {
+      "rule": "Residents may respond verbally, by pointing to their answers on the cue card, or by writing out their answers.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-7",
+        "quote": "Residents may respond to questions:"
+      }
+    },
+    {
+      "rule": "If the resident uses their own words to describe a symptom, briefly explore; if the resident is reporting the intended symptom using their own words, ask them how often they were bothered by that symptom.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-7",
+        "quote": "If the resident uses their own words to describe a symptom, this should be briefly explored. If you determine that the resident is reporting the intended symptom but using their own words, ask them to tell you how often they were bothered by that symptom."
+      }
+    },
+    {
+      "rule": "If the resident interview was not conducted within the look-back period of the ARD, D0100 must be coded 1, Yes, and the standard \"no information\" code (a dash \"-\") entered in the resident interview items.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-3",
+        "quote": "If the resident interview was not conducted within the look-back period of the ARD, item D0100 must be coded 1, Yes, and the standard \"no information\" code (a dash \"-\") entered in the resident interview items."
+      }
+    },
+    {
+      "rule": "Resident refusal or unwillingness to participate in the interview results in D0100 coded 1, Yes, and code 9, No response entered in Column 1, Symptom Presence; assessors should then proceed to D0700, Social Isolation.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-3",
+        "quote": "Resident refusal or unwillingness to participate in the interview would result in Item D0100 being coded 1, Yes, and code 9, No response being entered in Column 1. Symptom Presence."
+      }
+    },
+    {
+      "rule": "Interview instruction: say to resident \"Over the last 2 weeks, have you been bothered by any of the following problems?\"; if symptom is present, enter 1 (yes) in column 1, then ask about frequency and indicate response in column 2.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-3",
+        "quote": "Say to resident: \"Over the last 2 weeks, have you been bothered by any of the following problems?\""
+      }
+    },
+    {
+      "rule": "Conduct the interview in a private setting.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-4",
+        "quote": "2. Conduct the interview in a private setting."
+      }
+    },
+    {
+      "rule": "If an interpreter is used during resident interviews, the interpreter should not attempt to determine the intent behind what is being translated, the outcome of the interview, or the meaning or significance of the resident's responses.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-4",
+        "quote": "If an interpreter is used during resident interviews, the interpreter should not attempt to determine the intent behind what is being translated, the outcome of the interview, or the meaning or significance of the resident's responses."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Coding must reflect the resident's own self-reported responses recorded as stated, not the assessor's or resident's attribution of cause; further clinical evaluation is a separate clinician responsibility.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. D-6",
+          "quote": "Record the resident's responses as they are stated, regardless of whether the resident or the assessor attributes the symptom to something other than mood. Further evaluation of the clinical relevance of reported symptoms should be explored by the responsible clinician."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Frames the evidence basis for D0150 codes as the resident's stated responses."
+      },
+      {
+        "criterion": "When the interview is not conducted within the look-back period of the ARD, resident interview items must carry a dash (\"no information\") rather than substituted information.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. D-3",
+          "quote": "If the resident interview was not conducted within the look-back period of the ARD, item D0100 must be coded 1, Yes, and the standard \"no information\" code (a dash \"-\") entered in the resident interview items."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      },
+      {
+        "criterion": "Assessors record only the presence or absence of specific clinical signs and symptoms of depressed mood; they do not make or assign a diagnosis based on these findings.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. D-4",
+          "quote": "Assessors do not make or assign a diagnosis based on these findings; they simply record the presence or absence of specific clinical signs and symptoms of depressed mood."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Stated under Item Rationale."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages do not tie D0150 to any payment or case-mix classification."
+  },
+  "conflicts": [
+    {
+      "topic": "Coexisting time windows for D0150: assessor look-back period of the ARD vs. the 2-week symptom-recall period used in the interview questions",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "The resident mood interview is conducted during the look-back period of the Assessment Reference Date (ARD); the number of days is not stated for D0150.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. D-2",
+            "quote": "This interview is conducted during the look-back period of the Assessment Reference Date (ARD) and is not contingent upon item B0700, Makes Self Understood."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Symptom presence and frequency are rated against the resident's recall of the last 2 weeks.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. D-6",
+            "quote": "Code 0, never or 1 day: if the resident indicates that during the past 2 weeks they have never been bothered by the symptom or have only been bothered by the symptom on 1 day."
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user; the 2-week window is the symptom-recall period inside the interview questions, while the assessor look-back window in days is not stated on the D0150 pages."
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "state_deltas",
+    "case_mix_relevance.source",
+    "common_audit_citations"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

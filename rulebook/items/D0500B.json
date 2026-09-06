@@ -1,0 +1,269 @@
+{
+  "item_id": "D0500B",
+  "item_name": "Staff Assessment of Resident Mood (PHQ-9-OV©) — B. Feeling or appearing down, depressed, or hopeless",
+  "section": "D",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. D-13",
+    "quote": "Conduct the interviews during the 7-day look-back period based on the ARD."
+  },
+  "lookback_notes": "The assessor's observation/administration window for the Staff Assessment of Resident Mood is the 7-day look-back period based on the ARD (p. D-13). A separate symptom-recall period is embedded in the item stem itself: staff are asked about the last 2 weeks (\"Over the last 2 weeks, did the resident have any of the following problems or behaviors?\", p. D-12), and the frequency codes are defined in days out of a 2-week period (p. D-15). The coexistence of these two windows is recorded in conflicts.",
+  "coding_levels": [
+    {
+      "code": "0",
+      "label": "No (Column 1, Symptom Presence)",
+      "definition": "Symptoms listed are not present. Enter 0 in Column 2, Symptom Frequency.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-15",
+        "quote": "Code 0, no: if symptoms listed are not present. Enter 0 in Column 2, Symptom Frequency."
+      }
+    },
+    {
+      "code": "1",
+      "label": "Yes (Column 1, Symptom Presence)",
+      "definition": "Symptoms listed are present. Enter 0, 1, 2, or 3 in Column 2, Symptom Frequency.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-15",
+        "quote": "Code 1, yes: if symptoms listed are present. Enter 0, 1, 2, or 3 in Column 2, Symptom Frequency."
+      }
+    },
+    {
+      "code": "0",
+      "label": "Never or 1 day (Column 2, Symptom Frequency)",
+      "definition": "Staff indicate that the resident has never or has experienced the symptom on only 1 day.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-15",
+        "quote": "Code 0, never or 1 day: if staff indicate that the resident has never or has experienced the symptom on only 1 day."
+      }
+    },
+    {
+      "code": "1",
+      "label": "2-6 days (several days) (Column 2, Symptom Frequency)",
+      "definition": "Staff indicate that the resident has experienced the symptom for 2-6 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-15",
+        "quote": "Code 1, 2-6 days (several days): if staff indicate that the resident has experienced the symptom for 2-6 days."
+      }
+    },
+    {
+      "code": "2",
+      "label": "7-11 days (half or more of the days) (Column 2, Symptom Frequency)",
+      "definition": "Staff indicate that the resident has experienced the symptom for 7-11 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-15",
+        "quote": "Code 2, 7-11 days (half or more of the days): if staff indicate that the resident has experienced the symptom for 7-11 days."
+      }
+    },
+    {
+      "code": "3",
+      "label": "12-14 days (nearly every day) (Column 2, Symptom Frequency)",
+      "definition": "Staff indicate that the resident has experienced the symptom for 12-14 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-15",
+        "quote": "Code 3, 12-14 days (nearly every day): if staff indicate that the resident has experienced the symptom for 12-14 days."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "D0500B assesses the symptom \"Feeling or appearing down, depressed, or hopeless\" and is coded in two columns: Column 1, Symptom Presence, and Column 2, Symptom Frequency.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-12",
+        "quote": "B. Feeling or appearing down, depressed, or hopeless"
+      }
+    },
+    {
+      "rule": "The staff assessment item asks whether, over the last 2 weeks, the resident had the problem or behavior; if the symptom is present, enter 1 (yes) in Column 1, Symptom Presence, then move to Column 2 and indicate symptom frequency.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-12",
+        "quote": "Over the last 2 weeks, did the resident have any of the following problems or behaviors? If symptom is present, enter 1 (yes) in column 1, Symptom Presence. Then move to column 2, Symptom Frequency, and indicate symptom frequency."
+      }
+    },
+    {
+      "rule": "Do not conduct the Staff Assessment of Resident Mood (D0500, including D0500B) if the Resident Mood Interview (D0150–D0160) was completed.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-12",
+        "quote": "Do not conduct if Resident Mood Interview (D0150–D0160) was completed"
+      }
+    },
+    {
+      "rule": "The Staff Assessment is completed only when D0100 is coded 0, No; it is not completed based on resident performance during the Resident Mood Interview.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-2",
+        "quote": "The assessor will complete the Staff Assessment only when D0100 is coded 0, No. The assessor does not complete the Staff Assessment based on resident performance during the Resident Mood Interview."
+      }
+    },
+    {
+      "rule": "Do not complete the Staff Assessment of Resident Mood items (D0500) if the resident interview should have been conducted but was not done, or if the assessment being completed is a stand-alone Part A PPS Discharge assessment.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-3",
+        "quote": "Do not complete the Staff Assessment of Resident Mood items (D0500) if the resident interview should have been conducted but was not done, or if the assessment being completed is a stand-alone Part A PPS Discharge assessment."
+      }
+    },
+    {
+      "rule": "When symptom frequency in D0150A2 through D0150I2 is blank or dashed for 3 or more items, the resident interview is deemed not complete, Total Severity Score is coded \"99,\" the Staff Assessment of Mood is not completed, and the assessor skips to D0700, Social Isolation.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-11",
+        "quote": "If symptom frequency in items D0150A2 through D0150I2 is blank or dashed for 3 or more items, the interview is deemed NOT complete. Total Severity Score should be coded as \"99,\" do not complete the Staff Assessment of Mood, and skip to D0700, Social Isolation."
+      }
+    },
+    {
+      "rule": "Ask the staff member being interviewed to select how often over the past 2 weeks the symptom occurred, using the descriptive and/or numeric categories on the form.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-15",
+        "quote": "Ask the staff member being interviewed to select how often over the past 2 weeks the symptom occurred. Use the descriptive and/or numeric categories on the form (e.g., \"nearly every day\" or 3 = 12-14 days) to select a frequency response."
+      }
+    },
+    {
+      "rule": "If a longer item was separated into its component parts, select the highest frequency rating that is reported.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-15",
+        "quote": "If you separated a longer item into its component parts, select the highest frequency rating that is reported."
+      }
+    },
+    {
+      "rule": "If the staff member has difficulty selecting between two frequency responses, code for the higher frequency.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-15",
+        "quote": "If the staff member has difficulty selecting between two frequency responses, code for the higher frequency."
+      }
+    },
+    {
+      "rule": "If the resident has been in the facility for less than 2 weeks, also talk to the family or significant other and review transfer records to inform selection of the frequency code.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-15",
+        "quote": "If the resident has been in the facility for less than 2 weeks, also talk to the family or significant other and review transfer records to inform selection of the frequency code."
+      }
+    },
+    {
+      "rule": "Staff should be encouraged to report symptom frequency even if the staff member believes the symptom is unrelated to depression.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-13",
+        "quote": "Encourage staff to report symptom frequency, even if the staff believes the symptom to be unrelated to depression."
+      }
+    },
+    {
+      "rule": "The staff interview is successfully completed if the staff members were able to answer the frequency responses of at least 8 out of 10 items on the PHQ-9-OV©; frequency scores from D0500 Column 2 (including D0500B) are summed for D0600, Total Severity Score.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-16",
+        "quote": "The interview is successfully completed if the staff members were able to answer the frequency responses of at least 8 out of 10 items on the PHQ-9-OV©."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "When frequency cannot be determined by staff interview because the resident has been in the facility for less than 2 weeks, information from family or significant other and review of transfer records is used to inform the frequency code.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. D-13",
+          "quote": "If frequency cannot be determined by staff interview because the resident has been in the facility for less than 2 weeks, talk to family or significant other and review transfer records to inform the selection of a frequency code."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Stated as a step for assessment; repeated as a coding tip on p. D-15."
+      },
+      {
+        "criterion": "Interviews are conducted with staff from all shifts who know the resident best, in a location that protects resident privacy.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. D-13",
+          "quote": "Interview staff from all shifts who know the resident best. Conduct the staff interview in a location that protects resident privacy."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Source of the D0500B response is the scripted staff interview, not record review alone."
+      },
+      {
+        "criterion": "For D0500B, staff responses such as \"They're 95—what can you expect?\" or \"How would you feel if you were here?\" indicate a need for follow-up questioning with the staff member before coding.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. D-14",
+          "quote": "D0500B, Feeling or Appearing Down, Depressed, or Hopeless \n• They're 95—what can you expect?"
+        },
+        "verified_by_expert": false,
+        "audit_weight": "low",
+        "notes": "Framed by the manual as examples, not required documentation."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied Section D pages do not tie D0500B to any payment or case-mix classification; they describe clinical detection and care planning uses only."
+  },
+  "conflicts": [
+    {
+      "topic": "Which time window governs D0500B: the 7-day look-back based on the ARD or the 2-week symptom recall period in the item stem",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "The staff interviews are to be conducted during the 7-day look-back period based on the ARD.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. D-13",
+            "quote": "Conduct the interviews during the 7-day look-back period based on the ARD."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "The item stem and frequency codes reference symptoms over the last 2 weeks (0-1, 2-6, 7-11, 12-14 days).",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. D-12",
+            "quote": "Over the last 2 weeks, did the resident have any of the following problems or behaviors?"
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Coding tips instruct the assessor to ask the staff member how often the symptom occurred over the past 2 weeks.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. D-15",
+            "quote": "Ask the staff member being interviewed to select how often over the past 2 weeks the symptom occurred."
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user. The document states the interview administration window (7 days ending on the ARD) and the symptom-recall window (past 2 weeks) without reconciling them."
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "state_deltas",
+    "common_audit_citations",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}
