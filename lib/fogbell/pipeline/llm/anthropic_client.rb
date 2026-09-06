@@ -9,7 +9,7 @@ module Fogbell
       # Thin wrapper over the Anthropic Ruby SDK for one extraction call.
       # Text mode sends the rendered [PAGE n] chunks; PDF mode also attaches the
       # document itself as a base64 document block (native PDF input; 600 pages /
-      # 32 MB request limit). Output is constrained with structured outputs.
+      # 32 MB request limit) with a prompt-cache breakpoint. Output is constrained with structured outputs.
       class AnthropicClient
         DEFAULT_MODEL = "claude-opus-5"
         MAX_TOKENS = 16_000
@@ -59,8 +59,11 @@ module Fogbell
         def content_blocks(user, pdf, pdf_title)
           blocks = []
           if pdf
+            # Cache breakpoint: system prompt + document form a stable prefix shared by every item
+            # extracted from the same document; only the short user text after it varies.
             blocks << { type: :document, title: pdf_title,
-                        source: { type: :base64, media_type: :"application/pdf", data: Base64.strict_encode64(pdf) } }
+                        source: { type: :base64, media_type: :"application/pdf", data: Base64.strict_encode64(pdf) },
+                        cache_control: { type: :ephemeral } }
           end
           blocks << { type: :text, text: user }
         end
