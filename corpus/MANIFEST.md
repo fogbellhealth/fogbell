@@ -2,7 +2,7 @@
 
 Human-curated register of every source document. The `key` column is the `doc` value used in every rulebook citation, so keys are stable, lowercase, version-suffixed, and never reused for a different edition. Files live beside this manifest but are git-ignored; `sha256` (`shasum -a 256 <file>`) is the integrity record.
 
-Status: `TODO` (not yet downloaded) · `downloaded` · `extracted` (at least one item cites it) · `superseded` (keep the file; newer edition exists).
+Status: `TODO` (not yet downloaded) · `BLOCKED-pending-Verifier` (do not acquire or cite until the Verifier rules) · `downloaded` · `extracted` (at least one item cites it) · `superseded` (keep the file; newer edition exists).
 
 URLs marked "likely" were not verified at the time of writing; confirm the landing page and record the exact file URL when downloading.
 
@@ -12,6 +12,8 @@ URLs marked "likely" were not verified at the time of writing; confirm the landi
 |---|---|---|---|---|---|---|
 | `rai-manual-v1.20.1` | Long-Term Care Facility Resident Assessment Instrument 3.0 User's Manual (RAI Manual) | v1.20.1, Oct 2025 | https://www.cms.gov/medicare/quality/nursing-home-improvement/resident-assessment-instrument-manual | 2026-09-06 | `845a42b33644a56ca1002762b54df8173a286bfaeaf16eb269b5e3618da7b92e` | downloaded |
 | `rai-manual-v1.20.1-errata` | RAI Manual errata / change tables for the current version | same page | https://www.cms.gov/medicare/quality/nursing-home-improvement/resident-assessment-instrument-manual | | | TODO |
+| `rai-manual-v1.17.1` | RAI Manual v1.17.1 — last edition with full Chapter 3 Section G (G0110–G0900) coding instructions; contingent source for G items if Maine audits G via the OSA | v1.17.1, Oct 2019 | https://www.cms.gov/medicare/quality/nursing-home-improvement/resident-assessment-instrument-manual (archived/prior versions section) — confirm | | | BLOCKED-pending-Verifier |
+| `mds3-osa-item-set` | MDS 3.0 Optional State Assessment (OSA) item set — carries Section G for states running RUG-based Medicaid case-mix | current (record version) | https://www.cms.gov/medicare/quality/nursing-home-improvement/mds-30-technical-information (item sets) — confirm; Maine's use of the OSA is the Verifier's call | | | BLOCKED-pending-Verifier |
 | `mds3-item-sets-v1.20.1` | MDS 3.0 Item Sets (NC, NQ, ND, NP, NT, NO, SP, ST, SD, SO, IPA, OSA) | matching RAI version | https://www.cms.gov/medicare/quality/nursing-home-improvement/mds-30-technical-information | | | TODO |
 | `mds3-data-specs-v4.x` | MDS 3.0 Data Submission Specifications (item definitions, valid values, edits) | current V4.x | https://www.cms.gov/medicare/quality/nursing-home-improvement/mds-30-technical-information (also https://qtso.cms.gov/) | | | TODO |
 | `mds3-section-s-state-items` | Section S state-optional items: list of which states use which S items | current | https://qtso.cms.gov/ (Section S / state items) — confirm; Maine's own S items are in the Maine submission spec below | | | TODO |
