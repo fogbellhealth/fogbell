@@ -71,6 +71,6 @@ Each item file: `item_id`, `item_name`, `section`, `instrument` ("MDS-3.0" | "MD
 - **Prompt templates** live in `lib/prompts/*.md.erb` (Zeitwerk ignores that directory). They are reviewable files, never inline strings.
 - **Citations use manifest keys.** A citation's `doc` is the `key` column of `corpus/MANIFEST.md`; `loc` is page-level (`p. 12`, `p. G-14`, `§67.02-3`).
 - **`corpus/` is git-ignored** except `MANIFEST.md` and per-folder `README.md`. The manifest's `sha256` column is the integrity record; PDFs are large, public, and re-downloadable.
-- **Nothing fake in `rulebook/items/`.** Smoke runs write to `tmp/`. The fake item X0100 exists only under `test/fixtures/`.
+- **Nothing fake in `rulebook/items/`.** Smoke runs write to `tmp/`. The fake item X0100 exists only under `test/fixtures/`. The changelog is appended beside `OUT` (`OUT/../changelog.md`), so smoke runs never touch `rulebook/changelog.md`.
 - **Rejected extractions** (schema-invalid model output) are written to `tmp/rulebook_rejects/` for inspection; nothing invalid is ever written into the rulebook.
 - **Loader fails fast at boot** if any item in `rulebook/items/` is schema-invalid.
