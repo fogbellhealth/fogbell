@@ -18,6 +18,9 @@ Output schema (JSON Schema):
 === USER ===
 Item to extract: **<%= item_id %>** (instrument: <%= instrument %>)
 Source document key: `<%= doc_id %>`
+<% if hint -%>
+What this item covers: <%= hint %> Treat the passages that state this as the item's coding rules; the same citation and NOT_FOUND rules apply.
+<% end -%>
 
 <% if attachment -%>
 The source document is attached. Locate the section for item <%= item_id %> and extract only from it and the pages it references. Cite the page label printed in each page's header or footer (e.g. `p. D-4`), not the attachment's sequential page index.

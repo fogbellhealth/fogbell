@@ -19,6 +19,7 @@
 #   STUB_RESPONSE path to the canned response for LLM=stub    default: test/fixtures/files/llm/x0100_response.json
 #   DRY_RUN=1   print the rendered prompt and exit without calling the model
 #   FORCE=1     overwrite an existing item file
+#   HINT        one-line description of what the item covers, for ids that name no literal manual item (CONV-*)
 #
 # Requires `pdftotext` (poppler) for text extraction from PDFs: `brew install poppler`.
 # Schema-invalid model output is never written to OUT; it is saved under tmp/rulebook_rejects/.
@@ -49,6 +50,7 @@ namespace :rulebook do
       mode: ENV.fetch("MODE", "auto"),
       window: Integer(ENV.fetch("WINDOW", "2")),
       force: ENV["FORCE"] == "1",
+      hint: ENV["HINT"].presence,
       llm: llm,
       logger: $stdout
     )
