@@ -12,7 +12,7 @@ module Fogbell
       # 32 MB request limit) with a prompt-cache breakpoint. Output is constrained with structured outputs.
       class AnthropicClient
         DEFAULT_MODEL = "claude-opus-5"
-        MAX_TOKENS = 16_000
+        MAX_TOKENS = 32_000
 
         attr_reader :model
 

@@ -32,7 +32,7 @@ def load_pages(pdf):
     pages = {}
     for i, p in enumerate(PdfReader(pdf).pages):
         raw = p.extract_text() or ""
-        m = re.search(r"Page ([A-Z]+-\d+)", raw)
+        m = re.search(r"Page ([A-Z0-9]+-\d+)", raw)
         pages[m.group(1) if m else str(i + 1)] = (norm(raw), len(raw), len(p.images))
     return pages
 
