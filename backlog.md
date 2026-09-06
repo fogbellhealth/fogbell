@@ -11,3 +11,4 @@ Anything out of v1 scope gets one line here instead of getting built.
 - Page-range cutting for PDF mode needs poppler (`pdfseparate`/`pdfunite`); consider a pure-Ruby fallback.
 - Batch API for bulk extraction (50% cost) once item lists are long.
 - `corpus:verify` task that checks on-disk sha256 against `MANIFEST.md`.
+- G items: awaiting Verifier answer on Maine instrument; if G-via-OSA, acquire RAI v1.17.1 + OSA item set with their own manifest keys and extract from those editions.

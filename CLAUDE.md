@@ -39,7 +39,7 @@ Each item file: `item_id`, `item_name`, `section`, `instrument` ("MDS-3.0" | "MD
 
 ## Scope (v1 — resist expansion)
 
-~30 case-mix-driving MDS 3.0 items only: G0110A–J, G0120, G0300, G0400; E0100–E1100; D0200, D0300, D0500, D0600; C0500, C1000; K0510, K0710; M0300; O0100, O0400; N0350, N0410; Section I active diagnoses. Everything else → one line in `backlog.md`, move on. MDS-RCA core items follow as a separate-instrument pass.
+~30 case-mix-driving MDS 3.0 items only: G0110A–J, G0120, G0300, G0400 (**BLOCKED — pending Verifier ruling on Maine's current case-mix instrument (G-via-OSA vs GG vs other)**; Section G was retired from the federal MDS 3.0 in Oct 2023 and is absent from RAI Manual v1.20.1 — do not extract or cite G items to any manual until she answers); E0100–E1100; D0200, D0300, D0500, D0600; C0500, C1000; K0510, K0710; M0300; O0100, O0400; N0350, N0410; Section I active diagnoses. Everything else → one line in `backlog.md`, move on. MDS-RCA core items follow as a separate-instrument pass.
 
 ## Working agreements (non-negotiable)
 
