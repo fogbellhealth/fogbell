@@ -96,7 +96,7 @@ module Fogbell
       end
 
       def finalize(item_id, payload, model)
-        data = compact(payload)
+        data = restore_required_nulls(compact(payload))
         data["item_id"] ||= item_id
         data["instrument"] ||= @instrument
         data["provenance_summary"] = {
@@ -123,6 +123,19 @@ module Fogbell
         path = @rejects_dir.join("#{item_id}-#{Time.now.utc.strftime('%Y%m%dT%H%M%SZ')}.json")
         path.write(text)
         path
+      end
+
+      # A required field whose schema type includes null (lookback_days) must survive compaction as an
+      # explicit null: NOT_FOUND is a valid answer and the item is not valid without the key.
+      def restore_required_nulls(data)
+        schema = Rulebook::Schema.json
+        schema.fetch("required", []).each do |key|
+          next if data.key?(key)
+
+          type = schema.dig("properties", key, "type")
+          data[key] = nil if Array(type).include?("null")
+        end
+        data
       end
 
       # Drops nulls the model emitted for optional fields (the output schema makes them nullable).

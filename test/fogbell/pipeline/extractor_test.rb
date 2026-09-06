@@ -56,6 +56,20 @@ module Fogbell
         assert_nil call.pdf
       end
 
+      test "a null lookback_days (NOT_FOUND) survives as an explicit null and validates" do
+        payload = JSON.parse(file_fixture("llm/x0100_response.json").read)
+        payload["lookback_days"] = nil
+        payload["lookback_source"] = nil
+        payload["not_found"] = (payload["not_found"] || []) | [ "lookback_days" ]
+        result = extractor(llm: stub(text: JSON.generate(payload))).run("X0100")
+
+        data = JSON.parse(result.path.read)
+        assert data.key?("lookback_days"), "required nullable key is kept"
+        assert_nil data["lookback_days"]
+        assert_not data.key?("lookback_source"), "optional nulls are still dropped"
+        assert_empty Rulebook::Validator.validate(data)
+      end
+
       test "sends only the pages that mention the item" do
         llm = stub
         extractor(llm: llm, window: 0).run("X0100")
