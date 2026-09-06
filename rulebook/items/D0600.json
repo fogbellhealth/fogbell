@@ -1,0 +1,93 @@
+{
+  "item_id": "D0600",
+  "item_name": "Total Severity Score (Staff Assessment of Resident Mood, PHQ-9-OV©)",
+  "section": "D",
+  "instrument": "MDS-3.0",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND for D0600 itself: the D0600 pages (p. D-16, p. D-17) do not state an observation window for this item. Related context on other pages: the D0500 Steps for Assessment state 'Conduct the interviews during the 7-day look-back period based on the ARD' (p. D-13), while D0500 symptom frequency is rated over the past 2 weeks (p. D-15); the D0600 interpretation text refers to symptoms 'during the look-back period' without defining a number of days (p. D-17). No lookback is asserted for D0600 here.",
+  "coding_levels": [
+    {
+      "code": "00-30",
+      "label": "Total Severity Score (two-digit sum of D0500 Column 2 frequency responses)",
+      "definition": "Sum of the scores for all frequency responses in D0500 Column 2, Symptom Frequency; the total score must be between 00 and 30.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-16",
+        "quote": "Add scores for all frequency responses in Column 2, Symptom Frequency. Total score must be between 00 and 30."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Add the scores for all frequency responses in D0500 Column 2, Symptom Frequency; the total score must be between 00 and 30.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-16",
+        "quote": "Add scores for all frequency responses in Column 2, Symptom Frequency. Total score must be between 00 and 30."
+      }
+    },
+    {
+      "rule": "Complete D0600 after completing the Staff Assessment of Resident Mood by adding the numeric scores across all frequency items for Staff Assessment of Mood, Symptom Frequency (D0500) Column 2.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-16",
+        "quote": "Add the numeric scores across all frequency items for Staff Assessment of Mood, Symptom Frequency (D0500) Column 2."
+      }
+    },
+    {
+      "rule": "The maximum score is 30 (3 × 10).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-16",
+        "quote": "Maximum score is 30 (3 × 10)."
+      }
+    },
+    {
+      "rule": "The interview is considered successfully completed if the staff members were able to answer the frequency responses of at least 8 out of 10 items on the PHQ-9-OV©.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-16",
+        "quote": "The interview is successfully completed if the staff members were able to answer the frequency responses of at least 8 out of 10 items on the PHQ-9-OV©."
+      }
+    },
+    {
+      "rule": "The software will calculate the Total Severity Score; for manual calculation instructions and examples, see Appendix E: PHQ-9-OV© Total Severity Score Scoring Rules.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-16",
+        "quote": "The software will calculate the Total Severity Score. For detailed instructions on manual calculations and examples, see Appendix E: PHQ-9-OV© Total Severity Score Scoring Rules."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The D0600 pages do not tie this item to any payment or case-mix classification."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "supportive_documentation.federal",
+    "state_deltas",
+    "common_audit_citations",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

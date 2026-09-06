@@ -1,0 +1,153 @@
+{
+  "item_id": "D0160",
+  "item_name": "Total Severity Score",
+  "section": "D",
+  "instrument": "MDS-3.0",
+  "lookback_days": null,
+  "lookback_notes": "The D0160 section (pp. D-10 to D-11) does not state a lookback window for this item; it is a summary score computed from D0150 Column 2 frequency responses, which reference the resident's report over 'the past 2 weeks.' No explicit lookback period is stated for D0160 itself in the supplied pages.",
+  "coding_levels": [
+    {
+      "code": "00-27",
+      "label": "Total Severity Score",
+      "definition": "Enter the total score as a two-digit number; the Total Severity Score will be between 00 and 27.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-11",
+        "quote": "Enter the total score as a two-digit number. The Total Severity Score will be between 00 and 27 (or \"99\" if symptom frequency is blank for 3 or more items)."
+      }
+    },
+    {
+      "code": "99",
+      "label": "Unable to complete interview",
+      "definition": "Entered if symptom frequency in items D0150A2 through D0150I2 is blank or dashed for 3 or more items (interview deemed NOT complete).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-11",
+        "quote": "If symptom frequency in items D0150A2 through D0150I2 is blank or dashed for 3 or more items, the interview is deemed NOT complete. Total Severity Score should be coded as \"99,\""
+      }
+    },
+    {
+      "code": "(blank)",
+      "label": "Leave blank",
+      "definition": "Left blank when both D0150A1 and D0150B1 are coded 9 and only the PHQ-2© was completed.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-11",
+        "quote": "If only the PHQ-2© is completed because both D0150A1 and D0150B1 are coded 9, leave D0150A2 and D0150B2 blank, then end the PHQ-2©, leave D0160, Total Severity Score blank, and skip to D0700, Social Isolation."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Add scores for all frequency responses in Column 2, Symptom Frequency; the total score must be between 00 and 27. Enter 99 if unable to complete the interview (i.e., Symptom Frequency is blank for 3 or more required items).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-10",
+        "quote": "Add scores for all frequency responses in Column 2, Symptom Frequency. Total score must be between 00 and 27. Enter 99 if unable to complete interview (i.e., Symptom Frequency is blank for 3 or more required items)."
+      }
+    },
+    {
+      "rule": "After completing D0150 A–I, add the numeric scores across all frequency items in Resident Mood Interview (D0150) Column 2.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-11",
+        "quote": "Add the numeric scores across all frequency items in Resident Mood Interview (D0150) Column 2."
+      }
+    },
+    {
+      "rule": "The maximum resident score is 27 (3 x 9).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-11",
+        "quote": "The maximum resident score is 27 (3 x 9)."
+      }
+    },
+    {
+      "rule": "If only the PHQ-2© is completed because both D0150A1 and D0150B1 are coded 9, leave D0150A2 and D0150B2 blank, end the PHQ-2©, leave D0160 blank, and skip to D0700, Social Isolation.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-11",
+        "quote": "If only the PHQ-2© is completed because both D0150A1 and D0150B1 are coded 9, leave D0150A2 and D0150B2 blank, then end the PHQ-2©, leave D0160, Total Severity Score blank, and skip to D0700, Social Isolation."
+      }
+    },
+    {
+      "rule": "If only the PHQ-2© is completed because both D0150A2 and D0150B2 are scored 0 or 1, add the numeric scores from these two frequency items and enter the value in D0160.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-11",
+        "quote": "If only the PHQ-2© is completed because both D0150A2 and D0150B2 are scored 0 or 1, add the numeric scores from these two frequency items and enter the value in D0160."
+      }
+    },
+    {
+      "rule": "If the PHQ-9© was completed (D0150C–I were not blank due to responses in D0150A and B) and the resident answered the frequency responses of at least 7 of the 9 items, add the numeric scores from D0150A2–D0150I2, following the instructions in Appendix E, and enter in D0160.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-11",
+        "quote": "If the PHQ-9© was completed (that is, D0150C–I were not blank due to the responses in D0150A and B) and if the resident answered the frequency responses of at least 7 of the 9 items on the PHQ-9©, add the numeric scores from D0150A2–D0150I2, following the instructions in Appendix E, and enter in D0160."
+      }
+    },
+    {
+      "rule": "If symptom frequency in items D0150A2 through D0150I2 is blank or dashed for 3 or more items, the interview is deemed NOT complete: code Total Severity Score as \"99,\" do not complete the Staff Assessment of Mood, and skip to D0700, Social Isolation.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-11",
+        "quote": "If symptom frequency in items D0150A2 through D0150I2 is blank or dashed for 3 or more items, the interview is deemed NOT complete. Total Severity Score should be coded as \"99,\" do not complete the Staff Assessment of Mood, and skip to D0700, Social Isolation."
+      }
+    },
+    {
+      "rule": "Enter the total score as a two-digit number.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-11",
+        "quote": "Enter the total score as a two-digit number."
+      }
+    },
+    {
+      "rule": "The software will calculate the Total Severity Score; for manual calculation instructions and examples, see Appendix E: PHQ-2 to 9© Total Severity Score Scoring Rules.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-11",
+        "quote": "The software will calculate the Total Severity Score. For detailed instructions on manual calculations and examples, see Appendix E: PHQ-2 to 9© Total Severity Score Scoring Rules."
+      }
+    },
+    {
+      "rule": "Do not add up the score while interviewing the resident; focus full attention on the interview.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. D-11",
+        "quote": "Do not add up the score while you are interviewing the resident. Instead, focus your full attention on the interview."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages for D0160 do not tie the item to any payment or case-mix classification system."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "supportive_documentation.federal",
+    "state_deltas",
+    "common_audit_citations",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}
