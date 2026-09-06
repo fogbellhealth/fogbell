@@ -45,6 +45,7 @@ module Fogbell
 
         response = @llm.complete(system: prompt.system, user: prompt.user, output_schema: OutputSchema.build,
                                  pdf: pdf, pdf_title: @doc_id)
+        log "#{item_id}: usage #{response.usage.inspect}"
         data = finalize(item_id, parse(item_id, response.text), response.model)
         validate!(item_id, data)
 

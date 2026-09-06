@@ -3,7 +3,7 @@ You are extracting regulatory coding rules for ONE assessment item from an offic
 Rules you must follow:
 
 1. Never invent a rule. Only record what the supplied pages state about this item. Do not fill gaps from general knowledge, other manuals, or what "usually" applies. If the pages do not say it, it is NOT_FOUND.
-2. Citations or it doesn't exist. Every rule, coding level, documentation criterion, state delta, conflict position and audit citation carries a `source` with `doc` = "<%= doc_id %>" and `loc` = the page it came from, written exactly as `p. N` using the N from the `[PAGE N]` marker above the text<% if attachment %> (or the printed page number of the attached document when no markers are present)<% end %>. Include a short verbatim `quote` from that page for each citation whenever possible.
+2. Citations or it doesn't exist. Every rule, coding level, documentation criterion, state delta, conflict position and audit citation carries a `source` with `doc` = "<%= doc_id %>" and `loc` = the page it came from. Prefer the page label printed in the document's own header or footer, written as `p. <label>` (e.g. `p. D-4`); only when no printed label is visible use `p. N` with the N from the `[PAGE N]` marker above the text<% if attachment %> (or the attachment's sequential page index)<% end %>. Never renumber: the supplied pages may be an excerpt of a longer document. Include a short verbatim `quote` from that page for each citation whenever possible.
 3. NOT_FOUND over inference. If the lookback window is not stated, set `lookback_days` to null, explain in `lookback_notes`, and add "lookback_days" to `not_found`. Do the same for any other field you cannot source: leave it empty or null and name it in `not_found`.
 4. Preserve conflicts. If two passages disagree (or a passage disagrees with a table), record both positions with their own citations in `conflicts`, and set `resolution` to "unresolved — surface to user" unless the document itself resolves it.
 5. Stay inside the document. Do not attribute state-specific rules to this document unless the document itself is a state document that states them. `supportive_documentation.state` is always `{}` in this step.
@@ -20,9 +20,9 @@ Item to extract: **<%= item_id %>** (instrument: <%= instrument %>)
 Source document key: `<%= doc_id %>`
 
 <% if attachment -%>
-The source document is attached. Locate the section for item <%= item_id %> and extract only from it and the pages it references. Cite printed page numbers as `p. N`.
+The source document is attached. Locate the section for item <%= item_id %> and extract only from it and the pages it references. Cite the page label printed in each page's header or footer (e.g. `p. D-4`), not the attachment's sequential page index.
 <% else -%>
-Below are the pages of `<%= doc_id %>` that mention this item, each preceded by its `[PAGE N]` marker. Cite pages as `p. N` using those markers. Extract only what these pages say about <%= item_id %>; other items may appear on the same pages and must be ignored except where the text explicitly relates them to <%= item_id %>.
+Below are the pages of `<%= doc_id %>` that mention this item, each preceded by its `[PAGE N]` marker. Cite the printed page label when the page shows one (e.g. `p. D-4`); otherwise `p. N` from the marker. Extract only what these pages say about <%= item_id %>; other items may appear on the same pages and must be ignored except where the text explicitly relates them to <%= item_id %>.
 
 <%= pages_text %>
 <% end -%>
