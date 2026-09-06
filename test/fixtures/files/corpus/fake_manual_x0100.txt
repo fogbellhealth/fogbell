@@ -1,0 +1,46 @@
+FAKE ASSESSMENT MANUAL — CHAPTER X: ENVIRONMENTAL OBSERVATIONS
+(Synthetic test document for the Fogbell pipeline. Not a real regulatory text.)
+
+Section X covers environmental observation items recorded by lighthouse keepers.
+
+X0100: Fog Visibility Check
+Intent: To record whether the keeper performed a fog visibility check during
+the observation period. Visibility checks inform the decision to sound the bell.
+
+Item Rationale
+Unchecked visibility is the leading cause of unwarned approaches.
+
+Page X-1
+X0100: Fog Visibility Check (continued)
+
+Steps for Assessment
+1. Review the keeper's log for the 7-day look-back period ending on the ARD.
+   Look back over the 7-day period ending on the ARD; the ARD is included in
+   the look-back period.
+2. Determine whether at least one visibility check was performed and documented.
+
+Coding Instructions
+Code 0, visibility not checked: no fog visibility check was performed during
+   the look-back period.
+Code 1, visibility checked: at least one fog visibility check was performed
+   during the look-back period.
+
+Coding Tips
+- Code 1 only if a visibility check was performed and documented within the
+  look-back period. Undocumented checks may not be coded.
+
+Page X-2
+X0100: Fog Visibility Check (continued)
+
+Coding Tips (continued)
+- Checks performed prior to admission are not coded.
+- Checks on the day of assessment are excluded.
+
+Supporting Documentation
+The keeper's log must contain a dated, signed entry recording the visibility
+check and the reading obtained. Entries without a reading do not support Code 1.
+
+X0200: Bell Sounding Frequency
+Intent: To record how often the bell was sounded. (Out of scope for this test.)
+
+Page X-3

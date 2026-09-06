@@ -1,0 +1,37 @@
+{
+  "item_id": "X0100",
+  "item_name": "Fog Visibility Check",
+  "section": "X",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": { "doc": "fake-manual", "loc": "p. 2", "quote": "Look back over the 7-day period ending on the ARD" },
+  "lookback_notes": "7-day period ending on the ARD; the ARD is included.",
+  "coding_levels": [
+    { "code": "0", "label": "visibility not checked", "definition": "No fog visibility check was performed during the look-back period.", "source": { "doc": "fake-manual", "loc": "p. 2", "quote": "Code 0, visibility not checked" } },
+    { "code": "1", "label": "visibility checked", "definition": "At least one fog visibility check was performed during the look-back period.", "source": { "doc": "fake-manual", "loc": "p. 2", "quote": "Code 1, visibility checked" } }
+  ],
+  "federal_coding_rules": [
+    { "rule": "Code 1 only if a visibility check was performed and documented within the look-back period; undocumented checks may not be coded.", "source": { "doc": "fake-manual", "loc": "p. 2", "quote": "Code 1 only if a visibility check was performed and documented within the look-back period." } },
+    { "rule": "Checks performed prior to admission are not coded.", "source": { "doc": "fake-manual", "loc": "p. 3", "quote": "Checks performed prior to admission are not coded." } }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      { "criterion": "Dated, signed log entry recording the visibility check and the reading obtained; entries without a reading do not support Code 1.", "source": { "doc": "fake-manual", "loc": "p. 3", "quote": "The keeper's log must contain a dated, signed entry recording the visibility check and the reading obtained." }, "verified_by_expert": false, "audit_weight": "high", "notes": null }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": { "level": "unknown", "notes": "The document does not tie X0100 to any payment or case-mix classification.", "source": null },
+  "conflicts": [
+    {
+      "topic": "Whether a check performed on the ARD counts",
+      "positions": [
+        { "authority": "fake-manual", "claim": "The ARD is included in the look-back period.", "source": { "doc": "fake-manual", "loc": "p. 2", "quote": "the ARD is included in the look-back period" } },
+        { "authority": "fake-manual", "claim": "Checks on the day of assessment are excluded.", "source": { "doc": "fake-manual", "loc": "p. 3", "quote": "Checks on the day of assessment are excluded." } }
+      ],
+      "resolution": "unresolved — surface to user"
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": ["case_mix_relevance", "common_audit_citations"]
+}
