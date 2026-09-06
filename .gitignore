@@ -42,3 +42,6 @@
 !/corpus/*/README.md
 
 # Rejected (schema-invalid) extractions and smoke output live in tmp/ (already ignored).
+
+# macOS Finder metadata
+.DS_Store
