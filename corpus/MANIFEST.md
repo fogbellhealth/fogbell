@@ -10,7 +10,7 @@ URLs marked "likely" were not verified at the time of writing; confirm the landi
 
 | key | title | version / date | source (likely) | downloaded | sha256 | status |
 |---|---|---|---|---|---|---|
-| `rai-manual-v1.20.1` | Long-Term Care Facility Resident Assessment Instrument 3.0 User's Manual (RAI Manual) | v1.20.1, Oct 2025 (confirm current) | https://www.cms.gov/medicare/quality/nursing-home-improvement/resident-assessment-instrument-manual | | | TODO |
+| `rai-manual-v1.20.1` | Long-Term Care Facility Resident Assessment Instrument 3.0 User's Manual (RAI Manual) | v1.20.1, Oct 2025 | https://www.cms.gov/medicare/quality/nursing-home-improvement/resident-assessment-instrument-manual | 2026-09-06 | `845a42b33644a56ca1002762b54df8173a286bfaeaf16eb269b5e3618da7b92e` | downloaded |
 | `rai-manual-v1.20.1-errata` | RAI Manual errata / change tables for the current version | same page | https://www.cms.gov/medicare/quality/nursing-home-improvement/resident-assessment-instrument-manual | | | TODO |
 | `mds3-item-sets-v1.20.1` | MDS 3.0 Item Sets (NC, NQ, ND, NP, NT, NO, SP, ST, SD, SO, IPA, OSA) | matching RAI version | https://www.cms.gov/medicare/quality/nursing-home-improvement/mds-30-technical-information | | | TODO |
 | `mds3-data-specs-v4.x` | MDS 3.0 Data Submission Specifications (item definitions, valid values, edits) | current V4.x | https://www.cms.gov/medicare/quality/nursing-home-improvement/mds-30-technical-information (also https://qtso.cms.gov/) | | | TODO |
