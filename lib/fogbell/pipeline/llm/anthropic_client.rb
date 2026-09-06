@@ -23,7 +23,9 @@ module Fogbell
         end
 
         def complete(system:, user:, output_schema:, pdf: nil, pdf_title: nil, document_text: nil)
-          message = client.messages.create(
+          # Streamed so max_tokens can exceed what the SDK allows for a blocking request; the
+          # accumulated message is the same shape as a non-streaming response.
+          stream = client.messages.stream(
             model: @model,
             max_tokens: @max_tokens,
             system_: system,
@@ -31,6 +33,8 @@ module Fogbell
             output_config: { format: { type: :json_schema, schema: output_schema } },
             messages: [ { role: :user, content: content_blocks(user, pdf, pdf_title, document_text) } ]
           )
+          stream.until_done
+          message = stream.accumulated_message
           check_stop_reason!(message)
           Response.new(text: text_of(message), model: message.model.to_s, usage: message.usage.to_h)
         rescue Anthropic::Errors::NotFoundError => e
