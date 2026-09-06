@@ -70,14 +70,6 @@
       }
     },
     {
-      "rule": "The intent of the item is to identify potential behavioral problems, not situations in which care has been rejected based on a choice consistent with the resident's preferences or goals for health and well-being, or a choice made on behalf of the resident by a family member or other proxy decision maker.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. E-16",
-        "quote": "The intent of this item is to identify potential behavioral problems, not situations in which care has been rejected based on a choice that is consistent with the resident's preferences or goals for health and well-being or a choice made on behalf of the resident by a family member or other proxy decision maker."
-      }
-    },
-    {
       "rule": "Frequency coding disregards the number of episodes occurring on any one day; only the number of days on which the behavior occurred determines the code.",
       "source": {
         "doc": "rai-manual-v1.20.1",
