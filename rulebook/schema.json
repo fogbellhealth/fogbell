@@ -1,0 +1,223 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fogbell.io/rulebook/schema.json",
+  "title": "Fogbell rulebook item",
+  "description": "One rule item (e.g. an MDS item) with every rule, coding level, documentation criterion and conflict carrying a {doc, loc} citation. Corpus-agnostic: the only domain-specific vocabulary is the `instrument` enum. An item with any uncited rule fails validation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "item_id",
+    "item_name",
+    "section",
+    "instrument",
+    "lookback_days",
+    "lookback_notes",
+    "coding_levels",
+    "federal_coding_rules",
+    "supportive_documentation",
+    "state_deltas",
+    "case_mix_relevance",
+    "conflicts",
+    "common_audit_citations",
+    "not_found",
+    "provenance_summary",
+    "version"
+  ],
+  "properties": {
+    "item_id": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9]{2,}[A-Z0-9_.-]*$",
+      "description": "Instrument item identifier, e.g. G0110A, X0100."
+    },
+    "item_name": { "type": "string", "minLength": 1 },
+    "section": { "type": "string", "minLength": 1, "description": "Instrument section the item belongs to, e.g. \"G\"." },
+    "instrument": {
+      "type": "string",
+      "enum": ["MDS-3.0", "MDS-RCA", "MDS-AH"],
+      "description": "Assessment instrument. Items from different instruments are separate rule items even when IDs coincide."
+    },
+    "lookback_days": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "description": "Observation/lookback window in days ending on the assessment reference date. null means NOT_FOUND in the corpus."
+    },
+    "lookback_source": {
+      "$ref": "#/$defs/citation",
+      "description": "Citation for lookback_days. Required whenever lookback_days is not null."
+    },
+    "lookback_notes": {
+      "type": "string",
+      "description": "How the window is counted (e.g. \"ARD plus the 6 prior days\"), or why it is NOT_FOUND."
+    },
+    "coding_levels": { "type": "array", "items": { "$ref": "#/$defs/coding_level" } },
+    "federal_coding_rules": { "type": "array", "items": { "$ref": "#/$defs/rule" } },
+    "supportive_documentation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["federal", "state"],
+      "properties": {
+        "federal": { "type": "array", "items": { "$ref": "#/$defs/criterion" } },
+        "state": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Per-jurisdiction criteria keyed by two-letter code, e.g. \"ME\".",
+          "patternProperties": {
+            "^[A-Z]{2}$": { "type": "array", "items": { "$ref": "#/$defs/criterion" } }
+          }
+        }
+      }
+    },
+    "state_deltas": { "type": "array", "items": { "$ref": "#/$defs/state_delta" } },
+    "case_mix_relevance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "notes"],
+      "properties": {
+        "level": { "type": "string", "enum": ["high", "medium", "low", "none", "unknown"] },
+        "notes": { "type": "string" },
+        "source": { "$ref": "#/$defs/citation", "description": "Required unless level is \"unknown\"." }
+      }
+    },
+    "conflicts": { "type": "array", "items": { "$ref": "#/$defs/conflict" } },
+    "common_audit_citations": { "type": "array", "items": { "$ref": "#/$defs/audit_citation" } },
+    "not_found": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "description": "Fields or facts the extractor looked for and could not source in the corpus, e.g. \"lookback_days\", \"supportive_documentation.federal\". NOT_FOUND is a valid, common, correct answer."
+    },
+    "provenance_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["extracted_at", "model", "expert_review_status", "source_documents"],
+      "properties": {
+        "extracted_at": { "type": "string", "format": "date" },
+        "model": { "type": "string", "minLength": 1 },
+        "extractor_version": { "type": "string" },
+        "expert_review_status": { "type": "string", "enum": ["unreviewed", "in_review", "verified", "disputed"] },
+        "reviewed_by": { "type": "string" },
+        "reviewed_at": { "type": "string", "format": "date" },
+        "source_documents": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["doc"],
+            "properties": {
+              "doc": { "type": "string", "minLength": 1, "description": "Manifest key from corpus/MANIFEST.md." },
+              "version": { "type": "string" },
+              "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+            }
+          }
+        }
+      }
+    },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "lookback_days": { "type": "integer" } } },
+      "then": { "required": ["lookback_source"] }
+    },
+    {
+      "if": {
+        "properties": { "case_mix_relevance": { "properties": { "level": { "not": { "const": "unknown" } } } } }
+      },
+      "then": { "properties": { "case_mix_relevance": { "required": ["source"] } } }
+    }
+  ],
+  "$defs": {
+    "citation": {
+      "type": "object",
+      "description": "The provenance atom. Every rule, level, criterion, delta, conflict position and audit citation carries one.",
+      "additionalProperties": false,
+      "required": ["doc", "loc"],
+      "properties": {
+        "doc": { "type": "string", "minLength": 1, "description": "Manifest key, e.g. \"rai-manual-v1.20.1\"." },
+        "loc": { "type": "string", "minLength": 1, "description": "Page-level location, e.g. \"p. G-12\", \"p. 4\", \"§67.02-3\"." },
+        "quote": { "type": "string", "description": "Verbatim excerpt supporting the claim. Strongly encouraged." }
+      }
+    },
+    "rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rule", "source"],
+      "properties": {
+        "rule": { "type": "string", "minLength": 1 },
+        "source": { "$ref": "#/$defs/citation" }
+      }
+    },
+    "coding_level": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "label", "source"],
+      "properties": {
+        "code": { "type": "string", "minLength": 1 },
+        "label": { "type": "string", "minLength": 1 },
+        "definition": { "type": "string" },
+        "source": { "$ref": "#/$defs/citation" }
+      }
+    },
+    "criterion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["criterion", "source", "verified_by_expert", "audit_weight"],
+      "properties": {
+        "criterion": { "type": "string", "minLength": 1 },
+        "source": { "$ref": "#/$defs/citation" },
+        "verified_by_expert": { "type": "boolean" },
+        "audit_weight": { "type": "string", "enum": ["high", "medium", "low"] },
+        "notes": { "type": "string" }
+      }
+    },
+    "state_delta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "delta", "source"],
+      "properties": {
+        "state": { "type": "string", "pattern": "^[A-Z]{2}$" },
+        "delta": { "type": "string", "minLength": 1 },
+        "kind": { "type": "string", "enum": ["lookback", "documentation", "coding", "other"] },
+        "source": { "$ref": "#/$defs/citation" }
+      }
+    },
+    "conflict": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["topic", "positions", "resolution"],
+      "properties": {
+        "topic": { "type": "string", "minLength": 1 },
+        "positions": {
+          "type": "array",
+          "minItems": 2,
+          "description": "Every side of the conflict, each cited. Both sources are preserved; nothing is dropped.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["authority", "claim", "source"],
+            "properties": {
+              "authority": { "type": "string", "minLength": 1, "description": "\"federal\", a two-letter state code, or a manifest doc key." },
+              "claim": { "type": "string", "minLength": 1 },
+              "source": { "$ref": "#/$defs/citation" }
+            }
+          }
+        },
+        "resolution": {
+          "type": "string",
+          "minLength": 1,
+          "description": "How the conflict is handled. \"unresolved — surface to user\" is a valid value."
+        }
+      }
+    },
+    "audit_citation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["citation", "source"],
+      "properties": {
+        "citation": { "type": "string", "minLength": 1 },
+        "notes": { "type": "string" },
+        "source": { "$ref": "#/$defs/citation" }
+      }
+    }
+  }
+}
