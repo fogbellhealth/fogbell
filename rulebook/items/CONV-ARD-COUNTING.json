@@ -1,0 +1,262 @@
+{
+  "item_id": "CONV-ARD-COUNTING",
+  "item_name": "ARD and observation-period counting",
+  "section": "CONV",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. 2-9",
+    "quote": "Most of the MDS 3.0 items have a 7-day look-back period."
+  },
+  "lookback_notes": "This is a convention item rather than a single MDS item. The manual states most MDS 3.0 items have a 7-day look-back period (ARD + 6 previous calendar days), and that items may require other observation periods such as 14 days (ARD + 13 previous calendar days), depending on the item. The ARD is the last day of the observation period and day 1 for counting back. The OBRA assessment summary table lists both a 7-day and a 14-day observation period column for each OBRA assessment type.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "The Assessment Reference Date (ARD) is the specific endpoint for the observation (or \"look-back\") periods in the MDS assessment process; the facility must set the ARD on the MDS Item Set or in the facility software within the required time frame of the assessment type being completed.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-9",
+        "quote": "Assessment Reference Date (ARD) refers to the specific endpoint for the observation (or \"look-back\") periods in the MDS assessment process. The facility is required to set the ARD on the MDS Item Set or in the facility software within the required time frame of the assessment type being completed."
+      }
+    },
+    {
+      "rule": "The concept of setting the ARD is used for all assessment types (OBRA and PPS) and varies by assessment type and facility determination.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-9",
+        "quote": "This concept of setting the ARD is used for all assessment types (OBRA and PPS) and varies by assessment type and facility determination."
+      }
+    },
+    {
+      "rule": "Most MDS 3.0 items have a 7-day look-back period; for an ARD of July 1, 2011, all pertinent information starting at 12:00 a.m. on June 25th and ending on July 1st at 11:59 p.m. is included for MDS 3.0 coding.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-9",
+        "quote": "Most of the MDS 3.0 items have a 7-day look-back period. If a resident has an ARD of July 1, 2011, then all pertinent information starting at 12:00 a.m. on June 25th and ending on July 1st at 11:59 p.m. should be included for MDS 3.0 coding."
+      }
+    },
+    {
+      "rule": "The ARD (item A2300) is the last day of the observation/look-back period, and day 1 for purposes of counting back to determine the beginning of observation/look-back periods.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-21",
+        "quote": "The ARD (item A2300) is the last day of the observation/look-back period, and day 1 for purposes of counting back to determine the beginning of observation/look-back periods."
+      }
+    },
+    {
+      "rule": "A 7-day observation period consists of the ARD plus the 6 previous calendar days; a 14-day observation period consists of the ARD plus the 13 previous calendar days. Example: if the ARD is set for day 14 of a resident's admission, the 7-day observation period begins on day 8 of admission and the 14-day observation period begins on day 1 of admission.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-21",
+        "quote": "For example, if the ARD is set for day 14 of a resident's admission, then the beginning of the observation period for MDS items requiring a 7-day observation period would be day 8 of admission (ARD + 6 previous calendar days), while the beginning of the observation period for MDS items requiring a 14-day observation period would be day 1 of admission (ARD + 13 previous calendar days)."
+      }
+    },
+    {
+      "rule": "Most MDS items require an observation period, such as 7 or 14 days, depending on the item; since a day begins at 12:00 a.m. and ends at 11:59 p.m., the observation period must also cover this time period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-14",
+        "quote": "Most MDS items themselves require an observation period, such as 7 or 14 days, depending on the item. Since a day begins at 12:00 a.m. and ends at 11:59 p.m., the observation period must also cover this time period."
+      }
+    },
+    {
+      "rule": "Only occurrences during the look-back period are captured; if it did not occur during the look-back period, it is not coded on the MDS.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-14",
+        "quote": "When completing the MDS, only those occurrences during the look-back period will be captured. In other words, if it did not occur during the look-back period, it is not coded on the MDS."
+      }
+    },
+    {
+      "rule": "When the resident is first admitted to the nursing home, the RN assessment coordinator and the IDT set the ARD; for subsequent assessments the observation period is chosen based upon regulatory requirements concerning timing and the ARDs of previous assessments.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-14",
+        "quote": "When the resident is first admitted to the nursing home, the RN assessment coordinator and the IDT will set the ARD. For subsequent assessments, the observation period for a particular assessment for a particular resident will be chosen based upon the regulatory requirements concerning timing and the ARDs of previous assessments."
+      }
+    },
+    {
+      "rule": "For OBRA Admission, Annual, SCSA, SCPA, Quarterly, and SCQA assessments, the 7-day observation period consists of the ARD + 6 previous calendar days and the 14-day observation period consists of the ARD + 13 previous calendar days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-17",
+        "quote": "ARD + 6 previous calendar days"
+      }
+    },
+    {
+      "rule": "For OBRA Discharge assessments (return not anticipated, A0310F = 10, and return anticipated, A0310F = 11), the ARD and both the 7-day and 14-day observation periods are listed as N/A in the OBRA assessment summary table.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-19",
+        "quote": "Discharge Assessment – return not anticipated (Non-Comprehensive) A0310F = 10 N/A N/A N/A"
+      }
+    },
+    {
+      "rule": "For Entry tracking records (A0310F = 01) and Death in facility tracking records (A0310F = 12), the ARD and both the 7-day and 14-day observation periods are listed as N/A in the OBRA assessment summary table.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-20",
+        "quote": "Entry tracking record A0310F = 01 N/A N/A N/A"
+      }
+    },
+    {
+      "rule": "For OBRA-required assessments, assessment timing is dictated by regulatory requirements for each assessment type; the schedule is established with the Admission (comprehensive) assessment when the ARD is set by the RN assessment coordinator and the Interdisciplinary Team (IDT).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-10",
+        "quote": "For OBRA-required assessments, regulatory requirements for each assessment type dictate assessment timing, the schedule for which is established with the Admission (comprehensive) assessment when the ARD is set by the RN assessment coordinator and the Interdisciplinary Team (IDT)."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "The ARD must be recorded in item A2300 on the MDS Item Set or in the facility software within the required time frame for the assessment type being completed.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. 2-9",
+          "quote": "The facility is required to set the ARD on the MDS Item Set or in the facility software within the required time frame of the assessment type being completed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Item number A2300 is identified in the Assessment Management Requirements and Tips on p. 2-21."
+      },
+      {
+        "criterion": "If an assessment is reinitiated with a new ARD after a hospitalization, the previously completed portion of the assessment must be stored on the resident's record with a notation that the assessment was reinitiated because the resident was hospitalized.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. 2-21",
+          "quote": "The portion of the resident's assessment that was previously completed should be stored on the resident's record with a notation that the assessment was reinitiated because the resident was hospitalized."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Stated as \"should be stored\" in a management tips bullet."
+      },
+      {
+        "criterion": "If a resident is discharged prior to the completion deadline, whatever portions of the RAI have been completed must be maintained in the resident's medical record, and the nursing home should note why the RAI was not completed.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. 2-21",
+          "quote": "Whatever portions of the RAI that have been completed must be maintained in the resident's medical record. In closing the record, the nursing home should note why the RAI was not completed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages describe ARD/look-back counting as an assessment scheduling and coding convention. Although PPS assessments and the Interim Payment Assessment are mentioned as used for PPS payment purposes, no passage on these pages ties ARD/observation-period counting itself to a payment or case-mix classification."
+  },
+  "conflicts": [
+    {
+      "topic": "Which observation window applies under the ARD convention: 7 days vs. 14 days",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "Most MDS 3.0 items have a 7-day look-back period (ARD plus the 6 previous calendar days).",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. 2-9",
+            "quote": "Most of the MDS 3.0 items have a 7-day look-back period."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Most MDS items require an observation period, such as 7 or 14 days, depending on the item; the OBRA assessment summary table lists both a 7-day (ARD + 6 previous calendar days) and a 14-day (ARD + 13 previous calendar days) observation period for each OBRA assessment type.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. 2-14",
+            "quote": "Most MDS items themselves require an observation period, such as 7 or 14 days, depending on the item."
+          }
+        }
+      ],
+      "resolution": "Not a true contradiction as framed by the manual: p. 2-21 states both windows coexist and are counted from the same ARD (7-day = ARD + 6 previous calendar days; 14-day = ARD + 13 previous calendar days); the applicable window depends on the individual MDS item. Recorded here because two windows are stated for this convention."
+    }
+  ],
+  "common_audit_citations": [
+    {
+      "citation": "42 CFR 483.20 (Initial) and 42 CFR 483.20(b)(2)(i) (by the 14th day)",
+      "notes": "Regulatory requirement listed in the OBRA assessment summary table for the Admission (Comprehensive) assessment, whose ARD must be no later than the 14th calendar day of the resident's admission.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-17",
+        "quote": "42 CFR 483.20 (Initial) 42 CFR 483.20 (b)(2)(i) (by the 14th day)"
+      }
+    },
+    {
+      "citation": "42 CFR 483.20(b)(2)(iii) (every 12 months)",
+      "notes": "Regulatory requirement listed for the Annual (Comprehensive) assessment ARD timing.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-17",
+        "quote": "42 CFR 483.20 (b)(2)(iii) (every 12 months)"
+      }
+    },
+    {
+      "citation": "42 CFR 483.20(b)(2)(ii) (within 14 days)",
+      "notes": "Regulatory requirement listed for the Significant Change in Status Assessment ARD timing.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-17",
+        "quote": "42 CFR 483.20 (b)(2)(ii) (within 14 days)"
+      }
+    },
+    {
+      "citation": "42 CFR 483.20(c) (every 3 months)",
+      "notes": "Regulatory requirement listed for the Quarterly assessment ARD timing (ARD of previous OBRA assessment of any type + 92 calendar days).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-18",
+        "quote": "42 CFR 483.20(c) (every 3 months)"
+      }
+    },
+    {
+      "citation": "42 CFR 483.20(f)(3)(iv)",
+      "notes": "Regulatory requirement listed for the Significant Correction to Prior Comprehensive assessment.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-18",
+        "quote": "42 CFR 483.20(f) (3)(iv)"
+      }
+    },
+    {
+      "citation": "42 CFR 483.20(f)(3)(v)",
+      "notes": "Regulatory requirement listed for the Significant Correction to Prior Quarterly assessment.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-18",
+        "quote": "42 CFR 483.20(f) (3)(v)"
+      }
+    },
+    {
+      "citation": "CFR 483.20(f)(2)",
+      "notes": "Cited in the Assessment Submission definition as a source of detail on electronic MDS data submission.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 2-10",
+        "quote": "Chapter 5, CFR 483.20(f)(2), and the MDS 3.0 Data Submission Specifications on the CMS MDS 3.0 web site provide more detailed information."
+      }
+    }
+  ],
+  "not_found": [
+    "coding_levels",
+    "state_deltas",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

@@ -1,0 +1,208 @@
+{
+  "item_id": "CONV-SKIP-PATTERNS-AND-DASHES",
+  "item_name": "Skip patterns, check boxes and dash values",
+  "section": "CONV",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. 3-3",
+    "quote": "The standard look-back period for the MDS 3.0 is 7 days, unless otherwise stated."
+  },
+  "lookback_notes": "This is a general coding-conventions item rather than a dated assessment item; the 7-day figure is the standard MDS 3.0 look-back period stated in section 3.3 Coding Conventions, applicable \"unless otherwise stated.\" The document does not state how the window is counted relative to the ARD on these pages, and does not assign a look-back specifically to skip patterns, check boxes, or dash values.",
+  "coding_levels": [
+    {
+      "code": "check mark",
+      "label": "Check all that apply boxes",
+      "definition": "Use a check mark for boxes where the instructions state to \"check all that apply,\" if the specified condition is met; otherwise, these boxes should remain blank (e.g., F0800, Staff Assessment of Daily and Activity Preferences, boxes A-Z).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-4",
+        "quote": "Use a check mark for boxes where the instructions state to \"check all that apply,\" if the specified condition is met; otherwise, these boxes should remain blank (e.g., F0800, Staff Assessment of Daily and Activity Preferences, boxes A-Z)."
+      }
+    },
+    {
+      "code": "numeric response",
+      "label": "Numeric response for blank boxes",
+      "definition": "Use a numeric response (a number or pre-assigned value) for blank boxes (e.g., M1030, Number of Venous and Arterial Ulcers).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-4",
+        "quote": "Use a numeric response (a number or pre-assigned value) for blank boxes (e.g., M1030, Number of Venous and Arterial Ulcers)."
+      }
+    },
+    {
+      "code": "-",
+      "label": "Dash value (item not assessed)",
+      "definition": "A dash value indicates that an item was not assessed. This most often occurs when a resident is discharged before the item could be assessed.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-4",
+        "quote": "A dash value indicates that an item was not assessed. This most often occurs when a resident is discharged before the item could be assessed."
+      }
+    },
+    {
+      "code": "blank",
+      "label": "Left blank due to skip pattern",
+      "definition": "When a skip pattern is encountered, the skipped item(s) are left blank (e.g., intervening items from B0200–F0800 would not be coded when B0100 is coded 1, yes).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-4",
+        "quote": "When you encounter a skip pattern, leave the item blank and move on to the next item as directed"
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "The standard look-back period for the MDS 3.0 is 7 days, unless otherwise stated.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-3",
+        "quote": "The standard look-back period for the MDS 3.0 is 7 days, unless otherwise stated."
+      }
+    },
+    {
+      "rule": "With the exception of certain items (e.g., some items in Sections J, K and O), the look-back period does not extend into the preadmission period unless the item instructions state otherwise; in the case of reentry, the look-back period does not extend into time prior to the reentry, unless instructions state otherwise.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-3",
+        "quote": "With the exception of certain items (e.g., some items in Sections J, K and O), the look-back period does not extend into the preadmission period unless the item instructions state otherwise. In the case of reentry, the look-back period does not extend into time prior to the reentry, unless instructions state otherwise."
+      }
+    },
+    {
+      "rule": "When determining the response to items with a look-back period relating back to the Admission/Entry, Reentry, or Prior OBRA or scheduled PPS assessment, whichever is most recent, staff must only consider assessments required to be submitted to iQIES; PPS assessments completed for private insurance and Medicare Advantage Plans must not be submitted to iQIES and should not be considered when determining the \"prior assessment.\"",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-3",
+        "quote": "staff must only consider those assessments that are required to be submitted to iQIES. PPS assessments that are completed for private insurance and Medicare Advantage Plans must not be submitted to iQIES and therefore should not be considered when determining the \"prior assessment.\""
+      }
+    },
+    {
+      "rule": "Scoring on one item may govern how scoring is completed for one or more additional items (a skip pattern); when a skip pattern is encountered, leave the item blank and move on to the next item as directed.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-4",
+        "quote": "There are a few instances in which scoring on one item will govern how scoring is completed for one or more additional items. This is called a skip pattern."
+      }
+    },
+    {
+      "rule": "Skip pattern example: if B0100, Comatose, is answered code 1, yes, the assessor skips to item GG0100, Prior Functioning: Everyday Activities, and the intervening items from B0200–F0800 are not coded (left blank); if B0100 is answered code 0, no, the assessor continues coding at B0200, Hearing.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-4",
+        "quote": "if B0100 is answered code 1, yes, the assessor is instructed to skip to item GG0100, Prior Functioning: Everyday Activities. The intervening items from B0200–F0800 would not be coded (i.e., left blank)."
+      }
+    },
+    {
+      "rule": "Use a check mark for boxes where the instructions state to \"check all that apply,\" if the specified condition is met; otherwise leave those boxes blank.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-4",
+        "quote": "Use a check mark for boxes where the instructions state to \"check all that apply,\" if the specified condition is met; otherwise, these boxes should remain blank"
+      }
+    },
+    {
+      "rule": "Use a numeric response (a number or pre-assigned value) for blank boxes.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-4",
+        "quote": "Use a numeric response (a number or pre-assigned value) for blank boxes (e.g., M1030, Number of Venous and Arterial Ulcers)."
+      }
+    },
+    {
+      "rule": "When recording month, day, and year for dates, enter two digits for the month and the day and four digits for the year (e.g., January 3, 2020 recorded as 01 03 2020).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-4",
+        "quote": "When recording month, day, and year for dates, enter two digits for the month and the day and four digits for the year."
+      }
+    },
+    {
+      "rule": "Almost all MDS 3.0 items allow a dash (-) value to be entered and submitted to iQIES; a dash indicates the item was not assessed.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-4",
+        "quote": "Almost all MDS 3.0 items allow a dash (-) value to be entered and submitted to iQIES."
+      }
+    },
+    {
+      "rule": "Dash values allow a partial assessment to be submitted when an assessment is required for payment purposes.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-4",
+        "quote": "Dash values allow a partial assessment to be submitted when an assessment is required for payment purposes."
+      }
+    },
+    {
+      "rule": "One date item (A2400C) uses a dash-filled value to indicate the event has not yet occurred (e.g., an ongoing Medicare stay where the end date has not occurred).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-4",
+        "quote": "There is one date item (A2400C) that uses a dash-filled value to indicate that the event has not yet occurred."
+      }
+    },
+    {
+      "rule": "A few items do not allow dash values, including identification items in Section A (e.g., A0500 Legal Name of Resident, A2300 Assessment Reference Date, A0310 Type of Assessment, A0810 Sex) and ICD diagnosis codes (I8000); the complete list is on the CMS MDS 3.0 Technical Information web page.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-4",
+        "quote": "The few items that do not allow dash values include identification items in Section A [e.g., Legal Name of Resident (Item A0500), Assessment Reference Date (Item A2300), Type of Assessment (Item A0310), and Sex (Item A0810)] and ICD diagnosis codes (Item I8000)."
+      }
+    },
+    {
+      "rule": "When the term \"physician\" is used in this manual, it should be interpreted as including nurse practitioners, physician assistants, or clinical nurse specialists, if allowable under state licensure laws and Medicare.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-4",
+        "quote": "When the term \"physician\" is used in this manual, it should be interpreted as including nurse practitioners, physician assistants, or clinical nurse specialists, if allowable under state licensure laws and Medicare."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "When completing hard copy forms to be used for data entry, capital letters may be easiest to read; print legibly to ensure accurate encoding of data.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. 3-4",
+          "quote": "When completing hard copy forms to be used for data entry, capital letters may be easiest to read. Print legibly to ensure accurate encoding of data."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "low",
+        "notes": "Framed as a legibility suggestion for hard copy forms, not a required record element."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "low",
+    "notes": "The only payment-related statement on these pages is that dash values allow a partial assessment to be submitted when an assessment is required for payment purposes; no case-mix classification group is tied to these conventions in the supplied pages.",
+    "source": {
+      "doc": "rai-manual-v1.20.1",
+      "loc": "p. 3-4",
+      "quote": "Dash values allow a partial assessment to be submitted when an assessment is required for payment purposes."
+    }
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "supportive_documentation.federal (no required source-documentation criteria stated for these conventions)",
+    "state_deltas",
+    "conflicts",
+    "common_audit_citations",
+    "lookback_notes (how the 7-day window is counted relative to the ARD)"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

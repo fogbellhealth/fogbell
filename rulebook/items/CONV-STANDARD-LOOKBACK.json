@@ -1,0 +1,87 @@
+{
+  "item_id": "CONV-STANDARD-LOOKBACK",
+  "item_name": "Standard look-back period",
+  "section": "CONV",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. 3-3",
+    "quote": "The standard look-back period for the MDS 3.0 is 7 days, unless otherwise stated."
+  },
+  "lookback_notes": "The document states a standard look-back period of 7 days for the MDS 3.0 unless otherwise stated. The pages supplied do not state how the 7 days are counted relative to the Assessment Reference Date (e.g., \"ARD plus the 6 prior days\"); that counting detail is NOT_FOUND in this excerpt. The document also references items whose look-back period relates back to the Admission/Entry, Reentry, or Prior OBRA or scheduled PPS assessment, whichever is most recent, but does not express those as a number of days.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "The standard look-back period for the MDS 3.0 is 7 days, unless otherwise stated.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-3",
+        "quote": "The standard look-back period for the MDS 3.0 is 7 days, unless otherwise stated."
+      }
+    },
+    {
+      "rule": "With the exception of certain items (e.g., some items in Sections J, K and O), the look-back period does not extend into the preadmission period unless the item instructions state otherwise.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-3",
+        "quote": "With the exception of certain items (e.g., some items in Sections J, K and O), the look-back period does not extend into the preadmission period unless the item instructions state otherwise."
+      }
+    },
+    {
+      "rule": "In the case of reentry, the look-back period does not extend into time prior to the reentry, unless instructions state otherwise.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-3",
+        "quote": "In the case of reentry, the look-back period does not extend into time prior to the reentry, unless instructions state otherwise."
+      }
+    },
+    {
+      "rule": "When determining the response to items that have a look-back period relating back to the Admission/Entry, Reentry, or Prior OBRA or scheduled PPS assessment, whichever is most recent, staff must only consider those assessments that are required to be submitted to iQIES.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-3",
+        "quote": "When determining the response to items that have a look-back period relating back to the Admission/Entry, Reentry, or Prior OBRA or scheduled PPS assessment, whichever is most recent, staff must only consider those assessments that are required to be submitted to iQIES."
+      }
+    },
+    {
+      "rule": "PPS assessments completed for private insurance and Medicare Advantage Plans must not be submitted to iQIES and therefore should not be considered when determining the \"prior assessment.\"",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-3",
+        "quote": "PPS assessments that are completed for private insurance and Medicare Advantage Plans must not be submitted to iQIES and therefore should not be considered when determining the “prior assessment.”"
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages do not tie the standard look-back convention to a payment or case-mix classification. Chapter 3 references that Chapters 1, 2, 4, 5 and 6 contain information on the SNF PPS payment system, but no explicit case-mix tie for this convention is stated."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "lookback_notes: exact counting method relative to the Assessment Reference Date",
+    "coding_levels",
+    "supportive_documentation.federal",
+    "state_deltas",
+    "case_mix_relevance.source",
+    "common_audit_citations"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}
