@@ -50,7 +50,7 @@ module Fogbell
                 elsif title.include?(": ") then title.split(": ").last.sub(/\s*\([^)]*\)\s*\z/, "")
                 else title
                 end
-        ver = version.split(/;|\(per/).first.to_s.strip
+        ver = version.split(/;|\(| per /).first.to_s.strip
         ver, date = ver.split(",", 2).map { |s| s&.strip }
         [ short, ver, (date.present? ? "(#{date})" : nil) ].compact.reject(&:empty?).join(" ").strip
       end
