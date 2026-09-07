@@ -1,6 +1,6 @@
 {
   "item_id": "I4900",
-  "item_name": "Hemiplegia or Hemiparesis",
+  "item_name": "Hemiplegia or Hemiparesis (Active Diagnoses in the Last 7 Days)",
   "section": "I",
   "instrument": "MDS-3.0",
   "lookback_days": 7,
@@ -9,48 +9,12 @@
     "loc": "p. I-8",
     "quote": "Diagnosis status: Active or Inactive (Step 2) is a 7-day look-back period (except for Item I2300 UTI, which does not use the active 7-day look-back period)."
   },
-  "lookback_notes": "The section I0100–I8000 (which contains I4900) has two stated look-back periods: diagnosis identification (Step 1) is a 60-day look-back for the physician-documented diagnosis, and diagnosis status active/inactive (Step 2) is a 7-day look-back. The assessor's observation window against which 'active' status is judged is 7 days; the 60-day window applies to identifying that a physician diagnosis exists. The 30-day exception stated in the manual applies only to Item I2300 UTI, not to I4900. The manual does not state how the days are counted relative to the ARD on these pages.",
+  "lookback_notes": "Two look-back periods are stated for this section and both apply to I4900: diagnosis identification (Step 1) uses a 60-day look-back (\"physician-documented diagnosis ... in the last 60 days\", p. I-8), and diagnosis status active/inactive (Step 2) uses a 7-day look-back (p. I-8). The assessor's observation window for determining whether the diagnosis is active is 7 days, so lookback_days = 7. Per the general convention, the ARD is day 1 of the look-back period and a 7-day window is the ARD plus the 6 previous calendar days (rai-manual-v1.20.1, p. 2-21); the item's own pages do not restate how the days are counted. The 30-day exception stated on pp. I-9/I-14 applies only to Item I2300 (UTI), not to I4900.",
   "coding_levels": [
     {
       "code": "checked",
       "label": "I4900 Hemiplegia or Hemiparesis — checked",
-      "definition": "Check the box for I4900 when hemiplegia or hemiparesis is an active diagnosis (physician-documented in the last 60 days with a direct relationship to the resident's current status during the 7-day look-back period). The section instruction is to check off each active disease and check all that apply.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-9",
-        "quote": "Check off each active disease. Check all that apply."
-      }
-    },
-    {
-      "code": "unchecked",
-      "label": "I4900 not checked",
-      "definition": "Leave unchecked when hemiplegia or hemiparesis is not an active diagnosis; conditions that have been resolved, do not affect the resident's current status, or do not drive the plan of care during the 7-day look-back period are inactive and are not coded.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-8",
-        "quote": "Do not include conditions that have been resolved, do not affect the resident’s current status, or do not drive the resident’s plan of care during the 7-day look-back period, as these would be considered inactive diagnoses."
-      }
-    }
-  ],
-  "federal_coding_rules": [
-    {
-      "rule": "I4900 is the Neurological-category active diagnosis item for hemiplegia or hemiparesis.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-12",
-        "quote": "I4900, hemiplegia or hemiparesis"
-      }
-    },
-    {
-      "rule": "I4900 appears in the Active Diagnoses in the last 7 days item set, under the Neurological category, and is coded by checkbox (check all that apply).",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-6",
-        "quote": "I4900. Hemiplegia or Hemiparesis"
-      }
-    },
-    {
-      "rule": "Code the disease only if it has a documented diagnosis in the last 60 days AND has a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period.",
+      "definition": "Check I4900 when hemiplegia or hemiparesis is a disease with a documented diagnosis in the last 60 days that has a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-9",
@@ -58,7 +22,35 @@
       }
     },
     {
-      "rule": "The disease condition requires a physician-documented diagnosis (or by a nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) in the last 60 days.",
+      "code": "unchecked",
+      "label": "I4900 — left blank (not an active diagnosis)",
+      "definition": "Leave the box blank when the condition does not meet the active-diagnosis criteria; per the general convention, check-all-that-apply boxes remain blank if the specified condition is not met.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-4",
+        "quote": "Use a check mark for boxes where the instructions state to \"check all that apply,\" if the specified condition is met; otherwise, these boxes should remain blank"
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "I4900 captures hemiplegia or hemiparesis, listed under the Neurological disease category of Active Diagnoses in the Last 7 Days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-12",
+        "quote": "I4900, hemiplegia or hemiparesis"
+      }
+    },
+    {
+      "rule": "Code diseases that have a documented diagnosis in the last 60 days and have a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-9",
+        "quote": "Code diseases that have a documented diagnosis in the last 60 days and have a direct relationship to the resident’s current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period"
+      }
+    },
+    {
+      "rule": "The disease conditions in this section require a physician-documented diagnosis (or by a nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) in the last 60 days.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-8",
@@ -66,7 +58,7 @@
       }
     },
     {
-      "rule": "Do not code conditions that have been resolved, do not affect the resident's current status, or do not drive the plan of care during the 7-day look-back period; these are inactive diagnoses.",
+      "rule": "Do not include conditions that have been resolved, do not affect the resident's current status, or do not drive the resident's plan of care during the 7-day look-back period; these are inactive diagnoses.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-8",
@@ -74,7 +66,15 @@
       }
     },
     {
-      "rule": "Diseases to be coded in a category are not limited to the listed examples; the parenthetical examples are not all-inclusive lists.",
+      "rule": "Check off each active disease; check all that apply.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-9",
+        "quote": "Check off each active disease. Check all that apply."
+      }
+    },
+    {
+      "rule": "Examples of diseases included for a disease category are not exhaustive; diseases coded in these categories are not limited to only those listed in the examples.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-9",
@@ -82,23 +82,15 @@
       }
     },
     {
-      "rule": "If the primary medical condition coded in I0020B is hemiplegia/hemiparesis-related, that primary medical condition must also be included in items I0100–I8000: Active Diagnoses in the Last 7 Days.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-2",
-        "quote": "Include the primary medical condition coded in item I0020B in items I0100–I8000: Active Diagnoses in the Last 7 Days."
-      }
-    },
-    {
-      "rule": "When a Z code is assigned for aftercare following hospitalization, another diagnosis for the related primary medical condition should be checked in items I0100–I7900 or entered in I8000.",
+      "rule": "If a disease or condition is not specifically listed, enter the diagnosis and ICD code in item I8000, Additional active diagnosis.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-9",
-        "quote": "When Z codes are used, another diagnosis for the related primary medical condition should be checked in items I0100–I7900 or entered in I8000."
+        "quote": "If a disease or condition is not specifically listed, enter the diagnosis and ICD code in item I8000, Additional active diagnosis."
       }
     },
     {
-      "rule": "If none of the listed active diagnoses (including I4900) apply within the last 7 days, code I7900, None of the above active diagnoses.",
+      "rule": "If no listed condition is an active diagnosis, code I7900, none of the above active diagnoses within the past 7 days.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-13",
@@ -106,26 +98,45 @@
       }
     },
     {
-      "rule": "Where a practitioner has potentially misdiagnosed a resident with a condition for which there is a lack of appropriate diagnostic information in the medical record, the corresponding Section I diagnosis should not be coded.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-14",
-        "quote": "the corresponding diagnosis in Section I should not be coded, and a referral by the facility and/or the survey team to the State Medical Boards or Boards of Nursing may be necessary."
-      }
-    },
-    {
-      "rule": "Stated in the manual's coding tips for Item I5100 Quadriplegia (and therefore relevant when paresis/paralysis results from another condition): for individuals with severe physical disabilities where there is minimal ability for purposeful movement, the primary physician-documented diagnosis should be coded on the MDS and not the resulting paralysis or paresis from that condition.",
+      "rule": "For individuals with severe physical disabilities where there is minimal ability for purposeful movement, the primary physician-documented diagnosis should be coded on the MDS and not the resulting paralysis or paresis from that condition (stated in the coding tip for Item I5100 Quadriplegia; e.g., cerebral palsy with spastic quadriplegia is coded in I4400, not I5100).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-16",
         "quote": "For individuals with these types of severe physical disabilities, where there is minimal ability for purposeful movement, their primary physician-documented diagnosis should be coded on the MDS and not the resulting paralysis or paresis from that condition."
+      }
+    },
+    {
+      "rule": "If the primary medical condition category coded in I0020B applies, it must also be included in items I0100–I8000: Active Diagnoses in the Last 7 Days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-2",
+        "quote": "Include the primary medical condition coded in item I0020B in items I0100–I8000: Active Diagnoses in the Last 7 Days."
+      }
+    },
+    {
+      "rule": "Where a practitioner has potentially misdiagnosed a resident with a condition for which there is a lack of appropriate diagnostic information in the medical record, the corresponding diagnosis in Section I should not be coded.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-14",
+        "quote": "the corresponding diagnosis in Section I should not be coded, and a referral by the facility and/or the survey team to the State Medical Boards or Boards of Nursing may be necessary."
       }
     }
   ],
   "supportive_documentation": {
     "federal": [
       {
-        "criterion": "Physician (or NP/PA/CNS if allowable under state licensure laws) documentation of the diagnosis within the last 60 days; medical record sources include progress notes, the most recent history and physical, transfer documents, discharge summaries, and the diagnosis/problem list (only diagnoses confirmed by the physician may be used from a problem list).",
+        "criterion": "A physician-documented diagnosis (or by a nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) of hemiplegia or hemiparesis within the last 60 days must exist in the medical record.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-8",
+          "quote": "The disease conditions in this section require a physician-documented diagnosis (or by a nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) in the last 60 days."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Step 1 of the two-step assessment process."
+      },
+      {
+        "criterion": "Acceptable medical record sources for physician diagnoses: progress notes, most recent history and physical, transfer documents, discharge summaries, diagnosis/problem list, and other resources as available; if a diagnosis/problem list is used, only diagnoses confirmed by the physician should be entered.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-8",
@@ -135,7 +146,7 @@
         "audit_weight": "high"
       },
       {
-        "criterion": "Diagnoses communicated verbally must be documented in the medical record by the physician.",
+        "criterion": "Diagnoses communicated verbally must be documented in the medical record by the physician to ensure follow-up.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-8",
@@ -145,7 +156,7 @@
         "audit_weight": "high"
       },
       {
-        "criterion": "Diagnostic information, including past history obtained from family members and close contacts, must be documented in the medical record by the physician.",
+        "criterion": "Diagnostic information, including past history obtained from family members and close contacts, must also be documented in the medical record by the physician to ensure validity and follow-up.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-8",
@@ -155,7 +166,7 @@
         "audit_weight": "high"
       },
       {
-        "criterion": "Evidence of active status must be sought in the last 7 days from: transfer documents, physician progress notes, recent history and physical, recent discharge summaries, nursing assessments, nursing care plans, medication sheets, doctor's orders, consults and official diagnostic reports.",
+        "criterion": "Check these medical record sources for the last 7 days to identify \"active\" diagnoses: transfer documents, physician progress notes, recent history and physical, recent discharge summaries, nursing assessments, nursing care plans, medication sheets, doctor's orders, consults and official diagnostic reports, and other sources as available.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-9",
@@ -165,28 +176,29 @@
         "audit_weight": "high"
       },
       {
-        "criterion": "Specific documentation by a physician, nurse practitioner, physician assistant, or clinical nurse specialist that the condition is active is sufficient and requires no additional confirmation.",
+        "criterion": "Specific physician (or NP/PA/CNS) documentation that the condition is active is sufficient documentation of active disease and requires no additional confirmation; such documentation may be found in progress notes, most recent history and physical, transfer notes, hospital discharge summary, etc.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-13",
           "quote": "There may be specific documentation in the medical record by a physician, nurse practitioner, physician assistant, or clinical nurse specialist of active diagnosis."
         },
         "verified_by_expert": false,
-        "audit_weight": "medium",
-        "notes": "Framed as an indicator that 'may assist assessors' in determining active status."
+        "audit_weight": "high",
+        "notes": "Framed as a Coding Tip indicator."
       },
       {
-        "criterion": "In the absence of specific documentation that the disease is active, active status may be confirmed by recent onset or acute exacerbation indicated by a positive study, test or procedure, hospitalization for acute symptoms, and/or recent change in therapy in the last 7 days.",
+        "criterion": "In the absence of specific documentation that the disease is active, active disease may be confirmed by recent onset or acute exacerbation indicated by a positive study, test or procedure, hospitalization for acute symptoms, and/or recent change in therapy in the last 7 days (sources may include radiological reports, hospital discharge summaries, doctor's orders).",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-13",
           "quote": "Recent onset or acute exacerbation of the disease or condition indicated by a positive study, test or procedure, hospitalization for acute symptoms and/or recent change in therapy in the last 7 days."
         },
         "verified_by_expert": false,
-        "audit_weight": "medium"
+        "audit_weight": "medium",
+        "notes": "Listed as an indicator that \"may be used\" to confirm active disease."
       },
       {
-        "criterion": "Active status may also be confirmed by symptoms and abnormal signs indicating ongoing or decompensated disease in the last 7 days; a symptom must be specifically attributed to the disease.",
+        "criterion": "Symptoms and abnormal signs indicating ongoing or decompensated disease in the last 7 days may confirm active disease; a symptom must be specifically attributed to the disease (sources may include radiological reports, nursing assessments and care plans, progress notes).",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-13",
@@ -196,7 +208,7 @@
         "audit_weight": "medium"
       },
       {
-        "criterion": "Listing the disease/diagnosis on the resident's problem list is not sufficient to determine active or inactive status; the reviewer checks progress notes during the 7-day look-back for treatment of symptoms, doctor's orders for medications, and documentation of physical or other therapy for functional limitations caused by the condition.",
+        "criterion": "Listing a disease/diagnosis on the resident's medical record problem list is not sufficient for determining active or inactive status; the reviewer would check progress notes (including the history and physical) during the 7-day look-back period for treatment of symptoms, doctor's orders for medications, and documentation of physical or other therapy for functional limitations caused by the condition.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-14",
@@ -206,7 +218,7 @@
         "audit_weight": "high"
       },
       {
-        "criterion": "Ongoing therapy with medications or other interventions to manage the condition that requires monitoring for therapeutic efficacy or for potentially severe side effects in the last 7 days supports active status; monitoring of medications for adverse effects alone (pharmacotherapy management) does not.",
+        "criterion": "Ongoing therapy with medications or other interventions to manage a condition that requires monitoring for therapeutic efficacy or for potentially severe side effects in the last 7 days indicates active disease; monitoring of medications for adverse effects alone relates to management of pharmacotherapy, not to management or monitoring of the underlying disease.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-14",
@@ -214,7 +226,7 @@
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Paired with the statement on the same page that nurses' monitoring of all medications for adverse effects relates to pharmacotherapy management, not to management/monitoring of the underlying disease."
+        "notes": "Second bullet on p. I-14 clarifies that routine adverse-effect monitoring does not by itself establish active disease."
       }
     ],
     "state": {}
@@ -222,15 +234,15 @@
   "state_deltas": [],
   "case_mix_relevance": {
     "level": "unknown",
-    "notes": "The supplied pages do not tie item I4900 to any payment or case-mix classification. The only payment-related reference in this excerpt is item I0020 (primary medical condition category for the Medicare Part A stay), which is a different item."
+    "notes": "The pages for Section I active diagnoses do not tie I4900 to any payment or case-mix classification. (I0020 references the Medicare Part A stay, but that is a separate item and no case-mix/payment group is stated for I4900.)"
   },
   "conflicts": [
     {
-      "topic": "Two look-back windows apply to the I0100–I8000 active diagnosis items, including I4900",
+      "topic": "Coexistence of a 60-day and a 7-day look-back window for this section",
       "positions": [
         {
           "authority": "federal",
-          "claim": "Diagnosis identification (Step 1) uses a 60-day look-back period for the physician-documented diagnosis.",
+          "claim": "Diagnosis identification (Step 1) uses a 60-day look-back period.",
           "source": {
             "doc": "rai-manual-v1.20.1",
             "loc": "p. I-8",
@@ -239,7 +251,7 @@
         },
         {
           "authority": "federal",
-          "claim": "Diagnosis status (active or inactive, Step 2) uses a 7-day look-back period.",
+          "claim": "Diagnosis status: active or inactive (Step 2) uses a 7-day look-back period.",
           "source": {
             "doc": "rai-manual-v1.20.1",
             "loc": "p. I-8",
@@ -247,15 +259,15 @@
           }
         }
       ],
-      "resolution": "Resolved by the document itself: the manual states both windows apply in sequence — a diagnosis documented in the last 60 days must also be active during the 7-day look-back period (p. I-9). The assessor's observation window recorded in lookback_days is 7 days."
+      "resolution": "Resolved by the document itself: it explicitly states \"There are two look-back periods for this section\" — 60 days for identifying a physician-documented diagnosis and 7 days for determining that the diagnosis is active (p. I-8, reiterated in the Coding Instructions on p. I-9)."
     }
   ],
   "common_audit_citations": [],
   "not_found": [
-    "case_mix_relevance.level",
-    "common_audit_citations",
     "state_deltas",
-    "item-specific coding instructions or examples for I4900 (the pages provide only the item listing and section-level rules)"
+    "case_mix_relevance.source",
+    "common_audit_citations",
+    "item-specific coding definition or examples for I4900 beyond the list entry \"hemiplegia or hemiparesis\""
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",

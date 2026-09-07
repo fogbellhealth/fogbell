@@ -9,12 +9,32 @@
     "loc": "p. I-8",
     "quote": "Diagnosis status: Active or Inactive (Step 2) is a 7-day look-back period (except for Item I2300 UTI, which does not use the active 7-day look-back period)."
   },
-  "lookback_notes": "Two look-back periods apply to this section. The active-disease observation window used to determine whether the diagnosis is coded is 7 days (Step 2). A separate 60-day window (Step 1) applies to identification of the physician-documented diagnosis: \"The disease conditions in this section require a physician-documented diagnosis ... in the last 60 days\" (p. I-8). The 30-day exception stated for I2300 UTI does not apply to I2900. The manual does not state how the 7-day window is counted relative to the ARD on these pages.",
+  "lookback_notes": "The section states two look-back periods. The assessor's observation window for determining whether the diagnosis is ACTIVE is 7 days (ARD plus the 6 previous calendar days per the general convention at p. 2-17, \"ARD + 6 previous calendar days\"). A separate 60-day window applies to Step 1, identification of a physician-documented diagnosis: \"Diagnosis identification (Step 1) is a 60-day look-back period.\" (p. I-8). The stated exception for a 30-day window applies only to Item I2300 UTI, not to I2900.",
   "coding_levels": [
     {
       "code": "checked",
-      "label": "Diabetes mellitus (DM) coded as an active diagnosis",
-      "definition": "Check I2900 when diabetes mellitus is a diagnosis documented in the last 60 days that has a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period. Examples given: diabetic retinopathy, nephropathy, neuropathy.",
+      "label": "Diabetes mellitus (DM) is an active diagnosis in the last 7 days",
+      "definition": "Check I2900 when diabetes mellitus (e.g., diabetic retinopathy, nephropathy, neuropathy) is a physician-documented diagnosis in the last 60 days that has a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-9",
+        "quote": "Check off each active disease. Check all that apply."
+      }
+    },
+    {
+      "code": "blank",
+      "label": "Not checked",
+      "definition": "Boxes remain blank when the specified condition is not met (general convention for \"check all that apply\" items).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. 3-4",
+        "quote": "Use a check mark for boxes where the instructions state to \"check all that apply,\" if the specified condition is met; otherwise, these boxes should remain blank"
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Code I2900 for diabetes mellitus (DM); examples given include diabetic retinopathy, nephropathy, and neuropathy.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-11",
@@ -22,17 +42,13 @@
       }
     },
     {
-      "code": "not checked",
-      "label": "Not coded (inactive or absent diagnosis)",
-      "definition": "Leave unchecked when the condition has been resolved, does not affect the resident's current status, or does not drive the resident's plan of care during the 7-day look-back period (inactive diagnosis).",
+      "rule": "I2900 is listed under the Metabolic disease category on the item set, to be checked if it applies (\"Check all that apply\").",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-8",
-        "quote": "Do not include conditions that have been resolved, do not affect the resident's current status, or do not drive the resident's plan of care during the 7-day look-back period, as these would be considered inactive diagnoses."
+        "loc": "p. I-6",
+        "quote": "I2900. Diabetes Mellitus (DM) (e.g., diabetic retinopathy, nephropathy, and neuropathy)"
       }
-    }
-  ],
-  "federal_coding_rules": [
+    },
     {
       "rule": "Code diseases that have a documented diagnosis in the last 60 days and have a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period.",
       "source": {
@@ -46,15 +62,15 @@
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-8",
-        "quote": "Identify diagnoses: The disease conditions in this section require a physician-documented diagnosis (or by a nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) in the last 60 days."
+        "quote": "The disease conditions in this section require a physician-documented diagnosis (or by a nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) in the last 60 days."
       }
     },
     {
-      "rule": "Once a diagnosis is identified, it must be determined whether it is active; active diagnoses have a direct relationship to the resident's current functional, cognitive, or mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period.",
+      "rule": "Do not code conditions that have been resolved, do not affect the resident's current status, or do not drive the resident's plan of care during the 7-day look-back period; these are inactive diagnoses.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-8",
-        "quote": "Determine whether diagnoses are active: Once a diagnosis is identified, it must be determined if the diagnosis is active."
+        "quote": "Do not include conditions that have been resolved, do not affect the resident's current status, or do not drive the resident's plan of care during the 7-day look-back period, as these would be considered inactive diagnoses."
       }
     },
     {
@@ -66,43 +82,11 @@
       }
     },
     {
-      "rule": "Diseases coded in a category are not limited to the examples listed; the parenthetical examples (for I2900: diabetic retinopathy, nephropathy, neuropathy) are examples only and not an all-inclusive list.",
+      "rule": "Examples of diseases included for a disease category are not limiting; diseases to be coded in these categories are not meant to be limited to only those listed in the examples.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-9",
         "quote": "Examples of diseases are included for some disease categories. Diseases to be coded in these categories are not meant to be limited to only those listed in the examples."
-      }
-    },
-    {
-      "rule": "If a disease or condition is not specifically listed among the checkbox items, enter the diagnosis and ICD code in item I8000, Additional active diagnosis.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-9",
-        "quote": "If a disease or condition is not specifically listed, enter the diagnosis and ICD code in item I8000, Additional active diagnosis."
-      }
-    },
-    {
-      "rule": "If the primary medical condition coded in I0020B is diabetes, it must also be included (checked) in items I0100–I8000, Active Diagnoses in the Last 7 Days; diabetes is listed as an example of a Medically Complex Condition (I0020 = 13).",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-2",
-        "quote": "Include the primary medical condition coded in item I0020B in items I0100–I8000: Active Diagnoses in the Last 7 Days."
-      }
-    },
-    {
-      "rule": "When a Z code is assigned for aftercare following a hospitalization, another diagnosis for the related primary medical condition should be checked in items I0100–I7900 or entered in I8000.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-9",
-        "quote": "When Z codes are used, another diagnosis for the related primary medical condition should be checked in items I0100–I7900 or entered in I8000."
-      }
-    },
-    {
-      "rule": "If none of the listed active diagnoses apply within the past 7 days, code I7900, None of the above active diagnoses.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-13",
-        "quote": "I7900, none of the above active diagnoses within the past 7 days"
       }
     },
     {
@@ -114,7 +98,7 @@
       }
     },
     {
-      "rule": "Ongoing therapy with medications or other interventions to manage a condition that requires monitoring for therapeutic efficacy or for potentially severe side effects in the last 7 days indicates active disease; monitoring of medications for adverse effects alone (usual nursing practice, i.e., management of pharmacotherapy) does not count as monitoring of the underlying disease.",
+      "rule": "Monitoring of medications for adverse effects as usual nursing practice does not, for coding purposes, count as management or monitoring of the underlying disease.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-14",
@@ -122,39 +106,63 @@
       }
     },
     {
-      "rule": "If a diagnosis/problem list is used as a source, only diagnoses confirmed by the physician should be entered.",
+      "rule": "Where practitioners have potentially misdiagnosed a resident with a condition for which there is a lack of appropriate diagnostic information in the medical record, the corresponding diagnosis in Section I should not be coded.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-8",
-        "quote": "If a diagnosis/problem list is used, only diagnoses confirmed by the physician should be entered."
+        "loc": "p. I-14",
+        "quote": "In situations where practitioners have potentially misdiagnosed residents with a condition for which there is a lack of appropriate diagnostic information in the medical record, such as for a mental disorder, the corresponding diagnosis in Section I should not be coded"
+      }
+    },
+    {
+      "rule": "When Z codes are used for aftercare following a hospitalization, another diagnosis for the related primary medical condition should be checked in items I0100–I7900 or entered in I8000.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-9",
+        "quote": "When Z codes are used, another diagnosis for the related primary medical condition should be checked in items I0100–I7900 or entered in I8000."
+      }
+    },
+    {
+      "rule": "The primary medical condition coded in item I0020B must be included in items I0100–I8000, Active Diagnoses in the Last 7 Days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-2",
+        "quote": "Include the primary medical condition coded in item I0020B in items I0100–I8000: Active Diagnoses in the Last 7 Days."
+      }
+    },
+    {
+      "rule": "If a resident has no active diagnoses from the listed items within the past 7 days, I7900 (none of the above active diagnoses) is the corresponding \"None of Above\" response for this section.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-13",
+        "quote": "I7900, none of the above active diagnoses within the past 7 days"
       }
     }
   ],
   "supportive_documentation": {
     "federal": [
       {
-        "criterion": "Physician (or NP/PA/CNS if allowable under state licensure laws) documented diagnosis of diabetes mellitus in the medical record within the last 60 days. Medical record sources include progress notes, the most recent history and physical, transfer documents, discharge summaries, and diagnosis/problem list.",
+        "criterion": "A physician-documented diagnosis (or by NP, PA, or CNS if allowable under state licensure laws) of the condition within the last 60 days; medical record sources include progress notes, the most recent history and physical, transfer documents, discharge summaries, diagnosis/problem list, and other resources as available. If a diagnosis/problem list is used, only diagnoses confirmed by the physician should be entered.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-8",
-          "quote": "Medical record sources for physician diagnoses include progress notes, the most recent history and physical, transfer documents, discharge summaries, diagnosis/ problem list, and other resources as available."
+          "quote": "Medical record sources for physician diagnoses include progress notes, the most recent history and physical, transfer documents, discharge summaries, diagnosis/ problem list, and other resources as available. If a diagnosis/problem list is used, only diagnoses confirmed by the physician should be entered."
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Required for identification of the diagnosis (Step 1)."
+        "notes": "Step 1 diagnosis identification (60-day window)."
       },
       {
-        "criterion": "Diagnoses communicated verbally must be documented in the medical record by the physician.",
+        "criterion": "Diagnoses communicated verbally must be documented in the medical record by the physician to ensure follow-up.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-8",
-          "quote": "it is also essential that diagnoses communicated verbally be documented in the medical record by the physician to ensure follow-up"
+          "quote": "it is also essential that diagnoses communicated verbally be documented in the medical record by the physician to ensure follow-up."
         },
         "verified_by_expert": false,
         "audit_weight": "high"
       },
       {
-        "criterion": "Diagnostic information, including past history obtained from family members and close contacts, must be documented in the medical record by the physician.",
+        "criterion": "Diagnostic information, including past history obtained from family members and close contacts, must be documented in the medical record by the physician to ensure validity and follow-up.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-8",
@@ -164,39 +172,39 @@
         "audit_weight": "high"
       },
       {
-        "criterion": "Evidence in the medical record for the last 7 days supporting active status; check transfer documents, physician progress notes, recent history and physical, recent discharge summaries, nursing assessments, nursing care plans, medication sheets, doctor's orders, consults and official diagnostic reports.",
+        "criterion": "Check medical record information sources for the last 7 days to identify \"active\" diagnoses: transfer documents, physician progress notes, recent history and physical, recent discharge summaries, nursing assessments, nursing care plans, medication sheets, doctor's orders, consults and official diagnostic reports, and other sources as available.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-9",
           "quote": "Check the following information sources in the medical record for the last 7 days to identify \"active\" diagnoses: transfer documents, physician progress notes, recent history and physical, recent discharge summaries, nursing assessments, nursing care plans, medication sheets, doctor's orders, consults and official diagnostic reports, and other sources as available."
         },
         "verified_by_expert": false,
-        "audit_weight": "high"
+        "audit_weight": "high",
+        "notes": "Step 2 active-status determination (7-day window)."
       },
       {
-        "criterion": "Specific documentation by a physician, nurse practitioner, physician assistant, or clinical nurse specialist that the condition is active (e.g., in progress notes, most recent history and physical, transfer notes, hospital discharge summary) is sufficient and requires no additional confirmation.",
+        "criterion": "Specific documentation in the medical record by a physician, nurse practitioner, physician assistant, or clinical nurse specialist that the condition is active (e.g., in progress notes, most recent history and physical, transfer notes, hospital discharge summary) is sufficient and requires no additional confirmation.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-13",
-          "quote": "There may be specific documentation in the medical record by a physician, nurse practitioner, physician assistant, or clinical nurse specialist of active diagnosis."
+          "quote": "The physician may specifically indicate that a condition is active. Specific documentation may be found in progress notes, most recent history and physical, transfer notes, hospital discharge summary, etc."
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Framed as an indicator that may assist assessors."
+        "notes": "Framed under \"Coding Tips\" as indicators that \"may assist assessors\"."
       },
       {
-        "criterion": "In the absence of specific documentation that the disease is active: documentation of recent onset or acute exacerbation indicated by a positive study, test or procedure, hospitalization for acute symptoms, and/or recent change in therapy in the last 7 days (sources: radiological reports, hospital discharge summaries, doctor's orders).",
+        "criterion": "In the absence of specific documentation that the disease is active: evidence of recent onset or acute exacerbation indicated by a positive study, test or procedure, hospitalization for acute symptoms, and/or recent change in therapy in the last 7 days (sources may include radiological reports, hospital discharge summaries, doctor's orders).",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-13",
           "quote": "Recent onset or acute exacerbation of the disease or condition indicated by a positive study, test or procedure, hospitalization for acute symptoms and/or recent change in therapy in the last 7 days."
         },
         "verified_by_expert": false,
-        "audit_weight": "medium",
-        "notes": "Listed as an indicator that may be used to confirm active disease."
+        "audit_weight": "medium"
       },
       {
-        "criterion": "In the absence of specific documentation that the disease is active: documentation of symptoms and abnormal signs indicating ongoing or decompensated disease in the last 7 days, with the symptom specifically attributed to the disease (sources: radiological reports, nursing assessments and care plans, progress notes).",
+        "criterion": "In the absence of specific documentation that the disease is active: documented symptoms and abnormal signs indicating ongoing or decompensated disease in the last 7 days, with the symptom specifically attributed to the disease (sources may include radiological reports, nursing assessments and care plans, progress notes).",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-13",
@@ -204,10 +212,10 @@
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Listed as an indicator that may be used to confirm active disease."
+        "notes": "\"Therefore, a symptom must be specifically attributed to the disease.\""
       },
       {
-        "criterion": "In the absence of specific documentation that the disease is active: documentation of ongoing therapy with medications or other interventions in the last 7 days that requires monitoring for therapeutic efficacy or for potentially severe side effects.",
+        "criterion": "In the absence of specific documentation that the disease is active: documentation of ongoing therapy with medications or other interventions in the last 7 days to manage the condition, where the medication requires monitoring for therapeutic efficacy or for potentially severe side effects.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-14",
@@ -215,7 +223,18 @@
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Listed as an indicator that may be used to confirm active disease."
+        "notes": "Relevant for diabetes managed with insulin/oral agents plus glucose monitoring, but the pages give no diabetes-specific example."
+      },
+      {
+        "criterion": "Documentation beyond the problem list is required: to determine active status, the reviewer checks progress notes (including the history and physical) during the 7-day look-back period for treatment of symptoms, doctor's orders for medications, and documentation of physical or other therapy for functional limitations caused by the condition.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-14",
+          "quote": "To determine if arthritis, for example, is an \"active\" diagnosis, the reviewer would check progress notes (including the history and physical) during the 7-day look-back period for notation of treatment of symptoms of arthritis, doctor's orders for medications for arthritis, and documentation of physical or other therapy for functional limitations caused by arthritis."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Example uses arthritis; the principle is stated for the section generally."
       }
     ],
     "state": {}
@@ -223,11 +242,11 @@
   "state_deltas": [],
   "case_mix_relevance": {
     "level": "unknown",
-    "notes": "The supplied pages do not tie I2900 to any payment or case-mix classification. The only payment-adjacent reference in Section I on these pages is I0020, which concerns the primary medical condition category for the Medicare Part A stay, not I2900."
+    "notes": "The supplied pages do not tie item I2900 to any payment or case-mix classification. (I0020, a different item, references the Medicare Part A stay, but no such statement is made for I2900.)"
   },
   "conflicts": [
     {
-      "topic": "Two coexisting look-back windows for Section I diagnosis items (60-day identification vs. 7-day active status)",
+      "topic": "Two coexisting look-back windows for Section I active diagnosis items (including I2900): 60 days for diagnosis identification and 7 days for active status.",
       "positions": [
         {
           "authority": "federal",
@@ -248,16 +267,15 @@
           }
         }
       ],
-      "resolution": "Resolved by the document itself: the two windows are sequential steps — the diagnosis must be physician-documented within 60 days and must be active during the 7-day look-back period. The 7-day window is the assessor's observation window recorded in lookback_days."
+      "resolution": "Resolved by the document itself: both windows apply in sequence — a diagnosis must be physician-documented within 60 days AND be active during the 7-day look-back period (p. I-9). lookback_days is recorded as 7, the observation window for active status."
     }
   ],
   "common_audit_citations": [],
   "not_found": [
     "case_mix_relevance.source",
-    "common_audit_citations",
     "state_deltas",
-    "I2900-specific coding tips (the manual provides item-specific tips only for I2100, I2300, and I5100)",
-    "how the 7-day look-back is counted relative to the assessment reference date"
+    "common_audit_citations",
+    "item-specific coding tips or examples for I2900 (Diabetes Mellitus) beyond the category listing and general Section I instructions"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",

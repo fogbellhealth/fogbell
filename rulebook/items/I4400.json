@@ -9,40 +9,12 @@
     "loc": "p. I-8",
     "quote": "Diagnosis status: Active or Inactive (Step 2) is a 7-day look-back period (except for Item I2300 UTI, which does not use the active 7-day look-back period)."
   },
-  "lookback_notes": "Two look-back periods apply to this section. The assessor's active-status observation window is 7 days (I4400 is not one of the excepted items; only I2300 UTI uses a 30-day window). A separate 60-day window applies to Step 1, identification of a physician-documented diagnosis: \"Diagnosis identification (Step 1) is a 60-day look-back period.\" (p. I-8). The manual does not state how the 7-day window is counted relative to the ARD on the supplied pages.",
+  "lookback_notes": "The item is part of I0100–I8000, Active Diagnoses in the Last 7 Days. The assessor's observation window for determining whether the diagnosis is ACTIVE is 7 days (ARD plus the 6 previous calendar days per the general convention on p. 2-17/2-21). The manual states a second, separate window for this section: diagnosis identification (Step 1) requires a physician-documented diagnosis in the last 60 days (p. I-8). The 30-day exception stated on pp. I-9 and I-14 applies only to Item I2300 UTI, not to I4400.",
   "coding_levels": [
     {
       "code": "checked",
       "label": "Cerebral Palsy is an active diagnosis",
-      "definition": "Check the I4400 box when cerebral palsy is a diagnosis documented in the last 60 days that has a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-9",
-        "quote": "Code diseases that have a documented diagnosis in the last 60 days and have a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period"
-      }
-    },
-    {
-      "code": "unchecked",
-      "label": "Not an active diagnosis",
-      "definition": "Leave unchecked when the condition has been resolved, does not affect the resident's current status, or does not drive the resident's plan of care during the 7-day look-back period (inactive diagnosis).",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-8",
-        "quote": "Do not include conditions that have been resolved, do not affect the resident's current status, or do not drive the resident's plan of care during the 7-day look-back period, as these would be considered inactive diagnoses."
-      }
-    }
-  ],
-  "federal_coding_rules": [
-    {
-      "rule": "I4400 is the Neurological-category checkbox for cerebral palsy within items I0100–I8000, Active Diagnoses in the Last 7 Days.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-12",
-        "quote": "I4400, cerebral palsy"
-      }
-    },
-    {
-      "rule": "The item is a check-all-that-apply checkbox; check off each active disease.",
+      "definition": "Check the I4400 box when cerebral palsy is a physician-documented diagnosis in the last 60 days that has a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-9",
@@ -50,39 +22,51 @@
       }
     },
     {
-      "rule": "The disease condition requires a physician-documented diagnosis (or by a nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) in the last 60 days.",
+      "code": "unchecked (blank)",
+      "label": "Not an active diagnosis",
+      "definition": "Leave blank when the condition is not active during the look-back period; the item set instructs \"Check all that apply,\" so boxes for conditions not met remain blank.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-5",
+        "quote": "Check all that apply."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "I4400 is the Neurological-category item for cerebral palsy within I0100–I8000, Active Diagnoses in the Last 7 Days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-12",
+        "quote": "I4400, cerebral palsy"
+      }
+    },
+    {
+      "rule": "Code diseases that have a documented diagnosis in the last 60 days and have a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-9",
+        "quote": "Code diseases that have a documented diagnosis in the last 60 days and have a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period"
+      }
+    },
+    {
+      "rule": "Do not code conditions that have been resolved, do not affect the resident's current status, or do not drive the resident's plan of care during the 7-day look-back period; these are inactive diagnoses.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-8",
-        "quote": "The disease conditions in this section require a physician-documented diagnosis (or by a nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) in the last 60 days."
+        "quote": "Do not include conditions that have been resolved, do not affect the resident's current status, or do not drive the resident's plan of care during the 7-day look-back period, as these would be considered inactive diagnoses."
       }
     },
     {
-      "rule": "Once the diagnosis is identified, it must be determined to be active: it must have a direct relationship to the resident's current functional, cognitive, or mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period.",
+      "rule": "Check off each active disease; check all that apply.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-8",
-        "quote": "Active diagnoses are diagnoses that have a direct relationship to the resident's current functional, cognitive, or mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period."
+        "loc": "p. I-9",
+        "quote": "Check off each active disease. Check all that apply."
       }
     },
     {
-      "rule": "If a diagnosis/problem list is used as the source, only diagnoses confirmed by the physician should be entered.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-8",
-        "quote": "If a diagnosis/problem list is used, only diagnoses confirmed by the physician should be entered."
-      }
-    },
-    {
-      "rule": "Listing the disease/diagnosis on the resident's medical record problem list is not sufficient for determining active or inactive status.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-14",
-        "quote": "Listing a disease/diagnosis (e.g., arthritis) on the resident's medical record problem list is not sufficient for determining active or inactive status."
-      }
-    },
-    {
-      "rule": "A resident with cerebral palsy with spastic quadriplegia is coded in I4400 Cerebral Palsy, and not in I5100 Quadriplegia; for severe physical disability with minimal purposeful movement, the primary physician-documented diagnosis is coded rather than the resulting paralysis or paresis.",
+      "rule": "A resident with cerebral palsy with spastic quadriplegia is coded in I4400, Cerebral Palsy, and not in I5100, Quadriplegia; for severe physical disabilities with minimal purposeful movement, the primary physician-documented diagnosis is coded rather than the resulting paralysis or paresis.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-16",
@@ -90,23 +74,15 @@
       }
     },
     {
-      "rule": "Where practitioners have potentially misdiagnosed a resident with a condition for which there is a lack of appropriate diagnostic information in the medical record, the corresponding Section I diagnosis should not be coded.",
+      "rule": "Coding I5100 Quadriplegia is limited to spinal cord injuries and must be a primary diagnosis, not the result of another condition (such as cerebral palsy), which bears on whether the cerebral palsy item is the correct item to check.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-14",
-        "quote": "In situations where practitioners have potentially misdiagnosed residents with a condition for which there is a lack of appropriate diagnostic information in the medical record, such as for a mental disorder, the corresponding diagnosis in Section I should not be coded"
+        "loc": "p. I-16",
+        "quote": "Coding I5100 Quadriplegia is limited to spinal cord injuries and must be a primary diagnosis and not the result of another condition."
       }
     },
     {
-      "rule": "Examples given for a disease category are not all-inclusive; diseases to be coded in these categories are not limited to those listed.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-9",
-        "quote": "Examples of diseases are included for some disease categories. Diseases to be coded in these categories are not meant to be limited to only those listed in the examples."
-      }
-    },
-    {
-      "rule": "If the primary medical condition is coded in I0020B, it must also be included in items I0100–I8000, Active Diagnoses in the Last 7 Days (relevant when cerebral palsy is the primary condition coded under I0020 code 07, Other Neurological Conditions).",
+      "rule": "If the primary medical condition is coded in item I0020B, it must also be included in items I0100–I8000, Active Diagnoses in the Last 7 Days.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-2",
@@ -114,29 +90,46 @@
       }
     },
     {
-      "rule": "If no listed diagnosis is active within the last 7 days, I7900 (None of the above active diagnoses) is used instead of checking disease items.",
+      "rule": "Where a practitioner has potentially misdiagnosed a resident with a condition for which there is a lack of appropriate diagnostic information in the medical record, the corresponding Section I diagnosis should not be coded.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-13",
-        "quote": "I7900, none of the above active diagnoses within the past 7 days"
+        "loc": "p. I-14",
+        "quote": "In situations where practitioners have potentially misdiagnosed residents with a condition for which there is a lack of appropriate diagnostic information in the medical record, such as for a mental disorder, the corresponding diagnosis in Section I should not be coded"
+      }
+    },
+    {
+      "rule": "Diagnoses listed in parentheses in the item set are examples only and are not all-inclusive lists.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-5",
+        "quote": "Diagnoses listed in parentheses are provided as examples and should not be considered as all-inclusive lists"
       }
     }
   ],
   "supportive_documentation": {
     "federal": [
       {
-        "criterion": "Physician (or NP/PA/CNS if allowable under state licensure laws) documentation of the cerebral palsy diagnosis within the last 60 days; medical record sources include progress notes, the most recent history and physical, transfer documents, discharge summaries, and the diagnosis/problem list.",
+        "criterion": "A physician-documented diagnosis (or by a nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) of cerebral palsy in the last 60 days must be present in the medical record.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-8",
-          "quote": "Medical record sources for physician diagnoses include progress notes, the most recent history and physical, transfer documents, discharge summaries, diagnosis/ problem list, and other resources as available."
+          "quote": "The disease conditions in this section require a physician-documented diagnosis (or by a nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) in the last 60 days."
         },
         "verified_by_expert": false,
-        "audit_weight": "high",
-        "notes": "Step 1 requirement for identifying the diagnosis."
+        "audit_weight": "high"
       },
       {
-        "criterion": "Diagnoses communicated verbally by the physician must be documented in the medical record by the physician.",
+        "criterion": "Acceptable medical record sources for the physician diagnosis include progress notes, the most recent history and physical, transfer documents, discharge summaries, and the diagnosis/problem list; if a diagnosis/problem list is used, only diagnoses confirmed by the physician should be entered.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-8",
+          "quote": "Medical record sources for physician diagnoses include progress notes, the most recent history and physical, transfer documents, discharge summaries, diagnosis/ problem list, and other resources as available. If a diagnosis/problem list is used, only diagnoses confirmed by the physician should be entered."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      },
+      {
+        "criterion": "Diagnoses communicated verbally must be documented in the medical record by the physician.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-8",
@@ -156,7 +149,7 @@
         "audit_weight": "high"
       },
       {
-        "criterion": "Review medical record sources covering the last 7 days to identify 'active' status: transfer documents, physician progress notes, recent history and physical, recent discharge summaries, nursing assessments, nursing care plans, medication sheets, doctor's orders, consults and official diagnostic reports.",
+        "criterion": "Evidence of active status must be sought in the medical record for the last 7 days: transfer documents, physician progress notes, recent history and physical, recent discharge summaries, nursing assessments, nursing care plans, medication sheets, doctor's orders, consults and official diagnostic reports.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-9",
@@ -166,7 +159,18 @@
         "audit_weight": "high"
       },
       {
-        "criterion": "Specific documentation by a physician, nurse practitioner, physician assistant, or clinical nurse specialist that the condition is active is sufficient and requires no additional confirmation.",
+        "criterion": "Listing the diagnosis on the resident's problem list alone is not sufficient to establish active status; the reviewer must find treatment of symptoms, physician orders for medications, or documentation of therapy for functional limitations during the 7-day look-back period.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-14",
+          "quote": "Listing a disease/diagnosis (e.g., arthritis) on the resident's medical record problem list is not sufficient for determining active or inactive status."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated using arthritis as the example, but framed as a general rule for determining active/inactive status in this section."
+      },
+      {
+        "criterion": "Specific documentation by a physician, nurse practitioner, physician assistant, or clinical nurse specialist that the condition is active (found in progress notes, most recent history and physical, transfer notes, hospital discharge summary, etc.) is sufficient and requires no additional confirmation.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-13",
@@ -174,51 +178,28 @@
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Presented under \"Coding Tips\" as an indicator that may assist assessors."
+        "notes": "Presented under \"Coding Tips\" as indicators that may assist assessors."
       },
       {
-        "criterion": "In the absence of specific documentation that the disease is active, evidence of recent onset or acute exacerbation (positive study, test or procedure, hospitalization for acute symptoms, and/or recent change in therapy) in the last 7 days may confirm active disease; sources include radiological reports, hospital discharge summaries, doctor's orders.",
+        "criterion": "In the absence of specific documentation that the disease is active, active status may be confirmed by recent onset or acute exacerbation in the last 7 days; symptoms and abnormal signs indicating ongoing or decompensated disease in the last 7 days; or ongoing therapy with medications or other interventions requiring monitoring for therapeutic efficacy or severe side effects in the last 7 days.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-13",
-          "quote": "Recent onset or acute exacerbation of the disease or condition indicated by a positive study, test or procedure, hospitalization for acute symptoms and/or recent change in therapy in the last 7 days."
+          "quote": "In the absence of specific documentation that a disease is active, the following indicators may be used to confirm active disease:"
         },
         "verified_by_expert": false,
-        "audit_weight": "low",
-        "notes": "Framed as an optional indicator."
+        "audit_weight": "medium",
+        "notes": "Indicator list continues on p. I-14 (ongoing therapy with medications requiring monitoring)."
       },
       {
-        "criterion": "Symptoms and abnormal signs indicating ongoing or decompensated disease in the last 7 days may confirm active disease, but a symptom must be specifically attributed to the disease; sources include radiological reports, nursing assessments and care plans, progress notes.",
-        "source": {
-          "doc": "rai-manual-v1.20.1",
-          "loc": "p. I-13",
-          "quote": "Symptoms and abnormal signs indicating ongoing or decompensated disease in the last 7 days."
-        },
-        "verified_by_expert": false,
-        "audit_weight": "low",
-        "notes": "Framed as an optional indicator."
-      },
-      {
-        "criterion": "Ongoing therapy with medications or other interventions in the last 7 days to manage the condition, where the intervention requires monitoring for therapeutic efficacy or for potentially severe side effects, indicates active disease.",
+        "criterion": "Routine nursing monitoring of medications for adverse effects does not by itself support active disease; that monitoring relates to management of pharmacotherapy, not management or monitoring of the underlying disease.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-14",
-          "quote": "Ongoing therapy with medications or other interventions to manage a condition that requires monitoring for therapeutic efficacy or to monitor potentially severe side effects in the last 7 days."
+          "quote": "It is expected that nurses monitor all medications for adverse effects as part of usual nursing practice. For coding purposes, this monitoring relates to management of pharmacotherapy and not to management or monitoring of the underlying disease."
         },
         "verified_by_expert": false,
-        "audit_weight": "low",
-        "notes": "Framed as an optional indicator; general medication adverse-effect monitoring alone does not count (p. I-14)."
-      },
-      {
-        "criterion": "Documentation must go beyond the problem list: reviewers should check progress notes (including the history and physical) during the 7-day look-back period for treatment of symptoms, doctor's orders for medications, and documentation of physical or other therapy for functional limitations caused by the condition.",
-        "source": {
-          "doc": "rai-manual-v1.20.1",
-          "loc": "p. I-14",
-          "quote": "the reviewer would check progress notes (including the history and physical) during the 7-day look-back period for notation of treatment of symptoms of arthritis, doctor's orders for medications for arthritis, and documentation of physical or other therapy for functional limitations caused by arthritis."
-        },
-        "verified_by_expert": false,
-        "audit_weight": "high",
-        "notes": "Stated for arthritis as an example, but framed as how to determine active status generally."
+        "audit_weight": "high"
       }
     ],
     "state": {}
@@ -226,15 +207,15 @@
   "state_deltas": [],
   "case_mix_relevance": {
     "level": "unknown",
-    "notes": "The supplied pages do not tie I4400 Cerebral Palsy to any payment or case-mix classification. (I0020, a different item, references the Medicare Part A stay, but no payment linkage is stated for I4400.)"
+    "notes": "The pages supplied for I4400 and the I0100–I8000 section do not tie this item to any payment or case-mix classification."
   },
   "conflicts": [
     {
-      "topic": "Two coexisting look-back windows for Section I active diagnoses (60-day identification vs. 7-day active status)",
+      "topic": "Two coexisting look-back windows for this item: 60 days for diagnosis identification and 7 days for active status",
       "positions": [
         {
           "authority": "federal",
-          "claim": "Diagnosis identification (Step 1) uses a 60-day look-back period.",
+          "claim": "Diagnosis identification (Step 1) uses a 60-day look-back period; the physician-documented diagnosis must be in the last 60 days.",
           "source": {
             "doc": "rai-manual-v1.20.1",
             "loc": "p. I-8",
@@ -243,7 +224,7 @@
         },
         {
           "authority": "federal",
-          "claim": "Diagnosis status (active or inactive, Step 2) uses a 7-day look-back period.",
+          "claim": "Diagnosis status (active or inactive, Step 2) uses a 7-day look-back period, and the section is titled \"Active Diagnoses in the Last 7 Days.\"",
           "source": {
             "doc": "rai-manual-v1.20.1",
             "loc": "p. I-8",
@@ -251,16 +232,14 @@
           }
         }
       ],
-      "resolution": "Resolved by the document: both windows apply sequentially — the diagnosis must be documented within 60 days and must be active during the 7-day look-back period (p. I-9 restates both in the Coding Instructions). The assessor's observation window for active status is 7 days."
+      "resolution": "Resolved by the document itself: the manual states both windows apply to different assessment steps — 60 days to identify the physician-documented diagnosis, 7 days to determine whether it is active. lookback_days is recorded as the 7-day active-status observation window."
     }
   ],
   "common_audit_citations": [],
   "not_found": [
     "case_mix_relevance.source",
-    "state_deltas",
     "common_audit_citations",
-    "item-specific coding tips or examples for I4400 beyond the I5100 quadriplegia cross-reference",
-    "how the 7-day look-back is counted relative to the ARD"
+    "state_deltas"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",

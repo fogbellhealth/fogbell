@@ -9,12 +9,12 @@
     "loc": "p. I-8",
     "quote": "Diagnosis status: Active or Inactive (Step 2) is a 7-day look-back period (except for Item I2300 UTI, which does not use the active 7-day look-back period)."
   },
-  "lookback_notes": "The active-diagnosis determination window for I2000 is the 7-day look-back period. A second, separate window is stated for this section: diagnosis identification (Step 1) requires a physician-documented diagnosis in the last 60 days (p. I-8). The 30-day exception stated in the section applies only to Item I2300 UTI, not to I2000. The manual does not state on these pages how the days are counted relative to the ARD.",
+  "lookback_notes": "Two look-back periods apply to this section. The assessor's observation window for determining whether the diagnosis is ACTIVE is 7 days (p. I-8); counted per the general convention as ARD + 6 previous calendar days (rai-manual-v1.20.1, p. 2-17: \"ARD + 6 previous calendar days\"). A separate 60-day window applies to Step 1, diagnosis identification: the disease must have a physician-documented diagnosis in the last 60 days (p. I-8, p. I-9). The 30-day exception stated for the section applies only to Item I2300 UTI, not to I2000.",
   "coding_levels": [
     {
       "code": "checked",
       "label": "I2000 Pneumonia checked (active diagnosis present)",
-      "definition": "Check I2000 when pneumonia has a documented diagnosis in the last 60 days and has a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period.",
+      "definition": "Check the I2000 Pneumonia box when pneumonia is a physician-documented diagnosis in the last 60 days that has a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-9",
@@ -23,30 +23,22 @@
     },
     {
       "code": "not checked",
-      "label": "I2000 Pneumonia not checked (diagnosis absent or inactive)",
-      "definition": "Do not check I2000 when the condition has been resolved, does not affect the resident's current status, or does not drive the resident's plan of care during the 7-day look-back period (inactive diagnosis).",
+      "label": "I2000 Pneumonia not checked (inactive/not present)",
+      "definition": "Leave the box blank when the pneumonia diagnosis is not active — e.g., the resident has recovered completely, with no residual effects and no continued treatment during the 7-day look-back period.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-8",
-        "quote": "Do not include conditions that have been resolved, do not affect the resident’s current status, or do not drive the resident’s plan of care during the 7-day look-back period, as these would be considered inactive diagnoses."
+        "loc": "p. I-17",
+        "quote": "Coding: Pneumonia item (I2000), would not be checked."
       }
     }
   ],
   "federal_coding_rules": [
     {
-      "rule": "I2000, pneumonia, is one of the Infections category items in I0100–I8000, Active Diagnoses in the Last 7 Days.",
+      "rule": "I2000 Pneumonia is one of the checkbox diagnoses in the Infections category of Active Diagnoses in the Last 7 Days; check all that apply.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-11",
-        "quote": "Infections\n• I1700, multidrug resistant organism (MDRO)\n• I2000, pneumonia"
-      }
-    },
-    {
-      "rule": "Check off each active disease; check all that apply.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-9",
-        "quote": "Check off each active disease. Check all that apply."
+        "loc": "p. I-5",
+        "quote": "I2000. Pneumonia"
       }
     },
     {
@@ -58,7 +50,7 @@
       }
     },
     {
-      "rule": "The disease condition requires a physician-documented diagnosis (or by a nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) in the last 60 days.",
+      "rule": "The diagnosis must be physician-documented (or documented by a nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) in the last 60 days.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-8",
@@ -66,39 +58,47 @@
       }
     },
     {
-      "rule": "If a diagnosis/problem list is used as a source, only diagnoses confirmed by the physician should be entered.",
+      "rule": "Do not check the item for conditions that have been resolved, do not affect the resident's current status, or do not drive the resident's plan of care during the 7-day look-back period; these are inactive diagnoses.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-8",
-        "quote": "If a diagnosis/problem list is used, only diagnoses confirmed by the physician should be entered."
+        "quote": "Do not include conditions that have been resolved, do not affect the resident’s current status, or do not drive the resident’s plan of care during the 7-day look-back period, as these would be considered inactive diagnoses."
       }
     },
     {
-      "rule": "Once the diagnosis is identified, it must be determined whether it is active; conditions that have been resolved, do not affect current status, or do not drive the plan of care during the 7-day look-back period are inactive and are not coded.",
+      "rule": "Check off each active disease; check all that apply.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-8",
-        "quote": "Determine whether diagnoses are active: Once a diagnosis is identified, it must be determined if the diagnosis is active."
+        "loc": "p. I-9",
+        "quote": "Check off each active disease. Check all that apply."
       }
     },
     {
-      "rule": "Specific physician (or NP/PA/CNS) documentation that the condition is active is sufficient documentation of active disease and requires no additional confirmation.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-13",
-        "quote": "There may be specific documentation in the medical record by a physician, nurse practitioner, physician assistant, or clinical nurse specialist of active diagnosis."
-      }
-    },
-    {
-      "rule": "In the absence of specific documentation that a disease is active, recent onset or acute exacerbation indicated by a positive study, test or procedure, hospitalization for acute symptoms and/or recent change in therapy in the last 7 days may confirm active disease — e.g., a new diagnosis of pneumonia indicated by chest X-ray.",
+      "rule": "If none of the listed diagnoses (including pneumonia) are active within the past 7 days, code I7900, None of the above active diagnoses.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-13",
-        "quote": "Examples of a recent onset or acute exacerbation include the following: new diagnosis of pneumonia indicated by chest X-ray; hospitalization for fractured hip; or a blood transfusion for a hematocrit of 24."
+        "quote": "I7900, none of the above active diagnoses within the past 7 days"
       }
     },
     {
-      "rule": "Symptoms and abnormal signs indicating ongoing or decompensated disease in the last 7 days may confirm active disease, but a symptom must be specifically attributed to the disease — e.g., a productive cough would confirm a diagnosis of pneumonia only if specifically noted as such by a physician.",
+      "rule": "Specific physician documentation that the condition is active is sufficient to code it active and requires no additional confirmation.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-13",
+        "quote": "The physician may specifically indicate that a condition is active. Specific documentation may be found in progress notes, most recent history and physical, transfer notes, hospital discharge summary, etc."
+      }
+    },
+    {
+      "rule": "In the absence of specific documentation that the disease is active, recent onset or acute exacerbation indicated by a positive study, test or procedure, hospitalization for acute symptoms, and/or recent change in therapy in the last 7 days may confirm active disease (e.g., new diagnosis of pneumonia indicated by chest X-ray).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-13",
+        "quote": "Recent onset or acute exacerbation of the disease or condition indicated by a positive study, test or procedure, hospitalization for acute symptoms and/or recent change in therapy in the last 7 days. Examples of a recent onset or acute exacerbation include the following: new diagnosis of pneumonia indicated by chest X-ray"
+      }
+    },
+    {
+      "rule": "Symptoms and abnormal signs indicating ongoing or decompensated disease in the last 7 days may confirm active disease, but a symptom must be specifically attributed to the disease by a physician (e.g., a productive cough would confirm a diagnosis of pneumonia if specifically noted as such by a physician).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-13",
@@ -106,7 +106,7 @@
       }
     },
     {
-      "rule": "Listing the disease/diagnosis on the resident's medical record problem list is not sufficient for determining active or inactive status.",
+      "rule": "Listing the diagnosis on the resident's medical record problem list is not sufficient for determining active or inactive status.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-14",
@@ -114,7 +114,7 @@
       }
     },
     {
-      "rule": "Ongoing therapy with medications or other interventions to manage the condition that requires monitoring for therapeutic efficacy or for potentially severe side effects in the last 7 days indicates active disease.",
+      "rule": "Ongoing therapy with medications or other interventions in the last 7 days to manage the condition, requiring monitoring for therapeutic efficacy or for potentially severe side effects, indicates active disease.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-14",
@@ -122,7 +122,7 @@
       }
     },
     {
-      "rule": "Routine nursing monitoring of medications for adverse effects, as part of usual nursing practice, relates to management of pharmacotherapy and not to management or monitoring of the underlying disease, and therefore does not by itself establish active disease.",
+      "rule": "Routine nursing monitoring of medications for adverse effects does not by itself establish active disease; for coding purposes that monitoring relates to management of pharmacotherapy, not management or monitoring of the underlying disease.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-14",
@@ -130,23 +130,15 @@
       }
     },
     {
-      "rule": "Pneumonia that resolved with complete recovery, no residual effects, and no continued treatment during the 7-day look-back period is inactive and I2000 would not be checked.",
+      "rule": "If a disease or condition is not specifically listed among the checkbox items, enter the diagnosis and ICD code in item I8000, Additional active diagnosis.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-17",
-        "quote": "Coding: Pneumonia item (I2000), would not be checked."
+        "loc": "p. I-9",
+        "quote": "If a disease or condition is not specifically listed, enter the diagnosis and ICD code in item I8000, Additional active diagnosis."
       }
     },
     {
-      "rule": "If the primary medical condition coded in I0020B is pneumonia, it must also be included in items I0100–I8000: Active Diagnoses in the Last 7 Days.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-2",
-        "quote": "Include the primary medical condition coded in item I0020B in items I0100–I8000: Active Diagnoses in the Last 7 Days."
-      }
-    },
-    {
-      "rule": "If an individual is receiving aftercare following a hospitalization and a Z code is assigned, another diagnosis for the related primary medical condition should be checked in items I0100–I7900 or entered in I8000.",
+      "rule": "If the resident is receiving aftercare following hospitalization, a Z code may be assigned; when Z codes are used, another diagnosis for the related primary medical condition should be checked in items I0100–I7900 or entered in I8000.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. I-9",
@@ -154,18 +146,18 @@
       }
     },
     {
-      "rule": "If none of the listed active diagnoses apply within the last 7 days, check I7900, None of the above active diagnoses.",
+      "rule": "If pneumonia is the primary medical condition coded in I0020B, it must also be included in items I0100–I8000, Active Diagnoses in the Last 7 Days.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. I-13",
-        "quote": "I7900, none of the above active diagnoses within the past 7 days"
+        "loc": "p. I-2",
+        "quote": "Include the primary medical condition coded in item I0020B in items I0100–I8000: Active Diagnoses in the Last 7 Days."
       }
     }
   ],
   "supportive_documentation": {
     "federal": [
       {
-        "criterion": "A physician-documented diagnosis of pneumonia (or documented by a nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) within the last 60 days.",
+        "criterion": "Physician-documented diagnosis of pneumonia (or by NP, PA, or clinical nurse specialist if allowable under state licensure laws) within the last 60 days, found in the medical record.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-8",
@@ -176,14 +168,14 @@
         "notes": "Step 1 of the two-step assessment process."
       },
       {
-        "criterion": "Medical record sources acceptable for physician diagnoses: progress notes, the most recent history and physical, transfer documents, discharge summaries, diagnosis/problem list, and other resources as available.",
+        "criterion": "Acceptable medical record sources for the physician diagnosis: progress notes, the most recent history and physical, transfer documents, discharge summaries, diagnosis/problem list, and other resources as available; if a diagnosis/problem list is used, only diagnoses confirmed by the physician should be entered.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-8",
-          "quote": "Medical record sources for physician diagnoses include progress notes, the most recent history and physical, transfer documents, discharge summaries, diagnosis/ problem list, and other resources as available."
+          "quote": "Medical record sources for physician diagnoses include progress notes, the most recent history and physical, transfer documents, discharge summaries, diagnosis/ problem list, and other resources as available. If a diagnosis/problem list is used, only diagnoses confirmed by the physician should be entered."
         },
         "verified_by_expert": false,
-        "audit_weight": "medium"
+        "audit_weight": "high"
       },
       {
         "criterion": "Diagnoses communicated verbally must be documented in the medical record by the physician to ensure follow-up.",
@@ -206,7 +198,7 @@
         "audit_weight": "high"
       },
       {
-        "criterion": "Documentation in the last 7 days establishing active status, reviewed in: transfer documents, physician progress notes, recent history and physical, recent discharge summaries, nursing assessments, nursing care plans, medication sheets, doctor's orders, consults and official diagnostic reports, and other sources as available.",
+        "criterion": "Evidence in the last 7 days from these medical record sources supporting active status: transfer documents, physician progress notes, recent history and physical, recent discharge summaries, nursing assessments, nursing care plans, medication sheets, doctor's orders, consults and official diagnostic reports.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-9",
@@ -216,36 +208,25 @@
         "audit_weight": "high"
       },
       {
-        "criterion": "Where active status is not specifically documented, evidence of recent onset/acute exacerbation (e.g., chest X-ray establishing a new diagnosis of pneumonia), hospitalization for acute symptoms, or recent change in therapy in the last 7 days; sources may include radiological reports, hospital discharge summaries, doctor's orders.",
+        "criterion": "Radiological report (e.g., chest X-ray) documenting new onset of pneumonia may be used as a source to confirm active disease in the absence of specific documentation of activity.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-13",
-          "quote": "Recent onset or acute exacerbation of the disease or condition indicated by a positive study, test or procedure, hospitalization for acute symptoms and/or recent change in therapy in the last 7 days."
+          "quote": "new diagnosis of pneumonia indicated by chest X-ray; hospitalization for fractured hip; or a blood transfusion for a hematocrit of 24. Sources may include radiological reports, hospital discharge summaries, doctor’s orders, etc."
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Framed as an indicator that 'may be used' to confirm active disease."
+        "notes": "Framed as an indicator that may be used, not as required documentation."
       },
       {
-        "criterion": "Where signs/symptoms are relied upon, the symptom must be specifically attributed to pneumonia by a physician (e.g., productive cough noted as such); sources may include radiological reports, nursing assessments and care plans, progress notes.",
+        "criterion": "Physician notation specifically attributing a symptom (e.g., productive cough) to pneumonia, in radiological reports, nursing assessments and care plans, or progress notes.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. I-13",
-          "quote": "Therefore, a symptom must be specifically attributed to the disease."
+          "quote": "Sometimes signs and symptoms can be nonspecific and could be caused by several disease processes. Therefore, a symptom must be specifically attributed to the disease."
         },
         "verified_by_expert": false,
-        "audit_weight": "high"
-      },
-      {
-        "criterion": "A problem-list entry alone is not adequate documentation; the reviewer must find treatment of symptoms, doctor's orders for medications, or therapy documentation during the 7-day look-back period.",
-        "source": {
-          "doc": "rai-manual-v1.20.1",
-          "loc": "p. I-14",
-          "quote": "To determine if arthritis, for example, is an “active” diagnosis, the reviewer would check progress notes (including the history and physical) during the 7-day look-back period for notation of treatment of symptoms of arthritis, doctor’s orders for medications for arthritis, and documentation of physical or other therapy for functional limitations caused by arthritis."
-        },
-        "verified_by_expert": false,
-        "audit_weight": "high",
-        "notes": "Stated using arthritis as the example, but framed as a general indicator for determining active status in this section."
+        "audit_weight": "medium"
       }
     ],
     "state": {}
@@ -253,15 +234,15 @@
   "state_deltas": [],
   "case_mix_relevance": {
     "level": "unknown",
-    "notes": "The supplied pages do not tie I2000 to any payment or case-mix classification. (Item I0020, a different item, references the Medicare Part A stay, but no such statement is made for I2000.)"
+    "notes": "The supplied Section I pages do not tie item I2000 to a payment or case-mix classification. (Item I0020 references the Medicare Part A stay, but that is a separate item and does not state a case-mix use for I2000.)"
   },
   "conflicts": [
     {
-      "topic": "Two look-back windows apply to Section I items including I2000 (60-day diagnosis identification vs. 7-day active-status determination)",
+      "topic": "Coexisting look-back windows for Section I active diagnoses (60-day identification vs. 7-day active status)",
       "positions": [
         {
           "authority": "federal",
-          "claim": "Diagnosis identification (Step 1) uses a 60-day look-back period; the diagnosis must be physician-documented in the last 60 days.",
+          "claim": "Diagnosis identification (Step 1) uses a 60-day look-back period.",
           "source": {
             "doc": "rai-manual-v1.20.1",
             "loc": "p. I-8",
@@ -278,7 +259,7 @@
           }
         }
       ],
-      "resolution": "Resolved by the document itself: the two windows are sequential steps of one process — the diagnosis must be documented within 60 days and must be active during the 7-day look-back period (p. I-9 combines both). The 7-day window is the assessor's observation window recorded in lookback_days."
+      "resolution": "Resolved by the document itself: the two windows are complementary steps, not competing rules — the diagnosis must be documented within 60 days and must be active during the 7-day look-back period (p. I-9). lookback_days is recorded as the 7-day observation window for active status."
     }
   ],
   "common_audit_citations": [],

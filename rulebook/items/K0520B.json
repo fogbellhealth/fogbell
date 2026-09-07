@@ -1,6 +1,6 @@
 {
   "item_id": "K0520B",
-  "item_name": "Nutritional Approaches — Feeding tube (nasogastric or abdominal (PEG))",
+  "item_name": "Nutritional Approaches — Feeding tube (e.g., nasogastric or abdominal (PEG))",
   "section": "K",
   "instrument": "MDS-3.0",
   "lookback_days": 7,
@@ -9,62 +9,70 @@
     "loc": "p. K-12",
     "quote": "Check all nutritional approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period."
   },
-  "lookback_notes": "Column 2 and Column 3 use a 7-day look-back period (Column 2 = performed prior to admission/entry or reentry and within the last 7 days; Column 3 = performed after admission/entry or reentry and within the last 7 days). Other windows apply to the other columns: Column 1 covers the first 3 days of the SNF PPS Stay (item table: \"Assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B\") and Column 4 covers the last 3 days of the SNF PPS Stay (\"Assessment period is the last 3 days of the SNF PPS Stay ending on A2400C\"). The manual does not state how the 7-day window is counted relative to the ARD for this item.",
+  "lookback_notes": "The item's own pages state a 7-day look-back period for Column 2 (performed while NOT a resident, prior to admission/entry or reentry) and Column 3 (performed while a resident, after admission/entry or reentry); this 7-day window is the assessor's observation window and is consistent with the general convention that the standard MDS 3.0 look-back is 7 days (p. 3-3) counted as ARD plus the 6 previous calendar days (p. 2-17). Two additional, column-specific windows are stated on the item's pages: Column 1 covers days 1 through 3 of the SNF PPS Stay starting with A2400B, and Column 4 covers the last 3 days of the SNF PPS Stay ending on A2400C. Column 2 is left blank if the resident was admitted/entered or reentered more than 7 days ago.",
   "coding_levels": [
     {
-      "code": "B (column 1, On Admission)",
-      "label": "Feeding tube performed during the first 3 days of the SNF PPS Stay",
-      "definition": "Check if a feeding tube (e.g., nasogastric or abdominal (PEG)) was performed during days 1 through 3 of the SNF PPS Stay starting with A2400B.",
+      "code": "1",
+      "label": "On Admission",
+      "definition": "Assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B; check all nutritional approaches performed during the first 3 days of the SNF PPS Stay.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. K-12",
-        "quote": "Check all nutritional approaches performed during the first 3 days of the SNF PPS Stay."
+        "loc": "p. K-11",
+        "quote": "Assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B"
       }
     },
     {
-      "code": "B (column 2, While Not a Resident)",
-      "label": "Feeding tube performed while NOT a resident, within the last 7 days",
-      "definition": "Check if performed prior to admission/entry or reentry to the facility and within the 7-day look-back period; leave blank if the resident was admitted/entered or reentered more than 7 days ago.",
+      "code": "2",
+      "label": "While Not a Resident",
+      "definition": "Performed while NOT a resident of this facility and within the last 7 days; only check column 2 if the resident entered (admission or reentry) in the last 7 days.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. K-12",
-        "quote": "Check all nutritional approaches performed prior to admission/entry or reentry to the facility and within the 7-day look-back period. Leave Column 2 blank if the resident was admitted/entered or reentered the facility more than 7 days ago."
+        "loc": "p. K-11",
+        "quote": "Performed while NOT a resident of this facility and within the last 7 days"
       }
     },
     {
-      "code": "B (column 3, While a Resident)",
-      "label": "Feeding tube performed while a resident, within the last 7 days",
-      "definition": "Check if performed after admission/entry or reentry to the facility and within the 7-day look-back period.",
+      "code": "3",
+      "label": "While a Resident",
+      "definition": "Performed while a resident of this facility and within the last 7 days.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. K-12",
-        "quote": "Check all nutritional approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period."
+        "loc": "p. K-11",
+        "quote": "Performed while a resident of this facility and within the last 7 days"
       }
     },
     {
-      "code": "B (column 4, At Discharge)",
-      "label": "Feeding tube performed within the last 3 days of the SNF PPS Stay",
-      "definition": "Check if performed within the last 3 days of the SNF PPS Stay.",
+      "code": "4",
+      "label": "At Discharge",
+      "definition": "Assessment period is the last 3 days of the SNF PPS Stay ending on A2400C.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. K-12",
-        "quote": "Check all nutritional approaches performed within the last 3 days of the SNF PPS Stay."
+        "loc": "p. K-11",
+        "quote": "Assessment period is the last 3 days of the SNF PPS Stay ending on A2400C"
       }
     },
     {
-      "code": "Z",
-      "label": "None of the above",
-      "definition": "If none of the listed nutritional approaches apply, check K0520Z, None of the above.",
+      "code": "checked",
+      "label": "Feeding tube – nasogastric or abdominal (PEG)",
+      "definition": "Check the applicable column(s) when a feeding tube used to deliver nutritive substances and/or hydration was present during that column's assessment period.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-12",
-        "quote": "Check all that apply. If none apply, check K0520Z, None of the above"
+        "quote": "K0520B, feeding tube – nasogastric or abdominal (PEG)."
       }
     }
   ],
   "federal_coding_rules": [
     {
-      "rule": "K0520B is the feeding tube item — nasogastric or abdominal (PEG); check all that apply across the applicable columns.",
+      "rule": "Check all that apply for K0520; if none of the nutritional approaches apply, check K0520Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Check all that apply. If none apply, check K0520Z, None of the above"
+      }
+    },
+    {
+      "rule": "Code K0520B for feeding tube – nasogastric or abdominal (PEG).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-12",
@@ -80,15 +88,39 @@
       }
     },
     {
-      "rule": "Review the medical record to determine if any of the listed nutritional approaches were performed during the look-back period; if none apply, check K0520Z.",
+      "rule": "Column 1 (On Admission): check the approach if performed during the first 3 days of the SNF PPS Stay.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-12",
-        "quote": "Review the medical record to determine if any of the listed nutritional approaches were performed during the look-back period."
+        "quote": "Check all nutritional approaches performed during the first 3 days of the SNF PPS Stay."
       }
     },
     {
-      "rule": "When completing the Interim Payment Assessment (IPA), completion of items K0520A, K0520B, and K0520Z is required.",
+      "rule": "Column 2 (While Not a Resident): check the approach if performed prior to admission/entry or reentry to the facility and within the 7-day look-back period; leave Column 2 blank if the resident was admitted/entered or reentered the facility more than 7 days ago.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Check all nutritional approaches performed prior to admission/entry or reentry to the facility and within the 7-day look-back period. Leave Column 2 blank if the resident was admitted/entered or reentered the facility more than 7 days ago."
+      }
+    },
+    {
+      "rule": "Column 3 (While a Resident): check the approach if performed after admission/entry or reentry to the facility and within the 7-day look-back period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Check all nutritional approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period."
+      }
+    },
+    {
+      "rule": "Column 4 (At Discharge): check the approach if performed within the last 3 days of the SNF PPS Stay.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Check all nutritional approaches performed within the last 3 days of the SNF PPS Stay."
+      }
+    },
+    {
+      "rule": "When completing the Interim Payment Assessment (IPA), completion of K0520A, K0520B, and K0520Z is required.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-12",
@@ -96,31 +128,23 @@
       }
     },
     {
-      "rule": "Column 2 is left blank if the resident was admitted/entered or reentered the facility more than 7 days ago.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. K-12",
-        "quote": "Leave Column 2 blank if the resident was admitted/entered or reentered the facility more than 7 days ago."
-      }
-    },
-    {
-      "rule": "A feeding tube is the presence of any type of tube that can deliver food/nutritional substances/fluids directly into the gastrointestinal system (e.g., nasogastric, gastrostomy, jejunostomy, PEG tubes).",
+      "rule": "A feeding tube is the presence of any type of tube that can deliver food/nutritional substances/fluids directly into the gastrointestinal system; examples include but are not limited to nasogastric tubes, gastrostomy tubes, jejunostomy tubes, and percutaneous endoscopic gastrostomy (PEG) tubes.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-11",
-        "quote": "FEEDING TUBE Presence of any type of tube that can deliver food/ nutritional substances/ fluids directly into the gastrointestinal system."
+        "quote": "Presence of any type of tube that can deliver food/ nutritional substances/ fluids directly into the gastrointestinal system."
       }
     },
     {
-      "rule": "Enteral feeding formulas should not be coded as a mechanically altered diet; they should only be coded as K0520D, Therapeutic Diet, when the enteral formula is altered to manage problematic health conditions.",
+      "rule": "Enteral feeding formulas should not be coded as a mechanically altered diet, and should only be coded as K0520D, Therapeutic Diet, when the enteral formula is altered to manage problematic health conditions.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-13",
-        "quote": "Enteral feeding formulas: — Should not be coded as a mechanically altered diet."
+        "quote": "Should only be coded as K0520D, Therapeutic Diet when the enteral formula is altered to manage problematic health conditions, e.g. enteral formulas specific to residents with diabetes."
       }
     },
     {
-      "rule": "Complete K0710 only if Column 2 and/or Column 3 are checked for K0520A and/or K0520B.",
+      "rule": "Skip pattern: complete K0710 only if Column 2 and/or Column 3 are checked for K0520A and/or K0520B.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-15",
@@ -131,7 +155,7 @@
   "supportive_documentation": {
     "federal": [
       {
-        "criterion": "Medical record review is the assessment source for determining whether the nutritional approach (feeding tube) was performed during the look-back period.",
+        "criterion": "Review the medical record to determine if any of the listed nutritional approaches (including feeding tube) were performed during the look-back period.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. K-12",
@@ -139,7 +163,17 @@
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Stated as the step for assessment for K0520."
+        "notes": "Stated as the assessment step for K0520."
+      },
+      {
+        "criterion": "The medical record must show the feeding tube was used to deliver nutritive substances and/or hydration during the assessment period.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. K-13",
+          "quote": "Only feeding tubes that are used to deliver nutritive substances and/or hydration during the assessment period are coded in K0520B."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
       }
     ],
     "state": {}
@@ -147,7 +181,7 @@
   "state_deltas": [],
   "case_mix_relevance": {
     "level": "medium",
-    "notes": "The manual ties K0520B columns to the SNF PPS Stay assessment periods and requires K0520B completion on the Interim Payment Assessment (IPA), a payment assessment; no explicit case-mix group assignment is stated on these pages.",
+    "notes": "The item's pages tie K0520B to SNF PPS assessment windows (SNF PPS Stay columns 1 and 4) and explicitly require completion of K0520B on the Interim Payment Assessment (IPA), a payment assessment. The pages do not otherwise describe a case-mix classification calculation for this item.",
     "source": {
       "doc": "rai-manual-v1.20.1",
       "loc": "p. K-12",
@@ -156,7 +190,7 @@
   },
   "conflicts": [
     {
-      "topic": "Multiple observation windows coexist for K0520B columns (7-day look-back vs. 3-day SNF PPS Stay periods)",
+      "topic": "Coexistence of multiple stated observation windows for K0520 columns (7-day look-back vs. 3-day SNF PPS Stay windows)",
       "positions": [
         {
           "authority": "federal",
@@ -169,22 +203,21 @@
         },
         {
           "authority": "federal",
-          "claim": "Column 1 uses the first 3 days of the SNF PPS Stay and Column 4 uses the last 3 days of the SNF PPS Stay.",
+          "claim": "Column 1 uses days 1 through 3 of the SNF PPS Stay and Column 4 uses the last 3 days of the SNF PPS Stay.",
           "source": {
             "doc": "rai-manual-v1.20.1",
             "loc": "p. K-12",
-            "quote": "Check all nutritional approaches performed during the first 3 days of the SNF PPS Stay."
+            "quote": "Check all nutritional approaches performed within the last 3 days of the SNF PPS Stay."
           }
         }
       ],
-      "resolution": "Not a contradiction: the document assigns different windows to different columns of the same item. Recorded here because more than one window applies; lookback_days reflects the 7-day column 2/3 window."
+      "resolution": "Resolved by the document itself: each column carries its own stated assessment period (Column 1 = first 3 days of the SNF PPS Stay; Columns 2 and 3 = 7-day look-back; Column 4 = last 3 days of the SNF PPS Stay). The 7-day look-back is recorded as the item's observation window."
     }
   ],
   "common_audit_citations": [],
   "not_found": [
     "common_audit_citations",
-    "state_deltas",
-    "supportive_documentation.state"
+    "state_deltas"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",

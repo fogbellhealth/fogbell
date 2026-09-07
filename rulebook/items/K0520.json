@@ -9,12 +9,12 @@
     "loc": "p. K-12",
     "quote": "Check all nutritional approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period."
   },
-  "lookback_notes": "The assessor's observation/look-back window for Columns 2 and 3 is 7 days (Column 2 = performed while NOT a resident and within the last 7 days; Column 3 = performed while a resident and within the last 7 days). The document states additional, different windows for the other columns: Column 1 assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B (\"Check all nutritional approaches performed during the first 3 days of the SNF PPS Stay\", p. K-12), and Column 4 assessment period is the last 3 days of the SNF PPS Stay ending on A2400C (\"Check all nutritional approaches performed within the last 3 days of the SNF PPS Stay\", p. K-12). Column 2 is left blank if the resident was admitted/entered or reentered more than 7 days ago. The document does not state how the 7 days are counted relative to the ARD for this item.",
+  "lookback_notes": "Columns 2 and 3 use a 7-day look-back period (Column 2 = performed prior to admission/entry or reentry and within the last 7 days; Column 3 = performed after admission/entry or reentry and within the last 7 days). Column 1 uses a different window: the assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B. Column 4 uses the last 3 days of the SNF PPS Stay ending on A2400C. Under the general convention, the ARD is the last day of the observation period and counting is ARD + 6 previous calendar days for a 7-day window (rai-manual-v1.20.1, p. 2-21).",
   "coding_levels": [
     {
       "code": "A",
       "label": "Parenteral/IV feeding",
-      "definition": "PARENTERAL/IV FEEDING: Introduction of a nutritive substance into the body by means other than the intestinal tract (e.g., subcutaneous, intravenous).",
+      "definition": "Introduction of a nutritive substance into the body by means other than the intestinal tract (e.g., subcutaneous, intravenous).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-11",
@@ -23,8 +23,8 @@
     },
     {
       "code": "B",
-      "label": "Feeding tube (e.g., nasogastric or abdominal (PEG))",
-      "definition": "FEEDING TUBE: Presence of any type of tube that can deliver food/ nutritional substances/ fluids directly into the gastrointestinal system. Examples include, but are not limited to, nasogastric tubes, gastrostomy tubes, jejunostomy tubes, percutaneous endoscopic gastrostomy (PEG) tubes.",
+      "label": "Feeding tube – nasogastric or abdominal (PEG)",
+      "definition": "Presence of any type of tube that can deliver food/nutritional substances/fluids directly into the gastrointestinal system. Examples include, but are not limited to, nasogastric tubes, gastrostomy tubes, jejunostomy tubes, percutaneous endoscopic gastrostomy (PEG) tubes.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-11",
@@ -34,31 +34,31 @@
     {
       "code": "C",
       "label": "Mechanically altered diet",
-      "definition": "Require change in texture of food or liquids (e.g., pureed food, thickened liquids). MECHANICALLY ALTERED DIET: A diet specifically prepared to alter the texture or consistency of food to facilitate oral intake. Examples include soft solids, puréed foods, ground meat, and thickened liquids.",
+      "definition": "Require change in texture of food or liquids (e.g., pureed food, thickened liquids). A diet specifically prepared to alter the texture or consistency of food to facilitate oral intake.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-12",
-        "quote": "MECHANICALLY ALTERED DIET A diet specifically prepared to alter the texture or consistency of food to facilitate oral intake."
+        "quote": "K0520C, mechanically altered diet – require change in texture of food or liquids (e.g., pureed food, thickened liquids)."
       }
     },
     {
       "code": "D",
-      "label": "Therapeutic diet (e.g., low salt, diabetic, low cholesterol)",
-      "definition": "THERAPEUTIC DIET: A therapeutic diet is a diet intervention prescribed by a physician or other authorized nonphysician practitioner that provides food or nutrients via oral, enteral, and parenteral routes as part of treatment of disease or clinical condition, to modify, eliminate, decrease, or increase identified micro- and macro-nutrients in the diet (Academy of Nutrition and Dietetics, 2020).",
+      "label": "Therapeutic diet",
+      "definition": "A diet intervention prescribed by a physician or other authorized nonphysician practitioner that provides food or nutrients via oral, enteral, and parenteral routes as part of treatment of disease or clinical condition, to modify, eliminate, decrease, or increase identified micro- and macro-nutrients in the diet (Academy of Nutrition and Dietetics, 2020).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-12",
-        "quote": "A therapeutic diet is a diet intervention prescribed by a physician or other authorized nonphysician practitioner that provides food or nutrients via oral, enteral, and parenteral routes as part of treatment of disease or clinical condition"
+        "quote": "THERAPEUTIC DIET A therapeutic diet is a diet intervention prescribed by a physician or other authorized nonphysician practitioner that provides food or nutrients via oral, enteral, and parenteral routes as part of treatment of disease or clinical condition"
       }
     },
     {
       "code": "Z",
       "label": "None of the above",
-      "definition": "Checked if none of the listed nutritional approaches apply.",
+      "definition": "Checked when none of the listed nutritional approaches apply.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-12",
-        "quote": "Check all that apply. If none apply, check K0520Z, None of the above"
+        "quote": "If none apply, check K0520Z. None of the above."
       }
     },
     {
@@ -74,11 +74,11 @@
     {
       "code": "Column 2",
       "label": "While Not a Resident",
-      "definition": "Performed while NOT a resident of this facility and within the last 7 days. Only check column 2 if resident entered (admission or reentry) IN THE LAST 7 DAYS.",
+      "definition": "Performed while NOT a resident of this facility and within the last 7 days. Only check column 2 if resident entered (admission or reentry) IN THE LAST 7 DAYS. If resident last entered 7 or more days ago, leave column 2 blank.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-11",
-        "quote": "Only check column 2 if resident entered (admission or reentry) IN THE LAST 7 DAYS. If resident last entered 7 or more days ago, leave column 2 blank."
+        "quote": "Performed while NOT a resident of this facility and within the last 7 days"
       }
     },
     {
@@ -104,7 +104,15 @@
   ],
   "federal_coding_rules": [
     {
-      "rule": "Check all of the listed nutritional approaches that apply; if none apply, check K0520Z, None of the above.",
+      "rule": "Review the medical record to determine if any of the listed nutritional approaches were performed during the look-back period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-12",
+        "quote": "Review the medical record to determine if any of the listed nutritional approaches were performed during the look-back period."
+      }
+    },
+    {
+      "rule": "Check all that apply; if none apply, check K0520Z, None of the above.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-12",
@@ -112,7 +120,7 @@
       }
     },
     {
-      "rule": "Column 1 (On Admission): check all nutritional approaches performed during the first 3 days of the SNF PPS Stay.",
+      "rule": "Column 1: check all nutritional approaches performed during the first 3 days of the SNF PPS Stay.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-12",
@@ -120,7 +128,7 @@
       }
     },
     {
-      "rule": "Column 2 (While Not a Resident): check all nutritional approaches performed prior to admission/entry or reentry to the facility and within the 7-day look-back period; leave Column 2 blank if the resident was admitted/entered or reentered the facility more than 7 days ago.",
+      "rule": "Column 2: check all nutritional approaches performed prior to admission/entry or reentry to the facility and within the 7-day look-back period. Leave Column 2 blank if the resident was admitted/entered or reentered the facility more than 7 days ago.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-12",
@@ -128,7 +136,7 @@
       }
     },
     {
-      "rule": "When completing the Interim Payment Assessment (IPA), completion of items K0520A, K0520B, and K0520Z is required.",
+      "rule": "When completing the Interim Payment Assessment (IPA), the completion of items K0520A, K0520B, and K0520Z is required.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-12",
@@ -136,7 +144,7 @@
       }
     },
     {
-      "rule": "Column 3 (While a Resident): check all nutritional approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period.",
+      "rule": "Column 3: check all nutritional approaches performed after admission/entry or reentry to the facility and within the 7-day look-back period.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-12",
@@ -144,7 +152,7 @@
       }
     },
     {
-      "rule": "Column 4 (At Discharge): check all nutritional approaches performed within the last 3 days of the SNF PPS Stay.",
+      "rule": "Column 4: check all nutritional approaches performed within the last 3 days of the SNF PPS Stay.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-12",
@@ -160,15 +168,15 @@
       }
     },
     {
-      "rule": "Fluids that may be included in K0520A (when supporting documentation reflects the need for additional fluid intake specifically addressing a nutrition or hydration need): IV fluids or hyperalimentation including total parenteral nutrition (TPN) administered continuously or intermittently; IV fluids running at KVO (Keep Vein Open); IV fluids contained in IV Piggybacks; hypodermoclysis and subcutaneous ports in hydration therapy.",
+      "rule": "For K0520A, the following fluids may be included when there is supporting documentation reflecting the need for additional fluid intake specifically addressing a nutrition or hydration need: IV fluids or hyperalimentation including TPN administered continuously or intermittently; IV fluids running at KVO; IV fluids contained in IV Piggybacks; hypodermoclysis and subcutaneous ports in hydration therapy.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-13",
-        "quote": "IV fluids or hyperalimentation, including total parenteral nutrition (TPN), administered continuously or intermittently"
+        "quote": "Parenteral/IV feeding—The following fluids may be included when there is supporting documentation that reflects the need for additional fluid intake specifically addressing a nutrition or hydration need."
       }
     },
     {
-      "rule": "IV fluids can be coded in K0520A if needed to prevent dehydration when the additional fluid intake is specifically needed for nutrition and/or hydration; prevention of dehydration should be clinically indicated and supporting documentation should be provided in the medical record.",
+      "rule": "IV fluids can be coded in K0520A if needed to prevent dehydration if the additional fluid intake is specifically needed for nutrition and/or hydration; prevention of dehydration should be clinically indicated and supporting documentation should be provided in the medical record.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-13",
@@ -176,7 +184,7 @@
       }
     },
     {
-      "rule": "Do NOT code in K0520A: IV medications (code in O0110H); IV fluids used to reconstitute and/or dilute medications for IV administration; IV fluids administered as a routine part of an operative or diagnostic procedure or recovery room stay; IV fluids administered solely as flushes; parenteral/IV fluids administered in conjunction with chemotherapy or dialysis.",
+      "rule": "Do not code in K0520A: IV medications (code in O0110H); IV fluids used to reconstitute and/or dilute medications for IV administration; IV fluids administered as a routine part of an operative or diagnostic procedure or recovery room stay; IV fluids administered solely as flushes; parenteral/IV fluids administered in conjunction with chemotherapy or dialysis.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-13",
@@ -184,11 +192,11 @@
       }
     },
     {
-      "rule": "Enteral feeding formulas should not be coded as a mechanically altered diet, and should only be coded as K0520D, Therapeutic Diet when the enteral formula is altered to manage problematic health conditions (e.g., enteral formulas specific to residents with diabetes).",
+      "rule": "Enteral feeding formulas should not be coded as a mechanically altered diet, and should only be coded as K0520D, Therapeutic Diet, when the enteral formula is altered to manage problematic health conditions.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-13",
-        "quote": "Should only be coded as K0520D, Therapeutic Diet when the enteral formula is altered to manage problematic health conditions, e.g. enteral formulas specific to residents with diabetes."
+        "quote": "Enteral feeding formulas: — Should not be coded as a mechanically altered diet. — Should only be coded as K0520D, Therapeutic Diet when the enteral formula is altered to manage problematic health conditions"
       }
     },
     {
@@ -200,11 +208,27 @@
       }
     },
     {
-      "rule": "Do not capture a trial of a mechanically altered diet (e.g., pureed food, thickened liquids) during the observation period in K0520C.",
+      "rule": "Assessors should not capture a trial of a mechanically altered diet (e.g., pureed food, thickened liquids) during the observation period in K0520C.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. K-14",
         "quote": "Assessors should not capture a trial of a mechanically altered diet (e.g., pureed food, thickened liquids) during the observation period in K0520C, mechanically altered diet."
+      }
+    },
+    {
+      "rule": "Supplements (whether given with, in-between, or instead of meals) are only coded in K0520D, Therapeutic Diet, when they are being administered as part of a therapeutic diet to manage problematic health conditions; a nutritional supplement alone does not constitute a therapeutic diet.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-14",
+        "quote": "supplements (whether given with, in-between, or instead of meals) are only coded in K0520D, Therapeutic Diet when they are being administered as part of a therapeutic diet to manage problematic health conditions"
+      }
+    },
+    {
+      "rule": "Food elimination diets related to food allergies (e.g., peanut allergy) can be coded as a therapeutic diet.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. K-14",
+        "quote": "Food elimination diets related to food allergies (e.g. peanut allergy) can be coded as a therapeutic diet."
       }
     },
     {
@@ -214,65 +238,23 @@
         "loc": "p. K-12",
         "quote": "A mechanically altered diet should not automatically be considered a therapeutic diet."
       }
-    },
-    {
-      "rule": "Therapeutic diets are determined by why the diet is required, not by the content of what is provided or when it is served.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. K-14",
-        "quote": "Therapeutic diets are not defined by the content of what is provided or when it is served, but why the diet is required."
-      }
-    },
-    {
-      "rule": "Nutritional supplements (whether given with, in-between, or instead of meals) are only coded in K0520D, Therapeutic Diet, when they are being administered as part of a therapeutic diet to manage problematic health conditions; a supplement alone does not constitute a therapeutic diet.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. K-14",
-        "quote": "supplements (whether given with, in-between, or instead of meals) are only coded in K0520D, Therapeutic Diet when they are being administered as part of a therapeutic diet to manage problematic health conditions (e.g. supplement for protein-calorie malnutrition)."
-      }
-    },
-    {
-      "rule": "Food elimination diets related to food allergies (e.g., peanut allergy) can be coded as a therapeutic diet in K0520D.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. K-14",
-        "quote": "Food elimination diets related to food allergies (e.g. peanut allergy) can be coded as a therapeutic diet."
-      }
-    },
-    {
-      "rule": "K0710 (Percent Intake by Artificial Route) is completed only if Column 2 and/or Column 3 are checked for K0520A and/or K0520B.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. K-15",
-        "quote": "Complete K0710 only if Column 2 and/or Column 3 are checked for K0520A and/or K0520B."
-      }
     }
   ],
   "supportive_documentation": {
     "federal": [
       {
-        "criterion": "Review the medical record to determine if any of the listed nutritional approaches were performed during the look-back period.",
-        "source": {
-          "doc": "rai-manual-v1.20.1",
-          "loc": "p. K-12",
-          "quote": "Review the medical record to determine if any of the listed nutritional approaches were performed during the look-back period."
-        },
-        "verified_by_expert": false,
-        "audit_weight": "high",
-        "notes": "Stated assessment step for the item."
-      },
-      {
-        "criterion": "For fluids coded in K0520A (parenteral/IV feeding), there must be supporting documentation that reflects the need for additional fluid intake specifically addressing a nutrition or hydration need; this documentation should be noted in the resident's medical record according to State and Federal Regulations and/or internal facility policy.",
+        "criterion": "For parenteral/IV fluids coded in K0520A, there must be supporting documentation reflecting the need for additional fluid intake specifically addressing a nutrition or hydration need, noted in the resident's medical record according to State and Federal Regulations and/or internal facility policy.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. K-13",
-          "quote": "The following fluids may be included when there is supporting documentation that reflects the need for additional fluid intake specifically addressing a nutrition or hydration need. This supporting documentation should be noted in the resident's medical record according to State and Federal Regulations and/or internal facility policy:"
+          "quote": "This supporting documentation should be noted in the resident's medical record according to State and Federal Regulations and/or internal facility policy:"
         },
         "verified_by_expert": false,
-        "audit_weight": "high"
+        "audit_weight": "high",
+        "notes": "Bolded condition governing whether listed fluids may be counted in K0520A."
       },
       {
-        "criterion": "When IV fluids are coded to prevent dehydration, prevention of dehydration should be clinically indicated and supporting documentation should be provided in the medical record.",
+        "criterion": "When IV fluids are coded in K0520A to prevent dehydration, prevention of dehydration should be clinically indicated and supporting documentation should be provided in the medical record.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. K-13",
@@ -282,15 +264,26 @@
         "audit_weight": "high"
       },
       {
-        "criterion": "Absent documentation supporting a need for additional fluid intake, the IV fluid is not coded in K0520A (example: resident with adequate documented fluid intake receiving antibiotic in 100 cc normal saline — K0520A1 would NOT be checked).",
+        "criterion": "Review the medical record (to determine whether listed nutritional approaches were performed during the look-back period).",
         "source": {
           "doc": "rai-manual-v1.20.1",
-          "loc": "p. K-14",
-          "quote": "Rationale: Although the resident received the additional fluid, there is no documentation to support a need for additional fluid intake."
+          "loc": "p. K-12",
+          "quote": "Review the medical record to determine if any of the listed nutritional approaches were performed during the look-back period."
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Framed as a worked example rationale."
+        "notes": "Stated as the assessment step for this item."
+      },
+      {
+        "criterion": "Absence of documentation supporting a need for additional fluid intake means K0520A is not checked (example: Resident J).",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. K-14",
+          "quote": "Although the resident received the additional fluid, there is no documentation to support a need for additional fluid intake."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Framed as an example rationale."
       }
     ],
     "state": {}
@@ -298,7 +291,7 @@
   "state_deltas": [],
   "case_mix_relevance": {
     "level": "medium",
-    "notes": "The document ties K0520 to payment assessments: Column 1 and Column 4 assessment periods are defined by the SNF PPS Stay, and completion of K0520A, K0520B and K0520Z is required on the Interim Payment Assessment (IPA). The pages do not state a specific case-mix classification group derived from this item.",
+    "notes": "The item's columns are tied to the SNF PPS Stay (days 1–3 on admission, last 3 days at discharge), and completion of K0520A, K0520B, and K0520Z is required on the Interim Payment Assessment (IPA), a PPS payment assessment. The pages do not otherwise explicitly state a case-mix classification group.",
     "source": {
       "doc": "rai-manual-v1.20.1",
       "loc": "p. K-12",
@@ -307,11 +300,11 @@
   },
   "conflicts": [
     {
-      "topic": "Multiple coexisting observation windows for K0520 (7-day look-back vs. 3-day SNF PPS Stay windows)",
+      "topic": "Coexisting observation windows for K0520 columns",
       "positions": [
         {
           "authority": "federal",
-          "claim": "Columns 2 and 3 use a 7-day look-back period (performed while not a resident / while a resident within the last 7 days).",
+          "claim": "Columns 2 and 3 use a 7-day look-back period.",
           "source": {
             "doc": "rai-manual-v1.20.1",
             "loc": "p. K-12",
@@ -320,23 +313,45 @@
         },
         {
           "authority": "federal",
-          "claim": "Column 1 uses days 1 through 3 of the SNF PPS Stay and Column 4 uses the last 3 days of the SNF PPS Stay, not a 7-day window.",
+          "claim": "Column 1 uses days 1 through 3 of the SNF PPS Stay and Column 4 uses the last 3 days of the SNF PPS Stay.",
           "source": {
             "doc": "rai-manual-v1.20.1",
-            "loc": "p. K-12",
-            "quote": "Check all nutritional approaches performed within the last 3 days of the SNF PPS Stay."
+            "loc": "p. K-11",
+            "quote": "Assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B"
           }
         }
       ],
-      "resolution": "Resolved within the document: the windows are column-specific — Columns 2 and 3 use the 7-day look-back; Columns 1 and 4 use the first/last 3 days of the SNF PPS Stay."
+      "resolution": "Not a contradiction: the document assigns different observation periods to different columns of the same item. lookback_days records the 7-day window used for Columns 2 and 3; the 3-day SNF PPS Stay windows for Columns 1 and 4 are recorded in lookback_notes."
+    },
+    {
+      "topic": "Whether the K0520A look-back may extend into the preadmission period",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "Item pages direct that Column 2 captures approaches performed prior to admission/entry or reentry (i.e., preadmission), and K0520A includes nutrition/hydration received at the hospital as an outpatient or inpatient.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. K-13",
+            "quote": "K0520A includes any and all nutrition and hydration received by the nursing home resident during the observation period either at the nursing home, at the hospital as an outpatient or an inpatient, provided they were administered for nutrition or hydration."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "General convention states the look-back period does not extend into the preadmission period unless item instructions state otherwise, naming Section K as an exception.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. 3-3",
+            "quote": "With the exception of certain items (e.g., some items in Sections J, K and O), the look-back period does not extend into the preadmission period unless the item instructions state otherwise."
+          }
+        }
+      ],
+      "resolution": "Resolved by the document itself: the general convention names Section K as an exception and defers to item instructions, so the K0520 Column 2 preadmission instructions govern."
     }
   ],
   "common_audit_citations": [],
   "not_found": [
     "common_audit_citations",
-    "state_deltas",
-    "supportive_documentation.state",
-    "explicit statement of how the 7-day look-back is counted relative to the ARD"
+    "state_deltas"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",
