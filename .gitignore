@@ -45,3 +45,6 @@
 
 # macOS Finder metadata
 .DS_Store
+
+# Python bytecode from throwaway corpus scripts
+__pycache__/
