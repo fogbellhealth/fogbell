@@ -1,0 +1,83 @@
+SYNTHETIC DEMONSTRATION RECORD — NOT A REAL RESIDENT
+Facility: Harborlight Point Nursing Center (fictional), Unit 2 West
+Resident: "Resident T." (fictional), room 212-A     Payer: MaineCare (fictional)
+Assessment type: OBRA Quarterly     ARD: 09/03/2026     Prior assessment: OBRA Quarterly, ARD 06/05/2026
+
+=== MDS CODING WORKSHEET (draft, prepared 09/03/2026 by RNAC K. Ellery, RN) ===
+D0100 Should Resident Mood Interview be conducted? = 1 (Yes)
+D0150 Resident Mood Interview (PHQ-2 to 9):  A1=1 A2=2 | B1=1 B2=3 | C1=1 C2=2 | D1=1 D2=1 | E1=0 E2=0 | F1=1 F2=1 | G1=0 G2=0 | H1=1 H2=2 | I1=0 I2=0
+D0160 Total Severity Score = 11
+D0500 Staff Assessment of Resident Mood: not completed (D0100 = 1)
+D0600 Total Severity Score (staff): not completed
+E0100 Potential Indicators of Psychosis: A (hallucinations) CHECKED; B not checked
+E0200A Physical behavioral symptoms directed toward others = 1 (1-3 days)
+E0200B Verbal behavioral symptoms directed toward others = 2 (4-6 days)
+E0200C Other behavioral symptoms not directed toward others = 0
+E0300 Overall presence of behavioral symptoms = 1 (Yes)
+E0800 Rejection of care = 2 (4-6 days)
+E0900 Wandering = 1 (1-3 days)
+E1000A Wandering places resident at significant risk = 0;  E1000B Wandering intrudes on others = 1
+E1100 Change in behavior compared to prior assessment = 2 (Worse)
+
+=== PROGRESS NOTES (chronological) ===
+
+08/23/2026 14:10  Nursing note — J. Okafor, LPN (day shift)
+Resident cursed at staff during AM care ("get away from me, you people are useless"), refused to be repositioned for 20 minutes, then allowed care. Verbally hostile toward roommate at lunch, called him names loudly enough that dining staff intervened. Redirected with 1:1. No physical contact.
+
+08/24/2026 21:35  Nursing note — M. Pelletier, RN (evening shift)
+Ongoing verbal aggression this shift: yelled and swore at CNA during evening care, threatened to "report everyone." Calmed after 15 min with quiet room and music. No injury, no physical aggression.
+
+08/25/2026 09:50  Nursing note — J. Okafor, LPN (day shift)
+Third consecutive day of verbal outbursts toward staff during care. Cursing, name-calling. Care completed with two staff and frequent breaks. Social work notified for behavior follow-up.
+
+08/25/2026 15:20  Social work note — R. Bilodeau, LCSW
+Met with resident re: recent verbal outbursts. Resident states frustration with "being handled like a sack." Care plan updated: offer choice of care times, approach from front, two-staff care when agitated. Will re-evaluate mood next week.
+
+08/28/2026 10:05  Nursing note — J. Okafor, LPN (day shift)
+Quiet morning. Accepted AM care with encouragement. Ate 50% breakfast. No behaviors observed this shift.
+
+08/29/2026 13:40  Social work note — R. Bilodeau, LCSW
+PHQ-2 to 9 Resident Mood Interview conducted with resident in room, door closed, resident wearing glasses and hearing aids. Resident able to respond to all items. Responses over the last 2 weeks: A little interest/pleasure: yes, 2-6 days (2). B feeling down/depressed/hopeless: yes, 12-14 days (3). C sleep: yes, 2-6 days (2). D tired/little energy: yes, never or 1 day (1). E appetite: no (0). F feeling bad about self: yes, never or 1 day (1). G concentration: no (0). H moving/speaking slowly: yes, 2-6 days (2). I thoughts better off dead: no (0). Total severity score 11. Resident denies any thoughts of self-harm; safety reviewed. Physician notified of score; psych NP consult requested.
+
+08/30/2026 07:45  Nursing note — A. Thibodeau, RN (night shift, late entry for 08/30 05:30)
+Resident struck CNA on the forearm with an open hand when CNA attempted to change brief at 0530. CNA uninjured. Resident stated "I said no." Care deferred 30 min, then completed without incident. Physical aggression toward staff — first observed this quarter. Supervisor notified.
+
+08/30/2026 08:15  Nursing note — J. Okafor, LPN (day shift)
+Resident refused metoprolol 25 mg at 0800, stating "my heart is fine." Educated on purpose of medication; resident continued to decline. MD notified per protocol. Refusal is not consistent with resident's stated goal of "keeping my blood pressure down" documented on care plan 07/14/2026.
+
+08/31/2026 20:10  Nursing note — M. Pelletier, RN (evening shift)
+Calm shift. Watched television with peers in the day room. No behaviors noted. Refused 2000 metoprolol dose, see MAR.
+
+09/01/2026 17:25  Nursing note — M. Pelletier, RN (evening shift)
+At 1700 resident shoved another resident's wheelchair away from the dining table with enough force that the other resident's tray slid; other resident startled but not injured. Resident T. separated and offered alternate seating. Second physical behavior toward others this week. Behavior care plan reviewed with resident.
+
+09/02/2026 03:15  Nursing note — A. Thibodeau, RN (night shift)
+Resident found at 0300 in room 214 (another resident's room) standing at the closet, stating "looking for my coat." Redirected back to own room without difficulty. Other resident asleep, undisturbed. Bed alarm in place and functioning. Wandering — will monitor.
+
+09/02/2026 11:00  Nursing note — J. Okafor, LPN (day shift)
+Resident declined 0800 metoprolol again. Reinforced education. Ate 75% lunch. Pleasant, cooperative with AM care.
+
+09/03/2026 09:30  RNAC note — K. Ellery, RN
+Quarterly assessment ARD set 09/03/2026. Reviewed notes, MAR, care plan for the 7-day look-back 08/28–09/03. Behaviors: physical aggression toward others documented 08/30 and 09/01. Rejection of care: metoprolol refusals documented on MAR 08/30, 08/31, 09/01, 09/02, 09/03. Wandering: one episode documented 09/02. Mood: PHQ-2 to 9 completed 08/29 by SW, total 11. Compared with 06/05/2026 quarterly (no behaviors, no rejection of care, PHQ total 4), behavior status is worse.
+
+=== MEDICATION ADMINISTRATION RECORD — EXCERPT, 08/28/2026 through 09/03/2026 ===
+Metoprolol tartrate 25 mg PO BID (0800 / 2000)
+08/28  0800 given (JO)   2000 given (MP)
+08/29  0800 given (JO)   2000 given (MP)
+08/30  0800 REFUSED (JO) — see nursing note; educated, MD notified   2000 given (MP)
+08/31  0800 given (JO)   2000 REFUSED (MP) — resident declined, states "don't need it"
+09/01  0800 REFUSED (JO) — declined after education   2000 given (MP)
+09/02  0800 REFUSED (JO) — declined, see note   2000 given (MP)
+09/03  0800 REFUSED (JO) — declined, "I feel fine"
+Sertraline 50 mg PO daily (0800): given all days 08/28–09/03 (JO)
+Acetaminophen 650 mg PO q6h PRN pain: given 08/29 1400 (JO), 09/01 2100 (MP)
+
+=== ORDERS ===
+08/29/2026  Dr. S. Marchetti (fictional): Psychiatric NP consult for depressive symptoms, PHQ total 11 per SW interview. Continue sertraline 50 mg daily.
+07/14/2026  Dr. S. Marchetti: Metoprolol tartrate 25 mg PO BID for hypertension. Notify MD of refusals x2 consecutive.
+
+=== PRIOR ASSESSMENT SUMMARY (OBRA Quarterly, ARD 06/05/2026) ===
+D0160 Total Severity Score = 4.  E0100: none of the above (Z checked).  E0200A/B/C = 0.  E0300 = 0.  E0800 = 0.  E0900 = 0.  E1100 = 0 (Same).
+
+=== OTHER RECORDS IN CHART ===
+08/15/2026  Psychiatric evaluation — T. Nadeau, PMHNP (fictional): Resident alert, oriented to person and place. Denies auditory or visual hallucinations; no delusional content elicited. Mood mildly dysphoric. Assessment: adjustment disorder with depressed mood; continue sertraline.

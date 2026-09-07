@@ -48,3 +48,6 @@
 
 # Python bytecode from throwaway corpus scripts
 __pycache__/
+
+/app/assets/builds/*
+!/app/assets/builds/.keep

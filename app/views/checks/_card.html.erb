@@ -1,0 +1,73 @@
+<% item = Fogbell::Rulebook.instance.find(result["item_id"]) %>
+<% rs = rule_set || rule_set_for(check) %>
+<article class="rounded-lg border border-slate-200 bg-white p-5" id="card_<%= result["item_id"] %>">
+  <header class="flex flex-wrap items-start justify-between gap-3">
+    <div>
+      <h3 class="text-base font-semibold text-slate-900"><span class="font-mono text-sm text-slate-600"><%= result["item_id"] %></span> <%= item&.item_name %></h3>
+      <% if result["window"] && result["window"]["first_day"] %>
+        <p class="mt-0.5 text-xs text-slate-500">Window <%= Date.parse(result["window"]["first_day"]).strftime("%b %-d") %> – <%= Date.parse(result["window"]["last_day"]).strftime("%b %-d, %Y") %> (<%= result["window"]["days"] %> days)</p>
+      <% elsif item && item.lookback_days.nil? %>
+        <p class="mt-0.5 text-xs text-slate-500">No window stated in the manual for this item</p>
+      <% end %>
+    </div>
+    <%= status_badge(result["status"]) %>
+  </header>
+
+  <dl class="mt-4 grid gap-4 text-sm sm:grid-cols-[140px_1fr]">
+    <dt class="text-slate-500">Suggested coding</dt>
+    <dd class="text-slate-800"><%= result["suggested_coding"] %><% if result["downgraded"] %> <span class="text-rose-700">(downgraded: no in-window evidence)</span><% end %></dd>
+
+    <dt class="text-slate-500">What the record shows</dt>
+    <dd class="text-slate-800"><%= result["rationale"] %></dd>
+
+    <% if result["evidence"].any? %>
+      <dt class="text-slate-500">In-window evidence</dt>
+      <dd>
+        <ul class="space-y-2">
+          <% result["evidence"].each do |e| %>
+            <li class="border-l-2 border-emerald-300 pl-3"><span class="font-medium text-slate-700"><%= e["date"] %></span> · <span class="text-slate-500"><%= e["author"] %></span><br><span class="text-slate-800">“<%= e["quote"] %>”</span></li>
+          <% end %>
+        </ul>
+      </dd>
+    <% end %>
+
+    <% if result["outside_window_evidence"].any? %>
+      <dt class="text-slate-500">Outside the window</dt>
+      <dd>
+        <p class="mb-1 text-xs text-amber-800">Exists in the chart but cannot be counted for this assessment.</p>
+        <ul class="space-y-2">
+          <% result["outside_window_evidence"].each do |e| %>
+            <li class="border-l-2 border-amber-300 pl-3 text-slate-600"><span class="font-medium"><%= e["date"] %></span> · <%= e["author"] %><br>“<%= e["quote"] %>”</li>
+          <% end %>
+        </ul>
+      </dd>
+    <% end %>
+
+    <% if result["gaps"].any? %>
+      <dt class="text-slate-500">Gaps a reviewer would flag</dt>
+      <dd><ul class="list-disc space-y-1 pl-5 text-slate-800"><% result["gaps"].each do |g| %><li><%= g %></li><% end %></ul></dd>
+    <% end %>
+
+    <% if result["chart_today_action"].present? %>
+      <dt class="text-slate-500">Chart today</dt>
+      <dd class="text-slate-800"><%= result["chart_today_action"] %> <span class="text-xs text-slate-500">(only care actually occurring now; never document care that did not occur)</span></dd>
+    <% end %>
+  </dl>
+
+  <details class="mt-4 rounded-md bg-slate-50 px-4 py-3 text-sm">
+    <summary class="cursor-pointer font-medium text-slate-800">Why? — rules applied, with citations</summary>
+    <% applied = Array(result["rules_applied"]).filter_map { |n| rs.find(n.to_i) } %>
+    <% applied = rs.for_item(result["item_id"]) if applied.empty? %>
+    <ol class="mt-3 space-y-3">
+      <% applied.each do |r| %>
+        <li class="border-l-2 border-slate-300 pl-3">
+          <p class="text-slate-800"><span class="font-mono text-xs text-slate-500">R<%= r.n %></span> <%= r.text %><%= jurisdiction_badge(r.source) %></p>
+          <p class="mt-1 text-xs text-slate-500"><%= cite(r.source) %><% if r.source["quote"].present? %> — “<%= r.source["quote"] %>”<% end %></p>
+        </li>
+      <% end %>
+    </ol>
+    <% if item %>
+      <p class="mt-3 text-xs text-slate-500">Item extracted <%= item.provenance_summary["extracted_at"] %> from <%= manifest.name(item.provenance_summary.dig("source_documents", 0, "doc")) %>; expert review status: <%= item.provenance_summary["expert_review_status"] %>.</p>
+    <% end %>
+  </details>
+</article>

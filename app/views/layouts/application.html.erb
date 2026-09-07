@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="h-full bg-slate-50">
   <head>
-    <title><%= content_for(:title) || "Fogbell" %></title>
+    <title><%= content_for(:title) || "Fogbell — evidence check" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Fogbell">
-    <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= yield :head %>
-
-    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
-    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
-
-    <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
-
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
-  <body>
-    <%= yield %>
+  <body class="min-h-full text-slate-800 antialiased">
+    <header class="border-b border-slate-200 bg-white">
+      <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+        <a href="/" class="flex items-baseline gap-2 no-underline">
+          <span class="text-xl" aria-hidden="true">🔔</span>
+          <span class="text-lg font-semibold tracking-tight text-slate-900">Fogbell</span>
+          <span class="ml-2 hidden text-sm text-slate-500 sm:inline">MDS evidence check</span>
+        </a>
+        <span class="rounded-md bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-900 ring-1 ring-inset ring-amber-200">Demo only — synthetic data only. Never enter real resident information.</span>
+      </div>
+    </header>
+    <main class="mx-auto max-w-5xl px-6 py-8">
+      <% if flash[:alert] %>
+        <div class="mb-6 rounded-md border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-900"><%= flash[:alert] %></div>
+      <% end %>
+      <%= yield %>
+    </main>
+    <footer class="mx-auto max-w-5xl px-6 pb-10 pt-4 text-xs leading-relaxed text-slate-500">
+      <p><strong class="text-slate-700">Demo only — synthetic data only. Never enter real resident information.</strong> Every finding on this site is a draft for nurse review, generated from public regulatory text with page citations. Rules drawn from Maine materials are provisional pending review by a Maine MDS expert. Nothing here is coding advice, legal advice, or a substitute for the RAI Manual.</p>
+    </footer>
   </body>
 </html>

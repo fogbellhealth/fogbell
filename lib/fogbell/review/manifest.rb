@@ -11,13 +11,27 @@ module Fogbell
         new(Rails.root.join("corpus/MANIFEST.md"))
       end
 
+      HEADING = /\A##\s+([^(]+?)\s*(?:\(|$)/
+
       def initialize(path)
         @titles = {}
+        @jurisdictions = {}
+        section = nil
         Pathname(path).each_line do |line|
+          if (h = HEADING.match(line))
+            section = h[1].strip
+            next
+          end
           m = ROW.match(line) or next
           @titles[m[:key]] = display_name(m[:title].strip, m[:version].strip)
+          @jurisdictions[m[:key]] = section
         end
       end
+
+      # The manifest section a document is filed under ("Federal", "Maine", ...); nil when unknown.
+      def jurisdiction(key) = @jurisdictions[key]
+
+      def federal?(key) = jurisdiction(key).to_s.casecmp?("Federal")
 
       # Readable name for +key+; falls back to the key so nothing is ever hidden.
       def name(key)

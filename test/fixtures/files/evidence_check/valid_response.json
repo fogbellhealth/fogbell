@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "item_id": "X0100", "status": "supported", "suggested_coding": "1 — visibility checked", "rationale": "Two dated checks are documented inside the window.",
+      "evidence": [ { "date": "2026-09-02", "author": "J. Okafor, LPN", "quote": "Fog visibility check performed, reading 40 m." }, { "date": "2026-08-20", "author": "M. Pelletier, RN", "quote": "Visibility check 25 m at the point." } ],
+      "outside_window_evidence": [], "gaps": [], "chart_today_action": null, "rules_applied": [1] }
+  ],
+  "overall_note": "Draft for nurse review."
+}
