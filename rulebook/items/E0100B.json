@@ -7,13 +7,13 @@
   "lookback_source": {
     "doc": "rai-manual-v1.20.1",
     "loc": "p. E-2",
-    "quote": "Review the resident's medical record for the 7-day look-back period."
+    "quote": "Code based on behaviors observed and/or thoughts expressed in the last 7 days rather than the presence of a medical diagnosis."
   },
-  "lookback_notes": "The manual specifies a 7-day look-back period for E0100; coding is based on behaviors observed and/or thoughts expressed in the last 7 days. The manual pages supplied do not state how the 7 days are counted relative to the ARD.",
+  "lookback_notes": "The item's own pages state a 7-day look-back period (\"Review the resident's medical record for the 7-day look-back period\" and coding based on the last 7 days). Per the document's general convention, a 7-day observation period consists of the ARD plus the 6 previous calendar days (rai-manual-v1.20.1, p. 2-21).",
   "coding_levels": [
     {
-      "code": "B",
-      "label": "Delusions (misconceptions or beliefs that are firmly held, contrary to reality)",
+      "code": "E0100B (checked)",
+      "label": "Delusions",
       "definition": "Check E0100B if delusions were present in the last 7 days. A delusion is a fixed, false belief not shared by others that the resident holds true even in the face of evidence to the contrary.",
       "source": {
         "doc": "rai-manual-v1.20.1",
@@ -22,9 +22,9 @@
       }
     },
     {
-      "code": "Z",
-      "label": "None of the above",
-      "definition": "Check E0100Z if no hallucinations or delusions were present in the last 7 days (i.e., E0100B is not checked).",
+      "code": "E0100B (not checked)",
+      "label": "Delusions not present",
+      "definition": "Leave blank when the condition is not met; per the E0100 item set, check E0100Z, none of the above, if no hallucinations or delusions were present in the last 7 days.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-2",
@@ -34,7 +34,7 @@
   ],
   "federal_coding_rules": [
     {
-      "rule": "Code based on behaviors observed and/or thoughts expressed in the last 7 days rather than the presence of a medical diagnosis. Check all that apply.",
+      "rule": "Code based on behaviors observed and/or thoughts expressed in the last 7 days rather than the presence of a medical diagnosis; check all that apply.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-2",
@@ -66,7 +66,7 @@
       }
     },
     {
-      "rule": "Resident intent should not be taken into account when coding items in Section E; the section focuses on the resident's actions, not the intent of their behavior.",
+      "rule": "Resident intent should not be taken into account when coding for items in Section E; the section focuses on the resident's actions, not the intent of their behavior.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-1",
@@ -74,19 +74,11 @@
       }
     },
     {
-      "rule": "A false belief that is readily altered by a simple reminder (e.g., due to forgetfulness/memory loss) is not a firmly held false belief and does not meet the definition of a delusion; code E0100Z instead.",
+      "rule": "A false belief that is readily altered with a simple reminder (i.e., due to forgetfulness/memory loss rather than psychosis) is not a firmly held false belief and does not meet the definition of a delusion; code E0100Z instead.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-4",
         "quote": "The resident's initial false belief is readily altered with a simple reminder, suggesting that their mistaken belief is due to forgetfulness (i.e., memory loss) rather than psychosis. Because it is not a firmly held false belief, it does not fit the definition of a delusion."
-      }
-    },
-    {
-      "rule": "Misinterpretation of a real external sound or stimulus that the resident accepts an alternative explanation for is not a fixed false belief and is not a delusion (code E0100Z).",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. E-3",
-        "quote": "Because they are able to accept the alternative explanation for the cause of the sound, their report of a gunshot is not a fixed false belief and is therefore not a delusion."
       }
     }
   ],
@@ -101,7 +93,7 @@
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Listed as step 1 of Steps for Assessment."
+        "notes": "Listed as step 1 under Steps for Assessment for E0100."
       },
       {
         "criterion": "Interview staff members and others who have had the opportunity to observe the resident in a variety of situations during the 7-day look-back period.",
@@ -112,7 +104,7 @@
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Step 2 of Steps for Assessment."
+        "notes": "Step 2 under Steps for Assessment for E0100."
       },
       {
         "criterion": "Observe the resident during conversations and structured interviews in other assessment sections and listen for the expression of false beliefs (delusions).",
@@ -123,10 +115,10 @@
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Step 3 of Steps for Assessment."
+        "notes": "Step 3 under Steps for Assessment for E0100."
       },
       {
-        "criterion": "Clarify potentially false beliefs: when a belief is plausible but alleged to be false, try to verify the facts to determine whether it could have happened or is likely false.",
+        "criterion": "Clarify potentially false beliefs: when a belief is plausible but alleged by others to be false, try to verify the facts to determine whether it could have happened or is likely false.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-2",
@@ -134,7 +126,7 @@
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Step 4 of Steps for Assessment."
+        "notes": "Step 4 under Steps for Assessment for E0100."
       },
       {
         "criterion": "When a resident expresses a clearly false belief, determine if it can be readily corrected by a simple explanation of verifiable facts or demonstration of evidence to the contrary; do not challenge the resident.",
@@ -145,7 +137,7 @@
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Step 4 of Steps for Assessment."
+        "notes": "Step 4 bullet under Steps for Assessment for E0100."
       }
     ],
     "state": {}
@@ -158,8 +150,8 @@
   "conflicts": [],
   "common_audit_citations": [],
   "not_found": [
-    "state_deltas",
     "case_mix_relevance",
+    "state_deltas",
     "common_audit_citations"
   ],
   "provenance_summary": {

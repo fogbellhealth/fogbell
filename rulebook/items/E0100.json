@@ -9,12 +9,12 @@
     "loc": "p. E-2",
     "quote": "Review the resident's medical record for the 7-day look-back period."
   },
-  "lookback_notes": "The manual states a 7-day look-back period for E0100; coding is based on behaviors observed and/or thoughts expressed in the last 7 days. The document does not state on this page how the 7 days are counted relative to the ARD.",
+  "lookback_notes": "The item's own pages state a 7-day look-back period for record review, staff interview, and coding (\"behaviors observed and/or thoughts expressed in the last 7 days\"). Per the document's general convention, a 7-day observation period consists of the ARD plus the 6 previous calendar days (rai-manual-v1.20.1, p. 2-21).",
   "coding_levels": [
     {
       "code": "A",
       "label": "Hallucinations",
-      "definition": "Perceptual experiences in the absence of real external sensory stimuli; the perception of the presence of something that is not actually there. It may be auditory or visual or involve smells, tastes or touch.",
+      "definition": "Check E0100A if hallucinations were present in the last 7 days. A hallucination is the perception of the presence of something that is not actually there. It may be auditory or visual or involve smells, tastes or touch.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-2",
@@ -24,7 +24,7 @@
     {
       "code": "B",
       "label": "Delusions",
-      "definition": "Misconceptions or beliefs that are firmly held, contrary to reality; a fixed, false belief not shared by others that the resident holds true even in the face of evidence to the contrary.",
+      "definition": "Check E0100B if delusions were present in the last 7 days. A delusion is a fixed, false belief not shared by others that the resident holds true even in the face of evidence to the contrary.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-2",
@@ -34,7 +34,7 @@
     {
       "code": "Z",
       "label": "None of the above",
-      "definition": "No hallucinations or delusions were present in the last 7 days.",
+      "definition": "Check E0100Z if no hallucinations or delusions were present in the last 7 days.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-2",
@@ -44,7 +44,7 @@
   ],
   "federal_coding_rules": [
     {
-      "rule": "Code based on behaviors observed and/or thoughts expressed in the last 7 days rather than the presence of a medical diagnosis. Check all that apply.",
+      "rule": "Code based on behaviors observed and/or thoughts expressed in the last 7 days rather than the presence of a medical diagnosis; check all that apply.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-2",
@@ -52,27 +52,11 @@
       }
     },
     {
-      "rule": "Check E0100A if hallucinations were present in the last 7 days.",
+      "rule": "Resident intent must not be taken into account when coding items in Section E; the section focuses on the resident's actions, not the intent of their behavior.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. E-2",
-        "quote": "Check E0100A, hallucinations: if hallucinations were present in the last 7 days."
-      }
-    },
-    {
-      "rule": "Check E0100B if delusions were present in the last 7 days.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. E-2",
-        "quote": "Check E0100B, delusions: if delusions were present in the last 7 days."
-      }
-    },
-    {
-      "rule": "Check E0100Z if no hallucinations or delusions were present in the last 7 days.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. E-2",
-        "quote": "Check E0100Z, none of the above: if no hallucinations or delusions were present in the last 7 days."
+        "loc": "p. E-1",
+        "quote": "Resident intent should not be taken into account when coding for items in this section."
       }
     },
     {
@@ -92,18 +76,34 @@
       }
     },
     {
-      "rule": "Resident intent is not taken into account when coding items in Section E; the section focuses on the resident's actions, not the intent of their behavior.",
+      "rule": "A false belief that is readily altered with a simple reminder (i.e., attributable to memory loss/forgetfulness rather than psychosis) does not meet the definition of a delusion; code E0100Z.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. E-1",
-        "quote": "Resident intent should not be taken into account when coding for items in this section."
+        "loc": "p. E-4",
+        "quote": "The resident's initial false belief is readily altered with a simple reminder, suggesting that their mistaken belief is due to forgetfulness (i.e., memory loss) rather than psychosis. Because it is not a firmly held false belief, it does not fit the definition of a delusion."
+      }
+    },
+    {
+      "rule": "Misinterpretation of a real external sound or stimulus that the resident accepts an alternative explanation for is not a fixed false belief and is not coded as a delusion (code E0100Z).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-3",
+        "quote": "They misinterpreted a real sound in the external environment. Because they are able to accept the alternative explanation for the cause of the sound, their report of a gunshot is not a fixed false belief and is therefore not a delusion."
+      }
+    },
+    {
+      "rule": "Both E0100A and E0100B may be checked when both a hallucination and a delusion are present.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-3",
+        "quote": "Coding: E0100A would be checked and E0100B would be checked."
       }
     }
   ],
   "supportive_documentation": {
     "federal": [
       {
-        "criterion": "Review of the resident's medical record for the 7-day look-back period.",
+        "criterion": "Review the resident's medical record for the 7-day look-back period.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-2",
@@ -111,7 +111,7 @@
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Listed as step 1 of Steps for Assessment."
+        "notes": "Listed as Step 1 for assessment."
       },
       {
         "criterion": "Interview staff members and others who have had the opportunity to observe the resident in a variety of situations during the 7-day look-back period.",
@@ -122,7 +122,7 @@
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Step 2 of Steps for Assessment."
+        "notes": "Step 2 for assessment."
       },
       {
         "criterion": "Observe the resident during conversations and structured interviews in other assessment sections and listen for statements indicating hallucinations or expression of false beliefs (delusions).",
@@ -133,28 +133,18 @@
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Step 3 of Steps for Assessment."
+        "notes": "Step 3 for assessment."
       },
       {
-        "criterion": "Clarify potentially false beliefs, including attempting to verify facts when a belief is plausible but alleged by others to be false.",
-        "source": {
-          "doc": "rai-manual-v1.20.1",
-          "loc": "p. E-2",
-          "quote": "When a resident expresses a belief that is plausible but alleged by others to be false (e.g., history indicates that the resident's spouse died 20 years ago, but the resident states their spouse has been visiting them every day), try to verify the facts to determine whether there is reason to believe that it could have happened or whether it is likely that the belief is false."
-        },
-        "verified_by_expert": false,
-        "audit_weight": "medium",
-        "notes": "Step 4 of Steps for Assessment."
-      },
-      {
-        "criterion": "For a clearly false belief, determine whether it can be readily corrected by a simple explanation of verifiable facts or demonstration of evidence to the contrary; do not challenge the resident.",
+        "criterion": "Clarify potentially false beliefs: attempt to verify facts when a plausible belief is alleged to be false, and determine whether a clearly false belief can be readily corrected by a simple explanation or evidence to the contrary (without challenging the resident).",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-2",
           "quote": "When a resident expresses a clearly false belief, determine if it can be readily corrected by a simple explanation of verifiable (real) facts (which may only require a simple reminder or reorientation) or demonstration of evidence to the contrary. Do not, however, challenge the resident."
         },
         "verified_by_expert": false,
-        "audit_weight": "medium"
+        "audit_weight": "medium",
+        "notes": "Step 4 for assessment."
       }
     ],
     "state": {}
@@ -162,14 +152,15 @@
   "state_deltas": [],
   "case_mix_relevance": {
     "level": "unknown",
-    "notes": "The supplied pages do not tie E0100 to any payment or case-mix classification."
+    "notes": "The supplied pages for E0100 do not tie this item to any payment or case-mix classification."
   },
   "conflicts": [],
   "common_audit_citations": [],
   "not_found": [
     "state_deltas",
+    "case_mix_relevance",
     "common_audit_citations",
-    "case_mix_relevance.source"
+    "dash_value_rules_specific_to_E0100"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",

@@ -9,23 +9,26 @@
     "loc": "p. N-4",
     "quote": "Enter in Item N0350B, the number of days during the 7-day look-back period (or since admission/entry or reentry if less than 7 days) that the physician (nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) changed the resident's insulin orders."
   },
-  "lookback_notes": "7-day look-back period, or since admission/entry or reentry if less than 7 days. The document does not state on these pages how the 7 days are counted relative to the ARD (e.g., \"ARD plus the 6 prior days\" is not stated here).",
-  "coding_levels": [],
+  "lookback_notes": "7-day look-back period, or since admission/entry or reentry if less than 7 days. The item's own pages state the 7-day window (p. N-3 Steps for Assessment and p. N-4 Coding Instructions). Per the general convention, a 7-day observation period consists of the ARD plus the 6 previous calendar days (rai-manual-v1.20.1, p. 2-21).",
+  "coding_levels": [
+    {
+      "code": "Enter Days",
+      "label": "Number of days the physician (or authorized assistant or practitioner) changed the resident's insulin orders",
+      "definition": "Record the number of days the physician (or authorized assistant or practitioner) changed the resident's insulin orders during the last 7 days or since admission/entry or reentry if less than 7 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. N-3",
+        "quote": "B. Orders for insulin Record the number of days the physician (or authorized assistant or practitioner) changed the resident's insulin orders during the last 7 days or since admission/entry or reentry if less than 7 days"
+      }
+    }
+  ],
   "federal_coding_rules": [
     {
-      "rule": "Enter in Item N0350B the number of days during the 7-day look-back period (or since admission/entry or reentry if less than 7 days) that the physician changed the resident's insulin orders.",
+      "rule": "Enter in Item N0350B the number of days during the 7-day look-back period (or since admission/entry or reentry if less than 7 days) that the physician (nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) changed the resident's insulin orders.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-4",
         "quote": "Enter in Item N0350B, the number of days during the 7-day look-back period (or since admission/entry or reentry if less than 7 days) that the physician (nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) changed the resident's insulin orders."
-      }
-    },
-    {
-      "rule": "Order changes made by a nurse practitioner, physician assistant, or clinical nurse specialist count only if allowable under state licensure laws.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-4",
-        "quote": "the physician (nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) changed the resident's insulin orders."
       }
     },
     {
@@ -45,7 +48,7 @@
       }
     },
     {
-      "rule": "For subcutaneous insulin pumps, code only the number of days that the resident actually required a subcutaneous injection to restart the pump (stated in the Coding Tips and Special Populations following the N0350B coding instructions).",
+      "rule": "For subcutaneous insulin pumps, code only the number of days that the resident actually required a subcutaneous injection to restart the pump.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-4",
@@ -53,11 +56,11 @@
       }
     },
     {
-      "rule": "Item wording as printed on the MDS item set: record the number of days the physician (or authorized assistant or practitioner) changed the resident's insulin orders during the last 7 days or since admission/entry or reentry if less than 7 days.",
+      "rule": "Determine, as part of assessment, whether the physician (or nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) changed the resident's insulin orders during the look-back period, and count the number of days insulin orders were changed.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-3",
-        "quote": "Record the number of days the physician (or authorized assistant or practitioner) changed the resident's insulin orders during the last 7 days or since admission/entry or reentry if less than 7 days"
+        "quote": "Determine if the physician (or nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) changed the resident's insulin orders during the look-back period."
       }
     }
   ],
@@ -71,19 +74,8 @@
           "quote": "Review the resident's medication administration records for the 7-day look-back period (or since admission/entry or reentry if less than 7 days)."
         },
         "verified_by_expert": false,
-        "audit_weight": "medium",
-        "notes": "Listed as Step 1 for Assessment for N0350."
-      },
-      {
-        "criterion": "Determine if the physician (or nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) changed the resident's insulin orders during the look-back period.",
-        "source": {
-          "doc": "rai-manual-v1.20.1",
-          "loc": "p. N-3",
-          "quote": "Determine if the physician (or nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) changed the resident's insulin orders during the look-back period."
-        },
-        "verified_by_expert": false,
-        "audit_weight": "medium",
-        "notes": "Listed as Step 3 for Assessment for N0350."
+        "audit_weight": "high",
+        "notes": "Stated as step 1 of Steps for Assessment for N0350."
       },
       {
         "criterion": "Count the number of days insulin injections were received and/or insulin orders changed.",
@@ -93,8 +85,8 @@
           "quote": "Count the number of days insulin injections were received and/or insulin orders changed."
         },
         "verified_by_expert": false,
-        "audit_weight": "medium",
-        "notes": "Listed as Step 4 for Assessment for N0350."
+        "audit_weight": "high",
+        "notes": "Step 4 of Steps for Assessment for N0350."
       }
     ],
     "state": {}
@@ -102,16 +94,15 @@
   "state_deltas": [],
   "case_mix_relevance": {
     "level": "unknown",
-    "notes": "The supplied pages (N-3, N-4) do not tie N0350B to any payment or case-mix classification."
+    "notes": "The supplied pages for N0350B do not tie this item to any payment or case-mix classification."
   },
   "conflicts": [],
   "common_audit_citations": [],
   "not_found": [
-    "coding_levels (N0350B is a numeric \"Enter Days\" field; no discrete coded response levels are stated on the supplied pages)",
+    "case_mix_relevance.level",
     "state_deltas",
     "common_audit_citations",
-    "case_mix_relevance.level",
-    "lookback_notes: exact method of counting the 7 days relative to the ARD"
+    "conflicts"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",

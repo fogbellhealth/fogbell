@@ -9,7 +9,7 @@
     "loc": "p. N-3",
     "quote": "Enter in Item N0350A, the number of days during the 7-day look-back period (or since admission/entry or reentry if less than 7 days) that insulin injections were received."
   },
-  "lookback_notes": "7-day look-back period, or since admission/entry or reentry if the stay is less than 7 days. The same 7-day window applies to both N0350A (insulin injections received) and N0350B (insulin order changes). The document does not state how the 7 days are counted relative to the ARD on these pages.",
+  "lookback_notes": "7-day look-back period, or since admission/entry or reentry if less than 7 days, for both N0350A and N0350B. Per the general convention (p. 2-21), a 7-day observation period consists of the ARD plus the 6 previous calendar days; the item's own pages state only \"7-day look-back period.\"",
   "coding_levels": [
     {
       "code": "N0350A",
@@ -50,7 +50,7 @@
       }
     },
     {
-      "rule": "For sliding scale orders: a sliding scale dosage schedule written to cover different dosages depending on lab values does not count as an order change simply because a different dose is administered based on the sliding scale guidelines.",
+      "rule": "A sliding scale dosage schedule written to cover different dosages depending on lab values does not count as an order change simply because a different dose is administered based on the sliding scale guidelines.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-4",
@@ -58,7 +58,7 @@
       }
     },
     {
-      "rule": "If the sliding scale order is new, discontinued, or is the first sliding scale order for the resident, those days can be counted and coded (as an order change).",
+      "rule": "If the sliding scale order is new, discontinued, or is the first sliding scale order for the resident, these days can be counted and coded.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-4",
@@ -85,7 +85,7 @@
   "supportive_documentation": {
     "federal": [
       {
-        "criterion": "Resident's medication administration records for the 7-day look-back period (or since admission/entry or reentry if less than 7 days) are reviewed to determine insulin injections received.",
+        "criterion": "Review the resident's medication administration records for the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. N-3",
@@ -93,10 +93,21 @@
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Stated as step 1 of Steps for Assessment."
+        "notes": "Step 1 of Steps for Assessment."
       },
       {
-        "criterion": "Determination that the physician (or nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) changed the resident's insulin orders during the look-back period.",
+        "criterion": "Determine if the resident received insulin injections during the look-back period.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. N-3",
+          "quote": "Determine if the resident received insulin injections during the look-back period."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Step 2 of Steps for Assessment."
+      },
+      {
+        "criterion": "Determine if the physician (or nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) changed the resident's insulin orders during the look-back period.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. N-3",
@@ -104,7 +115,18 @@
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Stated as step 3 of Steps for Assessment; supports coding of N0350B."
+        "notes": "Step 3 of Steps for Assessment."
+      },
+      {
+        "criterion": "Count the number of days insulin injections were received and/or insulin orders changed.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. N-3",
+          "quote": "Count the number of days insulin injections were received and/or insulin orders changed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Step 4 of Steps for Assessment."
       }
     ],
     "state": {}
@@ -112,15 +134,15 @@
   "state_deltas": [],
   "case_mix_relevance": {
     "level": "unknown",
-    "notes": "The supplied pages for N0350 do not tie this item to any payment or case-mix classification."
+    "notes": "The pages for N0350 do not tie this item to any payment or case-mix classification."
   },
   "conflicts": [],
   "common_audit_citations": [],
   "not_found": [
+    "case_mix_relevance.source",
     "state_deltas",
     "common_audit_citations",
-    "case_mix_relevance.level",
-    "lookback_notes: exact counting convention relative to the ARD"
+    "conflicts"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",

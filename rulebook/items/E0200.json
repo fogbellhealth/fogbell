@@ -9,12 +9,12 @@
     "loc": "p. E-5",
     "quote": "Review the medical record for the 7-day look-back period."
   },
-  "lookback_notes": "The manual repeatedly refers to a \"7-day look-back period\" and to behaviors exhibited in \"the last 7 days\" for E0200. The document pages for this item do not state how the window is counted relative to the ARD.",
+  "lookback_notes": "The item's own pages state a 7-day look-back period for record review, staff interview, and observation. Per the general convention (rai-manual-v1.20.1, p. 2-21), a 7-day observation period consists of the ARD plus the 6 previous calendar days; the item's pages do not themselves describe the counting method.",
   "coding_levels": [
     {
       "code": "0",
       "label": "Behavior not exhibited",
-      "definition": "Code 0 if the behavioral symptoms were not present in the last 7 days. Use this code if the symptom has never been exhibited or if it previously has been exhibited but has been absent in the last 7 days.",
+      "definition": "The behavioral symptoms were not present in the last 7 days. Use this code if the symptom has never been exhibited or if it previously has been exhibited but has been absent in the last 7 days.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-5",
@@ -24,7 +24,7 @@
     {
       "code": "1",
       "label": "Behavior of this type occurred 1-3 days",
-      "definition": "Code 1 if the behavior was exhibited 1-3 days of the last 7 days, regardless of the number or severity of episodes that occur on any one of those days.",
+      "definition": "The behavior was exhibited 1-3 days of the last 7 days, regardless of the number or severity of episodes that occur on any one of those days.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-5",
@@ -34,7 +34,7 @@
     {
       "code": "2",
       "label": "Behavior of this type occurred 4-6 days, but less than daily",
-      "definition": "Code 2 if the behavior was exhibited 4-6 of the last 7 days, regardless of the number or severity of episodes that occur on any of those days.",
+      "definition": "The behavior was exhibited 4-6 of the last 7 days, regardless of the number or severity of episodes that occur on any of those days.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-5",
@@ -44,7 +44,7 @@
     {
       "code": "3",
       "label": "Behavior of this type occurred daily",
-      "definition": "Code 3 if the behavior was exhibited daily, regardless of the number or severity of episodes that occur on any of those days.",
+      "definition": "The behavior was exhibited daily, regardless of the number or severity of episodes that occur on any of those days.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-5",
@@ -54,11 +54,19 @@
   ],
   "federal_coding_rules": [
     {
-      "rule": "E0200 has three sub-items, each coded separately: A. Physical behavioral symptoms directed toward others (e.g., hitting, kicking, pushing, scratching, grabbing, abusing others sexually); B. Verbal behavioral symptoms directed toward others (e.g., threatening others, screaming at others, cursing at others); C. Other behavioral symptoms not directed toward others (e.g., physical symptoms such as hitting or scratching self, pacing, rummaging, public sexual acts, disrobing in public, throwing or smearing food or bodily wastes, or verbal/vocal symptoms like screaming, disruptive sounds).",
+      "rule": "E0200 is coded in three sub-items: A. Physical behavioral symptoms directed toward others (e.g., hitting, kicking, pushing, scratching, grabbing, abusing others sexually); B. Verbal behavioral symptoms directed toward others (e.g., threatening others, screaming at others, cursing at others); C. Other behavioral symptoms not directed toward others (e.g., physical symptoms such as hitting or scratching self, pacing, rummaging, public sexual acts, disrobing in public, throwing or smearing food or bodily wastes, or verbal/vocal symptoms like screaming, disruptive sounds). Enter codes in boxes.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-4",
         "quote": "A. Physical behavioral symptoms directed toward others (e.g., hitting, kicking, pushing, scratching, grabbing, abusing others sexually)"
+      }
+    },
+    {
+      "rule": "Note presence of symptoms and their frequency.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-4",
+        "quote": "Behavioral Symptom - Presence and Frequency\nNote presence of symptoms and their frequency"
       }
     },
     {
@@ -70,7 +78,7 @@
       }
     },
     {
-      "rule": "Code the behavior as present even if staff have become used to the behavior or view it as typical or tolerable.",
+      "rule": "Code as present, even if staff have become used to the behavior or view it as typical or tolerable.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-5",
@@ -78,7 +86,7 @@
       }
     },
     {
-      "rule": "Behaviors in these categories are coded as present or not present whether or not they might represent a rejection of care.",
+      "rule": "Behaviors in these categories should be coded as present or not present, whether or not they might represent a rejection of care.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-5",
@@ -94,7 +102,7 @@
       }
     },
     {
-      "rule": "Resident intent must not be taken into account when coding items in Section E; the section focuses on the resident's actions, not the intent of the behavior.",
+      "rule": "Resident intent should not be taken into account when coding for items in Section E; the section focuses on the resident's actions, not the intent of their behavior.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-1",
@@ -102,15 +110,23 @@
       }
     },
     {
-      "rule": "Frequency is coded by the number of days the behavior occurred, regardless of the number or severity of episodes on any one day (e.g., a single isolated incident is coded 1).",
+      "rule": "A behavior that did not occur during the look-back period is coded 0, behavior not exhibited (example: rummaging behavior not observed or reported in the last 7 days is coded 0 for E0200C).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-6",
-        "quote": "Coding: E0200A would be coded 1, behavior of this type occurred 1-3 days of the last 7 days."
+        "quote": "Coding: E0200C would be coded 0, behavior not exhibited.\nRationale: The behavior did not occur during the look-back period."
       }
     },
     {
-      "rule": "E0200 coding drives item E0300: if E0200A, E0200B, and E0200C are all coded 0, E0300 is coded 0 and the assessor skips to E0800; if any of E0200A, E0200B, or E0200C were coded 1, 2, or 3, E0300 is coded 1 and E0500 and E0600 are completed.",
+      "rule": "A single, isolated incident of a physical behavior directed toward others is coded 1 (1-3 days) even when a possible explanation for the behavior exists.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-6",
+        "quote": "Rationale: Throwing a tray was a physical behavior directed toward others. Although a possible explanation exists, the behavior is noted as present because it occurred."
+      }
+    },
+    {
+      "rule": "Coding of E0200A, E0200B, and E0200C determines E0300: if all three are coded 0, E0300 is coded 0 and the assessor skips to E0800; if any is coded 1, 2, or 3, E0300 is coded 1 and E0500 and E0600 are completed.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-7",
@@ -121,7 +137,7 @@
   "supportive_documentation": {
     "federal": [
       {
-        "criterion": "Review of the medical record for the 7-day look-back period.",
+        "criterion": "Review of the resident's medical record for the 7-day look-back period.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-5",
@@ -129,10 +145,10 @@
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Listed as Step 1 for Assessment."
+        "notes": "Listed as step 1 of Steps for Assessment."
       },
       {
-        "criterion": "Interview staff, across all shifts and disciplines, as well as others who had close interactions with the resident during the 7-day look-back period, including family or friends who visit frequently or have frequent contact with the resident.",
+        "criterion": "Interview of staff, across all shifts and disciplines, as well as others who had close interactions with the resident during the 7-day look-back period, including family or friends who visit frequently or have frequent contact with the resident.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-5",
@@ -140,10 +156,10 @@
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Listed as Step 2 for Assessment."
+        "notes": "Listed as step 2 of Steps for Assessment."
       },
       {
-        "criterion": "Observe the resident in a variety of situations during the 7-day look-back period.",
+        "criterion": "Observation of the resident in a variety of situations during the 7-day look-back period.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-5",
@@ -151,7 +167,18 @@
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Listed as Step 3 for Assessment."
+        "notes": "Listed as step 3 of Steps for Assessment."
+      },
+      {
+        "criterion": "Subsequent assessments and documentation can be compared to baseline to identify changes in the resident's behavior, including response to interventions.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-5",
+          "quote": "Subsequent assessments and documentation can be compared to baseline to identify changes in the resident's behavior, including response to interventions."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "low",
+        "notes": "Framed under Planning for Care rationale, not as a required documentation element."
       }
     ],
     "state": {}
@@ -159,15 +186,14 @@
   "state_deltas": [],
   "case_mix_relevance": {
     "level": "unknown",
-    "notes": "The supplied pages do not tie E0200 to any payment or case-mix classification."
+    "notes": "The pages for E0200 do not tie this item to any payment or case-mix classification."
   },
   "conflicts": [],
   "common_audit_citations": [],
   "not_found": [
     "case_mix_relevance",
     "state_deltas",
-    "common_audit_citations",
-    "lookback counting method relative to ARD"
+    "common_audit_citations"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",

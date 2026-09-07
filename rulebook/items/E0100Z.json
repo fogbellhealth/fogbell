@@ -7,9 +7,9 @@
   "lookback_source": {
     "doc": "rai-manual-v1.20.1",
     "loc": "p. E-2",
-    "quote": "Code based on behaviors observed and/or thoughts expressed in the last 7 days rather than the presence of a medical diagnosis. Check all that apply."
+    "quote": "Check E0100Z, none of the above: if no hallucinations or delusions were present in the last 7 days."
   },
-  "lookback_notes": "The manual states a 7-day look-back period for E0100; Steps for Assessment direct review of the medical record and staff interviews \"for the 7-day look-back period.\" The document does not state on this page how the 7 days are counted relative to the ARD.",
+  "lookback_notes": "The item's own pages state a 7-day look-back period for E0100 (\"Review the resident's medical record for the 7-day look-back period\") and code E0100Z is based on the last 7 days. Per the general convention, a 7-day observation period consists of the ARD plus the 6 previous calendar days (rai-manual-v1.20.1, p. 2-21).",
   "coding_levels": [
     {
       "code": "Z",
@@ -20,29 +20,11 @@
         "loc": "p. E-2",
         "quote": "Check E0100Z, none of the above: if no hallucinations or delusions were present in the last 7 days."
       }
-    },
-    {
-      "code": "Z (item set)",
-      "label": "Z. None of the above",
-      "definition": "Checkbox option Z within item E0100, Potential Indicators of Psychosis; instruction is \"Check all that apply.\"",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. E-1",
-        "quote": "Z. None of the above"
-      }
     }
   ],
   "federal_coding_rules": [
     {
-      "rule": "Check E0100Z (none of the above) if no hallucinations or delusions were present in the last 7 days.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. E-2",
-        "quote": "Check E0100Z, none of the above: if no hallucinations or delusions were present in the last 7 days."
-      }
-    },
-    {
-      "rule": "Code E0100 based on behaviors observed and/or thoughts expressed in the last 7 days rather than the presence of a medical diagnosis; check all that apply.",
+      "rule": "E0100 is a \"check all that apply\" item; check E0100Z (none of the above) if no hallucinations or delusions were present in the last 7 days.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-2",
@@ -50,7 +32,15 @@
       }
     },
     {
-      "rule": "If a belief cannot be objectively shown to be false, or it is not possible to determine whether it is false, do not code it as a delusion (and therefore it does not support checking E0100B).",
+      "rule": "Code based on behaviors observed and/or thoughts expressed in the last 7 days rather than the presence of a medical diagnosis.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-2",
+        "quote": "Code based on behaviors observed and/or thoughts expressed in the last 7 days rather than the presence of a medical diagnosis."
+      }
+    },
+    {
+      "rule": "If a belief cannot be objectively shown to be false, or it is not possible to determine whether it is false, do not code it as a delusion (and therefore it does not count toward checking E0100B, supporting E0100Z when no other indicators are present).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-3",
@@ -66,7 +56,7 @@
       }
     },
     {
-      "rule": "Resident intent should not be taken into account when coding items in Section E.",
+      "rule": "Resident intent must not be taken into account when coding items in Section E; the section focuses on the resident's actions, not the intent of their behavior.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-1",
@@ -74,7 +64,7 @@
       }
     },
     {
-      "rule": "Example: a resident who reports hearing a gunshot that was actually a loud knock and who accepts the alternative interpretation is coded E0100Z (misinterpretation of a real external stimulus is not a hallucination or a fixed false belief).",
+      "rule": "Example: a resident who misinterprets a real external sound and accepts the alternative explanation is not delusional — E0100Z would be checked.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-3",
@@ -82,11 +72,11 @@
       }
     },
     {
-      "rule": "Example: a false belief that is readily altered with a simple reminder (attributable to memory loss rather than psychosis) is coded E0100Z because it does not meet the definition of a delusion.",
+      "rule": "Example: a false belief readily altered with a simple reminder (attributable to memory loss rather than psychosis) is not a delusion — E0100Z would be checked.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-4",
-        "quote": "Rationale: The resident's initial false belief is readily altered with a simple reminder, suggesting that their mistaken belief is due to forgetfulness (i.e., memory loss) rather than psychosis. Because it is not a firmly held false belief, it does not fit the definition of a delusion."
+        "quote": "Coding: E0100Z would be checked."
       }
     }
   ],
@@ -101,7 +91,7 @@
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Listed as Step 1 for Assessment for E0100."
+        "notes": "Listed as Step 1 in Steps for Assessment."
       },
       {
         "criterion": "Interviews with staff members and others who have had the opportunity to observe the resident in a variety of situations during the 7-day look-back period.",
@@ -112,29 +102,29 @@
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Listed as Step 2 for Assessment for E0100."
+        "notes": "Step 2 in Steps for Assessment."
       },
       {
-        "criterion": "Observation of the resident during conversations and structured interviews in other assessment sections, listening for statements indicating hallucinations or false beliefs.",
+        "criterion": "Observation of the resident during conversations and structured interviews in other assessment sections, listening for statements indicating hallucinations or expression of false beliefs.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-2",
           "quote": "Observe the resident during conversations and the structured interviews in other assessment sections and listen for statements indicating an experience of hallucinations, or the expression of false beliefs (delusions)."
         },
         "verified_by_expert": false,
-        "audit_weight": "high",
-        "notes": "Listed as Step 3 for Assessment for E0100."
+        "audit_weight": "medium",
+        "notes": "Step 3 in Steps for Assessment."
       },
       {
-        "criterion": "Verification of the facts underlying a potentially false but plausible belief, to determine whether it could have happened or is likely false.",
+        "criterion": "Clarification/verification of potentially false beliefs, including attempting to verify facts and determining whether a false belief is readily corrected by a simple explanation of verifiable facts.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-2",
-          "quote": "try to verify the facts to determine whether there is reason to believe that it could have happened or whether it is likely that the belief is false"
+          "quote": "Clarify potentially false beliefs:"
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Part of Step 4, Clarify potentially false beliefs; supports a decision that no delusion is present (E0100Z)."
+        "notes": "Step 4 in Steps for Assessment; supports a determination that no delusion was present."
       }
     ],
     "state": {}
@@ -142,14 +132,14 @@
   "state_deltas": [],
   "case_mix_relevance": {
     "level": "unknown",
-    "notes": "The supplied Section E pages do not tie E0100Z to any payment or case-mix classification."
+    "notes": "The supplied pages do not tie E0100Z to any payment or case-mix classification."
   },
   "conflicts": [],
   "common_audit_citations": [],
   "not_found": [
-    "case_mix_relevance",
     "state_deltas",
-    "common_audit_citations"
+    "common_audit_citations",
+    "case_mix_relevance.source"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",
