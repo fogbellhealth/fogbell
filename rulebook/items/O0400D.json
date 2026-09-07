@@ -7,14 +7,14 @@
   "lookback_source": {
     "doc": "rai-manual-v1.20.1",
     "loc": "p. O-34",
-    "quote": "Days - record the number of days this therapy was administered for at least 15 minutes a day in the last 7 days"
+    "quote": "Days—Enter the number of days therapy services were provided in the last 7 days."
   },
-  "lookback_notes": "The item form and coding instructions both specify the last 7 days as the observation window; the example on the same page refers to it as the \"7-day look-back period.\" The document does not state on this page how the 7 days are counted relative to the ARD.",
+  "lookback_notes": "The item's own pages state a 7-day window (\"in the last 7 days\"), and the worked example on the same page refers to it as the \"7-day look-back period.\" Under the general convention (rai-manual-v1.20.1, p. 2-21) the window is counted as the ARD plus the 6 previous calendar days, but the 7-day value itself comes from the item's page, not from the convention.",
   "coding_levels": [
     {
-      "code": "Number of days",
-      "label": "Days respiratory therapy was administered for at least 15 minutes a day in the last 7 days",
-      "definition": "Enter the number of days therapy services were provided in the last 7 days; a day of therapy is defined as treatment for 15 minutes or more in the day.",
+      "code": "number of days",
+      "label": "Number of days therapy was administered for at least 15 minutes a day in the last 7 days",
+      "definition": "Enter the number of days respiratory therapy services were provided in the last 7 days; a day of therapy is defined as treatment for 15 minutes or more in the day.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. O-34",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "code": "(blank)",
+      "code": "blank",
       "label": "Item skipped / left blank",
       "definition": "If the total number of minutes during the last 7 days is 0, skip this item and leave blank.",
       "source": {
@@ -76,7 +76,7 @@
       }
     },
     {
-      "rule": "If the total number of minutes during the last 7 days is 0, skip this item and leave blank.",
+      "rule": "If the total number of minutes during the last 7 days is 0, skip the item and leave it blank.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. O-34",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "rule": "Days on which therapy totaled less than 15 minutes are not counted; the example shows 10 minutes/day on 5 days (50 total minutes) coded as 0 days.",
+      "rule": "Days on which therapy totaled less than 15 minutes are not counted, even if the cumulative minutes across the 7-day look-back period are substantial (e.g., 5 days of 10 minutes each = 0 days).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. O-34",
@@ -99,11 +99,11 @@
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. O-34",
-          "quote": "Review the resident's medical record (e.g., rehabilitation therapy evaluation and treatment records, recreation therapy notes, mental health professional progress notes), and consult with each of the qualified care providers to collect the information required for this item"
+          "quote": "Review the resident’s medical record (e.g., rehabilitation therapy evaluation and treatment records, recreation therapy notes, mental health professional progress notes), and consult with each of the qualified care providers to collect the information required for this item"
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Stated as a Step for Assessment rather than an explicit documentation requirement."
+        "notes": "Stated as a required Step for Assessment; the record sources are given as examples."
       },
       {
         "criterion": "Consult with each of the qualified care providers to collect the information required for this item.",
@@ -121,18 +121,17 @@
   "state_deltas": [],
   "case_mix_relevance": {
     "level": "unknown",
-    "notes": "The O0400 section pages do not tie this item to a payment or case-mix classification. The example mentions the resident was admitted under Part A skilled nursing facility coverage, but no payment/case-mix use of the item is stated."
+    "notes": "The pages for O0400 do not tie this item to a payment or case-mix classification. No such statement appears on p. O-34."
   },
   "conflicts": [],
   "common_audit_citations": [],
   "not_found": [
+    "case_mix_relevance.source",
     "state_deltas",
-    "conflicts",
-    "common_audit_citations",
-    "case_mix_relevance.level"
+    "common_audit_citations"
   ],
   "provenance_summary": {
-    "extracted_at": "2026-09-06",
+    "extracted_at": "2026-09-07",
     "model": "claude-opus-5",
     "extractor_version": "0.1.0",
     "expert_review_status": "unreviewed",

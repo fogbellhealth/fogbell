@@ -1,50 +1,60 @@
 {
   "item_id": "O0110D",
-  "item_name": "Suctioning (O0110D1, with sub-items O0110D2 Scheduled and O0110D3 As needed)",
+  "item_name": "Suctioning (O0110D1 Suctioning; O0110D2 Scheduled; O0110D3 As needed)",
   "section": "O",
   "instrument": "MDS-3.0",
   "lookback_days": 14,
   "lookback_source": {
     "doc": "rai-manual-v1.20.1",
-    "loc": "p. O-3",
-    "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+    "loc": "p. O-1",
+    "quote": "Performed while a resident of this facility and within the last 14 days"
   },
-  "lookback_notes": "O0110 uses a different assessment period for each column. Column b (While a Resident) uses the 14-day window — treatments performed while a resident of this facility and within the last 14 days — and is recorded here as the lookback. Column a (On Admission) uses days 1–3 of the SNF PPS Stay starting with A2400B, and column c (At Discharge) uses the last 3 days of the SNF PPS Stay ending with A2400C (p. O-1, p. O-3). The document does not state how the 14 days are counted relative to the ARD for this item.",
+  "lookback_notes": "The observation window differs by column and is stated on the item's own pages, so the general 7-day convention does not apply. Column b (While a Resident) uses the last 14 days (and only since admission/entry or reentry). Column a (On Admission) uses days 1–3 of the SNF PPS Stay starting with A2400B. Column c (At Discharge) uses the last 3 days of the SNF PPS Stay ending with A2400C. lookback_days is set to 14 for the resident-level (column b) observation window; the two 3-day SNF PPS assessment periods are recorded here and in conflicts.",
   "coding_levels": [
     {
       "code": "D1",
       "label": "Suctioning",
-      "definition": "Check when tracheal and/or nasopharyngeal suctioning was received or performed during the assessment period defined for the column; check boxes appear for column a (On Admission), column b (While a Resident), and column c (At Discharge).",
+      "definition": "Check if tracheal and/or nasopharyngeal suctioning was received or performed during the assessment period defined for the column. Available in columns a. On Admission, b. While a Resident, and c. At Discharge.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. O-5",
-        "quote": "Code only tracheal and/or nasopharyngeal suctioning in this item. Do not code oral suctioning here."
+        "loc": "p. O-1",
+        "quote": "D1. Suctioning"
       }
     },
     {
       "code": "D2",
       "label": "Scheduled",
-      "definition": "Check if suctioning was scheduled — performed when the resident is assessed as clinically benefiting from regular interventions, such as every hour or once per shift.",
+      "definition": "Check if suctioning was scheduled. Per the item table, this sub-element is available in columns a. On Admission and c. At Discharge only.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. O-5",
-        "quote": "Check if suctioning was scheduled. Scheduled suctioning is performed when the resident is assessed as clinically benefiting from regular interventions, such as every hour or once per shift."
+        "loc": "p. O-1",
+        "quote": "D2. Scheduled"
       }
     },
     {
       "code": "D3",
       "label": "As needed",
-      "definition": "Check if suctioning was performed on an as-needed basis, as opposed to at regular scheduled intervals.",
+      "definition": "Check if suctioning was performed on an as-needed basis. Per the item table, this sub-element is available in columns a. On Admission and c. At Discharge only.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. O-5",
-        "quote": "Check if suctioning was performed on an as-needed basis, as opposed to at regular scheduled intervals, such as when secretions become so prominent that gurgling or choking is noted or a sudden desaturation occurs from a mucus plug."
+        "loc": "p. O-1",
+        "quote": "D3. As needed"
+      }
+    },
+    {
+      "code": "Z1",
+      "label": "None of the above",
+      "definition": "Check when none of the listed treatments, procedures, or programs (including suctioning) were received or performed by the resident in the applicable assessment period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "O0110Z1, None of the above\nCode if none of the above treatments, procedures, or programs were received or performed by the resident."
       }
     }
   ],
   "federal_coding_rules": [
     {
-      "rule": "Code only tracheal and/or nasopharyngeal suctioning in O0110D1; do not code oral suctioning here.",
+      "rule": "Code only tracheal and/or nasopharyngeal suctioning in O0110D1; do not code oral suctioning.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. O-5",
@@ -60,15 +70,15 @@
       }
     },
     {
-      "rule": "Check O0110D2 (Scheduled) when suctioning was scheduled; scheduled suctioning applies to medical orders for performing suctioning at specific intervals and/or implementation of facility-based clinical standards, protocols, and guidelines.",
+      "rule": "Check O0110D2, Scheduled, if suctioning was scheduled — i.e., performed when the resident is assessed as clinically benefiting from regular interventions, such as every hour or once per shift; scheduled suctioning applies to medical orders for suctioning at specific intervals and/or implementation of facility-based clinical standards, protocols, and guidelines.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. O-5",
-        "quote": "Scheduled suctioning applies to medical orders for performing suctioning at specific intervals and/or implementation of facility-based clinical standards, protocols, and guidelines."
+        "quote": "Check if suctioning was scheduled. Scheduled suctioning is performed when the resident is assessed as clinically benefiting from regular interventions, such as every hour or once per shift."
       }
     },
     {
-      "rule": "Check O0110D3 (As needed) when suctioning was performed on an as-needed basis rather than at regular scheduled intervals (e.g., secretions so prominent that gurgling or choking is noted, or a sudden desaturation from a mucus plug).",
+      "rule": "Check O0110D3, As needed, if suctioning was performed on an as-needed basis, as opposed to at regular scheduled intervals.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. O-5",
@@ -76,31 +86,7 @@
       }
     },
     {
-      "rule": "Column a (On Admission): check the treatment if it was received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B; if no treatments, procedures, or programs occurred in that 3-day period, check Z, None of the above.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. O-3",
-        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B. If no treatments, procedures, or programs were received or performed in the 3-day assessment period, check Z, None of the above."
-      }
-    },
-    {
-      "rule": "Column b (While a Resident): check the treatment if the resident received or performed it after admission/entry or reentry to the facility and within the last 14 days; if none occurred within the last 14 days or since admission/entry or reentry, check Z, None of the above.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. O-3",
-        "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days. If no treatments, procedures or programs were received by, performed on, or participated in by the resident within the last 14 days or since admission/entry or reentry, check Z, None of the above."
-      }
-    },
-    {
-      "rule": "Column c (At Discharge): check the treatment if it was received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C; if none occurred in that 3-day period, check Z, None of the above.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. O-3",
-        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C."
-      }
-    },
-    {
-      "rule": "Facilities may code treatments, programs, and procedures that the resident performed themselves independently or after set-up by facility staff.",
+      "rule": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. O-3",
@@ -111,15 +97,40 @@
       "rule": "Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure; surgical procedures include routine pre- and post-operative procedures.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. O-1",
+        "loc": "p. O-3",
         "quote": "Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure, such as IV medications or ventilators. Surgical procedures include routine pre- and post-operative procedures."
       }
     },
     {
-      "rule": "In the O0110 item matrix, D1 (Suctioning) has check boxes under all three columns (a. On Admission, b. While a Resident, c. At Discharge), while the sub-items D2 (Scheduled) and D3 (As needed) have check boxes only under column a and column c.",
+      "rule": "Column a (On Admission): check the treatment if received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B; if nothing was received or performed in the 3-day assessment period, check Z, None of the above.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. O-1"
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B. If no treatments, procedures, or programs were received or performed in the 3-day assessment period, check Z, None of the above."
+      }
+    },
+    {
+      "rule": "Column b (While a Resident): check the treatment if the resident received or performed it after admission/entry or reentry to the facility and within the last 14 days; if none within the last 14 days or since admission/entry or reentry, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days. If no treatments, procedures or programs were received by, performed on, or participated in by the resident within the last 14 days or since admission/entry or reentry, check Z, None of the above."
+      }
+    },
+    {
+      "rule": "Column c (At Discharge): check the treatment if received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C; if none in the 3-day assessment period, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C."
+      }
+    },
+    {
+      "rule": "Check all that apply: the O0110 checkboxes are marked only for treatments, procedures, and programs that were performed in the applicable column's assessment period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "Check all of the following treatments, procedures, and programs that were performed"
       }
     }
   ],
@@ -137,7 +148,7 @@
         "notes": "Stated as the Step for Assessment for O0110."
       },
       {
-        "criterion": "For O0110D2 (Scheduled), the record should reflect medical orders for performing suctioning at specific intervals and/or implementation of facility-based clinical standards, protocols, and guidelines.",
+        "criterion": "For O0110D2 (Scheduled), documentation supporting scheduled suctioning includes medical orders for performing suctioning at specific intervals and/or implementation of facility-based clinical standards, protocols, and guidelines.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. O-5",
@@ -153,42 +164,76 @@
   "state_deltas": [],
   "case_mix_relevance": {
     "level": "unknown",
-    "notes": "The supplied pages describe O0110 assessment periods in relation to the SNF PPS Stay (A2400B/A2400C) but do not explicitly tie item O0110D to a payment or case-mix classification."
+    "notes": "The O0110 pages tie columns a and c to the SNF PPS Stay start (A2400B) and end (A2400C) dates, but the pages supplied do not explicitly state that O0110D contributes to a payment or case-mix classification."
   },
   "conflicts": [
     {
-      "topic": "Multiple assessment/observation windows coexist for O0110D depending on column",
+      "topic": "Coexisting observation windows for O0110D across the three columns",
       "positions": [
         {
           "authority": "federal",
-          "claim": "Column b (While a Resident) uses a 14-day observation window: treatments performed while a resident of this facility and within the last 14 days.",
+          "claim": "Column b (While a Resident) uses a 14-day window: treatments performed while a resident of this facility and within the last 14 days.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-1",
+            "quote": "Performed while a resident of this facility and within the last 14 days"
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Column a (On Admission) uses a 3-day window: days 1 through 3 of the SNF PPS Stay starting with A2400B.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-1",
+            "quote": "Assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B"
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Column c (At Discharge) uses a 3-day window: the last 3 days of the SNF PPS Stay ending on A2400C.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-1",
+            "quote": "Assessment period is the last 3 days of the SNF PPS Stay ending on A2400C"
+          }
+        }
+      ],
+      "resolution": "Resolved by the document: the Steps for Assessment instruct the assessor to use \"the assessment period defined for each column\" (p. O-3), so the 14-day window applies only to column b and the 3-day windows apply to columns a and c respectively."
+    },
+    {
+      "topic": "Availability of the D2/D3 sub-elements in column b (While a Resident)",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "The O0110 item table provides check boxes for D2 (Scheduled) and D3 (As needed) only under columns a. On Admission and c. At Discharge; no check box appears under b. While a Resident for these sub-elements, while D1 Suctioning has boxes in all three columns.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-1",
+            "quote": "D1. Suctioning"
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "The narrative coding instructions for columns a, b, and c direct the assessor to check all treatments, procedures, and programs for each column without excluding the D2/D3 sub-elements from column b.",
           "source": {
             "doc": "rai-manual-v1.20.1",
             "loc": "p. O-3",
             "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
           }
-        },
-        {
-          "authority": "federal",
-          "claim": "Column a uses days 1–3 of the SNF PPS Stay starting with A2400B and column c uses the last 3 days of the SNF PPS Stay ending with A2400C.",
-          "source": {
-            "doc": "rai-manual-v1.20.1",
-            "loc": "p. O-3",
-            "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B."
-          }
         }
       ],
-      "resolution": "Resolved by the document: the assessment period is defined separately for each column (p. O-3, Steps for Assessment: \"within the assessment period defined for each column\"). The 14-day window applies to column b; 3-day windows apply to columns a and c."
+      "resolution": "unresolved — surface to user"
     }
   ],
   "common_audit_citations": [],
   "not_found": [
     "state_deltas",
     "common_audit_citations",
-    "case_mix_relevance.source"
+    "case_mix_relevance.level",
+    "supportive_documentation.state"
   ],
   "provenance_summary": {
-    "extracted_at": "2026-09-06",
+    "extracted_at": "2026-09-07",
     "model": "claude-opus-5",
     "extractor_version": "0.1.0",
     "expert_review_status": "unreviewed",

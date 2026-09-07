@@ -306,3 +306,13 @@ One line per pipeline action or reviewed edit. Newest at the bottom. Format:
 - 2026-09-07 · promote · I5200 · doc=rai-manual-v1.20.1 pages=all model=claude-opus-5 · re-extracted with verbatim CONV preamble (template as of commit fe37ea6); lookback_days=7 (p. I-8); conflicts preserved (1); verify_quotes clean incl. convention-page citations
 - 2026-09-07 · extract · I5300 · doc=rai-manual-v1.20.1 pages=all model=claude-opus-5 · written to tmp/first-real-I/I5300.json
 - 2026-09-07 · promote · I5300 · doc=rai-manual-v1.20.1 pages=all model=claude-opus-5 · re-extracted with verbatim CONV preamble (template as of commit fe37ea6); lookback_days=7 (p. I-8); conflicts preserved (1); verify_quotes clean incl. convention-page citations
+- 2026-09-07 · extract · O0110B · doc=rai-manual-v1.20.1 pages=all model=claude-opus-5 · written to tmp/first-real-O/O0110B.json
+- 2026-09-07 · promote · O0110B · doc=rai-manual-v1.20.1 pages=all model=claude-opus-5 · re-extracted with verbatim CONV preamble (template as of commit fe37ea6); lookback_days=14 (p. O-3); conflicts preserved (1); verify_quotes clean incl. convention-page citations
+- 2026-09-07 · extract · O0110D · doc=rai-manual-v1.20.1 pages=all model=claude-opus-5 · written to tmp/first-real-O/O0110D.json
+- 2026-09-07 · promote · O0110D · doc=rai-manual-v1.20.1 pages=all model=claude-opus-5 · re-extracted with verbatim CONV preamble (template as of commit fe37ea6); lookback_days=14 (p. O-1); conflicts preserved (2); verify_quotes clean incl. convention-page citations
+- 2026-09-07 · extract · O0110M · doc=rai-manual-v1.20.1 pages=all model=claude-opus-5 · written to tmp/first-real-O/O0110M.json
+- 2026-09-07 · promote · O0110M · doc=rai-manual-v1.20.1 pages=all model=claude-opus-5 · re-extracted with verbatim CONV preamble (template as of commit fe37ea6); lookback_days=14 (p. O-3); conflicts preserved (1); verify_quotes clean incl. convention-page citations
+- 2026-09-07 · extract · O0400 · doc=rai-manual-v1.20.1 pages=all model=claude-opus-5 · written to tmp/first-real-O/O0400.json
+- 2026-09-07 · promote · O0400 · doc=rai-manual-v1.20.1 pages=all model=claude-opus-5 · re-extracted with verbatim CONV preamble (template as of commit fe37ea6); lookback_days=7 (p. O-34); conflicts preserved (0); verify_quotes clean incl. convention-page citations
+- 2026-09-07 · extract · O0400D · doc=rai-manual-v1.20.1 pages=all model=claude-opus-5 · written to tmp/first-real-O/O0400D.json
+- 2026-09-07 · promote · O0400D · doc=rai-manual-v1.20.1 pages=all model=claude-opus-5 · re-extracted with verbatim CONV preamble (template as of commit fe37ea6); lookback_days=7 (p. O-34); conflicts preserved (0); verify_quotes clean incl. convention-page citations
