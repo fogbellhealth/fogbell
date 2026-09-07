@@ -1,0 +1,295 @@
+{
+  "item_id": "I6300",
+  "item_name": "Respiratory Failure",
+  "section": "I",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. I-8",
+    "quote": "Diagnosis status: Active or Inactive (Step 2) is a 7-day look-back period (except for Item I2300 UTI, which does not use the active 7-day look-back period)."
+  },
+  "lookback_notes": "Two look-back periods apply to this section: diagnosis identification (Step 1) uses a 60-day look-back for a physician-documented diagnosis, and diagnosis status (active/inactive, Step 2) uses a 7-day look-back. lookback_days is set to the 7-day active-diagnosis observation window; the 60-day diagnosis-identification window is recorded here and as a conflict entry. The exception for I2300 UTI does not apply to I6300.",
+  "coding_levels": [
+    {
+      "code": "checked",
+      "label": "I6300 Respiratory Failure — checked",
+      "definition": "Check I6300 when respiratory failure is an active diagnosis: a diagnosis documented in the last 60 days that has a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-9",
+        "quote": "Code diseases that have a documented diagnosis in the last 60 days and have a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period"
+      }
+    },
+    {
+      "code": "unchecked",
+      "label": "Not checked",
+      "definition": "Leave unchecked if the diagnosis is not active; the document directs that if none of the listed active diagnoses apply, I7900 (none of the above active diagnoses within the past 7 days) is available.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-13",
+        "quote": "I7900, none of the above active diagnoses within the past 7 days"
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "I6300 is the Pulmonary-category item for respiratory failure within I0100–I8000: Active Diagnoses in the Last 7 Days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-12",
+        "quote": "I6300, respiratory failure"
+      }
+    },
+    {
+      "rule": "Code diseases that have a documented diagnosis in the last 60 days and have a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-9",
+        "quote": "Code diseases that have a documented diagnosis in the last 60 days and have a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period"
+      }
+    },
+    {
+      "rule": "The disease conditions in this section require a physician-documented diagnosis (or by a nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) in the last 60 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-8",
+        "quote": "The disease conditions in this section require a physician-documented diagnosis (or by a nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) in the last 60 days."
+      }
+    },
+    {
+      "rule": "Do not code conditions that have been resolved, do not affect the resident's current status, or do not drive the resident's plan of care during the 7-day look-back period; these are inactive diagnoses.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-8",
+        "quote": "Do not include conditions that have been resolved, do not affect the resident's current status, or do not drive the resident's plan of care during the 7-day look-back period, as these would be considered inactive diagnoses."
+      }
+    },
+    {
+      "rule": "Check off each active disease; check all that apply.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-9",
+        "quote": "Check off each active disease. Check all that apply."
+      }
+    },
+    {
+      "rule": "Examples of diseases listed for a category are not exhaustive; diseases coded in these categories are not limited to those listed in the examples.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-9",
+        "quote": "Examples of diseases are included for some disease categories. Diseases to be coded in these categories are not meant to be limited to only those listed in the examples."
+      }
+    },
+    {
+      "rule": "If a disease or condition is not specifically listed, enter the diagnosis and ICD code in item I8000, Additional active diagnosis.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-9",
+        "quote": "If a disease or condition is not specifically listed, enter the diagnosis and ICD code in item I8000, Additional active diagnosis."
+      }
+    },
+    {
+      "rule": "If the primary medical condition coded in I0020B is respiratory failure, it must also be included (checked) in items I0100–I8000.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-2",
+        "quote": "Include the primary medical condition coded in item I0020B in items I0100–I8000: Active Diagnoses in the Last 7 Days."
+      }
+    },
+    {
+      "rule": "When Z codes are used for aftercare following a hospitalization, another diagnosis for the related primary medical condition should be checked in items I0100–I7900 or entered in I8000.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-9",
+        "quote": "When Z codes are used, another diagnosis for the related primary medical condition should be checked in items I0100–I7900 or entered in I8000."
+      }
+    },
+    {
+      "rule": "Listing a disease/diagnosis on the resident's medical record problem list is not sufficient for determining active or inactive status.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-14",
+        "quote": "Listing a disease/diagnosis (e.g., arthritis) on the resident's medical record problem list is not sufficient for determining active or inactive status."
+      }
+    },
+    {
+      "rule": "Monitoring of medications for adverse effects as usual nursing practice relates to management of pharmacotherapy, not to management or monitoring of the underlying disease, for coding purposes.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-14",
+        "quote": "It is expected that nurses monitor all medications for adverse effects as part of usual nursing practice. For coding purposes, this monitoring relates to management of pharmacotherapy and not to management or monitoring of the underlying disease."
+      }
+    },
+    {
+      "rule": "Where practitioners have potentially misdiagnosed a resident with a condition lacking appropriate diagnostic information in the medical record, the corresponding Section I diagnosis should not be coded.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-14",
+        "quote": "the corresponding diagnosis in Section I should not be coded, and a referral by the facility and/or the survey team to the State Medical Boards or Boards of Nursing may be necessary."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Physician-documented diagnosis of respiratory failure (or by nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) within the last 60 days, found in sources such as progress notes, most recent history and physical, transfer documents, discharge summaries, or diagnosis/problem list (only physician-confirmed entries on a problem list).",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-8",
+          "quote": "Medical record sources for physician diagnoses include progress notes, the most recent history and physical, transfer documents, discharge summaries, diagnosis/ problem list, and other resources as available. If a diagnosis/problem list is used, only diagnoses confirmed by the physician should be entered."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Step 1 requirement for all Section I diagnosis items."
+      },
+      {
+        "criterion": "Diagnoses communicated verbally must be documented in the medical record by the physician.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-8",
+          "quote": "it is also essential that diagnoses communicated verbally be documented in the medical record by the physician to ensure follow-up."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      },
+      {
+        "criterion": "Diagnostic information, including past history obtained from family members and close contacts, must be documented in the medical record by the physician.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-8",
+          "quote": "Diagnostic information, including past history obtained from family members and close contacts, must also be documented in the medical record by the physician to ensure validity and follow-up."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      },
+      {
+        "criterion": "Evidence of active status within the last 7 days from medical record sources: transfer documents, physician progress notes, recent history and physical, recent discharge summaries, nursing assessments, nursing care plans, medication sheets, doctor's orders, consults and official diagnostic reports.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-9",
+          "quote": "Check the following information sources in the medical record for the last 7 days to identify \"active\" diagnoses: transfer documents, physician progress notes, recent history and physical, recent discharge summaries, nursing assessments, nursing care plans, medication sheets, doctor's orders, consults and official diagnostic reports, and other sources as available."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      },
+      {
+        "criterion": "Specific documentation by a physician, nurse practitioner, physician assistant, or clinical nurse specialist that the condition is active is sufficient and requires no additional confirmation.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-13",
+          "quote": "There may be specific documentation in the medical record by a physician, nurse practitioner, physician assistant, or clinical nurse specialist of active diagnosis."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Framed as an indicator that may assist assessors."
+      },
+      {
+        "criterion": "In the absence of specific documentation that the disease is active: documentation of recent onset or acute exacerbation indicated by a positive study, test or procedure, hospitalization for acute symptoms, and/or recent change in therapy in the last 7 days (sources: radiological reports, hospital discharge summaries, doctor's orders).",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-13",
+          "quote": "Recent onset or acute exacerbation of the disease or condition indicated by a positive study, test or procedure, hospitalization for acute symptoms and/or recent change in therapy in the last 7 days."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium"
+      },
+      {
+        "criterion": "In the absence of specific documentation that the disease is active: documented symptoms and abnormal signs indicating ongoing or decompensated disease in the last 7 days, with the symptom specifically attributed to the disease.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-13",
+          "quote": "Symptoms and abnormal signs indicating ongoing or decompensated disease in the last 7 days."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium"
+      },
+      {
+        "criterion": "In the absence of specific documentation that the disease is active: documentation of ongoing therapy with medications or other interventions to manage the condition requiring monitoring for therapeutic efficacy or for potentially severe side effects in the last 7 days.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-14",
+          "quote": "Ongoing therapy with medications or other interventions to manage a condition that requires monitoring for therapeutic efficacy or to monitor potentially severe side effects in the last 7 days."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium"
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages do not tie I6300 to any payment or case-mix classification. The pages reference Medicare Part A stay only in connection with item I0020 (primary medical condition category), not I6300."
+  },
+  "conflicts": [
+    {
+      "topic": "Two look-back windows apply to Section I active diagnosis items, including I6300",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "Diagnosis identification (Step 1) uses a 60-day look-back period for a physician-documented diagnosis.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. I-8",
+            "quote": "Diagnosis identification (Step 1) is a 60-day look-back period."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Diagnosis status (active or inactive, Step 2) uses a 7-day look-back period.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. I-8",
+            "quote": "Diagnosis status: Active or Inactive (Step 2) is a 7-day look-back period (except for Item I2300 UTI, which does not use the active 7-day look-back period)."
+          }
+        }
+      ],
+      "resolution": "Resolved by the document itself: both windows apply in sequence — the diagnosis must be documented within 60 days and must be active during the 7-day look-back period."
+    },
+    {
+      "topic": "Internal cross-reference page for I2300 UTI coding instructions (context for the section-wide exception, not specific to I6300)",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "The manual directs readers to Page I-13 for specific coding instructions for Item I2300 UTI.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. I-9",
+            "quote": "Please refer to Page I-13 for specific coding instructions for Item I2300 UTI."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "The manual directs readers to Page I-14 for specific coding instructions for Item I2300 UTI.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. I-9",
+            "quote": "Please refer to Item I2300 UTI, Page I-14 for specific coding instructions"
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "case_mix_relevance.source",
+    "state_deltas",
+    "common_audit_citations",
+    "item-specific coding tips for I6300 (the manual provides item-specific tips only for I2100, I2300 and I5100)",
+    "definition of respiratory failure"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

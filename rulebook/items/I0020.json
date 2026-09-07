@@ -1,0 +1,351 @@
+{
+  "item_id": "I0020",
+  "item_name": "Indicate the resident's primary medical condition category",
+  "section": "I",
+  "instrument": "MDS-3.0",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND — the I0020 section (pp. I-1 through I-4) states no observation/look-back window for this item. It directs the assessor to the primary reason for the Medicare Part A stay and to medical record sources for physician diagnoses, but specifies no number of days. The 60-day/7-day look-back periods printed on p. I-8 belong to the separate item set I0100–I8000 (Active Diagnoses in the Last 7 Days), not to I0020.",
+  "coding_levels": [
+    {
+      "code": "01",
+      "label": "Stroke",
+      "definition": "Code if the resident's primary medical condition category is due to stroke. Examples include ischemic stroke, subarachnoid hemorrhage, cerebral vascular accident (CVA), and other cerebrovascular disease.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-2",
+        "quote": "Code 01, Stroke, if the resident's primary medical condition category is due to stroke. Examples include ischemic stroke, subarachnoid hemorrhage, cerebral vascular accident (CVA), and other cerebrovascular disease."
+      }
+    },
+    {
+      "code": "02",
+      "label": "Non-Traumatic Brain Dysfunction",
+      "definition": "Code if the resident's primary medical condition category is non-traumatic brain dysfunction. Examples include Alzheimer's disease, dementia with or without behavioral disturbance, malignant neoplasm of brain, and anoxic brain damage.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-2",
+        "quote": "Code 02, Non-Traumatic Brain Dysfunction, if the resident's primary medical condition category is non-traumatic brain dysfunction. Examples include Alzheimer's disease, dementia with or without behavioral disturbance, malignant neoplasm of brain, and anoxic brain damage."
+      }
+    },
+    {
+      "code": "03",
+      "label": "Traumatic Brain Dysfunction",
+      "definition": "Code if the resident's primary medical condition category is traumatic brain dysfunction. Examples include traumatic brain injury, severe concussion, and cerebral laceration and contusion.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-2",
+        "quote": "Code 03, Traumatic Brain Dysfunction, if the resident's primary medical condition category is traumatic brain dysfunction. Examples include traumatic brain injury, severe concussion, and cerebral laceration and contusion."
+      }
+    },
+    {
+      "code": "04",
+      "label": "Non-Traumatic Spinal Cord Dysfunction",
+      "definition": "Code if the resident's primary medical condition category is non-traumatic spinal cord injury. Examples include spondylosis with myelopathy, transverse myelitis, spinal cord lesion due to spinal stenosis, and spinal cord lesion due to dissection of aorta.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-2",
+        "quote": "Code 04, Non-Traumatic Spinal Cord Dysfunction, if the resident's primary medical condition category is non-traumatic spinal cord injury. Examples include spondylosis with myelopathy, transverse myelitis, spinal cord lesion due to spinal stenosis, and spinal cord lesion due to dissection of aorta."
+      }
+    },
+    {
+      "code": "05",
+      "label": "Traumatic Spinal Cord Dysfunction",
+      "definition": "Code if the resident's primary medical condition category is due to traumatic spinal cord dysfunction. Examples include paraplegia and quadriplegia following trauma.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-2",
+        "quote": "Code 05, Traumatic Spinal Cord Dysfunction, if the resident's primary medical condition category is due to traumatic spinal cord dysfunction. Examples include paraplegia and quadriplegia following trauma."
+      }
+    },
+    {
+      "code": "06",
+      "label": "Progressive Neurological Conditions",
+      "definition": "Code if the resident's primary medical condition category is a progressive neurological condition. Examples include multiple sclerosis and Parkinson's disease.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-2",
+        "quote": "Code 06, Progressive Neurological Conditions, if the resident's primary medical condition category is a progressive neurological condition. Examples include multiple sclerosis and Parkinson's disease."
+      }
+    },
+    {
+      "code": "07",
+      "label": "Other Neurological Conditions",
+      "definition": "Code if the resident's primary medical condition category is other neurological condition. Examples include cerebral palsy, polyneuropathy, and myasthenia gravis.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-2",
+        "quote": "Code 07, Other Neurological Conditions, if the resident's primary medical condition category is other neurological condition. Examples include cerebral palsy, polyneuropathy, and myasthenia gravis."
+      }
+    },
+    {
+      "code": "08",
+      "label": "Amputation",
+      "definition": "Code if the resident's primary medical condition category is an amputation. An example is acquired absence of limb.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-2",
+        "quote": "Code 08, Amputation, if the resident's primary medical condition category is an amputation. An example is acquired absence of limb."
+      }
+    },
+    {
+      "code": "09",
+      "label": "Hip and Knee Replacement",
+      "definition": "Code if the resident's primary medical condition category is due to a hip or knee replacement. An example is total knee replacement. If hip replacement is secondary to hip fracture, code as fracture.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-3",
+        "quote": "Code 09, Hip and Knee Replacement, if the resident's primary medical condition category is due to a hip or knee replacement. An example is total knee replacement. If hip replacement is secondary to hip fracture, code as fracture."
+      }
+    },
+    {
+      "code": "10",
+      "label": "Fractures and Other Multiple Trauma",
+      "definition": "Code if the resident's primary medical condition category is fractures and other multiple trauma. Examples include hip fracture, pelvic fracture, and fracture of tibia and fibula.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-3",
+        "quote": "Code 10, Fractures and Other Multiple Trauma, if the resident's primary medical condition category is fractures and other multiple trauma. Examples include hip fracture, pelvic fracture, and fracture of tibia and fibula."
+      }
+    },
+    {
+      "code": "11",
+      "label": "Other Orthopedic Conditions",
+      "definition": "Code if the resident's primary medical condition category is other orthopedic condition. An example is unspecified disorders of joint.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-3",
+        "quote": "Code 11, Other Orthopedic Conditions, if the resident's primary medical condition category is other orthopedic condition. An example is unspecified disorders of joint."
+      }
+    },
+    {
+      "code": "12",
+      "label": "Debility, Cardiorespiratory Conditions",
+      "definition": "Code if the resident's primary medical condition category is debility or a cardiorespiratory condition. Examples include chronic obstructive pulmonary disease (COPD), asthma, and other malaise and fatigue.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-3",
+        "quote": "Code 12, Debility, Cardiorespiratory Conditions, if the resident's primary medical condition category is debility or a cardiorespiratory condition. Examples include chronic obstructive pulmonary disease (COPD), asthma, and other malaise and fatigue."
+      }
+    },
+    {
+      "code": "13",
+      "label": "Medically Complex Conditions",
+      "definition": "Code if the resident's primary medical condition category is a medically complex condition. Examples include diabetes, pneumonia, chronic kidney disease, open wounds, pressure ulcer/injury, infection, and disorders of fluid, electrolyte, and acid-base balance.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-3",
+        "quote": "Code 13, Medically Complex Conditions, if the resident's primary medical condition category is a medically complex condition. Examples include diabetes, pneumonia, chronic kidney disease, open wounds, pressure ulcer/injury, infection, and disorders of fluid, electrolyte, and acid-base balance."
+      }
+    },
+    {
+      "code": "I0020B",
+      "label": "ICD Code",
+      "definition": "Sub-item in which the ICD code for the primary medical condition category is entered, including the decimal.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-1",
+        "quote": "I0020B. ICD Code"
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Item completion gate as printed in the item box: complete only if A0310B = 01, or if the state requires completion with an OBRA assessment.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-1",
+        "quote": "Complete only if A0310B = 01 or if state requires completion with an OBRA assessment"
+      }
+    },
+    {
+      "rule": "Item completion gate as printed in the Coding Instructions: complete only if A0310B = 01 or 08.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-2",
+        "quote": "Complete only if A0310B = 01 or 08"
+      }
+    },
+    {
+      "rule": "Indicate the primary medical condition category that best describes the primary reason for the Medicare Part A stay, then proceed to I0020B and enter the ICD code for that condition, including the decimal.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-2",
+        "quote": "Indicate the resident's primary medical condition category that best describes the primary reason for the Medicare Part A stay; then proceed to I0020B and enter the International Classification of Diseases (ICD) code for that condition, including the decimal."
+      }
+    },
+    {
+      "rule": "An acute condition that is the primary reason for the SNF stay may be coded in I0020B; however, because residents more commonly present for care related to an aftereffect of a disease, condition, or injury, subsequent encounter or sequelae codes should be used.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-2",
+        "quote": "When an acute condition represents the primary reason for the resident's SNF stay, it can be coded in I0020B. However, it is more common that a resident presents to the SNF for care related to an aftereffect of a disease, condition, or injury. Therefore, subsequent encounter or sequelae codes should be used."
+      }
+    },
+    {
+      "rule": "The primary medical condition coded in I0020B must also be included in items I0100–I8000: Active Diagnoses in the Last 7 Days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-2",
+        "quote": "Include the primary medical condition coded in item I0020B in items I0100–I8000: Active Diagnoses in the Last 7 Days."
+      }
+    },
+    {
+      "rule": "If hip replacement is secondary to hip fracture, do not code 09 Hip and Knee Replacement; code as fracture (10, Fractures and Other Multiple Trauma).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-3",
+        "quote": "If hip replacement is secondary to hip fracture, code as fracture."
+      }
+    },
+    {
+      "rule": "Where a resident is admitted for rehabilitation following a total hip replacement performed because of a hip fracture, the primary medical condition category is 10, Fractures and Other Multiple Trauma (not hip/knee replacement).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-4",
+        "quote": "Because they were admitted for rehabilitation as a result of the hip fracture and total hip replacement, Resident E's primary medical condition category is 10, Fractures and Other Multiple Trauma."
+      }
+    },
+    {
+      "rule": "Surgical placement of a central line does not change the resident's care to a surgical category because it is not considered to be a major surgery (example rationale supporting coding 13, Medically Complex Conditions).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-4",
+        "quote": "The surgical placement of their central line does not change their care to a surgical category because it is not considered to be a major surgery."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Medical record sources for physician diagnoses used to determine the primary medical condition category include the most recent history and physical, transfer documents, discharge summaries, progress notes, and other resources as available.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-1",
+          "quote": "Medical record sources for physician diagnoses include the most recent history and physical, transfer documents, discharge summaries, progress notes, and other resources as available."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated in Steps for Assessment for I0020."
+      },
+      {
+        "criterion": "Physician documentation in the medical record (e.g., the history and physical documenting the diagnosis as the reason for admission) supports the selected primary medical condition category.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-3",
+          "quote": "The physician's history and physical documents the diagnosis stroke as the reason for Resident K's admission."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Drawn from Example 1 rationale; framed as an example rather than a stated requirement."
+      },
+      {
+        "criterion": "Medical record documentation (e.g., acute care hospital discharge summary) demonstrating the underlying condition and the reason for admission supports the category selected.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-4",
+          "quote": "Medical record documentation demonstrates that Resident E had a total hip replacement due to a hip fracture and required rehabilitation."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "From Example 2 rationale."
+      },
+      {
+        "criterion": "Hospital discharge/principal diagnoses incorporated into the SNF medical record support the primary medical condition category coded.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-4",
+          "quote": "Their principal diagnosis of pancreatitis was included in the summary from the hospital."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "From Example 3 rationale."
+      },
+      {
+        "criterion": "ICD-10 codes shown in the manual's examples for I0020B are illustrative only; the code entered must be an appropriate code for the condition category.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-3",
+          "quote": "The ICD-10 code provided in I0020B above is only an example of an appropriate code for this condition category."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "low",
+        "notes": "Repeated in each of the three examples (pp. I-3, I-4)."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The section ties I0020 to the primary reason for the Medicare Part A/SNF stay and gates completion on A0310B, but the supplied pages do not explicitly state that this item drives a payment or case-mix classification."
+  },
+  "conflicts": [
+    {
+      "topic": "Completion gate for I0020 (which A0310B values / OBRA requirement trigger completion)",
+      "positions": [
+        {
+          "authority": "rai-manual-v1.20.1",
+          "claim": "The item box states the item is completed only if A0310B = 01, or if the state requires completion with an OBRA assessment.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. I-1",
+            "quote": "Complete only if A0310B = 01 or if state requires completion with an OBRA assessment"
+          }
+        },
+        {
+          "authority": "rai-manual-v1.20.1",
+          "claim": "The Coding Instructions heading states the item is completed only if A0310B = 01 or 08.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. I-2",
+            "quote": "Complete only if A0310B = 01 or 08"
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    },
+    {
+      "topic": "Whether the category describes the primary reason for admission or the primary reason for the Medicare Part A stay",
+      "positions": [
+        {
+          "authority": "rai-manual-v1.20.1",
+          "claim": "The item box instructs the assessor to indicate the category that best describes the primary reason for admission.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. I-1",
+            "quote": "Indicate the resident's primary medical condition category that best describes the primary reason for admission"
+          }
+        },
+        {
+          "authority": "rai-manual-v1.20.1",
+          "claim": "The Item Rationale, Steps for Assessment, and Coding Instructions all refer to the primary reason for the Medicare Part A stay.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. I-2",
+            "quote": "Indicate the resident's primary medical condition category that best describes the primary reason for the Medicare Part A stay; then proceed to I0020B and enter the International Classification of Diseases (ICD) code for that condition, including the decimal."
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "state_deltas",
+    "case_mix_relevance.source",
+    "common_audit_citations"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

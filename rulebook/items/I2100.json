@@ -1,0 +1,299 @@
+{
+  "item_id": "I2100",
+  "item_name": "Septicemia",
+  "section": "I",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. I-8",
+    "quote": "Diagnosis status: Active or Inactive (Step 2) is a 7-day look-back period (except for Item I2300 UTI, which does not use the active 7-day look-back period)."
+  },
+  "lookback_notes": "I2100 falls under the I0100–I8000 Active Diagnoses in the Last 7 Days section, which states two look-back periods: diagnosis identification (Step 1) is a 60-day look-back, and diagnosis status (active or inactive, Step 2) is a 7-day look-back. The 7-day active-status window is recorded as the assessor's observation window; the 60-day window applies to identifying the physician-documented diagnosis. The only stated exception to the 7-day active look-back is I2300 UTI, not I2100.",
+  "coding_levels": [
+    {
+      "code": "checked",
+      "label": "I2100, Septicemia",
+      "definition": "Check I2100 if the medical record reflects inflammation due to sepsis and evidence of a microbial process (and the diagnosis meets the active diagnosis criteria).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-14",
+        "quote": "If the medical record reflects inflammation due to sepsis and evidence of a microbial process, code I2100, Septicemia."
+      }
+    },
+    {
+      "code": "not checked",
+      "label": "Not checked (code sepsis in I8000 instead)",
+      "definition": "If the medical record does not reflect inflammation due to sepsis and evidence of a microbial process, do not code I2100; enter the sepsis diagnosis and ICD code in item I8000, Additional Active Diagnoses.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-14",
+        "quote": "If the medical record does not reflect inflammation due to sepsis and evidence of a microbial process, enter the sepsis diagnosis and ICD code in item I8000, Additional Active Diagnoses."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "For sepsis to be considered septicemia, there must be inflammation due to sepsis and evidence of a microbial process.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-14",
+        "quote": "For sepsis to be considered septicemia, there needs to be inflammation due to sepsis and evidence of a microbial process."
+      }
+    },
+    {
+      "rule": "If the medical record reflects inflammation due to sepsis and evidence of a microbial process, code I2100, Septicemia.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-14",
+        "quote": "If the medical record reflects inflammation due to sepsis and evidence of a microbial process, code I2100, Septicemia."
+      }
+    },
+    {
+      "rule": "If the medical record does not reflect inflammation due to sepsis and evidence of a microbial process, enter the sepsis diagnosis and ICD code in item I8000, Additional Active Diagnoses, rather than coding I2100.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-14",
+        "quote": "If the medical record does not reflect inflammation due to sepsis and evidence of a microbial process, enter the sepsis diagnosis and ICD code in item I8000, Additional Active Diagnoses."
+      }
+    },
+    {
+      "rule": "Code the disease only if it has a documented diagnosis in the last 60 days AND has a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-9",
+        "quote": "Code diseases that have a documented diagnosis in the last 60 days and have a direct relationship to the resident's current functional status, cognitive status, mood or behavior status, medical treatments, nursing monitoring, or risk of death during the 7-day look-back period"
+      }
+    },
+    {
+      "rule": "The disease condition requires a physician-documented diagnosis (or by a nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) in the last 60 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-8",
+        "quote": "Identify diagnoses: The disease conditions in this section require a physician-documented diagnosis (or by a nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws) in the last 60 days."
+      }
+    },
+    {
+      "rule": "Do not include conditions that have been resolved, do not affect the resident's current status, or do not drive the resident's plan of care during the 7-day look-back period; these are inactive diagnoses.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-8",
+        "quote": "Do not include conditions that have been resolved, do not affect the resident's current status, or do not drive the resident's plan of care during the 7-day look-back period, as these would be considered inactive diagnoses."
+      }
+    },
+    {
+      "rule": "Check off each active disease; check all that apply.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-9",
+        "quote": "Check off each active disease. Check all that apply."
+      }
+    },
+    {
+      "rule": "Diagnoses listed in parentheses in the item set are provided as examples and should not be considered all-inclusive lists.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-5",
+        "quote": "Diagnoses listed in parentheses are provided as examples and should not be considered as all-inclusive lists"
+      }
+    },
+    {
+      "rule": "If the primary medical condition coded in I0020B is septicemia, it must also be coded in items I0100–I8000: Active Diagnoses in the Last 7 Days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-2",
+        "quote": "Include the primary medical condition coded in item I0020B in items I0100–I8000: Active Diagnoses in the Last 7 Days."
+      }
+    },
+    {
+      "rule": "Where practitioners have potentially misdiagnosed a resident with a condition for which there is a lack of appropriate diagnostic information in the medical record, the corresponding Section I diagnosis should not be coded.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. I-14",
+        "quote": "In situations where practitioners have potentially misdiagnosed residents with a condition for which there is a lack of appropriate diagnostic information in the medical record, such as for a mental disorder, the corresponding diagnosis in Section I should not be coded"
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Medical record documentation reflecting inflammation due to sepsis and evidence of a microbial process.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-14",
+          "quote": "For sepsis to be considered septicemia, there needs to be inflammation due to sepsis and evidence of a microbial process."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Item-specific prerequisite for coding I2100 rather than I8000."
+      },
+      {
+        "criterion": "Physician-documented diagnosis (or NP, PA, or clinical nurse specialist if allowable under state licensure laws) within the last 60 days; sources include progress notes, most recent history and physical, transfer documents, discharge summaries, diagnosis/problem list. If a diagnosis/problem list is used, only diagnoses confirmed by the physician should be entered.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-8",
+          "quote": "Medical record sources for physician diagnoses include progress notes, the most recent history and physical, transfer documents, discharge summaries, diagnosis/ problem list, and other resources as available. If a diagnosis/problem list is used, only diagnoses confirmed by the physician should be entered."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      },
+      {
+        "criterion": "Diagnoses communicated verbally must be documented in the medical record by the physician; diagnostic information including past history obtained from family members and close contacts must also be documented in the medical record by the physician.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-8",
+          "quote": "it is also essential that diagnoses communicated verbally be documented in the medical record by the physician to ensure follow-up."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      },
+      {
+        "criterion": "Evidence of active status within the last 7 days from medical record sources: transfer documents, physician progress notes, recent history and physical, recent discharge summaries, nursing assessments, nursing care plans, medication sheets, doctor's orders, consults and official diagnostic reports.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-9",
+          "quote": "Check the following information sources in the medical record for the last 7 days to identify \"active\" diagnoses: transfer documents, physician progress notes, recent history and physical, recent discharge summaries, nursing assessments, nursing care plans, medication sheets, doctor's orders, consults and official diagnostic reports, and other sources as available."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      },
+      {
+        "criterion": "Specific documentation by a physician, nurse practitioner, physician assistant, or clinical nurse specialist that the diagnosis is active is sufficient and requires no additional confirmation.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-13",
+          "quote": "There may be specific documentation in the medical record by a physician, nurse practitioner, physician assistant, or clinical nurse specialist of active diagnosis."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Framed as an indicator that \"may assist assessors.\""
+      },
+      {
+        "criterion": "In the absence of specific documentation that the disease is active, evidence of recent onset or acute exacerbation (positive study, test or procedure, hospitalization for acute symptoms, and/or recent change in therapy in the last 7 days), from sources such as radiological reports, hospital discharge summaries, and doctor's orders.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-13",
+          "quote": "Recent onset or acute exacerbation of the disease or condition indicated by a positive study, test or procedure, hospitalization for acute symptoms and/or recent change in therapy in the last 7 days."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Framed as an indicator that may be used to confirm active disease."
+      },
+      {
+        "criterion": "In the absence of specific documentation that the disease is active, documented symptoms and abnormal signs indicating ongoing or decompensated disease in the last 7 days, with the symptom specifically attributed to the disease.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-13",
+          "quote": "Symptoms and abnormal signs indicating ongoing or decompensated disease in the last 7 days."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium"
+      },
+      {
+        "criterion": "In the absence of specific documentation that the disease is active, documentation of ongoing therapy with medications or other interventions to manage the condition requiring monitoring for therapeutic efficacy or severe side effects in the last 7 days.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-14",
+          "quote": "Ongoing therapy with medications or other interventions to manage a condition that requires monitoring for therapeutic efficacy or to monitor potentially severe side effects in the last 7 days."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium"
+      },
+      {
+        "criterion": "A diagnosis listed only on the resident's medical record problem list is not sufficient for determining active or inactive status.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-14",
+          "quote": "Listing a disease/diagnosis (e.g., arthritis) on the resident's medical record problem list is not sufficient for determining active or inactive status."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      },
+      {
+        "criterion": "Routine nursing monitoring of medications for adverse effects does not by itself support active disease; that monitoring relates to management of pharmacotherapy, not management or monitoring of the underlying disease.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. I-14",
+          "quote": "It is expected that nurses monitor all medications for adverse effects as part of usual nursing practice. For coding purposes, this monitoring relates to management of pharmacotherapy and not to management or monitoring of the underlying disease."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages do not tie I2100 to any payment or case-mix classification."
+  },
+  "conflicts": [
+    {
+      "topic": "Two coexisting look-back windows apply to this item (60-day diagnosis identification vs. 7-day active status)",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "Diagnosis identification (Step 1) uses a 60-day look-back period.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. I-8",
+            "quote": "Diagnosis identification (Step 1) is a 60-day look-back period."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Diagnosis status (active or inactive, Step 2) uses a 7-day look-back period.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. I-8",
+            "quote": "Diagnosis status: Active or Inactive (Step 2) is a 7-day look-back period (except for Item I2300 UTI, which does not use the active 7-day look-back period)."
+          }
+        }
+      ],
+      "resolution": "Resolved by the document: both windows apply together — the diagnosis must be documented within 60 days and must be active during the 7-day look-back period (p. I-9 coding instructions)."
+    },
+    {
+      "topic": "Internal cross-reference page for I2300 UTI coding instructions",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "Refers the reader to Page I-13 for specific I2300 UTI coding instructions.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. I-9",
+            "quote": "Please refer to Page I-13 for specific coding instructions for Item I2300 UTI."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Refers the reader to Page I-14 for specific I2300 UTI coding instructions.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. I-9",
+            "quote": "Please refer to Item I2300 UTI, Page I-14 for specific coding instructions"
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user (peripheral to I2100; the UTI instructions appear on p. I-14)."
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "case_mix_relevance",
+    "state_deltas",
+    "common_audit_citations",
+    "item-specific examples of active/inactive septicemia"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}
