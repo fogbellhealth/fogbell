@@ -1,0 +1,188 @@
+{
+  "item_id": "O0110K",
+  "item_name": "Hospice care (O0110K1)",
+  "section": "O",
+  "instrument": "MDS-3.0",
+  "lookback_days": 14,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. O-3",
+    "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+  },
+  "lookback_notes": "O0110 is a three-column item. On the O0110 item matrix, K1 Hospice care is displayed with a check box only in column b, While a Resident (p. O-2), whose assessment period is the last 14 days (p. O-1, p. O-3); the rationale text also refers to a \"14-day look-back period\" (p. O-2). The other O0110 columns carry different windows that are stated on p. O-1/O-3 but are not offered for K1: column a, On Admission = days 1 through 3 of the SNF PPS Stay starting with A2400B; column c, At Discharge = the last 3 days of the SNF PPS Stay ending with A2400C. These coexisting windows are recorded in conflicts.",
+  "coding_levels": [
+    {
+      "code": "K1b (checked)",
+      "label": "Hospice care — While a Resident",
+      "definition": "Check when the resident is identified as being in a hospice program, as defined at p. O-7, during the column b assessment period (after admission/entry or reentry and within the last 14 days).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+      }
+    },
+    {
+      "code": "not checked / Z1",
+      "label": "None of the above",
+      "definition": "If no treatments, procedures or programs were received by, performed on, or participated in by the resident within the last 14 days or since admission/entry or reentry, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "If no treatments, procedures or programs were received by, performed on, or participated in by the resident within the last 14 days or since admission/entry or reentry, check Z, None of the above."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Code residents identified as being in a hospice program for terminally ill persons where an array of services is provided for the palliation and management of terminal illness and related conditions.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "Code residents identified as being in a hospice program for terminally ill persons where an array of services is provided for the palliation and management of terminal illness and related conditions."
+      }
+    },
+    {
+      "rule": "The hospice must be licensed by the state as a hospice provider and/or certified under the Medicare program as a hospice provider.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "The hospice must be licensed by the state as a hospice provider and/or certified under the Medicare program as a hospice provider."
+      }
+    },
+    {
+      "rule": "Column b (While a Resident): check all treatments, procedures, and programs the resident received or performed after admission/entry or reentry to the facility and within the last 14 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+      }
+    },
+    {
+      "rule": "If nothing in O0110 was received, performed or participated in within the last 14 days or since admission/entry or reentry, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "If no treatments, procedures or programs were received by, performed on, or participated in by the resident within the last 14 days or since admission/entry or reentry, check Z, None of the above."
+      }
+    },
+    {
+      "rule": "O0110Z1, None of the above: code if none of the listed treatments, procedures, or programs were received or performed by the resident.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Code if none of the above treatments, procedures, or programs were received or performed by the resident."
+      }
+    },
+    {
+      "rule": "General O0110 rule: facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff."
+      }
+    },
+    {
+      "rule": "General O0110 rule: do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure, such as IV medications or ventilators; surgical procedures include routine pre- and post-operative procedures.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure, such as IV medications or ventilators. Surgical procedures include routine pre- and post-operative procedures."
+      }
+    },
+    {
+      "rule": "On the O0110 item matrix, K1 Hospice care is offered with a check box only under column b, While a Resident (no check box under column a, On Admission, or column c, At Discharge).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-2",
+        "quote": "K1.\tHospice care"
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review the resident's medical record to determine whether or not the resident received or performed the treatment, procedure, or program within the assessment period defined for each column.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-3",
+          "quote": "Review the resident’s medical record to determine whether or not the resident received or performed any of the treatments, procedures, or programs within the assessment period defined for each column."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Only assessment step stated for O0110; the manual does not list specific documents for hospice on these pages."
+      },
+      {
+        "criterion": "Evidence that the hospice is licensed by the state as a hospice provider and/or certified under the Medicare program as a hospice provider.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-7",
+          "quote": "The hospice must be licensed by the state as a hospice provider and/or certified under the Medicare program as a hospice provider."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as a coding requirement; the manual does not specify which record element must evidence licensure/certification."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied O0110 pages (O-1 through O-10) do not tie O0110K1, Hospice care, to any payment or case-mix classification. Columns a and c reference SNF PPS Stay dates (A2400B/A2400C), but no payment/case-mix linkage is stated for this sub-item."
+  },
+  "conflicts": [
+    {
+      "topic": "Coexisting assessment windows within item O0110",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "Column a, On Admission: assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-3",
+            "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Column b, While a Resident: performed after admission/entry or reentry and within the last 14 days.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-3",
+            "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Column c, At Discharge: assessment period is the last 3 days of the SNF PPS Stay ending with A2400C.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-3",
+            "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C."
+          }
+        }
+      ],
+      "resolution": "Document itself resolves for this sub-item: the O0110 item matrix (p. O-2) offers K1 Hospice care only in column b, so the 14-day window governs; the 3-day admission and 3-day discharge windows apply to other O0110 sub-items. Both/all windows are preserved above."
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "case_mix_relevance.source",
+    "state_deltas",
+    "common_audit_citations",
+    "supportive_documentation.state",
+    "coding levels for columns a (On Admission) and c (At Discharge) for O0110K1"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

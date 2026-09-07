@@ -1,0 +1,655 @@
+{
+  "item_id": "O0110",
+  "item_name": "Special Treatments, Procedures, and Programs",
+  "section": "O",
+  "instrument": "MDS-3.0",
+  "lookback_days": 14,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. O-3",
+    "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+  },
+  "lookback_notes": "The observation window differs by column. Column b (While a Resident) uses a 14-day look-back (\"within the last 14 days\" after admission/entry or reentry); the item rationale also refers to \"the 14-day look-back period\" (p. O-2). Column a (On Admission) uses days 1–3 of the SNF PPS Stay starting with A2400B, and column c (At Discharge) uses the last 3 days of the SNF PPS Stay ending with A2400C (p. O-1, p. O-3). lookback_days is recorded as 14 for the While a Resident column; the two 3-day column windows are recorded here and as a conflict.",
+  "coding_levels": [
+    {
+      "code": "a",
+      "label": "On Admission",
+      "definition": "Assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "Assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B"
+      }
+    },
+    {
+      "code": "b",
+      "label": "While a Resident",
+      "definition": "Performed while a resident of this facility and within the last 14 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "Performed while a resident of this facility and within the last 14 days"
+      }
+    },
+    {
+      "code": "c",
+      "label": "At Discharge",
+      "definition": "Assessment period is the last 3 days of the SNF PPS Stay ending on A2400C.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "Assessment period is the last 3 days of the SNF PPS Stay ending on A2400C"
+      }
+    },
+    {
+      "code": "A1",
+      "label": "Chemotherapy",
+      "definition": "Any type of chemotherapy agent administered as an antineoplastic given by any route; medications coded here are those actually used for cancer treatment.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Code any type of chemotherapy agent administered as an antineoplastic given by any route in this item."
+      }
+    },
+    {
+      "code": "A2",
+      "label": "IV (chemotherapy)",
+      "definition": "Chemotherapy administered intravenously.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Check if chemotherapy was administered intravenously."
+      }
+    },
+    {
+      "code": "A3",
+      "label": "Oral (chemotherapy)",
+      "definition": "Chemotherapy administered orally (e.g., pills, capsules, or liquids the patient swallows); also applies if administered through a feeding tube/PEG (i.e., enterally).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Check if chemotherapy was administered orally (e.g., pills, capsules, or liquids the patient swallows). This sub-element also applies if the chemotherapy is administered through a feeding tube/PEG (i.e., enterally)."
+      }
+    },
+    {
+      "code": "A10",
+      "label": "Other (chemotherapy)",
+      "definition": "Chemotherapy given in a way other than intravenously or orally (e.g., intramuscular, intraventricular/intrathecal, intraperitoneal, or topical routes).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Check if chemotherapy was given in a way other than intravenously or orally (e.g., intramuscular, intraventricular/intrathecal, intraperitoneal, or topical routes)."
+      }
+    },
+    {
+      "code": "B1",
+      "label": "Radiation",
+      "definition": "Intermittent radiation therapy, as well as radiation administered via radiation implant.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Code intermittent radiation therapy, as well as radiation administered via radiation implant in this item."
+      }
+    },
+    {
+      "code": "C1",
+      "label": "Oxygen therapy",
+      "definition": "Continuous or intermittent oxygen administered via mask, cannula, etc., delivered to a resident to relieve hypoxia; includes oxygen used in BiPAP/CPAP.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Code continuous or intermittent oxygen administered via mask, cannula, etc., delivered to a resident to relieve hypoxia in this item. Code oxygen used in Bi-level Positive Airway Pressure/Continuous Positive Airway Pressure (BiPAP/CPAP) here."
+      }
+    },
+    {
+      "code": "C2",
+      "label": "Continuous (oxygen)",
+      "definition": "Oxygen therapy continuously delivered for 14 hours or greater per day.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Check if oxygen therapy was continuously delivered for 14 hours or greater per day."
+      }
+    },
+    {
+      "code": "C3",
+      "label": "Intermittent (oxygen)",
+      "definition": "Oxygen therapy that was intermittent (i.e., not delivered continuously for at least 14 hours per day).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Check if oxygen therapy was intermittent (i.e., not delivered continuously for at least 14 hours per day)."
+      }
+    },
+    {
+      "code": "C4",
+      "label": "High-concentration (oxygen)",
+      "definition": "Oxygen therapy provided via a high-concentration delivery system, i.e., one that delivers oxygen at a concentration exceeding FiO2 of 40%.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Check if oxygen therapy was provided via a high-concentration delivery system. A high-concentration oxygen delivery system is one that delivers oxygen at a concentration that exceeds a fraction of inspired oxygen FiO2 of 40%"
+      }
+    },
+    {
+      "code": "D1",
+      "label": "Suctioning",
+      "definition": "Only tracheal and/or nasopharyngeal suctioning; oral suctioning is not coded here.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-5",
+        "quote": "Code only tracheal and/or nasopharyngeal suctioning in this item. Do not code oral suctioning here."
+      }
+    },
+    {
+      "code": "D2",
+      "label": "Scheduled (suctioning)",
+      "definition": "Suctioning performed when the resident is assessed as clinically benefiting from regular interventions, such as every hour or once per shift; applies to medical orders for suctioning at specific intervals and/or facility-based clinical standards, protocols, and guidelines.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-5",
+        "quote": "Check if suctioning was scheduled. Scheduled suctioning is performed when the resident is assessed as clinically benefiting from regular interventions, such as every hour or once per shift."
+      }
+    },
+    {
+      "code": "D3",
+      "label": "As needed (suctioning)",
+      "definition": "Suctioning performed on an as-needed basis, as opposed to at regular scheduled intervals.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-5",
+        "quote": "Check if suctioning was performed on an as-needed basis, as opposed to at regular scheduled intervals"
+      }
+    },
+    {
+      "code": "E1",
+      "label": "Tracheostomy care",
+      "definition": "Cleansing of the tracheostomy and/or cannula; includes laryngectomy tube care.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-5",
+        "quote": "Code cleansing of the tracheostomy and/or cannula in this item. This item may be coded if the resident performs their own tracheostomy care. This item includes laryngectomy tube care."
+      }
+    },
+    {
+      "code": "F1",
+      "label": "Invasive Mechanical Ventilator (ventilator or respirator)",
+      "definition": "Any type of electrically or pneumatically powered closed-system mechanical ventilator support device that ensures adequate ventilation in the resident who is or may become unable to support their own respiration.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-5",
+        "quote": "Code any type of electrically or pneumatically powered closed-system mechanical ventilator support device that ensures adequate ventilation in the resident who is or who may become (such as during weaning attempts) unable to support their own respiration in this item."
+      }
+    },
+    {
+      "code": "G1",
+      "label": "Non-invasive Mechanical Ventilator",
+      "definition": "Any type of CPAP or BiPAP respiratory support devices that prevent airways from closing by delivering slightly pressurized air through a mask or other device continuously or via electronic cycling throughout the breathing cycle.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "Code any type of CPAP or BiPAP respiratory support devices that prevent airways from closing by delivering slightly pressurized air through a mask or other device continuously or via electronic cycling throughout the breathing cycle."
+      }
+    },
+    {
+      "code": "G2",
+      "label": "BiPAP",
+      "definition": "Non-invasive mechanical ventilator support that was BiPAP.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "Check if the non-invasive mechanical ventilator support was BiPAP."
+      }
+    },
+    {
+      "code": "G3",
+      "label": "CPAP",
+      "definition": "Non-invasive mechanical ventilator support that was CPAP.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "Check if the non-invasive mechanical ventilator support was CPAP."
+      }
+    },
+    {
+      "code": "H1",
+      "label": "IV medications",
+      "definition": "Any drug or biological given by intravenous push, epidural pump, or drip through a central or peripheral port.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "Code any drug or biological given by intravenous push, epidural pump, or drip through a central or peripheral port in this item."
+      }
+    },
+    {
+      "code": "H2",
+      "label": "Vasoactive medications",
+      "definition": "At least one of the IV medications was an IV vasoactive medication.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "Check when at least one of the IV medications was an IV vasoactive medication."
+      }
+    },
+    {
+      "code": "H3",
+      "label": "Antibiotics",
+      "definition": "At least one of the IV medications was an IV antibiotic.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "Check when at least one of the IV medications was an IV antibiotic."
+      }
+    },
+    {
+      "code": "H4",
+      "label": "Anticoagulation",
+      "definition": "At least one of the IV medications was an IV anticoagulant; subcutaneous administration of anticoagulant medications is not included.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "Check when at least one of the IV medications was an IV anticoagulant. Do not include subcutaneous administration of anticoagulant medications."
+      }
+    },
+    {
+      "code": "H10",
+      "label": "Other (IV medications)",
+      "definition": "At least one of the IV medications was not an IV vasoactive medication, IV antibiotic, or IV anticoagulant (e.g., IV analgesics, IV diuretics).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "Check when at least one of the IV medications was not an IV vasoactive medication, IV antibiotic, or IV anticoagulant. Examples include IV analgesics (e.g., morphine) and IV diuretics (e.g., furosemide)."
+      }
+    },
+    {
+      "code": "I1",
+      "label": "Transfusions",
+      "definition": "Transfusions of blood or any blood products (e.g., platelets, synthetic blood products) administered directly into the bloodstream.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "Code transfusions of blood or any blood products (e.g., platelets, synthetic blood products), that are administered directly into the bloodstream in this item."
+      }
+    },
+    {
+      "code": "J1",
+      "label": "Dialysis",
+      "definition": "Peritoneal or renal dialysis which occurs at the nursing home or at another facility; includes hemofiltration, SCUF, CAVH, and CAPD.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "Code peritoneal or renal dialysis which occurs at the nursing home or at another facility, record treatments of hemofiltration, Slow Continuous Ultrafiltration (SCUF), Continuous Arteriovenous Hemofiltration (CAVH), and Continuous Ambulatory Peritoneal Dialysis (CAPD) in this item."
+      }
+    },
+    {
+      "code": "J2",
+      "label": "Hemodialysis",
+      "definition": "Dialysis in which the patient's blood is circulated directly through a dialysis machine that uses special filters to remove waste products and excess fluid from the blood.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "Check when the dialysis was hemodialysis."
+      }
+    },
+    {
+      "code": "J3",
+      "label": "Peritoneal dialysis",
+      "definition": "Dialysis in which dialysate is infused into the peritoneal cavity and the peritoneum serves as a filter to remove waste products and excess fluid from the blood.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "Check when the dialysis was peritoneal dialysis."
+      }
+    },
+    {
+      "code": "K1",
+      "label": "Hospice care",
+      "definition": "Residents identified as being in a hospice program for terminally ill persons where an array of services is provided for the palliation and management of terminal illness and related conditions.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "Code residents identified as being in a hospice program for terminally ill persons where an array of services is provided for the palliation and management of terminal illness and related conditions."
+      }
+    },
+    {
+      "code": "M1",
+      "label": "Isolation or quarantine for active infectious disease (does not include standard body/fluid precautions)",
+      "definition": "Coded only when the resident requires transmission-based precautions and single room isolation (alone in a separate room) because of active infection with highly transmissible or epidemiologically significant pathogens acquired by physical contact or airborne or droplet transmission.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-8",
+        "quote": "Code only when the resident requires transmission-based precautions and single room isolation (alone in a separate room) because of active infection"
+      }
+    },
+    {
+      "code": "O1",
+      "label": "IV Access",
+      "definition": "A catheter inserted into a vein for a variety of clinical reasons, including long-term medication administration, large volumes of blood or fluid, frequent access for blood samples, intravenous fluid administration, total parenteral nutrition (TPN), or measurement of central venous pressure.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Code IV access, which refers to a catheter inserted into a vein for a variety of clinical reasons, including long-term medication administration, large volumes of blood or fluid, frequent access for blood samples, intravenous fluid administration, total parenteral nutrition (TPN), or, in some instances, the measurement of central venous pressure."
+      }
+    },
+    {
+      "code": "O2",
+      "label": "Peripheral (IV access)",
+      "definition": "IV access that was peripheral access (catheter is placed in a peripheral vein) and remains peripheral.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Check when IV access was peripheral access (catheter is placed in a peripheral vein) and remains peripheral."
+      }
+    },
+    {
+      "code": "O3",
+      "label": "Midline (IV access)",
+      "definition": "Midline access; midline catheters are inserted into the antecubital (or other upper arm) vein and do not reach all the way to a central vein such as the superior vena cava.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Check when IV access was midline access. Midline catheters are inserted into the antecubital (or other upper arm) vein and do not reach all the way to a central vein such as the superior vena cava."
+      }
+    },
+    {
+      "code": "O4",
+      "label": "Central (e.g., PICC, tunneled, port)",
+      "definition": "IV access that was centrally located (e.g., PICC, tunneled, port).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Check when IV access was centrally located (e.g., PICC, tunneled, port)."
+      }
+    },
+    {
+      "code": "Z1",
+      "label": "None of the above",
+      "definition": "None of the above treatments, procedures, or programs were received or performed by the resident.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Code if none of the above treatments, procedures, or programs were received or performed by the resident."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff."
+      }
+    },
+    {
+      "rule": "Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure, such as IV medications or ventilators; surgical procedures include routine pre- and post-operative procedures.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure, such as IV medications or ventilators. Surgical procedures include routine pre- and post-operative procedures."
+      }
+    },
+    {
+      "rule": "Review the resident's medical record to determine whether or not the resident received or performed any of the treatments, procedures, or programs within the assessment period defined for each column.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Review the resident's medical record to determine whether or not the resident received or performed any of the treatments, procedures, or programs within the assessment period defined for each column."
+      }
+    },
+    {
+      "rule": "Column a (On Admission): check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B; if none, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B. If no treatments, procedures, or programs were received or performed in the 3-day assessment period, check Z, None of the above."
+      }
+    },
+    {
+      "rule": "Column b (While a Resident): check all treatments, procedures, and programs the resident received or performed after admission/entry or reentry to the facility and within the last 14 days; if none, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days. If no treatments, procedures or programs were received by, performed on, or participated in by the resident within the last 14 days or since admission/entry or reentry, check Z, None of the above."
+      }
+    },
+    {
+      "rule": "Column c (At Discharge): check all treatments, procedures, and programs received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C; if none, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C. If no treatments, procedures or programs were received by, performed on, or participated in by the resident in the 3-day assessment period, check Z, None of the above."
+      }
+    },
+    {
+      "rule": "O0110A1 Chemotherapy: each medication must be evaluated to determine its reason for use before coding; only medications actually used for cancer treatment are coded (e.g., megestrol acetate given only for appetite stimulation is not coded as chemotherapy).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Each medication should be evaluated to determine its reason for use before coding it here. Medications coded here are those actually used for cancer treatment."
+      }
+    },
+    {
+      "rule": "O0110A1: hormonal and other agents administered to prevent the recurrence or slow the growth of cancer are not coded as chemotherapy for MDS purposes.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Hormonal and other agents administered to prevent the recurrence or slow the growth of cancer should not be coded in this item, as they are not considered chemotherapy for the purpose of coding the MDS."
+      }
+    },
+    {
+      "rule": "IVs, IV medication, and blood transfusions administered during chemotherapy are not recorded under K0520A (Parenteral/IV), O0110H (IV Medications), or O0110I (Transfusions).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "IVs, IV medication, and blood transfusions administered during chemotherapy are not recorded under items K0520A (Parenteral/IV), O0110H (IV Medications), or O0110I (Transfusions)."
+      }
+    },
+    {
+      "rule": "O0110C1 Oxygen therapy: do not code hyperbaric oxygen for wound therapy; the item may be coded if the resident places or removes their own oxygen mask or cannula.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Do not code hyperbaric oxygen for wound therapy in this item. This item may be coded if the resident places or removes their own oxygen mask, cannula."
+      }
+    },
+    {
+      "rule": "O0110C4: a high-concentration delivery system can include high- or low-flow systems, and may include invasive or non-invasive mechanical ventilators or trach masks if the delivered FiO2 exceeds 40%; oxygen-conserving nasal cannula systems with reservoirs are included only if used to deliver an FiO2 greater than 40%.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-5",
+        "quote": "Oxygen-conserving nasal cannula systems with reservoirs (e.g., mustache, pendant) should be included only if they are used to deliver an FiO2 of greater than 40%."
+      }
+    },
+    {
+      "rule": "O0110D1 Suctioning may be coded if the resident performs their own tracheal and/or nasopharyngeal suctioning.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-5",
+        "quote": "This item may be coded if the resident performs their own tracheal and/or nasopharyngeal suctioning."
+      }
+    },
+    {
+      "rule": "O0110F1: a resident who has been weaned off a respirator or ventilator in the last 14 days, or who is currently being weaned off a respirator or ventilator, should also be coded here.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-5",
+        "quote": "A resident who has been weaned off of a respirator or ventilator in the last 14 days or is currently being weaned off a respirator or ventilator, should also be coded here."
+      }
+    },
+    {
+      "rule": "O0110F1: do not code this item when the ventilator or respirator is used only as a substitute for BiPAP or CPAP.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-5",
+        "quote": "Do not code this item when the ventilator or respirator is used only as a substitute for BiPAP or CPAP."
+      }
+    },
+    {
+      "rule": "O0110G1: if a ventilator or respirator is being used as a substitute for BiPAP/CPAP, code here; the item may be coded if the resident places or removes their own BiPAP/CPAP mask/device.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "If a ventilator or respirator is being used as a substitute for BiPAP/CPAP, code here. This item may be coded if the resident places or removes their own BiPAP/CPAP mask/device."
+      }
+    },
+    {
+      "rule": "O0110H1: do not code flushes to keep an IV access port patent, or IV fluids without medication; subcutaneous pumps are not coded; epidural, intrathecal, and baclofen pumps may be coded here.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "Do not code flushes to keep an IV access port patent, or IV fluids without medication here. Epidural, intrathecal, and baclofen pumps may be coded here, as they are similar to IV medications in that they must be monitored frequently and they involve continuous administration of a substance. Subcutaneous pumps are not coded in this item."
+      }
+    },
+    {
+      "rule": "O0110H1: do not include IV medications of any kind that were administered during dialysis or chemotherapy; Lactated Ringers given IV is not considered a medication and should not be coded here.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "Do not include IV medications of any kind that were administered during dialysis or chemotherapy. Lactated Ringers given IV is not considered a medication and should not be coded here."
+      }
+    },
+    {
+      "rule": "O0110I1: do not include transfusions that were administered during dialysis or chemotherapy.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "Do not include transfusions that were administered during dialysis or chemotherapy."
+      }
+    },
+    {
+      "rule": "O0110J1: IVs, IV medication, and blood transfusions administered during dialysis are considered part of the dialysis procedure and are not to be coded under K0520A, O0110H, or O0110I; the item may be coded if the resident performs their own dialysis.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "IVs, IV medication, and blood transfusions administered during dialysis are considered part of the dialysis procedure and are not to be coded under items K0520A (Parenteral/IV), O0110H (IV medications), or O0110I (transfusions). This item may be coded if the resident performs their own dialysis."
+      }
+    },
+    {
+      "rule": "O0110K1: the hospice must be licensed by the state as a hospice provider and/or certified under the Medicare program as a hospice provider.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "The hospice must be licensed by the state as a hospice provider and/or certified under the Medicare program as a hospice provider."
+      }
+    },
+    {
+      "rule": "O0110M1: do not code if the resident only has a history of infectious disease (e.g., s/p MRSA or s/p C-Diff with no active symptoms), and do not code if the precautions are standard precautions.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-8",
+        "quote": "Do not code this item if the resident only has a history of infectious disease (e.g., s/p MRSA or s/p C-Diff - no active symptoms). Do not code this item if the precautions are standard precautions, because these types of precautions apply to everyone."
+      }
+    },
+    {
+      "rule": "O0110M1: code for \"single room isolation\" only when all four conditions are met — (1) active infection with highly transmissible or epidemiologically significant pathogens acquired by physical contact or airborne or droplet transmission; (2) transmission-based precautions over and above standard precautions in effect; (3) the resident is in a room alone because of active infection and cannot have a roommate; and (4) the resident must remain in their room with all services brought to them.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-8",
+        "quote": "Code for \"single room isolation\" only when all of the following conditions are met:"
+      }
+    },
+    {
+      "rule": "O0110M1: if a facility transports a resident who meets the criteria for single room isolation to another healthcare setting for medically needed services the facility cannot provide, they may still code O0110M for single room isolation since it is still being maintained while the resident is in the facility.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-8",
+        "quote": "they should follow CDC guidelines for transport of patients with communicable disease, and may still code O0110M for single room isolation since it is still being maintained while the resident is in the facility."
+      }
+    },
+    {
+      "rule": "O0110O1: an arteriovenous (AV) fistula does not meet the definition of IV Access for O0110O1.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "An arteriovenous (AV) fistula does not meet the definition of IV Access for O0110O1."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "The resident's medical record must support that the treatment, procedure, or program was received or performed within the assessment period defined for each column.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-3",
+          "quote": "Review the resident's medical record to determine whether or not the resident received or performed any of the treatments, procedures, or programs within the assessment period defined for each column."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as the single Step for Assessment for this item."
+      },
+      {
+        "criterion": "For O0110A1 (Chemotherapy), documentation of each medication's reason for use is needed to establish that it was administered for cancer treatment rather than another purpose (e.g., appetite stimulation).",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-3",
+          "quote": "Each medication should be evaluated to determine its reason for use before coding it here."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium"
+      },
+      {
+        "criterion": "For O0110M1 (Isolation), evidence that transmission-based precautions were in effect and that the resident was alone in a room and remained in the room with all services brought to them (all four listed conditions).",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-8",
+          "quote": "2. Precautions are over and above standard precautions. That is, transmission-based precautions (contact, droplet, and/or airborne) must be in effect."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "All four conditions on p. O-8 must be met to code single room isolation."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The pages define column a and column c assessment periods by reference to the SNF PPS Stay (A2400B/A2400C), but no passage in the O0110 section explicitly ties this item to a payment or case-mix classification."
+  },
+  "conflicts": [
+    {
+      "topic": "Multiple assessment/observation windows coexist for O0110 (14 days vs. two 3-day windows)",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "Column b (While a Resident) uses a 14-day look-back; the rationale refers to \"the 14-day look-back period.\"",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-2",
+            "quote": "Reevaluation of special treatments and procedures the resident received or performed, or programs that the resident was involved in during the 14-day look-back period is important to ensure the continued appropriateness of the treatments, procedures, or programs."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Columns a and c use 3-day assessment periods tied to the SNF PPS Stay start (A2400B) and end (A2400C).",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-3",
+            "quote": "If no treatments, procedures, or programs were received or performed in the 3-day assessment period, check Z, None of the above."
+          }
+        }
+      ],
+      "resolution": "Resolved by the document itself: the assessment period is defined separately for each column (p. O-3, \"within the assessment period defined for each column\"). Both windows apply, to different columns."
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "case_mix_relevance.source",
+    "state_deltas",
+    "common_audit_citations"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

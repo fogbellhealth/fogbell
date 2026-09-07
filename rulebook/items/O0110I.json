@@ -1,0 +1,187 @@
+{
+  "item_id": "O0110I",
+  "item_name": "Transfusions (O0110I1) — Special Treatments, Procedures, and Programs",
+  "section": "O",
+  "instrument": "MDS-3.0",
+  "lookback_days": 14,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. O-3",
+    "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+  },
+  "lookback_notes": "O0110 uses column-specific assessment periods rather than a single window: Column a. On Admission = days 1–3 of the SNF PPS Stay starting with A2400B; Column b. While a Resident = the last 14 days (after admission/entry or reentry); Column c. At Discharge = the last 3 days of the SNF PPS Stay ending with A2400C. The 14-day period recorded in lookback_days is the 'While a Resident' observation window; the two 3-day windows are also stated on p. O-1 and p. O-3.",
+  "coding_levels": [
+    {
+      "code": "I1a",
+      "label": "Transfusions — On Admission",
+      "definition": "Check if transfusions were received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B."
+      }
+    },
+    {
+      "code": "I1b",
+      "label": "Transfusions — While a Resident",
+      "definition": "Check if transfusions were received or performed after admission/entry or reentry to the facility and within the last 14 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+      }
+    },
+    {
+      "code": "I1c",
+      "label": "Transfusions — At Discharge",
+      "definition": "Check if transfusions were received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C."
+      }
+    },
+    {
+      "code": "Z1",
+      "label": "None of the above",
+      "definition": "If no treatments, procedures, or programs were received or performed in the applicable assessment period, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "O0110Z1, None of the above\nCode if none of the above treatments, procedures, or programs were received or performed by the resident."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Code transfusions of blood or any blood products (e.g., platelets, synthetic blood products) that are administered directly into the bloodstream in this item.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "Code transfusions of blood or any blood products (e.g., platelets, synthetic blood products), that are administered directly into the bloodstream in this item."
+      }
+    },
+    {
+      "rule": "Do not include transfusions that were administered during dialysis or chemotherapy.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "Do not include transfusions that were administered during dialysis or chemotherapy."
+      }
+    },
+    {
+      "rule": "Blood transfusions administered during chemotherapy are not recorded under O0110I (Transfusions).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "IVs, IV medication, and blood transfusions administered during chemotherapy are not recorded under items K0520A (Parenteral/IV), O0110H (IV Medications), or O0110I (Transfusions)."
+      }
+    },
+    {
+      "rule": "Blood transfusions administered during dialysis are considered part of the dialysis procedure and are not to be coded under O0110I (transfusions).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "IVs, IV medication, and blood transfusions administered during dialysis are considered part of the dialysis procedure and are not to be coded under items K0520A (Parenteral/IV), O0110H (IV medications), or O0110I (transfusions)."
+      }
+    },
+    {
+      "rule": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff."
+      }
+    },
+    {
+      "rule": "Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure; surgical procedures include routine pre- and post-operative procedures.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure, such as IV medications or ventilators. Surgical procedures include routine pre- and post-operative procedures."
+      }
+    },
+    {
+      "rule": "Transfusions (O0110I1) may be checked in all three columns: a. On Admission, b. While a Resident, and c. At Discharge.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-2",
+        "quote": "I1.\tTransfusions"
+      }
+    },
+    {
+      "rule": "If no treatments, procedures, or programs were received or performed in the applicable assessment period, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "If no treatments, procedures, or programs were received or performed in the 3-day assessment period, check Z, None of the above."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review the resident's medical record to determine whether or not the resident received or performed any of the treatments, procedures, or programs within the assessment period defined for each column.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-3",
+          "quote": "Review the resident's medical record to determine whether or not the resident received or performed any of the treatments, procedures, or programs within the assessment period defined for each column."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as the single Step for Assessment for O0110."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The pages describing O0110I do not tie this item to a payment or case-mix classification. Assessment periods reference SNF PPS Stay dates (A2400B/A2400C), but no payment/case-mix impact is stated for this item in the supplied pages."
+  },
+  "conflicts": [
+    {
+      "topic": "Multiple assessment windows for O0110 (3 days on admission, 14 days while a resident, 3 days at discharge)",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "The item table states three distinct assessment periods by column: days 1–3 of the SNF PPS Stay (On Admission), performed while a resident within the last 14 days (While a Resident), and the last 3 days of the SNF PPS Stay (At Discharge).",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-1",
+            "quote": "Assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B"
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "The Item Rationale refers to a single \"14-day look-back period\" for the treatments, procedures, and programs in O0110.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-2",
+            "quote": "Reevaluation of special treatments and procedures the resident received or performed, or programs that the resident was involved in during the 14-day look-back period is important to ensure the continued appropriateness of the treatments, procedures, or programs."
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user; the coding instructions on p. O-3 define a distinct assessment period per column, while the rationale on p. O-2 refers generally to a 14-day look-back period."
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "supportive_documentation.federal (item-specific documentation requirements beyond medical record review)",
+    "state_deltas",
+    "case_mix_relevance.source",
+    "common_audit_citations"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

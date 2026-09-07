@@ -1,0 +1,214 @@
+{
+  "item_id": "O0110J",
+  "item_name": "Dialysis (O0110J1, with sub-items J2 Hemodialysis and J3 Peritoneal dialysis)",
+  "section": "O",
+  "instrument": "MDS-3.0",
+  "lookback_days": 14,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. O-3",
+    "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+  },
+  "lookback_notes": "The item is coded in three columns, each with its own stated assessment period. Column b (While a Resident) uses the last 14 days since admission/entry or reentry — recorded here as the lookback_days. Column a (On Admission) uses days 1–3 of the SNF PPS Stay starting with A2400B, and column c (At Discharge) uses the last 3 days of the SNF PPS Stay ending with A2400C (p. O-1 table and p. O-3). The Item Rationale on p. O-2 also refers to \"the 14-day look-back period.\" The coexistence of the 14-day and 3-day windows is recorded in conflicts.",
+  "coding_levels": [
+    {
+      "code": "O0110J1a",
+      "label": "Dialysis — On Admission",
+      "definition": "Check box for dialysis received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-2",
+        "quote": "J1.\tDialysis"
+      }
+    },
+    {
+      "code": "O0110J1b",
+      "label": "Dialysis — While a Resident",
+      "definition": "Check box for dialysis performed while a resident of this facility and within the last 14 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-2",
+        "quote": "J1.\tDialysis"
+      }
+    },
+    {
+      "code": "O0110J1c",
+      "label": "Dialysis — At Discharge",
+      "definition": "Check box for dialysis received in the last 3 days of the SNF PPS Stay ending on A2400C.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-2",
+        "quote": "J1.\tDialysis"
+      }
+    },
+    {
+      "code": "O0110J2",
+      "label": "Hemodialysis",
+      "definition": "Sub-element of Dialysis with check boxes in the On Admission and At Discharge columns; checked when the dialysis was hemodialysis.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-2",
+        "quote": "J2.  Hemodialysis"
+      }
+    },
+    {
+      "code": "O0110J3",
+      "label": "Peritoneal dialysis",
+      "definition": "Sub-element of Dialysis with check boxes in the On Admission and At Discharge columns; checked when the dialysis was peritoneal dialysis.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-2",
+        "quote": "J3.  Peritoneal dialysis"
+      }
+    },
+    {
+      "code": "O0110Z1",
+      "label": "None of the above",
+      "definition": "Code if none of the above treatments, procedures, or programs were received or performed by the resident.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Code if none of the above treatments, procedures, or programs were received or performed by the resident."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Code peritoneal or renal dialysis that occurs at the nursing home or at another facility; record treatments of hemofiltration, Slow Continuous Ultrafiltration (SCUF), Continuous Arteriovenous Hemofiltration (CAVH), and Continuous Ambulatory Peritoneal Dialysis (CAPD) in this item.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "Code peritoneal or renal dialysis which occurs at the nursing home or at another facility, record treatments of hemofiltration, Slow Continuous Ultrafiltration (SCUF), Continuous Arteriovenous Hemofiltration (CAVH), and Continuous Ambulatory Peritoneal Dialysis (CAPD) in this item."
+      }
+    },
+    {
+      "rule": "IVs, IV medication, and blood transfusions administered during dialysis are considered part of the dialysis procedure and are not to be coded under K0520A (Parenteral/IV), O0110H (IV medications), or O0110I (transfusions).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "IVs, IV medication, and blood transfusions administered during dialysis are considered part of the dialysis procedure and are not to be coded under items K0520A (Parenteral/IV), O0110H (IV medications), or O0110I (transfusions)."
+      }
+    },
+    {
+      "rule": "This item may be coded if the resident performs their own dialysis.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "This item may be coded if the resident performs their own dialysis."
+      }
+    },
+    {
+      "rule": "Check O0110J2, Hemodialysis, when the dialysis was hemodialysis (blood is circulated directly through a dialysis machine that uses special filters to remove waste products and excess fluid from the blood).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "Check when the dialysis was hemodialysis. In hemodialysis the patient’s blood is circulated directly through a dialysis machine that uses special filters to remove waste products and excess fluid from the blood."
+      }
+    },
+    {
+      "rule": "Check O0110J3, Peritoneal dialysis, when the dialysis was peritoneal dialysis (dialysate is infused into the peritoneal cavity and the peritoneum serves as a filter to remove waste products and excess fluid from the blood).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-7",
+        "quote": "Check when the dialysis was peritoneal dialysis. In peritoneal dialysis, dialysate is infused into the peritoneal cavity and the peritoneum (the membrane that surrounds many of the internal organs of the abdominal cavity) serves as a filter to remove the waste products and excess fluid from the blood."
+      }
+    },
+    {
+      "rule": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff; do not code services that were provided solely in conjunction with a surgical or diagnostic procedure (surgical procedures include routine pre- and post-operative procedures).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff. Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure, such as IV medications or ventilators."
+      }
+    },
+    {
+      "rule": "Column a (On Admission): check dialysis received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B; if none in the 3-day assessment period, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B."
+      }
+    },
+    {
+      "rule": "Column b (While a Resident): check dialysis the resident received or performed after admission/entry or reentry to the facility and within the last 14 days; if none within the last 14 days or since admission/entry or reentry, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "If no treatments, procedures or programs were received by, performed on, or participated in by the resident within the last 14 days or since admission/entry or reentry, check Z, None of the above."
+      }
+    },
+    {
+      "rule": "Column c (At Discharge): check dialysis received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C; if none in the 3-day assessment period, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review the resident's medical record to determine whether or not the resident received or performed dialysis within the assessment period defined for each column.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-3",
+          "quote": "Review the resident’s medical record to determine whether or not the resident received or performed any of the treatments, procedures, or programs within the assessment period defined for each column."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as the sole Step for Assessment for O0110."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The pages for O0110J do not state any payment or case-mix classification tie for this item. The column assessment periods reference the SNF PPS Stay (A2400B/A2400C), but no payment classification impact is stated for the dialysis item."
+  },
+  "conflicts": [
+    {
+      "topic": "Multiple observation windows apply to the same item across its three columns",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "Column b (While a Resident) uses a 14-day look-back: treatments received or performed after admission/entry or reentry and within the last 14 days.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-3",
+            "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Columns a and c use 3-day windows: days 1–3 of the SNF PPS Stay starting with A2400B, and the last 3 days of the SNF PPS Stay ending on A2400C.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-1",
+            "quote": "Assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B"
+          }
+        }
+      ],
+      "resolution": "Resolved by the document itself: the assessment period is defined separately for each column (p. O-3, \"within the assessment period defined for each column\"). The 14-day window applies to column b; 3-day windows apply to columns a and c."
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "case_mix_relevance.level",
+    "state_deltas",
+    "common_audit_citations"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

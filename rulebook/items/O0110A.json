@@ -1,0 +1,255 @@
+{
+  "item_id": "O0110A",
+  "item_name": "Special Treatments, Procedures, and Programs — Chemotherapy (A1) and routes: IV (A2), Oral (A3), Other (A10)",
+  "section": "O",
+  "instrument": "MDS-3.0",
+  "lookback_days": 14,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. O-3",
+    "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+  },
+  "lookback_notes": "The item is coded in three columns, each with its own assessment period. The general observation/look-back window for column b (While a Resident) is the last 14 days (also described on p. O-2 as the \"14-day look-back period\"). Column a (On Admission) uses a 3-day window: days 1–3 of the SNF PPS Stay starting with A2400B (p. O-1, p. O-3). Column c (At Discharge) uses a 3-day window: the last 3 days of the SNF PPS Stay ending with A2400C (p. O-1, p. O-3). lookback_days records the 14-day resident observation window; the two 3-day PPS windows are recorded here and in conflicts.",
+  "coding_levels": [
+    {
+      "code": "A1",
+      "label": "Chemotherapy",
+      "definition": "Code any type of chemotherapy agent administered as an antineoplastic given by any route in this item. Medications coded here are those actually used for cancer treatment.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Code any type of chemotherapy agent administered as an antineoplastic given by any route in this item."
+      }
+    },
+    {
+      "code": "A2",
+      "label": "IV",
+      "definition": "Check if chemotherapy was administered intravenously.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "O0110A2, IV\nCheck if chemotherapy was administered intravenously."
+      }
+    },
+    {
+      "code": "A3",
+      "label": "Oral",
+      "definition": "Check if chemotherapy was administered orally (e.g., pills, capsules, or liquids the patient swallows); also applies if the chemotherapy is administered through a feeding tube/PEG (i.e., enterally).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Check if chemotherapy was administered orally (e.g., pills, capsules, or liquids the patient swallows). This sub-element also applies if the chemotherapy is administered through a feeding tube/PEG (i.e., enterally)."
+      }
+    },
+    {
+      "code": "A10",
+      "label": "Other",
+      "definition": "Check if chemotherapy was given in a way other than intravenously or orally (e.g., intramuscular, intraventricular/intrathecal, intraperitoneal, or topical routes).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Check if chemotherapy was given in a way other than intravenously or orally (e.g., intramuscular, intraventricular/intrathecal, intraperitoneal, or topical routes)."
+      }
+    },
+    {
+      "code": "Z1",
+      "label": "None of the above",
+      "definition": "Checked when no treatments, procedures, or programs were received or performed by the resident in the applicable column's assessment period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "O0110Z1, None of the above\nCode if none of the above treatments, procedures, or programs were received or performed by the resident."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Code any type of chemotherapy agent administered as an antineoplastic given by any route in item O0110A1.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Code any type of chemotherapy agent administered as an antineoplastic given by any route in this item."
+      }
+    },
+    {
+      "rule": "Each medication must be evaluated to determine its reason for use before coding it as chemotherapy; only medications actually used for cancer treatment are coded here (e.g., megestrol acetate given only for appetite stimulation is not coded as chemotherapy).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Each medication should be evaluated to determine its reason for use before coding it here. Medications coded here are those actually used for cancer treatment."
+      }
+    },
+    {
+      "rule": "Hormonal and other agents administered to prevent the recurrence or slow the growth of cancer are not coded as chemotherapy for MDS purposes (e.g., tamoxifen given to decrease risk of recurrence).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Hormonal and other agents administered to prevent the recurrence or slow the growth of cancer should not be coded in this item, as they are not considered chemotherapy for the purpose of coding the MDS."
+      }
+    },
+    {
+      "rule": "IVs, IV medication, and blood transfusions administered during chemotherapy are not recorded under K0520A (Parenteral/IV), O0110H (IV Medications), or O0110I (Transfusions).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "IVs, IV medication, and blood transfusions administered during chemotherapy are not recorded under items K0520A (Parenteral/IV), O0110H (IV Medications), or O0110I (Transfusions)."
+      }
+    },
+    {
+      "rule": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff."
+      }
+    },
+    {
+      "rule": "Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure, such as IV medications or ventilators; surgical procedures include routine pre- and post-operative procedures.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure, such as IV medications or ventilators. Surgical procedures include routine pre- and post-operative procedures."
+      }
+    },
+    {
+      "rule": "Column a (On Admission): check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B; if none in the 3-day assessment period, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B. If no treatments, procedures, or programs were received or performed in the 3-day assessment period, check Z, None of the above."
+      }
+    },
+    {
+      "rule": "Column b (While a Resident): check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days; if none, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days. If no treatments, procedures or programs were received by, performed on, or participated in by the resident within the last 14 days or since admission/entry or reentry, check Z, None of the above."
+      }
+    },
+    {
+      "rule": "Column c (At Discharge): check all treatments, procedures, and programs received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C; if none, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C."
+      }
+    },
+    {
+      "rule": "Check O0110A2 (IV) when chemotherapy was administered intravenously.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Check if chemotherapy was administered intravenously."
+      }
+    },
+    {
+      "rule": "Check O0110A3 (Oral) when chemotherapy was administered orally (pills, capsules, liquids swallowed), including chemotherapy administered through a feeding tube/PEG (enterally).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Check if chemotherapy was administered orally (e.g., pills, capsules, or liquids the patient swallows). This sub-element also applies if the chemotherapy is administered through a feeding tube/PEG (i.e., enterally)."
+      }
+    },
+    {
+      "rule": "Check O0110A10 (Other) when chemotherapy was given by a route other than intravenous or oral (e.g., intramuscular, intraventricular/intrathecal, intraperitoneal, topical).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Check if chemotherapy was given in a way other than intravenously or orally (e.g., intramuscular, intraventricular/intrathecal, intraperitoneal, or topical routes)."
+      }
+    },
+    {
+      "rule": "Per the item table layout, A1 Chemotherapy has check boxes for all three columns (a. On Admission, b. While a Resident, c. At Discharge), while the route sub-items A2 (IV), A3 (Oral), and A10 (Other) have check boxes only in column a (On Admission) and column c (At Discharge).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1"
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review the resident's medical record to determine whether or not the resident received or performed the treatment/procedure within the assessment period defined for each column.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-3",
+          "quote": "Review the resident's medical record to determine whether or not the resident received or performed any of the treatments, procedures, or programs within the assessment period defined for each column."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as Step 1 for Assessment for O0110."
+      },
+      {
+        "criterion": "Medical record evidence must establish the reason each antineoplastic medication is being given (cancer treatment vs. another purpose such as appetite stimulation or prevention of recurrence) before it is coded as chemotherapy.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-3",
+          "quote": "Each medication should be evaluated to determine its reason for use before coding it here."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Framed as a coding tip requiring evaluation of reason for use; the manual does not name a specific document type."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The pages for O0110 define assessment periods by reference to the SNF PPS Stay (A2400B/A2400C) but do not state that O0110A is used in any payment or case-mix classification."
+  },
+  "conflicts": [
+    {
+      "topic": "Multiple coexisting assessment windows for O0110A (14-day resident window vs. 3-day SNF PPS admission and discharge windows)",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "Column b (While a Resident) uses a 14-day look-back: treatments performed while a resident of this facility and within the last 14 days.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-3",
+            "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Column a (On Admission) uses a 3-day assessment period: days 1 through 3 of the SNF PPS Stay starting with A2400B.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-3",
+            "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Column c (At Discharge) uses a 3-day assessment period: the last 3 days of the SNF PPS Stay ending with A2400C.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-3",
+            "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C."
+          }
+        }
+      ],
+      "resolution": "Resolved by the document itself: the manual assigns a distinct assessment period to each column (p. O-1 item table and p. O-3 coding instructions); the 14-day window applies only to column b and the 3-day SNF PPS windows apply to columns a and c."
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "state_deltas",
+    "case_mix_relevance.source",
+    "common_audit_citations"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

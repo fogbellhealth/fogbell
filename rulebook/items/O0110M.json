@@ -1,0 +1,191 @@
+{
+  "item_id": "O0110M",
+  "item_name": "Isolation or quarantine for active infectious disease (does not include standard body/fluid precautions)",
+  "section": "O",
+  "instrument": "MDS-3.0",
+  "lookback_days": 14,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. O-3",
+    "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+  },
+  "lookback_notes": "O0110M1 is only checkable in column b (While a Resident) per the item set on p. O-2; the column b assessment period is \"Performed while a resident of this facility and within the last 14 days\" (p. O-1) / \"after admission/entry or reentry to the facility and within the last 14 days\" (p. O-3). Columns a (days 1-3 of the SNF PPS Stay starting with A2400B) and c (last 3 days of the SNF PPS Stay ending with A2400C) exist for other O0110 sub-items but the item set shows no check box for M1 in those columns. The manual does not state how the 14 days are counted relative to the ARD on these pages.",
+  "coding_levels": [
+    {
+      "code": "b",
+      "label": "While a Resident (checked)",
+      "definition": "Check M1 if isolation or quarantine for active infectious disease meeting all four single-room isolation conditions was in effect while a resident of this facility within the last 14 days. The item set displays a check box for M1 only in column b.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-2",
+        "quote": "M1. Isolation or quarantine for active infectious disease (does not include standard body/fluid precautions)"
+      }
+    },
+    {
+      "code": "unchecked",
+      "label": "Not checked",
+      "definition": "Leave unchecked when criteria are not met; if no treatments, procedures or programs were received within the last 14 days or since admission/entry or reentry, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "If no treatments, procedures or programs were received by, performed on, or participated in by the resident within the last 14 days or since admission/entry or reentry, check Z, None of the above."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Code O0110M only when the resident requires transmission-based precautions AND single room isolation (alone in a separate room) because of active infection (symptomatic and/or positive test and in the contagious stage) with highly transmissible or epidemiologically significant pathogens acquired by physical contact or airborne or droplet transmission.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-8",
+        "quote": "Code only when the resident requires transmission-based precautions and single room isolation (alone in a separate room) because of active infection (i.e., symptomatic and/or have a positive test and are in the contagious stage) with highly transmissible or epidemiologically significant pathogens that have been acquired by physical contact or airborne or droplet transmission."
+      }
+    },
+    {
+      "rule": "Do not code this item if the resident only has a history of infectious disease (e.g., s/p MRSA or s/p C-Diff with no active symptoms).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-8",
+        "quote": "Do not code this item if the resident only has a history of infectious disease (e.g., s/p MRSA or s/p C-Diff - no active symptoms)."
+      }
+    },
+    {
+      "rule": "Do not code this item if the precautions are standard precautions (hand hygiene compliance, glove use, and possibly masks, eye protection, and gowns), because these apply to everyone.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-8",
+        "quote": "Do not code this item if the precautions are standard precautions, because these types of precautions apply to everyone. Standard precautions include hand hygiene compliance, glove use, and additionally may include masks, eye protection, and gowns."
+      }
+    },
+    {
+      "rule": "Code for \"single room isolation\" only when all four conditions are met: (1) active infection with highly transmissible or epidemiologically significant pathogens acquired by physical contact or airborne or droplet transmission; (2) precautions are over and above standard precautions, i.e., transmission-based (contact, droplet, and/or airborne) precautions in effect; (3) the resident is in a room alone because of active infection and cannot have a roommate, not cohorted regardless of whether the roommate has a similar active infection; (4) the resident must remain in their room, with all services brought to the resident.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-8",
+        "quote": "Code for “single room isolation” only when all of the following conditions are met:"
+      }
+    },
+    {
+      "rule": "Examples of when the isolation criterion would not apply include urinary tract infections, encapsulated pneumonia, and wound infections.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-8",
+        "quote": "Examples of when the isolation criterion would not apply include urinary tract infections, encapsulated pneumonia, and wound infections."
+      }
+    },
+    {
+      "rule": "If a facility transports a resident who meets the criteria for single room isolation to another healthcare setting for medically needed services the facility cannot provide (e.g., dialysis, chemotherapy, blood transfusions), the facility may still code O0110M for single room isolation since isolation is still maintained while the resident is in the facility.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-8",
+        "quote": "they should follow CDC guidelines for transport of patients with communicable disease, and may still code O0110M for single room isolation since it is still being maintained while the resident is in the facility."
+      }
+    },
+    {
+      "rule": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff; do not code services provided solely in conjunction with a surgical or diagnostic procedure (surgical procedures include routine pre- and post-operative procedures).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff. Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure, such as IV medications or ventilators."
+      }
+    },
+    {
+      "rule": "Review the resident's medical record to determine whether or not the resident received or performed any of the treatments, procedures, or programs within the assessment period defined for each column.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Review the resident’s medical record to determine whether or not the resident received or performed any of the treatments, procedures, or programs within the assessment period defined for each column."
+      }
+    },
+    {
+      "rule": "When coding for isolation, the facility should review the resident's status and determine if the criteria for a Significant Change of Status Assessment (SCSA) is met based on the effect the infection has on the resident's function and plan of care; regardless of whether SCSA criteria are met, a modification of the plan of care will likely need to be completed.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Finally, when coding for isolation, the facility should review the resident’s status and determine if the criteria for a Significant Change of Status Assessment (SCSA) is met based on the effect the infection has on the resident’s function and plan of care."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Medical record evidence, reviewed for the assessment period, that the treatment/procedure/program was received or performed by the resident.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-3",
+          "quote": "Review the resident’s medical record to determine whether or not the resident received or performed any of the treatments, procedures, or programs within the assessment period defined for each column."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "The only documentation-review step stated for O0110; the manual does not list item-specific documentation requirements for O0110M beyond the four coding conditions."
+      },
+      {
+        "criterion": "Evidence that transmission-based precautions (contact, droplet, and/or airborne) were in effect, over and above standard precautions.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-8",
+          "quote": "Precautions are over and above standard precautions. That is, transmission-based precautions (contact, droplet, and/or airborne) must be in effect."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as a mandatory condition for coding."
+      },
+      {
+        "criterion": "Evidence that the resident was in a room alone because of active infection and could not have a roommate (not cohorted with another infected resident).",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-8",
+          "quote": "The resident is in a room alone because of active infection and cannot have a roommate. This means that the resident must be in the room alone and not cohorted with a roommate regardless of whether the roommate has a similar active infection that requires isolation."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      },
+      {
+        "criterion": "Evidence that the resident remained in their room, with all services (e.g., rehabilitation, activities, dining) brought to the resident.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-8",
+          "quote": "The resident must remain in their room. This requires that all services be brought to the resident (e.g. rehabilitation, activities, dining, etc.)."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      },
+      {
+        "criterion": "Evidence of active infection (symptomatic and/or positive test, in the contagious stage) with highly transmissible or epidemiologically significant pathogens acquired by contact, airborne, or droplet transmission.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-8",
+          "quote": "The resident has active infection with highly transmissible or epidemiologically significant pathogens that have been acquired by physical contact or airborne or droplet transmission."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The pages for O0110M do not tie this item to a payment or case-mix classification. The O0110 columns reference the SNF PPS Stay (A2400B/A2400C) for columns a and c, but no payment/case-mix statement is made for O0110M."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "case_mix_relevance.source",
+    "state_deltas",
+    "common_audit_citations",
+    "lookback_notes: exact counting of the 14-day window relative to the ARD"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

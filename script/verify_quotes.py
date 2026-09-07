@@ -28,6 +28,10 @@ def norm(s):
     s = re.sub(r"\s*©", "©", s)          # text layer sometimes puts a space before ©
     return re.sub(r"\s+", " ", s).strip().lower()
 
+def squash(s):
+    return re.sub(r"[\s\-]+", "", s)
+
+
 def load_pages(pdf):
     pages = {}
     for i, p in enumerate(PdfReader(pdf).pages):
@@ -69,7 +73,9 @@ def main(item_path, pdf_path):
             counts["NOT VERBATIM"] += 1; print(f"NOT VERBATIM  {path}  {c['loc']} — label not in this PDF"); continue
         text, raw_len, n_images = pages[label]
         for frag in (norm(f) for f in q.split("...") if f.strip()):
-            if frag in text:
+            # Text layers break words ("iden tify"), drop hyphens at line ends ("nonremovable") and
+            # lose dashes; a match with all whitespace and hyphens removed is still verbatim.
+            if frag in text or squash(frag) in squash(text):
                 counts["VERBATIM"] += 1; continue
             elsewhere = [l for l, (t, _, _) in pages.items() if frag in t]
             if raw_len < IMAGE_PAGE_MAX_CHARS or n_images:

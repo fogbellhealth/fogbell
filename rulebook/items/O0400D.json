@@ -1,0 +1,146 @@
+{
+  "item_id": "O0400D",
+  "item_name": "Therapies — Respiratory Therapy (Days)",
+  "section": "O",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. O-34",
+    "quote": "Days - record the number of days this therapy was administered for at least 15 minutes a day in the last 7 days"
+  },
+  "lookback_notes": "The item form and coding instructions both specify the last 7 days as the observation window; the example on the same page refers to it as the \"7-day look-back period.\" The document does not state on this page how the 7 days are counted relative to the ARD.",
+  "coding_levels": [
+    {
+      "code": "Number of days",
+      "label": "Days respiratory therapy was administered for at least 15 minutes a day in the last 7 days",
+      "definition": "Enter the number of days therapy services were provided in the last 7 days; a day of therapy is defined as treatment for 15 minutes or more in the day.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "Days—Enter the number of days therapy services were provided in the last 7 days. A day of therapy is defined as treatment for 15 minutes or more in the day."
+      }
+    },
+    {
+      "code": "0",
+      "label": "Zero days",
+      "definition": "Enter 0 if therapy was provided but for less than 15 minutes every day for the last 7 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "Enter 0 if therapy was provided but for less than 15 minutes every day for the last 7 days."
+      }
+    },
+    {
+      "code": "(blank)",
+      "label": "Item skipped / left blank",
+      "definition": "If the total number of minutes during the last 7 days is 0, skip this item and leave blank.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "If the total number of minutes during the last 7 days is 0, skip this item and leave blank."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Complete item O0400 (including D, Respiratory Therapy) only if O0390D is checked.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "Complete only if O0390D is checked"
+      }
+    },
+    {
+      "rule": "Record the number of days respiratory therapy was administered for at least 15 minutes a day in the last 7 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "Days - record the number of days this therapy was administered for at least 15 minutes a day in the last 7 days"
+      }
+    },
+    {
+      "rule": "A day of therapy is defined as treatment for 15 minutes or more in the day.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "A day of therapy is defined as treatment for 15 minutes or more in the day."
+      }
+    },
+    {
+      "rule": "Enter 0 if therapy was provided but for less than 15 minutes every day for the last 7 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "Enter 0 if therapy was provided but for less than 15 minutes every day for the last 7 days."
+      }
+    },
+    {
+      "rule": "If the total number of minutes during the last 7 days is 0, skip this item and leave blank.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "If the total number of minutes during the last 7 days is 0, skip this item and leave blank."
+      }
+    },
+    {
+      "rule": "Days on which therapy totaled less than 15 minutes are not counted; the example shows 10 minutes/day on 5 days (50 total minutes) coded as 0 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "Although a total of 50 minutes of respiratory therapy services were provided over the 7-day look-back period, there were not any days that respiratory therapy was provided for 15 minutes or more. Therefore, O0400D equals zero days."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review the resident's medical record (e.g., rehabilitation therapy evaluation and treatment records, recreation therapy notes, mental health professional progress notes) to collect the information required for this item.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-34",
+          "quote": "Review the resident's medical record (e.g., rehabilitation therapy evaluation and treatment records, recreation therapy notes, mental health professional progress notes), and consult with each of the qualified care providers to collect the information required for this item"
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Stated as a Step for Assessment rather than an explicit documentation requirement."
+      },
+      {
+        "criterion": "Consult with each of the qualified care providers to collect the information required for this item.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-34",
+          "quote": "consult with each of the qualified care providers to collect the information required for this item"
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium"
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The O0400 section pages do not tie this item to a payment or case-mix classification. The example mentions the resident was admitted under Part A skilled nursing facility coverage, but no payment/case-mix use of the item is stated."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "state_deltas",
+    "conflicts",
+    "common_audit_citations",
+    "case_mix_relevance.level"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

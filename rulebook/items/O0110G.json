@@ -1,0 +1,253 @@
+{
+  "item_id": "O0110G",
+  "item_name": "Non-invasive Mechanical Ventilator (including BiPAP and CPAP sub-items G2, G3)",
+  "section": "O",
+  "instrument": "MDS-3.0",
+  "lookback_days": 14,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. O-3",
+    "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+  },
+  "lookback_notes": "The assessor observation window differs by column. Column b (While a Resident) uses the last 14 days after admission/entry or reentry — recorded here as lookback_days = 14. Column a (On Admission) uses days 1–3 of the SNF PPS Stay starting with A2400B (p. O-3, p. O-1). Column c (At Discharge) uses the last 3 days of the SNF PPS Stay ending with A2400C (p. O-3, p. O-1). Note that the printed item table on p. O-1 provides column b check boxes only for G1; G2 (BiPAP) and G3 (CPAP) have check boxes only in columns a and c.",
+  "coding_levels": [
+    {
+      "code": "G1a",
+      "label": "Non-invasive Mechanical Ventilator — On Admission",
+      "definition": "Check if a CPAP or BiPAP respiratory support device was received/performed on days 1–3 of the SNF PPS Stay starting with A2400B.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "G1. Non-invasive Mechanical Ventilator"
+      }
+    },
+    {
+      "code": "G1b",
+      "label": "Non-invasive Mechanical Ventilator — While a Resident",
+      "definition": "Check if a CPAP or BiPAP respiratory support device was received/performed after admission/entry or reentry and within the last 14 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "Performed while a resident of this facility and within the last 14 days"
+      }
+    },
+    {
+      "code": "G1c",
+      "label": "Non-invasive Mechanical Ventilator — At Discharge",
+      "definition": "Check if a CPAP or BiPAP respiratory support device was received/performed in the last 3 days of the SNF PPS Stay ending on A2400C.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "Assessment period is the last 3 days of the SNF PPS Stay ending on A2400C"
+      }
+    },
+    {
+      "code": "G2",
+      "label": "BiPAP",
+      "definition": "Check if the non-invasive mechanical ventilator support was BiPAP. Check boxes are printed for columns a (On Admission) and c (At Discharge).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "Check if the non-invasive mechanical ventilator support was BiPAP."
+      }
+    },
+    {
+      "code": "G3",
+      "label": "CPAP",
+      "definition": "Check if the non-invasive mechanical ventilator support was CPAP. Check boxes are printed for columns a (On Admission) and c (At Discharge).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "Check if the non-invasive mechanical ventilator support was CPAP."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Code any type of CPAP or BiPAP respiratory support device that prevents airways from closing by delivering slightly pressurized air through a mask or other device continuously or via electronic cycling throughout the breathing cycle.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "Code any type of CPAP or BiPAP respiratory support devices that prevent airways from closing by delivering slightly pressurized air through a mask or other device continuously or via electronic cycling throughout the breathing cycle."
+      }
+    },
+    {
+      "rule": "If a ventilator or respirator is being used as a substitute for BiPAP/CPAP, code it here (in O0110G1) rather than as an invasive mechanical ventilator.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "If a ventilator or respirator is being used as a substitute for BiPAP/CPAP, code here."
+      }
+    },
+    {
+      "rule": "This item may be coded if the resident places or removes their own BiPAP/CPAP mask/device.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "This item may be coded if the resident places or removes their own BiPAP/CPAP mask/device."
+      }
+    },
+    {
+      "rule": "O0110G2, BiPAP: check if the non-invasive mechanical ventilator support was BiPAP.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "Check if the non-invasive mechanical ventilator support was BiPAP."
+      }
+    },
+    {
+      "rule": "O0110G3, CPAP: check if the non-invasive mechanical ventilator support was CPAP.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-6",
+        "quote": "Check if the non-invasive mechanical ventilator support was CPAP."
+      }
+    },
+    {
+      "rule": "Column a (On Admission): check the item if it was received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B; if nothing was received or performed in that 3-day assessment period, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B."
+      }
+    },
+    {
+      "rule": "Column b (While a Resident): check the item if it was received or performed after admission/entry or reentry to the facility and within the last 14 days; if nothing was received or performed within the last 14 days or since admission/entry or reentry, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+      }
+    },
+    {
+      "rule": "Column c (At Discharge): check the item if it was received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C; if nothing was received or performed in that 3-day assessment period, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C."
+      }
+    },
+    {
+      "rule": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff."
+      }
+    },
+    {
+      "rule": "Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure, such as IV medications or ventilators; surgical procedures include routine pre- and post-operative procedures.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure, such as IV medications or ventilators. Surgical procedures include routine pre- and post-operative procedures."
+      }
+    },
+    {
+      "rule": "Do not code O0110F1 (Invasive Mechanical Ventilator) when the ventilator or respirator is used only as a substitute for BiPAP or CPAP (such use is coded under O0110G1 instead).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-5",
+        "quote": "Do not code this item when the ventilator or respirator is used only as a substitute for BiPAP or CPAP."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review the resident's medical record to determine whether or not the resident received or performed the treatment/procedure/program within the assessment period defined for each column.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-3",
+          "quote": "Review the resident's medical record to determine whether or not the resident received or performed any of the treatments, procedures, or programs within the assessment period defined for each column."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as Step 1 for assessment of O0110; the medical record is the stated evidence source."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages define the On Admission and At Discharge windows in relation to the SNF PPS Stay (A2400B/A2400C) but do not state that O0110G is used in any payment or case-mix classification."
+  },
+  "conflicts": [
+    {
+      "topic": "Multiple assessment windows coexist for O0110G (3-day admission window, 14-day while-a-resident window, 3-day discharge window)",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "Column a uses days 1–3 of the SNF PPS Stay starting with A2400B.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-3",
+            "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Column b uses the last 14 days after admission/entry or reentry.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-3",
+            "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Column c uses the last 3 days of the SNF PPS Stay ending with A2400C.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-3",
+            "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C."
+          }
+        }
+      ],
+      "resolution": "Resolved by the document itself: each column has its own stated assessment period; the 14-day window applies to column b (While a Resident) and is recorded as lookback_days."
+    },
+    {
+      "topic": "Which columns are available for the BiPAP (G2) and CPAP (G3) sub-items",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "The printed item table provides check boxes for G2 (BiPAP) and G3 (CPAP) only in columns a (On Admission) and c (At Discharge), while G1 has boxes in columns a, b, and c.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-1",
+            "quote": "G1. Non-invasive Mechanical Ventilator"
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Example 2 codes CPAP at discharge as \"O0110G3c (CPAP, On Discharge)\" — labeling column c as \"On Discharge\" rather than the table's \"At Discharge.\"",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-10",
+            "quote": "Check boxes O0110G1b (Non-invasive Mechanical Ventilator, While a Resident), O0110G1c (Non-invasive Mechanical Ventilator, At Discharge), and O0110G3c (CPAP, On Discharge)."
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "state_deltas",
+    "common_audit_citations",
+    "case_mix_relevance.level"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

@@ -1,0 +1,186 @@
+{
+  "item_id": "O0110E",
+  "item_name": "Tracheostomy care (O0110E1)",
+  "section": "O",
+  "instrument": "MDS-3.0",
+  "lookback_days": 14,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. O-3",
+    "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+  },
+  "lookback_notes": "O0110 uses three column-specific assessment periods rather than a single window. Column b (While a Resident) — the observation window recorded here — is the last 14 days (p. O-3; item rationale on p. O-2 also calls it the \"14-day look-back period\"). Column a (On Admission) uses days 1–3 of the SNF PPS Stay starting with A2400B, and column c (At Discharge) uses the last 3 days of the SNF PPS Stay ending with A2400C (p. O-1 item table and p. O-3). The coexistence of these windows is recorded in conflicts.",
+  "coding_levels": [
+    {
+      "code": "O0110E1a",
+      "label": "Tracheostomy care — On Admission",
+      "definition": "Checkbox for tracheostomy care received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "E1. Tracheostomy care"
+      }
+    },
+    {
+      "code": "O0110E1b",
+      "label": "Tracheostomy care — While a Resident",
+      "definition": "Checkbox for tracheostomy care performed while a resident of this facility and within the last 14 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "Performed while a resident of this facility and within the last 14 days"
+      }
+    },
+    {
+      "code": "O0110E1c",
+      "label": "Tracheostomy care — At Discharge",
+      "definition": "Checkbox for tracheostomy care received in the last 3 days of the SNF PPS Stay ending on A2400C.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "Assessment period is the last 3 days of the SNF PPS Stay ending on A2400C"
+      }
+    },
+    {
+      "code": "O0110Z1",
+      "label": "None of the above",
+      "definition": "Checked when none of the listed treatments, procedures, or programs (including tracheostomy care) were received or performed by the resident in the applicable column's assessment period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "O0110Z1, None of the above\nCode if none of the above treatments, procedures, or programs were received or performed by the resident."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Code cleansing of the tracheostomy and/or cannula in item O0110E1.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-5",
+        "quote": "Code cleansing of the tracheostomy and/or cannula in this item."
+      }
+    },
+    {
+      "rule": "This item may be coded if the resident performs their own tracheostomy care.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-5",
+        "quote": "This item may be coded if the resident performs their own tracheostomy care."
+      }
+    },
+    {
+      "rule": "Laryngectomy tube care is included in this item.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-5",
+        "quote": "This item includes laryngectomy tube care."
+      }
+    },
+    {
+      "rule": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff."
+      }
+    },
+    {
+      "rule": "Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure; surgical procedures include routine pre- and post-operative procedures.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure, such as IV medications or ventilators. Surgical procedures include routine pre- and post-operative procedures."
+      }
+    },
+    {
+      "rule": "Column a (On Admission): check if the treatment was received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B; if none in that 3-day period, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B. If no treatments, procedures, or programs were received or performed in the 3-day assessment period, check Z, None of the above."
+      }
+    },
+    {
+      "rule": "Column b (While a Resident): check if the treatment was received or performed after admission/entry or reentry to the facility and within the last 14 days; if none, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "If no treatments, procedures or programs were received by, performed on, or participated in by the resident within the last 14 days or since admission/entry or reentry, check Z, None of the above."
+      }
+    },
+    {
+      "rule": "Column c (At Discharge): check if the treatment was received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C; if none in that 3-day period, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review of the resident's medical record to determine whether the resident received or performed the treatment/procedure within the assessment period defined for each column.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-3",
+          "quote": "Review the resident's medical record to determine whether or not the resident received or performed any of the treatments, procedures, or programs within the assessment period defined for each column."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as the sole Step for Assessment for O0110."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages describe O0110 assessment periods in terms of the SNF PPS Stay (A2400B/A2400C) but do not state that O0110E (Tracheostomy care) drives a payment or case-mix classification."
+  },
+  "conflicts": [
+    {
+      "topic": "Multiple assessment windows coexist for O0110E (14-day 'While a Resident' window vs. 3-day admission and 3-day discharge windows)",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "Column b uses a 14-day look-back: treatments performed while a resident of this facility and within the last 14 days.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-2",
+            "quote": "Reevaluation of special treatments and procedures the resident received or performed, or programs that the resident was involved in during the 14-day look-back period is important to ensure the continued appropriateness of the treatments, procedures, or programs."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Columns a and c use 3-day assessment periods tied to the start (A2400B) and end (A2400C) of the SNF PPS Stay.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-3",
+            "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B."
+          }
+        }
+      ],
+      "resolution": "Resolved by the document itself: each column has its own defined assessment period, and the assessor reviews the record \"within the assessment period defined for each column\" (p. O-3). The 14-day window applies only to column b."
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "state_deltas",
+    "common_audit_citations",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

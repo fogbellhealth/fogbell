@@ -1,0 +1,220 @@
+{
+  "item_id": "O0110O",
+  "item_name": "IV Access (O0110O1 IV Access; O2 Peripheral; O3 Midline; O4 Central)",
+  "section": "O",
+  "instrument": "MDS-3.0",
+  "lookback_days": 14,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. O-3",
+    "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+  },
+  "lookback_notes": "O0110 uses three different assessment periods, one per column. Column b (While a Resident) uses the last 14 days (or since admission/entry or reentry), which is the general observation window recorded here and is also referred to in the Item Rationale as \"the 14-day look-back period\" (p. O-2). Column a (On Admission) uses days 1–3 of the SNF PPS Stay starting with A2400B, and column c (At Discharge) uses the last 3 days of the SNF PPS Stay ending with A2400C (p. O-3). See conflicts for the coexisting windows.",
+  "coding_levels": [
+    {
+      "code": "O0110O1",
+      "label": "IV Access",
+      "definition": "Code IV access, which refers to a catheter inserted into a vein for a variety of clinical reasons, including long-term medication administration, large volumes of blood or fluid, frequent access for blood samples, intravenous fluid administration, total parenteral nutrition (TPN), or, in some instances, the measurement of central venous pressure.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Code IV access, which refers to a catheter inserted into a vein for a variety of clinical reasons, including long-term medication administration, large volumes of blood or fluid, frequent access for blood samples, intravenous fluid administration, total parenteral nutrition (TPN), or, in some instances, the measurement of central venous pressure."
+      }
+    },
+    {
+      "code": "O0110O2",
+      "label": "Peripheral",
+      "definition": "Check when IV access was peripheral access (catheter is placed in a peripheral vein) and remains peripheral.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Check when IV access was peripheral access (catheter is placed in a peripheral vein) and remains peripheral."
+      }
+    },
+    {
+      "code": "O0110O3",
+      "label": "Midline",
+      "definition": "Check when IV access was midline access. Midline catheters are inserted into the antecubital (or other upper arm) vein and do not reach all the way to a central vein such as the superior vena cava.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Check when IV access was midline access. Midline catheters are inserted into the antecubital (or other upper arm) vein and do not reach all the way to a central vein such as the superior vena cava."
+      }
+    },
+    {
+      "code": "O0110O4",
+      "label": "Central (e.g., PICC, tunneled, port)",
+      "definition": "Check when IV access was centrally located (e.g., PICC, tunneled, port).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Check when IV access was centrally located (e.g., PICC, tunneled, port)."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Code O0110O1 when the resident has IV access, i.e., a catheter inserted into a vein for clinical reasons including long-term medication administration, large volumes of blood or fluid, frequent access for blood samples, intravenous fluid administration, TPN, or measurement of central venous pressure.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Code IV access, which refers to a catheter inserted into a vein for a variety of clinical reasons, including long-term medication administration, large volumes of blood or fluid, frequent access for blood samples, intravenous fluid administration, total parenteral nutrition (TPN), or, in some instances, the measurement of central venous pressure."
+      }
+    },
+    {
+      "rule": "An arteriovenous (AV) fistula does not meet the definition of IV Access and is not coded in O0110O1.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "An arteriovenous (AV) fistula does not meet the definition of IV Access for O0110O1."
+      }
+    },
+    {
+      "rule": "Check O0110O2 (Peripheral) when IV access was peripheral (catheter placed in a peripheral vein) and remains peripheral.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Check when IV access was peripheral access (catheter is placed in a peripheral vein) and remains peripheral."
+      }
+    },
+    {
+      "rule": "Check O0110O3 (Midline) when IV access was midline access (catheter inserted into the antecubital or other upper arm vein that does not reach a central vein such as the superior vena cava).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Check when IV access was midline access. Midline catheters are inserted into the antecubital (or other upper arm) vein and do not reach all the way to a central vein such as the superior vena cava."
+      }
+    },
+    {
+      "rule": "Check O0110O4 (Central) when IV access was centrally located (e.g., PICC, tunneled, port).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Check when IV access was centrally located (e.g., PICC, tunneled, port)."
+      }
+    },
+    {
+      "rule": "Column a (On Admission): check treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B."
+      }
+    },
+    {
+      "rule": "Column b (While a Resident): check treatments, procedures, and programs the resident received or performed after admission/entry or reentry to the facility and within the last 14 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+      }
+    },
+    {
+      "rule": "Column c (At Discharge): check treatments, procedures, and programs received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C."
+      }
+    },
+    {
+      "rule": "If no treatments, procedures, or programs (including IV access) were received or performed in the applicable assessment period, check Z, None of the above (O0110Z1).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Code if none of the above treatments, procedures, or programs were received or performed by the resident."
+      }
+    },
+    {
+      "rule": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff."
+      }
+    },
+    {
+      "rule": "Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure; surgical procedures include routine pre- and post-operative procedures.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure, such as IV medications or ventilators. Surgical procedures include routine pre- and post-operative procedures."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review the resident's medical record to determine whether or not the resident received or performed any of the treatments, procedures, or programs (including IV access) within the assessment period defined for each column.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-3",
+          "quote": "Review the resident’s medical record to determine whether or not the resident received or performed any of the treatments, procedures, or programs within the assessment period defined for each column."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as the Steps for Assessment for O0110; the medical record is the evidence source for coding IV access."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages define the O0110 columns in relation to the SNF PPS Stay dates (A2400B/A2400C) but do not state that O0110O or its sub-items are used in any payment or case-mix classification."
+  },
+  "conflicts": [
+    {
+      "topic": "Coexisting assessment/observation windows for O0110 (and therefore O0110O)",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "Column b (While a Resident) uses a 14-day window: treatments performed after admission/entry or reentry and within the last 14 days; the Item Rationale likewise refers to the 14-day look-back period.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-2",
+            "quote": "Reevaluation of special treatments and procedures the resident received or performed, or programs that the resident was involved in during the 14-day look-back period is important to ensure the continued appropriateness of the treatments, procedures, or programs."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Column a (On Admission) uses a 3-day window: days 1–3 of the SNF PPS Stay starting with A2400B.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-3",
+            "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Column c (At Discharge) uses a 3-day window: the last 3 days of the SNF PPS Stay ending with A2400C.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-3",
+            "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C."
+          }
+        }
+      ],
+      "resolution": "Resolved by the document itself: the manual assigns a distinct assessment period to each column (a = days 1–3 of the SNF PPS Stay; b = last 14 days; c = last 3 days of the SNF PPS Stay). Recorded here because more than one window applies to the same item."
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "case_mix_relevance.level",
+    "state_deltas",
+    "common_audit_citations",
+    "supportive_documentation.state"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

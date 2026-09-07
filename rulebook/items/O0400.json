@@ -1,0 +1,137 @@
+{
+  "item_id": "O0400",
+  "item_name": "Therapies",
+  "section": "O",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. O-34",
+    "quote": "Days—Enter the number of days therapy services were provided in the last 7 days."
+  },
+  "lookback_notes": "The item form and coding instructions specify the last 7 days; the example refers to a \"7-day look-back period.\" The document does not state on this page how the 7 days are counted relative to the ARD.",
+  "coding_levels": [
+    {
+      "code": "Number of days",
+      "label": "D2. Respiratory Therapy — Days",
+      "definition": "Record the number of days this therapy was administered for at least 15 minutes a day in the last 7 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "2. Days - record the number of days this therapy was administered for at least 15 minutes a day in the last 7 days"
+      }
+    },
+    {
+      "code": "0",
+      "label": "Zero days",
+      "definition": "Enter 0 if therapy was provided but for less than 15 minutes every day for the last 7 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "Enter 0 if therapy was provided but for less than 15 minutes every day for the last 7 days."
+      }
+    },
+    {
+      "code": "(blank)",
+      "label": "Skipped / left blank",
+      "definition": "If the total number of minutes during the last 7 days is 0, skip this item and leave blank.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "If the total number of minutes during the last 7 days is 0, skip this item and leave blank."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Complete O0400 only if O0390D (Respiratory Therapy) is checked.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "Therapies\nComplete only if O0390D is checked"
+      }
+    },
+    {
+      "rule": "Enter the number of days therapy services were provided in the last 7 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "Days—Enter the number of days therapy services were provided in the last 7 days."
+      }
+    },
+    {
+      "rule": "A day of therapy is defined as treatment for 15 minutes or more in the day.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "A day of therapy is defined as treatment for 15 minutes or more in the day."
+      }
+    },
+    {
+      "rule": "Enter 0 if therapy was provided but for less than 15 minutes every day for the last 7 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "Enter 0 if therapy was provided but for less than 15 minutes every day for the last 7 days."
+      }
+    },
+    {
+      "rule": "If the total number of minutes during the last 7 days is 0, skip this item and leave it blank.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "If the total number of minutes during the last 7 days is 0, skip this item and leave blank."
+      }
+    },
+    {
+      "rule": "Days of therapy of less than 15 minutes each do not count toward the day count even if the cumulative minutes over the 7-day look-back exceed 15 (example: 50 total minutes across 5 days of 10 minutes each is coded 0 days).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-34",
+        "quote": "Although a total of 50 minutes of respiratory therapy services were provided over the 7-day look-back period, there were not any days that respiratory therapy was provided for 15 minutes or more. Therefore, O0400D equals zero days."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review the resident's medical record (e.g., rehabilitation therapy evaluation and treatment records, recreation therapy notes, mental health professional progress notes) and consult with each of the qualified care providers to collect the information required for this item.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-34",
+          "quote": "Review the resident's medical record (e.g., rehabilitation therapy evaluation and treatment records, recreation therapy notes, mental health professional progress notes), and consult with each of the qualified care providers to collect the information required for this item"
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as the Steps for Assessment for this item."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The O0400 pages do not tie this item to a payment or case-mix classification. The example mentions Part A skilled nursing facility coverage as context for the resident, but no payment/case-mix linkage for the item itself is stated."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "case_mix_relevance.source",
+    "state_deltas",
+    "common_audit_citations",
+    "conflicts",
+    "lookback_notes: how the 7-day window is counted relative to the ARD"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

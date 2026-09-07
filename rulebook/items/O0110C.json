@@ -1,0 +1,290 @@
+{
+  "item_id": "O0110C",
+  "item_name": "Oxygen therapy (O0110C1), including C2 Continuous, C3 Intermittent, and C4 High-concentration",
+  "section": "O",
+  "instrument": "MDS-3.0",
+  "lookback_days": 14,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. O-3",
+    "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days."
+  },
+  "lookback_notes": "O0110 is a three-column item, each column with its own stated assessment period. The general observation/look-back window (Column b, While a Resident) is the last 14 days since admission/entry or reentry; the manual also refers to this as \"the 14-day look-back period\" (p. O-2). Two additional, shorter stated windows apply to the other columns: Column a (On Admission) = days 1-3 of the SNF PPS Stay starting with A2400B, and Column c (At Discharge) = the last 3 days of the SNF PPS Stay ending with A2400C (p. O-1, p. O-3).",
+  "coding_levels": [
+    {
+      "code": "a",
+      "label": "On Admission",
+      "definition": "Assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "Assessment period is days 1 through 3 of the SNF PPS Stay starting with A2400B"
+      }
+    },
+    {
+      "code": "b",
+      "label": "While a Resident",
+      "definition": "Performed while a resident of this facility and within the last 14 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "Performed while a resident of this facility and within the last 14 days"
+      }
+    },
+    {
+      "code": "c",
+      "label": "At Discharge",
+      "definition": "Assessment period is the last 3 days of the SNF PPS Stay ending on A2400C.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "Assessment period is the last 3 days of the SNF PPS Stay ending on A2400C"
+      }
+    },
+    {
+      "code": "C1",
+      "label": "Oxygen therapy",
+      "definition": "Continuous or intermittent oxygen administered via mask, cannula, etc., delivered to a resident to relieve hypoxia; includes oxygen used in BiPAP/CPAP.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Code continuous or intermittent oxygen administered via mask, cannula, etc., delivered to a resident to relieve hypoxia in this item."
+      }
+    },
+    {
+      "code": "C2",
+      "label": "Continuous",
+      "definition": "Oxygen therapy continuously delivered for 14 hours or greater per day.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Check if oxygen therapy was continuously delivered for 14 hours or greater per day."
+      }
+    },
+    {
+      "code": "C3",
+      "label": "Intermittent",
+      "definition": "Oxygen therapy that was intermittent (i.e., not delivered continuously for at least 14 hours per day).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Check if oxygen therapy was intermittent (i.e., not delivered continuously for at least 14 hours per day)."
+      }
+    },
+    {
+      "code": "C4",
+      "label": "High-concentration",
+      "definition": "Oxygen therapy provided via a high-concentration delivery system, i.e., one that delivers oxygen at a concentration exceeding an FiO2 of 40%.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Check if oxygen therapy was provided via a high-concentration delivery system. A high-concentration oxygen delivery system is one that delivers oxygen at a concentration that exceeds a fraction of inspired oxygen FiO2 of 40%"
+      }
+    },
+    {
+      "code": "Z1",
+      "label": "None of the above",
+      "definition": "Coded if none of the above treatments, procedures, or programs were received or performed by the resident; checked per column when no treatments were received in that column's assessment period.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-9",
+        "quote": "Code if none of the above treatments, procedures, or programs were received or performed by the resident."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Column a (On Admission): check oxygen therapy received by, performed on, or participated in by the resident on days 1-3 of the SNF PPS Stay starting with A2400B; if no treatments were received or performed in the 3-day assessment period, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B. If no treatments, procedures, or programs were received or performed in the 3-day assessment period, check Z, None of the above."
+      }
+    },
+    {
+      "rule": "Column b (While a Resident): check oxygen therapy the resident received or performed after admission/entry or reentry to the facility and within the last 14 days; if none within the last 14 days or since admission/entry or reentry, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs that the resident received or performed after admission/entry or reentry to the facility and within the last 14 days. If no treatments, procedures or programs were received by, performed on, or participated in by the resident within the last 14 days or since admission/entry or reentry, check Z, None of the above."
+      }
+    },
+    {
+      "rule": "Column c (At Discharge): check oxygen therapy received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C; if none in the 3-day assessment period, check Z, None of the above.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident in the last 3 days of the SNF PPS Stay ending with A2400C."
+      }
+    },
+    {
+      "rule": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Facilities may code treatments, programs and procedures that the resident performed themselves independently or after set-up by facility staff."
+      }
+    },
+    {
+      "rule": "Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure; surgical procedures include routine pre- and post-operative procedures.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-3",
+        "quote": "Do not code services that were provided solely in conjunction with a surgical procedure or diagnostic procedure, such as IV medications or ventilators. Surgical procedures include routine pre- and post-operative procedures."
+      }
+    },
+    {
+      "rule": "Code continuous or intermittent oxygen administered via mask, cannula, etc., delivered to a resident to relieve hypoxia in O0110C1.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Code continuous or intermittent oxygen administered via mask, cannula, etc., delivered to a resident to relieve hypoxia in this item."
+      }
+    },
+    {
+      "rule": "Code oxygen used in Bi-level Positive Airway Pressure/Continuous Positive Airway Pressure (BiPAP/CPAP) in O0110C1.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Code oxygen used in Bi-level Positive Airway Pressure/Continuous Positive Airway Pressure (BiPAP/CPAP) here."
+      }
+    },
+    {
+      "rule": "Do not code hyperbaric oxygen for wound therapy in O0110C1.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Do not code hyperbaric oxygen for wound therapy in this item."
+      }
+    },
+    {
+      "rule": "O0110C1 may be coded if the resident places or removes their own oxygen mask or cannula.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "This item may be coded if the resident places or removes their own oxygen mask, cannula."
+      }
+    },
+    {
+      "rule": "Check O0110C2 (Continuous) if oxygen therapy was continuously delivered for 14 hours or greater per day.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Check if oxygen therapy was continuously delivered for 14 hours or greater per day."
+      }
+    },
+    {
+      "rule": "Check O0110C3 (Intermittent) if oxygen therapy was intermittent, i.e., not delivered continuously for at least 14 hours per day.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "Check if oxygen therapy was intermittent (i.e., not delivered continuously for at least 14 hours per day)."
+      }
+    },
+    {
+      "rule": "Check O0110C4 (High-concentration) if oxygen therapy was provided via a high-concentration delivery system, defined as one that delivers oxygen at a concentration exceeding an FiO2 of 40% (i.e., exceeding that of simple low-flow nasal cannula at a flow rate of 4 liters per minute).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "A high-concentration oxygen delivery system is one that delivers oxygen at a concentration that exceeds a fraction of inspired oxygen FiO2 of 40% (i.e., exceeding that of simple low-flow nasal cannula at a flow rate of 4 liters per minute)."
+      }
+    },
+    {
+      "rule": "A high-concentration delivery system can include either high- or low-flow systems (e.g., simple face masks, partial and nonrebreather masks, face tents, venturi masks, aerosol masks, and high-flow cannula or masks).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-4",
+        "quote": "A high-concentration delivery system can include either high- or low-flow systems (e.g., simple face masks, partial and nonrebreather masks, face tents, venturi masks, aerosol masks, and high-flow cannula or masks)."
+      }
+    },
+    {
+      "rule": "High-concentration devices may also include invasive mechanical ventilators, non-invasive mechanical ventilators, or trach masks, if the delivered FiO2 of these systems exceeds 40%.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-5",
+        "quote": "These devices may also include invasive mechanical ventilators, non-invasive mechanical ventilators, or trach masks, if the delivered FiO2 of these systems exceeds 40%."
+      }
+    },
+    {
+      "rule": "Oxygen-conserving nasal cannula systems with reservoirs (e.g., mustache, pendant) should be included as high-concentration only if they are used to deliver an FiO2 of greater than 40%.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-5",
+        "quote": "Oxygen-conserving nasal cannula systems with reservoirs (e.g., mustache, pendant) should be included only if they are used to deliver an FiO2 of greater than 40%."
+      }
+    },
+    {
+      "rule": "On the item set, the sub-elements C2 (Continuous), C3 (Intermittent), and C4 (High-concentration) have check boxes only in Column a (On Admission) and Column c (At Discharge); C1 (Oxygen therapy) has check boxes in all three columns (a, b, c).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. O-1",
+        "quote": "C1.  Oxygen therapy"
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review the resident's medical record to determine whether or not the resident received or performed oxygen therapy within the assessment period defined for each column.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. O-3",
+          "quote": "Review the resident’s medical record to determine whether or not the resident received or performed any of the treatments, procedures, or programs within the assessment period defined for each column."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as the sole Step for Assessment for O0110."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages define column a and column c assessment periods by reference to the SNF PPS Stay (A2400B/A2400C) but contain no statement tying O0110C to a payment or case-mix classification."
+  },
+  "conflicts": [
+    {
+      "topic": "Coexistence of multiple assessment/look-back windows for O0110C",
+      "positions": [
+        {
+          "authority": "rai-manual-v1.20.1",
+          "claim": "Column b (While a Resident) uses a 14-day window; the Item Rationale calls this the 14-day look-back period.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-2",
+            "quote": "Reevaluation of special treatments and procedures the resident received or performed, or programs that the resident was involved in during the 14-day look-back period is important to ensure the continued appropriateness of the treatments, procedures, or programs."
+          }
+        },
+        {
+          "authority": "rai-manual-v1.20.1",
+          "claim": "Column a uses a 3-day window (days 1-3 of the SNF PPS Stay starting with A2400B) and Column c uses a 3-day window (last 3 days of the SNF PPS Stay ending with A2400C).",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. O-3",
+            "quote": "Check all treatments, procedures, and programs received by, performed on, or participated in by the resident on days 1–3 of the SNF PPS Stay starting with A2400B."
+          }
+        }
+      ],
+      "resolution": "Resolved by the document: the assessment period is defined separately for each column (p. O-3, \"within the assessment period defined for each column\"); the 14-day window applies to Column b, and 3-day windows apply to Columns a and c."
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "common_audit_citations",
+    "state_deltas",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}
