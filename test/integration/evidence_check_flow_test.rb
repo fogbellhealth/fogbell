@@ -42,6 +42,18 @@ class EvidenceCheckFlowTest < ActionDispatch::IntegrationTest
     assert_match(/Mock audit projection/, response.body)
   end
 
+  test "with DEMO_PASSWORD set the app requires HTTP basic auth, and the health check does not" do
+    ENV["DEMO_PASSWORD"] = "bell"
+    get root_path
+    assert_response :unauthorized
+    get root_path, headers: { "Authorization" => ActionController::HttpAuthentication::Basic.encode_credentials("anyone", "bell") }
+    assert_response :success
+    get "/up"
+    assert_response :success
+  ensure
+    ENV.delete("DEMO_PASSWORD")
+  end
+
   test "an invalid selection re-renders the form with the error" do
     post checks_path, params: { check: { chart_text: "x", ard: "2026-09-03", item_ids: [] } }
     assert_response :unprocessable_entity

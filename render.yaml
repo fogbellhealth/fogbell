@@ -1,0 +1,32 @@
+# Render Blueprint for the Fogbell demo (https://render.com/docs/blueprint-spec).
+# One web service, native Ruby runtime, SQLite for app/cache/queue/cable on a persistent disk,
+# Solid Queue running inside Puma (no separate worker can share a SQLite disk).
+# Secrets are entered in the Render dashboard, never here: RAILS_MASTER_KEY (contents of
+# config/master.key), ANTHROPIC_API_KEY, DEMO_PASSWORD (HTTP basic auth for the public demo).
+services:
+  - type: web
+    name: fogbell
+    runtime: ruby
+    plan: starter            # a persistent disk requires a paid instance; free instances lose storage/ on every deploy
+    region: ohio
+    buildCommand: bundle install && bin/rails assets:precompile
+    startCommand: bin/rails db:prepare && bundle exec puma -C config/puma.rb
+    healthCheckPath: /up
+    autoDeployTrigger: commit
+    disk:
+      name: fogbell-storage
+      mountPath: /opt/render/project/src/storage
+      sizeGB: 1
+    envVars:
+      - key: RAILS_ENV
+        value: production
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: DEMO_PASSWORD
+        sync: false
+      - key: SOLID_QUEUE_IN_PUMA
+        value: "true"
+      - key: RAILS_MAX_THREADS
+        value: "5"
