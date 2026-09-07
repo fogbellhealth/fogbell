@@ -1,0 +1,283 @@
+{
+  "item_id": "CONV-ME-ASSESSMENT-CERTIFICATION",
+  "item_name": "Maine assessment accuracy, certification and falsification penalties",
+  "section": "CONV",
+  "instrument": "MDS-3.0",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. Sections 67.05-6 and 67.05-7 state requirements for assessment accuracy, certification, independent assessors, Department review and universal MDS assessment, but state no observation/look-back window for these requirements.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "Each resident of a nursing facility, regardless of payment source, shall have a resident assessment that enables facility staff to develop a plan of care designed to assist the resident to reach their highest practicable level of physical, mental, and psychosocial functioning.",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-6(A)",
+        "quote": "Each resident of a NF, regardless of payment source, shall have a resident assessment that will enable facility staff to develop a plan of care designed to assist the resident to reach their highest practicable level of physical, mental, and psychosocial functioning."
+      }
+    },
+    {
+      "rule": "The Minimum Data Set (MDS) and matching Resident Assessment Protocols (RAPs) are the Department's approved Resident Assessment Instrument.",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-6(A)",
+        "quote": "The Minimum Data Set (MDS) and matching Resident Assessment Protocols (RAPs) is the Department's approved Resident Assessment Instrument."
+      }
+    },
+    {
+      "rule": "Each assessment must be conducted or coordinated with the appropriate participation of health professionals.",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-6(B)(1)",
+        "quote": "Each assessment must be conducted or coordinated with the appropriate participation of health professionals."
+      }
+    },
+    {
+      "rule": "Certification: each individual who completes a portion of the assessment must sign and certify the accuracy of that portion of the Assessment Form.",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-6(B)(2)",
+        "quote": "Certification. Each individual who completes a portion of the assessment must sign and certify the accuracy of that portion of the Assessment Form."
+      }
+    },
+    {
+      "rule": "Penalty for falsification: an individual who willfully and knowingly certifies (or causes another individual to certify) a material and false statement in a resident assessment is subject to civil money penalties pursuant to 42 CFR §483.20(j), in addition to possible criminal liability.",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-6(B)(3)",
+        "quote": "An individual who willfully and knowingly certifies (or causes another individual to certify) a material and false statement in a resident assessment is subject to civil money penalties pursuant to CFR Subpart B - Requirements for Long Term Care Facilities, 42 CFR §483.20(j) in addition to possible criminal liability."
+      }
+    },
+    {
+      "rule": "Use of independent assessors: if the Department determines, under a survey or otherwise, that there has been a knowing and willful certification of false statements under §67.05-6(B)(3), the Department may require, for a period it specifies, that resident assessments be conducted and certified by individuals who are independent of the facility and approved by the Department.",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-6(B)(4)",
+        "quote": "If the Department determines, under a survey or otherwise, that there has been a knowing and willful certification of false statements under paragraph B(3) \nabove, the Department may require (for a period specified by the Department) that resident assessments under this paragraph be conducted and certified by individuals who are independent of the facility and who are approved by the Department."
+      }
+    },
+    {
+      "rule": "The Department may review all forms used for resident assessments at any time.",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-6(C)",
+        "quote": "The Department may review all forms used for resident assessments at any time."
+      }
+    },
+    {
+      "rule": "The Department will undertake quality reviews to ensure that assessments are completed accurately, correctly and on a timely basis.",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-6(C)(1)",
+        "quote": "To ensure that assessments are completed accurately, correctly and on a timely basis."
+      }
+    },
+    {
+      "rule": "The Department will undertake quality reviews to review the need for NF care for any resident.",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-6(C)(2)",
+        "quote": "To review the need for NF care for any resident."
+      }
+    },
+    {
+      "rule": "All residents admitted to a nursing facility, regardless of payment source, shall be assessed using the Minimum Data Set (MDS).",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-7",
+        "quote": "All residents admitted to a NF, regardless of payment source, shall be assessed using the Minimum Data Set (MDS)."
+      }
+    },
+    {
+      "rule": "The MDS does not meet the definition of Assessment Form in Section 67.01-17.",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-7",
+        "quote": "The MDS does not meet the definition of Assessment Form in Section 67.01-17."
+      }
+    },
+    {
+      "rule": "An additional case mix group is assigned when assessment data are determined to be incomplete or in error.",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-7",
+        "quote": "An additional group is assigned when assessment data are determined to be incomplete or in error."
+      }
+    },
+    {
+      "rule": "Case mix classification categories are set out in the \"Principles of Reimbursement for Nursing Facilities\"; refer to that document for the categories.",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-7",
+        "quote": "Refer to the “Principles of Reimbursement for Nursing Facilities” for the case mix classification categories."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Signature and certification of accuracy by each individual who completed a portion of the assessment must be present on that portion of the Assessment Form.",
+        "source": {
+          "doc": "mainecare-101-ii-67",
+          "loc": "§67.05-6(B)(2)",
+          "quote": "Each individual who completes a portion of the assessment must sign and certify the accuracy of that portion of the Assessment Form."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as a mandatory requirement (\"must sign and certify\")."
+      },
+      {
+        "criterion": "Evidence that the assessment was conducted or coordinated with the appropriate participation of health professionals.",
+        "source": {
+          "doc": "mainecare-101-ii-67",
+          "loc": "§67.05-6(B)(1)",
+          "quote": "Each assessment must be conducted or coordinated with the appropriate participation of health professionals."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      },
+      {
+        "criterion": "All resident assessment forms must be available for Department review at any time, including for quality reviews of accuracy, correctness and timeliness.",
+        "source": {
+          "doc": "mainecare-101-ii-67",
+          "loc": "§67.05-6(C)",
+          "quote": "The Department may review all forms used for resident assessments at any time. Quality reviews will be undertaken by the Department for the following reasons:"
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      },
+      {
+        "criterion": "A completed MDS assessment must exist for every resident admitted to the NF, regardless of payment source.",
+        "source": {
+          "doc": "mainecare-101-ii-67",
+          "loc": "§67.05-7",
+          "quote": "All residents admitted to a NF, regardless of payment source, shall be assessed using the Minimum Data Set (MDS)."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "ME",
+      "delta": "Maine requires that each individual completing a portion of the assessment sign and certify the accuracy of that portion of the Assessment Form, and subjects willful and knowing certification of a material false statement to civil money penalties under 42 CFR §483.20(j) plus possible criminal liability.",
+      "kind": "documentation",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-6(B)(2)",
+        "quote": "Certification. Each individual who completes a portion of the assessment must sign and certify the accuracy of that portion of the Assessment Form."
+      }
+    },
+    {
+      "state": "ME",
+      "delta": "Upon a determination of knowing and willful certification of false statements, the Maine Department may require, for a period it specifies, that resident assessments be conducted and certified by assessors independent of the facility and approved by the Department.",
+      "kind": "other",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-6(B)(4)",
+        "quote": "the Department may require (for a period specified by the Department) that resident assessments under this paragraph be conducted and certified by individuals who are independent of the facility and who are approved by the Department."
+      }
+    },
+    {
+      "state": "ME",
+      "delta": "Maine requires MDS assessment of all residents admitted to a nursing facility regardless of payment source, and assigns an additional case mix group when assessment data are incomplete or in error.",
+      "kind": "coding",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-7",
+        "quote": "All residents admitted to a NF, regardless of payment source, shall be assessed using the Minimum Data Set (MDS). The MDS provides the basis for resident classification into one of the case mix groups."
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "high",
+    "notes": "The document explicitly states that the MDS provides the basis for resident classification into one of the case mix groups, and that an additional group is assigned when assessment data are incomplete or in error; classification categories are found in the Principles of Reimbursement for Nursing Facilities.",
+    "source": {
+      "doc": "mainecare-101-ii-67",
+      "loc": "§67.05-7",
+      "quote": "The MDS provides the basis for resident classification into one of the case mix groups."
+    }
+  },
+  "conflicts": [
+    {
+      "topic": "Whether the certification requirement in §67.05-6(B)(2) applies to the MDS, given that the \"Assessment Form\" is defined to exclude the MDS",
+      "positions": [
+        {
+          "authority": "mainecare-101-ii-67",
+          "claim": "Certification of accuracy by each individual completing a portion of the assessment is required on the \"Assessment Form\", within the Resident Case Mix Assessment section whose approved instrument is the MDS/RAPs.",
+          "source": {
+            "doc": "mainecare-101-ii-67",
+            "loc": "§67.05-6(B)(2)",
+            "quote": "Each individual who completes a portion of the assessment must sign and certify the accuracy of that portion of the Assessment Form."
+          }
+        },
+        {
+          "authority": "mainecare-101-ii-67",
+          "claim": "The MDS does not meet the definition of Assessment Form in Section 67.01-17.",
+          "source": {
+            "doc": "mainecare-101-ii-67",
+            "loc": "§67.05-7",
+            "quote": "The MDS does not meet the definition of Assessment Form in Section 67.01-17."
+          }
+        },
+        {
+          "authority": "mainecare-101-ii-67",
+          "claim": "The Assessment Form (MED form) is defined as the form approved for medical eligibility determination and does not include the MDS.",
+          "source": {
+            "doc": "mainecare-101-ii-67",
+            "loc": "§67.01-17",
+            "quote": "The Assessment Form does not include the Minimum Data Set (MDS)."
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    }
+  ],
+  "common_audit_citations": [
+    {
+      "citation": "42 CFR §483.20(j)",
+      "notes": "Cited as the authority for civil money penalties for willful and knowing certification of a material and false statement in a resident assessment.",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-6(B)(3)",
+        "quote": "subject to civil money penalties pursuant to CFR Subpart B - Requirements for Long Term Care Facilities, 42 CFR §483.20(j) in addition to possible criminal liability."
+      }
+    },
+    {
+      "citation": "MaineCare Benefits Manual Chapter II §67.05-6(B)(2) — certification of accuracy",
+      "notes": "Missing signature/certification by an individual who completed a portion of the assessment.",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-6(B)(2)",
+        "quote": "Each individual who completes a portion of the assessment must sign and certify the accuracy of that portion of the Assessment Form."
+      }
+    },
+    {
+      "citation": "MaineCare Benefits Manual Chapter II §67.05-6(C)(1) — Department quality review of assessment accuracy and timeliness",
+      "notes": "Basis for Department quality reviews checking that assessments are completed accurately, correctly and on a timely basis.",
+      "source": {
+        "doc": "mainecare-101-ii-67",
+        "loc": "§67.05-6(C)(1)",
+        "quote": "To ensure that assessments are completed accurately, correctly and on a timely basis."
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "mainecare-101-ii-67"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

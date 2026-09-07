@@ -1,6 +1,6 @@
 {
   "item_id": "N0415K",
-  "item_name": "High-Risk Drug Classes: Use and Indication — Anticonvulsant (N0415K1 Is taking; N0415K2 Indication noted)",
+  "item_name": "High-Risk Drug Classes: Use and Indication — Anticonvulsant",
   "section": "N",
   "instrument": "MDS-3.0",
   "lookback_days": 7,
@@ -9,7 +9,7 @@
     "loc": "p. N-8",
     "quote": "N0415K1. Anticonvulsant: Check if an anticonvulsant medication was taken by the resident at any time during the 7-day observation period (or since admission/entry or reentry if less than 7 days)."
   },
-  "lookback_notes": "7-day look-back/observation period, or since admission/entry or reentry if less than 7 days. The item table on p. N-4 states the check is for medications taken \"during the last 7 days or since admission/entry or reentry if less than 7 days.\" The coding instructions on p. N-6 refer to a \"7-day observation period\" for Column 1; the subitem instructions on p. N-8 refer to a \"7-day observation period\" for N0415K1 and to \"the observation period\" for N0415K2. The document does not state how the days are counted relative to the ARD in this section.",
+  "lookback_notes": "The item's own pages state a 7-day observation/look-back period (or since admission/entry or reentry if less than 7 days) for both N0415K1 and N0415K2. Per the general convention on p. 2-21, the ARD is day 1 of the count, so the window is the ARD plus the 6 previous calendar days. The item pages use both the phrase '7-day observation period' (N0415K1, p. N-8) and, for the Steps for Assessment and Column 1 general instruction, '7-day look-back period'/'7-day observation period' (p. N-6); these refer to the same window.",
   "coding_levels": [
     {
       "code": "N0415K1 (checked)",
@@ -32,35 +32,43 @@
       }
     },
     {
-      "code": "N0415Z1 (None of the above)",
-      "label": "None of the above",
-      "definition": "Check if none of the medications above were taken by the resident at any time during the observation period (or since admission/entry or reentry if less than 7 days).",
+      "code": "blank (unchecked)",
+      "label": "Not checked",
+      "definition": "Per the general convention for check-all-that-apply items, boxes are checked only if the specified condition is met; otherwise they remain blank. Column 2 is only considered if Column 1 is checked.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-8",
-        "quote": "N0415Z1. None of the above: Check if none of the medications above were taken by the resident at any time during the observation period (or since admission/entry or reentry if less than 7 days)."
+        "loc": "p. N-4",
+        "quote": "If Column 1 is checked, check if there is an indication noted for all medications in the drug class"
       }
     }
   ],
   "federal_coding_rules": [
     {
-      "rule": "Column 1 (N0415K1): check if the resident is taking an anticonvulsant by pharmacological classification during the 7-day observation period (or since admission/entry or reentry if less than 7 days).",
+      "rule": "Check N0415K1 if an anticonvulsant medication was taken by the resident at any time during the 7-day observation period (or since admission/entry or reentry if less than 7 days).",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-6",
-        "quote": "Column 1: Check if the resident is taking any medications by pharmacological classification during the 7-day observation period (or since admission/entry or reentry if less than 7 days)."
+        "loc": "p. N-8",
+        "quote": "N0415K1. Anticonvulsant: Check if an anticonvulsant medication was taken by the resident at any time during the 7-day observation period (or since admission/entry or reentry if less than 7 days)."
       }
     },
     {
-      "rule": "Column 2 (N0415K2): only if Column 1 is checked, check whether an indication is noted for all medications in the drug class.",
+      "rule": "Check N0415K2 only if there is an indication noted for ALL anticonvulsant medications taken by the resident any time during the observation period (or since admission/entry or reentry if less than 7 days).",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-6",
-        "quote": "Column 2: If Column 1 is checked, check if there is an indication noted for all medications in the drug class."
+        "loc": "p. N-8",
+        "quote": "N0415K2. Anticonvulsant: Check if there is an indication noted for all anticonvulsant medications taken by the resident any time during the observation period (or since admission/entry or reentry if less than 7 days)."
       }
     },
     {
-      "rule": "Code all high-risk drug class medications according to their pharmacological classification, not how they are being used.",
+      "rule": "Column 2 (indication noted) is coded only when Column 1 is checked.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. N-4",
+        "quote": "If Column 1 is checked, check if there is an indication noted for all medications in the drug class"
+      }
+    },
+    {
+      "rule": "Code all high-risk drug class medications according to their pharmacological classification, not how they are being used; Column 1 = check if the resident is taking any medications by pharmacological classification during the 7-day observation period (or since admission/entry or reentry if less than 7 days).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-6",
@@ -68,15 +76,15 @@
       }
     },
     {
-      "rule": "Code medications in Item N0415 according to the medication's therapeutic category and/or pharmacological classification, not how it is used (e.g., oxazepam prescribed as a hypnotic is coded as an antianxiety medication).",
+      "rule": "Code medications in Item N0415 according to the medication's therapeutic category and/or pharmacological classification, not how it is used.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-8",
-        "quote": "Code medications in Item N0415 according to the medication's therapeutic category and/or pharmacological classification, not how it is used."
+        "quote": "Code medications in Item N0415 according to the medication’s therapeutic category and/or pharmacological classification, not how it is used."
       }
     },
     {
-      "rule": "Medications with more than one therapeutic category and/or pharmacological classification are coded in all categories/classifications assigned to the medication, regardless of how the medication is being used.",
+      "rule": "Medications that have more than one therapeutic category and/or pharmacological classification must be coded in all categories/classifications assigned to the medication, regardless of how it is being used.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-9",
@@ -100,7 +108,7 @@
       }
     },
     {
-      "rule": "Long-acting medications given every few weeks or monthly are counted only if they are given during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
+      "rule": "Count long-acting medications given every few weeks or monthly only if they are given during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-9",
@@ -108,15 +116,15 @@
       }
     },
     {
-      "rule": "For transdermal patches, capture the medication only if the patch was applied to the resident's skin during the observation period.",
+      "rule": "For transdermal patches, only capture the medication if the transdermal patch was applied to the resident's skin during the observation period.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-9",
-        "quote": "To code N0415, only capture the medication if the transdermal patch was applied to the resident's skin during the observation period."
+        "quote": "To code N0415, only capture the medication if the transdermal patch was applied to the resident’s skin during the observation period."
       }
     },
     {
-      "rule": "Combination medications are coded in all categories/pharmacologic classes that constitute the combination.",
+      "rule": "Combination medications must be coded in all categories/pharmacologic classes that constitute the combination.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-9",
@@ -124,7 +132,7 @@
       }
     },
     {
-      "rule": "Herbal and alternative medicine products are dietary supplements and should not be counted as medications.",
+      "rule": "Herbal and alternative medicine products (dietary supplements) are not counted as medications for this item.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-10",
@@ -132,51 +140,58 @@
       }
     },
     {
+      "rule": "Check N0415Z1, None of the above, if none of the listed medications (including anticonvulsants) were taken by the resident at any time during the observation period (or since admission/entry or reentry if less than 7 days).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. N-8",
+        "quote": "N0415Z1. None of the above: Check if none of the medications above were taken by the resident at any time during the observation period (or since admission/entry or reentry if less than 7 days)."
+      }
+    },
+    {
       "rule": "Providers are responsible for coding each medication's pharmacological/therapeutic classification accurately; use of the listed reference resources is not required for MDS completion.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-12",
-        "quote": "Providers are responsible for coding each medication's pharmacological/therapeutic classification accurately."
+        "quote": "Providers are responsible for coding each medication’s pharmacological/therapeutic classification accurately."
       }
     }
   ],
   "supportive_documentation": {
     "federal": [
       {
-        "criterion": "Medical record documentation that the anticonvulsant medication was received by the resident and documentation of the indication for its use during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
+        "criterion": "Review the resident's medical record for documentation that the medication was received by the resident and for the indication of its use during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. N-6",
-          "quote": "Review the resident's medical record for documentation that any of these medications were received by the resident and for the indication of their use during the 7-day lookback period (or since admission/entry or reentry if less than 7 days)."
+          "quote": "Review the resident’s medical record for documentation that any of these medications were received by the resident and for the indication of their use during the 7-day lookback period (or since admission/entry or reentry if less than 7 days)."
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Step for Assessment #1 for N0415."
+        "notes": "Primary source review step for both Column 1 and Column 2 coding."
       },
       {
-        "criterion": "Documentation from other health care settings where the resident may have received the medication while a resident of the nursing home (e.g., medication given in the emergency room) must be reviewed.",
+        "criterion": "Review documentation from other health care settings where the resident may have received any of these medications while a resident of the nursing home (e.g., valium given in the emergency room).",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. N-6",
           "quote": "Review documentation from other health care settings where the resident may have received any of these medications while a resident of the nursing home (e.g., valium given in the emergency room)."
         },
         "verified_by_expert": false,
-        "audit_weight": "high",
-        "notes": "Step for Assessment #2 for N0415."
+        "audit_weight": "high"
       },
       {
-        "criterion": "The indication must be an identified, documented clinical rationale for administering the medication, based on the prescriber's assessment of the resident's condition and therapeutic goals.",
+        "criterion": "For Column 2 (N0415K2), the indication must be an identified, documented clinical rationale for administering the medication, based upon a physician's (or prescriber's) assessment of the resident's condition and therapeutic goals.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. N-6",
-          "quote": "INDICATION The identified, documented clinical rationale for administering a medication that is based upon a physician's (or prescriber's) assessment of the resident's condition and therapeutic goals."
+          "quote": "INDICATION The identified, documented clinical rationale for administering a medication that is based upon a physician’s (or prescriber’s) assessment of the resident’s condition and therapeutic goals."
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Definition box supporting Column 2 coding."
+        "notes": "Definition box on the N0415 page; establishes that the indication must be documented."
       },
       {
-        "criterion": "Assessors should be able to identify the source(s) used to support coding of pharmacological classification on the MDS 3.0.",
+        "criterion": "Assessors should be able to identify the source(s) used to support coding the MDS 3.0 pharmacological classification; facilities may wish to identify a resource their staff consistently use.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. N-9",
@@ -184,7 +199,18 @@
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Framed as a suggestion (\"may wish to\") with an expectation that the source can be identified."
+        "notes": "Framed as a suggestion (\"may wish\") but with an expectation that the coding source is identifiable."
+      },
+      {
+        "criterion": "Assessors may consult the manufacturer's package insert for the medication's pharmacological classification, or work with the resident's pharmacist to confirm classification.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. N-9",
+          "quote": "Assessors should consult the manufacturer’s package insert, which may contain the medication’s pharmacological classification."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "low",
+        "notes": "Suggested resource; use of resources is not required for MDS completion (p. N-12)."
       }
     ],
     "state": {}
@@ -192,15 +218,14 @@
   "state_deltas": [],
   "case_mix_relevance": {
     "level": "unknown",
-    "notes": "The supplied Section N pages do not tie N0415K (Anticonvulsant) to any payment or case-mix classification."
+    "notes": "The supplied pages for N0415 do not tie the anticonvulsant item to any payment or case-mix classification."
   },
   "conflicts": [],
   "common_audit_citations": [],
   "not_found": [
-    "state_deltas",
     "common_audit_citations",
-    "case_mix_relevance.level",
-    "lookback_notes.count_method"
+    "state_deltas",
+    "case_mix_relevance.source"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",

@@ -1,48 +1,46 @@
 {
   "item_id": "N0415E",
-  "item_name": "High-Risk Drug Classes: Use and Indication — Anticoagulant",
+  "item_name": "High-Risk Drug Classes: Use and Indication — Anticoagulant (e.g., warfarin, heparin, or low-molecular weight heparin)",
   "section": "N",
   "instrument": "MDS-3.0",
   "lookback_days": 7,
   "lookback_source": {
     "doc": "rai-manual-v1.20.1",
     "loc": "p. N-7",
-    "quote": "Check if an anticoagulant medication was taken by the resident at any time during the 7-day look-back period (or since admission/entry or reentry if less than 7 days)."
+    "quote": "N0415E1. Anticoagulant (e.g., warfarin, heparin, or low-molecular weight heparin): Check if an anticoagulant medication was taken by the resident at any time during the 7-day look-back period (or since admission/entry or reentry if less than 7 days)."
   },
-  "lookback_notes": "7-day look-back period, or since admission/entry or reentry if less than 7 days. The manual uses the terms \"7-day look-back period\" (N0415E1, p. N-7) and \"observation period\" (N0415E2, p. N-7) and \"7-day observation period\" (Coding Instructions, p. N-6) interchangeably for this item. No statement in the supplied pages describes how the 7 days are counted relative to the ARD.",
+  "lookback_notes": "7-day look-back period ending on the ARD; if the resident's admission/entry or reentry occurred less than 7 days before the ARD, the period is \"since admission/entry or reentry.\" The item table on p. N-4 states the window as \"during the last 7 days or since admission/entry or reentry if less than 7 days.\" The item's own pages alternately use the terms \"7-day look-back period\" (N0415E1, p. N-7) and \"7-day observation period\" (general coding instruction, p. N-6) for the same window. Counting convention (ARD + 6 previous calendar days) comes from the manual's general conventions, not from this item's pages.",
   "coding_levels": [
     {
       "code": "N0415E1",
-      "label": "Anticoagulant — Column 1, Is taking",
+      "label": "Anticoagulant — Column 1: Is taking",
       "definition": "Check if an anticoagulant medication was taken by the resident at any time during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-7",
-        "quote": "Check if an anticoagulant medication was taken by the resident at any time during the 7-day look-back period (or since admission/entry or reentry if less than 7 days)."
+        "quote": "N0415E1. Anticoagulant (e.g., warfarin, heparin, or low-molecular weight heparin): Check if an anticoagulant medication was taken by the resident at any time during the 7-day look-back period (or since admission/entry or reentry if less than 7 days)."
       }
     },
     {
       "code": "N0415E2",
-      "label": "Anticoagulant — Column 2, Indication noted",
+      "label": "Anticoagulant — Column 2: Indication noted",
       "definition": "Check if there is an indication noted for all anticoagulant medications taken by the resident any time during the observation period (or since admission/entry or reentry if less than 7 days).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-7",
         "quote": "N0415E2. Anticoagulant: Check if there is an indication noted for all anticoagulant medications taken by the resident any time during the observation period (or since admission/entry or reentry if less than 7 days)."
       }
-    },
-    {
-      "code": "E",
-      "label": "Item label as printed on the MDS item set",
-      "definition": "Anticoagulant (e.g., warfarin, heparin, or low-molecular weight heparin)",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-4",
-        "quote": "Anticoagulant (e.g., warfarin, heparin, or low-molecular weight heparin)"
-      }
     }
   ],
   "federal_coding_rules": [
+    {
+      "rule": "Check Column 1 (N0415E1) if the resident is taking an anticoagulant by pharmacological classification during the 7-day observation period (or since admission/entry or reentry if less than 7 days); Column 2 is checked only if Column 1 is checked and there is an indication noted for all medications in the drug class.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. N-6",
+        "quote": "Column 1: Check if the resident is taking any medications by pharmacological classification during the 7-day observation period (or since admission/entry or reentry if less than 7 days).\no Column 2: If Column 1 is checked, check if there is an indication noted for all medications in the drug class."
+      }
+    },
     {
       "rule": "Code all high-risk drug class medications according to their pharmacological classification, not how they are being used.",
       "source": {
@@ -52,35 +50,27 @@
       }
     },
     {
-      "rule": "Column 1: check if the resident is taking any medications by pharmacological classification during the 7-day observation period (or since admission/entry or reentry if less than 7 days).",
+      "rule": "Code medications in N0415 according to the medication's therapeutic category and/or pharmacological classification, not how it is used.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-6",
-        "quote": "Column 1: Check if the resident is taking any medications by pharmacological classification during the 7-day observation period (or since admission/entry or reentry if less than 7 days)."
+        "loc": "p. N-8",
+        "quote": "Code medications in Item N0415 according to the medication's therapeutic category and/or pharmacological classification, not how it is used."
       }
     },
     {
-      "rule": "Column 2 is coded only if Column 1 is checked; then check whether there is an indication noted for all medications in the drug class.",
+      "rule": "Medications with more than one therapeutic category and/or pharmacological classification must be coded in all applicable categories/classifications, regardless of how the medication is being used.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-6",
-        "quote": "Column 2: If Column 1 is checked, check if there is an indication noted for all medications in the drug class."
+        "loc": "p. N-9",
+        "quote": "Medications that have more than one therapeutic category and/or pharmacological classification should be coded in all categories/classifications assigned to the medication, regardless of how it is being used."
       }
     },
     {
-      "rule": "Check N0415E1 if an anticoagulant medication was taken by the resident at any time during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
+      "rule": "Include medications given to the resident by any route in any setting (e.g., at the nursing home, in a hospital emergency room) while a resident of the nursing home.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-7",
-        "quote": "Check if an anticoagulant medication was taken by the resident at any time during the 7-day look-back period (or since admission/entry or reentry if less than 7 days)."
-      }
-    },
-    {
-      "rule": "Check N0415E2 if there is an indication noted for all anticoagulant medications taken by the resident any time during the observation period (or since admission/entry or reentry if less than 7 days).",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-7",
-        "quote": "N0415E2. Anticoagulant: Check if there is an indication noted for all anticoagulant medications taken by the resident any time during the observation period (or since admission/entry or reentry if less than 7 days)."
+        "loc": "p. N-9",
+        "quote": "Include any of these medications given to the resident by any route in any setting (e.g., at the nursing home, in a hospital emergency room) while a resident of the nursing home."
       }
     },
     {
@@ -100,7 +90,7 @@
       }
     },
     {
-      "rule": "Do not code flushes to keep an IV access patent in N0415E, Anticoagulant.",
+      "rule": "Do not code flushes given to keep an IV access patent in N0415E, Anticoagulant.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-9",
@@ -116,19 +106,19 @@
       }
     },
     {
-      "rule": "Include any of these medications given to the resident by any route in any setting (e.g., at the nursing home, in a hospital emergency room) while a resident of the nursing home.",
+      "rule": "Count long-acting medications given every few weeks or monthly only if they are given during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-9",
-        "quote": "Include any of these medications given to the resident by any route in any setting (e.g., at the nursing home, in a hospital emergency room) while a resident of the nursing home."
+        "quote": "Count long-acting medications, such as fluphenazine decanoate or haloperidol decanoate, that are given every few weeks or monthly only if they are given during the 7-day lookback period (or since admission/entry or reentry if less than 7 days)."
       }
     },
     {
-      "rule": "Medications that have more than one therapeutic category and/or pharmacological classification must be coded in all categories/classifications assigned to the medication, regardless of how it is being used.",
+      "rule": "For transdermal patches, capture the medication in N0415 only if the transdermal patch was applied to the resident's skin during the observation period.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-9",
-        "quote": "Medications that have more than one therapeutic category and/or pharmacological classification should be coded in all categories/classifications assigned to the medication, regardless of how it is being used."
+        "quote": "To code N0415, only capture the medication if the transdermal patch was applied to the resident's skin during the observation period."
       }
     },
     {
@@ -140,23 +130,7 @@
       }
     },
     {
-      "rule": "Long-acting medications given every few weeks or monthly are counted only if they are given during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-9",
-        "quote": "Count long-acting medications, such as fluphenazine decanoate or haloperidol decanoate, that are given every few weeks or monthly only if they are given during the 7-day lookback period (or since admission/entry or reentry if less than 7 days)."
-      }
-    },
-    {
-      "rule": "For transdermal patches, capture the medication only if the transdermal patch was applied to the resident's skin during the observation period.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-9",
-        "quote": "To code N0415, only capture the medication if the transdermal patch was applied to the resident's skin during the observation period."
-      }
-    },
-    {
-      "rule": "Herbal and alternative medicine products are dietary supplements and should not be counted as medications.",
+      "rule": "Herbal and alternative medicine products are not counted as medications for this item.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-10",
@@ -164,18 +138,18 @@
       }
     },
     {
-      "rule": "Code medications in Item N0415 according to the medication's therapeutic category and/or pharmacological classification, not how it is used.",
+      "rule": "Check N0415Z1, None of the above, if none of the listed medications (including anticoagulants) were taken by the resident at any time during the observation period (or since admission/entry or reentry if less than 7 days).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-8",
-        "quote": "Code medications in Item N0415 according to the medication's therapeutic category and/or pharmacological classification, not how it is used."
+        "quote": "N0415Z1. None of the above: Check if none of the medications above were taken by the resident at any time during the observation period (or since admission/entry or reentry if less than 7 days)."
       }
     }
   ],
   "supportive_documentation": {
     "federal": [
       {
-        "criterion": "Medical record documentation that the medication was received by the resident and documentation of the indication for its use during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
+        "criterion": "Review the resident's medical record for documentation that the medication was received by the resident and for the indication of its use during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. N-6",
@@ -183,32 +157,31 @@
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Step 1 of Steps for Assessment for N0415."
+        "notes": "Both receipt of the anticoagulant and its indication must be documented in the medical record."
       },
       {
-        "criterion": "Documentation from other health care settings where the resident may have received any of these medications while a resident of the nursing home (e.g., valium given in the emergency room) must be reviewed.",
+        "criterion": "Review documentation from other health care settings where the resident may have received these medications while a resident of the nursing home (e.g., valium given in the emergency room).",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. N-6",
           "quote": "Review documentation from other health care settings where the resident may have received any of these medications while a resident of the nursing home (e.g., valium given in the emergency room)."
         },
         "verified_by_expert": false,
-        "audit_weight": "high",
-        "notes": "Step 2 of Steps for Assessment for N0415."
+        "audit_weight": "medium"
       },
       {
-        "criterion": "The indication supporting Column 2 is the identified, documented clinical rationale for administering a medication, based upon a physician's (or prescriber's) assessment of the resident's condition and therapeutic goals.",
+        "criterion": "An \"indication\" must be an identified, documented clinical rationale for administering the medication, based upon a physician's (or prescriber's) assessment of the resident's condition and therapeutic goals.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. N-6",
-          "quote": "The identified, documented clinical rationale for administering a medication that is based upon a physician's (or prescriber's) assessment of the resident's condition and therapeutic goals."
+          "quote": "INDICATION\nThe identified, documented clinical rationale for administering a medication that is based upon a physician's (or prescriber's) assessment of the resident's condition and therapeutic goals."
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Definition box, \"INDICATION\"."
+        "notes": "Definition box governs what satisfies Column 2 (N0415E2)."
       },
       {
-        "criterion": "Assessors should be able to identify the source(s) used to support coding the pharmacological classification on the MDS 3.0; facilities may wish to identify a consistent resource for classification.",
+        "criterion": "Assessors should be able to identify the source(s) used to support coding the pharmacological classification on the MDS 3.0 (e.g., a consistently used facility resource).",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. N-9",
@@ -216,10 +189,21 @@
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Framed as a suggestion (\"may wish\") but includes an expectation that the source be identifiable."
+        "notes": "Framed as a suggestion (\"may wish to\") but includes the expectation that assessors can identify the source supporting coding."
       },
       {
-        "criterion": "Providers are responsible for coding each medication's pharmacological/therapeutic classification accurately; the listed reference resources are optional and not required for MDS completion.",
+        "criterion": "Assessors may consult the manufacturer's package insert or work with the resident's pharmacist to confirm the medication's pharmacological classification.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. N-9",
+          "quote": "Assessors should consult the manufacturer's package insert, which may contain the medication's pharmacological classification. They can also work with the resident's pharmacist to confirm the medication classification(s) for a resident's medication(s)."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "low",
+        "notes": "Suggested resource, not required."
+      },
+      {
+        "criterion": "Providers are responsible for coding each medication's pharmacological/therapeutic classification accurately; use of the listed external resources is not required for MDS completion.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. N-12",
@@ -234,13 +218,38 @@
   "state_deltas": [],
   "case_mix_relevance": {
     "level": "unknown",
-    "notes": "The supplied pages do not tie N0415E to any payment or case-mix classification."
+    "notes": "The supplied Section N pages do not tie N0415E to any payment or case-mix classification."
   },
-  "conflicts": [],
+  "conflicts": [
+    {
+      "topic": "Terminology for the N0415E window: \"7-day look-back period\" vs. \"7-day observation period\"",
+      "positions": [
+        {
+          "authority": "rai-manual-v1.20.1",
+          "claim": "N0415E1 states the window as the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. N-7",
+            "quote": "Check if an anticoagulant medication was taken by the resident at any time during the 7-day look-back period (or since admission/entry or reentry if less than 7 days)."
+          }
+        },
+        {
+          "authority": "rai-manual-v1.20.1",
+          "claim": "The general N0415 coding instruction states Column 1 covers the 7-day observation period (or since admission/entry or reentry if less than 7 days).",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. N-6",
+            "quote": "Column 1: Check if the resident is taking any medications by pharmacological classification during the 7-day observation period (or since admission/entry or reentry if less than 7 days)."
+          }
+        }
+      ],
+      "resolution": "Not a substantive difference in length — both describe a 7-day window ending at the ARD; terminology differs only. Recorded for transparency."
+    }
+  ],
   "common_audit_citations": [
     {
       "citation": "State Operations Manual, Appendix PP, Guidance to Surveyors for Long Term Care Facilities",
-      "notes": "Referenced by the manual as the source of information on common medication-medication interactions relevant to anticoagulant use.",
+      "notes": "Referenced on the N0415 anticoagulant page as the source of information on common medication-medication interactions; the manual provides this as an informational reference, not as a coding requirement for N0415E.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-11",
@@ -250,9 +259,7 @@
   ],
   "not_found": [
     "state_deltas",
-    "case_mix_relevance.source",
-    "conflicts",
-    "lookback counting method relative to the ARD"
+    "case_mix_relevance.source"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",

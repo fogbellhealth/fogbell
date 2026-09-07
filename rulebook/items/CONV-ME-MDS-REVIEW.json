@@ -1,0 +1,414 @@
+{
+  "item_id": "CONV-ME-MDS-REVIEW",
+  "item_name": "Maine MDS assessment review, sanctions and submission deadlines",
+  "section": "CONV",
+  "instrument": "MDS-3.0",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. Principle 16.2 and its subsections do not state an assessor observation/look-back window ending on the ARD for this review program. Other time periods that are stated (and are not look-back windows) include: the three (3) month sanction period applied to the Direct Care Rate subsequent to the quality review date (§16.2.3.4); fourteen (14) days to complete MDS corrections after a written request (§16.2.3.5); seven (7) days to encode and to transmit data after completion of an assessment (§16.2.2); and the assessment submission deadlines in §16.2.1 (14th day of stay, 366 days, 14th calendar day, every 92 days).",
+  "coding_levels": [
+    {
+      "code": "VERIFIED",
+      "label": "Verified Case Mix Group Record",
+      "definition": "A NF's completed MDS assessment form determined during the MDS assessment review process to accurately represent the resident's clinical condition; verification includes reviewing assessment forms and supporting documentation, interviews, and resident observation.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.1",
+        "quote": "“Verified Case Mix Group Record” is a NF’s completed MDS assessment form, which has been determined to accurately represent the resident’s clinical condition, during the MDS assessment review process. Verification activities include reviewing resident assessment forms and supporting documentation, conducting interviews, and observing residents."
+      }
+    },
+    {
+      "code": "UNVERIFIED-CMG",
+      "label": "Unverified Case Mix Group Record",
+      "definition": "A record that, for reimbursement purposes, the Department has determined does not accurately represent the resident's condition and results in inaccurate classification into a case mix group that increases the case mix weight assigned to the resident.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.1",
+        "quote": "“Unverified Case Mix Group Record” is one which, for reimbursement purposes, the Department has determined does not accurately represent the resident’s condition, and therefore results in the resident’s inaccurate classification into a case mix group that increases the case mix weight assigned to the resident."
+      }
+    },
+    {
+      "code": "UNVERIFIED-MDS",
+      "label": "Unverified MDS Record",
+      "definition": "A record that, for clinical purposes, does not accurately reflect the resident's condition; requires submission of the appropriate MDS correction form and adherence to CMS clinical guidelines for MDS completion.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.1",
+        "quote": "“Unverified MDS Record” is one, which, for clinical purposes, does not accurately reflect the resident’s condition. Records so identified will require facilities to submit the appropriate MDS correction form and follow the CMS clinical guidelines for MDS completion."
+      }
+    },
+    {
+      "code": "SANCTION-2",
+      "label": "2% decrease in the Direct Care Rate (error rate ≥34% and <37%)",
+      "definition": "Imposed when the NF assessment review results in an error rate of thirty-four percent (34%) or greater, but less than thirty-seven percent (37%).",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.4",
+        "quote": "*A two percent (2%) decrease in the Direct Care Rate will be imposed when the NF assessment review results in an error rate of thirty-four percent (34%) or greater, but is less than thirty-seven percent (37%)."
+      }
+    },
+    {
+      "code": "SANCTION-5",
+      "label": "5% decrease in the Direct Care Rate (error rate ≥37% and <41%)",
+      "definition": "Imposed when the NF assessment review results in an error rate of thirty-seven percent (37%) or greater, but less than forty-one percent (41%).",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.4",
+        "quote": "*A five percent (5%) decrease in the Direct Care Rate will be imposed when the NF assessment review results in an error rate of thirty-seven percent (37%) or greater, but is less than forty-one percent (41%)."
+      }
+    },
+    {
+      "code": "SANCTION-7",
+      "label": "7% decrease in the Direct Care Rate (error rate ≥41% and <45%)",
+      "definition": "Imposed when the NF assessment review results in an error rate of forty-one percent (41%) or greater, but less than forty-five percent (45%).",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.4",
+        "quote": "*A seven percent (7%) decrease in the Direct Care Rate will be imposed when NF assessment review results in an error rate of forty-one percent (41%) or greater, but is less than forty-five percent (45%)."
+      }
+    },
+    {
+      "code": "SANCTION-10",
+      "label": "10% decrease in the Direct Care Rate (error rate ≥45%)",
+      "definition": "Imposed when the NF assessment review results in an error rate of forty-five percent (45%) or greater.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.4",
+        "quote": "*A ten percent (10%) decrease in the Direct Care Rate will be imposed when the NF assessment review results in an error rate of forty-five percent (45%) or greater."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "All residents admitted to a Nursing Facility, regardless of payment source, shall be assessed using the MDS, per CMS guidelines.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2",
+        "quote": "Per CMS guidelines, all residents admitted to a Nursing Facility (NF), regardless of payment source, shall be assessed using the MDS."
+      }
+    },
+    {
+      "rule": "Admission Assessment (Comprehensive) must be completed and submitted by the 14th day of the resident's stay, where the date of admission is Day 1.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.1",
+        "quote": "*An Admission Assessment (Comprehensive) must be completed and submitted by the fourteenth (14th) day of the resident’s stay where the date of admission is Day 1."
+      }
+    },
+    {
+      "rule": "Annual Reassessment (Comprehensive) must be completed and submitted within 366 days of the Assessment Reference Date of the most recent comprehensive assessment.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.1",
+        "quote": "*An Annual Reassessment (Comprehensive) must be completed and submitted within three hundred-sixty-six (366) days of the Assessment Reference Date of the most recent comprehensive assessment."
+      }
+    },
+    {
+      "rule": "Significant Change in Status Reassessment (Comprehensive) must be completed and submitted by the end of the 14th calendar day following determination that a significant change has occurred.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.1",
+        "quote": "*A Significant Change in Status Reassessment (Comprehensive) must be completed and submitted by the end of the fourteenth (14th) calendar day following determination that a significant change has occurred."
+      }
+    },
+    {
+      "rule": "A Quarterly Assessment must be completed and submitted every 92 days.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.1",
+        "quote": "A Quarterly Assessment must be completed and submitted every ninety-two (92) days."
+      }
+    },
+    {
+      "rule": "Encoding: a facility must encode the data on every assessment listed in §16.2.1 within seven (7) days after the facility completes a resident's assessment.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.2",
+        "quote": "Encoding Data: A facility must encode the data on every assessment as listed in Sec 16.2.1 within seven (7) days after a facility completes a resident’s assessment."
+      }
+    },
+    {
+      "rule": "Transmitting: a facility must be capable of transmitting to the State the MDS information for each resident in a format conforming to standard record layouts and data dictionaries within seven (7) days after the facility completes a resident's assessment.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.2",
+        "quote": "Transmitting data: A facility must be capable of transmitting to the State information for each resident contained in the MDS in a format that conforms to standard record layouts and data dictionaries within seven (7) days after a facility completes a resident’s assessment."
+      }
+    },
+    {
+      "rule": "If extraordinary conditions prevent electronic submission, a request to submit MDS information via diskette must be made to the Office of MaineCare Services a minimum of five (5) days prior to the required date of submission of the MDS assessment data.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.2",
+        "quote": "This request must be made a minimum of five (5) days prior to the required date of submission of the MDS assessment data."
+      }
+    },
+    {
+      "rule": "MDS assessment review is a review conducted at nursing facilities by the Maine DHHS of assessments submitted under Principle 16.2 to ensure assessments accurately reflect the resident's clinical condition.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.1",
+        "quote": "“MDS assessment review” is a review conducted at nursing facilities (NFs) by the Maine Department of Health and Human Services, for review of assessments submitted in accordance with Principle 16.2 to ensure that assessments accurately reflect the resident’s clinical condition."
+      }
+    },
+    {
+      "rule": "The assessment review error rate is the percentage of unverified Case Mix Group Records in the drawn sample; samples are drawn from Case Mix Group Records completed for residents who have MaineCare reimbursement.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.1",
+        "quote": "“Assessment review error rate” is the percentage of unverified Case Mix Group Record in the drawn sample. Samples shall be drawn from Case Mix Group Record completed for residents who have MaineCare reimbursement."
+      }
+    },
+    {
+      "rule": "MDS Correction Forms received in the central repository or included in the clinical record are the basis for review when completed before the day of the review and included as part of the resident's clinical record.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.1",
+        "quote": "MDS Correction Forms received in the central repository or included in the clinical record will be the basis for review when completed before the day of the review and included as part of the resident’s clinical record."
+      }
+    },
+    {
+      "rule": "Corrections take two forms: Modification (information in the MDS central repository is inaccurate and requires correction) and Deletion (the facility determines the MDS was submitted in error and requests the inaccurate record be deleted from the database).",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.1",
+        "quote": "(a)\tModification: Information contained in the MDS central repository is inaccurate for an assessment and requires correction."
+      }
+    },
+    {
+      "rule": "Records identified as Unverified Case Mix Group Records require facilities to submit the appropriate MDS correction form and follow CMS clinical guidelines for MDS completion; correction forms received prior to calculating the rate setting quarterly index will be used in the calculation of that index.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.1",
+        "quote": "Records so identified will require facilities to submit the appropriate MDS correction form and follow CMS clinical guidelines for MDS completion. Correction forms received prior to calculating the rate setting quarterly index will be used in the calculation of that index."
+      }
+    },
+    {
+      "rule": "Facilities may be selected for MDS assessment review based upon, but not limited to: licensing and certification survey findings indicating the facility is not accurately assessing residents; analysis of the facility's case mix profile (including changes in frequency distribution in major categories or a change in the facility average case mix score); and prior resident assessment performance (ongoing problems with submission deadlines, error rates, high percentages of MDS corrections or deletions, and incorrect assessment dates).",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.2",
+        "quote": "NFs may be selected for a MDS assessment review by the Department based upon but not limited to any of the following:"
+      }
+    },
+    {
+      "rule": "Assessment reviews shall be conducted by staff or designated agents of the Department.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.3",
+        "quote": "Assessment reviews shall be conducted by staff or designated agents of the Department."
+      }
+    },
+    {
+      "rule": "A record sample of twenty-four percent (24%) with a minimum of five (5) records shall be drawn from MDS assessments completed for residents who have MaineCare reimbursement.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.3",
+        "quote": "*A record sample of twenty-four percent (24%) with a minimum of five (5) records shall be drawn from MDS assessments completed for residents who have MaineCare reimbursement."
+      }
+    },
+    {
+      "rule": "At the conclusion of the on-site portion of the review, the Department's reviewers shall hold an exit conference with facility representatives and share written findings for reviewed records.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.3",
+        "quote": "At the conclusion of the on-site portion of the review process, the Department’s reviewers shall hold an exit conference with facility representatives. Reviewers will share written findings for reviewed records."
+      }
+    },
+    {
+      "rule": "Sanctions are applied to the Direct Care Rate established after any applicable Guardrails are applied, for a three month period subsequent to the quality review date, and apply to all MaineCare resident days billed by the facility during the three month sanction period.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.4",
+        "quote": "*The following sanctions shall be applied to the Direct Care Rate established after any applicable Guardrails are applied for a three month period subsequent to the quality review date. The sanction will apply to all MaineCare resident days billed by the facility during the three month sanction period."
+      }
+    },
+    {
+      "rule": "Upon notification of the error rates determined by the reviewers, the rate setting unit implements the sanction by issuing a rate letter with the start and end dates of the three month sanction period; at the completion of the period a rate letter is issued reinstating the total allowable inflated direct care cost per day.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.4",
+        "quote": "Upon notification of the error rates as determined by the reviewers (in 16.2.3.3.), the staff of the rate setting unit of the Department will implement the appropriate sanction by issuing a rate letter with the start and end dates of the three month sanction period."
+      }
+    },
+    {
+      "rule": "Failure to complete MDS corrections within fourteen (14) days of a written request by staff of the Office of MaineCare Services may result in imposition of the deficiency per diem.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.5",
+        "quote": "Failure to complete MDS corrections by the nursing facility staff within fourteen (14) days of a written request by staff of the Office of MaineCare Services may result in the imposition of the deficiency per diem as specified in Principle 37 of these Principles of Reimbursement."
+      }
+    },
+    {
+      "rule": "Completed MDS corrections and assessments, as defined in Principle 16.2, shall be submitted to the Department or its designee according to CMS guidelines.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.5",
+        "quote": "Completed MDS corrections and assessments, as defined in Principle 16.2, shall be submitted to the Department or its designee according to CMS guidelines."
+      }
+    },
+    {
+      "rule": "The effective date of the rate is established by the date on the rate letter; a rate letter will be generated at least annually.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.1",
+        "quote": "“Effective date of the Rate” is established by the date on the rate letter. A rate letter will be generated at least annually."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Facilities selected for assessment review must provide reviewers with reasonable access to residents, professional and non-licensed direct care staff, the facility assessors, clinical records, and completed resident assessment instruments, as well as other documentation regarding residents' care needs and treatments.",
+        "source": {
+          "doc": "mainecare-101-iii-67",
+          "loc": "§16.2.3.3",
+          "quote": "Facilities selected for assessment reviews must provide reviewers with reasonable access to residents, professional and non-licensed direct care staff, the facility assessors, clinical records, and completed resident assessment instruments as well as other documentation regarding the residents’ care needs and treatments."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as a mandatory condition of the review process."
+      },
+      {
+        "criterion": "Verification of a Case Mix Group Record is based on review of resident assessment forms and supporting documentation, interviews, and observation of residents — i.e., the record must be supported by documentation that accurately represents the resident's clinical condition.",
+        "source": {
+          "doc": "mainecare-101-iii-67",
+          "loc": "§16.2.3.1",
+          "quote": "Verification activities include reviewing resident assessment forms and supporting documentation, conducting interviews, and observing residents."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      },
+      {
+        "criterion": "MDS Correction Forms will only count toward the review if completed before the day of the review and included in the resident's clinical record (or received in the central repository).",
+        "source": {
+          "doc": "mainecare-101-iii-67",
+          "loc": "§16.2.3.1",
+          "quote": "MDS Correction Forms received in the central repository or included in the clinical record will be the basis for review when completed before the day of the review and included as part of the resident’s clinical record."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Timing requirement determines whether a correction is credited during review."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "ME",
+      "delta": "Maine draws a review sample of 24% of MDS assessments completed for MaineCare-reimbursed residents, with a minimum of five (5) records.",
+      "kind": "documentation",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.3",
+        "quote": "*A record sample of twenty-four percent (24%) with a minimum of five (5) records shall be drawn from MDS assessments completed for residents who have MaineCare reimbursement."
+      }
+    },
+    {
+      "state": "ME",
+      "delta": "Maine imposes tiered Direct Care Rate reductions (2%, 5%, 7%, 10%) for three months based on the MDS assessment review error rate (thresholds at 34%, 37%, 41% and 45%).",
+      "kind": "other",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.4",
+        "quote": "*A two percent (2%) decrease in the Direct Care Rate will be imposed when the NF assessment review results in an error rate of thirty-four percent (34%) or greater, but is less than thirty-seven percent (37%)."
+      }
+    },
+    {
+      "state": "ME",
+      "delta": "Maine requires MDS corrections to be completed within fourteen (14) days of a written request by Office of MaineCare Services staff, or the deficiency per diem may be imposed.",
+      "kind": "documentation",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.5",
+        "quote": "Failure to complete MDS corrections by the nursing facility staff within fourteen (14) days of a written request by staff of the Office of MaineCare Services may result in the imposition of the deficiency per diem as specified in Principle 37 of these Principles of Reimbursement."
+      }
+    },
+    {
+      "state": "ME",
+      "delta": "Maine requires encoding and capability of transmission of MDS data to the State within seven (7) days after a facility completes a resident's assessment, and requires a diskette-submission request at least five (5) days before the required submission date when electronic submission is impossible.",
+      "kind": "other",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.2",
+        "quote": "Encoding Data: A facility must encode the data on every assessment as listed in Sec 16.2.1 within seven (7) days after a facility completes a resident’s assessment."
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "high",
+    "notes": "The MDS is the basis for classification into the case mix groups used to set the Direct Care Rate (Nursing Component PDPM), and unverified Case Mix Group Records identified in the MDS assessment review drive Direct Care Rate sanctions of 2%–10% for three months.",
+    "source": {
+      "doc": "mainecare-101-iii-67",
+      "loc": "§16.2",
+      "quote": "*The MDS provides the basis for resident classification into one (1) of twenty-five (25) case mix classification groups. An additional unclassified group is assigned when assessment data are determined to be incomplete or in error."
+    }
+  },
+  "conflicts": [
+    {
+      "topic": "Which Principle contains the deficiency per diem rate referenced by the MDS correction sanction",
+      "positions": [
+        {
+          "authority": "mainecare-101-iii-67",
+          "claim": "§16.2.3.5 states the deficiency per diem is 'as specified in Principle 37 of these Principles of Reimbursement'.",
+          "source": {
+            "doc": "mainecare-101-iii-67",
+            "loc": "§16.2.3.5",
+            "quote": "may result in the imposition of the deficiency per diem as specified in Principle 37 of these Principles of Reimbursement"
+          }
+        },
+        {
+          "authority": "mainecare-101-iii-67",
+          "claim": "The document's deficiency per diem rate is set out in Principle 34, DEFICIENCY PER DIEM RATE; Principle 37 is 'PUBLICLY OWNED NURSING FACILITIES'.",
+          "source": {
+            "doc": "mainecare-101-iii-67",
+            "loc": "p. 94",
+            "quote": "34 \tDEFICIENCY PER DIEM RATE\n\t\t\t\t\t\n\t\t\t\t\tWhen a facility is found not to have provided the quality of service or level of care required, reimbursement will be made on ninety percent (90%) of the provider's per diem rate, unless otherwise specified."
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    },
+    {
+      "topic": "Which Principle sets the time frame for correcting and submitting MDS records subject to the deficiency rate",
+      "positions": [
+        {
+          "authority": "mainecare-101-iii-67",
+          "claim": "§16.2.3.5 sets a fourteen (14) day deadline after a written request for completing MDS corrections.",
+          "source": {
+            "doc": "mainecare-101-iii-67",
+            "loc": "§16.2.3.5",
+            "quote": "Failure to complete MDS corrections by the nursing facility staff within fourteen (14) days of a written request by staff of the Office of MaineCare Services may result in the imposition of the deficiency per diem"
+          }
+        },
+        {
+          "authority": "mainecare-101-iii-67",
+          "claim": "Principle 34.5 states the deficiency rate applies to failures to correct MDS 'within the specified time outlined in Principle 16.2.1', which is the MDS submission schedule rather than the correction deadline.",
+          "source": {
+            "doc": "mainecare-101-iii-67",
+            "loc": "p. 98",
+            "quote": "Failures to correct MDS, as requested in writing, and submit within the specified time outlined in Principle 16.2.1 of these Principles of Reimbursement."
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "common_audit_citations"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "mainecare-101-iii-67"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

@@ -1,6 +1,6 @@
 {
   "item_id": "N0415Z",
-  "item_name": "High-Risk Drug Classes: Use and Indication — None of the above",
+  "item_name": "High-Risk Drug Classes: Use and Indication — Z. None of the above",
   "section": "N",
   "instrument": "MDS-3.0",
   "lookback_days": 7,
@@ -9,12 +9,12 @@
     "loc": "p. N-4",
     "quote": "Check if the resident is taking any medications by pharmacological classification, not how it is used, during the last 7 days or since admission/entry or reentry if less than 7 days"
   },
-  "lookback_notes": "The N0415 item header and coding instructions state a 7-day look-back/observation period, or since admission/entry or reentry if less than 7 days. The N0415Z1 bullet itself refers only to \"the observation period (or since admission/entry or reentry if less than 7 days)\" without repeating \"7-day\"; the manual does not state how the 7 days are counted relative to the ARD on these pages.",
+  "lookback_notes": "The N0415 item box and coding instructions state a 7-day look-back/observation period (or since admission/entry or reentry if less than 7 days). The N0415Z1 bullet itself refers to \"the observation period (or since admission/entry or reentry if less than 7 days)\" without restating \"7-day\" (p. N-8). Counting convention (ARD + 6 previous calendar days) comes from the manual's general conventions (p. 2-17, p. 2-21), not from the item's own pages.",
   "coding_levels": [
     {
-      "code": "Z1",
+      "code": "Checked",
       "label": "None of the above",
-      "definition": "Check if none of the medications above were taken by the resident at any time during the observation period (or since admission/entry or reentry if less than 7 days).",
+      "definition": "Check if none of the medications above (N0415A through N0415K) were taken by the resident at any time during the observation period (or since admission/entry or reentry if less than 7 days).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-8",
@@ -22,19 +22,19 @@
       }
     },
     {
-      "code": "Z",
-      "label": "None of the above (item set row)",
-      "definition": "On the item set, row Z. None of the above has a checkbox only in Column 1, \"Is taking\"; there is no Column 2 \"Indication noted\" checkbox for this row.",
+      "code": "Blank (unchecked)",
+      "label": "Condition not met",
+      "definition": "Per the manual's general instructions for \"check all that apply\" items, the box is checked only if the specified condition is met; otherwise it remains blank. (General convention, not stated on the item's own pages.)",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-4",
-        "quote": "Z. None of the above"
+        "loc": "p. 3-4",
+        "quote": "Use a check mark for boxes where the instructions state to \"check all that apply,\" if the specified condition is met; otherwise, these boxes should remain blank"
       }
     }
   ],
   "federal_coding_rules": [
     {
-      "rule": "Check N0415Z1 if none of the high-risk drug class medications listed in N0415 (A through K) were taken by the resident at any time during the observation period (or since admission/entry or reentry if less than 7 days).",
+      "rule": "Check N0415Z1, None of the above, if none of the medications in classes N0415A–N0415K were taken by the resident at any time during the observation period (or since admission/entry or reentry if less than 7 days).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-8",
@@ -42,15 +42,23 @@
       }
     },
     {
-      "rule": "Medications are coded in N0415 according to their pharmacological classification, not how they are being used; Column 1 is checked if the resident is taking any medications by pharmacological classification during the 7-day observation period (or since admission/entry or reentry if less than 7 days).",
+      "rule": "N0415 is a \"check all that apply\" item; the None of the above row (Z) has only a Column 1 (\"Is taking\") check box and no Column 2 (\"Indication noted\") check box.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-6",
-        "quote": "Code all high-risk drug class medications according to their pharmacological classification, not how they are being used."
+        "loc": "p. N-4",
+        "quote": "Z. None of the above"
       }
     },
     {
-      "rule": "Code a medication even if it was given only once during the look-back period.",
+      "rule": "Column 1 of N0415 is checked if the resident is taking any medications by pharmacological classification during the 7-day observation period (or since admission/entry or reentry if less than 7 days); high-risk drug class medications are coded according to their pharmacological classification, not how they are being used.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. N-6",
+        "quote": "Column 1: Check if the resident is taking any medications by pharmacological classification during the 7-day observation period (or since admission/entry or reentry if less than 7 days)."
+      }
+    },
+    {
+      "rule": "A medication is coded in N0415 even if it was given only once during the look-back period (therefore a single dose of any listed class precludes coding None of the above).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-9",
@@ -66,7 +74,7 @@
       }
     },
     {
-      "rule": "Long-acting medications given every few weeks or monthly (e.g., fluphenazine decanoate, haloperidol decanoate) are counted only if they are given during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
+      "rule": "Long-acting medications given every few weeks or monthly are counted only if they are given during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-9",
@@ -74,7 +82,7 @@
       }
     },
     {
-      "rule": "For transdermal patches, only capture the medication if the patch was applied to the resident's skin during the observation period.",
+      "rule": "For transdermal patches, capture the medication only if the patch was applied to the resident's skin during the observation period.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-9",
@@ -82,35 +90,11 @@
       }
     },
     {
-      "rule": "Over-the-counter sleeping medications are not coded as hypnotics, as they are not categorized as hypnotic medications.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-9",
-        "quote": "Over-the-counter sleeping medications are not coded as hypnotics, as they are not categorized as hypnotic medications."
-      }
-    },
-    {
-      "rule": "Herbal and alternative medicine products (e.g., melatonin, chamomile, valerian root) are dietary supplements and should not be counted as medications.",
+      "rule": "Herbal and alternative medicine products should not be counted as medications (e.g., melatonin, chamomile, valerian root); over-the-counter sleeping medications are not coded as hypnotics.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-10",
         "quote": "Therefore, they should not be counted as medications (e.g., melatonin, chamomile, valerian root)."
-      }
-    },
-    {
-      "rule": "Medications with more than one therapeutic category and/or pharmacological classification are coded in all categories/classifications assigned to the medication, regardless of how they are used.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-9",
-        "quote": "Medications that have more than one therapeutic category and/or pharmacological classification should be coded in all categories/classifications assigned to the medication, regardless of how it is being used."
-      }
-    },
-    {
-      "rule": "Combination medications are coded in all categories/pharmacologic classes that constitute the combination.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-9",
-        "quote": "Combination medications should be coded in all categories/pharmacologic classes that constitute the combination."
       }
     }
   ],
@@ -125,7 +109,7 @@
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Step 1 of Steps for Assessment for N0415; establishes the record review supporting a determination that no listed medications were taken."
+        "notes": "Establishes the record basis for concluding that no listed high-risk class medication was received."
       },
       {
         "criterion": "Review documentation from other health care settings where the resident may have received any of these medications while a resident of the nursing home (e.g., valium given in the emergency room).",
@@ -136,10 +120,10 @@
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Step 2 of Steps for Assessment; relevant because outside-setting administrations would preclude checking Z1."
+        "notes": "Outside-setting administrations must be ruled out before checking None of the above."
       },
       {
-        "criterion": "Assessors should be able to identify the source(s) used to support coding the MDS 3.0 pharmacological classification; facilities may wish to identify a consistently used resource.",
+        "criterion": "Assessors should be able to identify the source(s) used to support coding the pharmacological classification on the MDS 3.0 (e.g., manufacturer's package insert, resident's pharmacist).",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. N-9",
@@ -147,17 +131,7 @@
         },
         "verified_by_expert": false,
         "audit_weight": "low",
-        "notes": "Framed as a suggestion (\"may wish\"), though it states assessors should be able to identify the source(s)."
-      },
-      {
-        "criterion": "Providers are responsible for coding each medication's pharmacological/therapeutic classification accurately; the listed reference resources are optional and not required for MDS completion.",
-        "source": {
-          "doc": "rai-manual-v1.20.1",
-          "loc": "p. N-12",
-          "quote": "Providers are responsible for coding each medication's pharmacological/therapeutic classification accurately."
-        },
-        "verified_by_expert": false,
-        "audit_weight": "medium"
+        "notes": "Framed as a suggestion (\"may wish to\") with an expectation that sources are identifiable."
       }
     ],
     "state": {}
@@ -171,9 +145,9 @@
   "common_audit_citations": [],
   "not_found": [
     "state_deltas",
-    "case_mix_relevance",
+    "conflicts",
     "common_audit_citations",
-    "lookback_notes (exact method of counting the 7 days relative to the ARD)"
+    "case_mix_relevance.source"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",

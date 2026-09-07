@@ -1,0 +1,623 @@
+{
+  "item_id": "CONV-ME-CASE-MIX",
+  "item_name": "Maine case-mix classification (PDPM Nursing Component)",
+  "section": "CONV",
+  "instrument": "MDS-3.0",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. Principles 22.2 and 22.2.1 describe classification into the PDPM Nursing Component groups and the Maine weights, but state no observation/look-back window for the MDS items that drive classification. The document does state assessment timing/submission windows (Principle 16.2.1: Admission Assessment by the 14th day of stay; Annual Reassessment within 366 days of the prior comprehensive assessment's ARD; Significant Change Reassessment by the end of the 14th calendar day; Quarterly Assessment every 92 days) and a payment-effective window tied to the ARD (Principle 1.4, 'OBRA Assessment'), but these are submission/payment-period rules, not an assessor look-back window.",
+  "coding_levels": [
+    {
+      "code": "ES3",
+      "label": "Extensive: Tracheostomy & Ventilator, functional score 0-14 (code AAAA6)",
+      "definition": "Maine standardized weight 2.91",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "ES3 | Extensive: Tracheostomy & Ventilator | 0-14 | 2.91 | AAAA6"
+      }
+    },
+    {
+      "code": "ES2",
+      "label": "Extensive: Tracheostomy or Ventilator, functional score 0-14 (code AABA6)",
+      "definition": "Maine standardized weight 2.2",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "ES2 | Extensive: Tracheostomy or Ventilator | 0-14 | 2.2 | AABA6"
+      }
+    },
+    {
+      "code": "ES1",
+      "label": "Extensive: Infection, functional score 0-14 (code AACA6)",
+      "definition": "Maine standardized weight 2.1",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "ES1 | Extensive: Infection | 0-14 | 2.1 | AACA6"
+      }
+    },
+    {
+      "code": "HDE2",
+      "label": "Serious medical conditions: e.g., comatose, septicemia, respiratory therapy, functional score 0-5 (code AADA6)",
+      "definition": "Maine standardized weight 1.72",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "HDE2 | Serious medical conditions: e.g., comatose, septicemia, respiratory therapy | 0-5 | 1.72 | AADA6"
+      }
+    },
+    {
+      "code": "HDE1",
+      "label": "Serious medical conditions: e.g., comatose, septicemia, respiratory therapy, functional score 0-5 (code AAEA6)",
+      "definition": "Maine standardized weight 1.43",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "HDE1 | Serious medical conditions: e.g., comatose, septicemia, respiratory therapy | 0-5 | 1.43 | AAEA6"
+      }
+    },
+    {
+      "code": "HBC2",
+      "label": "Serious medical conditions: e.g., comatose, septicemia, respiratory therapy, functional score 6-14 (code AAFA6)",
+      "definition": "Maine standardized weight 1.61",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "HBC2 | Serious medical conditions: e.g., comatose, septicemia, respiratory therapy | 6-14 | 1.61 | AAFA6"
+      }
+    },
+    {
+      "code": "HBC1",
+      "label": "Serious medical conditions: e.g., comatose, septicemia, respiratory therapy, functional score 6-14 (code AAGA6)",
+      "definition": "Maine standardized weight 1.33",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "HBC1 | Serious medical conditions: e.g., comatose, septicemia, respiratory therapy | 6-14 | 1.33 | AAGA6"
+      }
+    },
+    {
+      "code": "LDE2",
+      "label": "Serious medical conditions: e.g., radiation therapy or dialysis, functional score 0-5 (code AAHA6)",
+      "definition": "Maine standardized weight 1.49",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "LDE2 | Serious medical conditions: e.g., radiation therapy or dialysis | 0-5 | 1.49 | AAHA6"
+      }
+    },
+    {
+      "code": "LDE1",
+      "label": "Serious medical conditions: e.g., radiation therapy or dialysis, functional score 0-5 (code AAIA6)",
+      "definition": "Maine standardized weight 1.24",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "LDE1 | Serious medical conditions: e.g., radiation therapy or dialysis | 0-5 | 1.24 | AAIA6"
+      }
+    },
+    {
+      "code": "LBC2",
+      "label": "Serious medical conditions: e.g., radiation therapy or dialysis, functional score 6-14 (code AAJA6)",
+      "definition": "Maine standardized weight 1.23",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "LBC2 | Serious medical conditions: e.g., radiation therapy or dialysis | 6-14 | 1.23 | AAJA6"
+      }
+    },
+    {
+      "code": "LBC1",
+      "label": "Serious medical conditions: e.g., radiation therapy or dialysis, functional score 6-14 (code AAKA6)",
+      "definition": "Maine standardized weight 1.02",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "LBC1 | Serious medical conditions: e.g., radiation therapy or dialysis | 6-14 | 1.02 | AAKA6"
+      }
+    },
+    {
+      "code": "CDE2",
+      "label": "Conditions requiring complex medical care, functional score 0-5 (code AALA6)",
+      "definition": "Maine standardized weight 1.34",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "CDE2 | Conditions requiring complex medical care | 0-5 | 1.34 | AALA6"
+      }
+    },
+    {
+      "code": "CDE1",
+      "label": "Conditions requiring complex medical care, functional score 0-5 (code AAMA6)",
+      "definition": "Maine standardized weight 1.16",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "CDE1 | Conditions requiring complex medical care | 0-5 | 1.16 | AAMA6"
+      }
+    },
+    {
+      "code": "CBC2",
+      "label": "Conditions requiring complex medical care, functional score 6-14 (code AANA6)",
+      "definition": "Maine standardized weight 1.11",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "CBC2 | Conditions requiring complex medical care | 6-14 | 1.11 | AANA6"
+      }
+    },
+    {
+      "code": "CA2",
+      "label": "Conditions requiring complex medical care, functional score 15-16 (code AAOA6)",
+      "definition": "Maine standardized weight 0.78",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "CA2 | Conditions requiring complex medical care | 15-16 | 0.78 | AAOA6"
+      }
+    },
+    {
+      "code": "CBC1",
+      "label": "Conditions requiring complex medical care, functional score 6-14 (code AAPA6)",
+      "definition": "Maine standardized weight 0.96",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "CBC1 | Conditions requiring complex medical care | 6-14 | 0.96 | AAPA6"
+      }
+    },
+    {
+      "code": "CA1",
+      "label": "Conditions requiring complex medical care, functional score 15-16 (code AAQA6)",
+      "definition": "Maine standardized weight 0.67",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "CA1 | Conditions requiring complex medical care | 15-16 | 0.67 | AAQA6"
+      }
+    },
+    {
+      "code": "BAB2",
+      "label": "Behavioral or cognitive symptoms, functional score 11-16 (code AARA6)",
+      "definition": "Maine standardized weight 0.74",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "BAB2 | Behavioral or cognitive symptoms | 11-16 | 0.74 | AARA6"
+      }
+    },
+    {
+      "code": "BAB1",
+      "label": "Behavioral or cognitive symptoms, functional score 11-16 (code AASA6)",
+      "definition": "Maine standardized weight 0.71",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "BAB1 | Behavioral or cognitive symptoms | 11-16 | 0.71 | AASA6"
+      }
+    },
+    {
+      "code": "PDE2",
+      "label": "Assistance with daily living and general supervision, functional score 0-5 (code AATA6)",
+      "definition": "Maine standardized weight 1.13",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "PDE2 | Assistance with daily living and general supervision | 0-5 | 1.13 | AATA6"
+      }
+    },
+    {
+      "code": "PDE1",
+      "label": "Assistance with daily living and general supervision, functional score 0-5 (code AAUA6)",
+      "definition": "Maine standardized weight 1.05",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "PDE1 | Assistance with daily living and general supervision | 0-5 | 1.05 | AAUA6"
+      }
+    },
+    {
+      "code": "PBC2",
+      "label": "Assistance with daily living and general supervision, functional score 6-14 (code AAVA6)",
+      "definition": "Maine standardized weight 0.88",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "PBC2 | Assistance with daily living and general supervision | 6-14 | 0.88 | AAVA6"
+      }
+    },
+    {
+      "code": "PA2",
+      "label": "Assistance with daily living and general supervision, functional score 15-16 (code AAWA6)",
+      "definition": "Maine standardized weight 0.51",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "PA2 | Assistance with daily living and general supervision | 15-16 | 0.51 | AAWA6"
+      }
+    },
+    {
+      "code": "PBC1",
+      "label": "Assistance with daily living and general supervision, functional score 6-14 (code AAXA6)",
+      "definition": "Maine standardized weight 0.81",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "PBC1 | Assistance with daily living and general supervision | 6-14 | 0.81 | AAXA6"
+      }
+    },
+    {
+      "code": "PA1",
+      "label": "Assistance with daily living and general supervision, functional score 15-16 (code AAYA6)",
+      "definition": "Maine standardized weight 0.47",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "PA1 | Assistance with daily living and general supervision | 15-16 | 0.47 | AAYA6"
+      }
+    },
+    {
+      "code": "Default",
+      "label": "Default rate (code ZZZZ6)",
+      "definition": "Maine standardized weight 0.47; the single resident classification group used when residents cannot be classified into one of the twenty-five clinical classification groups",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "Default | Default rate |  | 0.47 | ZZZZ6"
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "The direct care rate uses a case mix reimbursement system requiring (a) assessment of residents on the Department's approved form – MDS as specified in Principle 16.2; (b) classification of residents into groups similar in direct care staffing utilization using the case mix resident classification groups defined in Principle 22.2.1; and (c) a weighting system quantifying relative costliness to determine a facility's case mix index.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2",
+        "quote": "the assessment of residents on the Department's approved form - MDS as specified in Principle 16.2;"
+      }
+    },
+    {
+      "rule": "The Department uses only the Nursing Component of the CMS Skilled Nursing Home Patient Driven Payment Model (PDPM) to determine the Case Mix Index for each resident.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2",
+        "quote": "The Department utilizes only the Nursing Component of the CMS Skilled Nursing Home Patient Driven Payment Model in order to determine the Case Mix Index for each resident."
+      }
+    },
+    {
+      "rule": "The Nursing Component of the PDPM is the case mix classification used to assign a resident-specific direct care rate; it is derived from items on the MDS 3.0 and classifies residents into one of 25 groups based on the use of specialized services, the presence of certain clinical conditions and medical diagnoses, the use of restorative nursing services, and the patient's functional score.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2",
+        "quote": "The Nursing Component of the PDPM is the case mix classification used to assign a resident-specific direct care rate derived from items on the MDS 3.0 and classifies residents into one of 25 groups based on the use of specialized services, the presence of certain clinical conditions and medical diagnoses, the use of restorative nursing services, and the patient’s functional score."
+      }
+    },
+    {
+      "rule": "One additional resident classification group is used when residents cannot be classified into one of the twenty-five clinical classification groups, creating a total of twenty-six groups as listed in the Nursing Component PDPM Groups table in 22.2.1 Maine Weights.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2",
+        "quote": "There is one (1) resident classification group used when residents cannot be classified into one (1) of twenty-five (25) clinical classification groups creating a total of twenty-six (26) groups as listed in the Nursing Component PDPM Groups table in 22.2.1 Maine Weights."
+      }
+    },
+    {
+      "rule": "The MDS provides the basis for resident classification into one of twenty-five case mix classification groups; an additional unclassified group is assigned when assessment data are determined to be incomplete or in error.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2",
+        "quote": "The MDS provides the basis for resident classification into one (1) of twenty-five (25) case mix classification groups. An additional unclassified group is assigned when assessment data are determined to be incomplete or in error."
+      }
+    },
+    {
+      "rule": "Per CMS guidelines, all residents admitted to a Nursing Facility, regardless of payment source, shall be assessed using the MDS.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2",
+        "quote": "Per CMS guidelines, all residents admitted to a Nursing Facility (NF), regardless of payment source, shall be assessed using the MDS."
+      }
+    },
+    {
+      "rule": "Each nursing component case mix classification group has a specific Maine weight that is multiplied by the HPD to establish the Direct Care Rate.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "Each nursing component case mix classification group has a specific Maine weight that is multiplied by the HPD to establish the Direct Care Rate."
+      }
+    },
+    {
+      "rule": "The Daily Rate is computed as (Direct Care Rate × Nursing Component PDPM Group Weight) + Routine Care Rate + Capital Cost Rate + Bariatric Add-on and/or Ventilator Add-on (if applicable).",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22",
+        "quote": "*The Direct Care Rate is multiplied by the Nursing Component PDPM Group Weight; that sum is then added to the Routine Care Rate plus the Capital Cost Rate, and the Bariatric Care Add-on and/or Ventilator Add-on (if applicable)."
+      }
+    },
+    {
+      "rule": "The Daily Rate is comprised of three components: Direct Care Rate, Routine Care Rate, and Capital Cost Rate; plus a Bariatric Care Add-on for eligible Members.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22",
+        "quote": "*The Daily Rate is comprised of three components: Direct Care Rate, Routine Care Rate, and Capital Cost Rate; plus a Bariatric Care Add-on for eligible Members."
+      }
+    },
+    {
+      "rule": "Maine weights were determined by totaling all Maine nursing facilities' resident days in calendar years 2022 and 2023 for each PDPM nursing group, multiplying days by the 2023 CMS PDPM Nursing weight to get case mix weighted resident days, dividing by total resident days to get the Maine average case mix index (CMI = 1.356 using CMS weights), then dividing each nursing group's CMS CMI by the Maine average CMI to determine the standardized weight, so that the average Maine CMI is 1.0.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "The Maine average CMI using CMS weights is 1.356. The CMS CMI for each nursing group was then divided by the average Maine CMI to determine the standardized weight for each nursing PDPM group. The Department used standardized weighting so that the average Maine CMI is 1.0."
+      }
+    },
+    {
+      "rule": "Case mix weights will be adjusted at rebasing.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "Weights will be adjusted at rebasing."
+      }
+    },
+    {
+      "rule": "Case Mix Weight is defined as a relative evaluation of the nursing resources used in the care of a given class of residents.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§1.4",
+        "quote": "Case Mix Weight is a relative evaluation of the nursing resources used in the care of a given class of residents."
+      }
+    },
+    {
+      "rule": "Reimbursement is based on OBRA assessment outcomes; except for the admission assessment, the active OBRA assessment sets the payment from the Assessment Reference Date (ARD) until the day before the ARD on the next required OBRA assessment, and the admission assessment sets payment from the admission date until the next required OBRA assessment.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§1.4",
+        "quote": "Reimbursement is based on these assessment outcomes. With the exception of the admission assessment, the active OBRA assessment sets the payment from the Assessment Reference Date (ARD) until the day before the ARD on the next required OBRA assessment."
+      }
+    },
+    {
+      "rule": "The Direct Care Rate to which the group weight is applied is $244.86 (table: $244.87) for CY 2025 and $232.01 for CY 2026 and forward.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.1.5",
+        "quote": "The Total Direct Care Rate is $244.86 for CY 2025 and $232.01 for CY 2026 and forward."
+      }
+    },
+    {
+      "rule": "For nursing home conversions, the case mix index will be determined as stated in Principles 16.2, 22.3.1, 22.3.2, and 22.3.3.2.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.8.1.4",
+        "quote": "The case mix index will be determined as stated in Principles 16.2, 22.3.1, 22.3.2, and 22.3.3.2."
+      }
+    },
+    {
+      "rule": "A record whose classification does not accurately represent the resident's condition and results in inaccurate classification into a case mix group that increases the case mix weight assigned to the resident is an 'Unverified Case Mix Group Record'; facilities must submit the appropriate MDS correction form and follow CMS clinical guidelines for MDS completion. Correction forms received prior to calculating the rate setting quarterly index will be used in the calculation of that index.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.1",
+        "quote": "“Unverified Case Mix Group Record” is one which, for reimbursement purposes, the Department has determined does not accurately represent the resident’s condition, and therefore results in the resident’s inaccurate classification into a case mix group that increases the case mix weight assigned to the resident."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Facilities selected for assessment review must provide reviewers with reasonable access to residents, professional and non-licensed direct care staff, the facility assessors, clinical records, and completed resident assessment instruments as well as other documentation regarding the residents' care needs and treatments.",
+        "source": {
+          "doc": "mainecare-101-iii-67",
+          "loc": "§16.2.3.3",
+          "quote": "Facilities selected for assessment reviews must provide reviewers with reasonable access to residents, professional and non-licensed direct care staff, the facility assessors, clinical records, and completed resident assessment instruments as well as other documentation regarding the residents’ care needs and treatments."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Access/documentation obligation during MDS assessment review, the process that validates case mix group records."
+      },
+      {
+        "criterion": "A Case Mix Group Record is 'verified' only when the completed MDS assessment form is determined to accurately represent the resident's clinical condition during the MDS assessment review; verification activities include reviewing resident assessment forms and supporting documentation, conducting interviews, and observing residents.",
+        "source": {
+          "doc": "mainecare-101-iii-67",
+          "loc": "§16.2.3.1",
+          "quote": "“Verified Case Mix Group Record” is a NF’s completed MDS assessment form, which has been determined to accurately represent the resident’s clinical condition, during the MDS assessment review process."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      },
+      {
+        "criterion": "MDS Correction Forms received in the central repository or included in the clinical record before the day of the review, and included as part of the resident's clinical record, will be the basis for review.",
+        "source": {
+          "doc": "mainecare-101-iii-67",
+          "loc": "§16.2.3.1",
+          "quote": "MDS Correction Forms received in the central repository or included in the clinical record will be the basis for review when completed before the day of the review and included as part of the resident’s clinical record."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium"
+      },
+      {
+        "criterion": "MDS assessment review is conducted to ensure that assessments accurately reflect the resident's clinical condition.",
+        "source": {
+          "doc": "mainecare-101-iii-67",
+          "loc": "§16.2.3.1",
+          "quote": "“MDS assessment review” is a review conducted at nursing facilities (NFs) by the Maine Department of Health and Human Services, for review of assessments submitted in accordance with Principle 16.2 to ensure that assessments accurately reflect the resident’s clinical condition."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "ME",
+      "delta": "Maine uses only the Nursing Component of the CMS PDPM (not the full PDPM) to determine each resident's Case Mix Index for MaineCare nursing facility payment.",
+      "kind": "coding",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2",
+        "quote": "The Department utilizes only the Nursing Component of the CMS Skilled Nursing Home Patient Driven Payment Model in order to determine the Case Mix Index for each resident."
+      }
+    },
+    {
+      "state": "ME",
+      "delta": "Maine applies its own standardized case mix weights (derived from 2023 CMS PDPM Nursing weights divided by the Maine average CMI of 1.356) rather than CMS weights, so the average Maine CMI equals 1.0.",
+      "kind": "coding",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§22.2.1",
+        "quote": "The Department used standardized weighting so that the average Maine CMI is 1.0. Weights will be adjusted at rebasing."
+      }
+    },
+    {
+      "state": "ME",
+      "delta": "Maine assigns a 26th 'Default' group (weight 0.47, code ZZZZ6) for residents who cannot be classified into one of the 25 clinical groups, including when assessment data are incomplete or in error.",
+      "kind": "coding",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2",
+        "quote": "An additional unclassified group is assigned when assessment data are determined to be incomplete or in error."
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "high",
+    "notes": "The MDS 3.0-derived PDPM Nursing Component group determines the resident-specific direct care rate: the group's Maine standardized weight is applied in computing the Daily Rate.",
+    "source": {
+      "doc": "mainecare-101-iii-67",
+      "loc": "§22.2",
+      "quote": "The Nursing Component of the PDPM is the case mix classification used to assign a resident-specific direct care rate derived from items on the MDS 3.0"
+    }
+  },
+  "conflicts": [
+    {
+      "topic": "What the Nursing Component PDPM Group Weight is multiplied by to produce the payment",
+      "positions": [
+        {
+          "authority": "mainecare-101-iii-67",
+          "claim": "The Direct Care Rate is multiplied by the Nursing Component PDPM Group Weight, and that result is added to the Routine Care Rate, Capital Cost Rate and add-ons.",
+          "source": {
+            "doc": "mainecare-101-iii-67",
+            "loc": "§22",
+            "quote": "*(Direct Care Rate * Nursing Component PDPM Group Weight)"
+          }
+        },
+        {
+          "authority": "mainecare-101-iii-67",
+          "claim": "Each group's Maine weight is multiplied by the HPD (hours per day) to establish the Direct Care Rate.",
+          "source": {
+            "doc": "mainecare-101-iii-67",
+            "loc": "§22.2.1",
+            "quote": "Each nursing component case mix classification group has a specific Maine weight that is multiplied by the HPD to establish the Direct Care Rate."
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    },
+    {
+      "topic": "Total Direct Care Rate for CY 2025 ($244.86 vs $244.87)",
+      "positions": [
+        {
+          "authority": "mainecare-101-iii-67",
+          "claim": "The Total Direct Care Rate is $244.86 for CY 2025.",
+          "source": {
+            "doc": "mainecare-101-iii-67",
+            "loc": "§22.1.5",
+            "quote": "The Total Direct Care Rate is $244.86 for CY 2025 and $232.01 for CY 2026 and forward."
+          }
+        },
+        {
+          "authority": "mainecare-101-iii-67",
+          "claim": "The table in the same principle shows a CY 2025 Direct Care Rate of $244.87.",
+          "source": {
+            "doc": "mainecare-101-iii-67",
+            "loc": "§22.1.5",
+            "quote": "CY 2025 | $226.65 | 8.038% | $244.87"
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    },
+    {
+      "topic": "Cross-reference used to determine the case mix index for nursing home conversions",
+      "positions": [
+        {
+          "authority": "mainecare-101-iii-67",
+          "claim": "For conversions, the case mix index is determined as stated in Principles 16.2, 22.3.1, 22.3.2, and 22.3.3.2.",
+          "source": {
+            "doc": "mainecare-101-iii-67",
+            "loc": "§22.8.1.4",
+            "quote": "The case mix index will be determined as stated in Principles 16.2, 22.3.1, 22.3.2, and 22.3.3.2."
+          }
+        },
+        {
+          "authority": "mainecare-101-iii-67",
+          "claim": "Principle 22.3 is the Routine Care Rate and contains no subsections 22.3.1, 22.3.2 or 22.3.3.2; case mix classification and weights are set out in Principle 22.2 and 22.2.1.",
+          "source": {
+            "doc": "mainecare-101-iii-67",
+            "loc": "§22.3",
+            "quote": "*The Routine Care Rate is established by using the median all facilities’ per-day routine costs, as described in Section 17, Routine Cost Component, in their as-filed 2023 MaineCare cost reports, trended through June 30, 2025, adjusted to an 85% minimum occupancy threshold, and set at the 75th percentile."
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    }
+  ],
+  "common_audit_citations": [
+    {
+      "citation": "Principle 16.2.3.4 — sanctions reducing the Direct Care Rate based on MDS assessment review error rate (2% at ≥34% and <37%; 5% at ≥37% and <41%; 7% at ≥41% and <45%; 10% at ≥45%), applied for a three-month period to all MaineCare resident days billed.",
+      "notes": "Sanctions tie inaccurate case mix classification directly to rate reductions.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.4",
+        "quote": "*A two percent (2%) decrease in the Direct Care Rate will be imposed when the NF assessment review results in an error rate of thirty-four percent (34%) or greater, but is less than thirty-seven percent (37%)."
+      }
+    },
+    {
+      "citation": "Principle 16.2.3.1(4) — 'Assessment review error rate' is the percentage of unverified Case Mix Group Records in the drawn sample, drawn from Case Mix Group Records completed for residents who have MaineCare reimbursement.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.1",
+        "quote": "“Assessment review error rate” is the percentage of unverified Case Mix Group Record in the drawn sample."
+      }
+    },
+    {
+      "citation": "Principle 16.2.3.3(3) — sample of 24% of MDS assessments with a minimum of five records, drawn from assessments completed for residents who have MaineCare reimbursement.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.3",
+        "quote": "*A record sample of twenty-four percent (24%) with a minimum of five (5) records shall be drawn from MDS assessments completed for residents who have MaineCare reimbursement."
+      }
+    },
+    {
+      "citation": "Principle 16.2.3.2 — criteria for selecting a facility for MDS assessment review, including survey findings of inaccurate assessment, changes in the facility's case mix profile or average case mix score, and prior assessment performance.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.2",
+        "quote": "An analysis of the case mix profile of NFs included but not limited to changes in the frequency distribution of their residents in the major categories or a change in the facility Average case mix score."
+      }
+    },
+    {
+      "citation": "Principle 16.2.3.5 — failure to complete MDS corrections within fourteen days of a written request may result in the deficiency per diem.",
+      "source": {
+        "doc": "mainecare-101-iii-67",
+        "loc": "§16.2.3.5",
+        "quote": "Failure to complete MDS corrections by the nursing facility staff within fourteen (14) days of a written request by staff of the Office of MaineCare Services may result in the imposition of the deficiency per diem as specified in Principle 37 of these Principles of Reimbursement."
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "specific MDS 3.0 item numbers that drive the PDPM Nursing Component classification (the document names only categories: specialized services, clinical conditions and medical diagnoses, restorative nursing services, and functional score)",
+    "definition/derivation of the PDPM functional score ranges (0-5, 6-14, 11-16, 15-16) used in the group table",
+    "supportive_documentation criteria specific to individual clinical conditions or services underlying each group"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "mainecare-101-iii-67"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

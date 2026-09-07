@@ -1,6 +1,6 @@
 {
   "item_id": "N0415A",
-  "item_name": "High-Risk Drug Classes: Use and Indication — Antipsychotic (N0415A1 Is taking; N0415A2 Indication noted)",
+  "item_name": "High-Risk Drug Classes: Use and Indication — Antipsychotic",
   "section": "N",
   "instrument": "MDS-3.0",
   "lookback_days": 7,
@@ -9,11 +9,11 @@
     "loc": "p. N-7",
     "quote": "N0415A1. Antipsychotic: Check if an antipsychotic medication was taken by the resident at any time during the 7-day look-back period (or since admission/entry or reentry if less than 7 days)."
   },
-  "lookback_notes": "7-day look-back period; if the resident has been in the facility less than 7 days, the window is since admission/entry or reentry. The manual uses \"7-day look-back period\" and \"7-day observation period\" interchangeably for this item (p. N-6, p. N-7). The exact method of counting days relative to the ARD is not stated on these pages.",
+  "lookback_notes": "7-day look-back period, or since admission/entry or reentry if less than 7 days. Per the general convention, the ARD is day 1 counting back (ARD + 6 previous calendar days). Column 1 (N0415A1) and Column 2 (N0415A2) both use the 7-day look-back/observation period.",
   "coding_levels": [
     {
       "code": "N0415A1 checked",
-      "label": "Antipsychotic — Is taking",
+      "label": "Is taking — Antipsychotic",
       "definition": "Check if an antipsychotic medication was taken by the resident at any time during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
       "source": {
         "doc": "rai-manual-v1.20.1",
@@ -23,7 +23,7 @@
     },
     {
       "code": "N0415A2 checked",
-      "label": "Antipsychotic — Indication noted",
+      "label": "Indication noted — Antipsychotic",
       "definition": "Check if there is an indication noted for all antipsychotic medications taken by the resident any time during the observation period (or since admission/entry or reentry if less than 7 days).",
       "source": {
         "doc": "rai-manual-v1.20.1",
@@ -32,41 +32,17 @@
       }
     },
     {
-      "code": "N0415A1 / N0415A2 not checked",
+      "code": "blank",
       "label": "Not checked",
-      "definition": "The item form provides check boxes for Column 1 (Is taking) and Column 2 (Indication noted); a box left unchecked indicates the condition was not met (e.g., in the manual's example N0415D2 Hypnotic = not checked because indication for use was not noted).",
+      "definition": "Boxes for \"check all that apply\" items remain blank when the specified condition is not met (general convention). Example: N0415D2 Hypnotic = not checked because indication for use was not noted.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-11",
-        "quote": "N0415D2. Hypnotic = not checked; indication for use of temazepam was not noted."
+        "loc": "p. 3-4",
+        "quote": "Use a check mark for boxes where the instructions state to \"check all that apply,\" if the specified condition is met; otherwise, these boxes should remain blank"
       }
     }
   ],
   "federal_coding_rules": [
-    {
-      "rule": "Check N0415A1 if an antipsychotic medication was taken by the resident at any time during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-7",
-        "quote": "N0415A1. Antipsychotic: Check if an antipsychotic medication was taken by the resident at any time during the 7-day look-back period (or since admission/entry or reentry if less than 7 days)."
-      }
-    },
-    {
-      "rule": "Check N0415A2 only if there is an indication noted for ALL antipsychotic medications taken by the resident any time during the observation period (or since admission/entry or reentry if less than 7 days).",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-7",
-        "quote": "N0415A2. Antipsychotic: Check if there is an indication noted for all antipsychotic medications taken by the resident any time during the observation period (or since admission/entry or reentry if less than 7 days)."
-      }
-    },
-    {
-      "rule": "Column 2 (Indication noted) is completed only when Column 1 is checked.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-6",
-        "quote": "Column 2: If Column 1 is checked, check if there is an indication noted for all medications in the drug class."
-      }
-    },
     {
       "rule": "Code all high-risk drug class medications according to their pharmacological classification, not how they are being used.",
       "source": {
@@ -76,7 +52,39 @@
       }
     },
     {
-      "rule": "Code medications in Item N0415 according to the medication's therapeutic category and/or pharmacological classification, not how it is used (e.g., oxazepam prescribed as a hypnotic is coded as an antianxiety medication).",
+      "rule": "Column 1: Check if the resident is taking any medications by pharmacological classification during the 7-day observation period (or since admission/entry or reentry if less than 7 days).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. N-6",
+        "quote": "Column 1: Check if the resident is taking any medications by pharmacological classification during the 7-day observation period (or since admission/entry or reentry if less than 7 days)."
+      }
+    },
+    {
+      "rule": "Column 2: If Column 1 is checked, check if there is an indication noted for all medications in the drug class.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. N-6",
+        "quote": "Column 2: If Column 1 is checked, check if there is an indication noted for all medications in the drug class."
+      }
+    },
+    {
+      "rule": "Check N0415A1 if an antipsychotic medication was taken by the resident at any time during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. N-7",
+        "quote": "N0415A1. Antipsychotic: Check if an antipsychotic medication was taken by the resident at any time during the 7-day look-back period (or since admission/entry or reentry if less than 7 days)."
+      }
+    },
+    {
+      "rule": "Check N0415A2 if there is an indication noted for all antipsychotic medications taken by the resident any time during the observation period (or since admission/entry or reentry if less than 7 days).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. N-7",
+        "quote": "N0415A2. Antipsychotic: Check if there is an indication noted for all antipsychotic medications taken by the resident any time during the observation period (or since admission/entry or reentry if less than 7 days)."
+      }
+    },
+    {
+      "rule": "Code medications according to the medication's therapeutic category and/or pharmacological classification, not how it is used (e.g., oxazepam prescribed as a hypnotic is coded as antianxiety, not hypnotic).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-8",
@@ -84,7 +92,7 @@
       }
     },
     {
-      "rule": "Medications with more than one therapeutic category and/or pharmacological classification must be coded in all assigned categories/classifications regardless of how used; e.g., prochlorperazine, dually classified as an antipsychotic and an antiemetic, is coded as an antipsychotic.",
+      "rule": "Medications with more than one therapeutic category and/or pharmacological classification are coded in all categories/classifications assigned to the medication, regardless of how used (e.g., prochlorperazine, dually classified as antipsychotic and antiemetic, is coded as an antipsychotic).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-9",
@@ -92,15 +100,7 @@
       }
     },
     {
-      "rule": "Combination medications are coded in all categories/pharmacologic classes that constitute the combination; e.g., a single tablet combining an antipsychotic and an antidepressant is coded in both the antipsychotic and antidepressant categories.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-9",
-        "quote": "Combination medications should be coded in all categories/pharmacologic classes that constitute the combination."
-      }
-    },
-    {
-      "rule": "Include medications given to the resident by any route in any setting (e.g., at the nursing home, in a hospital emergency room) while a resident of the nursing home.",
+      "rule": "Include any of these medications given to the resident by any route in any setting (e.g., at the nursing home, in a hospital emergency room) while a resident of the nursing home.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-9",
@@ -116,7 +116,7 @@
       }
     },
     {
-      "rule": "Count long-acting medications, such as fluphenazine decanoate or haloperidol decanoate, that are given every few weeks or monthly only if they are given during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
+      "rule": "Count long-acting medications, such as fluphenazine decanoate or haloperidol decanoate, given every few weeks or monthly, only if they are given during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-9",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "rule": "For transdermal patches, capture the medication only if the patch was applied to the resident's skin during the observation period.",
+      "rule": "For transdermal patches, only capture the medication if the transdermal patch was applied to the resident's skin during the observation period.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-9",
@@ -132,7 +132,15 @@
       }
     },
     {
-      "rule": "Herbal and alternative medicine products (e.g., melatonin, chamomile, valerian root) are dietary supplements and should not be counted as medications.",
+      "rule": "Combination medications are coded in all categories/pharmacologic classes that constitute the combination (e.g., a single tablet combining an antipsychotic and an antidepressant is coded in both antipsychotic and antidepressant categories).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. N-9",
+        "quote": "Combination medications should be coded in all categories/pharmacologic classes that constitute the combination."
+      }
+    },
+    {
+      "rule": "Herbal and alternative medicine products are not counted as medications (e.g., melatonin, chamomile, valerian root).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. N-10",
@@ -140,26 +148,26 @@
       }
     },
     {
-      "rule": "Column 1 is checked based on medications the resident is taking by pharmacological classification during the 7-day observation period (or since admission/entry or reentry if less than 7 days).",
+      "rule": "Coding example: risperidone received PRN on 3 days for bipolar disorder with indication noted results in N0415A1 and N0415A2 Antipsychotic both checked.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-6",
-        "quote": "Column 1: Check if the resident is taking any medications by pharmacological classification during the 7-day observation period (or since admission/entry or reentry if less than 7 days)."
+        "loc": "p. N-11",
+        "quote": "N0415A1 and N0415A2. Antipsychotic = checked; risperidone is an antipsychotic medication and indication of use for bipolar disorder noted."
       }
     },
     {
-      "rule": "Check N0415Z1, None of the above, if none of the listed medications (including antipsychotics) were taken by the resident at any time during the observation period (or since admission/entry or reentry if less than 7 days).",
+      "rule": "Skip logic into N0415: if N0300 (Injections) is coded 0, skip to N0415, High-Risk Drug Classes: Use and Indication.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. N-8",
-        "quote": "N0415Z1. None of the above: Check if none of the medications above were taken by the resident at any time during the observation period (or since admission/entry or reentry if less than 7 days)."
+        "loc": "p. N-1",
+        "quote": "If 0 → Skip to N0415, High-Risk Drug Classes: Use and Indication"
       }
     }
   ],
   "supportive_documentation": {
     "federal": [
       {
-        "criterion": "Medical record documentation that the antipsychotic medication was received by the resident and documentation of the indication for its use during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
+        "criterion": "Review the resident's medical record for documentation that any of these medications were received by the resident and for the indication of their use during the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. N-6",
@@ -167,10 +175,21 @@
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Step 1 of Steps for Assessment for N0415."
+        "notes": "Step 1 for assessment."
       },
       {
-        "criterion": "The \"indication\" supporting Column 2 must be the identified, documented clinical rationale for administering the medication, based upon a physician's (or prescriber's) assessment of the resident's condition and therapeutic goals.",
+        "criterion": "Review documentation from other health care settings where the resident may have received any of these medications while a resident of the nursing home (e.g., valium given in the emergency room).",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. N-6",
+          "quote": "Review documentation from other health care settings where the resident may have received any of these medications while a resident of the nursing home (e.g., valium given in the emergency room)."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Step 2 for assessment."
+      },
+      {
+        "criterion": "An indication is the identified, documented clinical rationale for administering a medication that is based upon a physician's (or prescriber's) assessment of the resident's condition and therapeutic goals; Column 2 requires such an indication be noted for all medications in the drug class.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. N-6",
@@ -181,18 +200,7 @@
         "notes": "Definition box on the same page as the coding instructions."
       },
       {
-        "criterion": "Documentation from other health care settings where the resident may have received these medications while a resident of the nursing home (e.g., valium given in the emergency room) should be reviewed.",
-        "source": {
-          "doc": "rai-manual-v1.20.1",
-          "loc": "p. N-6",
-          "quote": "Review documentation from other health care settings where the resident may have received any of these medications while a resident of the nursing home (e.g., valium given in the emergency room)."
-        },
-        "verified_by_expert": false,
-        "audit_weight": "medium",
-        "notes": "Step 2 of Steps for Assessment for N0415."
-      },
-      {
-        "criterion": "Assessors should be able to identify the source(s) used to support coding the pharmacological classification on the MDS 3.0 (e.g., a consistently used facility resource, the manufacturer's package insert, or the pharmacist).",
+        "criterion": "Assessors should be able to identify the source(s) used to support coding the MDS 3.0 for pharmacological classification; facilities may wish to identify a consistently used resource.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. N-9",
@@ -200,28 +208,29 @@
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Framed as a suggestion (\"may wish to\") coupled with an expectation that the source can be identified."
+        "notes": "Framed as a suggestion (\"may wish\") but with an expectation that sources are identifiable."
       },
       {
-        "criterion": "When a resident receives antipsychotic, antianxiety and hypnotic medications simultaneously there must be a clear clinical indication for their use; adequate documentation is essential in justifying their use.",
+        "criterion": "Assessors may consult the manufacturer's package insert or work with the resident's pharmacist to confirm medication classification(s).",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. N-9",
+          "quote": "Assessors should consult the manufacturer's package insert, which may contain the medication's pharmacological classification."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "low",
+        "notes": "Suggested resource, not a required document."
+      },
+      {
+        "criterion": "When a resident receives antipsychotic, antianxiety, and hypnotic medications simultaneously, adequate documentation of a clear clinical indication is essential to justify their use.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. N-11",
-          "quote": "Administration of these types of medications, particularly in this combination, could be interpreted as chemically restraining the resident. Adequate documentation is essential in justifying their use."
+          "quote": "Please note: if a resident is receiving medications in all three of these high-risk drug classes simultaneously there must be a clear clinical indication for the use of these medications."
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Stated as a \"Please note\" following the N0415 coding example."
-      },
-      {
-        "criterion": "Providers are responsible for coding each medication's pharmacological/therapeutic classification accurately; the listed external resources are optional and not required for MDS completion.",
-        "source": {
-          "doc": "rai-manual-v1.20.1",
-          "loc": "p. N-12",
-          "quote": "Providers are responsible for coding each medication's pharmacological/therapeutic classification accurately."
-        },
-        "verified_by_expert": false,
-        "audit_weight": "medium"
+        "notes": "Stated in the note following the N0415 example; the manual adds \"Adequate documentation is essential in justifying their use.\""
       }
     ],
     "state": {}
@@ -229,40 +238,39 @@
   "state_deltas": [],
   "case_mix_relevance": {
     "level": "unknown",
-    "notes": "The N0415 pages (N-4 through N-12) do not tie this item to any payment or case-mix classification."
+    "notes": "The N0415 pages do not tie this item to a payment or case-mix classification."
   },
   "conflicts": [
     {
-      "topic": "Wording of the look-back window for the Antipsychotic sub-items: \"7-day look-back period\" vs. \"observation period\"",
+      "topic": "Whether N0415A2 (Column 2, indication noted) is limited to residents whose Column 1 box is checked",
       "positions": [
         {
           "authority": "federal",
-          "claim": "N0415A1 is described as covering the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
+          "claim": "Column 2 is completed only if Column 1 is checked.",
           "source": {
             "doc": "rai-manual-v1.20.1",
-            "loc": "p. N-7",
-            "quote": "N0415A1. Antipsychotic: Check if an antipsychotic medication was taken by the resident at any time during the 7-day look-back period (or since admission/entry or reentry if less than 7 days)."
+            "loc": "p. N-6",
+            "quote": "Column 2: If Column 1 is checked, check if there is an indication noted for all medications in the drug class."
           }
         },
         {
           "authority": "federal",
-          "claim": "N0415A2 is described as covering \"the observation period\" without stating 7 days, while the general coding instruction for Column 1 calls it the \"7-day observation period.\"",
+          "claim": "The N0415A2 bullet states the check condition without restating the Column 1 precondition.",
           "source": {
             "doc": "rai-manual-v1.20.1",
-            "loc": "p. N-6",
-            "quote": "Column 1: Check if the resident is taking any medications by pharmacological classification during the 7-day observation period (or since admission/entry or reentry if less than 7 days)."
+            "loc": "p. N-7",
+            "quote": "N0415A2. Antipsychotic: Check if there is an indication noted for all antipsychotic medications taken by the resident any time during the observation period (or since admission/entry or reentry if less than 7 days)."
           }
         }
       ],
-      "resolution": "Terminology only; the manual uses \"7-day look-back period\" and \"7-day observation period\" interchangeably for N0415, and both carry the same \"or since admission/entry or reentry if less than 7 days\" qualifier."
+      "resolution": "Not a substantive disagreement: the item-level instruction on p. N-6 states the Column 1 precondition that governs all Column 2 sub-items, including N0415A2."
     }
   ],
   "common_audit_citations": [],
   "not_found": [
-    "case_mix_relevance.source",
-    "common_audit_citations",
+    "case_mix_relevance",
     "state_deltas",
-    "exact method of counting the 7-day window relative to the ARD"
+    "common_audit_citations"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",
