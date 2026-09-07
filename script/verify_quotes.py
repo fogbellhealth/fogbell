@@ -72,8 +72,11 @@ def main(item_path, pdf_path):
             if frag in text:
                 counts["VERBATIM"] += 1; continue
             elsewhere = [l for l, (t, _, _) in pages.items() if frag in t]
-            if not elsewhere and (raw_len < IMAGE_PAGE_MAX_CHARS or n_images):
-                counts["IMAGE PAGE"] += 1; print(f"IMAGE PAGE    {path}  {c['loc']}  ({raw_len} text chars, {n_images} image) — verify by eye:\n    {frag[:160]}"); continue
+            if raw_len < IMAGE_PAGE_MAX_CHARS or n_images:
+                # The cited page carries an image (usually the item form); the quote may sit inside it even if
+                # the same sentence also appears as text elsewhere. Needs an eye check, not a WRONG PAGE verdict.
+                also = f" (same text also on {elsewhere})" if elsewhere else ""
+                counts["IMAGE PAGE"] += 1; print(f"IMAGE PAGE    {path}  {c['loc']}  ({raw_len} text chars, {n_images} image){also} — verify by eye:\n    {frag[:160]}"); continue
             if elsewhere:
                 counts["WRONG PAGE"] += 1; print(f"WRONG PAGE    {path}  cited {c['loc']}, found on {elsewhere}\n    {frag[:160]}"); continue
             ratio, win = closest(frag, text)

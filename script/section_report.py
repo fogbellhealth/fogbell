@@ -6,9 +6,8 @@ Usage: python3 script/section_report.py tmp/first-real-K corpus/federal/rai-manu
 import glob, json, re, sys
 from pypdf import PdfReader
 d, pdf = sys.argv[1], sys.argv[2]
-def norm(s):
-    for a, b in (("’","'"),("‘","'"),("“",'"'),("”",'"'),("–","-"),("—","-")): s = s.replace(a, b)
-    return re.sub(r"\s+", " ", re.sub(r"\s*©", "©", s)).strip().lower()
+sys.path.insert(0, "script")
+from verify_quotes import norm  # same normalisation as the verifier
 r = PdfReader(pdf)
 pages = {re.search(r"Page ([A-Z0-9]+-\d+)", p.extract_text() or "").group(1): norm(p.extract_text() or "") for p in r.pages}
 print(f"{'item':10}{'lookback':9}{'levels':7}{'rules':6}{'doc':4}{'confl':6} not_found")

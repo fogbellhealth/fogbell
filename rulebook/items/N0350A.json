@@ -1,0 +1,103 @@
+{
+  "item_id": "N0350A",
+  "item_name": "Insulin — Insulin injections (number of days insulin injections were received)",
+  "section": "N",
+  "instrument": "MDS-3.0",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "rai-manual-v1.20.1",
+    "loc": "p. N-3",
+    "quote": "Enter in Item N0350A, the number of days during the 7-day look-back period (or since admission/entry or reentry if less than 7 days) that insulin injections were received."
+  },
+  "lookback_notes": "7-day look-back period, or since admission/entry or reentry if less than 7 days. The manual does not state on this page how the 7 days are counted relative to the ARD.",
+  "coding_levels": [
+    {
+      "code": "Enter Days",
+      "label": "Insulin injections — number of days",
+      "definition": "Record the number of days that insulin injections were received during the last 7 days or since admission/entry or reentry if less than 7 days.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. N-3",
+        "quote": "A. Insulin injections Record the number of days that insulin injections were received during the last 7 days or since admission/entry or reentry if less than 7 days"
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Enter in Item N0350A the number of days during the 7-day look-back period (or since admission/entry or reentry if less than 7 days) that insulin injections were received.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. N-3",
+        "quote": "Enter in Item N0350A, the number of days during the 7-day look-back period (or since admission/entry or reentry if less than 7 days) that insulin injections were received."
+      }
+    },
+    {
+      "rule": "For subcutaneous insulin pumps, code only the number of days that the resident actually required a subcutaneous injection to restart the pump.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. N-4",
+        "quote": "For subcutaneous insulin pumps, code only the number of days that the resident actually required a subcutaneous injection to restart the pump."
+      }
+    },
+    {
+      "rule": "Insulin injections are counted in this item (N0350) as well as in Item N0300, Injections.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. N-2",
+        "quote": "Insulin injections are counted in this item as well as in Item N0350."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review the resident's medication administration records for the 7-day look-back period (or since admission/entry or reentry if less than 7 days).",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. N-3",
+          "quote": "Review the resident's medication administration records for the 7-day look-back period (or since admission/entry or reentry if less than 7 days)."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Step 1 of Steps for Assessment for N0350."
+      },
+      {
+        "criterion": "Determine from the record whether the resident received insulin injections during the look-back period, and count the number of days insulin injections were received.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. N-3",
+          "quote": "Determine if the resident received insulin injections during the look-back period."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Steps 2 and 4 of Steps for Assessment; step 4 states \"Count the number of days insulin injections were received and/or insulin orders changed.\""
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied Section N pages do not tie N0350A to any payment or case-mix classification."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "case_mix_relevance",
+    "state_deltas",
+    "common_audit_citations",
+    "exact counting of the 7-day window relative to the ARD"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}
