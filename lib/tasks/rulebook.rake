@@ -52,7 +52,7 @@ namespace :rulebook do
       window: Integer(ENV.fetch("WINDOW", "2")),
       force: ENV["FORCE"] == "1",
       hint: ENV["HINT"].presence,
-      conventions: ENV["CONVENTIONS"] == "0" ? [] : Fogbell::Rulebook.conventions_for(ENV.fetch("INSTRUMENT", "MDS-3.0")),
+      conventions: ENV["CONVENTIONS"] == "0" ? [] : Fogbell::Rulebook.conventions_for(ENV.fetch("INSTRUMENT", "MDS-3.0"), ENV.fetch("DOC_ID") { File.basename(doc, ".*") }),
       llm: llm,
       logger: $stdout
     )

@@ -71,12 +71,13 @@ module Fogbell
       end
 
       test "prepends cited conventions, marked subordinate to the item's pages" do
-        conv = [ { "rule" => "The standard look-back period is 7 days, unless otherwise stated.", "source" => { "doc" => "fake-manual", "loc" => "p. 3-3" } } ]
+        conv = [ { "quote" => "The standard look-back period is 7 days, unless otherwise stated.", "rule" => "paraphrase", "source" => { "doc" => "fake-manual", "loc" => "p. 3-3" } } ]
         llm = stub
         extractor(llm: llm, conventions: conv).run("X0100")
         system = llm.calls.first.system
         assert_match(/SUBORDINATE to the item's own pages/, system)
-        assert_match(/- The standard look-back period is 7 days, unless otherwise stated\. \(fake-manual, p\. 3-3\)/, system)
+        assert_match(/- "The standard look-back period is 7 days, unless otherwise stated\." \(fake-manual, p\. 3-3\)/, system)
+        assert_no_match(/paraphrase/, system, "only the verbatim quote is shown")
       end
 
       test "conventions_for returns the CONV items' cited rules for an instrument" do
@@ -84,11 +85,21 @@ module Fogbell
         item = JSON.parse(file_fixture("rulebook/valid_item.json").read)
         item["item_id"] = "CONV-TEST"; item["section"] = "CONV"
         dir.join("CONV-TEST.json").write(JSON.generate(item))
-        rules = Fogbell::Rulebook.conventions_for("MDS-3.0", dir)
-        assert_equal 2, rules.size
+        rules = Fogbell::Rulebook.conventions_for("MDS-3.0", "fake-manual", dir)
+        assert_equal 2, rules.size, "both fixture rules carry quotes"
         assert_equal({ "doc" => "fake-manual", "loc" => "p. 2" }, rules.first["source"])
-        assert_empty Fogbell::Rulebook.conventions_for("MDS-RCA", dir)
-        assert_empty Fogbell::Rulebook.conventions_for("MDS-3.0", @tmp.join("nope"))
+        assert_equal "Code 1 only if a visibility check was performed and documented within the look-back period.", rules.first["quote"]
+        assert_empty Fogbell::Rulebook.conventions_for("MDS-3.0", "other-doc", dir), "scoped to the document being extracted"
+        assert_empty Fogbell::Rulebook.conventions_for("MDS-RCA", "fake-manual", dir)
+        assert_empty Fogbell::Rulebook.conventions_for("MDS-3.0", "fake-manual", @tmp.join("nope"))
+      end
+
+      test "a hinted id sends the whole text document instead of chunking on the id" do
+        llm = stub
+        extractor(llm: llm, hint: "the fog conventions").run("X0100")
+        assert_match(/\[PAGE 1\]/, llm.calls.first.user)
+        assert_match(/\[PAGE 3\]/, llm.calls.first.user)
+        assert_match(/What this item covers: the fog conventions/, llm.calls.first.user)
       end
 
       test "sends only the pages that mention the item" do

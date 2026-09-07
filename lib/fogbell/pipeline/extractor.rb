@@ -67,7 +67,8 @@ module Fogbell
                                     pages_text: nil, attachment: true, output_schema_json: schema_json)
           [ prompt, nil, @source.pdf_bytes ]
         else
-          selection = Chunker.new(@source.pages, window: @window).select(item_id)
+          # A hinted id (CONV-*) names no literal item, so nothing would match: send the whole document.
+          selection = @hint ? Chunker::Selection.new(pages: @source.pages, matched: []) : Chunker.new(@source.pages, window: @window).select(item_id)
           prompt = @template.render(item_id: item_id, instrument: @instrument, doc_id: @doc_id, hint: @hint, conventions: @conventions,
                                     pages_text: Chunker.render(selection.pages), attachment: false,
                                     output_schema_json: schema_json)
