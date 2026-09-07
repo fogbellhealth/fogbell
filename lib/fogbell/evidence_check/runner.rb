@@ -75,20 +75,28 @@ module Fogbell
         nil
       end
 
+      # The model may answer a requested item through its lettered sub-items (E0200 as E0200A/B/C)
+      # when the chart codes them separately; that counts as covering the parent.
       def check_item_ids(data)
         got = data["items"].map { |r| r["item_id"] }
-        missing = @check.item_ids - got
-        extra = got - @check.item_ids
+        covered = ->(id) { got.include?(id) || got.any? { |g| g.start_with?(id) && g.length > id.length } }
+        missing = @check.item_ids.reject(&covered)
+        extra = got.reject { |g| @check.item_ids.any? { |id| g == id || (g.start_with?(id) && g.length > id.length) } }
         [].tap do |e|
           e << "missing items: #{missing.join(', ')}" if missing.any?
           e << "unrequested items: #{extra.join(', ')}" if extra.any?
         end
       end
 
+      # The rulebook item a result belongs to: the id itself, else the requested parent it extends.
+      def item_for(result_id)
+        @rulebook.find(result_id) || @rulebook.fetch(@check.item_ids.find { |id| result_id.start_with?(id) })
+      end
+
       # The window rule, enforced in code: evidence dated outside the item's window is moved to
       # outside_window_evidence, and a status that then has no in-window evidence left is downgraded.
       def enforce_window(result)
-        item = @rulebook.fetch(result["item_id"])
+        item = item_for(result["item_id"])
         window = Window.new(@check.ard, item.lookback_days)
         inside, outside = result["evidence"].partition { |e| window.includes?(e["date"]) != false }
         r = result.merge("evidence" => inside, "outside_window_evidence" => result["outside_window_evidence"] + outside,

@@ -15,6 +15,8 @@ Status meanings:
 - `unsupported`: no in-window documentation supports the coding the chart's worksheet intends, or the only evidence is outside the window.
 - `not_applicable`: the rules say the item is skipped or not completed for this resident (for example a gateway item routes past it); explain which rule.
 
+Return exactly one entry per item listed below, using each `item_id` exactly as given. Where the chart codes an item's lettered parts separately (for example E0200A, E0200B, E0200C), you may return one entry per lettered part instead of the parent, using the lettered id.
+
 Return only the JSON object described by the schema below.
 
 Output schema (JSON Schema):

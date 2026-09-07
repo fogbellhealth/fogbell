@@ -55,6 +55,21 @@ module Fogbell
         assert_match(/outside the 7-day window/, r["gaps"].last)
       end
 
+      test "lettered sub-item answers cover the requested parent item" do
+        payload = JSON.parse(file_fixture("evidence_check/valid_response.json").read)
+        a = payload["items"][0]; b = JSON.parse(JSON.generate(a))
+        a["item_id"] = "X0100A"; b["item_id"] = "X0100B"; payload["items"] = [ a, b ]
+        result = runner(stub(JSON.generate(payload))).run
+        assert_equal %w[X0100A X0100B], result.items.map { |r| r["item_id"] }
+        assert_equal "2026-08-28", result.items.first["window"]["first_day"], "the parent's window applies"
+      end
+
+      test "an answer for an item that was not requested is rejected" do
+        payload = JSON.parse(file_fixture("evidence_check/valid_response.json").read)
+        payload["items"][0]["item_id"] = "Z9999"
+        assert_raises(InvalidResponse) { runner(stub(JSON.generate(payload))).run }
+      end
+
       test "an invalid response is retried once, then fails with a user-visible error" do
         llm = stub('{"items": "nope"}')
         error = assert_raises(InvalidResponse) { runner(llm).run }
