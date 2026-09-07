@@ -70,6 +70,27 @@ module Fogbell
         assert_empty Rulebook::Validator.validate(data)
       end
 
+      test "prepends cited conventions, marked subordinate to the item's pages" do
+        conv = [ { "rule" => "The standard look-back period is 7 days, unless otherwise stated.", "source" => { "doc" => "fake-manual", "loc" => "p. 3-3" } } ]
+        llm = stub
+        extractor(llm: llm, conventions: conv).run("X0100")
+        system = llm.calls.first.system
+        assert_match(/SUBORDINATE to the item's own pages/, system)
+        assert_match(/- The standard look-back period is 7 days, unless otherwise stated\. \(fake-manual, p\. 3-3\)/, system)
+      end
+
+      test "conventions_for returns the CONV items' cited rules for an instrument" do
+        dir = @tmp.join("conv"); dir.mkpath
+        item = JSON.parse(file_fixture("rulebook/valid_item.json").read)
+        item["item_id"] = "CONV-TEST"; item["section"] = "CONV"
+        dir.join("CONV-TEST.json").write(JSON.generate(item))
+        rules = Fogbell::Rulebook.conventions_for("MDS-3.0", dir)
+        assert_equal 2, rules.size
+        assert_equal({ "doc" => "fake-manual", "loc" => "p. 2" }, rules.first["source"])
+        assert_empty Fogbell::Rulebook.conventions_for("MDS-RCA", dir)
+        assert_empty Fogbell::Rulebook.conventions_for("MDS-3.0", @tmp.join("nope"))
+      end
+
       test "sends only the pages that mention the item" do
         llm = stub
         extractor(llm: llm, window: 0).run("X0100")

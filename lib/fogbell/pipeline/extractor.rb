@@ -12,7 +12,7 @@ module Fogbell
       MODES = %w[auto text pdf].freeze
 
       def initialize(doc:, doc_id:, llm:, out_dir:, instrument: "MDS-3.0", mode: "auto", window: 2, force: false,
-                     hint: nil, template: PromptTemplate.default, changelog: nil,
+                     hint: nil, conventions: [], template: PromptTemplate.default, changelog: nil,
                      rejects_dir: Rails.root.join("tmp/rulebook_rejects"), shell: Shell.new, logger: nil)
         raise Error, "MODE must be one of #{MODES.join(', ')}" unless MODES.include?(mode)
 
@@ -25,6 +25,7 @@ module Fogbell
         @window = window
         @force = force
         @hint = hint # optional one-line description for ids that name no literal item (CONV-*)
+        @conventions = conventions # [{"rule", "source"}] from this instrument's CONV items; subordinate to item pages
         @template = template
         # The changelog lives beside the items directory, so smoke runs into tmp/ never touch rulebook/changelog.md.
         @changelog = changelog || Changelog.new(@out_dir.parent.join("changelog.md"))
@@ -62,12 +63,12 @@ module Fogbell
 
       def prepare(item_id)
         if use_pdf?
-          prompt = @template.render(item_id: item_id, instrument: @instrument, doc_id: @doc_id, hint: @hint,
+          prompt = @template.render(item_id: item_id, instrument: @instrument, doc_id: @doc_id, hint: @hint, conventions: @conventions,
                                     pages_text: nil, attachment: true, output_schema_json: schema_json)
           [ prompt, nil, @source.pdf_bytes ]
         else
           selection = Chunker.new(@source.pages, window: @window).select(item_id)
-          prompt = @template.render(item_id: item_id, instrument: @instrument, doc_id: @doc_id, hint: @hint,
+          prompt = @template.render(item_id: item_id, instrument: @instrument, doc_id: @doc_id, hint: @hint, conventions: @conventions,
                                     pages_text: Chunker.render(selection.pages), attachment: false,
                                     output_schema_json: schema_json)
           [ prompt, selection, nil ]

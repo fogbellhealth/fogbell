@@ -34,6 +34,16 @@ module Fogbell
       def reset!
         @instance = nil
       end
+
+      # Cited general-convention rules for +instrument+: the federal_coding_rules of every promoted
+      # item in section "CONV". Corpus-agnostic: any instrument may carry convention items.
+      # Returns [] when the rulebook has none (or does not load), so extraction still runs.
+      def conventions_for(instrument, dir = items_dir)
+        return [] unless dir.directory?
+
+        load(dir).select { |i| i.section == "CONV" && i.instrument == instrument }
+                 .flat_map { |i| i.federal_coding_rules.map { |r| { "rule" => r["rule"], "source" => r["source"].slice("doc", "loc") } } }
+      end
     end
   end
 end
