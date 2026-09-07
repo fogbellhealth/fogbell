@@ -22,7 +22,7 @@ def cites(node, path=()):
         for i, v in enumerate(node): yield from cites(v, path + (i,))
 for path, c in cites(data):
     if c["doc"] != doc_id: continue
-    loc = re.sub(r"^§\s*", "", c["loc"]).strip()
+    loc = re.sub(r"^(§\s*|Principle\s+|Section\s+)", "", c["loc"]).strip()
     loc_key = re.sub(r"\s*\(.*$", "", loc)  # "16.2.3.3(2)" -> "16.2.3.3"
     if loc_key and loc_key not in text:
         counts["LOC NOT IN TEXT"] += 1; print(f"LOC NOT IN TEXT  {path}  {c['loc']}")
