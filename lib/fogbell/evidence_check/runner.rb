@@ -13,7 +13,7 @@ module Fogbell
       Result = Data.define(:items, :overall_note, :rule_set, :usage, :attempts)
 
       def initialize(check, llm: EvidenceCheck.llm, rulebook: Rulebook.instance, manifest: Review::Manifest.default,
-                     template: Pipeline::PromptTemplate.new(Rails.root.join(TEMPLATE)), log_dir: Rails.root.join("log/evidence_checks"))
+                     template: Pipeline::PromptTemplate.new(Rails.root.join(TEMPLATE)), log_dir: Rails.root.join(Rails.env.test? ? "tmp/evidence_checks" : "log/evidence_checks"))
         @check = check
         @llm = llm
         @rulebook = rulebook
