@@ -6,10 +6,10 @@
   "lookback_days": 7,
   "lookback_source": {
     "doc": "rai-manual-v1.20.1",
-    "loc": "p. E-15",
-    "quote": "Interview staff, across all shifts and disciplines, as well as others who had close interactions with the resident during the 7-day look-back period."
+    "loc": "p. E-16",
+    "quote": "Code 1, behavior of this type occurred 1-3 days: if the resident rejected care consistent with goals 1-3 days during the 7-day look-back period, regardless of the number of episodes that occurred on any one of those days."
   },
-  "lookback_notes": "The item uses a 7-day look-back period; coding instructions repeatedly reference \"the last 7 days\" and \"the 7-day look-back period.\" The document does not state on this page how the 7 days are counted relative to the ARD.",
+  "lookback_notes": "The item's own pages state a 7-day look-back period (E-15 Steps for Assessment, E-16 Coding Instructions). Per the general convention, the ARD is the last day of the observation period and the window is ARD plus the 6 previous calendar days (rai-manual-v1.20.1, p. 2-21).",
   "coding_levels": [
     {
       "code": "0",
@@ -54,11 +54,19 @@
   ],
   "federal_coding_rules": [
     {
-      "rule": "E0800 asks whether the resident rejected evaluation or care (e.g., bloodwork, taking medications, ADL assistance) that is necessary to achieve the resident's goals for health and well-being; behaviors already addressed (e.g., by discussion or care planning with the resident or family) and determined to be consistent with resident values, preferences, or goals are not included.",
+      "rule": "E0800 records whether the resident rejected evaluation or care (e.g., bloodwork, taking medications, ADL assistance) that is necessary to achieve the resident's goals for health and well-being.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-14",
-        "quote": "Did the resident reject evaluation or care (e.g., bloodwork, taking medications, ADL assistance) that is necessary to achieve the resident's goals for health and well-being? Do not include behaviors that have already been addressed (e.g., by discussion or care planning with the resident or family), and determined to be consistent with resident values, preferences, or goals."
+        "quote": "Did the resident reject evaluation or care (e.g., bloodwork, taking medications, ADL assistance) that is necessary to achieve the resident's goals for health and well-being?"
+      }
+    },
+    {
+      "rule": "Do not include behaviors that have already been addressed (e.g., by discussion or care planning with the resident or family), and determined to be consistent with resident values, preferences, or goals.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-14",
+        "quote": "Do not include behaviors that have already been addressed (e.g., by discussion or care planning with the resident or family), and determined to be consistent with resident values, preferences, or goals."
       }
     },
     {
@@ -70,42 +78,34 @@
       }
     },
     {
-      "rule": "Frequency coding disregards the number of episodes occurring on any one day; only the number of days on which the behavior occurred determines the code.",
+      "rule": "The intent of the item is to identify potential behavioral problems, not situations in which care has been rejected based on a choice consistent with the resident's preferences or goals for health and well-being, or a choice made on behalf of the resident by a family member or other proxy decision maker.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-16",
-        "quote": "regardless of the number of episodes that occurred on any one of those days"
+        "quote": "The intent of this item is to identify potential behavioral problems, not situations in which care has been rejected based on a choice that is consistent with the resident's preferences or goals for health and well-being or a choice made on behalf of the resident by a family member or other proxy decision maker."
       }
     },
     {
-      "rule": "Once rejection/decline of care is investigated and determined to be a matter of resident choice, education is provided and the resident's choices become part of the plan of care; on future assessments this behavior would not be coded in this item.",
+      "rule": "Once a rejection/decline of care is investigated and determined to be a matter of the resident's choice, education is provided and the resident's choices become part of the plan of care; on future assessments this behavior would not be coded in this item.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-14",
-        "quote": "Education is provided and the resident's choices become part of the plan of care. On future assessments, this behavior would not be coded in this item."
+        "quote": "It is really a matter of resident choice. When rejection/decline of care is first identified, the team then investigates and determines the rejection/decline of care is really a matter of resident's choice. Education is provided and the resident's choices become part of the plan of care. On future assessments, this behavior would not be coded in this item."
       }
     },
     {
-      "rule": "E0800 is the skip target from E0300: if E0200A, E0200B, and E0200C are all coded 0, skip to Rejection of Care—Presence & Frequency item (E0800).",
+      "rule": "E0800 is reached from E0300 when E0200A, E0200B, and E0200C are all coded 0 (skip to Rejection of Care—Presence & Frequency item E0800).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-7",
         "quote": "Code 0, no: if E0200A, E0200B, and E0200C all are coded 0, not present. Skip to Rejection of Care—Presence & Frequency item (E0800)."
-      }
-    },
-    {
-      "rule": "Care rejection may be manifested by verbally declining, statements of refusal, or through physical behaviors that convey aversion to, result in avoidance of, or interfere with the receipt of care.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. E-14",
-        "quote": "Care rejection may be manifested by verbally declining, statements of refusal, or through physical behaviors that convey aversion to, result in avoidance of, or interfere with the receipt of care."
       }
     }
   ],
   "supportive_documentation": {
     "federal": [
       {
-        "criterion": "Review the medical record.",
+        "criterion": "Review the medical record (as part of the steps for assessment for this item).",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-15",
@@ -113,7 +113,7 @@
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Step 1 of Steps for Assessment."
+        "notes": "Listed as step 1 of the Steps for Assessment."
       },
       {
         "criterion": "Interview staff, across all shifts and disciplines, as well as others who had close interactions with the resident during the 7-day look-back period.",
@@ -140,11 +140,11 @@
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-15",
-          "quote": "Review the medical record to find out whether the care rejection behavior was previously addressed and documented in discussions or in care planning with the resident, family, or significant other and determined to be an informed choice consistent with the resident's values, preferences, or goals"
+          "quote": "Review the medical record to find out whether the care rejection behavior was previously addressed and documented in discussions or in care planning with the resident, family, or significant other and determined to be an informed choice consistent with the resident's values, preferences, or goals; or whether that the behavior represents an objection to the way care is provided, but acceptable alternative care and/or approaches to care have been identified and employed."
         },
         "verified_by_expert": false,
         "audit_weight": "high",
-        "notes": "Documentation of prior discussion/care planning is the basis for excluding the behavior from coding."
+        "notes": "Key documentation criterion distinguishing codeable rejection of care from an addressed, informed choice."
       },
       {
         "criterion": "If the resident exhibits behavior that appears to communicate a rejection of care (and that rejection behavior has not been previously determined to be consistent with the resident's values or goals), ask them directly whether the behavior is meant to decline or refuse care.",
@@ -154,7 +154,7 @@
           "quote": "If the resident exhibits behavior that appears to communicate a rejection of care (and that rejection behavior has not been previously determined to be consistent with the resident's values or goals), ask them directly whether the behavior is meant to decline or refuse care."
         },
         "verified_by_expert": false,
-        "audit_weight": "high"
+        "audit_weight": "medium"
       },
       {
         "criterion": "If the resident is unable or unwilling to respond to questions about their rejection of care or goals for health care and well-being, interview the family or significant other to ascertain the resident's health care preferences and goals.",
@@ -177,10 +177,9 @@
   "conflicts": [],
   "common_audit_citations": [],
   "not_found": [
+    "case_mix_relevance.level",
     "state_deltas",
-    "common_audit_citations",
-    "case_mix_relevance.source",
-    "conflicts"
+    "common_audit_citations"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",

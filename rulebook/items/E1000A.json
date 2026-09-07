@@ -9,12 +9,12 @@
     "loc": "p. E-20",
     "quote": "Consider the previous review of the resident's wandering behaviors identified in E0900 for the 7-day look-back period."
   },
-  "lookback_notes": "The Steps for Assessment for E1000 direct the assessor to consider the wandering behaviors identified in E0900 for the 7-day look-back period. The document does not state on this page how the 7 days are counted relative to the ARD.",
+  "lookback_notes": "The item's own Steps for Assessment page states a 7-day look-back period, tied to the wandering behaviors identified in E0900. Per the general convention, the ARD is the last day of the observation period and the window is ARD plus the 6 previous calendar days (rai-manual-v1.20.1, p. 2-21).",
   "coding_levels": [
     {
       "code": "0",
       "label": "No",
-      "definition": "Wandering does not place the resident at significant risk.",
+      "definition": "Code 0, no: if wandering does not place the resident at significant risk.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-20",
@@ -24,7 +24,7 @@
     {
       "code": "1",
       "label": "Yes",
-      "definition": "The wandering places the resident at significant risk of getting to a dangerous place (e.g., wandering outside the facility where there is heavy traffic) or encountering a dangerous situation (e.g., wandering into the room of another resident with dementia who is known to become physically aggressive toward intruders).",
+      "definition": "Code 1, yes: if the wandering places the resident at significant risk of getting to a dangerous place (e.g., wandering outside the facility where there is heavy traffic) or encountering a dangerous situation (e.g., wandering into the room of another resident with dementia who is known to become physically aggressive toward intruders).",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-20",
@@ -42,23 +42,23 @@
       }
     },
     {
-      "rule": "Code 0, no, if wandering does not place the resident at significant risk.",
+      "rule": "If E0900 is coded 0 (behavior not exhibited), skip to Change in Behavior or Other Symptoms item (E1100) — E1000 is not completed.",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. E-20",
-        "quote": "Code 0, no: if wandering does not place the resident at significant risk."
+        "loc": "p. E-19",
+        "quote": "Code 0, behavior not exhibited: if wandering was not exhibited during the 7-day look-back period. Skip to Change in Behavior or Other Symptoms item (E1100)."
       }
     },
     {
-      "rule": "Code 1, yes, if the wandering places the resident at significant risk of getting to a dangerous place or encountering a dangerous situation.",
+      "rule": "Base the coding on the previous review of the resident's wandering behaviors identified in E0900 for the 7-day look-back period.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-20",
-        "quote": "Code 1, yes: if the wandering places the resident at significant risk of getting to a dangerous place (e.g., wandering outside the facility where there is heavy traffic) or encountering a dangerous situation"
+        "quote": "Consider the previous review of the resident's wandering behaviors identified in E0900 for the 7-day look-back period."
       }
     },
     {
-      "rule": "Determine whether the wandering behaviors put the resident at significant risk of getting into potentially dangerous places based on clinical judgment for the individual resident.",
+      "rule": "Determine whether those behaviors put the resident at significant risk of getting into potentially dangerous places, based on clinical judgment for the individual resident.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-20",
@@ -66,7 +66,7 @@
       }
     },
     {
-      "rule": "Wandering that results in elopement from the nursing home is coded 1, yes, for E1000A because it places the resident at significant risk of getting into a dangerous situation.",
+      "rule": "Wandering that results in elopement from the nursing home is coded 1, yes, as placing the resident at significant risk of getting into a dangerous situation.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-21",
@@ -74,29 +74,29 @@
       }
     },
     {
-      "rule": "Locomotion in a wheelchair from place to place meets the definition of wandering for purposes of these items (E0900/E1000).",
+      "rule": "Wandering (for purposes of E0900/E1000) is the act of moving (walking or locomotion in a wheelchair) from place to place with or without a specified course or known direction; pacing within a constrained space and traveling via a planned course to a specific place are not wandering.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-19",
-        "quote": "Wandering is the act of moving (walking or locomotion in a wheelchair) from place to place with or without a specified course or known direction."
+        "quote": "Pacing (repetitive walking with a driven/pressured quality) within a constrained space is not included in wandering."
       }
     }
   ],
   "supportive_documentation": {
     "federal": [
       {
-        "criterion": "Review of the medical record for the 7-day look-back period supporting the wandering behaviors identified in E0900 (carried forward for coding E1000A).",
+        "criterion": "Review of the medical record for the 7-day look-back period and staff interview establishing whether wandering occurred and its frequency (the E0900 review that E1000A relies upon).",
         "source": {
           "doc": "rai-manual-v1.20.1",
-          "loc": "p. E-20",
-          "quote": "Consider the previous review of the resident's wandering behaviors identified in E0900 for the 7-day look-back period."
+          "loc": "p. E-19",
+          "quote": "Review the medical record and interview staff to determine whether wandering occurred during the 7-day look-back period."
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "E0900 Steps for Assessment specify reviewing the medical record and interviewing staff to determine whether wandering occurred during the 7-day look-back period (p. E-19)."
+        "notes": "Stated as a Step for Assessment for E0900; E1000A explicitly builds on that prior review."
       },
       {
-        "criterion": "Documentation of clinical judgment that the wandering placed the resident at significant risk of getting into a potentially dangerous place.",
+        "criterion": "Documentation supporting the clinical judgment that the wandering placed the resident at significant risk of getting to a potentially dangerous place (e.g., elopement outside the facility, heavy traffic, entering the room of a resident known to be aggressive).",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-20",
@@ -116,9 +116,9 @@
   "conflicts": [],
   "common_audit_citations": [],
   "not_found": [
+    "case_mix_relevance.source",
     "state_deltas",
-    "common_audit_citations",
-    "case_mix_relevance.source"
+    "common_audit_citations"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",

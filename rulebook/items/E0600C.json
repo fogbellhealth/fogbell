@@ -1,6 +1,6 @@
 {
   "item_id": "E0600C",
-  "item_name": "Impact on Others — Did any of the identified symptom(s) significantly disrupt care or the living environment?",
+  "item_name": "Impact on Others — Did any of the identified symptom(s) significantly disrupt care or living environment?",
   "section": "E",
   "instrument": "MDS-3.0",
   "lookback_days": 7,
@@ -9,12 +9,12 @@
     "loc": "p. E-11",
     "quote": "Consider the previous review of the clinical record, staff interviews across all shifts and disciplines, interviews with others who had close interactions with the resident and previous observations of the behaviors identified in E0200 for the 7-day look-back period."
   },
-  "lookback_notes": "E0600 is coded from the behaviors identified in E0200 for the 7-day look-back period; the Steps for Assessment for E0600 direct the assessor to consider the previous record review, staff interviews and observations for that 7-day look-back period. The document does not state on this page how the 7 days are counted relative to the ARD.",
+  "lookback_notes": "The item's own Steps for Assessment page (p. E-11) states the behaviors identified in E0200 are considered for the 7-day look-back period. Counting convention comes from the general convention: \"The ARD (item A2300) is the last day of the observation/look-back period, and day 1 for purposes of counting back\" (p. 2-21), i.e., ARD plus the 6 previous calendar days.",
   "coding_levels": [
     {
       "code": "0",
       "label": "No",
-      "definition": "if none of the identified behavioral symptom(s) significantly disrupted delivery of care or the living environment.",
+      "definition": "None of the identified behavioral symptom(s) significantly disrupted delivery of care or the living environment.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-12",
@@ -24,7 +24,7 @@
     {
       "code": "1",
       "label": "Yes",
-      "definition": "if any of the identified behavioral symptom(s) created a climate of excessive noise or interfered with the receipt of care or participation in organized activities by other residents.",
+      "definition": "Any of the identified behavioral symptom(s) created a climate of excessive noise or interfered with the receipt of care or participation in organized activities by other residents.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-12",
@@ -34,7 +34,7 @@
   ],
   "federal_coding_rules": [
     {
-      "rule": "Code E0600C 0 (no) if none of the identified behavioral symptoms significantly disrupted delivery of care or the living environment.",
+      "rule": "Code 0, no, if none of the identified behavioral symptom(s) significantly disrupted delivery of care or the living environment.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-12",
@@ -42,7 +42,7 @@
       }
     },
     {
-      "rule": "Code E0600C 1 (yes) if any of the identified behavioral symptoms created a climate of excessive noise or interfered with the receipt of care or participation in organized activities by other residents.",
+      "rule": "Code 1, yes, if any of the identified behavioral symptom(s) created a climate of excessive noise or interfered with the receipt of care or participation in organized activities by other residents.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-12",
@@ -58,7 +58,7 @@
       }
     },
     {
-      "rule": "E0600 (including E0600C) is coded based on the behaviors identified in E0200; determine whether those behaviors interfered with others' care or living environments.",
+      "rule": "To code E0600, determine if the behaviors identified (in E0200) put others at significant risk of physical illness or injury, intruded on their privacy or activities, and/or interfered with their care or living environments.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-11",
@@ -66,7 +66,7 @@
       }
     },
     {
-      "rule": "E0600 is completed only when E0300 is coded 1, yes (any of E0200A, E0200B, or E0200C coded 1, 2, or 3); if E0300 is coded 0, skip to E0800.",
+      "rule": "E0600 (including E0600C) is completed only when E0300 is coded 1, yes (any of E0200A, E0200B, or E0200C coded 1, 2, or 3); when E0300 is coded 0, skip to E0800.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-7",
@@ -74,7 +74,15 @@
       }
     },
     {
-      "rule": "Resident intent is not taken into account when coding items in Section E; coding focuses on the resident's actions.",
+      "rule": "When E0200A, E0200B, and E0200C are all coded 0, E0300 is coded 0, no, and the assessor skips to E0800 (E0600 is not completed).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-7",
+        "quote": "Code 0, no: if E0200A, E0200B, and E0200C all are coded 0, not present. Skip to Rejection of Care—Presence & Frequency item (E0800)."
+      }
+    },
+    {
+      "rule": "Resident intent must not be taken into account when coding items in Section E; the section focuses on the resident's actions, not the intent of their behavior.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-1",
@@ -85,7 +93,7 @@
   "supportive_documentation": {
     "federal": [
       {
-        "criterion": "Review of the clinical record for the 7-day look-back period supporting the identified behavioral symptoms and their impact.",
+        "criterion": "Review of the clinical record for the 7-day look-back period, considered together with prior staff interviews and observations of the behaviors identified in E0200.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-11",
@@ -96,28 +104,18 @@
         "notes": "Stated as step 1 of Steps for Assessment for E0600."
       },
       {
-        "criterion": "Staff interviews across all shifts and disciplines, and interviews with others who had close interactions with the resident, plus observations of the E0200 behaviors.",
+        "criterion": "Staff interviews across all shifts and disciplines, plus interviews with others who had close interactions with the resident.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-11",
-          "quote": "Consider the previous review of the clinical record, staff interviews across all shifts and disciplines, interviews with others who had close interactions with the resident and previous observations of the behaviors identified in E0200 for the 7-day look-back period."
+          "quote": "staff interviews across all shifts and disciplines, interviews with others who had close interactions with the resident"
         },
         "verified_by_expert": false,
-        "audit_weight": "high"
+        "audit_weight": "high",
+        "notes": "Part of the required assessment steps for E0600."
       },
       {
-        "criterion": "Documentation supporting a determination that the behavior disrupted care or the living environment (e.g., excessive noise, interference with staff delivery of care or organized activities, distress or adverse consequences for other residents).",
-        "source": {
-          "doc": "rai-manual-v1.20.1",
-          "loc": "p. E-12",
-          "quote": "For E0600C, code based on whether the behavior interferes with staff ability to deliver care or conduct organized activities, interrupts receipt of care or participation in organized activities by other residents, and/or causes other residents to experience distress or adverse consequences."
-        },
-        "verified_by_expert": false,
-        "audit_weight": "medium",
-        "notes": "Framed as a coding tip rather than an explicit documentation requirement."
-      },
-      {
-        "criterion": "Subsequent assessments and documentation can be compared with a baseline to identify changes in the resident's behavior, including response to interventions.",
+        "criterion": "Documentation of subsequent assessments compared with a baseline to identify changes in the resident's behavior, including response to interventions.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-11",
@@ -125,7 +123,7 @@
         },
         "verified_by_expert": false,
         "audit_weight": "low",
-        "notes": "Stated under Planning for Care, not as a coding requirement."
+        "notes": "Stated under Planning for Care rationale, not framed as a coding requirement."
       }
     ],
     "state": {}
@@ -139,8 +137,8 @@
   "common_audit_citations": [],
   "not_found": [
     "state_deltas",
-    "common_audit_citations",
-    "case_mix_relevance.source"
+    "case_mix_relevance",
+    "common_audit_citations"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",

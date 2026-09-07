@@ -9,12 +9,12 @@
     "loc": "p. E-20",
     "quote": "Consider the previous review of the resident's wandering behaviors identified in E0900 for the 7-day look-back period."
   },
-  "lookback_notes": "The Steps for Assessment for E1000 direct the assessor to consider the wandering behaviors identified in E0900 for the 7-day look-back period. The document does not state on this page how the 7 days are counted relative to the ARD.",
+  "lookback_notes": "The item's own Steps for Assessment state a 7-day look-back period, consistent with the E0900 wandering frequency window. Counted per the general convention as the ARD plus the 6 previous calendar days (rai-manual-v1.20.1, p. 2-17: \"ARD + 6 previous calendar days\"). No other windows are stated for this item.",
   "coding_levels": [
     {
       "code": "0",
       "label": "No",
-      "definition": "If the wandering does not intrude on the privacy or activity of others.",
+      "definition": "Code 0, no: if the wandering does not intrude on the privacy or activity of others.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-21",
@@ -24,7 +24,7 @@
     {
       "code": "1",
       "label": "Yes",
-      "definition": "If the wandering intrudes on the privacy or activities of others (i.e., if the wandering violates other residents' privacy or interrupts other residents' performance of activities of daily living or limits engagement in or enjoyment of social or recreational activities), whether or not the other resident complains or communicates displeasure or annoyance.",
+      "definition": "Code 1, yes: if the wandering intrudes on the privacy or activities of others (i.e., if the wandering violates other residents' privacy or interrupts other residents' performance of activities of daily living or limits engagement in or enjoyment of social or recreational activities), whether or not the other resident complains or communicates displeasure or annoyance.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-21",
@@ -34,7 +34,7 @@
   ],
   "federal_coding_rules": [
     {
-      "rule": "Answer E1000 (including E1000B) only if E0900, Wandering—Presence & Frequency, was coded 1, 2, or 3.",
+      "rule": "Complete E1000 (including E1000B) only if E0900, Wandering—Presence & Frequency, was coded 1, 2, or 3.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-20",
@@ -42,23 +42,15 @@
       }
     },
     {
-      "rule": "Code 0, no, if the wandering does not intrude on the privacy or activity of others.",
+      "rule": "If E0900 is coded 0 (behavior not exhibited), skip to E1100, Change in Behavior or Other Symptoms (E1000 is not completed).",
       "source": {
         "doc": "rai-manual-v1.20.1",
-        "loc": "p. E-21",
-        "quote": "Code 0, no: if the wandering does not intrude on the privacy or activity of others."
+        "loc": "p. E-19",
+        "quote": "Code 0, behavior not exhibited: if wandering was not exhibited during the 7-day look-back period. Skip to Change in Behavior or Other Symptoms item (E1100)."
       }
     },
     {
-      "rule": "Code 1, yes, if the wandering intrudes on the privacy or activities of others — including violating other residents' privacy, interrupting other residents' performance of activities of daily living, or limiting engagement in or enjoyment of social or recreational activities — regardless of whether the other resident complains or communicates displeasure or annoyance.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. E-21",
-        "quote": "whether or not the other resident complains or communicates displeasure or annoyance."
-      }
-    },
-    {
-      "rule": "Determine whether wandering significantly intrudes on the privacy or activities of others based on clinical judgment for the individual resident, considering the wandering behaviors identified in E0900 during the 7-day look-back period.",
+      "rule": "Determine whether the wandering behaviors significantly intrude on the privacy or activities of others based on clinical judgment for the individual resident.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-20",
@@ -66,18 +58,37 @@
       }
     },
     {
-      "rule": "Locomotion in a wheelchair from place to place meets the definition of wandering; intruding into another resident's room and interfering with that resident's ability to use the bathroom is coded E1000B = 1, yes.",
+      "rule": "Code 1, yes even if the other resident does not complain or communicate displeasure or annoyance.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-21",
-        "quote": "Rationale: Moving about in this manner with the use of a wheelchair meets the definition of wandering, and the resident has intruded on the privacy of another resident and has interfered with that resident's ability to use the bathroom."
+        "quote": "whether or not the other resident complains or communicates displeasure or annoyance"
+      }
+    },
+    {
+      "rule": "Moving about by propelling oneself in a wheelchair meets the definition of wandering; intruding into another resident's room and interfering with that resident's ability to use the bathroom is coded E1000B = 1, yes.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-21",
+        "quote": "Coding: E1000B would be coded 1, yes. Rationale: Moving about in this manner with the use of a wheelchair meets the definition of wandering, and the resident has intruded on the privacy of another resident and has interfered with that resident's ability to use the bathroom."
       }
     }
   ],
   "supportive_documentation": {
     "federal": [
       {
-        "criterion": "Review of the medical record and staff interviews establishing whether wandering occurred during the 7-day look-back period (basis for E0900, which gates E1000B).",
+        "criterion": "Consider the previous review of the resident's wandering behaviors identified in E0900 for the 7-day look-back period.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. E-20",
+          "quote": "Consider the previous review of the resident's wandering behaviors identified in E0900 for the 7-day look-back period."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as a required assessment step for E1000."
+      },
+      {
+        "criterion": "Medical record review and staff interview establishing that wandering occurred during the 7-day look-back period (the E0900 determination that gates completion of E1000B).",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-19",
@@ -85,17 +96,7 @@
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Stated for E0900; E1000 Steps for Assessment direct the assessor to consider that previous review."
-      },
-      {
-        "criterion": "Documentation of the previous review of the resident's wandering behaviors identified in E0900 for the 7-day look-back period.",
-        "source": {
-          "doc": "rai-manual-v1.20.1",
-          "loc": "p. E-20",
-          "quote": "Consider the previous review of the resident's wandering behaviors identified in E0900 for the 7-day look-back period."
-        },
-        "verified_by_expert": false,
-        "audit_weight": "medium"
+        "notes": "Stated under E0900, the item that determines whether E1000B is completed."
       }
     ],
     "state": {}
@@ -108,9 +109,10 @@
   "conflicts": [],
   "common_audit_citations": [],
   "not_found": [
-    "case_mix_relevance.level",
+    "state_deltas",
+    "conflicts",
     "common_audit_citations",
-    "state_deltas"
+    "case_mix_relevance.level"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",

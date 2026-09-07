@@ -1,6 +1,6 @@
 {
   "item_id": "E0600B",
-  "item_name": "Impact on Others — Did any of the identified symptom(s) significantly intrude on the privacy or activity of others?",
+  "item_name": "Impact on Others — Significantly Intrude on the Privacy or Activity of Others",
   "section": "E",
   "instrument": "MDS-3.0",
   "lookback_days": 7,
@@ -9,7 +9,7 @@
     "loc": "p. E-11",
     "quote": "Consider the previous review of the clinical record, staff interviews across all shifts and disciplines, interviews with others who had close interactions with the resident and previous observations of the behaviors identified in E0200 for the 7-day look-back period."
   },
-  "lookback_notes": "E0600 is coded from the previously reviewed record, staff interviews, and observations of the behaviors identified in E0200 for the 7-day look-back period. The document does not state how the 7 days are counted relative to the ARD on these pages.",
+  "lookback_notes": "The item's own Steps for Assessment page (p. E-11) states the behaviors identified in E0200 are considered for the 7-day look-back period. Counted per the general convention as the ARD plus the 6 previous calendar days (rai-manual-v1.20.1, p. 2-17: \"ARD + 6 previous calendar days\").",
   "coding_levels": [
     {
       "code": "0",
@@ -34,7 +34,7 @@
   ],
   "federal_coding_rules": [
     {
-      "rule": "E0600 (including B) is completed only when E0300 is coded 1, yes (any of E0200A, E0200B, or E0200C coded 1, 2, or 3); if E0300 is coded 0, skip to E0800.",
+      "rule": "E0600 (including E0600B) is completed only when E0300 is coded 1, yes (i.e., any of E0200A, E0200B, or E0200C were coded 1, 2, or 3); if E0300 is coded 0, skip to E0800.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-7",
@@ -42,23 +42,7 @@
       }
     },
     {
-      "rule": "Code 0, no, if none of the identified behavioral symptom(s) significantly intruded on the privacy or activity of others.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. E-11",
-        "quote": "Code 0, no: if none of the identified behavioral symptom(s) significantly intruded on the privacy or activity of others."
-      }
-    },
-    {
-      "rule": "Code 1, yes, if any of the identified behavioral symptom(s) kept other residents from enjoying privacy or engaging in informal activities (not organized or run by staff), including coming in uninvited, invading, or forcing oneself on others' private activities.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. E-11",
-        "quote": "Code 1, yes: if any of the identified behavioral symptom(s) kept other residents from enjoying privacy or engaging in informal activities (not organized or run by staff). Includes coming in uninvited, invading, or forcing oneself on others' private activities."
-      }
-    },
-    {
-      "rule": "To code E0600, determine if the behaviors identified intruded on others' privacy or activities (as well as risk of physical illness/injury and interference with care or living environments).",
+      "rule": "Code E0600 based on the behaviors identified in E0200: determine if the behaviors identified intruded on others' privacy or activities.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-11",
@@ -74,18 +58,34 @@
       }
     },
     {
-      "rule": "Resident intent should not be taken into account when coding items in Section E.",
+      "rule": "Resident intent must not be taken into account when coding items in Section E.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-1",
         "quote": "Resident intent should not be taken into account when coding for items in this section."
+      }
+    },
+    {
+      "rule": "Intrusion on another resident's privacy is coded 1, yes regardless of whether the other residents complain or communicate distress (example: repeatedly entering others' rooms and rummaging through belongings).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-13",
+        "quote": "Rationale: This is an intrusion and violates other residents' privacy regardless of whether they complain or communicate their distress."
+      }
+    },
+    {
+      "rule": "Behavior that intrudes only on an activity organized or run by staff (e.g., an exercise group or discussion group) is coded 0, no for E0600B (coded under E0600C instead).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-13",
+        "quote": "Coding: E0600A and E0600B would be coded 0, no; E0600C would be coded 1, yes."
       }
     }
   ],
   "supportive_documentation": {
     "federal": [
       {
-        "criterion": "Review of the clinical record for the 7-day look-back period supporting the impact of the behaviors identified in E0200 on others' privacy or activities.",
+        "criterion": "Review of the clinical record for the 7-day look-back period.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-11",
@@ -93,28 +93,27 @@
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Framed as a Step for Assessment, not explicitly as required documentation."
+        "notes": "Listed as step 1 of Steps for Assessment for E0600."
       },
       {
-        "criterion": "Staff interviews across all shifts and disciplines, and interviews with others who had close interactions with the resident, plus observations of the E0200 behaviors.",
+        "criterion": "Staff interviews across all shifts and disciplines, and interviews with others who had close interactions with the resident.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-11",
-          "quote": "Consider the previous review of the clinical record, staff interviews across all shifts and disciplines, interviews with others who had close interactions with the resident and previous observations of the behaviors identified in E0200 for the 7-day look-back period."
+          "quote": "staff interviews across all shifts and disciplines, interviews with others who had close interactions with the resident"
         },
         "verified_by_expert": false,
         "audit_weight": "medium"
       },
       {
-        "criterion": "Subsequent assessments and documentation can be compared with a baseline to identify changes in the resident's behavior, including response to interventions.",
+        "criterion": "Prior observations of the behaviors identified in E0200 during the 7-day look-back period.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-11",
-          "quote": "Subsequent assessments and documentation can be compared with a baseline to identify changes in the resident's behavior, including response to interventions."
+          "quote": "previous observations of the behaviors identified in E0200 for the 7-day look-back period"
         },
         "verified_by_expert": false,
-        "audit_weight": "low",
-        "notes": "Stated under Planning for Care."
+        "audit_weight": "medium"
       }
     ],
     "state": {}
@@ -122,13 +121,13 @@
   "state_deltas": [],
   "case_mix_relevance": {
     "level": "unknown",
-    "notes": "The supplied Section E pages do not tie E0600B to any payment or case-mix classification."
+    "notes": "The supplied pages do not tie E0600B to any payment or case-mix classification."
   },
   "conflicts": [],
   "common_audit_citations": [],
   "not_found": [
+    "case_mix_relevance.level",
     "state_deltas",
-    "case_mix_relevance.source",
     "common_audit_citations"
   ],
   "provenance_summary": {

@@ -9,7 +9,7 @@
     "loc": "p. E-8",
     "quote": "Consider the previous review of the medical record, staff interviews across all shifts and disciplines, interviews with others who had close interactions with the resident and previous observations of the behaviors identified in E0200 for the 7-day look-back period."
   },
-  "lookback_notes": "The Steps for Assessment for E0500 direct the assessor to consider the behaviors identified in E0200 for the 7-day look-back period. The document does not state on this page how the 7 days are counted relative to the ARD.",
+  "lookback_notes": "The item's own Steps for Assessment state a 7-day look-back period, referencing the behaviors identified in E0200. Counted as the ARD plus the 6 previous calendar days per the general convention (rai-manual-v1.20.1, p. 2-17, \"ARD + 6 previous calendar days\").",
   "coding_levels": [
     {
       "code": "0",
@@ -34,19 +34,19 @@
   ],
   "federal_coding_rules": [
     {
-      "rule": "Code E0500A (along with E0500B and E0500C) based on all of the behavioral symptoms coded in E0200.",
+      "rule": "E0500 (including E0500A) is completed only when E0300, Overall Presence of Behavioral Symptoms, is coded 1, yes (i.e., any of E0200A, E0200B, or E0200C were coded 1, 2, or 3); if E0300 is coded 0, skip to E0800.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. E-7",
+        "quote": "Code 1, yes: if any of E0200A, E0200B, or E0200C were coded 1, 2, or 3. Proceed to complete Impact on Resident item (E0500), and Impact on Others item (E0600)."
+      }
+    },
+    {
+      "rule": "Code E0500A based on all of the behavioral symptoms coded in E0200.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-8",
         "quote": "Code E0500A, E0500B, and E0500C based on all of the behavioral symptoms coded in E0200."
-      }
-    },
-    {
-      "rule": "Determine whether the behaviors coded in E0200 put the resident at significant risk of physical illness or injury.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. E-8",
-        "quote": "Determine whether those behaviors put the resident at significant risk of physical illness or injury, whether the behaviors significantly interfered with the resident's care, and/or whether the behaviors significantly interfered with the resident's participation in activities or social interactions."
       }
     },
     {
@@ -58,7 +58,7 @@
       }
     },
     {
-      "rule": "Code 1, yes, if any of the identified behavioral symptom(s) placed the resident at clinically significant risk for a physical illness or injury; an actual injury need not have occurred.",
+      "rule": "Code 1, yes, if any of the identified behavioral symptom(s) placed the resident at clinically significant risk for a physical illness or injury, even if no injury actually occurred.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-8",
@@ -70,27 +70,11 @@
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-9",
-        "quote": "For E0500A, code based on whether the risk for physical injury or illness is known to occur commonly under similar circumstances (i.e., with residents who exhibit similar behavior in a similar environment). Physical injury is trauma that results in pain or other distressing physical symptoms, impaired organ function, physical disability, or other adverse consequences, regardless of the need for medical, surgical, nursing, or rehabilitative intervention."
+        "quote": "For E0500A, code based on whether the risk for physical injury or illness is known to occur commonly under similar circumstances (i.e., with residents who exhibit similar behavior in a similar environment)."
       }
     },
     {
-      "rule": "E0500 is completed only when E0300 is coded 1, yes (i.e., any of E0200A, E0200B, or E0200C were coded 1, 2, or 3); if E0200A, E0200B, and E0200C are all coded 0, E0300 is coded 0 and the assessor skips to E0800, so E0500 is not completed.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. E-7",
-        "quote": "Code 1, yes: if any of E0200A, E0200B, or E0200C were coded 1, 2, or 3. Proceed to complete Impact on Resident item (E0500), and Impact on Others item (E0600)."
-      }
-    },
-    {
-      "rule": "When E0300 is coded 0 (no behavioral symptoms in E0200), skip to E0800, Rejection of Care—Presence & Frequency, rather than completing E0500.",
-      "source": {
-        "doc": "rai-manual-v1.20.1",
-        "loc": "p. E-7",
-        "quote": "Code 0, no: if E0200A, E0200B, and E0200C all are coded 0, not present. Skip to Rejection of Care—Presence & Frequency item (E0800)."
-      }
-    },
-    {
-      "rule": "Resident intent should not be taken into account when coding items in Section E.",
+      "rule": "Resident intent should not be taken into account when coding items in Section E; the section focuses on the resident's actions, not the intent of their behavior.",
       "source": {
         "doc": "rai-manual-v1.20.1",
         "loc": "p. E-1",
@@ -109,7 +93,7 @@
         },
         "verified_by_expert": false,
         "audit_weight": "medium",
-        "notes": "Framed as a Step for Assessment rather than an explicit documentation requirement."
+        "notes": "Stated as a step for assessment; the manual does not specify a required documentation format."
       },
       {
         "criterion": "Staff interviews across all shifts and disciplines, and interviews with others who had close interactions with the resident, plus observations of the behaviors identified in E0200.",
@@ -119,19 +103,17 @@
           "quote": "Consider the previous review of the medical record, staff interviews across all shifts and disciplines, interviews with others who had close interactions with the resident and previous observations of the behaviors identified in E0200 for the 7-day look-back period."
         },
         "verified_by_expert": false,
-        "audit_weight": "medium",
-        "notes": "Same Steps for Assessment passage; cited as the source of information supporting the code."
+        "audit_weight": "medium"
       },
       {
-        "criterion": "Assessment and documentation can be compared to a baseline to identify changes in the resident's behavior, including response to interventions.",
+        "criterion": "Determination documented of whether the behaviors put the resident at significant risk of physical illness or injury.",
         "source": {
           "doc": "rai-manual-v1.20.1",
           "loc": "p. E-8",
-          "quote": "Subsequent assessments and documentation can be compared to a baseline to identify changes in the resident's behavior, including response to interventions."
+          "quote": "Determine whether those behaviors put the resident at significant risk of physical illness or injury, whether the behaviors significantly interfered with the resident's care, and/or whether the behaviors significantly interfered with the resident's participation in activities or social interactions."
         },
         "verified_by_expert": false,
-        "audit_weight": "low",
-        "notes": "Stated under Planning for Care as rationale, not as a coding requirement."
+        "audit_weight": "medium"
       }
     ],
     "state": {}
@@ -144,9 +126,10 @@
   "conflicts": [],
   "common_audit_citations": [],
   "not_found": [
-    "state_deltas",
     "case_mix_relevance.level",
-    "common_audit_citations"
+    "state_deltas",
+    "common_audit_citations",
+    "conflicts"
   ],
   "provenance_summary": {
     "extracted_at": "2026-09-06",
