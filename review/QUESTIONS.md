@@ -22,3 +22,5 @@ These are the things the manual does not settle and we cannot decide from a desk
 
 10. **Does the eligibility Behavior Screen ever touch the case-mix review?** Chapter II defines "Problem Behavior" for nursing-facility eligibility as wandering, verbal abuse, physical abuse, or disruptive behavior scoring 2 or 3 "at least four (4) days per week" (§67.01-20), and scores it on the state's MED form, which the rule says is not the MDS (§67.01-17). When a reviewer checks the chart behind E0200 or E0900 on the MDS, does that eligibility threshold, or the MED form, ever come into it?
 
+11. **How big is the review sample in practice?** You described the case-mix review as roughly ten percent of Medicaid records each quarter. The current reimbursement rule says "a record sample of twenty-four percent (24%) with a minimum of five (5) records shall be drawn from MDS assessments completed for residents who have MaineCare reimbursement" (Chapter III §16.2.3.3(3), amended April 2025). Which reflects what facilities actually see today? Your memory may reflect an earlier version of the rule or the practical reality on the ground; either way the difference is worth knowing.
+
