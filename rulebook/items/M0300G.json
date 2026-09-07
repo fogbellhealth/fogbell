@@ -1,0 +1,251 @@
+{
+  "item_id": "M0300G",
+  "item_name": "Unstageable Pressure Injuries Related to Deep Tissue Injury",
+  "section": "M",
+  "instrument": "MDS-3.0",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND for M0300G itself: the M0300G section (pp. M-27 through M-29) states only to enter the number of unstageable pressure injuries related to deep tissue injury that are present, without naming an observation window. Related windows stated elsewhere in the corpus: M0210, the gate item that directs the assessor to M0300, instructs \"Code based on the presence of any pressure ulcer/injury (regardless of stage) in the past 7 days\" (p. M-5), and the M0210 rationale refers to coding staging \"during the look-back period\" (p. M-4). Because the M0300G pages do not adopt or restate that window, no lookback_days value is asserted here.",
+  "coding_levels": [
+    {
+      "code": "M0300G1",
+      "label": "Number of unstageable pressure injuries presenting as deep tissue injury",
+      "definition": "Enter the number of unstageable pressure injuries related to deep tissue injury; if 0, skip to M1030, Number of Venous and Arterial Ulcers.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-27",
+        "quote": "Number of unstageable pressure injuries presenting as deep tissue injury - If 0 → Skip to M1030, Number of Venous and Arterial Ulcers"
+      }
+    },
+    {
+      "code": "M0300G2",
+      "label": "Number of these unstageable pressure injuries that were present upon admission/entry or reentry",
+      "definition": "Enter how many of the unstageable deep tissue injuries were noted at the time of admission/entry or reentry.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-27",
+        "quote": "Number of these unstageable pressure injuries that were present upon admission/entry or reentry - enter how many were noted at the time of admission/entry or reentry"
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "M0300G1: Enter the number of unstageable pressure injuries related to deep tissue injury. Based on skin tone, the injured tissue area may present as a darker tone than the surrounding intact skin; these areas of discoloration are potentially areas of deep tissue injury.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-28",
+        "quote": "Enter the number of unstageable pressure injuries related to deep tissue injury. Based on skin tone, the injured tissue area may present as a darker tone than the surrounding intact skin. These areas of discoloration are potentially areas of deep tissue injury."
+      }
+    },
+    {
+      "rule": "M0300G1: Enter 0 if no unstageable pressure injuries related to deep tissue injury are present, and skip to M1030, Number of Venous and Arterial Ulcers.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-28",
+        "quote": "Enter 0 if no unstageable pressure injuries related to deep tissue injury are present and skip to M1030, Number of Venous and Arterial Ulcers."
+      }
+    },
+    {
+      "rule": "M0300G2: Enter the number of these unstageable pressure injuries related to deep tissue injury that were first noted at the time of admission/entry AND—for residents reentering the facility after a hospital stay—that were acquired during the hospitalization (i.e., not acquired in the nursing facility prior to admission to the hospital).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-28",
+        "quote": "Enter the number of these unstageable pressure injuries related to deep tissue injury that were first noted at the time of admission/entry AND—for residents who are reentering the facility after a hospital stay, that were acquired during the hospitalization (i.e., the unstageable pressure injury related to deep tissue injury was not acquired in the nursing facility prior to admission to the hospital)."
+      }
+    },
+    {
+      "rule": "M0300G2: Enter 0 if no unstageable pressure injuries related to deep tissue injury were first noted at the time of admission/entry or reentry.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-28",
+        "quote": "Enter 0 if no unstageable pressure injuries related to deep tissue injury were first noted at the time of admission/entry or reentry."
+      }
+    },
+    {
+      "rule": "For purposes of coding, the lesion assessed must be primarily a result of pressure with other conditions ruled out; if pressure is not the primary cause, do not code here.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-28",
+        "quote": "For the purposes of coding, determine that the lesion being assessed is primarily a result of pressure and that other conditions have been ruled out. If pressure is not the primary cause, do not code here."
+      }
+    },
+    {
+      "rule": "If the tissue adjacent to, or surrounding, an intact blister does not show signs of tissue damage (e.g., color change, tenderness, bogginess or firmness, warmth or coolness), do not code as a deep tissue injury.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-28",
+        "quote": "Examine the area adjacent to, or surrounding, an intact blister for evidence of tissue damage. If the tissue adjacent to, or surrounding, the blister does not show signs of tissue damage (e.g., color change, tenderness, bogginess or firmness, warmth or coolness), do not code as a deep tissue injury."
+      }
+    },
+    {
+      "rule": "When a lesion due to pressure presents with an intact blister AND the surrounding or adjacent soft tissue does NOT have the characteristics of deep tissue injury, do not code in M0300G (see Stage 2 pressure ulcer definition).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-29",
+        "quote": "When a lesion due to pressure presents with an intact blister AND the surrounding or adjacent soft tissue does NOT have the characteristics of deep tissue injury, do not code here (see definition of Stage 2 pressure ulcer on page M-12)."
+      }
+    },
+    {
+      "rule": "Once a deep tissue injury has opened to an ulcer, reclassify the ulcer into the appropriate stage and code the ulcer for the reclassified stage (i.e., no longer at M0300G).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-29",
+        "quote": "Once deep tissue injury has opened to an ulcer, reclassify the ulcer into the appropriate stage. Then code the ulcer for the reclassified stage."
+      }
+    },
+    {
+      "rule": "A pressure injury with intact skin that is a deep tissue injury (DTI) should not be coded as a Stage 1 pressure injury; it should be coded as unstageable.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-8",
+        "quote": "A pressure injury with intact skin that is a deep tissue injury (DTI) should not be coded as a Stage 1 pressure injury. It should be coded as unstageable"
+      }
+    },
+    {
+      "rule": "Present-on-admission determination (referenced by M0300G Step 6): if a pressure ulcer/injury was unstageable on admission/entry or reentry and then becomes numerically stageable later, it is considered \"present on admission\" at the stage at which it first becomes numerically stageable; if it subsequently increases in numerical stage, that higher stage is not coded as present on admission.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-9",
+        "quote": "If the pressure ulcer/injury was unstageable on admission/entry or reentry, then becomes numerically stageable later, it should be considered as \"present on admission\" at the stage at which it first becomes numerically stageable."
+      }
+    },
+    {
+      "rule": "Present-on-admission determination: if a pressure ulcer/injury was unstageable on admission/entry or reentry and then becomes unstageable for another reason, it should be considered \"present on admission\" at the new unstageable status (e.g., admitted with a deep tissue injury that later opens and is covered with slough while remaining unstageable).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-9",
+        "quote": "If a pressure ulcer/injury was unstageable on admission/entry or reentry and then becomes unstageable for another reason, it should be considered \"present on admission\" at the new unstageable status."
+      }
+    },
+    {
+      "rule": "For each pressure ulcer/injury, present on admission means present at the time of admission/entry or reentry and not acquired while the resident was in the care of the nursing home; consider current and historical levels of tissue involvement.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-8",
+        "quote": "For each pressure ulcer/injury, determine if the pressure ulcer/injury was present at the time of admission/entry or reentry and not acquired while the resident was in the care of the nursing home. Consider current and historical levels of tissue involvement."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Assessment findings for the deep tissue injury are clearly documented in the resident's medical record, with tracking and documentation of appropriate wound care planning and management.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-28",
+          "quote": "Clearly document assessment findings in the resident's medical record, and track and document appropriate wound care planning and management."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as an assessment step directive in the M0300G Steps for Assessment."
+      },
+      {
+        "criterion": "A head-to-toe/full body skin assessment focusing on bony prominences and pressure-bearing areas (sacrum, buttocks, heels, ankles, etc.) supports identification of DTIs coded here.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-28",
+          "quote": "Perform head-to-toe assessment. Conduct a full body skin assessment focusing on bony prominences and pressure-bearing areas (sacrum, buttocks, heels, ankles, etc.)."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Framed as a step for assessment rather than an explicit documentation requirement."
+      },
+      {
+        "criterion": "Evidence that the area adjacent to or surrounding an intact blister was examined for signs of tissue damage (color change, tenderness, bogginess or firmness, warmth or coolness) to distinguish DTI from a Stage 2 pressure ulcer.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-28",
+          "quote": "Examine the area adjacent to, or surrounding, an intact blister for evidence of tissue damage."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium"
+      },
+      {
+        "criterion": "Documentation supporting the present-on-admission determination, including review of the medical record for the history of the ulcer/injury and its location and stage at the time of admission/entry or reentry.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-8",
+          "quote": "Review the medical record for the history of the ulcer/injury."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "From the Step 3 \"Determine Present on Admission\" process referenced by M0300G Step 6."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied Section M pages do not tie M0300G to any payment or case-mix classification. The only payment-adjacent mention is a scenario referencing a PPS 5-day assessment (p. M-43), which does not state case-mix use of this item."
+  },
+  "conflicts": [
+    {
+      "topic": "Observation window applicable to M0300G counts (\"currently present\" vs. the 7-day look-back that gates entry to M0300)",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "M0210, the gate item, is coded on presence of any pressure ulcer/injury (regardless of stage) in the past 7 days, and directs the assessor to M0300 when coded 1.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. M-5",
+            "quote": "Code based on the presence of any pressure ulcer/injury (regardless of stage) in the past 7 days."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "M0300G coding instructions state only to enter the number of unstageable pressure injuries related to deep tissue injury, without stating a look-back window; parallel M0300 items instruct counting ulcers \"currently present.\"",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. M-28",
+            "quote": "Enter the number of unstageable pressure injuries related to deep tissue injury."
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    },
+    {
+      "topic": "Cross-reference page for the \"present on admission\" instructions",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "M0300G Step 6 directs the assessor to page M-7 for present-on-admission instructions.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. M-28",
+            "quote": "Identify the number of these pressure injuries that were present on admission/entry or reentry (see page M-7 for instructions)."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "The \"Step 3: Determine 'Present on Admission'\" instructions are printed on page M-8, not page M-7 (page M-7 contains Step 1, Determine Deepest Anatomical Stage).",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. M-8",
+            "quote": "Step 3: Determine \"Present on Admission\""
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "state_deltas",
+    "common_audit_citations",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

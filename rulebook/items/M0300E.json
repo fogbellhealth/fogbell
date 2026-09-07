@@ -1,0 +1,236 @@
+{
+  "item_id": "M0300E",
+  "item_name": "Unstageable Pressure Ulcers/Injuries Related to Non-removable Dressing/Device",
+  "section": "M",
+  "instrument": "MDS-3.0",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND for this item. The M0300E section (pp. M-21 to M-22) states only that the assessor enters the number of pressure ulcers/injuries that are unstageable related to a non-removable dressing/device (i.e., currently present) and the number first noted at admission/entry or reentry; it does not state an observation/look-back window. A 7-day look-back is stated in the gating item M0210 (p. M-5, \"Code based on the presence of any pressure ulcer/injury (regardless of stage) in the past 7 days\"), but that statement is made for M0210, not for M0300E, so it is not carried forward here.",
+  "coding_levels": [
+    {
+      "code": "M0300E1",
+      "label": "Number of unstageable pressure ulcers/injuries due to non-removable dressing/device",
+      "definition": "Unstageable - Non-removable dressing/device: Known but not stageable due to non-removable dressing/device. If 0, skip to M0300F, Unstageable - Slough and/or eschar.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-21",
+        "quote": "E. Unstageable - Non-removable dressing/device: Known but not stageable due to non-removable dressing/device"
+      }
+    },
+    {
+      "code": "M0300E2",
+      "label": "Number of these unstageable pressure ulcers/injuries that were present upon admission/entry or reentry",
+      "definition": "Enter how many were noted at the time of admission/entry or reentry.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-21",
+        "quote": "Number of these unstageable pressure ulcers/injuries that were present upon admission/entry or reentry - enter how many were noted at the time of admission/entry or reentry"
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "M0300E1: Enter the number of pressure ulcers/injuries that are unstageable related to non-removable dressing/device.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-22",
+        "quote": "Enter the number of pressure ulcers/injuries that are unstageable related to nonremovable dressing/device."
+      }
+    },
+    {
+      "rule": "M0300E1: Enter 0 if no unstageable pressure ulcers/injuries related to non-removable dressing/device are present, and skip to M0300F, Unstageable – Slough and/or eschar.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-22",
+        "quote": "Enter 0 if no unstageable pressure ulcers/injuries related to non-removable dressing/device are present and skip to M0300F, Unstageable – Slough and/or eschar."
+      }
+    },
+    {
+      "rule": "M0300E2: Enter the number of these unstageable pressure ulcers/injuries related to a non-removable dressing/device that were first noted at the time of admission/entry AND—for residents reentering after a hospital stay—that were acquired during the hospitalization (i.e., not acquired in the nursing facility prior to admission to the hospital).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-22",
+        "quote": "Enter the number of these unstageable pressure ulcers/injuries related to a nonremovable dressing/device that were first noted at the time of admission/entry AND—for residents who are reentering the facility after a hospital stay, that were acquired during the hospitalization (i.e., the unstageable pressure ulcer/injury related to a non-removable dressing/device was not acquired in the nursing facility prior to admission to the hospital)."
+      }
+    },
+    {
+      "rule": "M0300E2: Enter 0 if no unstageable pressure ulcers/injuries related to non-removable dressing/device were first noted at the time of admission/entry or reentry.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-22",
+        "quote": "Enter 0 if no unstageable pressure ulcers/injuries related to non-removable dressing/device were first noted at the time of admission/entry or reentry."
+      }
+    },
+    {
+      "rule": "Known pressure ulcers/injuries covered by a non-removable dressing/device (e.g., primary surgical dressing, cast) are coded as unstageable; \"Known\" means documentation is available that says a pressure ulcer/injury exists under the non-removable dressing/device.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-8",
+        "quote": "Known pressure ulcers/injuries covered by a non-removable dressing/device (e.g., primary surgical dressing, cast) should be coded as unstageable. “Known” refers to when documentation is available that says a pressure ulcer/injury exists under the non-removable dressing/device."
+      }
+    },
+    {
+      "rule": "Present on admission determination (applies to each pressure ulcer/injury, including those coded at M0300E): determine if the ulcer/injury was present at the time of admission/entry or reentry and not acquired while the resident was in the care of the nursing home; consider current and historical levels of tissue involvement.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-8",
+        "quote": "For each pressure ulcer/injury, determine if the pressure ulcer/injury was present at the time of admission/entry or reentry and not acquired while the resident was in the care of the nursing home. Consider current and historical levels of tissue involvement."
+      }
+    },
+    {
+      "rule": "If a pressure ulcer/injury was unstageable on admission/entry or reentry and then becomes numerically stageable later, it is considered \"present on admission\" at the stage at which it first becomes numerically stageable; a subsequent increase in numerical stage is not coded as present on admission.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-9",
+        "quote": "If the pressure ulcer/injury was unstageable on admission/entry or reentry, then becomes numerically stageable later, it should be considered as “present on admission” at the stage at which it first becomes numerically stageable."
+      }
+    },
+    {
+      "rule": "If a pressure ulcer/injury was unstageable on admission/entry or reentry and then becomes unstageable for another reason, it is considered \"present on admission\" at the new unstageable status.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-9",
+        "quote": "If a pressure ulcer/injury was unstageable on admission/entry or reentry and then becomes unstageable for another reason, it should be considered “present on admission” at the new unstageable status."
+      }
+    },
+    {
+      "rule": "A resident admitted with documentation that a pressure ulcer/injury is present under a cast that cannot be removed is coded on the Admission assessment as an unstageable pressure ulcer/injury due to non-removable dressing/device (M0300E1 = 1 and M0300E2 = 1, present on admission/entry or reentry).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-18",
+        "quote": "Because the resident was admitted to the nursing facility with documentation that a pressure ulcer/injury was present under the cast, and the cast could not be removed for the first two weeks, the pressure ulcer is coded on the Admission assessment as an unstageable pressure ulcer/injury due to non-removable dressing/device."
+      }
+    },
+    {
+      "rule": "When a known ulcer/injury under a non-removable dressing/device is coded unstageable and present on admission at M0300E, and the dressing is later removed revealing a numerical stage that subsequently worsens, the higher stage is not coded as present on admission (example: M0300E1 = 1 and M0300E2 = 1 on admission; on the subsequent assessment M0300C1 = 1 and M0300C2 = 0).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-19",
+        "quote": "On admission, code M0300E1 as 1, unstageable pressure ulcer/injury due to non-removable dressing/device, and M0300E2 as 1, present on admission/entry or reentry."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Medical record contains documentation that a pressure ulcer/injury is present under the non-removable dressing/device (this documentation is what makes the ulcer/injury \"known\" and codeable as unstageable).",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-8",
+          "quote": "“Known” refers to when documentation is available that says a pressure ulcer/injury exists under the non-removable dressing/device."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Directly conditions whether the ulcer/injury may be counted at M0300E1."
+      },
+      {
+        "criterion": "Review of the medical record for documentation of a pressure ulcer/injury covered by a non-removable dressing/device.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-22",
+          "quote": "Review the medical record for documentation of a pressure ulcer/injury covered by a nonremovable dressing/device."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as Step 1 of the assessment process for this item."
+      },
+      {
+        "criterion": "Documentation identifying the device as non-removable (e.g., a dressing or orthopedic device that is not to be removed per physician's order, or a cast).",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-22",
+          "quote": "Examples of non-removable dressings/devices include a dressing or an orthopedic device that is not to be removed per physician’s order, or a cast."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Framed as examples within the assessment steps."
+      },
+      {
+        "criterion": "Medical record review for the history, location, and stage of the ulcer/injury at the time of admission/entry or reentry to support the \"present on admission\" coding at M0300E2.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-8",
+          "quote": "Review the medical record for the history of the ulcer/injury."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Part of Step 3, Determine \"Present on Admission,\" which M0300E's assessment steps cross-reference."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The M0300E pages (M-21 to M-22) and the referenced present-on-admission pages (M-7 to M-9) do not tie this item to any payment or case-mix classification."
+  },
+  "conflicts": [
+    {
+      "topic": "Cross-reference page for the \"present on admission\" assessment process",
+      "positions": [
+        {
+          "authority": "rai-manual-v1.20.1",
+          "claim": "M0300E Steps for Assessment directs the assessor to page M-7 for the present-on-admission assessment process.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. M-22",
+            "quote": "Identify the number of these pressure ulcers/injuries that were present on admission/entry or reentry (see page M-7 for assessment process)."
+          }
+        },
+        {
+          "authority": "rai-manual-v1.20.1",
+          "claim": "The \"Step 3: Determine 'Present on Admission'\" instructions are printed on page M-8, and the parallel M0300B instruction directs the assessor to page M-8.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. M-13",
+            "quote": "Identify the number of these pressure ulcers that were present on admission/entry or reentry (see instructions on page M-8)."
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    },
+    {
+      "topic": "Observation window applicable to counting unstageable ulcers/injuries at M0300E",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "M0300E coding instructions state only to enter the number of pressure ulcers/injuries that are unstageable related to non-removable dressing/device, with no stated look-back window.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. M-22",
+            "quote": "Enter the number of pressure ulcers/injuries that are unstageable related to nonremovable dressing/device."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "The gating item M0210, which routes the assessor into M0300, is coded on a 7-day look-back period.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. M-5",
+            "quote": "Code based on the presence of any pressure ulcer/injury (regardless of stage) in the past 7 days."
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "state_deltas",
+    "common_audit_citations",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

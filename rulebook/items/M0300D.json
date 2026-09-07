@@ -1,0 +1,243 @@
+{
+  "item_id": "M0300D",
+  "item_name": "Stage 4 Pressure Ulcers",
+  "section": "M",
+  "instrument": "MDS-3.0",
+  "lookback_days": null,
+  "lookback_notes": "The M0300D section itself does not state a look-back window; its coding instructions refer to ulcers \"currently present\" and to those \"first noted at the time of admission/entry\" or acquired during a hospitalization. The 7-day look-back stated on page M-5 belongs to the M0210 gate item (\"Code based on the presence of any pressure ulcer/injury (regardless of stage) in the past 7 days\"), not to M0300D. No look-back window is stated for M0300D itself, so lookback_days is NOT_FOUND.",
+  "coding_levels": [
+    {
+      "code": "M0300D1",
+      "label": "Number of Stage 4 pressure ulcers",
+      "definition": "Enter the number of pressure ulcers that are currently present and whose deepest anatomical stage is Stage 4; enter 0 if none are present.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-20",
+        "quote": "Enter the number of pressure ulcers that are currently present and whose deepest anatomical stage is Stage 4."
+      }
+    },
+    {
+      "code": "M0300D2",
+      "label": "Number of these Stage 4 pressure ulcers that were present upon admission/entry or reentry",
+      "definition": "Enter the number of these Stage 4 pressure ulcers that were first noted at Stage 4 at the time of admission/entry AND—for residents reentering after a hospital stay—those acquired during the hospitalization; enter 0 if none.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-20",
+        "quote": "Enter the number of these Stage 4 pressure ulcers that were first noted at Stage 4 at the time of admission/entry AND—for residents who are reentering the facility after a hospital stay, enter the number of Stage 4 pressure ulcers that were acquired during the hospitalization"
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Stage 4 pressure ulcer is defined as full thickness tissue loss with exposed bone, tendon or muscle; slough or eschar may be present on some parts of the wound bed, and it often includes undermining and tunneling.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-19",
+        "quote": "Full thickness tissue loss with exposed bone, tendon or muscle. Slough or eschar may be present on some parts of the wound bed. Often includes undermining and tunneling."
+      }
+    },
+    {
+      "rule": "For coding purposes, determine that the lesion being assessed is primarily related to pressure and that other conditions have been ruled out; if pressure is not the primary cause, do not code here.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-20",
+        "quote": "For the purposes of coding, determine that the lesion being assessed is primarily related to pressure and that other conditions have been ruled out. If pressure is not the primary cause, do not code here."
+      }
+    },
+    {
+      "rule": "M0300D1: Enter the number of pressure ulcers currently present whose deepest anatomical stage is Stage 4.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-20",
+        "quote": "Enter the number of pressure ulcers that are currently present and whose deepest anatomical stage is Stage 4."
+      }
+    },
+    {
+      "rule": "M0300D1: Enter 0 if no Stage 4 pressure ulcers are present and skip to M0300E, Unstageable – Non-removable dressing.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-20",
+        "quote": "Enter 0 if no Stage 4 pressure ulcers are present and skip to M0300E, Unstageable – Non-removable dressing."
+      }
+    },
+    {
+      "rule": "M0300D2: Enter the number of these Stage 4 pressure ulcers first noted at Stage 4 at the time of admission/entry AND, for residents reentering after a hospital stay, those acquired during the hospitalization (i.e., not acquired in the nursing facility prior to admission to the hospital).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-20",
+        "quote": "Enter the number of these Stage 4 pressure ulcers that were first noted at Stage 4 at the time of admission/entry AND—for residents who are reentering the facility after a hospital stay, enter the number of Stage 4 pressure ulcers that were acquired during the hospitalization (i.e., the Stage 4 pressure ulcer was not acquired in the nursing facility prior to admission to the hospital)."
+      }
+    },
+    {
+      "rule": "M0300D2: Enter 0 if no Stage 4 pressure ulcers were first noted at the time of admission/entry or reentry.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-20",
+        "quote": "Enter 0 if no Stage 4 pressure ulcers were first noted at the time of admission/entry or reentry."
+      }
+    },
+    {
+      "rule": "Pressure ulcers with exposed cartilage are classified as Stage 4, because cartilage serves the same anatomical function as bone.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-21",
+        "quote": "Cartilage serves the same anatomical function as bone. Therefore, pressure ulcers that have exposed cartilage should be classified as a Stage 4."
+      }
+    },
+    {
+      "rule": "In a Stage 4 pressure ulcer, exposed bone/tendon/muscle is visible or directly palpable.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-21",
+        "quote": "Exposed bone/tendon/muscle is visible or directly palpable."
+      }
+    },
+    {
+      "rule": "Depth of a Stage 4 pressure ulcer varies by anatomical location; ulcers on the bridge of the nose, ear, occiput, and malleolus can be shallow because these locations lack subcutaneous tissue.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-21",
+        "quote": "The depth of a Stage 4 pressure ulcer varies by anatomical location. The bridge of the nose, ear, occiput, and malleolus do not have subcutaneous tissue, and these ulcers can be shallow."
+      }
+    },
+    {
+      "rule": "Measurement of tunneling and undermining is not recorded on the MDS (though it should be assessed, monitored and treated as part of the comprehensive care plan).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-21",
+        "quote": "Measurement of tunneling and undermining is not recorded on the MDS, but should be assessed, monitored, and treated as part of the comprehensive care plan."
+      }
+    },
+    {
+      "rule": "Determine the deepest anatomical stage for each pressure ulcer; at admission, code based on the first skin assessment conducted on or after and as close to admission as possible. Do not reverse or back stage. Consider current and historical levels of tissue involvement.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-7",
+        "quote": "For each pressure ulcer, determine the deepest anatomical stage. At admission, code based on findings from the first skin assessment that is conducted on or after and as close to the admission as possible. Do not reverse or back stage. Consider current and historical levels of tissue involvement."
+      }
+    },
+    {
+      "rule": "If a stageable pressure ulcer has ever been classified at a higher numerical stage than what is observed now, it continues to be classified at the higher numerical stage until healed, unless it becomes unstageable.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-7",
+        "quote": "If the stageable pressure ulcer has ever been classified at a higher numerical stage than what is observed now, it should continue to be classified at the higher numerical stage until healed unless it becomes unstageable."
+      }
+    },
+    {
+      "rule": "A previously closed pressure ulcer that opens again should be reported at its worst stage, unless currently presenting at a higher stage or unstageable.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-8",
+        "quote": "A previously closed pressure ulcer that opens again should be reported at its worst stage, unless currently presenting at a higher stage or unstageable."
+      }
+    },
+    {
+      "rule": "Present on admission determination: if a pressure ulcer/injury was present on admission/entry or reentry and subsequently increased in numerical stage during the stay, it is coded at the higher stage and that higher stage is not considered \"present on admission.\"",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-8",
+        "quote": "If the pressure ulcer/injury was present on admission/entry or reentry and subsequently increased in numerical stage during the resident's stay, the pressure ulcer is coded at that higher stage, and that higher stage should not be considered as \"present on admission.\""
+      }
+    },
+    {
+      "rule": "If a pressure ulcer/injury was unstageable on admission/entry or reentry and later becomes numerically stageable, it is considered \"present on admission\" at the stage at which it first becomes numerically stageable; a subsequent increase in numerical stage is not coded as present on admission.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-9",
+        "quote": "If the pressure ulcer/injury was unstageable on admission/entry or reentry, then becomes numerically stageable later, it should be considered as \"present on admission\" at the stage at which it first becomes numerically stageable."
+      }
+    },
+    {
+      "rule": "If a resident with a pressure ulcer/injury is hospitalized and the ulcer/injury increases in numerical stage during the hospitalization, it is coded as \"present on admission\" upon reentry.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-9",
+        "quote": "If a resident who has a pressure ulcer/injury is hospitalized and the ulcer/injury increases in numerical stage or becomes unstageable due to slough or eschar during the hospitalization, it should be coded as \"present on admission\" upon reentry."
+      }
+    },
+    {
+      "rule": "Once an unstageable ulcer covered with slough/eschar is debrided such that the anatomic depth of soft tissue damage can be determined (e.g., bone visible), code the ulcer at the reclassified stage (example reclassified to Stage 4 and coded at M0300D1/M0300D2).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-25",
+        "quote": "The ulcer is reclassified as a Stage 4 pressure ulcer. On the subsequent MDS, it is coded at M0300D1 as 1, and at M0300D2 as 1, present on admission/entry or reentry."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Perform a head-to-toe/full body skin assessment focusing on bony prominences and pressure-bearing areas (sacrum, buttocks, heels, ankles, etc.) to identify all Stage 4 pressure ulcers currently present.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-20",
+          "quote": "Perform head-to-toe assessment. Conduct a full body skin assessment focusing on bony prominences and pressure-bearing areas (sacrum, buttocks, heels, ankles, etc.)."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Listed as Step 1 of Steps for Assessment for M0300D."
+      },
+      {
+        "criterion": "Identify the number of these Stage 4 pressure ulcers that were present on admission/entry or reentry.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-20",
+          "quote": "Identify the number of these pressure ulcers that were present on admission/entry or reentry."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Step 4 of Steps for Assessment for M0300D."
+      },
+      {
+        "criterion": "Review the history of each pressure ulcer in the medical record; careful documentation and tracking of pressure ulcers supports accurate coding of this item.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-7",
+          "quote": "Review the history of each pressure ulcer in the medical record."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "From Step 1 (Determine Deepest Anatomical Stage) for completing M0300A–G."
+      },
+      {
+        "criterion": "Review the medical record for the history of the ulcer/injury and for its location and stage at the time of admission/entry or reentry to determine \"present on admission.\"",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-8",
+          "quote": "Review for location and stage at the time of admission/entry or reentry."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "From Step 3: Determine \"Present on Admission\" for M0300A–G."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The M0300D pages do not tie this item to any payment or case-mix classification. A scenario on p. M-43 references a PPS 5-day assessment for Section M items generally, but no payment/case-mix linkage is stated for M0300D."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "state_deltas",
+    "common_audit_citations",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

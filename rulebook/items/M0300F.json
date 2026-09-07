@@ -1,0 +1,232 @@
+{
+  "item_id": "M0300F",
+  "item_name": "Unstageable Pressure Ulcers Related to Slough and/or Eschar",
+  "section": "M",
+  "instrument": "MDS-3.0",
+  "lookback_days": null,
+  "lookback_notes": "The M0300F pages (M-23 through M-26) do not state a look-back window for this item. The general M0300 steps direct coding of pressure ulcers that are \"currently present\" and reference the M0210 gateway item, which the manual codes on a 7-day look-back (p. M-5), but no look-back window is stated for M0300F itself. NOT_FOUND for this item.",
+  "coding_levels": [
+    {
+      "code": "M0300F1",
+      "label": "Number of unstageable pressure ulcers due to coverage of wound bed by slough and/or eschar",
+      "definition": "Enter the number of pressure ulcers that are unstageable related to slough and/or eschar; enter 0 if none are present.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-24",
+        "quote": "Enter the number of pressure ulcers that are unstageable related to slough and/or eschar."
+      }
+    },
+    {
+      "code": "M0300F2",
+      "label": "Number of these unstageable pressure ulcers that were present upon admission/entry or reentry",
+      "definition": "Enter the number of these unstageable pressure ulcers related to slough and/or eschar that were first noted at the time of admission/entry AND—for residents reentering after a hospital stay—that were acquired during the hospitalization; enter 0 if none.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-24",
+        "quote": "Enter the number of these unstageable pressure ulcers related to slough and/or eschar that were first noted at the time of admission/entry AND—for residents who are reentering the facility after a hospital stay that were acquired during the hospitalization"
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "M0300F1: Enter the number of pressure ulcers that are unstageable related to slough and/or eschar.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-24",
+        "quote": "Enter the number of pressure ulcers that are unstageable related to slough and/or eschar."
+      }
+    },
+    {
+      "rule": "M0300F1: Enter 0 if no unstageable pressure ulcers related to slough and/or eschar are present, and skip to M0300G, Unstageable – Deep tissue injury.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-24",
+        "quote": "Enter 0 if no unstageable pressure ulcers related to slough and/or eschar are present and skip to M0300G, Unstageable – Deep tissue injury."
+      }
+    },
+    {
+      "rule": "M0300F2: Enter the number of these unstageable slough/eschar pressure ulcers first noted at the time of admission/entry AND, for residents reentering after a hospital stay, those acquired during the hospitalization (i.e., not acquired in the nursing facility prior to hospital admission).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-24",
+        "quote": "Enter the number of these unstageable pressure ulcers related to slough and/or eschar that were first noted at the time of admission/entry AND—for residents who are reentering the facility after a hospital stay that were acquired during the hospitalization (i.e., the unstageable pressure ulcer related to slough and/or eschar was not acquired in the nursing facility prior to admission to the hospital)."
+      }
+    },
+    {
+      "rule": "M0300F2: Enter 0 if no unstageable pressure ulcers related to slough and/or eschar were first noted at the time of admission/entry or reentry.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-24",
+        "quote": "Enter 0 if no unstageable pressure ulcers related to slough and/or eschar were first noted at the time of admission/entry or reentry."
+      }
+    },
+    {
+      "rule": "Pressure ulcers covered with slough and/or eschar where the wound bed cannot be visualized are coded as unstageable, because the true anatomic depth of soft tissue damage (and therefore stage) cannot be determined.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-24",
+        "quote": "Pressure ulcers that are covered with slough and/or eschar, and the wound bed cannot be visualized, should be coded as unstageable because the true anatomic depth of soft tissue damage (and therefore stage) cannot be determined."
+      }
+    },
+    {
+      "rule": "Once the pressure ulcer is debrided of slough and/or eschar such that the anatomic depth of soft tissue damage can be determined, code the ulcer for the reclassified stage; the ulcer does not have to be completely debrided or free of all slough/eschar for reclassification of stage to occur.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-24",
+        "quote": "Once the pressure ulcer is debrided of slough and/or eschar such that the anatomic depth of soft tissue damage involved can be determined, then code the ulcer for the reclassified stage. The pressure ulcer does not have to be completely debrided or free of all slough and/or eschar tissue in order for reclassification of stage to occur."
+      }
+    },
+    {
+      "rule": "Determine the number of pressure ulcers that are unstageable due to slough and/or eschar, and identify the number of these that were present on admission/entry or reentry using the Step 3 'Present on Admission' process.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-23",
+        "quote": "1. Determine the number of pressure ulcers that are unstageable due to slough and/or eschar.\n2. Identify the number of these pressure ulcers that were present on admission/entry or reentry"
+      }
+    },
+    {
+      "rule": "If the wound bed is only partially covered by eschar or slough and the anatomical depth of tissue damage can be visualized or palpated, numerically stage the ulcer and do not code it as unstageable.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-8",
+        "quote": "If the wound bed is only partially covered by eschar or slough, and the anatomical depth of tissue damage can be visualized or palpated, numerically stage the ulcer, and do not code this as unstageable."
+      }
+    },
+    {
+      "rule": "If, after careful cleansing, the pressure ulcer's/injury's anatomical tissues are obscured such that the extent of soft tissue damage cannot be observed or palpated, the pressure ulcer/injury is considered unstageable.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-8",
+        "quote": "If, after careful cleansing of the pressure ulcer/injury, a pressure ulcer's/injury's anatomical tissues are obscured such that the extent of soft tissue damage cannot be observed or palpated, the pressure ulcer/injury is considered unstageable."
+      }
+    },
+    {
+      "rule": "A numerically stageable pressure ulcer/injury that was present on admission/entry or reentry and becomes unstageable due to slough or eschar during the stay is coded at M0300F and should not be coded as 'present on admission.'",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-8",
+        "quote": "If a numerically stageable pressure ulcer/injury was present on admission/entry or reentry and becomes unstageable due to slough or eschar, during the resident's stay, the pressure ulcer/injury is coded at M0300F and should not be coded as \"present on admission.\""
+      }
+    },
+    {
+      "rule": "If a pressure ulcer/injury was unstageable on admission/entry or reentry and then becomes numerically stageable later, it is considered 'present on admission' at the stage at which it first becomes numerically stageable; a subsequent increase in numerical stage is not coded as 'present on admission.'",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-9",
+        "quote": "If the pressure ulcer/injury was unstageable on admission/entry or reentry, then becomes numerically stageable later, it should be considered as \"present on admission\" at the stage at which it first becomes numerically stageable."
+      }
+    },
+    {
+      "rule": "If a resident is hospitalized and the ulcer/injury becomes unstageable due to slough or eschar during the hospitalization, it should be coded as 'present on admission' upon reentry.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-9",
+        "quote": "If a resident who has a pressure ulcer/injury is hospitalized and the ulcer/injury increases in numerical stage or becomes unstageable due to slough or eschar during the hospitalization, it should be coded as \"present on admission\" upon reentry."
+      }
+    },
+    {
+      "rule": "If a pressure ulcer was numerically staged, became unstageable, and is subsequently debrided sufficiently to be numerically staged, compare its numerical stage before and after; if the numerical stage has increased, code the ulcer as not 'present on admission.'",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-9",
+        "quote": "If a pressure ulcer was numerically staged, then became unstageable, and is subsequently debrided sufficiently to be numerically staged, compare its numerical stage before and after it was unstageable. If the numerical stage has increased, code this pressure ulcer as not \"present on admission.\""
+      }
+    },
+    {
+      "rule": "If a pressure ulcer/injury was unstageable on admission/entry or reentry and then becomes unstageable for another reason, it is considered 'present on admission' at the new unstageable status.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-9",
+        "quote": "If a pressure ulcer/injury was unstageable on admission/entry or reentry and then becomes unstageable for another reason, it should be considered \"present on admission\" at the new unstageable status."
+      }
+    },
+    {
+      "rule": "Example: a resident admitted with a sacral pressure ulcer 100% covered with black eschar is coded M0300F1 as 1 and M0300F2 as 1, present on admission/entry or reentry.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-25",
+        "quote": "The pressure ulcer would be coded at M0300F1 as 1, and at M0300F2 as 1, present on admission/entry or reentry."
+      }
+    },
+    {
+      "rule": "Example: an ulcer admitted as a Stage 2 that later becomes covered with slough is coded M0300F1 as 1 and M0300F2 as 0, not present on admission/entry or reentry, because it can no longer be coded as a Stage 2.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-25",
+        "quote": "Code M0300F1 as 1, and M0300F2 as 0, not present on admission/entry or reentry."
+      }
+    },
+    {
+      "rule": "Example: an unstageable ulcer due to eschar that is debrided and first numerically staged is coded at that stage as present on admission/entry or reentry, and any remaining unstageable eschar ulcer continues to be coded at M0300F1/F2.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-26",
+        "quote": "On the subsequent assessment, code M0300D1 as 1, and M0300D2 as 1, present on admission/entry or reentry; and M0300F1 as 1, and M0300F2 as 1, present on admission/entry or reentry."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Medical record documentation of the pressure ulcer's history, location, and stage at the time of admission/entry or reentry to support the 'present on admission' coding at M0300F2.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-8",
+          "quote": "1. Review the medical record for the history of the ulcer/injury. \n2. Review for location and stage at the time of admission/entry or reentry."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Step 3 'Determine Present on Admission' process referenced by M0300F Steps for Assessment (see p. M-23)."
+      },
+      {
+        "criterion": "Documentation/tracking of each pressure ulcer's history in the medical record; nursing homes that carefully document and track pressure ulcers will be able to more accurately code this item.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-7",
+          "quote": "Review the history of each pressure ulcer in the medical record. If the stageable pressure ulcer has ever been classified at a higher numerical stage than what is observed now, it should continue to be classified at the higher numerical stage until healed unless it becomes unstageable. Nursing homes that carefully document and track pressure ulcers will be able to more accurately code this item."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "From the shared M0300 Step 1 instructions."
+      },
+      {
+        "criterion": "Documentation of consultation with the resident's physician, nurse practitioner, physician assistant, or clinical nurse specialist before removal of stable eschar on the heels, including ruling out ischemia.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-24",
+          "quote": "Stable eschar (i.e., dry, adherent, intact without erythema or fluctuance) on the heels serves as \"the body's natural (biological) cover\" and should only be removed after careful clinical consideration, including ruling out ischemia, and consultation with the resident's physician, or nurse practitioner, physician assistant, or clinical nurse specialist if allowable under state licensure laws."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Framed as a clinical-practice caution in Coding Tips rather than as an MDS coding requirement."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The M0300F pages do not tie this item to any payment or case-mix classification. A PPS 5-day assessment appears in an example scenario (p. M-43), but no payment/case-mix linkage for M0300F is stated."
+  },
+  "conflicts": [],
+  "common_audit_citations": [],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "state_deltas",
+    "common_audit_citations",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

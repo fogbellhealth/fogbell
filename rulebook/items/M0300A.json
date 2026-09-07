@@ -1,0 +1,222 @@
+{
+  "item_id": "M0300A",
+  "item_name": "Number of Stage 1 Pressure Injuries",
+  "section": "M",
+  "instrument": "MDS-3.0",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND for this item. The M0300A coding instructions state only that the assessor enters the number of Stage 1 pressure injuries \"that are currently present\" (p. M-12); no observation window in days is stated in the M0300A section or in the Steps for completing M0300A–G (pp. M-7 to M-9). A 7-day look-back is stated for the gateway item M0210 (\"Code based on the presence of any pressure ulcer/injury (regardless of stage) in the past 7 days,\" p. M-5), and the M0210 Planning for Care text refers to staging \"during the look-back period\" (p. M-4), but neither passage is stated as the M0300A window. Recorded as a conflict rather than inferred.",
+  "coding_levels": [
+    {
+      "code": "(number)",
+      "label": "Number of Stage 1 pressure injuries",
+      "definition": "Enter the number of Stage 1 pressure injuries that are currently present.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-12",
+        "quote": "Enter the number of Stage 1 pressure injuries that are currently present."
+      }
+    },
+    {
+      "code": "0",
+      "label": "None currently present",
+      "definition": "Enter 0 if no Stage 1 pressure injuries are currently present.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-12",
+        "quote": "Enter 0 if no Stage 1 pressure injuries are currently present."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Enter the number of Stage 1 pressure injuries that are currently present.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-12",
+        "quote": "Enter the number of Stage 1 pressure injuries that are currently present."
+      }
+    },
+    {
+      "rule": "Enter 0 if no Stage 1 pressure injuries are currently present.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-12",
+        "quote": "Enter 0 if no Stage 1 pressure injuries are currently present."
+      }
+    },
+    {
+      "rule": "M0300A collects a single count data element, \"Number of Stage 1 pressure injuries,\" under the Stage 1 definition printed on the item (intact skin with non-blanchable redness of a localized area usually over a bony prominence).",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-11",
+        "quote": "Stage 1: Intact skin with non-blanchable redness of a localized area usually over a bony prominence."
+      }
+    },
+    {
+      "rule": "Code here only when the lesion assessed is primarily related to pressure and other conditions have been ruled out; if pressure is not the primary cause, do not code here.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-11",
+        "quote": "For the purposes of coding, determine that the lesion being assessed is primarily related to pressure and that other conditions have been ruled out. If pressure is not the primary cause, do not code here."
+      }
+    },
+    {
+      "rule": "A pressure injury with intact skin that is a deep tissue injury (DTI) must not be coded as a Stage 1 pressure injury; it is coded as unstageable.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-8",
+        "quote": "A pressure injury with intact skin that is a deep tissue injury (DTI) should not be coded as a Stage 1 pressure injury. It should be coded as unstageable"
+      }
+    },
+    {
+      "rule": "For each pressure ulcer, determine the deepest anatomical stage; do not reverse or back stage; consider current and historical levels of tissue involvement.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-7",
+        "quote": "For each pressure ulcer, determine the deepest anatomical stage. At admission, code based on findings from the first skin assessment that is conducted on or after and as close to the admission as possible. Do not reverse or back stage. Consider current and historical levels of tissue involvement."
+      }
+    },
+    {
+      "rule": "If a stageable pressure ulcer has ever been classified at a higher numerical stage than what is observed now, it continues to be classified at the higher numerical stage until healed unless it becomes unstageable.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-7",
+        "quote": "If the stageable pressure ulcer has ever been classified at a higher numerical stage than what is observed now, it should continue to be classified at the higher numerical stage until healed unless it becomes unstageable."
+      }
+    },
+    {
+      "rule": "Reliance on only one descriptor is inadequate to determine staging between Stage 1 and deep tissue injury, because descriptors (temperature, tissue consistency) are similar for the two.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-11",
+        "quote": "Reliance on only one descriptor is inadequate to determine the staging of a pressure injury between Stage 1 and deep tissue injury (see definition of \"deep tissue injury\" on page M-24)."
+      }
+    },
+    {
+      "rule": "A previously closed pressure ulcer that opens again should be reported at its worst stage, unless currently presenting at a higher stage or unstageable.",
+      "source": {
+        "doc": "rai-manual-v1.20.1",
+        "loc": "p. M-8",
+        "quote": "A previously closed pressure ulcer that opens again should be reported at its worst stage, unless currently presenting at a higher stage or unstageable."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Review the history of each pressure ulcer in the medical record when determining the stage to be coded.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-7",
+          "quote": "Review the history of each pressure ulcer in the medical record."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as a required step in Step 1: Determine Deepest Anatomical Stage (M0300A–G)."
+      },
+      {
+        "criterion": "Careful facility documentation and tracking of pressure ulcers supports accurate coding of this item.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-7",
+          "quote": "Nursing homes that carefully document and track pressure ulcers will be able to more accurately code this item."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium"
+      },
+      {
+        "criterion": "Perform a head-to-toe/full body skin assessment focusing on bony prominences and pressure-bearing areas (sacrum, buttocks, heels, ankles, etc.) as the basis for identifying Stage 1 pressure injuries.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-11",
+          "quote": "Perform head-to-toe assessment. Conduct a full body skin assessment focusing on bony prominences and pressurebearing areas (sacrum, buttocks, heels, ankles, etc.)."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Listed as Step 1 for Assessment for M0300A."
+      },
+      {
+        "criterion": "Check reddened areas for ability to blanch by firmly pressing a finger into the reddened tissue and then removing it; in non-blanchable areas there is no loss of skin color or pressure-induced pallor at the compressed site.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-11",
+          "quote": "Check any reddened areas for ability to blanch by firmly pressing a finger into the reddened tissues and then removing it."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "Assessment technique step; supports the non-blanchable finding underlying the count."
+      },
+      {
+        "criterion": "Nursing homes can document healing using descriptive characteristics of the wound (depth, width, presence or absence of granulation tissue) or a validated pressure ulcer healing tool rather than reverse staging.",
+        "source": {
+          "doc": "rai-manual-v1.20.1",
+          "loc": "p. M-7",
+          "quote": "Nursing homes can document the healing of pressure ulcers using descriptive characteristics of the wound (i.e., depth, width, presence or absence of granulation tissue, etc.) or by using a validated pressure ulcer healing tool."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium"
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The supplied pages for M0300A and the M0300 steps do not tie this item to any payment or case-mix classification."
+  },
+  "conflicts": [
+    {
+      "topic": "Observation window applicable to counting Stage 1 pressure injuries (\"currently present\" vs. the 7-day look-back used by the gateway item M0210)",
+      "positions": [
+        {
+          "authority": "federal",
+          "claim": "M0300A is coded on what is currently present, with no stated number of look-back days.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. M-12",
+            "quote": "Enter the number of Stage 1 pressure injuries that are currently present."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "The gateway item M0210, which routes the assessor to M0300, is coded on presence of any pressure ulcer/injury (regardless of stage) in the past 7 days.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. M-5",
+            "quote": "Code based on the presence of any pressure ulcer/injury (regardless of stage) in the past 7 days."
+          }
+        },
+        {
+          "authority": "federal",
+          "claim": "Staging for MDS assessment is described as coded in terms of what is assessed during the look-back period.",
+          "source": {
+            "doc": "rai-manual-v1.20.1",
+            "loc": "p. M-4",
+            "quote": "should be coded in terms of what is assessed (seen or palpated, i.e. visible tissue, palpable bone) during the look-back period"
+          }
+        }
+      ],
+      "resolution": "unresolved — surface to user"
+    }
+  ],
+  "common_audit_citations": [],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "state_deltas",
+    "case_mix_relevance.source",
+    "common_audit_citations"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-06",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "rai-manual-v1.20.1"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}
