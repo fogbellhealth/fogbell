@@ -40,11 +40,19 @@ module Fogbell
 
       private
 
-      # "Long-Term Care ... (RAI Manual)" + "v1.20.1, Oct 2025" -> "RAI Manual v1.20.1 (Oct 2025)"
+      # "Long-Term Care ... (RAI Manual)" + "v1.20.1, Oct 2025" -> "RAI Manual v1.20.1 (Oct 2025)".
+      # A trailing parenthetical is used as the short name only when it reads like one (a few words,
+      # no commas); otherwise the text after the last colon, else the whole title. The version column
+      # is cut at its first clause so notes never leak into a citation.
       def display_name(title, version)
-        short = title[/\(([^)]+)\)\s*\z/, 1] || title
-        ver, date = version.split(",", 2).map { |s| s&.strip }
-        [ short, ver, (date ? "(#{date})" : nil) ].compact.reject(&:empty?).join(" ")
+        paren = title[/\(([^)]+)\)\s*\z/, 1]
+        short = if paren && paren.split.size <= 4 && !paren.include?(",") then paren
+                elsif title.include?(": ") then title.split(": ").last.sub(/\s*\([^)]*\)\s*\z/, "")
+                else title
+                end
+        ver = version.split(/;|\(per/).first.to_s.strip
+        ver, date = ver.split(",", 2).map { |s| s&.strip }
+        [ short, ver, (date.present? ? "(#{date})" : nil) ].compact.reject(&:empty?).join(" ").strip
       end
     end
   end
