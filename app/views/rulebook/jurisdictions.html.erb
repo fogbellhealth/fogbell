@@ -1,0 +1,90 @@
+<% content_for :title, "Fogbell — cross-jurisdiction view" %>
+
+<div class="mb-8 max-w-3xl">
+  <%= link_to "← All items", rulebook_path, class: "text-sm text-slate-500 hover:text-slate-700" %>
+  <h1 class="mt-3 text-2xl font-semibold tracking-tight text-slate-900">Same public documents, different states</h1>
+  <p class="mt-2 text-sm leading-relaxed text-slate-600">Federal rules are the floor. What each state adds — or doesn't — is a cited fact, not an assumption. This page shows what actually differs across Maine and New York, including the honest absences.</p>
+</div>
+
+<section class="mb-10 rounded-lg border border-slate-200 bg-white p-5">
+  <h2 class="text-base font-semibold text-slate-900">Item-level: federal MDS 3.0 rules vs. a Maine documentation delta</h2>
+  <p class="mt-2 text-sm text-slate-600">
+    <%= pluralize(@mds_items.size, "MDS 3.0 item") %> promoted from the federal RAI Manual.
+    <strong><%= @mds_with_state_layer.size %></strong> of them carry a Maine-specific documentation delta layered on top.
+  </p>
+  <% if @mds_with_state_layer.empty? %>
+    <div class="mt-3 rounded-md border border-violet-200 bg-violet-50 px-4 py-3 text-sm text-violet-900">
+      <strong>The honest absence:</strong> Maine's public rule (MaineCare Ch. III §16.2) does not state item-level documentation criteria for any MDS item — no "for G0110A, the chart must show X." Maine's control point is the <em>review program</em> (below), not any specific assessment item. This absence is itself a finding, not a gap in extraction: it means an MDS item's documentation standard in Maine is currently the federal standard, full stop, unless the Verifier says otherwise.
+    </div>
+  <% else %>
+    <ul class="mt-3 space-y-1 text-sm text-slate-700">
+      <% @mds_with_state_layer.each do |i| %>
+        <li><%= link_to i.item_id, rulebook_item_path(i.item_id), class: "font-mono text-xs hover:underline" %> — <%= i.item_name %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</section>
+
+<section class="mb-10">
+  <h2 class="mb-3 text-base font-semibold text-slate-900">Program-level: how each state audits its assessments</h2>
+  <p class="mb-4 max-w-3xl text-sm text-slate-600">Maine's nursing-facility MDS 3.0 case-mix review and New York's assisted-living UAS-NY audit protocol are not the same program on the same instrument — Maine audits nursing facilities' MDS 3.0 submissions; New York audits assisted-living claims against an enumerated protocol. They're shown side by side because both are "how does this state check what a facility charted," not because they're structurally equivalent.</p>
+
+  <div class="grid gap-4 lg:grid-cols-2">
+    <div class="rounded-lg border border-slate-200 bg-white p-5">
+      <h3 class="text-sm font-semibold text-slate-900">Maine — MDS 3.0 assessment review</h3>
+      <p class="mt-1 text-xs text-slate-500">MaineCare Benefits Manual, Ch. III §16.2 · <%= link_to "CONV-ME-MDS-REVIEW", rulebook_item_path("CONV-ME-MDS-REVIEW"), class: "hover:underline" if @me_review %></p>
+      <dl class="mt-4 space-y-3 text-sm">
+        <div><dt class="text-xs font-medium uppercase text-slate-400">Sample</dt><dd class="text-slate-800"><%= rule_fact(@me_review, /twenty-four percent|24%/i) %></dd></div>
+        <div>
+          <dt class="text-xs font-medium uppercase text-slate-400">Penalty mechanism</dt>
+          <dd class="text-slate-800">
+            <% tiers = @me_review&.coding_levels&.select { |l| l["code"]&.start_with?("SANCTION-") } || [] %>
+            <% if tiers.any? %>
+              <ul class="space-y-0.5">
+                <% tiers.each do |l| %><li><%= l["label"] %> <span class="text-xs text-slate-500"><%= cite(l["source"]) %></span></li><% end %>
+              </ul>
+            <% else %>
+              <span class="text-slate-400 italic">not stated in the public document</span>
+            <% end %>
+          </dd>
+        </div>
+        <div><dt class="text-xs font-medium uppercase text-slate-400">Correction deadline</dt><dd class="text-slate-800"><%= rule_fact(@me_review, /fourteen \(14\) days/i) %></dd></div>
+      </dl>
+    </div>
+
+    <div class="rounded-lg border border-slate-200 bg-white p-5">
+      <h3 class="text-sm font-semibold text-slate-900">New York — OMIG ALP audit protocol</h3>
+      <p class="mt-1 text-xs text-slate-500">OMIG Audit Protocol, Assisted Living Program, rev. 12/26/2025</p>
+      <% if @ny_areas.empty? %>
+        <p class="mt-4 text-sm text-slate-500 italic">Extraction in progress — areas will appear here once promoted.</p>
+      <% else %>
+        <dl class="mt-4 space-y-3 text-sm">
+          <div><dt class="text-xs font-medium uppercase text-slate-400">Enumerated disallowance areas</dt><dd class="text-slate-800"><strong><%= @ny_areas.size %></strong> areas (1–30), each independently citable <span class="text-xs text-slate-500">— public commentary reports "~22"; the protocol itself enumerates 30 with no gaps</span></dd></div>
+          <div><dt class="text-xs font-medium uppercase text-slate-400">Sample / penalty tier</dt><dd class="text-slate-800"><%= rule_fact(@ny_areas, /statistical sample|record sample|sample of (residents|claims|records)|% sample|sample percentage/i) %></dd></div>
+        </dl>
+        <div class="mt-4 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-900">
+          Unlike Maine's published statistical sampling/tiered-sanction formula, the public OMIG protocol is a per-claim checklist — it does not itself state a facility-wide sample percentage or tiered penalty schedule. That doesn't mean OMIG doesn't have one; it means the public protocol doesn't say, and NOT_FOUND is recorded rather than assumed.
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<% if @ny_areas.any? %>
+<section class="mb-10 rounded-lg border border-amber-200 bg-amber-50 p-5">
+  <h2 class="text-base font-semibold text-amber-950">A regulator changing its own protocol twice in five weeks</h2>
+  <p class="mt-2 text-sm text-amber-900">Between the 11/20/2025 and 12/26/2025 revisions, OMIG loosened who may sign a medical evaluation or reassessment (Areas 6 and 8): previously a specific form could substitute a physician assistant or nurse practitioner for a physician; the December revision replaces that with a clean date-based rule allowing a physician, PA, or NP for services on or after 02/19/14. Two published revisions five weeks apart, with a substantive signature-requirement change between them, is itself a fact worth surfacing to a facility relying on this protocol.</p>
+</section>
+<% end %>
+
+<% if @with_conflicts.any? %>
+<section>
+  <h2 class="mb-3 text-base font-semibold text-slate-900">Every preserved conflict, corpus-wide</h2>
+  <p class="mb-3 text-sm text-slate-600"><%= @with_conflicts.size %> items carry at least one unresolved conflict between two cited passages. Nothing is dropped; both sides are shown on the item page.</p>
+  <div class="flex flex-wrap gap-2">
+    <% @with_conflicts.each do |i| %>
+      <%= link_to i.item_id, rulebook_item_path(i.item_id), class: "rounded-md bg-white px-2 py-1 font-mono text-xs text-slate-700 ring-1 ring-inset ring-slate-200 hover:bg-slate-50" %>
+    <% end %>
+  </div>
+</section>
+<% end %>

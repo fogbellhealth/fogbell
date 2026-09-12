@@ -6,8 +6,10 @@ module Checks
     DEFAULT_ITEMS = %w[D0150 D0160 D0500 D0600 E0100 E0200 E0300 E0800 E0900 E1000 E1100].freeze
 
     def new
+      requested = Array(params.dig(:check, :item_ids)).reject(&:blank?)
+      preselected = requested.presence & Fogbell::Rulebook.instance.ids
       @check = Check.new(chart_text: Fogbell::EvidenceCheck::SyntheticChart.text, ard: Fogbell::EvidenceCheck::SyntheticChart::DEFAULT_ARD,
-                         item_ids: DEFAULT_ITEMS & Fogbell::Rulebook.instance.ids)
+                         item_ids: preselected.presence || (DEFAULT_ITEMS & Fogbell::Rulebook.instance.ids))
       @sections = checkable_items_by_section
     end
 

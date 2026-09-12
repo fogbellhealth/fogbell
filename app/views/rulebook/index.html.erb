@@ -1,0 +1,70 @@
+<% content_for :title, "Fogbell — the rulebook" %>
+
+<div class="mb-8 max-w-3xl">
+  <h1 class="text-2xl font-semibold tracking-tight text-slate-900">The rulebook</h1>
+  <p class="mt-2 text-sm leading-relaxed text-slate-600">Every promoted rule, cited to a document and a page. This is the asset the evidence checker runs on — nothing here is invented, and anything the corpus doesn't say is marked so, not filled in.</p>
+</div>
+
+<div class="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+  <div class="rounded-lg border border-slate-200 bg-white p-4">
+    <p class="text-2xl font-semibold text-slate-900"><%= @counts[:total] %></p>
+    <p class="text-xs text-slate-500">promoted items</p>
+  </div>
+  <div class="rounded-lg border border-slate-200 bg-white p-4">
+    <p class="text-2xl font-semibold text-slate-900"><%= @counts[:with_state_layers] %></p>
+    <p class="text-xs text-slate-500">with a state layer</p>
+  </div>
+  <div class="rounded-lg border border-slate-200 bg-white p-4">
+    <p class="text-2xl font-semibold text-slate-900"><%= @counts[:with_conflicts] %></p>
+    <p class="text-xs text-slate-500">with a preserved conflict</p>
+  </div>
+  <div class="rounded-lg border border-slate-200 bg-white p-4">
+    <p class="text-2xl font-semibold text-slate-900"><%= @counts[:pending_review] %></p>
+    <p class="text-xs text-slate-500">pending expert review</p>
+  </div>
+</div>
+
+<div class="mb-6 flex flex-wrap items-center gap-2 text-sm">
+  <span class="text-slate-500">Jurisdiction:</span>
+  <%= link_to "All", rulebook_path(status: params[:status]), class: "rounded-md px-2 py-1 #{'bg-slate-900 text-white' if params[:jurisdiction].blank?} #{'text-slate-600 hover:bg-slate-100' if params[:jurisdiction].present?}" %>
+  <% @jurisdictions.each do |j| %>
+    <%= link_to j, rulebook_path(jurisdiction: j, status: params[:status]), class: "rounded-md px-2 py-1 #{params[:jurisdiction] == j ? 'bg-slate-900 text-white' : 'text-slate-600 hover:bg-slate-100'}" %>
+  <% end %>
+  <span class="ml-4 text-slate-500">Review status:</span>
+  <%= link_to "All", rulebook_path(jurisdiction: params[:jurisdiction]), class: "rounded-md px-2 py-1 #{'bg-slate-900 text-white' if params[:status].blank?} #{'text-slate-600 hover:bg-slate-100' if params[:status].present?}" %>
+  <% @statuses.each do |s| %>
+    <%= link_to s.tr("_", " "), rulebook_path(jurisdiction: params[:jurisdiction], status: s), class: "rounded-md px-2 py-1 #{params[:status] == s ? 'bg-slate-900 text-white' : 'text-slate-600 hover:bg-slate-100'}" %>
+  <% end %>
+  <%= link_to "Cross-jurisdiction view →", rulebook_jurisdictions_path, class: "ml-auto rounded-md bg-violet-50 px-3 py-1.5 text-xs font-semibold text-violet-800 ring-1 ring-inset ring-violet-200 hover:bg-violet-100" %>
+</div>
+
+<% if @grouped.empty? %>
+  <p class="text-sm text-slate-500">No items match this filter.</p>
+<% end %>
+
+<% @grouped.each do |instrument, sections| %>
+  <section class="mb-10">
+    <h2 class="mb-3 text-lg font-semibold text-slate-900"><%= instrument_name(instrument) %></h2>
+    <% sections.each do |section, items| %>
+      <div class="mb-5">
+        <h3 class="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-500">Section <%= section %></h3>
+        <div class="divide-y divide-slate-100 rounded-lg border border-slate-200 bg-white">
+          <% items.each do |item| %>
+            <%= link_to rulebook_item_path(item.item_id), class: "flex items-center justify-between gap-3 px-4 py-2.5 hover:bg-slate-50" do %>
+              <span class="min-w-0">
+                <span class="font-mono text-xs font-semibold text-slate-700"><%= item.item_id %></span>
+                <span class="ml-2 text-sm text-slate-800"><%= item.item_name %></span>
+              </span>
+              <span class="flex shrink-0 items-center gap-2">
+                <% j = item_jurisdiction(item) %>
+                <% if j != "Federal" %><span class="rounded bg-violet-50 px-1.5 py-0.5 text-[11px] font-medium text-violet-800 ring-1 ring-inset ring-violet-200"><%= j %></span><% end %>
+                <% if item.conflicts.any? %><span class="rounded bg-amber-50 px-1.5 py-0.5 text-[11px] font-medium text-amber-800 ring-1 ring-inset ring-amber-200">conflict</span><% end %>
+                <%= review_status_badge(item.provenance_summary["expert_review_status"]) %>
+              </span>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </section>
+<% end %>

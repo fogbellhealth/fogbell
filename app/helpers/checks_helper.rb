@@ -16,8 +16,6 @@ module ChecksHelper
     tag.span(text, class: "ml-2 rounded bg-slate-100 px-1.5 py-0.5 text-[11px] text-slate-600")
   end
 
-  def manifest = @manifest ||= Fogbell::Review::Manifest.default
-
   def cite(source)
     return "" if source.blank?
 
