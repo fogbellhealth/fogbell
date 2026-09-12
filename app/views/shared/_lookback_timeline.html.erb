@@ -1,0 +1,44 @@
+<%
+# locals: timeline (Fogbell::LookbackTimeline), compact (boolean, default false)
+compact = local_assigns.fetch(:compact, false)
+%>
+<div class="lookback-timeline" role="img" aria-label="<%= timeline.summary %>">
+  <% unless timeline.computable? %>
+    <p class="text-xs text-slate-400 italic">Look-back window not stated for this item.</p>
+  <% else %>
+    <div class="flex items-end gap-2">
+      <% if timeline.stranded.any? %>
+        <div class="flex shrink-0 items-end gap-1 border-r border-dashed border-slate-300 pr-2">
+          <% timeline.stranded.each do |s| %>
+            <div class="flex flex-col items-center" title="<%= s[:entry]['date'] %> · <%= s[:entry]['author'] %> — outside the window, does not count">
+              <div class="flex items-center justify-center rounded border border-dashed border-amber-400 bg-amber-50 text-amber-700 <%= compact ? 'h-5 w-5' : 'h-6 w-6' %>" aria-hidden="true">
+                <svg viewBox="0 0 20 20" class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 6v5M10 14v.01" stroke-linecap="round"/></svg>
+              </div>
+              <% unless compact %><span class="mt-0.5 text-[9px] text-amber-700"><%= s[:date]&.strftime("%-m/%-d") || "?" %></span><% end %>
+            </div>
+          <% end %>
+        </div>
+        <span class="sr-only">outside the window, not counted:</span>
+      <% end %>
+
+      <div class="flex min-w-0 flex-1 gap-px overflow-x-auto">
+        <% timeline.days.each do |day| %>
+          <div class="flex shrink-0 flex-col items-center <%= compact ? 'w-5' : 'w-7' %>">
+            <div class="w-full items-center justify-center gap-0.5 rounded-sm flex <%= compact ? 'h-5' : 'h-6' %> <%= day.is_ard ? 'border-r-2 border-slate-800' : 'border border-slate-100' %> <%= day.entries.any? ? 'bg-emerald-50' : 'bg-slate-50' %>">
+              <% day.entries.each do |e| %>
+                <span class="inline-block h-2 w-2 rounded-full bg-emerald-600" title="<%= e['date'] %> · <%= e['author'] %> — <%= e['quote'] %>" aria-hidden="true"></span>
+              <% end %>
+              <span class="sr-only"><%= day.entries.size %> supporting note<%= 's' unless day.entries.size == 1 %> on <%= day.date.iso8601 %></span>
+            </div>
+            <% unless compact %>
+              <span class="mt-0.5 text-[9px] <%= day.is_ard ? 'font-semibold text-slate-800' : 'text-slate-400' %>"><%= day.date.strftime("%-m/%-d") %><%= " · ARD" if day.is_ard %></span>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <% unless compact %>
+      <p class="mt-2 text-[11px] text-slate-500"><%= timeline.summary %></p>
+    <% end %>
+  <% end %>
+</div>

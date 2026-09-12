@@ -6,10 +6,7 @@ module Checks
     DEFAULT_ITEMS = %w[D0150 D0160 D0500 D0600 E0100 E0200 E0300 E0800 E0900 E1000 E1100].freeze
 
     def new
-      requested = Array(params.dig(:check, :item_ids)).reject(&:blank?)
-      preselected = requested.presence & Fogbell::Rulebook.instance.ids
-      @check = Check.new(chart_text: Fogbell::EvidenceCheck::SyntheticChart.text, ard: Fogbell::EvidenceCheck::SyntheticChart::DEFAULT_ARD,
-                         item_ids: preselected.presence || (DEFAULT_ITEMS & Fogbell::Rulebook.instance.ids))
+      @check = from_worklist_assessment || from_params
       @sections = checkable_items_by_section
     end
 
@@ -30,6 +27,25 @@ module Checks
     end
 
     private
+
+    # A worklist card's "Open check" link: carries only an id, so the resident's chart/ARD/item
+    # never round-trip through a URL.
+    def from_worklist_assessment
+      assessment = Assessment.find_by(id: params[:assessment_id])
+      return nil unless assessment
+
+      Check.new(chart_text: assessment.resident.chart_text, ard: assessment.ard,
+                item_ids: [ assessment.focus_item_id ] & Fogbell::Rulebook.instance.ids)
+    end
+
+    # Direct/ad-hoc use: the synthetic demo chart, optionally with a preselected item (from a
+    # rulebook item page's "run a check using this item" link).
+    def from_params
+      requested = Array(params.dig(:check, :item_ids)).reject(&:blank?)
+      preselected = requested.presence & Fogbell::Rulebook.instance.ids
+      Check.new(chart_text: Fogbell::EvidenceCheck::SyntheticChart.text, ard: Fogbell::EvidenceCheck::SyntheticChart::DEFAULT_ARD,
+                item_ids: preselected.presence || (DEFAULT_ITEMS & Fogbell::Rulebook.instance.ids))
+    end
 
     def check_params
       p = params.require(:check).permit(:chart_text, :ard, item_ids: [])

@@ -36,6 +36,21 @@
     <% if @item.lookback_notes.present? %>
       <p class="mt-1 text-sm text-slate-600"><%= @item.lookback_notes %></p>
     <% end %>
+    <% if @item.lookback_days.present? %>
+      <div class="mt-4">
+        <p class="mb-1 text-xs font-medium uppercase tracking-wider text-slate-400">Illustration — example dates, not real evidence</p>
+        <% illustrative_ard = Date.current %>
+        <%= render "shared/lookback_timeline", timeline: Fogbell::LookbackTimeline.new(
+              ard: illustrative_ard, lookback_days: @item.lookback_days, illustrative: true,
+              evidence: [
+                { "date" => (illustrative_ard - 1).iso8601, "author" => "example", "quote" => "a supporting note, counted" }
+              ],
+              outside_window_evidence: [
+                { "date" => (illustrative_ard - @item.lookback_days - 2).iso8601, "author" => "example", "quote" => "documented too early to count" }
+              ]
+            ) %>
+      </div>
+    <% end %>
   </section>
 
   <% if @item.coding_levels.any? %>

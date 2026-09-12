@@ -17,7 +17,7 @@ class EvidenceCheckFlowTest < ActionDispatch::IntegrationTest
   teardown { Fogbell::EvidenceCheck.llm_builder = nil }
 
   test "form loads with the synthetic chart, the demo notice, and promoted items grouped by section" do
-    get root_path
+    get new_check_path
     assert_response :success
     assert_select "textarea[name='check[chart_text]']", text: /SYNTHETIC DEMONSTRATION RECORD/
     assert_select "input[type=date][name='check[ard]'][value='2026-09-03']"
