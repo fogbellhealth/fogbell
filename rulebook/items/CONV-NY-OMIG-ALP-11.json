@@ -1,0 +1,268 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-11",
+  "item_name": "Missing Entry in the Uniform Assessment System for NY (UAS-NY)",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. The protocol's Area 11 states a required frequency for the UAS-NY entry (\"upon a change of condition or at least every 6 months\") but does not state an assessor observation/look-back window in days ending on an assessment reference date. (A 7-day look-back is stated only for the Patient Review Instrument in Area 30, p. 18, which is a different item and applies to service dates prior to 03/01/2015.)",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "A UAS-NY entry is required upon a change of condition or at least every 6 months.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "The Uniform Assessment System for NY (UAS-NY) is required upon a change of condition or at least every 6 months."
+      }
+    },
+    {
+      "rule": "If the UAS-NY is missing from the patient online file, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "If the Uniform Assessment for NY (UAS-NY) is missing from the patient online file, the claim will be disallowed."
+      }
+    },
+    {
+      "rule": "This audit area (Area 11) was phased in per NYS DOH Medicaid Update, February 2013, Vol. 29, No. 3.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "1 Phase in per NYS DOH Medicaid Update, February 2013, Vol. 29, No. 3"
+      }
+    },
+    {
+      "rule": "The protocol as a whole applies to service dates 01/01/2013 through 10/31/2025.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "(For Service Dates 01/01/2013 through 10/31/2025)"
+      }
+    },
+    {
+      "rule": "Services provided and billed in accordance with the listed COVID-19 PHE guidance issued by NYS DOH pertaining to ALP services will not be subject to disallowance, provided all other programmatic and billing requirements not altered or waived by the PHE guidance were met; PHE flexibilities regarding minimum billing standards and documentation requirements ended May 11, 2023 unless otherwise specified by DOH through formal regulatory waivers.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 2",
+        "quote": "Services provided and billed in accordance with COVID-19 PHE guidance issued by the NYS Department of Health (DOH) pertaining to ALP services will not be subject to disallowance, provided all other programmatic and billing requirements not altered or waived by the PHE guidance were met."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "A UAS-NY entry must be present in the patient online file for the claim under review; absence results in disallowance.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 9",
+          "quote": "If the Uniform Assessment for NY (UAS-NY) is missing from the patient online file, the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as OMIG Audit Criteria for Area 11."
+      },
+      {
+        "criterion": "Evidence that a UAS-NY was completed at least every 6 months and upon any change of condition.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 9",
+          "quote": "The Uniform Assessment System for NY (UAS-NY) is required upon a change of condition or at least every 6 months."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Frequency/trigger requirement stated in the OMIG Audit Criteria."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "Regulatory references for Area 11 include 10 NYCRR \u00a7 766.6(a)(3); NYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines Version 2006-1, Section I; and NYS DOH DAL 22-14: Reminder of Assisted Living Program Provider Responsibilities.",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "10 NYCRR \u00a7 766.6(a)(3)\nNYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines\n     Version 2006-1, Section I\nNYS DOH DAL 22-14: Reminder of Assisted Living Program Provider Responsibilities"
+      }
+    },
+    {
+      "state": "NY",
+      "delta": "For services 05/25/18 and after, 18 NYCRR \u00a7 494.4(h) applies; for services 03/17/93 through 05/24/18, 18 NYCRR \u00a7 494.4(g) applies.",
+      "kind": "other",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(h)"
+      }
+    },
+    {
+      "state": "NY",
+      "delta": "Date-tiered guidance references apply: DAL 15-08 (06/18/15 and after), DOH Division of Long Term Care 10/31/2014 Memo on UAS-NY Assessment Signatures (10/31/14 and after), UAS-NY Project Team 10/03/2014 Memo on Signing Assessments (10/03/14 and after), DAL 14-09 UAS-NY FAQ (04/11/14 and after), Medicaid Update July 2013 Vol. 29 No. 8 (02/01/14 and after), UAS-NY Transition Guide (03/04/13 and after), and Medicaid Update February 2013 Vol. 29 No. 3 (03/01/13 and after).",
+      "kind": "other",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "For Services 06/18/15 and After: NYS DOH DAL 15-08: ALP Eligibility"
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "Area 11 does not tie the missing-UAS-NY finding to a payment or case-mix classification; it states outright claim disallowance. (A related but separate area, Area 12 on p. 10, references a generated RUGS Group Code, but that is a different audit area and is not extracted here.)"
+  },
+  "conflicts": [
+    {
+      "topic": "Applicable service-date range printed on the Area 11 page versus the protocol's earlier-service-date section",
+      "positions": [
+        {
+          "authority": "omig-alp-protocol-2025-12",
+          "claim": "The page containing Area 11 is headed for service dates 01/01/2013 through 10/31/2025.",
+          "source": {
+            "doc": "omig-alp-protocol-2025-12",
+            "loc": "p. 9",
+            "quote": "(For Service Dates 01/01/2013 through 10/31/2025)"
+          }
+        },
+        {
+          "authority": "omig-alp-protocol-2025-12",
+          "claim": "Separate pages of the same protocol cover findings for service dates 01/01/2013 through 02/28/2015 that were phased out per NYS DOH Medicaid Update, February 2013, Vol. 29, No. 3, while Area 11's own footnote says it was phased in per the same Medicaid Update.",
+          "source": {
+            "doc": "omig-alp-protocol-2025-12",
+            "loc": "p. 17",
+            "quote": "Findings below phased out as per NYS DOH Medicaid Update, February 2013, Vol. 29, No. 3"
+          }
+        }
+      ],
+      "resolution": "unresolved \u2014 surface to user; the document does not state how the phase-in of Area 11 and the phase-out of the pre-03/01/2015 findings overlap for service dates 01/01/2013\u201302/28/2015."
+    }
+  ],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 766.6(a)(3)",
+      "notes": "Listed as a regulatory reference for Area 11.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "10 NYCRR \u00a7 766.6(a)(3)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(h) (For Services 05/25/18 and After)",
+      "notes": "Date-conditioned regulatory reference for Area 11.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(h)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(g) (For Services 03/17/93 through 05/24/18)",
+      "notes": "Date-conditioned regulatory reference for Area 11.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "For Services 03/17/93 through 05/24/18: 18 NYCRR \u00a7 494.4(g)"
+      }
+    },
+    {
+      "citation": "NYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines Version 2006-1, Section I",
+      "notes": "Listed as a regulatory reference for Area 11.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "NYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines\n     Version 2006-1, Section I"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL 22-14: Reminder of Assisted Living Program Provider Responsibilities",
+      "notes": "Listed as a regulatory reference for Area 11.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "NYS DOH DAL 22-14: Reminder of Assisted Living Program Provider Responsibilities"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL 15-08: ALP Eligibility (For Services 06/18/15 and After)",
+      "notes": "Date-conditioned reference for Area 11.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "For Services 06/18/15 and After: NYS DOH DAL 15-08: ALP Eligibility"
+      }
+    },
+    {
+      "citation": "NYS DOH Division of Long Term Care October 31, 2014 Memo: UAS-NY Assessment Signatures (For Services 10/31/14 and After)",
+      "notes": "Date-conditioned reference for Area 11.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "NYS DOH Division of Long Term Care October 31, 2014 Memo:\n     UAS-NY Assessment Signatures"
+      }
+    },
+    {
+      "citation": "NYS DOH UAS-NY Project Team October 3, 2014 Memo: Signing Assessments (For Services 10/03/14 and After)",
+      "notes": "Date-conditioned reference for Area 11.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "NYS DOH UAS-NY Project Team October 3, 2014 Memo: Signing Assessments"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL 14-09: UAS-NY FAQ (For Services 04/11/14 and After)",
+      "notes": "Date-conditioned reference for Area 11.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "For Services 04/11/14 and After: NYS DOH DAL 14-09: UAS-NY FAQ"
+      }
+    },
+    {
+      "citation": "NYS DOH Medicaid Update, July 2013, Vol. 29, No. 8 (For Services 02/01/14 and After)",
+      "notes": "Date-conditioned reference for Area 11.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "NYS DOH Medicaid Update, July 2013, Vol. 29, No. 8"
+      }
+    },
+    {
+      "citation": "NYS DOH UAS-NY Transition Guide (For Services 03/04/13 and After)",
+      "notes": "Date-conditioned reference for Area 11.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "For Services 03/04/13 and After: NYS DOH UAS-NY Transition Guide"
+      }
+    },
+    {
+      "citation": "NYS DOH Medicaid Update, February 2013, Vol. 29, No. 3 (For Services 03/01/13 and After)",
+      "notes": "Date-conditioned reference for Area 11; also cited as the phase-in authority in the page footnote.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 9",
+        "quote": "NYS DOH Medicaid Update, February 2013, Vol. 29, No. 3"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

@@ -1,0 +1,152 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-03",
+  "item_name": "No Service Rendered",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. The Area 3 \"No Service Rendered\" entry states only that Medicaid-covered services required by the plan of care must be documented on the date(s) of service; it specifies no observation/look-back window. (A 7-day look-back appears elsewhere in the document, at Area 30 for the Patient Review Instrument, but that is a different audit area and is not applied to Area 3.)",
+  "coding_levels": [
+    {
+      "code": "disallowed",
+      "label": "Claim disallowed \u2014 no service rendered",
+      "definition": "If the Medicaid-covered services provided, required by the plan of care, are not documented on the date(s) of service, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "If the Medicaid-covered services provided, required by the plan of care, are not documented on the date(s) of service, the claim will be disallowed."
+      }
+    }
+  ],
+  "federal_coding_rules": [
+    {
+      "rule": "Medicaid-covered services required by the plan of care must be documented on the date(s) of service; if they are not, the claim is disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "If the Medicaid-covered services provided, required by the plan of care, are not documented on the date(s) of service, the claim will be disallowed."
+      }
+    },
+    {
+      "rule": "Documentation requirements for this audit area are applied by date-of-service band: 18 NYCRR \u00a7 494.4(c) applies for services 05/25/18 and after, and 18 NYCRR \u00a7 494.4(b) applies for services 03/17/93 through 05/24/18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(c)"
+      }
+    },
+    {
+      "rule": "This protocol, including this audit area, applies to service dates 01/01/2013 through 10/31/2025.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "(For Service Dates 01/01/2013 through 10/31/2025)"
+      }
+    },
+    {
+      "rule": "Services provided and billed in accordance with the listed NYSDOH COVID-19 PHE guidance pertaining to ALP services will not be subject to disallowance, provided all other programmatic and billing requirements not altered or waived by the PHE guidance were met.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 2",
+        "quote": "Services provided and billed in accordance with COVID-19 PHE guidance issued by the NYS Department of Health (DOH) pertaining to ALP services will not be subject to disallowance, provided all other programmatic and billing requirements not altered or waived by the PHE guidance were met."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "The record must document, on the date(s) of service, the Medicaid-covered services provided that are required by the plan of care.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 3",
+          "quote": "If the Medicaid-covered services provided, required by the plan of care, are not documented on the date(s) of service, the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Absence of date-of-service documentation results in disallowance of the claim."
+      },
+      {
+        "criterion": "OMIG will review and consider any relevant contemporaneous documentation maintained and available in the provider's records to substantiate a claim.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 1",
+          "quote": "OMIG will review and consider any relevant contemporaneous documentation maintained and available in the provider's records to substantiate a claim."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "General protocol-wide statement on the evidence OMIG considers; not specific to Area 3."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The Area 3 entry does not tie this audit area to any payment or case-mix classification. (Rate code/RUG-related criteria appear in separate audit areas 12 and 13 of the document.)"
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "18 NYCRR \u00a7 494.5",
+      "notes": "Listed as a regulatory reference for Area 3, No Service Rendered.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "18 NYCRR \u00a7 494.5"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 505.35(h)(1)",
+      "notes": "Listed as a regulatory reference for Area 3, No Service Rendered.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "18 NYCRR \u00a7 505.35(h)(1)"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL 22-14: Reminder of Assisted Living Program Provider Responsibilities",
+      "notes": "Listed as a regulatory reference for Area 3, No Service Rendered.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "NYS DOH DAL 22-14: Reminder of Assisted Living Program Provider Responsibilities"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(c)",
+      "notes": "Applies for services 05/25/18 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(c)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(b)",
+      "notes": "Applies for services 03/17/93 through 05/24/18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "For Services 03/17/93 through 05/24/18: 18 NYCRR \u00a7 494.4(b)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "state_deltas",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

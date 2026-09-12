@@ -1,0 +1,179 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-18",
+  "item_name": "Failure to Conduct Required Criminal History Check",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND \u2014 the protocol's Area 18 entry states only that a criminal history record check is required for all aides hired on or after 9/1/2006; no assessor observation/look-back window in days is stated on p. 14 or elsewhere for this audit area.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "A criminal history record check is required for all aides hired on or after 9/1/2006.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "A criminal history record check is required for all aides hired on or after 9/1/2006."
+      }
+    },
+    {
+      "rule": "If the provider fails to complete a required criminal history check for the aide on a sampled claim, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "If the provider fails to complete a required criminal history check for the aide on a sampled claim, the claim will be disallowed."
+      }
+    },
+    {
+      "rule": "This audit protocol applies to Assisted Living Program (ALP) service dates 01/01/2013 through 10/31/2025.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "(For Service Dates 01/01/2013 through 10/31/2025)"
+      }
+    },
+    {
+      "rule": "Services provided and billed in accordance with the listed COVID-19 PHE guidance issued by NYS DOH pertaining to ALP services will not be subject to disallowance, provided all other programmatic and billing requirements not altered or waived by the PHE guidance were met; PHE flexibilities for minimum billing standards and documentation requirements ended when the PHE expired at the end of the day on May 11, 2023, unless otherwise specified by DOH through formal regulatory waivers.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 2",
+        "quote": "Services provided and billed in accordance with COVID-19 PHE guidance issued by the NYS Department of Health (DOH) pertaining to ALP services will not be subject to disallowance, provided all other programmatic and billing requirements not altered or waived by the PHE guidance were met."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Documentation that a criminal history record check was completed for the aide who provided the service on the sampled claim, where the aide was hired on or after 9/1/2006; absence results in disallowance of the claim.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 14",
+          "quote": "If the provider fails to complete a required criminal history check for the aide on a sampled claim, the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as an OMIG Audit Criteria with claim disallowance as the consequence."
+      },
+      {
+        "criterion": "OMIG will review and consider any relevant contemporaneous documentation maintained and available in the provider's records to substantiate a claim.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 1",
+          "quote": "In this effort, OMIG will review and consider any relevant contemporaneous documentation maintained and available in the provider\u2019s records to substantiate a claim."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "General documentation principle stated in the protocol's introduction, not specific to Area 18."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "OMIG Audit Protocol Area 18 (Failure to Conduct Required Criminal History Check) applies to the New York Assisted Living Program: a criminal history record check is required for all aides hired on or after 9/1/2006, and failure to complete it for the aide on a sampled claim results in disallowance of that claim.",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "A criminal history record check is required for all aides hired on or after 9/1/2006."
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The Area 18 entry does not tie the criminal history check requirement to any payment or case-mix classification (e.g., RUG group or rate code); it addresses claim disallowance only."
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 402.1(a)",
+      "notes": "Listed as a Regulatory Reference for Area 18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "10 NYCRR \u00a7 402.1(a)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 402.4(a)(1)",
+      "notes": "Listed as a Regulatory Reference for Area 18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "10 NYCRR \u00a7 402.4(a)(1)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 402.4(b)",
+      "notes": "Listed as a Regulatory Reference for Area 18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "10 NYCRR \u00a7 402.4(b)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 402.6(a)",
+      "notes": "Listed as a Regulatory Reference for Area 18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "10 NYCRR \u00a7 402.6(a)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 402.6(d)",
+      "notes": "Listed as a Regulatory Reference for Area 18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "10 NYCRR \u00a7 402.6(d)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 402.9(a)(1) and (2)",
+      "notes": "Listed as a Regulatory Reference for Area 18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "10 NYCRR \u00a7 402.9(a)(1) and (2)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 766.11(f)",
+      "notes": "Listed as a Regulatory Reference for Area 18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "10 NYCRR \u00a7 766.11(f)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 505.14(d)(4)(v)",
+      "notes": "Listed as a Regulatory Reference for Area 18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "18 NYCRR \u00a7 505.14(d)(4)(v)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

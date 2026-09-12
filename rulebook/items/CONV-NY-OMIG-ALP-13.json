@@ -1,0 +1,159 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-13",
+  "item_name": "Incorrect Rate Code Billed",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND \u2014 the protocol's Area 13 entry (p. 11) states only the audit criterion for an incorrect rate code and lists regulatory references; it does not state any observation/look-back window for this finding. (A 7-day look-back is stated elsewhere in the document for the PRI in Area 30, p. 18, but that is a different finding area and is not applied to Area 13 here.)",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "If the rate code billed is not the correct rate code for the services provided, the difference between the appropriate claim amount and the paid claim amount will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "If the rate code billed is not the correct rate code for the services provided, the difference between the appropriate claim amount and the paid claim amount will be disallowed."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "Area 13 (Incorrect Rate Code Billed) is a New York OMIG audit finding area applicable to the Assisted Living Program for service dates 01/01/2013 through 10/31/2025; the disallowance is the difference between the appropriate claim amount and the paid claim amount.",
+      "kind": "coding",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "13. Incorrect Rate Code Billed"
+      }
+    },
+    {
+      "state": "NY",
+      "delta": "Regulatory references cited for this finding include 18 NYCRR \u00a7 504.3(f), (h), and (i); 18 NYCRR \u00a7 505.35(h)(1); and the NYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines Version 2006-1, Section I.",
+      "kind": "other",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "18 NYCRR \u00a7 504.3(f), (h), and (i)\n18 NYCRR \u00a7 505.35(h)(1)\nNYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines\nVersion 2006-1, Section I"
+      }
+    },
+    {
+      "state": "NY",
+      "delta": "Date-specific references: for services 05/25/18 and after, 18 NYCRR \u00a7 494.4(c) applies; for services 03/17/93 through 05/24/18, 18 NYCRR \u00a7 494.4(b) applies.",
+      "kind": "other",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(c)"
+      }
+    },
+    {
+      "state": "NY",
+      "delta": "For services 01/31/14 and after, the NYS DOH UAS-NY Project Team January 31, 2014 Memo: Generating RUG III Scores and Calculating Hours of Formal Care is a cited reference for this finding; for services 04/11/14 and after, NYS DOH DAL 14-09: UAS-NY FAQ is cited.",
+      "kind": "other",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "For Services 01/31/14 and After:\nNYS DOH UAS-NY Project Team January 31, 2014 Memo: Generating RUG III Scores\nand Calculating Hours of Formal Care"
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "high",
+    "notes": "The finding directly governs payment: an incorrect rate code results in disallowance of the difference between the appropriate and paid claim amounts. The cited references include the UAS-NY memo on generating RUG III scores and calculating hours of formal care, tying rate code determination to the RUG-based classification. The document does not further explain the rate-code-to-case-mix mechanics.",
+    "source": {
+      "doc": "omig-alp-protocol-2025-12",
+      "loc": "p. 11",
+      "quote": "If the rate code billed is not the correct rate code for the services provided, the difference between the appropriate claim amount and the paid claim amount will be disallowed."
+    }
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "18 NYCRR \u00a7 504.3(f), (h), and (i)",
+      "notes": "Listed under Regulatory References for Area 13.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "18 NYCRR \u00a7 504.3(f), (h), and (i)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 505.35(h)(1)",
+      "notes": "Listed under Regulatory References for Area 13.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "18 NYCRR \u00a7 505.35(h)(1)"
+      }
+    },
+    {
+      "citation": "NYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines Version 2006-1, Section I",
+      "notes": "Listed under Regulatory References for Area 13.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "NYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines\nVersion 2006-1, Section I"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(c) (For Services 05/25/18 and After)",
+      "notes": "Date-bounded reference.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(c)"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL 14-09: UAS-NY FAQ (For Services 04/11/14 and After)",
+      "notes": "Date-bounded reference.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "For Services 04/11/14 and After: NYS DOH DAL 14-09: UAS-NY FAQ"
+      }
+    },
+    {
+      "citation": "NYS DOH UAS-NY Project Team January 31, 2014 Memo: Generating RUG III Scores and Calculating Hours of Formal Care (For Services 01/31/14 and After)",
+      "notes": "Date-bounded reference tying rate code determination to RUG III scoring.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "NYS DOH UAS-NY Project Team January 31, 2014 Memo: Generating RUG III Scores\nand Calculating Hours of Formal Care"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(b) (For Services 03/17/93 through 05/24/18)",
+      "notes": "Date-bounded reference.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "For Services 03/17/93 through 05/24/18: 18 NYCRR \u00a7 494.4(b)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "supportive_documentation.federal",
+    "conflicts"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

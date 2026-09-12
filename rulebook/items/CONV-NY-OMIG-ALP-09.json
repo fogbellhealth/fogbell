@@ -1,0 +1,135 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-09",
+  "item_name": "Missing Plan of Care",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. Audit Area 9 (Missing Plan of Care) on p. 8 states only that the claim will be disallowed if the plan of care is missing; it states no observation/look-back window for the assessor. The related Area 10 on the same page states a review frequency (upon a change of condition or at least every 6 months) for updating the plan of care, but that is a review-frequency requirement of a different audit area, not a look-back window for Area 9.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "A plan of care must be present in the record; if the plan of care is missing, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "If the plan of care is missing, the claim will be disallowed."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "The record must contain the plan of care for the claim under review; absence of the plan of care results in disallowance of the claim.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 8",
+          "quote": "If the plan of care is missing, the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as the OMIG Audit Criteria for Area 9; framed as a required document."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "This entire item is a New York State OMIG audit protocol area; the audit criteria and regulatory references are New York-specific (10 NYCRR, 18 NYCRR, NYS Social Services Law, NYS DOH DAL 22-14).",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "10 NYCRR \u00a7 766.3(b)\n10 NYCRR \u00a7 766.3(d)\n10 NYCRR \u00a7 766.6(a)(4)\nNYS Social Services Law \u00a7 461-L(2)(d)(iii)"
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The document does not tie the plan of care item to a payment or case-mix classification. (A separate audit area, 13. Incorrect Rate Code Billed, addresses rate codes, but Area 9 makes no such link.)"
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 766.3(b)",
+      "notes": "Listed under Regulatory References for Audit Area 9, Missing Plan of Care.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "10 NYCRR \u00a7 766.3(b)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 766.3(d)",
+      "notes": "Listed under Regulatory References for Audit Area 9, Missing Plan of Care.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "10 NYCRR \u00a7 766.3(d)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 766.6(a)(4)",
+      "notes": "Listed under Regulatory References for Audit Area 9, Missing Plan of Care.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "10 NYCRR \u00a7 766.6(a)(4)"
+      }
+    },
+    {
+      "citation": "NYS Social Services Law \u00a7 461-L(2)(d)(iii)",
+      "notes": "Listed under Regulatory References for Audit Area 9, Missing Plan of Care.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "NYS Social Services Law \u00a7 461-L(2)(d)(iii)"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL 22-14: Reminder of Assisted Living Program Provider Responsibilities",
+      "notes": "Listed under Regulatory References for Audit Area 9, Missing Plan of Care.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "NYS DOH DAL 22-14: Reminder of Assisted Living Program Provider Responsibilities"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(c)",
+      "notes": "Applies to services 05/25/18 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(c)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(b)",
+      "notes": "Applies to services 03/17/93 through 05/24/18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "For Services 03/17/93 through 05/24/18: 18 NYCRR \u00a7 494.4(b)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

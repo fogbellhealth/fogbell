@@ -1,0 +1,213 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-21",
+  "item_name": "Missing Documentation of Tuberculosis Test or Follow-Up",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "The protocol states a TB test is required prior to patient contact and that documentation of a yearly tuberculosis test, screening questionnaire, risk assessment, or required follow-up must be in the personnel file, but it does not state an assessor observation/look-back window in days for this audit area. The only day-count windows in the document appear in unrelated areas (e.g. Area 30's 7-day PRI look back on p. 18).",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "A tuberculosis test is required for aides prior to patient contact.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "A tuberculosis test is required for aides prior to patient contact."
+      }
+    },
+    {
+      "rule": "If documentation of a yearly tuberculosis test, screening questionnaire, risk assessment, or the required follow-up to a positive test result is not in the personnel file of the aide who had direct patient contact, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "If documentation of a yearly tuberculosis test, screening questionnaire, risk assessment, or the required follow-up to a positive test result, is not in the personnel file of the aide who had direct patient contact, the claim will be disallowed."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Documentation of a yearly tuberculosis test must be present in the personnel file of the aide who had direct patient contact.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 15",
+          "quote": "If documentation of a yearly tuberculosis test, screening questionnaire, risk assessment, or the required follow-up to a positive test result, is not in the personnel file of the aide who had direct patient contact, the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Absence results in claim disallowance per the OMIG Audit Criteria."
+      },
+      {
+        "criterion": "Documentation of a TB screening questionnaire or risk assessment must be present in the personnel file of the aide who had direct patient contact.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 15",
+          "quote": "documentation of a yearly tuberculosis test, screening questionnaire, risk assessment, or the required follow-up to a positive test result, is not in the personnel file"
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Listed in the same disallowance criterion as the yearly TB test."
+      },
+      {
+        "criterion": "Documentation of the required follow-up to a positive TB test result must be present in the personnel file of the aide who had direct patient contact.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 15",
+          "quote": "or the required follow-up to a positive test result, is not in the personnel file of the aide who had direct patient contact, the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      },
+      {
+        "criterion": "Evidence that the TB test occurred prior to the aide's patient contact.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 15",
+          "quote": "A tuberculosis test is required for aides prior to patient contact."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Timing requirement stated as a requirement, not an example."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "This OMIG audit protocol is itself a New York State document; Area 21 disallows claims where TB test/screening/follow-up documentation is missing from the aide's personnel file, citing NY regulations 10 NYCRR \u00a7 763.13(c)(4), 10 NYCRR \u00a7 766.11(d)(4), 10 NYCRR \u00a7 763.13(e) and (h), 18 NYCRR \u00a7 487.9(a)(8)(ii), 18 NYCRR \u00a7 488.9(a)(5)(ii), and 18 NYCRR \u00a7 494.3(b).",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "10 NYCRR \u00a7 763.13(c)(4)\n10 NYCRR \u00a7 766.11(d)(4)\n10 NYCRR \u00a7 763.13(e) and (h)\n18 NYCRR \u00a7 487.9(a)(8)(ii)\n18 NYCRR \u00a7 488.9(a)(5)(ii)\n18 NYCRR \u00a7 494.3(b)"
+      }
+    },
+    {
+      "state": "NY",
+      "delta": "For services 12/16/20 and after, additional NYS DOH guidance applies: DAL DHCBS 21-05 (TB Testing Clarification), DAL DHCBS 21-03 (FAQs Regarding Annual TB Testing), and DAL DHCBS 20-14 (Annual TB Testing).",
+      "kind": "other",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "For Services 12/16/20 and After:\nNYS DOH DAL: DHCBS 21-05: TB Testing Clarification\nNYS DOH DAL: DHCBS 21-03: Frequently Asked Questions Regarding Annual\nTB Testing\nNYS DOH DAL: DHCBS 20-14: Annual TB Testing"
+      }
+    },
+    {
+      "state": "NY",
+      "delta": "Services provided and billed in accordance with COVID-19 PHE guidance issued by NYS DOH pertaining to ALP services will not be subject to disallowance, provided all other programmatic and billing requirements not altered or waived by the PHE guidance were met; PHE flexibilities ended May 11, 2023 unless otherwise specified by DOH through formal regulatory waivers.",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 2",
+        "quote": "Services provided and billed in accordance with COVID-19 PHE guidance issued by the NYS Department of Health (DOH) pertaining to ALP services will not be subject to disallowance, provided all other programmatic and billing requirements not altered or waived by the PHE guidance were met."
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The document does not tie Area 21 (TB test documentation) to any payment or case-mix classification; rate/case-mix related findings appear in separate areas (e.g. Area 13 Incorrect Rate Code Billed, Area 29 Incorrect PRI Level Claimed) and are not linked to this item."
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 763.13(c)(4)",
+      "notes": "Listed as a regulatory reference for Area 21.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "10 NYCRR \u00a7 763.13(c)(4)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 766.11(d)(4)",
+      "notes": "Listed as a regulatory reference for Area 21.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "10 NYCRR \u00a7 766.11(d)(4)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 763.13(e) and (h)",
+      "notes": "Listed as a regulatory reference for Area 21.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "10 NYCRR \u00a7 763.13(e) and (h)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.9(a)(8)(ii)",
+      "notes": "Listed as a regulatory reference for Area 21.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "18 NYCRR \u00a7 487.9(a)(8)(ii)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 488.9(a)(5)(ii)",
+      "notes": "Listed as a regulatory reference for Area 21.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "18 NYCRR \u00a7 488.9(a)(5)(ii)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.3(b)",
+      "notes": "Listed as a regulatory reference for Area 21.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "18 NYCRR \u00a7 494.3(b)"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL: DHCBS 21-05: TB Testing Clarification",
+      "notes": "Applies for services 12/16/20 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "For Services 12/16/20 and After:\nNYS DOH DAL: DHCBS 21-05: TB Testing Clarification"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL: DHCBS 21-03: Frequently Asked Questions Regarding Annual TB Testing",
+      "notes": "Applies for services 12/16/20 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "NYS DOH DAL: DHCBS 21-03: Frequently Asked Questions Regarding Annual\nTB Testing"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL: DHCBS 20-14: Annual TB Testing",
+      "notes": "Applies for services 12/16/20 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "NYS DOH DAL: DHCBS 20-14: Annual TB Testing"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

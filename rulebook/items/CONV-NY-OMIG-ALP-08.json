@@ -1,0 +1,263 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-08",
+  "item_name": "Medical Reassessment Does Not Meet Requirements",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. The protocol states a reassessment frequency requirement (\"in no event less frequently than once every six months\") but does not state an assessor observation/look-back window in days for this finding. The only look-back period stated anywhere in the document (7 days prior, at Finding 30) applies to the Patient Review Instrument, not to the medical reassessment.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "Reassessments must be conducted as frequently as required to respond to changes in a resident's condition, but in no event less frequently than once every six months.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "Reassessments must be conducted as frequently as required to respond to changes in a resident's condition, but in no event less frequently than once every six months."
+      }
+    },
+    {
+      "rule": "If the reassessment is not completed in the required time frame, or does not include an authorized practitioner's signature and date, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "If the reassessment is not completed in the time frame required or does not include an authorized practitioner's signature and date, the claim will be disallowed."
+      }
+    },
+    {
+      "rule": "For services 02/19/14 and after: a medical reassessment must be dated and signed by a physician, physician's assistant, or a nurse practitioner.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "For Services 02/19/14 and After:\nA medical reassessment must be dated and signed by a physician, physician's assistant, or a nurse practitioner."
+      }
+    },
+    {
+      "rule": "For services 09/28/89 to 02/18/14: a medical reassessment must be dated and signed by a physician.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "For Services 09/28/89 to 02/18/14:\nA medical reassessment must be dated and signed by a physician."
+      }
+    },
+    {
+      "rule": "Related finding (Finding 7, Missing Medical Reassessment): the medical reassessment is a follow-up examination which occurs 6 months after the medical evaluation or upon a change in condition; if the reassessment is missing when required, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "The medical reassessment is a follow up examination which occurs 6 months after the medical evaluation or upon a change in condition. If the reassessment is missing when required, the claim will be disallowed."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "The medical reassessment must bear an authorized practitioner's signature and date.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 7",
+          "quote": "If the reassessment is not completed in the time frame required or does not include an authorized practitioner's signature and date, the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Absence of signature and date is an express disallowance trigger."
+      },
+      {
+        "criterion": "For services on or after 02/19/14, the signature must be that of a physician, physician's assistant, or nurse practitioner; for services 09/28/89 to 02/18/14, a physician's signature.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 7",
+          "quote": "For Services 02/19/14 and After:\nA medical reassessment must be dated and signed by a physician, physician's assistant, or a nurse practitioner."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Qualifying signer varies by date of service."
+      },
+      {
+        "criterion": "Documentation must show the reassessment was completed within the required time frame (at least once every six months, and more often in response to changes in the resident's condition).",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 7",
+          "quote": "Reassessments must be conducted as frequently as required to respond to changes in a resident's condition, but in no event less frequently than once every six months."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "This finding is issued by the NYS Office of the Medicaid Inspector General and applies to New York Medicaid Assisted Living Program claims for service dates 01/01/2013 through 10/31/2025.",
+      "kind": "other",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "OMIG AUDIT PROTOCOL\nAssisted Living Program (ALP)\n(For Service Dates 01/01/2013 through 10/31/2025)"
+      }
+    },
+    {
+      "state": "NY",
+      "delta": "Regulatory references cited for this finding: 10 NYCRR \u00a7 1001.7(h); 18 NYCRR \u00a7 485.11(c); NYS Social Services Law \u00a7 461-L(2)(d)(iii).",
+      "kind": "other",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "10 NYCRR \u00a7 1001.7(h)\n18 NYCRR \u00a7 485.11(c)\nNYS Social Services Law \u00a7 461-L(2)(d)(iii)"
+      }
+    },
+    {
+      "state": "NY",
+      "delta": "Date-tiered regulatory references: 10/16/25 and after \u2014 NY Social Services Law \u00a7 461-L(2)(e); 10/04/19 and after \u2014 18 NYCRR \u00a7 487.4(h); 05/25/18 and after \u2014 18 NYCRR \u00a7 488.4(e)(1) and 18 NYCRR \u00a7 494.4(h).",
+      "kind": "other",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "For Services 10/16/25 and After:\nNY Social Services Law \u00a7 461-L(2)(e)\nFor Services 10/04/19 and After: 18 NYCRR \u00a7 487.4(h)\nFor Services 05/25/18 and After:\n18 NYCRR \u00a7 488.4(e)(1)\n18 NYCRR \u00a7 494.4(h)"
+      }
+    },
+    {
+      "state": "NY",
+      "delta": "Additional date-tiered references: 04/21/14 and after \u2014 NYS DOH DAL 14-10: Revised ALP Medical Evaluation; 04/11/14 and after \u2014 NYS DOH DAL 14-09: UAS-NY FAQ; 05/25/18 through 10/03/19 \u2014 18 NYCRR \u00a7 487.4(g); 02/19/14 through 05/24/18 \u2014 18 NYCRR \u00a7 487.4(f); 03/17/93 through 05/24/18 \u2014 18 NYCRR \u00a7 494.4(g); 09/28/89 through 05/24/18 \u2014 18 NYCRR \u00a7 488.4(d)(1).",
+      "kind": "other",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "For Services 04/21/14 and After:\nNYS DOH DAL 14-10: Revised ALP Medical Evaluation\nFor Services 04/11/14 and After: NYS DOH DAL 14-09: UAS-NY FAQ\nFor Services 05/25/18 through 10/03/19: 18 NYCRR \u00a7 487.4(g)\nFor Services 02/19/14 through 05/24/18: 18 NYCRR \u00a7 487.4(f)\nFor Services 03/17/93 through 05/24/18: 18 NYCRR \u00a7 494.4(g)\nFor Services 09/28/89 through 05/24/18: 18 NYCRR \u00a7 488.4(d)(1)"
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The document does not tie the medical reassessment finding to a payment or case-mix classification. (Separate findings address rate code and RUGS/PRI level, but not this one.)"
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 1001.7(h)",
+      "notes": "Listed as a regulatory reference for Finding 8.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "10 NYCRR \u00a7 1001.7(h)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 485.11(c)",
+      "notes": "Listed as a regulatory reference for Finding 8.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "18 NYCRR \u00a7 485.11(c)"
+      }
+    },
+    {
+      "citation": "NYS Social Services Law \u00a7 461-L(2)(d)(iii)",
+      "notes": "Listed as a regulatory reference for Finding 8.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "NYS Social Services Law \u00a7 461-L(2)(d)(iii)"
+      }
+    },
+    {
+      "citation": "NY Social Services Law \u00a7 461-L(2)(e)",
+      "notes": "Applies for services 10/16/25 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "For Services 10/16/25 and After:\nNY Social Services Law \u00a7 461-L(2)(e)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.4(h)",
+      "notes": "Applies for services 10/04/19 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "For Services 10/04/19 and After: 18 NYCRR \u00a7 487.4(h)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 488.4(e)(1); 18 NYCRR \u00a7 494.4(h)",
+      "notes": "Apply for services 05/25/18 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "For Services 05/25/18 and After:\n18 NYCRR \u00a7 488.4(e)(1)\n18 NYCRR \u00a7 494.4(h)"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL 14-10: Revised ALP Medical Evaluation",
+      "notes": "Applies for services 04/21/14 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "For Services 04/21/14 and After:\nNYS DOH DAL 14-10: Revised ALP Medical Evaluation"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL 14-09: UAS-NY FAQ",
+      "notes": "Applies for services 04/11/14 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "For Services 04/11/14 and After: NYS DOH DAL 14-09: UAS-NY FAQ"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.4(g)",
+      "notes": "Applies for services 05/25/18 through 10/03/19.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "For Services 05/25/18 through 10/03/19: 18 NYCRR \u00a7 487.4(g)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.4(f)",
+      "notes": "Applies for services 02/19/14 through 05/24/18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "For Services 02/19/14 through 05/24/18: 18 NYCRR \u00a7 487.4(f)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(g)",
+      "notes": "Applies for services 03/17/93 through 05/24/18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "For Services 03/17/93 through 05/24/18: 18 NYCRR \u00a7 494.4(g)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 488.4(d)(1)",
+      "notes": "Applies for services 09/28/89 through 05/24/18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "For Services 09/28/89 through 05/24/18: 18 NYCRR \u00a7 488.4(d)(1)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

@@ -1,0 +1,179 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-05",
+  "item_name": "Missing Medical Evaluation",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "No assessor observation/look-back window is stated for this audit area. The protocol states a staleness threshold instead: a medical evaluation document dated more than 12 months prior to the date of service is deemed missing (p. 5). That 12-month figure is a document-age/validity threshold tied to the date of service, not an observation window ending on an assessment reference date, so lookback_days is left NOT_FOUND.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "If the medical evaluation is missing, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 5",
+        "quote": "If the medical evaluation is missing or the document presented is more than 12 months prior to the date of service, the medical evaluation will be deemed as missing and the claim will be disallowed."
+      }
+    },
+    {
+      "rule": "If the medical evaluation document presented is more than 12 months prior to the date of service, it is deemed missing and the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 5",
+        "quote": "If the medical evaluation is missing or the document presented is more than 12 months prior to the date of service, the medical evaluation will be deemed as missing and the claim will be disallowed."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "A medical evaluation document must be present in the record and dated no more than 12 months prior to the date of service.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 5",
+          "quote": "If the medical evaluation is missing or the document presented is more than 12 months prior to the date of service, the medical evaluation will be deemed as missing and the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as the OMIG Audit Criteria for audit area 5; failure results in claim disallowance."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "This is a New York State (OMIG) audit protocol for the Assisted Living Program; audit area 5 disallows claims when the medical evaluation is missing or is dated more than 12 months prior to the date of service. Applicable service dates for the protocol are 01/01/2013 through 10/31/2025.",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 5",
+        "quote": "OMIG AUDIT PROTOCOL Assisted Living Program (ALP) (For Service Dates 01/01/2013 through 10/31/2025)"
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The pages for audit area 5 do not tie the medical evaluation to any payment or case-mix classification; consequence stated is claim disallowance only."
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 766.6(a)(2)",
+      "notes": "Listed under Regulatory References for audit area 5.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 5",
+        "quote": "10 NYCRR \u00a7 766.6(a)(2)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 485.11(c)",
+      "notes": "Listed under Regulatory References for audit area 5.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 5",
+        "quote": "18 NYCRR \u00a7 485.11(c)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 488.4(e)(1)",
+      "notes": "Listed under Regulatory References for audit area 5.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 5",
+        "quote": "18 NYCRR \u00a7 488.4(e)(1)"
+      }
+    },
+    {
+      "citation": "NYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines Version 2006-1, Section I",
+      "notes": "Listed under Regulatory References for audit area 5.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 5",
+        "quote": "NYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines\n    Version 2006-1, Section I"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.4(f) and (g)(1); 18 NYCRR \u00a7 487.4(h); 18 NYCRR \u00a7 487.4(k)",
+      "notes": "Applies to services 10/04/19 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 5",
+        "quote": "For Services 10/04/19 and After:\n18 NYCRR \u00a7 487.4(f) and (g)(1)\n18 NYCRR \u00a7 487.4(h)\n18 NYCRR \u00a7 487.4(k)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 488.4(f)(1)",
+      "notes": "Applies to services 05/25/18 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 5",
+        "quote": "For Services 05/25/18 and After:\n18 NYCRR \u00a7 488.4(f)(1)"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL 14-09: UAS-NY FAQ",
+      "notes": "Applies to services 04/11/14 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 5",
+        "quote": "For Services 04/11/14 and After:\nNYS DOH DAL 14-09: UAS-NY FAQ"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.4(e) and (f)(1); 18 NYCRR \u00a7 487.4(g); 18 NYCRR \u00a7 487.4(j)",
+      "notes": "Applies to services 05/25/18 through 10/03/19.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 5",
+        "quote": "For Services 05/25/18 through 10/03/19:\n18 NYCRR \u00a7 487.4(e) and (f)(1)\n18 NYCRR \u00a7 487.4(g)\n18 NYCRR \u00a7 487.4(j)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.4(d) and (e)(1)",
+      "notes": "Applies to services 02/19/14 through 05/24/18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 5",
+        "quote": "For Services 02/19/14 through 05/24/18:\n18 NYCRR \u00a7 487.4(d) and (e)(1)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.4(f); 18 NYCRR \u00a7 487.4(h)(3)(i)",
+      "notes": "Applies to services 01/23/91 through 05/24/18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 5",
+        "quote": "For Services 01/23/91 through 05/24/18:\n18 NYCRR \u00a7 487.4(f)\n18 NYCRR \u00a7 487.4(h)(3)(i)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 488.4(d)(1)",
+      "notes": "Applies to services 09/28/89 through 05/24/18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 5",
+        "quote": "For Services 09/28/89 through 05/24/18:\n18 NYCRR \u00a7 488.4(d)(1)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

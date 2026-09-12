@@ -1,0 +1,153 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-19",
+  "item_name": "Missing Certificate of Immunization",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. The Area 19 entry states only that a certificate of immunization is required for aides prior to direct patient contact; no observation/look-back window in days is stated for this audit area on p. 14.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "A certificate of immunization is required for aides prior to direct patient contact.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "A certificate of immunization is required for aides prior to direct patient contact."
+      }
+    },
+    {
+      "rule": "Immunization documentation for rubella is required for all personnel.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "Immunization documentation for rubella is required for all personnel, and rubeola (measles) for aides born on or after January 1, 1957."
+      }
+    },
+    {
+      "rule": "Immunization documentation for rubeola (measles) is required for aides born on or after January 1, 1957.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "Immunization documentation for rubella is required for all personnel, and rubeola (measles) for aides born on or after January 1, 1957."
+      }
+    },
+    {
+      "rule": "If documentation of the mandatory certificates of immunization is not in the personnel file of the aide who has direct patient contact, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "If documentation of the mandatory certificates of immunization are not in the personnel file of the aide who has direct patient contact, the claim will be disallowed."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Documentation of the mandatory certificates of immunization must be present in the personnel file of the aide who has direct patient contact.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 14",
+          "quote": "If documentation of the mandatory certificates of immunization are not in the personnel file of the aide who has direct patient contact, the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Absence of this documentation results in claim disallowance."
+      },
+      {
+        "criterion": "Rubella immunization documentation for all personnel; rubeola (measles) immunization documentation for aides born on or after January 1, 1957.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 14",
+          "quote": "Immunization documentation for rubella is required for all personnel, and rubeola (measles) for aides born on or after January 1, 1957."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Age/date-of-birth condition applies only to the rubeola requirement."
+      },
+      {
+        "criterion": "Certificate of immunization must exist prior to the aide's direct patient contact.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 14",
+          "quote": "A certificate of immunization is required for aides prior to direct patient contact."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Timing requirement: before direct patient contact."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "This entire audit protocol is a New York State (OMIG) document applicable to the Assisted Living Program for service dates 01/01/2013 through 10/31/2025; Area 19 requires immunization certificates (rubella for all personnel; rubeola for aides born on or after 01/01/1957) in the aide's personnel file or the claim is disallowed.",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "A certificate of immunization is required for aides prior to direct patient contact."
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The document does not tie Area 19 (Missing Certificate of Immunization) to any payment or case-mix classification; it states only that the claim will be disallowed when documentation is absent."
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 763.13(c)(1) and (2)",
+      "notes": "Listed under Regulatory References for Area 19.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "10 NYCRR \u00a7 763.13(c)(1) and (2)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 763.13(e)",
+      "notes": "Listed under Regulatory References for Area 19.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "10 NYCRR \u00a7 763.13(e)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 766.11(d)(1)-(3)",
+      "notes": "Listed under Regulatory References for Area 19.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "10 NYCRR \u00a7 766.11(d)(1)-(3)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.3(b)",
+      "notes": "Listed under Regulatory References for Area 19.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "18 NYCRR \u00a7 494.3(b)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

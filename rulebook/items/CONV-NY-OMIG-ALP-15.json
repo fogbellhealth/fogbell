@@ -1,0 +1,109 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-15",
+  "item_name": "Missing Personnel Record",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND \u2014 the protocol's Area 15 entry states no observation or look-back window. It states only that if the requested personnel record is not available for review, claims for all dates of service will be disallowed. (A 7-day look-back appears elsewhere in the document, at Area 30 for the PRI, but that is a different audit area and does not apply to Area 15.)",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "If the requested personnel record for the individual providing service is not available for review, claims for all dates of service will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "If the requested personnel record for the individual providing service is not available for review, claims for all dates of service will be disallowed."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "A personnel record must exist and be available for review, upon request, for the individual who provided the service on the claim; absence of the requested record results in disallowance of claims for all dates of service.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 11",
+          "quote": "If the requested personnel record for the individual providing service is not available for review, claims for all dates of service will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "The protocol states only availability of the requested personnel record; it does not enumerate the required contents of the personnel record within Area 15."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The Area 15 entry does not tie the personnel record to any payment or case-mix classification. (Rate/RUG-related provisions appear in separate audit areas, e.g. Areas 12 and 13, not in Area 15.)"
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 763.13(h)",
+      "notes": "Listed under Regulatory References for Area 15, Missing Personnel Record.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "10 NYCRR \u00a7 763.13(h)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 766.11(g)",
+      "notes": "Listed under Regulatory References for Area 15, Missing Personnel Record.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "10 NYCRR \u00a7 766.11(g)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.10(d)(5)(vii)",
+      "notes": "Listed under Regulatory References for Area 15, Missing Personnel Record.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "18 NYCRR \u00a7 487.10(d)(5)(vii)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 488.10(d)(4)(vii)",
+      "notes": "Listed under Regulatory References for Area 15, Missing Personnel Record.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "18 NYCRR \u00a7 488.10(d)(4)(vii)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.3(b)",
+      "notes": "Listed under Regulatory References for Area 15, Missing Personnel Record.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "18 NYCRR \u00a7 494.3(b)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "state_deltas",
+    "case_mix_relevance.source",
+    "conflicts",
+    "specific required contents of the personnel record (not enumerated in Area 15)"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

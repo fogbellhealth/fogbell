@@ -1,0 +1,144 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-07",
+  "item_name": "Missing Medical Reassessment",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. The audit protocol's Area 7 states a frequency requirement for the medical reassessment (a follow-up examination occurring 6 months after the medical evaluation or upon a change in condition), but it does not state an assessor observation/look-back window in days ending on an assessment reference date. Note: an unrelated area of the same document (Area 30, Patient Review Instrument) references a 7-day look back period, which does not apply to Area 7.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "The medical reassessment is a follow-up examination which occurs 6 months after the medical evaluation or upon a change in condition.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "The medical reassessment is a follow up examination which occurs 6 months after the medical evaluation or upon a change in condition."
+      }
+    },
+    {
+      "rule": "If the reassessment is missing when required, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "If the reassessment is missing when required, the claim will be disallowed."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "A medical reassessment (follow-up examination) must be present in the record when required \u2014 6 months after the medical evaluation or upon a change in condition; absence results in claim disallowance.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 7",
+          "quote": "The medical reassessment is a follow up examination which occurs 6 months after the medical evaluation or upon a change in condition. If the reassessment is missing when required, the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Framed as an OMIG Audit Criteria with a stated disallowance consequence."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "New York OMIG audit criteria for the Assisted Living Program: a missing medical reassessment, required 6 months after the medical evaluation or upon a change in condition, results in disallowance of the claim. Applies to service dates 01/01/2013 through 10/31/2025.",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "7. Missing Medical Reassessment"
+      }
+    },
+    {
+      "state": "NY",
+      "delta": "Regulatory references cited for this audit area: 10 NYCRR \u00a7 766.6(a)(2); 18 NYCRR \u00a7 485.11(c); NYS Social Services Law \u00a7 461-L(2)(d)(iii); NYS Medicaid Program ALP Manual, Policy Guidelines Version 2006-1, Section I; for services 04/21/14 and after NYS DOH DAL 14-10; for services 04/11/14 and after NYS DOH DAL 14-09: UAS-NY FAQ.",
+      "kind": "other",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "10 NYCRR \u00a7 766.6(a)(2)\n18 NYCRR \u00a7 485.11(c)\nNYS Social Services Law \u00a7 461-L(2)(d)(iii)"
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The document does not tie the Missing Medical Reassessment audit area to a payment/case-mix classification; it states only that the claim will be disallowed when the reassessment is missing."
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 766.6(a)(2)",
+      "notes": "Listed under Regulatory References for Area 7, Missing Medical Reassessment.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "10 NYCRR \u00a7 766.6(a)(2)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 485.11(c)",
+      "notes": "Listed under Regulatory References for Area 7.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "18 NYCRR \u00a7 485.11(c)"
+      }
+    },
+    {
+      "citation": "NYS Social Services Law \u00a7 461-L(2)(d)(iii)",
+      "notes": "Listed under Regulatory References for Area 7.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "NYS Social Services Law \u00a7 461-L(2)(d)(iii)"
+      }
+    },
+    {
+      "citation": "NYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines Version 2006-1, Section I",
+      "notes": "Listed under Regulatory References for Area 7.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "NYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines\n     Version 2006-1, Section I"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL 14-10: Revised ALP Medical Evaluation",
+      "notes": "Applies to services 04/21/14 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "For Services 04/21/14 and After:\nNYS DOH DAL 14-10: Revised ALP Medical Evaluation"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL 14-09: UAS-NY FAQ",
+      "notes": "Applies to services 04/11/14 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 7",
+        "quote": "For Services 04/11/14 and After: NYS DOH DAL 14-09: UAS-NY FAQ"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

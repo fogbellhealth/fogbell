@@ -1,0 +1,161 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-29",
+  "item_name": "Incorrect PRI Level Claimed",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. The audit criteria for Area 29 (Incorrect PRI Level Claimed) on p. 18 state no observation/look-back window; they only state that the PRI Level must be supported by the record. A 7-day window appears on the same page but belongs to a different finding area (Area 30, 'Patient Review Instrument Invalid Resident not on site for the look back period': 'dated while the patient is not in the facility on that date or the 7 days prior'), and is not stated as applying to Area 29. No window is therefore recorded for this item.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "If the PRI Level is not supported by the record, the correct level will be determined from the information in the record.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 18",
+        "quote": "If the PRI Level is not supported by the record, the correct level will be determined from the information in the record."
+      }
+    },
+    {
+      "rule": "When the PRI Level claimed is not supported, the difference between the appropriate claim amount and the paid claim amount will be disallowed (a partial disallowance, not a full claim denial).",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 18",
+        "quote": "The difference between the appropriate claim amount and the paid claim amount will be disallowed."
+      }
+    },
+    {
+      "rule": "This finding area applies only to service dates prior to 03/01/2015; it was phased out per NYS DOH Medicaid Update, February 2013, Vol. 29, No. 3.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "For Services Dates Prior to 03/01/2015"
+      }
+    },
+    {
+      "rule": "Phase-out authority for the pre-03/01/2015 findings (including Area 29): NYS DOH Medicaid Update, February 2013, Vol. 29, No. 3.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "Findings below phased out as per NYS DOH Medicaid Update, February 2013, Vol. 29, No. 3"
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "The resident record must contain information supporting the PRI Level claimed; if it does not, OMIG will determine the correct level from the information in the record and disallow the payment difference.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 18",
+          "quote": "If the PRI Level is not supported by the record, the correct level will be determined from the information in the record."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Framed as the OMIG Audit Criteria for this finding area; non-support of the level drives a payment-difference disallowance."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "This is a New York State OMIG audit protocol; Area 29 (Incorrect PRI Level Claimed) applies to ALP claims with service dates on or after 01/01/2013 and prior to 03/01/2015, per the page header and the phase-out note.",
+      "kind": "other",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 18",
+        "quote": "(For Service Dates 01/01/2013 through 02/28/2015)"
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "high",
+    "notes": "The document ties the PRI Level directly to the amount payable: an unsupported level results in re-determination of the correct level and disallowance of the difference between the appropriate and paid claim amounts. Regulatory references include the rate-setting provision 10 NYCRR \u00a7 86-2.30(a) and (c).",
+    "source": {
+      "doc": "omig-alp-protocol-2025-12",
+      "loc": "p. 18",
+      "quote": "the correct level will be determined from the information in the record. The difference between the appropriate claim amount and the paid claim amount will be disallowed."
+    }
+  },
+  "conflicts": [
+    {
+      "topic": "Service-date range applicable to this finding area",
+      "positions": [
+        {
+          "authority": "omig-alp-protocol-2025-12",
+          "claim": "The protocol as a whole covers service dates 01/01/2013 through 10/31/2025.",
+          "source": {
+            "doc": "omig-alp-protocol-2025-12",
+            "loc": "p. 1",
+            "quote": "(For Service Dates 01/01/2013 through 10/31/2025)"
+          }
+        },
+        {
+          "authority": "omig-alp-protocol-2025-12",
+          "claim": "The page containing Area 29 is scoped to service dates 01/01/2013 through 02/28/2015.",
+          "source": {
+            "doc": "omig-alp-protocol-2025-12",
+            "loc": "p. 18",
+            "quote": "(For Service Dates 01/01/2013 through 02/28/2015)"
+          }
+        }
+      ],
+      "resolution": "Resolved by the document itself: the heading 'For Services Dates Prior to 03/01/2015' on p. 17 limits findings 25-30 (including Area 29) to service dates before 03/01/2015, while the overall protocol covers 01/01/2013 through 10/31/2025."
+    }
+  ],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 86-2.30(a) and (c)",
+      "notes": "Listed under Regulatory References for Area 29.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 18",
+        "quote": "10 NYCRR \u00a7 86-2.30(a) and (c)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 766.6(a)(3)",
+      "notes": "Listed under Regulatory References for Area 29.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 18",
+        "quote": "10 NYCRR \u00a7 766.6(a)(3)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 504.3(i)",
+      "notes": "Listed under Regulatory References for Area 29.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 18",
+        "quote": "18 NYCRR \u00a7 504.3(i)"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL HCBS 08-02: Completion of the PRI for Individuals Participating in the ALP",
+      "notes": "Listed under Regulatory References for Area 29.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 18",
+        "quote": "NYS DOH DAL HCBS 08-02: Completion of the PRI for Individuals Participating in"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

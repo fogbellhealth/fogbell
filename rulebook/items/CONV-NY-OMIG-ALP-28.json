@@ -1,0 +1,165 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-28",
+  "item_name": "Incomplete Patient Review Instrument",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "Audit area 28 states no observation/look-back window. The document does state a 7-day on-site look-back period, but only in a separate audit area (30. Patient Review Instrument Invalid Resident not on site for the look back period, p. 18), not in area 28. No look-back window is stated for area 28 itself.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "If the Patient Review Instrument applicable for the claim under review is not dated and signed by a qualified assessor, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "If the Patient Review Instrument applicable for the claim under review is not dated and signed by a qualified assessor, the claim will be disallowed."
+      }
+    },
+    {
+      "rule": "This finding applies to service dates prior to 03/01/2015; it was phased out as per NYS DOH Medicaid Update, February 2013, Vol. 29, No. 3.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "For Services Dates Prior to 03/01/2015\nFindings below phased out as per NYS DOH Medicaid Update, February 2013, Vol. 29, No. 3"
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "The Patient Review Instrument applicable for the claim under review must be dated.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 17",
+          "quote": "If the Patient Review Instrument applicable for the claim under review is not dated and signed by a qualified assessor, the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Absence results in claim disallowance."
+      },
+      {
+        "criterion": "The Patient Review Instrument applicable for the claim under review must be signed by a qualified assessor.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 17",
+          "quote": "If the Patient Review Instrument applicable for the claim under review is not dated and signed by a qualified assessor, the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "The document does not define \"qualified assessor\" on the pages supplied."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "This is a New York State (OMIG) audit protocol for the Assisted Living Program; audit area 28 requires that the PRI applicable to the claim be dated and signed by a qualified assessor, or the claim is disallowed.",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "28. Incomplete Patient Review Instrument"
+      }
+    },
+    {
+      "state": "NY",
+      "delta": "Regulatory references cited for this finding: 10 NYCRR \u00a7 86-2.30(c); 10 NYCRR \u00a7 766.6(a)(3); 18 NYCRR \u00a7 504.3(i); DOH Hospital and Community PRI Instructions, Specialized Services, Paragraph 35; NYS DOH DAL HCBS 08-02; For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(h); For Services 03/17/93 through 05/24/18: 18 NYCRR \u00a7 494.4(g).",
+      "kind": "other",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "10 NYCRR \u00a7 86-2.30(c)\n10 NYCRR \u00a7 766.6(a)(3)\n18 NYCRR \u00a7 504.3(i)\nDOH Hospital and Community PRI Instructions, Specialized Services, Paragraph 35"
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "Audit area 28 does not itself tie the PRI to a payment or case-mix classification; the document addresses PRI level and payment in a separate finding (29. Incorrect PRI Level Claimed), not in area 28."
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 86-2.30(c)",
+      "notes": "Listed as a regulatory reference for audit area 28.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "10 NYCRR \u00a7 86-2.30(c)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 766.6(a)(3)",
+      "notes": "Listed as a regulatory reference for audit area 28.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "10 NYCRR \u00a7 766.6(a)(3)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 504.3(i)",
+      "notes": "Listed as a regulatory reference for audit area 28.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "18 NYCRR \u00a7 504.3(i)"
+      }
+    },
+    {
+      "citation": "DOH Hospital and Community PRI Instructions, Specialized Services, Paragraph 35",
+      "notes": "Listed as a regulatory reference for audit area 28.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "DOH Hospital and Community PRI Instructions, Specialized Services, Paragraph 35"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL HCBS 08-02: Completion of the PRI for Individuals Participating in the ALP",
+      "notes": "Listed as a regulatory reference for audit area 28.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "NYS DOH DAL HCBS 08-02: Completion of the PRI for Individuals Participating in \n the ALP"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(h)",
+      "notes": "Applies For Services 05/25/18 and After.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(h)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(g)",
+      "notes": "Applies For Services 03/17/93 through 05/24/18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "For Services 03/17/93 through 05/24/18: 18 NYCRR \u00a7 494.4(g)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "case_mix_relevance.source",
+    "conflicts"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

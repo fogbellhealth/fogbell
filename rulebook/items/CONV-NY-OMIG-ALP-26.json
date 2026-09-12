@@ -1,0 +1,105 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-26",
+  "item_name": "Nursing/Functional/Social Reassessment Not Conducted as Required",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. Audit area 26 states a reassessment frequency (upon a change in the resident's condition or at least every six months) but does not state an assessor observation/look-back window ending on an assessment reference date. The only look-back period stated anywhere in the document is in a different audit area (30. Patient Review Instrument Invalid \u2014 Resident not on site for the look back period, 'that date or the 7 days prior', p. 18), which pertains to the PRI, not to this item.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "A nursing/functional/social reassessment must be conducted due to a change in the resident's condition or at least every six months; if it is not, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "If the nursing/functional/social reassessment is not done due to a change in the resident's condition or at least every six months, the claim will be disallowed."
+      }
+    },
+    {
+      "rule": "This audit area applies only to service dates prior to 03/01/2015; the findings were phased out per NYS DOH Medicaid Update, February 2013, Vol. 29, No. 3.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "For Services Dates Prior to 03/01/2015\nFindings below phased out as per NYS DOH Medicaid Update, February 2013, Vol. 29, No. 3"
+      }
+    },
+    {
+      "rule": "The page containing this audit area is scoped to service dates 01/01/2013 through 02/28/2015.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "(For Service Dates 01/01/2013 through 02/28/2015)"
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Documentation must show that a nursing/functional/social reassessment was conducted upon a change in the resident's condition or at least every six months; absence results in disallowance of the claim.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 17",
+          "quote": "If the nursing/functional/social reassessment is not done due to a change in the resident's condition or at least every six months, the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as an OMIG Audit Criteria with an explicit disallowance consequence."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The document does not tie audit area 26 to a payment or case-mix classification. (Separate audit areas 13 and 29 address rate code and PRI level, but those are distinct items.)"
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 766.6(a)(3)",
+      "notes": "Listed as a Regulatory Reference for audit area 26.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "10 NYCRR \u00a7 766.6(a)(3)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(f)-(h) \u2014 For Services 05/25/18 and After",
+      "notes": "Date-scoped regulatory reference listed for audit area 26.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(f)-(h)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(e)-(g) \u2014 For Services 03/17/93 through 05/24/18",
+      "notes": "Date-scoped regulatory reference listed for audit area 26.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "For Services 03/17/93 through 05/24/18: 18 NYCRR \u00a7 494.4(e)-(g)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "state_deltas",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

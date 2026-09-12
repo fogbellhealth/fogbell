@@ -1,0 +1,117 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-24",
+  "item_name": "Failure to Complete Annual Performance Evaluation",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. The audit criteria for Area 24 reference an \"annual performance evaluation\" but the document does not state an assessor observation/look-back window in days for this item.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "If the required annual performance evaluation is missing or incomplete, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 16",
+        "quote": "If the required annual performance evaluation is missing or incomplete, the claim will be disallowed."
+      }
+    },
+    {
+      "rule": "This audit protocol applies to ALP service dates 01/01/2013 through 10/31/2025.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 16",
+        "quote": "(For Service Dates 01/01/2013 through 10/31/2025)"
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "An annual performance evaluation must be present and complete in the record for the individual providing service; a missing or incomplete evaluation results in claim disallowance.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 16",
+          "quote": "If the required annual performance evaluation is missing or incomplete, the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as OMIG Audit Criteria for Area 24; the document does not specify which elements make an evaluation \"complete.\""
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "New York OMIG audit protocol for the Assisted Living Program treats a missing or incomplete required annual performance evaluation as a basis for disallowing the claim, citing 10 NYCRR \u00a7 763.13(h), 10 NYCRR \u00a7 766.11(g), 18 NYCRR \u00a7 494.3(b), and 18 NYCRR \u00a7 505.14(f)(1) and (2).",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 16",
+        "quote": "Regulatory References 10 NYCRR \u00a7 763.13(h) 10 NYCRR \u00a7 766.11(g) 18 NYCRR \u00a7 494.3(b) 18 NYCRR \u00a7 505.14(f)(1) and (2)"
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The document does not tie Area 24 to any payment or case-mix classification; it states only that the claim will be disallowed."
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 763.13(h)",
+      "notes": "Listed as a regulatory reference for Area 24.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 16",
+        "quote": "10 NYCRR \u00a7 763.13(h)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 766.11(g)",
+      "notes": "Listed as a regulatory reference for Area 24.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 16",
+        "quote": "10 NYCRR \u00a7 766.11(g)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.3(b)",
+      "notes": "Listed as a regulatory reference for Area 24.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 16",
+        "quote": "18 NYCRR \u00a7 494.3(b)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 505.14(f)(1) and (2)",
+      "notes": "Listed as a regulatory reference for Area 24.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 16",
+        "quote": "18 NYCRR \u00a7 505.14(f)(1) and (2)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "case_mix_relevance.source",
+    "conflicts"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

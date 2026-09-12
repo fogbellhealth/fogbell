@@ -1,0 +1,267 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-06",
+  "item_name": "Medical Evaluation Does Not Meet Requirements",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. The protocol's Area 6 states timing requirements tied to the physical examination date (medical evaluation must be completed within 30 days from the examination date; for newly admitted residents the physical examination must occur within 30 days of the admission date), but it does not state an assessor observation/look-back window ending on an assessment reference date for this item. The document header also states the protocol applies to service dates 01/01/2013 through 10/31/2025, which is a scope period, not a look-back window.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "Medical evaluations require the date of the resident's physical examination.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "Medical evaluations require the date of the resident's physical examination and must be completed within 30 days from the examination date."
+      }
+    },
+    {
+      "rule": "The medical evaluation must be completed within 30 days from the physical examination date.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "Medical evaluations require the date of the resident's physical examination and must be completed within 30 days from the examination date."
+      }
+    },
+    {
+      "rule": "For newly admitted residents, the physical examination must occur within 30 days of the admission date.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "For newly admitted residents, the physical examination must occur within 30 days of the admission date."
+      }
+    },
+    {
+      "rule": "If the medical evaluation does not meet the requirements, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "If the medical evaluation does not meet the requirements, the claim will be disallowed."
+      }
+    },
+    {
+      "rule": "For services on or after 02/19/14: a medical evaluation must be dated and signed by a physician, physician's assistant, or a nurse practitioner.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "For Services 02/19/14 and After: A medical evaluation must be dated and signed by a physician, physician's assistant, or a nurse practitioner."
+      }
+    },
+    {
+      "rule": "For services 09/28/89 to 02/18/14: a medical evaluation must be dated and signed by a physician.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "For Services 09/28/89 to 02/18/14: A medical evaluation must be dated and signed by a physician."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "The medical evaluation must show the date of the resident's physical examination.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 6",
+          "quote": "Medical evaluations require the date of the resident's physical examination and must be completed within 30 days from the examination date."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as a requirement whose failure results in disallowance; this is a state (NY OMIG) protocol, not a federal document."
+      },
+      {
+        "criterion": "The medical evaluation must bear the signature and date of an authorized practitioner (physician, physician's assistant, or nurse practitioner for services 02/19/14 and after; physician only for services 09/28/89 to 02/18/14).",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 6",
+          "quote": "A medical evaluation must be dated and signed by a physician, physician's assistant, or a nurse practitioner."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Signer requirement varies by service date."
+      },
+      {
+        "criterion": "Documentation must establish that the evaluation was completed within 30 days of the examination date, and, for newly admitted residents, that the physical examination occurred within 30 days of the admission date.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 6",
+          "quote": "For newly admitted residents, the physical examination must occur within 30 days of the admission date."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "OMIG (New York) audit criteria for Area 6: medical evaluation must be dated within 30 days of the physical examination, the exam must occur within 30 days of admission for newly admitted residents, and the evaluation must be dated and signed by an authorized practitioner; failure results in claim disallowance.",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "Medical evaluations require the date of the resident's physical examination and must be completed within 30 days from the examination date."
+      }
+    },
+    {
+      "state": "NY",
+      "delta": "Applicable regulatory references for this audit area vary by service date, including 10 NYCRR \u00a7 1001.7(h), 18 NYCRR \u00a7 485.11(c), 18 NYCRR \u00a7 488.4(e)(1), and date-banded citations such as NY Social Services Law \u00a7 461-L(2)(e) for services 10/16/25 and after.",
+      "kind": "other",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "10 NYCRR \u00a7 1001.7(h)\n18 NYCRR \u00a7 485.11(c)\n18 NYCRR \u00a7 488.4(e)(1)\nFor Services 10/16/25 and After:\nNY Social Services Law \u00a7 461-L(2)(e)"
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "Area 6 states that non-conforming medical evaluations result in claim disallowance, but the document does not tie this item to a case-mix/payment classification (e.g., RUG group). RUG-related requirements appear under separate audit areas (12 and 13), not Area 6."
+  },
+  "conflicts": [
+    {
+      "topic": "Service-date scope of the protocol vs. regulatory references extending beyond it",
+      "positions": [
+        {
+          "authority": "omig-alp-protocol-2025-12",
+          "claim": "The protocol applies to service dates 01/01/2013 through 10/31/2025.",
+          "source": {
+            "doc": "omig-alp-protocol-2025-12",
+            "loc": "p. 6",
+            "quote": "(For Service Dates 01/01/2013 through 10/31/2025)"
+          }
+        },
+        {
+          "authority": "omig-alp-protocol-2025-12",
+          "claim": "Area 6 lists a regulatory reference applicable to services 10/16/25 and after, and signer rules applicable to services beginning 09/28/89 \u2014 periods partly outside the stated protocol scope.",
+          "source": {
+            "doc": "omig-alp-protocol-2025-12",
+            "loc": "p. 6",
+            "quote": "For Services 10/16/25 and After:\nNY Social Services Law \u00a7 461-L(2)(e)"
+          }
+        }
+      ],
+      "resolution": "unresolved \u2014 surface to user"
+    }
+  ],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 1001.7(h)",
+      "notes": "Listed as a regulatory reference for Area 6.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "10 NYCRR \u00a7 1001.7(h)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 485.11(c)",
+      "notes": "Listed as a regulatory reference for Area 6.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "18 NYCRR \u00a7 485.11(c)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 488.4(e)(1)",
+      "notes": "Listed as a regulatory reference for Area 6.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "18 NYCRR \u00a7 488.4(e)(1)"
+      }
+    },
+    {
+      "citation": "NY Social Services Law \u00a7 461-L(2)(e)",
+      "notes": "Applies for services 10/16/25 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "For Services 10/16/25 and After:\nNY Social Services Law \u00a7 461-L(2)(e)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.4(f) and (g)(1); 18 NYCRR \u00a7 487.4(h); 18 NYCRR \u00a7 487.4(k)",
+      "notes": "Applies for services 10/04/19 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "For Services 10/04/19 and After:\n18 NYCRR \u00a7 487.4(f) and (g)(1)\n18 NYCRR \u00a7 487.4(h)\n18 NYCRR \u00a7 487.4(k)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 488.4(f)(1)",
+      "notes": "Applies for services 05/25/18 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "For Services 05/25/18 and After:\n18 NYCRR \u00a7 488.4(f)(1)"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL 14-09: UAS-NY FAQ",
+      "notes": "Applies for services 04/11/14 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "For Services 04/11/14 and After:\nNYS DOH DAL 14-09: UAS-NY FAQ"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.4(e) and (f)(1); 18 NYCRR \u00a7 487.4(g); 18 NYCRR \u00a7 487.4(j)",
+      "notes": "Applies for services 05/25/18 through 10/03/19.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "For Services 05/25/18 through 10/03/19:\n18 NYCRR \u00a7 487.4(e) and (f)(1)\n18 NYCRR \u00a7 487.4(g)\n18 NYCRR \u00a7 487.4(j)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.4(d) and (e)(1)",
+      "notes": "Applies for services 02/19/14 through 05/24/18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "For Services 02/19/14 through 05/24/18:\n18 NYCRR \u00a7 487.4(d) and (e)(1)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.4(f); 18 NYCRR \u00a7 487.4(h)(3)(i)",
+      "notes": "Applies for services 01/23/91 through 05/24/18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "For Services 01/23/91 through 05/24/18: \n18 NYCRR \u00a7 487.4(f)\n18 NYCRR \u00a7 487.4(h)(3)(i)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 488.4(d)(1)",
+      "notes": "Applies for services 09/28/89 through 05/24/18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 6",
+        "quote": "For Services 09/28/89 through 05/24/18: \n18 NYCRR \u00a7 488.4(d)(1)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

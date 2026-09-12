@@ -1,0 +1,148 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-02",
+  "item_name": "Missing Service Documentation",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. The Area 2 entry on p. 3 states only that the service must be documented in the record and that the claim is disallowed if service documentation is missing; no observation/look-back window in days is stated for this audit area. The document's overall scope is a service-date range (01/01/2013 through 10/31/2025), which is a claim-period scope, not an assessor look-back window.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "The service must be documented in the record.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "The service must be documented in the record."
+      }
+    },
+    {
+      "rule": "If the service documentation is missing, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "The claim will be disallowed if the service documentation is missing."
+      }
+    },
+    {
+      "rule": "Scope: this audit protocol applies to ALP service dates 01/01/2013 through 10/31/2025.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "(For Service Dates 01/01/2013 through 10/31/2025)"
+      }
+    },
+    {
+      "rule": "Services provided and billed in accordance with the listed NYSDOH COVID-19 PHE guidance will not be subject to disallowance, provided all other programmatic and billing requirements not altered or waived by the PHE guidance were met.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 2",
+        "quote": "Services provided and billed in accordance with COVID-19 PHE guidance issued by the NYS Department of Health (DOH) pertaining to ALP services will not be subject to disallowance, provided all other programmatic and billing requirements not altered or waived by the PHE guidance were met."
+      }
+    },
+    {
+      "rule": "Flexibilities regarding minimum billing standards and documentation requirements ended when the PHE expired at the end of the day on May 11, 2023, unless otherwise specified by DOH through formal regulatory waivers.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 2",
+        "quote": "On the date the PHE ended, the flexibilities afforded providers regarding minimum billing standards and documentation requirements also ended, unless otherwise specified by DOH through formal regulatory waivers."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "Missing Service Documentation: the service must be documented in the record; the claim will be disallowed if the service documentation is missing.",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "The service must be documented in the record. The claim will be disallowed if the service documentation is missing."
+      }
+    },
+    {
+      "state": "NY",
+      "delta": "OMIG will review and consider any relevant contemporaneous documentation maintained and available in the provider's records to substantiate a claim.",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 1",
+        "quote": "OMIG will review and consider any relevant contemporaneous documentation maintained and available in the provider's records to substantiate a claim."
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The Area 2 entry does not tie missing service documentation to a payment/case-mix classification; it states only that the claim will be disallowed. Rate/RUG-related provisions appear in other audit areas of the document, not in Area 2."
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "18 NYCRR \u00a7 494.5",
+      "notes": "Listed as a Regulatory Reference for Area 2, Missing Service Documentation.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "18 NYCRR \u00a7 494.5"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 505.35(h)(1)",
+      "notes": "Listed as a Regulatory Reference for Area 2, Missing Service Documentation.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "18 NYCRR \u00a7 505.35(h)(1)"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL 22-14: Reminder of Assisted Living Program Provider Responsibilities",
+      "notes": "Listed as a Regulatory Reference for Area 2.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "NYS DOH DAL 22-14: Reminder of Assisted Living Program Provider Responsibilities"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(c)",
+      "notes": "Applies to services 05/25/18 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(c)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(b)",
+      "notes": "Applies to services 03/17/93 through 05/24/18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "For Services 03/17/93 through 05/24/18: 18 NYCRR \u00a7 494.4(b)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "supportive_documentation.federal",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

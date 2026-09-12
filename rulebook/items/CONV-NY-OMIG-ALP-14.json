@@ -1,0 +1,141 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-14",
+  "item_name": "Billed for Services While Inpatient at Another Facility",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND \u2014 the audit criteria for Area 14 state only that services paid when the resident was an inpatient at another facility will be disallowed; no observation/look-back window is stated for this item on p. 11. (A 7-day look-back appears elsewhere in the document, at Area 30 for the PRI, but it is not applicable to this item.)",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "Services paid when the resident was an inpatient at another facility will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "Services paid when the resident was an inpatient at another facility will be disallowed."
+      }
+    },
+    {
+      "rule": "This audit protocol applies to ALP service dates 01/01/2013 through 10/31/2025.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "(For Service Dates 01/01/2013 through 10/31/2025)"
+      }
+    },
+    {
+      "rule": "Services provided and billed in accordance with COVID-19 PHE guidance issued by NYS DOH pertaining to ALP services will not be subject to disallowance, provided all other programmatic and billing requirements not altered or waived by the PHE guidance were met.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 2",
+        "quote": "Services provided and billed in accordance with COVID-19 PHE guidance issued by the NYS Department of Health (DOH) pertaining to ALP services will not be subject to disallowance, provided all other programmatic and billing requirements not altered or waived by the PHE guidance were met."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "OMIG audit criterion: services paid when the resident was an inpatient at another facility will be disallowed (ALP audit protocol Area 14).",
+      "kind": "coding",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "14. Billed for Services While Inpatient at Another Facility"
+      }
+    },
+    {
+      "state": "NY",
+      "delta": "Regulatory references cited for this finding: 18 NYCRR \u00a7 504.3(e) and (h); 18 NYCRR \u00a7 505.23(a)(1)(i); 18 NYCRR \u00a7 505.35(h)(7); NYS Medicaid Program ALP Manual, Policy Guidelines Version 2006-1, Section II; NYS DOH DAL 22-14; NYS DOH DAL: September 13, 2012.",
+      "kind": "other",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "18 NYCRR \u00a7 504.3(e) and (h)\n18 NYCRR \u00a7 505.23(a)(1)(i)\n18 NYCRR \u00a7 505.35(h)(7)"
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The document does not tie this finding to a payment/case-mix classification; it addresses disallowance of claims billed during an inpatient stay elsewhere. (Case-mix/RUG-related content appears at other findings, e.g. Areas 12 and 13, not here.)"
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "18 NYCRR \u00a7 504.3(e) and (h)",
+      "notes": "Listed under Regulatory References for Area 14.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "18 NYCRR \u00a7 504.3(e) and (h)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 505.23(a)(1)(i)",
+      "notes": "Listed under Regulatory References for Area 14.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "18 NYCRR \u00a7 505.23(a)(1)(i)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 505.35(h)(7)",
+      "notes": "Listed under Regulatory References for Area 14.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "18 NYCRR \u00a7 505.35(h)(7)"
+      }
+    },
+    {
+      "citation": "NYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines Version 2006-1, Section II",
+      "notes": "Listed under Regulatory References for Area 14.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "NYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines\n     Version 2006-1, Section II"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL 22-14: Reminder of Assisted Living Program Provider Responsibilities",
+      "notes": "Listed under Regulatory References for Area 14.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "NYS DOH DAL 22-14: Reminder of Assisted Living Program Provider Responsibilities"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL: September 13, 2012",
+      "notes": "Listed under Regulatory References for Area 14.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 11",
+        "quote": "NYS DOH DAL: September 13, 2012"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "supportive_documentation.federal",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

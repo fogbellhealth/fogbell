@@ -1,0 +1,259 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-17",
+  "item_name": "Minimum Training Standards Not Met for the Home Health Aide",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. The protocol's Area 17 entry states only that the Home Health Aide must have met minimum training requirements \"when services were rendered\"; no observation/look-back window in days is stated on p. 13 or elsewhere for this area.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "If the Home Health Aide did not meet minimum training requirements when services were rendered, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "If the Home Health Aide did not meet minimum training requirements when services were rendered, the claim will be disallowed."
+      }
+    },
+    {
+      "rule": "This document is guidance only; in the event of a conflict between statements in the protocols and statutory or regulatory requirements, the requirements of the statutes and regulations govern.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 1",
+        "quote": "In the event of a conflict between statements in the protocols and either statutory or regulatory requirements, the requirements of the statutes and regulations govern."
+      }
+    },
+    {
+      "rule": "Services provided and billed in accordance with COVID-19 PHE guidance issued by NYS DOH pertaining to ALP services (including DAL: DHCBS 20-10, 21-02 and 21-09 on in-service/orientation/supervision requirements for Home Health Aides) will not be subject to disallowance, provided all other programmatic and billing requirements not altered or waived by the PHE guidance were met.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 2",
+        "quote": "Services provided and billed in accordance with COVID-19 PHE guidance issued by the NYS Department of Health (DOH) pertaining to ALP services will not be subject to disallowance, provided all other programmatic and billing requirements not altered or waived by the PHE guidance were met."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Documentation that the Home Health Aide met minimum training requirements at the time the services on the sampled claim were rendered (absence results in disallowance).",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 13",
+          "quote": "If the Home Health Aide did not meet minimum training requirements when services were rendered, the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "The protocol does not enumerate which specific documents (e.g., certificate, Home Care Registry verification) must be present; it cites regulatory references and DOH guidance on verification of training and certificate validity."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The Area 17 entry does not tie Home Health Aide training standards to any payment or case-mix classification. (Rate/RUG-related issues appear in separate protocol areas.)"
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 403.5(a)",
+      "notes": "Listed as a Regulatory Reference for Area 17.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "10 NYCRR \u00a7 403.5(a)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 700.2(b)(9)",
+      "notes": "Listed as a Regulatory Reference for Area 17.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "10 NYCRR \u00a7 700.2(b)(9)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 763.13(b)(1) and (h)",
+      "notes": "Listed as a Regulatory Reference for Area 17.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "10 NYCRR \u00a7 763.13(b)(1) and (h)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 766.11(b)(1)",
+      "notes": "Listed as a Regulatory Reference for Area 17.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "10 NYCRR \u00a7 766.11(b)(1)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.9(a)(3) and (5)",
+      "notes": "Listed as a Regulatory Reference for Area 17.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "18 NYCRR \u00a7 487.9(a)(3) and (5)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.3(b)",
+      "notes": "Listed as a Regulatory Reference for Area 17.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "18 NYCRR \u00a7 494.3(b)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.6(a)(1)",
+      "notes": "Listed as a Regulatory Reference for Area 17.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "18 NYCRR \u00a7 494.6(a)(1)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 504.1(c)",
+      "notes": "Listed as a Regulatory Reference for Area 17 (appears in Area 17 but not in the parallel Personal Care Aide Area 16 list).",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "18 NYCRR \u00a7 504.1(c)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 505.14(e)(1)",
+      "notes": "Listed as a Regulatory Reference for Area 17.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "18 NYCRR \u00a7 505.14(e)(1)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 505.14(e)(3)",
+      "notes": "Listed as a Regulatory Reference for Area 17.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "18 NYCRR \u00a7 505.14(e)(3)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 505.14(e)(7)",
+      "notes": "Listed as a Regulatory Reference for Area 17.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "18 NYCRR \u00a7 505.14(e)(7)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 505.14(e)(9)",
+      "notes": "Listed as a Regulatory Reference for Area 17.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "18 NYCRR \u00a7 505.14(e)(9)"
+      }
+    },
+    {
+      "citation": "NYS Public Health Law \u00a7 3613(3)",
+      "notes": "Listed as a Regulatory Reference for Area 17.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "NYS Public Health Law \u00a7 3613(3)"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL: DHCBS 22-08: Posting of Home Health Aide and Personal Care Aide Training Programs to DOH Website, Training Program Updates and Reminders",
+      "notes": "Listed as a Regulatory Reference for Area 17.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "NYS DOH DAL: DHCBS 22-08: Posting of Home Health Aide and Personal Care Aide\n    Training Programs to DOH Website, Training Program Updates and Reminders"
+      }
+    },
+    {
+      "citation": "NYS DOH Home Care Registry (HCR) Advisory, Using the Home Care Registry (HCR) to Verify Successful Completion of Training, January 6, 2011",
+      "notes": "Listed as a Regulatory Reference for Area 17.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "NYS DOH Home Care Registry (HCR) Advisory, Using the Home Care Registry (HCR)\n to Verify Successful Completion of Training, January 6, 2011"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL: DHCBC 06-02",
+      "notes": "Listed as a Regulatory Reference for Area 17.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "NYS DOH DAL: DHCBC 06-02"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL: DHCBS 22-07: Verification of Training and Certificate Validity for Personal Care Aides, Home Health Aides, Advanced Home Health Aides \u2014 For Services 04/11/22 and After",
+      "notes": "Date-scoped reference: applies to services on or after 04/11/22.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "For Services 04/11/22 and After:\nNYS DOH DAL: DHCBS 22-07: Verification of Training and Certificate Validity for\n    Personal Care Aides, Home Health Aides, Advanced Home Health Aides"
+      }
+    },
+    {
+      "citation": "NYS DOH Home Care Registry (HCR) Advisory, March 23, 2022 \u2014 For Services 03/23/22 and After",
+      "notes": "Date-scoped reference: applies to services on or after 03/23/22.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "For Services 03/23/22 and After:\nNYS DOH Home Care Registry (HCR) Advisory, March 23, 2022"
+      }
+    },
+    {
+      "citation": "NYS DHCBS PCA-HHA-AHHA Verification of Training and Certificate Validity Revised January 30, 2020 and March 17, 2022 \u2014 For Services 01/30/20 and After",
+      "notes": "Date-scoped reference: applies to services on or after 01/30/20.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "For Services 01/30/20 and After:\nNYS DHCBS PCA-HHA-AHHA Verification of Training and Certificate Validity\n    Revised January 30, 2020 and March 17, 2022"
+      }
+    },
+    {
+      "citation": "NYD DOH DAL 19-21: Home Care Worker Registry Requirement for Enhanced Assisted Living Residence Operators \u2014 For Services 10/04/19 and After",
+      "notes": "Date-scoped reference: applies to services on or after 10/04/19. \"NYD DOH\" appears as printed in the document.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 13",
+        "quote": "For Services 10/04/19 and After:\nNYD DOH DAL 19-21: Home Care Worker Registry Requirement for Enhanced \n    Assisted Living Residence Operators"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "state_deltas",
+    "case_mix_relevance.source",
+    "conflicts"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

@@ -1,0 +1,200 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-04",
+  "item_name": "Invalid Service Documentation",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND \u2014 the Invalid Service Documentation section (p. 4) states no observation/look-back window. It ties validity to the date of service (on-site presence of identified personnel on the date of service) but does not state a lookback period in days. The document's overall applicability is stated as service dates 01/01/2013 through 10/31/2025, which is a service-date scope, not an assessor lookback window.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "The claim will be disallowed if the service documentation cannot establish the identity of the personnel who provided care.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 4",
+        "quote": "If the service documentation cannot establish the identity of the personnel who provided care, or the on-site presence of the identified personnel is unsupported on the date of service, or the documentation is otherwise determined as invalid, the claim will be disallowed."
+      }
+    },
+    {
+      "rule": "The claim will be disallowed if the on-site presence of the identified personnel is unsupported on the date of service.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 4",
+        "quote": "or the on-site presence of the identified personnel is unsupported on the date of service, or the documentation is otherwise determined as invalid, the claim will be disallowed."
+      }
+    },
+    {
+      "rule": "The claim will be disallowed if the documentation is otherwise determined as invalid.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 4",
+        "quote": "or the documentation is otherwise determined as invalid, the claim will be disallowed."
+      }
+    },
+    {
+      "rule": "Scope: this audit criterion is applied to ALP service dates 01/01/2013 through 10/31/2025, with distinct regulatory citations applying to services on/after 05/25/18 (18 NYCRR \u00a7 494.4(c)) versus services 03/17/93 through 05/24/18 (18 NYCRR \u00a7 494.4(b)).",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 4",
+        "quote": "For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(c)"
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Service documentation must establish the identity of the personnel who provided the care.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 4",
+          "quote": "If the service documentation cannot establish the identity of the personnel who provided care"
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Failure results in disallowance of the claim."
+      },
+      {
+        "criterion": "Documentation must support the on-site presence of the identified personnel on the date of service.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 4",
+          "quote": "or the on-site presence of the identified personnel is unsupported on the date of service"
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Failure results in disallowance of the claim."
+      },
+      {
+        "criterion": "OMIG will review and consider any relevant contemporaneous documentation maintained and available in the provider's records to substantiate a claim.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 1",
+          "quote": "OMIG will review and consider any relevant contemporaneous documentation maintained and available in the provider's records to substantiate a claim."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "General document-wide statement on substantiating documentation, not specific to Area 4."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "This is a New York State (OMIG) audit protocol; the Invalid Service Documentation criterion and its regulatory references (10 NYCRR \u00a7 763.13(i); 18 NYCRR \u00a7\u00a7 487.10(d)(5)(vii), 488.10(d)(4)(vii), 494.3(b), 494.5; ALP Manual Policy Guidelines Version 2006-1, Section II) are New York-specific requirements applied to ALP claims.",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 4",
+        "quote": "10 NYCRR \u00a7 763.13(i)\n18 NYCRR \u00a7 487.10(d)(5)(vii)\n18 NYCRR \u00a7 488.10(d)(4)(vii)\n18 NYCRR \u00a7 494.3(b)\n18 NYCRR \u00a7 494.5"
+      }
+    },
+    {
+      "state": "NY",
+      "delta": "Time-banded regulatory authority: for services 05/25/18 and after, 18 NYCRR \u00a7 494.4(c) applies; for services 03/17/93 through 05/24/18, 18 NYCRR \u00a7 494.4(b) applies.",
+      "kind": "other",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 4",
+        "quote": "For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(c)\nFor Services 03/17/93 through 05/24/18: 18 NYCRR \u00a7 494.4(b)"
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The Invalid Service Documentation section does not tie this criterion to a payment or case-mix classification. (Rate/RUG-related findings appear in separate sections 12 and 13, not in Area 4.)"
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 763.13(i)",
+      "notes": "Listed as a regulatory reference for Invalid Service Documentation.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 4",
+        "quote": "10 NYCRR \u00a7 763.13(i)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.10(d)(5)(vii)",
+      "notes": "Listed as a regulatory reference for Invalid Service Documentation.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 4",
+        "quote": "18 NYCRR \u00a7 487.10(d)(5)(vii)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 488.10(d)(4)(vii)",
+      "notes": "Listed as a regulatory reference for Invalid Service Documentation.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 4",
+        "quote": "18 NYCRR \u00a7 488.10(d)(4)(vii)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.3(b)",
+      "notes": "Listed as a regulatory reference for Invalid Service Documentation.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 4",
+        "quote": "18 NYCRR \u00a7 494.3(b)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.5",
+      "notes": "Listed as a regulatory reference for Invalid Service Documentation.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 4",
+        "quote": "18 NYCRR \u00a7 494.5"
+      }
+    },
+    {
+      "citation": "NYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines Version 2006-1, Section II",
+      "notes": "Listed as a regulatory reference for Invalid Service Documentation.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 4",
+        "quote": "NYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines\n    Version 2006-1, Section II"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(c) (For Services 05/25/18 and After)",
+      "notes": "Time-banded reference applicable to services on or after 05/25/18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 4",
+        "quote": "For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(c)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(b) (For Services 03/17/93 through 05/24/18)",
+      "notes": "Time-banded reference applicable to services 03/17/93 through 05/24/18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 4",
+        "quote": "For Services 03/17/93 through 05/24/18: 18 NYCRR \u00a7 494.4(b)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

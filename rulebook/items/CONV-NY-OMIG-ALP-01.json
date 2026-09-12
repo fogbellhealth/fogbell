@@ -1,0 +1,133 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-01",
+  "item_name": "Missing Patient Record",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. The audit area for Missing Patient Record (p. 3) states no observation/look-back window; it addresses availability of the patient record for review rather than a period of observation ending on an assessment reference date. The document as a whole applies to service dates 01/01/2013 through 10/31/2025, but that is a service-date scope, not an assessor look-back window.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "If the patient record is not available for review, claims for all dates of service associated with the patient record will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "If the patient record is not available for review, claims for all dates of service associated with the patient record will be disallowed."
+      }
+    },
+    {
+      "rule": "Scope: this audit criterion applies to Assisted Living Program (ALP) claims for service dates 01/01/2013 through 10/31/2025.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "Assisted Living Program (ALP)\n(For Service Dates 01/01/2013 through 10/31/2025)"
+      }
+    },
+    {
+      "rule": "In applying this criterion during an audit, OMIG will review and consider any relevant contemporaneous documentation maintained and available in the provider's records to substantiate a claim.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 1",
+        "quote": "OMIG will review and consider any relevant contemporaneous documentation maintained and available in the provider\u2019s records to substantiate a claim."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "The patient record must be available for review at audit; its unavailability results in disallowance of claims for all dates of service associated with that record.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 3",
+          "quote": "If the patient record is not available for review, claims for all dates of service associated with the patient record will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as the OMIG Audit Criteria for Area 1 (Missing Patient Record)."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "This is a New York State (OMIG) audit protocol for the Assisted Living Program; Area 1 requires the patient record to be available for review, citing 10 NYCRR \u00a7 766.6, 18 NYCRR \u00a7\u00a7 485.11(a), 487.10(c), 488.10(c)(1), and the NYS Medicaid Program ALP Manual, Policy Guidelines Version 2006-1, Section II.",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "Regulatory References 10 NYCRR \u00a7 766.6\n18 NYCRR \u00a7 485.11(a)\n18 NYCRR \u00a7 487.10(c)\n18 NYCRR \u00a7 488.10(c)(1)"
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The Missing Patient Record area does not tie this item to any payment/case-mix classification; it states a full claim disallowance. No case-mix or RUG linkage is stated for this area on p. 3."
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 766.6",
+      "notes": "Listed as a regulatory reference for Area 1, Missing Patient Record.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "10 NYCRR \u00a7 766.6"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 485.11(a)",
+      "notes": "Listed as a regulatory reference for Area 1, Missing Patient Record.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "18 NYCRR \u00a7 485.11(a)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.10(c)",
+      "notes": "Listed as a regulatory reference for Area 1, Missing Patient Record.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "18 NYCRR \u00a7 487.10(c)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 488.10(c)(1)",
+      "notes": "Listed as a regulatory reference for Area 1, Missing Patient Record.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "18 NYCRR \u00a7 488.10(c)(1)"
+      }
+    },
+    {
+      "citation": "NYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines Version 2006-1, Section II",
+      "notes": "Listed as a regulatory reference for Area 1, Missing Patient Record.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 3",
+        "quote": "NYS Medicaid Program Assisted Living Program (ALP) Manual, Policy Guidelines\n   Version 2006-1, Section II"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

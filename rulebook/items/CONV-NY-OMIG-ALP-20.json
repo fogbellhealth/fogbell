@@ -1,0 +1,135 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-20",
+  "item_name": "Failure to Complete Required Health Assessment",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. The protocol states the health assessment is required for aides prior to patient contact and annually thereafter, but it does not state an assessor observation/look-back window ending on an assessment reference date for this audit area.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "A health assessment is required for aides prior to patient contact, and annually thereafter.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "A health assessment is required for aides prior to patient contact, and annually thereafter."
+      }
+    },
+    {
+      "rule": "If documentation of a yearly health assessment is not in the personnel file of the aide who has direct patient contact, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "If documentation of a yearly health assessment is not in the personnel file of the aide who has direct patient contact, the claim will be disallowed."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Documentation of a yearly health assessment must be present in the personnel file of the aide who has direct patient contact.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 14",
+          "quote": "If documentation of a yearly health assessment is not in the personnel file of the aide who has direct patient contact, the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Absence of this documentation results in claim disallowance per the OMIG Audit Criteria."
+      },
+      {
+        "criterion": "Documentation must show the health assessment was completed prior to the aide's patient contact.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 14",
+          "quote": "A health assessment is required for aides prior to patient contact, and annually thereafter."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high"
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "This audit area is defined by the New York State Office of the Medicaid Inspector General for the Assisted Living Program, applicable to service dates 01/01/2013 through 10/31/2025; cited authorities are New York State regulations (10 NYCRR \u00a7 763.13(c)-(e) and (h); 10 NYCRR \u00a7 766.11(c) and (d)(5); 18 NYCRR \u00a7 487.9(a)(8)(i); 18 NYCRR \u00a7 488.9(a)(4) and (5); 18 NYCRR \u00a7 494.3(b)).",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "10 NYCRR \u00a7 763.13(c)-(e) and (h)"
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The document does not tie this audit area to any payment/case-mix classification; the consequence stated is disallowance of the claim, not a case-mix or rate classification change."
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 763.13(c)-(e) and (h)",
+      "notes": "Listed under Regulatory References for Area 20.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "10 NYCRR \u00a7 763.13(c)-(e) and (h)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 766.11(c) and (d)(5)",
+      "notes": "Listed under Regulatory References for Area 20.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "10 NYCRR \u00a7 766.11(c) and (d)(5)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.9(a)(8)(i)",
+      "notes": "Listed under Regulatory References for Area 20.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "18 NYCRR \u00a7 487.9(a)(8)(i)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 488.9(a)(4) and (5)",
+      "notes": "Listed under Regulatory References for Area 20.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "18 NYCRR \u00a7 488.9(a)(4) and (5)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.3(b)",
+      "notes": "Listed under Regulatory References for Area 20.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 14",
+        "quote": "18 NYCRR \u00a7 494.3(b)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

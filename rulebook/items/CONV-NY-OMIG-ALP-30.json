@@ -1,0 +1,119 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-30",
+  "item_name": "Patient Review Instrument Invalid Resident not on site for the look back period",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": 7,
+  "lookback_source": {
+    "doc": "omig-alp-protocol-2025-12",
+    "loc": "p. 18",
+    "quote": "If the Patient Review Instrument applicable for the claim under review is dated while the patient is not in the facility on that date or the 7 days prior, the claim will be disallowed."
+  },
+  "lookback_notes": "The protocol's audit criteria state the look-back period as the PRI date plus the 7 days prior to that date; the resident must be in the facility during that window. The document titles this window \"the look back period\" but does not otherwise define how days are counted.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "If the Patient Review Instrument applicable for the claim under review is dated while the patient is not in the facility on that date or the 7 days prior, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 18",
+        "quote": "If the Patient Review Instrument applicable for the claim under review is dated while the patient is not in the facility on that date or the 7 days prior, the claim will be disallowed."
+      }
+    },
+    {
+      "rule": "This finding applies only to service dates prior to 03/01/2015; it was phased out per NYS DOH Medicaid Update, February 2013, Vol. 29, No. 3.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "For Services Dates Prior to 03/01/2015\nFindings below phased out as per NYS DOH Medicaid Update, February 2013, Vol. 29, No. 3"
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "The record must support that the resident was in the facility on the PRI date or within the 7 days prior to that date.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 18",
+          "quote": "If the Patient Review Instrument applicable for the claim under review is dated while the patient is not in the facility on that date or the 7 days prior, the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as the OMIG Audit Criteria for disallowance; the document does not name specific source documents used to evidence on-site presence."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The Area 30 entry does not tie this finding to a payment/case-mix classification. (A separate finding, Area 29 Incorrect PRI Level Claimed, addresses PRI level and payment, but that is a different item.)"
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 86-2.30(a)",
+      "notes": "Listed under Regulatory References for Area 30.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 18",
+        "quote": "10 NYCRR \u00a7 86-2.30(a)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 766.6(a)(3)",
+      "notes": "Listed under Regulatory References for Area 30.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 18",
+        "quote": "10 NYCRR \u00a7 766.6(a)(3)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 504.3(i)",
+      "notes": "Listed under Regulatory References for Area 30.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 18",
+        "quote": "18 NYCRR \u00a7 504.3(i)"
+      }
+    },
+    {
+      "citation": "DOH Hospital and Community PRI instructions, General Concepts, Paragraph 5",
+      "notes": "Listed under Regulatory References for Area 30; the referenced PRI instructions are not included in this document.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 18",
+        "quote": "DOH Hospital and Community PRI instructions, General Concepts, Paragraph 5"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL HCBS 08-02: Completion of the PRI for Individuals Participating in the ALP",
+      "notes": "Listed under Regulatory References for Area 30.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 18",
+        "quote": "NYS DOH DAL HCBS 08-02: Completion of the PRI for Individuals Participating in \n the ALP"
+      }
+    }
+  ],
+  "not_found": [
+    "coding_levels",
+    "state_deltas",
+    "case_mix_relevance.source",
+    "conflicts"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

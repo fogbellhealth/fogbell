@@ -1,0 +1,152 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-10",
+  "item_name": "Plan of Care Not Updated as Required",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. The protocol item states a review/update frequency for the plan of care (upon a change of condition or at least every 6 months) but does not state an assessor observation/look-back window in days ending on an assessment reference date. The only look-back window stated anywhere in the document is the 7-day PRI look-back in Area 30 (p. 18), which pertains to the Patient Review Instrument, not to Area 10.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "The clinical record must document that the plan of care is reviewed by a registered nurse upon a change of condition or at least every 6 months.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "The clinical record must document the plan of care is reviewed by a registered nurse upon a change of condition or at least every 6 months."
+      }
+    },
+    {
+      "rule": "If the plan of care is not updated as required, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "If the plan of care is not updated as required, the claim will be disallowed."
+      }
+    },
+    {
+      "rule": "Scope/date applicability: this protocol applies to service dates 01/01/2013 through 10/31/2025.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "(For Service Dates 01/01/2013 through 10/31/2025)"
+      }
+    },
+    {
+      "rule": "Time-period-specific regulatory basis applies: for services 05/25/18 and after, 18 NYCRR \u00a7 494.4(c); for services 03/17/93 through 05/24/18, 18 NYCRR \u00a7 494.4(b).",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(c)"
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "The clinical record must contain documentation that a registered nurse reviewed the plan of care upon a change of condition or at least every 6 months.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 8",
+          "quote": "The clinical record must document the plan of care is reviewed by a registered nurse upon a change of condition or at least every 6 months."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Framed by the protocol as a mandatory record requirement whose absence results in claim disallowance."
+      },
+      {
+        "criterion": "OMIG will review and consider any relevant contemporaneous documentation maintained and available in the provider's records to substantiate a claim.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 1",
+          "quote": "OMIG will review and consider any relevant contemporaneous documentation maintained and available in the provider\u2019s records to substantiate a claim."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "medium",
+        "notes": "General documentation principle stated in the protocol's introduction; applies across audit areas."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The document does not tie Area 10 (Plan of Care Not Updated as Required) to any payment/case-mix classification. Case-mix-related content (RUGS Group Code, rate code) appears in Areas 12 and 13, not in Area 10."
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 766.3(a), (b), and (d)",
+      "notes": "Listed as a regulatory reference for Area 10.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "10 NYCRR \u00a7 766.3(a), (b), and (d)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 766.6(a)(4)",
+      "notes": "Listed as a regulatory reference for Area 10.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "10 NYCRR \u00a7 766.6(a)(4)"
+      }
+    },
+    {
+      "citation": "NYS Social Services Law \u00a7 461-L(2)(d)(iii)",
+      "notes": "Listed as a regulatory reference for Area 10.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "NYS Social Services Law \u00a7 461-L(2)(d)(iii)"
+      }
+    },
+    {
+      "citation": "NYS DOH DAL 22-14: Reminder of Assisted Living Program Provider Responsibilities",
+      "notes": "Listed as a regulatory reference for Area 10.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "NYS DOH DAL 22-14: Reminder of Assisted Living Program Provider Responsibilities"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(c) (For Services 05/25/18 and After)",
+      "notes": "Date-scoped regulatory reference for Area 10.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(c)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(b) (For Services 03/17/93 through 05/24/18)",
+      "notes": "Date-scoped regulatory reference for Area 10.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 8",
+        "quote": "For Services 03/17/93 through 05/24/18: 18 NYCRR \u00a7 494.4(b)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "state_deltas",
+    "case_mix_relevance.source",
+    "conflicts"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

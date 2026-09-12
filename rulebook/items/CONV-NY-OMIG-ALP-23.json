@@ -1,0 +1,127 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-23",
+  "item_name": "Failure to Complete Required In-Service Training for Home Health Aide",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. The protocol states an annual training requirement (\"a minimum of 12 hours of in-service training education per year\") but does not state an assessor observation/look-back window in days for this audit area.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "Home health aides require a minimum of 12 hours of in-service training education per year.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "Home health aides require a minimum of 12 hours of in-service training education per year."
+      }
+    },
+    {
+      "rule": "If there is no documentation of in-service training found in the personnel record, or the required number of training hours were not documented, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "If there is no documentation of in-service training found in the personnel record, or the required number of training hours were not documented , the claim will be disallowed."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Documentation of in-service training must be present in the aide's personnel record.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 15",
+          "quote": "If there is no documentation of in-service training found in the personnel record, or the required number of training hours were not documented , the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Absence of this documentation results in claim disallowance."
+      },
+      {
+        "criterion": "The documentation must show the required number of in-service training hours (at least 12 hours per year for a home health aide).",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 15",
+          "quote": "Home health aides require a minimum of 12 hours of in-service training education per year."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Insufficient documented hours results in claim disallowance."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "New York State OMIG audit protocol for the Assisted Living Program requires documentation in the personnel record of a minimum of 12 hours per year of in-service training for home health aides; failure results in disallowance of the claim. Applies to service dates 01/01/2013 through 10/31/2025.",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "Home health aides require a minimum of 12 hours of in-service training education per year. If there is no documentation of in-service training found in the personnel record, or the required number of training hours were not documented , the claim will be disallowed."
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The document does not tie this audit area to any payment or case-mix classification; it states only that the claim will be disallowed when the requirement is unmet."
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 763.13(l)(1)",
+      "notes": "Listed as a regulatory reference for audit area 23.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "10 NYCRR \u00a7 763.13(l)(1)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 766.11(i)(1)",
+      "notes": "Listed as a regulatory reference for audit area 23.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "10 NYCRR \u00a7 766.11(i)(1)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.3(b)",
+      "notes": "Listed as a regulatory reference for audit area 23.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "18 NYCRR \u00a7 494.3(b)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 505.14(e)",
+      "notes": "Listed as a regulatory reference for audit area 23.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "18 NYCRR \u00a7 505.14(e)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

@@ -1,0 +1,134 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-22",
+  "item_name": "Failure to Complete Required In-Service Training for Personal Care Aide",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND. The protocol states the in-service training requirement on an annual basis (\"a minimum of six hours of in-service training education per year\"), but does not state an assessor observation/look-back window in days for this audit area.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "Personal care aides require a minimum of six hours of in-service training education per year.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "Personal care aides require a minimum of six hours of in-service training education per year."
+      }
+    },
+    {
+      "rule": "If there is no documentation of in-service training found in the personnel record, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "If there is no documentation of in-service training found in the personnel record, or the required number of training hours were not documented , the claim will be disallowed."
+      }
+    },
+    {
+      "rule": "If the required number of training hours were not documented, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "If there is no documentation of in-service training found in the personnel record, or the required number of training hours were not documented , the claim will be disallowed."
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "Documentation of in-service training must be present in the aide's personnel record.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 15",
+          "quote": "If there is no documentation of in-service training found in the personnel record, or the required number of training hours were not documented , the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Absence of this documentation results in claim disallowance per the OMIG Audit Criteria."
+      },
+      {
+        "criterion": "The documentation must show the required number of in-service training hours (minimum six hours per year for personal care aides).",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 15",
+          "quote": "Personal care aides require a minimum of six hours of in-service training education per year."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Under-documented hours are treated the same as missing documentation for disallowance purposes."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The document does not tie this audit area to any payment or case-mix classification; it states only that noncompliance results in claim disallowance."
+  },
+  "conflicts": [],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 763.13(l)(2)",
+      "notes": "Listed under Regulatory References for Area 22.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "10 NYCRR \u00a7 763.13(l)(2)"
+      }
+    },
+    {
+      "citation": "10 NYCRR \u00a7 766.11(i)(2)",
+      "notes": "Listed under Regulatory References for Area 22.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "10 NYCRR \u00a7 766.11(i)(2)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 487.9(g)(4) and (5)",
+      "notes": "Listed under Regulatory References for Area 22.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "18 NYCRR \u00a7 487.9(g)(4) and (5)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.3(b)",
+      "notes": "Listed under Regulatory References for Area 22.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "18 NYCRR \u00a7 494.3(b)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 505.14(e)",
+      "notes": "Listed under Regulatory References for Area 22.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 15",
+        "quote": "18 NYCRR \u00a7 505.14(e)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "state_deltas",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}

@@ -1,0 +1,132 @@
+{
+  "item_id": "CONV-NY-OMIG-ALP-25",
+  "item_name": "Missing Nursing/Functional/Social Assessment",
+  "section": "CONV",
+  "instrument": "UAS-NY",
+  "lookback_days": null,
+  "lookback_notes": "NOT_FOUND \u2014 the protocol's Area 25 entry states only that a missing nursing/functional/social assessment results in disallowance; no observation/look-back window is stated for this finding. The protocol does state that these findings apply to service dates prior to 03/01/2015 (page header: \"For Service Dates 01/01/2013 through 02/28/2015\"), which is an applicability period, not an assessor look-back window.",
+  "coding_levels": [],
+  "federal_coding_rules": [
+    {
+      "rule": "If the nursing/functional/social assessment is missing, the claim will be disallowed.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "If the nursing/functional/social assessment is missing, the claim will be disallowed."
+      }
+    },
+    {
+      "rule": "This finding applies only to service dates prior to 03/01/2015; it was phased out per NYS DOH Medicaid Update, February 2013, Vol. 29, No. 3.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "For Services Dates Prior to 03/01/2015\nFindings below phased out as per NYS DOH Medicaid Update, February 2013, Vol. 29, No. 3"
+      }
+    }
+  ],
+  "supportive_documentation": {
+    "federal": [
+      {
+        "criterion": "A nursing/functional/social assessment must be present in the record for the claim under review; its absence results in disallowance.",
+        "source": {
+          "doc": "omig-alp-protocol-2025-12",
+          "loc": "p. 17",
+          "quote": "If the nursing/functional/social assessment is missing, the claim will be disallowed."
+        },
+        "verified_by_expert": false,
+        "audit_weight": "high",
+        "notes": "Stated as the OMIG Audit Criteria for Area 25."
+      }
+    ],
+    "state": {}
+  },
+  "state_deltas": [
+    {
+      "state": "NY",
+      "delta": "This entire protocol is a New York State (OMIG) document; Area 25 disallows claims when the nursing/functional/social assessment is missing, with regulatory references 10 NYCRR \u00a7 766.6(a)(3); For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(f) and (g); For Services 03/17/93 through 05/24/18: 18 NYCRR \u00a7 494.4(e) and (f).",
+      "kind": "documentation",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "Regulatory References 10 NYCRR \u00a7 766.6(a)(3)\nFor Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(f) and (g)\nFor Services 03/17/93 through 05/24/18: 18 NYCRR \u00a7 494.4(e) and (f)"
+      }
+    }
+  ],
+  "case_mix_relevance": {
+    "level": "unknown",
+    "notes": "The Area 25 entry does not tie the nursing/functional/social assessment to a payment or case-mix classification. (Rate/case-mix consequences appear in other areas of the protocol, e.g. Areas 13 and 29, not in Area 25.)"
+  },
+  "conflicts": [
+    {
+      "topic": "Applicability date range printed for the pages containing Area 25 versus the document's overall service-date range",
+      "positions": [
+        {
+          "authority": "omig-alp-protocol-2025-12",
+          "claim": "The document overall covers service dates 01/01/2013 through 10/31/2025.",
+          "source": {
+            "doc": "omig-alp-protocol-2025-12",
+            "loc": "p. 1",
+            "quote": "(For Service Dates 01/01/2013 through 10/31/2025)"
+          }
+        },
+        {
+          "authority": "omig-alp-protocol-2025-12",
+          "claim": "The page containing Area 25 is headed for service dates 01/01/2013 through 02/28/2015, and the findings on it are stated to be phased out for service dates prior to 03/01/2015.",
+          "source": {
+            "doc": "omig-alp-protocol-2025-12",
+            "loc": "p. 17",
+            "quote": "(For Service Dates 01/01/2013 through 02/28/2015)"
+          }
+        }
+      ],
+      "resolution": "Document itself resolves: the page-level heading and the \"For Services Dates Prior to 03/01/2015\" banner narrow Area 25 to service dates 01/01/2013 through 02/28/2015 within the broader protocol."
+    }
+  ],
+  "common_audit_citations": [
+    {
+      "citation": "10 NYCRR \u00a7 766.6(a)(3)",
+      "notes": "Listed as a regulatory reference for Area 25 (Missing Nursing/Functional/Social Assessment).",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "10 NYCRR \u00a7 766.6(a)(3)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(f) and (g)",
+      "notes": "Applies to services 05/25/18 and after.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "For Services 05/25/18 and After: 18 NYCRR \u00a7 494.4(f) and (g)"
+      }
+    },
+    {
+      "citation": "18 NYCRR \u00a7 494.4(e) and (f)",
+      "notes": "Applies to services 03/17/93 through 05/24/18.",
+      "source": {
+        "doc": "omig-alp-protocol-2025-12",
+        "loc": "p. 17",
+        "quote": "For Services 03/17/93 through 05/24/18: 18 NYCRR \u00a7 494.4(e) and (f)"
+      }
+    }
+  ],
+  "not_found": [
+    "lookback_days",
+    "lookback_source",
+    "coding_levels",
+    "case_mix_relevance.source"
+  ],
+  "provenance_summary": {
+    "extracted_at": "2026-09-12",
+    "model": "claude-opus-5",
+    "extractor_version": "0.1.0",
+    "expert_review_status": "unreviewed",
+    "source_documents": [
+      {
+        "doc": "omig-alp-protocol-2025-12"
+      }
+    ]
+  },
+  "version": "0.1.0"
+}
