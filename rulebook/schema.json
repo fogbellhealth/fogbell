@@ -33,7 +33,7 @@
     "section": { "type": "string", "minLength": 1, "description": "Instrument section the item belongs to, e.g. \"G\"." },
     "instrument": {
       "type": "string",
-      "enum": ["MDS-3.0", "MDS-RCA", "MDS-AH"],
+      "enum": ["MDS-3.0", "MDS-RCA", "MDS-AH", "UAS-NY"],
       "description": "Assessment instrument. Items from different instruments are separate rule items even when IDs coincide."
     },
     "lookback_days": {

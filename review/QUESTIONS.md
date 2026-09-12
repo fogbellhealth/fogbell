@@ -24,3 +24,17 @@ These are the things the manual does not settle and we cannot decide from a desk
 
 11. **How big is the review sample in practice?** You described the case-mix review as roughly ten percent of Medicaid records each quarter. The current reimbursement rule says "a record sample of twenty-four percent (24%) with a minimum of five (5) records shall be drawn from MDS assessments completed for residents who have MaineCare reimbursement" (Chapter III §16.2.3.3(3), amended April 2025). Which reflects what facilities actually see today? Your memory may reflect an earlier version of the rule or the practical reality on the ground; either way the difference is worth knowing.
 
+## Questions for a New York reviewer
+
+These concern the OMIG Assisted Living Program (ALP) audit protocol, layered in as a second, provisional jurisdiction this session. **They need someone credentialed in New York's ALP/UAS-NY program — the Verifier's Maine expertise does not cover this corpus, and none of it should be treated as reviewed until a New York-qualified reviewer weighs in.** This is a standing project need: we do not currently have that person.
+
+12. **What is OMIG's actual sample size and penalty structure?** The public audit protocol (rev. 12/26/2025) is a per-claim checklist of 30 disallowance areas; unlike Maine's published statistical formula (24% sample, tiered 2/5/7/10% Direct Care Rate reductions), it states no facility-wide sampling percentage or tiered sanction schedule. Does one exist in a non-public OMIG document (e.g. an internal audit SOP, or the annual Work Plan), or is ALP auditing genuinely conducted claim-by-claim with no published aggregate methodology?
+
+13. **Is the Patient Review Instrument (PRI) still live, or purely historical?** Areas 27–30 concern the PRI and are explicitly scoped "For Service Dates 01/01/2013 through 02/28/2015," while Areas 11–12 concern UAS-NY for the full 01/01/2013–10/31/2025 window. Does that mean PRI was fully superseded by UAS-NY for services after 02/28/2015 (nothing in the protocol states this succession directly), or can a PRI-era claim still surface in a current audit?
+
+14. **Why did OMIG revise the protocol twice in five weeks?** Between 11/20/2025 and 12/26/2025, Areas 6 and 8 changed substantively: the November text let a specific form (DOH 4449-C / DSS-4568) substitute a PA or NP signature for a physician's; December replaced that with a flat date-based rule (physician, PA, or NP for services on or after 02/19/14). Was there a policy notice or hearing decision behind this, and should facilities expect further near-term revisions?
+
+15. **Two public sources OMIG's own protocol cites but that this corpus couldn't retrieve:** the NYS Medicaid Program ALP Manual, Policy Guidelines (Version 2006-1) — the eMedNY URL 404s — and DAL 14-09 (UAS-NY FAQ) — health.ny.gov blocked automated retrieval. Both are cited repeatedly by the protocol itself (Areas 1, 2, 5, 11, 12). Can you point us to current copies, or confirm they're still the controlling versions?
+
+16. **Public commentary reports "~22" disallowance areas; the protocol itself enumerates 30 (1–30, no gaps).** Is 22 a stale figure from an earlier protocol revision, a miscount, or does it refer to a narrower subset (e.g. excluding the legacy PRI areas)?
+

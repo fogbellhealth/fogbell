@@ -57,7 +57,7 @@ module Fogbell
         out
         out "*#{instrument_name} · Section #{item.section} · extracted #{p['extracted_at']} from #{docs} · status: #{p['expert_review_status'] || 'unreviewed'} · rulebook version #{item.version}*"
         out
-        out "This page was generated from the manual by software and has not yet been checked by a person. Every statement below carries a source number; the sources are listed at the end with the exact wording from the manual. Please mark anything that is wrong, incomplete, or applied differently by Maine's auditors."
+        out "This page was generated from the manual by software and has not yet been checked by a person. Every statement below carries a source number; the sources are listed at the end with the exact wording from the manual. Please mark anything that is wrong, incomplete, or applied differently by this state's auditors."
         out
       end
 
@@ -150,10 +150,11 @@ module Fogbell
         end
       end
 
+      STATE_NAMES = { "ME" => "Maine", "NY" => "New York" }.freeze
+
       def authority_name(a)
         return "Federal manual" if a == "federal"
-        return "Maine" if a == "ME"
-        @manifest.name(a)
+        STATE_NAMES.fetch(a) { @manifest.name(a) }
       end
 
       def state_deltas

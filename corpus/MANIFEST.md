@@ -56,8 +56,17 @@ The full manual (33 MB, 1001 pages) exceeds the Anthropic native-PDF limit (32 M
 
 Not v1 scope. Add a row here before adding a file.
 
+## New York (`corpus/other-states/ny/`)
+
+New York's Assisted Living Program (ALP): facility nurses complete the UAS-NY assessment, which drives RUG-based Medicaid rates; OMIG audits claims against a published protocol enumerating disallowance areas. Second-jurisdiction corpus, all content provisional pending an NY-qualified expert review (the Verifier is Maine-only; see backlog).
+
 | key | title | version / date | source | downloaded | sha256 | status |
 |---|---|---|---|---|---|---|
+| `omig-alp-protocol-2025-11` | OMIG Audit Protocol: Assisted Living Program (ALP) | Revised 11/20/2025 (for service dates 01/01/2013–10/31/2025) | https://omig.ny.gov/media/97076/download?attachment= | 2026-09-12 | `5d04b27e8bf67c0af294408d4aae6059c99ecd2b5ffc257186eb28d928acaf39` | downloaded — superseded by `omig-alp-protocol-2025-12`, kept for the diff |
+| `omig-alp-protocol-2025-12` | OMIG Audit Protocol: Assisted Living Program (ALP) | Revised 12/26/2025 (for service dates 01/01/2013–10/31/2025) | https://omig.ny.gov/media/98001/download?attachment= | 2026-09-12 | `687ef340680f84e64adffff2c0d7b9561b617740d0fb8da81a6ecc2f125f6c45` | extracted — all 30 enumerated audit areas promoted as CONV-NY-OMIG-ALP-01..30 |
+| `omig-2026-work-plan` | OMIG 2026 Work Plan | posted ~Feb 2026 | https://omig.ny.gov/new-york-state-office-medicaid-inspector-general-2026-work-plan | | | TODO — landing page presents the plan as body text/image, not a discrete PDF; no direct file found. A third-party (Nixon Peabody) hosts a PDF copy but it is a law-firm reproduction, not the primary source — do not cite it |
+| `alp-policy-guidelines-2006-1` | NYS Medicaid Program ALP Manual, Policy Guidelines, Version 2006-1 (cited directly by the audit protocol, e.g. areas 1, 2, 11) | Version 2006-1 | https://www.emedny.org/ProviderManuals/AssistedLiving/PDFS/ALP_Policy_Section.pdf | | | TODO — 404 as of 2026-09-12; eMedNY may have restructured its manual paths, confirm current URL |
+| `uas-ny-dal-14-09` | NYS DOH DAL 14-09: UAS-NY FAQ (cited by protocol areas 5, 11, 12) | issued 2014-04-11 | https://health.ny.gov/facilities/adult_care/dear_administrator_letters/dal_14-09_uas-ny_plus_faq.htm | | | TODO — automated fetch returned 403 (bot-blocked); retrievable via a real browser |
 
 ## Insider (`corpus/insider/`)
 
