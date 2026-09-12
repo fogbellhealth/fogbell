@@ -1,0 +1,10 @@
+<%# locals: name (e.g. "rules[2]" or "criteria[0]") %>
+<fieldset class="mt-2">
+  <legend class="sr-only">Verdict</legend>
+  <div class="flex flex-wrap items-center gap-4 text-sm">
+    <label class="flex items-center gap-1.5"><input type="radio" name="<%= name %>[verdict]" value="correct" checked class="text-emerald-700 focus:ring-emerald-600"> correct</label>
+    <label class="flex items-center gap-1.5"><input type="radio" name="<%= name %>[verdict]" value="wrong" class="text-rose-700 focus:ring-rose-600"> wrong</label>
+    <label class="flex items-center gap-1.5"><input type="radio" name="<%= name %>[verdict]" value="different" class="text-amber-700 focus:ring-amber-600"> auditors apply it differently</label>
+    <input type="text" name="<%= name %>[note]" placeholder="if wrong or different, how?" class="min-w-0 flex-1 rounded-md border border-slate-300 px-2 py-1 text-xs shadow-sm focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500">
+  </div>
+</fieldset>
