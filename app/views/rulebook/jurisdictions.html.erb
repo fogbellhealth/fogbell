@@ -1,79 +1,63 @@
-<% content_for :title, "Fogbell — cross-jurisdiction view" %>
+<% content_for :title, "Fogbell — coverage and gaps" %>
 
 <div class="mb-8 max-w-3xl">
   <%= link_to "← All items", rulebook_path, class: "text-sm text-slate-500 hover:text-slate-700" %>
-  <h1 class="mt-3 text-2xl font-semibold tracking-tight text-slate-900">Same public documents, different states</h1>
-  <p class="mt-2 text-sm leading-relaxed text-slate-600">Federal rules are the floor. What each state adds — or doesn't — is a cited fact, not an assumption. This page shows what actually differs across Maine and New York, including the honest absences.</p>
+  <h1 class="mt-3 text-2xl font-semibold tracking-tight text-slate-900">The rules facilities are sanctioned against are not publicly assembled</h1>
+  <p class="mt-2 text-sm leading-relaxed text-slate-600">Maine and New York aren't structurally parallel — different programs, different instruments, different document genres. What they share is a pattern: each state's own audit apparatus points at governing documentation standards that are, in practice, either silent or unreachable. That absence is the finding.</p>
 </div>
 
+<section class="mb-10 grid gap-4 lg:grid-cols-2">
+  <div class="rounded-lg border border-violet-200 bg-violet-50 p-5">
+    <h2 class="text-sm font-semibold text-violet-950">Maine: silent by omission</h2>
+    <p class="mt-2 text-sm text-violet-900">
+      <%= pluralize(@mds_items.size, "MDS 3.0 item") %> promoted from the federal RAI Manual.
+      <strong><%= @mds_with_state_layer.size %></strong> carry a Maine-specific documentation delta.
+    </p>
+    <p class="mt-2 text-sm text-violet-900">MaineCare's own reimbursement regulation (Ch. III §16.2) states a review program — a sample size, an error-rate formula, tiered sanctions — but never states what a chart must show for any specific MDS item. Not "for G0110A, document X." Nothing. The federal manual is the only documentation standard that exists in writing for any item, in Maine, today.</p>
+  </div>
+
+  <div class="rounded-lg border border-violet-200 bg-violet-50 p-5">
+    <h2 class="text-sm font-semibold text-violet-950">New York: silent by inaccessibility</h2>
+    <p class="mt-2 text-sm text-violet-900">
+      The OMIG ALP audit protocol (<%= @ny_areas.size %> enumerated areas) cites its own governing authorities directly — the ALP Manual Policy Guidelines (Version 2006-1) and DAL 14-09 — repeatedly, as the source for what a chart must contain.
+    </p>
+    <p class="mt-2 text-sm text-violet-900">Neither is retrievable by this pipeline: the Policy Guidelines URL 404s; DAL 14-09 is blocked by bot protection on health.ny.gov. The documents a facility would need to actually meet the standard are, as of this corpus, not publicly assembled — even though the protocol assumes you have them.</p>
+  </div>
+</section>
+
 <section class="mb-10 rounded-lg border border-slate-200 bg-white p-5">
-  <h2 class="text-base font-semibold text-slate-900">Item-level: federal MDS 3.0 rules vs. a Maine documentation delta</h2>
-  <p class="mt-2 text-sm text-slate-600">
-    <%= pluralize(@mds_items.size, "MDS 3.0 item") %> promoted from the federal RAI Manual.
-    <strong><%= @mds_with_state_layer.size %></strong> of them carry a Maine-specific documentation delta layered on top.
-  </p>
-  <% if @mds_with_state_layer.empty? %>
-    <div class="mt-3 rounded-md border border-violet-200 bg-violet-50 px-4 py-3 text-sm text-violet-900">
-      <strong>The honest absence:</strong> Maine's public rule (MaineCare Ch. III §16.2) does not state item-level documentation criteria for any MDS item — no "for G0110A, the chart must show X." Maine's control point is the <em>review program</em> (below), not any specific assessment item. This absence is itself a finding, not a gap in extraction: it means an MDS item's documentation standard in Maine is currently the federal standard, full stop, unless the Verifier says otherwise.
-    </div>
-  <% else %>
-    <ul class="mt-3 space-y-1 text-sm text-slate-700">
-      <% @mds_with_state_layer.each do |i| %>
-        <li><%= link_to i.item_id, rulebook_item_path(i.item_id), class: "font-mono text-xs hover:underline" %> — <%= i.item_name %></li>
-      <% end %>
-    </ul>
-  <% end %>
+  <h2 class="text-base font-semibold text-slate-900">Two failure modes, one conclusion</h2>
+  <p class="mt-2 text-sm text-slate-600">Maine's documentation standard doesn't exist in public writing at the item level. New York's does exist, in documents this pipeline could locate by citation but not fetch. Different mechanisms, same outcome for a facility trying to find the rule it's sanctioned against: it isn't sitting in one place, cited and current. That gap — not a comparison between the two states — is what this corpus makes visible.</p>
 </section>
 
 <section class="mb-10">
-  <h2 class="mb-3 text-base font-semibold text-slate-900">Program-level: how each state audits its assessments</h2>
-  <p class="mb-4 max-w-3xl text-sm text-slate-600">Maine's nursing-facility MDS 3.0 case-mix review and New York's assisted-living UAS-NY audit protocol are not the same program on the same instrument — Maine audits nursing facilities' MDS 3.0 submissions; New York audits assisted-living claims against an enumerated protocol. They're shown side by side because both are "how does this state check what a facility charted," not because they're structurally equivalent.</p>
+  <h2 class="mb-3 text-base font-semibold text-slate-900">One engine, three document genres</h2>
+  <p class="mb-4 max-w-3xl text-sm text-slate-600">The architecture claim, not the coverage claim: the same schema and pipeline extracted three genres of source document into the same citable shape, with one enum value added along the way.</p>
 
-  <div class="grid gap-4 lg:grid-cols-2">
+  <div class="grid gap-4 lg:grid-cols-3">
     <div class="rounded-lg border border-slate-200 bg-white p-5">
-      <h3 class="text-sm font-semibold text-slate-900">Maine — MDS 3.0 assessment review</h3>
-      <p class="mt-1 text-xs text-slate-500">MaineCare Benefits Manual, Ch. III §16.2 · <%= link_to "CONV-ME-MDS-REVIEW", rulebook_item_path("CONV-ME-MDS-REVIEW"), class: "hover:underline" if @me_review %></p>
-      <dl class="mt-4 space-y-3 text-sm">
-        <div><dt class="text-xs font-medium uppercase text-slate-400">Sample</dt><dd class="text-slate-800"><%= rule_fact(@me_review, /twenty-four percent|24%/i) %></dd></div>
-        <div>
-          <dt class="text-xs font-medium uppercase text-slate-400">Penalty mechanism</dt>
-          <dd class="text-slate-800">
-            <% tiers = @me_review&.coding_levels&.select { |l| l["code"]&.start_with?("SANCTION-") } || [] %>
-            <% if tiers.any? %>
-              <ul class="space-y-0.5">
-                <% tiers.each do |l| %><li><%= l["label"] %> <span class="text-xs text-slate-500"><%= cite(l["source"]) %></span></li><% end %>
-              </ul>
-            <% else %>
-              <span class="text-slate-400 italic">not stated in the public document</span>
-            <% end %>
-          </dd>
-        </div>
-        <div><dt class="text-xs font-medium uppercase text-slate-400">Correction deadline</dt><dd class="text-slate-800"><%= rule_fact(@me_review, /fourteen \(14\) days/i) %></dd></div>
-      </dl>
+      <h3 class="text-sm font-semibold text-slate-900">Federal clinical manual</h3>
+      <p class="mt-1 text-xs text-slate-500">RAI Manual v1.20.1 → <%= @mds_items.size %> MDS 3.0 items</p>
+      <p class="mt-3 text-sm text-slate-700">Per-item coding rules, coding levels, look-back windows.</p>
     </div>
-
     <div class="rounded-lg border border-slate-200 bg-white p-5">
-      <h3 class="text-sm font-semibold text-slate-900">New York — OMIG ALP audit protocol</h3>
-      <p class="mt-1 text-xs text-slate-500">OMIG Audit Protocol, Assisted Living Program, rev. 12/26/2025</p>
-      <% if @ny_areas.empty? %>
-        <p class="mt-4 text-sm text-slate-500 italic">Extraction in progress — areas will appear here once promoted.</p>
-      <% else %>
-        <dl class="mt-4 space-y-3 text-sm">
-          <div><dt class="text-xs font-medium uppercase text-slate-400">Enumerated disallowance areas</dt><dd class="text-slate-800"><strong><%= @ny_areas.size %></strong> areas (1–30), each independently citable <span class="text-xs text-slate-500">— public commentary reports "~22"; the protocol itself enumerates 30 with no gaps</span></dd></div>
-          <div><dt class="text-xs font-medium uppercase text-slate-400">Sample / penalty tier</dt><dd class="text-slate-800"><%= rule_fact(@ny_areas, /statistical sample|record sample|sample of (residents|claims|records)|% sample|sample percentage/i) %></dd></div>
-        </dl>
-        <div class="mt-4 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-900">
-          Unlike Maine's published statistical sampling/tiered-sanction formula, the public OMIG protocol is a per-claim checklist — it does not itself state a facility-wide sample percentage or tiered penalty schedule. That doesn't mean OMIG doesn't have one; it means the public protocol doesn't say, and NOT_FOUND is recorded rather than assumed.
-        </div>
-      <% end %>
+      <h3 class="text-sm font-semibold text-slate-900">State reimbursement regulation</h3>
+      <p class="mt-1 text-xs text-slate-500">MaineCare Ch. III §16.2/§22.2 → <%= link_to "CONV-ME-*", rulebook_path(jurisdiction: "Maine"), class: "hover:underline" %></p>
+      <p class="mt-3 text-sm text-slate-700">Audit machinery: sample size, error-rate formula, sanction thresholds, correction deadlines.</p>
+    </div>
+    <div class="rounded-lg border border-slate-200 bg-white p-5">
+      <h3 class="text-sm font-semibold text-slate-900">State audit protocol</h3>
+      <p class="mt-1 text-xs text-slate-500">OMIG ALP protocol → <%= link_to "CONV-NY-OMIG-ALP-*", rulebook_path(jurisdiction: "New York"), class: "hover:underline" %></p>
+      <p class="mt-3 text-sm text-slate-700">Enumerated disallowance areas, each an independently citable audit criterion.</p>
     </div>
   </div>
+  <p class="mt-4 text-sm text-slate-500">Same <code class="rounded bg-slate-100 px-1 py-0.5 text-xs">rulebook/schema.json</code>, same <code class="rounded bg-slate-100 px-1 py-0.5 text-xs">CONV-*</code> pattern, one new <code class="rounded bg-slate-100 px-1 py-0.5 text-xs">instrument</code> value (<code class="rounded bg-slate-100 px-1 py-0.5 text-xs">UAS-NY</code>) for the whole second jurisdiction.</p>
 </section>
 
 <% if @ny_areas.any? %>
 <section class="mb-10 rounded-lg border border-amber-200 bg-amber-50 p-5">
   <h2 class="text-base font-semibold text-amber-950">A regulator changing its own protocol twice in five weeks</h2>
-  <p class="mt-2 text-sm text-amber-900">Between the 11/20/2025 and 12/26/2025 revisions, OMIG loosened who may sign a medical evaluation or reassessment (Areas 6 and 8): previously a specific form could substitute a physician assistant or nurse practitioner for a physician; the December revision replaces that with a clean date-based rule allowing a physician, PA, or NP for services on or after 02/19/14. Two published revisions five weeks apart, with a substantive signature-requirement change between them, is itself a fact worth surfacing to a facility relying on this protocol.</p>
+  <p class="mt-2 text-sm text-amber-900">Between the 11/20/2025 and 12/26/2025 revisions, OMIG loosened who may sign a medical evaluation or reassessment (Areas 6 and 8): previously a specific form could substitute a physician assistant or nurse practitioner for a physician; the December revision replaces that with a clean date-based rule allowing a physician, PA, or NP for services on or after 02/19/14. Two published revisions five weeks apart, with a substantive signature-requirement change between them, is itself a fact worth surfacing to a facility relying on this protocol. <%= link_to "See it on the changes feed →", changes_path, class: "font-medium hover:underline" %></p>
 </section>
 <% end %>
 
