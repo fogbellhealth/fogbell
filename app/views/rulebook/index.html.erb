@@ -59,7 +59,7 @@
                 <% j = item_jurisdiction(item) %>
                 <% if j != "Federal" %><span class="rounded bg-violet-50 px-1.5 py-0.5 text-[11px] font-medium text-violet-800 ring-1 ring-inset ring-violet-200"><%= j %></span><% end %>
                 <% if item.conflicts.any? %><span class="rounded bg-amber-50 px-1.5 py-0.5 text-[11px] font-medium text-amber-800 ring-1 ring-inset ring-amber-200">conflict</span><% end %>
-                <%= review_status_badge(item.provenance_summary["expert_review_status"]) %>
+                <%= review_status_badge(effective_review_status(item)) %>
               </span>
             <% end %>
           <% end %>

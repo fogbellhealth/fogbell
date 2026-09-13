@@ -146,4 +146,42 @@ namespace :rulebook do
   task evals: :environment do
     abort "rulebook:evals is not implemented yet — see backlog.md"
   end
+
+  # Materializes pending RuleReview rows (submitted via the web app's /review) into
+  # rulebook/items/*.json — the only path that writes review markup into the corpus. Refuses to
+  # run against an uncommitted rulebook/ tree so the resulting diff is always clean and reviewable
+  # on its own. DRY_RUN=1 prints the plan without writing or updating any RuleReview.
+  desc "Materialize pending RuleReview rows into rulebook/items/*.json (DRY_RUN=1 to preview)"
+  task apply_review: :environment do
+    items_dir = Pathname(ENV.fetch("ITEMS_DIR", Fogbell::Rulebook.items_dir.to_s))
+    git_root = ENV.fetch("GIT_ROOT", Rails.root.to_s)
+    git_check_path = ENV.fetch("GIT_CHECK_PATH", "rulebook")
+    applier = Fogbell::Review::ApplyReview.new(items_dir: items_dir, changelog: Fogbell::Pipeline::Changelog.new(items_dir.join("../changelog.md")))
+    plan = applier.plan
+
+    if plan.empty?
+      puts "No pending reviews."
+      next
+    end
+
+    puts "Pending review plan:"
+    plan.each do |item_id, grouping|
+      puts "  #{item_id}: #{grouping[:winners].size} target(s) to apply#{" (#{grouping[:superseded].size} superseded)" if grouping[:superseded].any?}"
+      grouping[:winners].each { |r| puts "    #{r.target}: #{r.verdict} (#{r.reviewer.email}, #{r.submitted_at.to_date.iso8601})" }
+    end
+
+    if ENV["DRY_RUN"] == "1"
+      puts "\nDRY_RUN=1 — nothing written."
+      next
+    end
+
+    dirty = `git -C #{git_root} status --porcelain -- #{git_check_path}`.strip
+    if dirty.present?
+      abort "\n#{git_check_path}/ has uncommitted changes — commit or stash them first, so this task's diff is reviewable on its own:\n#{dirty}"
+    end
+
+    results = applier.apply!
+    puts "\nApplied:"
+    results.each { |r| puts "  #{r.item_id}: #{r.applied} applied, #{r.superseded} superseded -> #{r.status}" }
+  end
 end

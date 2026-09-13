@@ -4,9 +4,20 @@ module RulebookHelper
   REVIEW_STATUS_STYLES = {
     "unreviewed" => "bg-slate-100 text-slate-700 ring-slate-200",
     "in_review" => "bg-blue-50 text-blue-800 ring-blue-200",
+    "pending" => "bg-amber-50 text-amber-800 ring-amber-200",
     "verified" => "bg-emerald-50 text-emerald-800 ring-emerald-200",
     "disputed" => "bg-rose-50 text-rose-800 ring-rose-200"
   }.freeze
+
+  # The provenance_summary.expert_review_status the JSON actually carries, upgraded to "pending"
+  # when a RuleReview exists for this item that hasn't been materialized yet by
+  # `rake rulebook:apply_review`. "pending" is a display-layer state only — it is never written
+  # into the item JSON itself (the schema's expert_review_status enum has no such value).
+  def effective_review_status(item)
+    return "pending" if RuleReview.pending.for_item(item.item_id).exists?
+
+    item.provenance_summary["expert_review_status"]
+  end
 
   # The jurisdiction an item's own rules were extracted from: the manifest section of its
   # first source document ("Federal", "Maine", "New York"). Reused for filtering and display.

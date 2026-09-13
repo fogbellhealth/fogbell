@@ -8,24 +8,20 @@
   <p class="text-sm font-mono text-slate-500"><%= @item.item_id %> · Section <%= @item.section %> · <%= instrument_name(@item.instrument) %></p>
   <h1 class="mt-1 text-2xl font-semibold tracking-tight text-slate-900"><%= @item.item_name %></h1>
   <div class="mt-2 flex items-center gap-2">
-    <%= review_status_badge(@item.provenance_summary["expert_review_status"]) %>
+    <%= review_status_badge(effective_review_status(@item)) %>
+    <span class="text-xs text-slate-400">signed in as <%= current_user.email %></span>
     <%= link_to "View the rulebook page →", rulebook_item_path(@item.item_id), class: "text-xs text-slate-500 hover:underline" %>
   </div>
 </div>
 
-<%= form_with url: review_item_path(@item.item_id), method: :patch, class: "space-y-6" do %>
-  <div class="rounded-lg border border-slate-200 bg-white p-4">
-    <label class="block text-sm font-medium text-slate-800">Reviewer name</label>
-    <input type="text" name="reviewer" required class="mt-1 block w-full max-w-xs rounded-md border border-slate-300 px-3 py-2 text-sm shadow-sm focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500" placeholder="e.g. J. Doucette, RN-BC">
-  </div>
-
+<%= form_with url: review_item_path(@item.item_id), method: :post, class: "space-y-6" do %>
   <% if @item.federal_coding_rules.any? %>
     <fieldset class="rounded-lg border border-slate-200 bg-white p-4">
       <legend class="px-1 text-sm font-semibold text-slate-900">Rules</legend>
       <div class="mt-2 space-y-4">
         <% @item.federal_coding_rules.each_with_index do |r, i| %>
           <div class="border-t border-slate-100 pt-3 first:border-t-0 first:pt-0">
-            <p class="text-sm text-slate-800"><span class="font-mono text-xs text-slate-500">R<%= i + 1 %></span> <%= r["rule"] %></p>
+            <p class="text-sm text-slate-800"><span class="font-mono text-xs text-slate-500">R<%= i + 1 %></span> <%= r["rule"] %><%= render "pending_badge", pending: @pending["rule:#{i}"] %></p>
             <p class="mt-0.5 text-xs text-slate-500"><%= cite(r["source"]) %><% if r["source"]["quote"].present? %> — “<%= r["source"]["quote"] %>”<% end %></p>
             <%= render "verdict_fields", name: "rules[#{i}]" %>
           </div>
@@ -41,7 +37,7 @@
       <div class="mt-2 space-y-4">
         <% federal_criteria.each_with_index do |c, i| %>
           <div class="border-t border-slate-100 pt-3 first:border-t-0 first:pt-0">
-            <p class="text-sm text-slate-800"><%= c["criterion"] %> <span class="text-xs text-slate-400">(audit weight: <%= c["audit_weight"] %>)</span><% if c["verified_by_expert"] %> <span class="rounded bg-emerald-50 px-1.5 py-0.5 text-[11px] font-medium text-emerald-800 ring-1 ring-inset ring-emerald-200">previously verified</span><% end %></p>
+            <p class="text-sm text-slate-800"><%= c["criterion"] %> <span class="text-xs text-slate-400">(audit weight: <%= c["audit_weight"] %>)</span><% if c["verified_by_expert"] %> <span class="rounded bg-emerald-50 px-1.5 py-0.5 text-[11px] font-medium text-emerald-800 ring-1 ring-inset ring-emerald-200">previously verified</span><% end %><%= render "pending_badge", pending: @pending["criterion:#{i}"] %></p>
             <p class="mt-0.5 text-xs text-slate-500"><%= cite(c["source"]) %></p>
             <%= render "verdict_fields", name: "criteria[#{i}]" %>
           </div>
@@ -51,11 +47,11 @@
   <% end %>
 
   <% if @item.federal_coding_rules.empty? && federal_criteria.empty? %>
-    <p class="rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-500">Nothing to mark up — this item has no rules or documentation criteria (a NOT_FOUND result). Submitting will still record the item as reviewed.</p>
+    <p class="rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-500">Nothing to mark up — this item has no rules or documentation criteria (a NOT_FOUND result).</p>
   <% end %>
 
   <div class="flex items-center gap-3">
-    <button type="submit" class="rounded-md bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-slate-800">Submit review</button>
-    <p class="text-xs text-slate-500">Writes directly into the item's JSON file and appends to the changelog. Still needs a human to commit it.</p>
+    <button type="submit" class="rounded-md bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-slate-800">Submit markup</button>
+    <p class="text-xs text-slate-500">Queues your markup as pending. <code class="rounded bg-slate-100 px-1 py-0.5 text-xs">rake rulebook:apply_review</code> materializes it into the item JSON and the changelog — nothing here writes to the corpus directly.</p>
   </div>
 <% end %>

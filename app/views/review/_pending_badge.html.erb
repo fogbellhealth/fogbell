@@ -1,0 +1,4 @@
+<%# locals: pending (a RuleReview or nil) %>
+<% if pending %>
+  <span class="ml-1 rounded bg-amber-50 px-1.5 py-0.5 text-[11px] font-medium text-amber-800 ring-1 ring-inset ring-amber-200" title="submitted <%= pending.submitted_at.strftime('%b %-d, %Y') %> by <%= pending.reviewer.email %>">pending: <%= pending.verdict.tr("_", " ") %></span>
+<% end %>
