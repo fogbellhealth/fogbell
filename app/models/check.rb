@@ -3,6 +3,8 @@
 class Check < ApplicationRecord
   STATUSES = %w[queued running done failed].freeze
 
+  belongs_to :facility, optional: true
+
   validates :chart_text, presence: true, length: { maximum: 60_000 }
   validates :ard, presence: true
   validates :status, inclusion: { in: STATUSES }

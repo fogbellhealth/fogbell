@@ -19,18 +19,38 @@
             <span class="text-xl" aria-hidden="true">🔔</span>
             <span class="text-lg font-semibold tracking-tight text-slate-900">Fogbell</span>
           <% end %>
-          <nav class="flex flex-wrap gap-4 text-sm text-slate-600">
-            <%= link_to "Today", root_path, class: "hover:text-slate-900 #{'font-semibold text-slate-900' if current_page?(root_path)}" %>
-            <%= link_to "New check", new_check_path, class: "hover:text-slate-900 #{'font-semibold text-slate-900' if current_page?(new_check_path)}" %>
-            <%= link_to "Rulebook", rulebook_path, class: "hover:text-slate-900 #{'font-semibold text-slate-900' if current_page?(rulebook_path)}" %>
-            <%= link_to "Changes", changes_path, class: "hover:text-slate-900 #{'font-semibold text-slate-900' if current_page?(changes_path)}" %>
-            <%= link_to "Review", review_path, class: "hover:text-slate-900 #{'font-semibold text-slate-900' if current_page?(review_path)}" %>
-          </nav>
+          <% if user_signed_in? %>
+            <nav class="flex flex-wrap gap-4 text-sm text-slate-600">
+              <% if current_user.facility_domain? %>
+                <%= link_to "Today", today_path, class: "hover:text-slate-900 #{'font-semibold text-slate-900' if current_page?(today_path)}" %>
+                <%= link_to "New check", new_check_path, class: "hover:text-slate-900 #{'font-semibold text-slate-900' if current_page?(new_check_path)}" %>
+              <% end %>
+              <%= link_to "Rulebook", rulebook_path, class: "hover:text-slate-900 #{'font-semibold text-slate-900' if current_page?(rulebook_path)}" %>
+              <%= link_to "Changes", changes_path, class: "hover:text-slate-900 #{'font-semibold text-slate-900' if current_page?(changes_path)}" %>
+              <% if current_user.rulebook_domain? %>
+                <%= link_to "Review", review_path, class: "hover:text-slate-900 #{'font-semibold text-slate-900' if current_page?(review_path)}" %>
+                <%= link_to "Questions", review_questions_path, class: "hover:text-slate-900 #{'font-semibold text-slate-900' if current_page?(review_questions_path)}" %>
+              <% end %>
+            </nav>
+          <% end %>
         </div>
-        <span class="rounded-md bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-900 ring-1 ring-inset ring-amber-200">Demo only — synthetic data. Never enter real resident information.</span>
+        <div class="flex items-center gap-3">
+          <% if user_signed_in? %>
+            <% if current_user.facility_domain? %>
+              <span class="rounded-md bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-900 ring-1 ring-inset ring-amber-200">Demo only — synthetic data. Never enter real resident information.</span>
+            <% else %>
+              <span class="rounded-md bg-violet-50 px-3 py-1 text-xs font-semibold text-violet-800 ring-1 ring-inset ring-violet-200">Rulebook domain — no resident data reachable from this account</span>
+            <% end %>
+            <span class="hidden text-xs text-slate-500 sm:inline"><%= current_user.email %> · <%= current_user.role %></span>
+            <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "rounded-md px-2 py-1 text-xs font-medium text-slate-500 hover:bg-slate-100 hover:text-slate-700" %>
+          <% end %>
+        </div>
       </div>
     </header>
     <main class="mx-auto max-w-6xl px-6 py-8">
+      <% if notice %>
+        <div class="mb-6 rounded-md border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900"><%= notice %></div>
+      <% end %>
       <% if flash[:alert] %>
         <div class="mb-6 rounded-md border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-900"><%= flash[:alert] %></div>
       <% end %>

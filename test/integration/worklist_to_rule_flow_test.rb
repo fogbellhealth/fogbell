@@ -9,10 +9,12 @@ class WorklistToRuleFlowTest < ActionDispatch::IntegrationTest
 
   setup do
     facility = Facility.create!(name: "Test Facility (fictional, synthetic)")
+    @nurse = create_user(role: "nurse", facility: facility)
+    sign_in @nurse
     resident = facility.residents.create!(label: "Resident Flow", chart_text: "SYNTHETIC — no rejection of care documented in this excerpt.")
     @ard = Date.current + 2
-    seed_check = Check.create!(chart_text: resident.chart_text, ard: @ard, item_ids: [ "E0800" ], status: "done",
-                                results: [ { "item_id" => "E0800", "status" => "unsupported", "rationale" => "stub" } ])
+    seed_check = facility.checks.create!(chart_text: resident.chart_text, ard: @ard, item_ids: [ "E0800" ], status: "done",
+                                         results: [ { "item_id" => "E0800", "status" => "unsupported", "rationale" => "stub" } ])
     @assessment = resident.assessments.create!(assessment_type: "quarterly", ard: @ard, status: "open",
                                                 focus_item_id: "E0800", check: seed_check)
 
@@ -27,7 +29,7 @@ class WorklistToRuleFlowTest < ActionDispatch::IntegrationTest
   teardown { Fogbell::EvidenceCheck.llm_builder = nil }
 
   test "Today -> open a check -> see verdicts -> click through to the rule" do
-    get root_path
+    get today_path
     assert_response :success
     assert_select "article#assessment_#{@assessment.id} a", text: "Open check"
 

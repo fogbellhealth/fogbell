@@ -5,6 +5,6 @@
   <% when "done" %>
     <span class="rounded-md bg-emerald-50 px-3 py-1 text-emerald-800 ring-1 ring-inset ring-emerald-200">Check complete — draft for nurse review</span>
   <% when "failed" %>
-    <div class="max-w-md rounded-md border border-rose-200 bg-rose-50 px-3 py-2 text-rose-900"><strong>The check could not be completed.</strong> <%= check.error %> <%= link_to "Try again", root_path, class: "underline" %>.</div>
+    <div class="max-w-md rounded-md border border-rose-200 bg-rose-50 px-3 py-2 text-rose-900"><strong>The check could not be completed.</strong> <%= check.error %> <%= link_to "Try again", new_check_path, class: "underline" %>.</div>
   <% end %>
 </div>

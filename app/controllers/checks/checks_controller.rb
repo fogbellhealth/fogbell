@@ -1,9 +1,12 @@
 module Checks
-  # GET /  -> the check form (preloaded with the synthetic demo chart)
+  # GET /checks/new -> the check form (preloaded with the synthetic demo chart, or a worklist card's resident)
   # POST /checks -> create + enqueue, then redirect to the live result page
   # GET /checks/:id -> results, streamed in as the job finishes each item
+  # Facility-domain only, and every check here belongs to current_user's own facility.
   class ChecksController < ApplicationController
     DEFAULT_ITEMS = %w[D0150 D0160 D0500 D0600 E0100 E0200 E0300 E0800 E0900 E1000 E1100].freeze
+
+    before_action { authorize :facility_area, policy_class: FacilityAreaPolicy }
 
     def new
       @check = from_worklist_assessment || from_params
@@ -11,7 +14,7 @@ module Checks
     end
 
     def create
-      @check = Check.new(check_params)
+      @check = require_facility!.checks.new(check_params)
       if @check.save
         RunCheckJob.perform_later(@check)
         redirect_to check_path(@check)
@@ -23,19 +26,19 @@ module Checks
     end
 
     def show
-      @check = Check.find(params[:id])
+      @check = require_facility!.checks.find(params[:id])
     end
 
     private
 
     # A worklist card's "Open check" link: carries only an id, so the resident's chart/ARD/item
-    # never round-trip through a URL.
+    # never round-trip through a URL. Scoped to current_user's own facility.
     def from_worklist_assessment
-      assessment = Assessment.find_by(id: params[:assessment_id])
+      assessment = require_facility!.assessments.find_by(id: params[:assessment_id])
       return nil unless assessment
 
-      Check.new(chart_text: assessment.resident.chart_text, ard: assessment.ard,
-                item_ids: [ assessment.focus_item_id ] & Fogbell::Rulebook.instance.ids)
+      require_facility!.checks.new(chart_text: assessment.resident.chart_text, ard: assessment.ard,
+                                       item_ids: [ assessment.focus_item_id ] & Fogbell::Rulebook.instance.ids)
     end
 
     # Direct/ad-hoc use: the synthetic demo chart, optionally with a preselected item (from a
@@ -43,8 +46,8 @@ module Checks
     def from_params
       requested = Array(params.dig(:check, :item_ids)).reject(&:blank?)
       preselected = requested.presence & Fogbell::Rulebook.instance.ids
-      Check.new(chart_text: Fogbell::EvidenceCheck::SyntheticChart.text, ard: Fogbell::EvidenceCheck::SyntheticChart::DEFAULT_ARD,
-                item_ids: preselected.presence || (DEFAULT_ITEMS & Fogbell::Rulebook.instance.ids))
+      require_facility!.checks.new(chart_text: Fogbell::EvidenceCheck::SyntheticChart.text, ard: Fogbell::EvidenceCheck::SyntheticChart::DEFAULT_ARD,
+                                       item_ids: preselected.presence || (DEFAULT_ITEMS & Fogbell::Rulebook.instance.ids))
     end
 
     def check_params

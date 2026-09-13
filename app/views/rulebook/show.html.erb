@@ -10,7 +10,7 @@
     <p class="text-sm font-mono text-slate-500"><%= @item.item_id %> · Section <%= @item.section %> · <%= instrument_name(@item.instrument) %></p>
     <h1 class="mt-1 text-2xl font-semibold tracking-tight text-slate-900"><%= @item.item_name %></h1>
     <div class="mt-2 flex flex-wrap items-center gap-2">
-      <%= review_status_badge(@item.provenance_summary["expert_review_status"]) %>
+      <%= review_status_badge(effective_review_status(@item)) %>
       <% if j != "Federal" %>
         <span class="rounded bg-violet-50 px-2 py-0.5 text-[11px] font-medium text-violet-800 ring-1 ring-inset ring-violet-200"><%= j %> layer — provisional pending expert review</span>
       <% end %>
@@ -18,7 +18,7 @@
     </div>
   </div>
   <% if @item.section != "CONV" %>
-    <%= link_to "Run a check using this item", root_path(check: { item_ids: [ @item.item_id ] }), class: "shrink-0 rounded-md bg-slate-900 px-3 py-2 text-xs font-semibold text-white shadow-sm hover:bg-slate-800" %>
+    <%= link_to "Run a check using this item", new_check_path(check: { item_ids: [ @item.item_id ] }), class: "shrink-0 rounded-md bg-slate-900 px-3 py-2 text-xs font-semibold text-white shadow-sm hover:bg-slate-800" %>
   <% end %>
 </div>
 

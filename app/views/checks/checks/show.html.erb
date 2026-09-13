@@ -3,7 +3,7 @@
 <div class="mb-6 flex items-baseline justify-between">
   <div>
     <h1 class="text-2xl font-semibold tracking-tight text-slate-900">Evidence check</h1>
-    <p class="mt-1 text-sm text-slate-600">ARD <%= @check.ard.strftime("%B %-d, %Y") %> · <%= @check.item_ids.size %> items · <%= link_to "start another", root_path, class: "underline decoration-slate-300 hover:decoration-slate-600" %></p>
+    <p class="mt-1 text-sm text-slate-600">ARD <%= @check.ard.strftime("%B %-d, %Y") %> · <%= @check.item_ids.size %> items · <%= link_to "start another", new_check_path, class: "underline decoration-slate-300 hover:decoration-slate-600" %></p>
   </div>
   <%= render "checks/status", check: @check %>
 </div>

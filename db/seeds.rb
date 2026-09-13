@@ -5,9 +5,19 @@
 # calls) so worklist cards show a genuine model-driven finding, not fabricated text.
 
 FACILITY_NAME = "Harborlight Point Nursing Center"
+DEMO_PASSWORD = "fogbell-demo-2026"
 
-# Clean slate: destroy prior seeded checks explicitly (by id, captured before destroying the
-# assessments that reference them) so a reseed never touches checks created by real app usage.
+DEMO_USERS = [
+  { email: "nurse@example.test", role: "nurse", facility: true },
+  { email: "verifier@example.test", role: "verifier", facility: false },
+  { email: "both@example.test", role: "nurse", facility: true, dev_both_domains: true }
+].freeze
+
+# Clean slate: destroy prior seeded users/checks explicitly (by id, captured before destroying the
+# assessments/facility that reference them) so a reseed never touches records from real app usage
+# or leaves a stale facility_id=nil user behind (Facility's has_many :users is dependent: :nullify,
+# not :destroy — nullifying instead of deleting here would leave an invalid row).
+User.where(email: DEMO_USERS.map { |u| u[:email] }).destroy_all
 old_check_ids = Assessment.joins(:resident).where(residents: { facility: Facility.where(name: FACILITY_NAME) }).pluck(:check_id).compact
 Assessment.destroy_all
 Resident.destroy_all
@@ -15,6 +25,13 @@ Facility.where(name: FACILITY_NAME).destroy_all
 Check.where(id: old_check_ids).destroy_all
 
 facility = Facility.create!(name: FACILITY_NAME)
+
+DEMO_USERS.each do |u|
+  User.create!(email: u[:email], password: DEMO_PASSWORD, role: u[:role],
+               facility: u[:facility] ? facility : nil, dev_both_domains: u.fetch(:dev_both_domains, false))
+end
+puts "Seeded #{DEMO_USERS.size} demo users (password: #{DEMO_PASSWORD}):"
+DEMO_USERS.each { |u| puts "  #{u[:email]} — #{u[:role]}#{' + dev_both_domains (convenience, not a real role)' if u[:dev_both_domains]}" }
 
 today = Date.current
 

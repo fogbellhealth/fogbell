@@ -1,8 +1,12 @@
 # GET / -> the worklist: open assessment windows ordered by days remaining, the product's shape.
+# Facility-domain only, and scoped to current_user's own facility — a rulebook-domain user's scope
+# here is empty even before the policy check runs (current_user.facility is nil for them).
 class TodayController < ApplicationController
   def index
-    @facility = Facility.first
-    @assessments = Assessment.open_windows.includes(:resident, :check)
+    authorize :facility_area, policy_class: FacilityAreaPolicy
+
+    @facility = current_user.facility
+    @assessments = current_user.facility ? current_user.facility.assessments.open_windows.includes(:resident, :check) : Assessment.none
     @needs_charting = @assessments.count { |a| %w[partial unsupported].include?(a.finding&.dig("status")) }
     @closing_this_week = @assessments.count { |a| a.days_remaining <= 7 }
 

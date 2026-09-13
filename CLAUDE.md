@@ -13,10 +13,45 @@ Two-corpus ambition: the schema and pipeline must stay corpus-agnostic (a "rule 
 - **Rails 8 monolith**, Hotwire (Turbo + Stimulus), Tailwind. No React, no separate frontend, no microservices.
 - **Rulebook = JSON files in git** (`rulebook/items/*.json`), validated with the `json_schemer` gem against `rulebook/schema.json`. NOT ActiveRecord — git gives us diffs, review, blame, and history, which IS the provenance story. A `Fogbell::Rulebook` module loads them read-only at boot into plain Ruby objects. A rulebook change is a reviewed commit.
 - **Pipeline = rake tasks** (`lib/tasks/rulebook.rake`): `rulebook:extract`, `rulebook:layer_state`, `rulebook:review_pages`, `rulebook:evals`. Run locally, by hand. They shell out to `pdftotext -layout` (poppler) and call the Anthropic API (`anthropic` gem or plain Faraday). Form/scanned PDFs: prefer sending pages to Claude as native PDF/image input over local OCR; `tesseract` is the fallback. The pipeline never runs in production.
-- **Database:** whatever `rails new` provided, used only when a real need appears (logged analysis runs; later, accounts). NEVER any real resident data — synthetic only, everywhere, always.
+- **Database:** whatever `rails new` provided, used only when a real need appears (logged analysis runs; accounts via Devise + Pundit, see "Role model" below). NEVER any real resident data — synthetic only, everywhere, always.
   - **`Facility` / `Resident` / `Assessment` are a demo fixture, not the product's data model.** They exist to drive the worklist (`db/seeds.rb`) with reproducible synthetic data — a `Resident` is a label only ("Resident 04": no name, no DOB), a `Check` (the real evidence-check record) is created per assessment and run once at seed time, and `Assessment#focus_item_id`/`#check` cache that result for the worklist card. This stands in for a future EHR feed; when real integration work starts, this schema gets replaced, not extended. `Check` itself still stores no resident identity (see its own comment) — that only lives on the fixture side.
 - **Deploy:** Render, standard Rails deploy, service name `fogbell`. Anthropic API key server-side via credentials/env. The analysis call runs in a service object (`Fogbell::EvidenceCheck::Runner`) + Solid Queue job, results streamed to the page with Turbo.
 - **Evals in CI:** `rulebook:evals` runs on every PR touching `rulebook/` or prompt templates; regressions block merge.
+
+## Role model — two domains, not a hierarchy
+
+Two orthogonal role domains, never "user / admin / superuser." A rule reviewer is not a more
+powerful nurse; they're a different kind of user entirely.
+
+- **Facility domain** (`nurse`, `don`): belongs to a `Facility`, scoped to that facility's
+  residents, assessments, charts, and checks. Can read the rulebook and the changes feed. Cannot
+  access the review queue or write anything to the corpus.
+- **Rulebook domain** (`verifier`, `staff`): no facility affiliation, ever — `facility_id` must be
+  nil (validated on `User`). **Cannot access residents, charts, assessments, or checks — at all,
+  ever.** Can see the review queue, the standing questions list, the changes feed, and the full
+  rulebook.
+
+**Why:** the Verifier is a domain expert employed elsewhere. She must never be able to see another
+operator's resident data — both because rule review requires no PHI whatsoever, and because her
+outside employment creates a conflict-of-interest surface the product deliberately avoids by
+construction. The expert-verification layer is built so that experts never touch charts, not so
+that they merely aren't shown a link to them. Enforced at the query level (`FacilityAreaPolicy` /
+`RulebookAreaPolicy`, plus every facility-scoped query built from `current_user.facility`, never
+an unscoped model), not just by hiding nav — see the policy tests in
+`test/integration/domain_policy_test.rb` for what "enforced" means here.
+
+`dev_both_domains` on `User` is a seed-only development convenience (one demo account spans both
+surfaces for demoing) — never a real role, and never how a production account should look.
+
+## Corpus write path — one door, and it isn't HTTP
+
+Nothing in `rulebook/` is ever written by a web request. The review queue writes `RuleReview` rows
+(status `pending`) to the database; only `rake rulebook:apply_review` (see
+`lib/fogbell/review/apply_review.rb`) materializes them into `rulebook/items/*.json` with
+attribution, appends to `changelog.md`, and marks the rows `applied`. It refuses to run against an
+uncommitted `rulebook/` tree, so every application of review markup is its own clean, reviewable
+git diff — git stays the single provenance store; the database is a staging area in front of it,
+never a second source of truth.
 
 ## Repository layout
 

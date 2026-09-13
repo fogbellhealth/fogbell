@@ -12,6 +12,10 @@ class EvidenceCheckFlowTest < ActionDispatch::IntegrationTest
         "evidence" => [ { "date" => "09/02/2026", "author" => "J. Okafor, LPN", "quote" => "stub quote" } ], "outside_window_evidence" => [], "gaps" => [ "stub gap" ],
         "chart_today_action" => nil, "rules_applied" => [ 1 ] } }, "overall_note" => "Draft." }
     Fogbell::EvidenceCheck.llm_builder = -> { Fogbell::Pipeline::Llm::StubClient.new(text: JSON.generate(payload)) }
+
+    @facility = Facility.create!(name: "Test Facility (fictional, synthetic)")
+    @nurse = create_user(role: "nurse", facility: @facility)
+    sign_in @nurse
   end
 
   teardown { Fogbell::EvidenceCheck.llm_builder = nil }
@@ -23,7 +27,7 @@ class EvidenceCheckFlowTest < ActionDispatch::IntegrationTest
     assert_select "input[type=date][name='check[ard]'][value='2026-09-03']"
     assert_select "input[type=checkbox][value='D0150'][checked]"
     assert_select "input[type=checkbox][value^='CONV-']", count: 0
-    assert_match(/Demo only — synthetic data only/, response.body)
+    assert_match(/Demo only — synthetic data/, response.body)
   end
 
   test "submitting runs the job and the result page shows cards with status, evidence and the why disclosure" do
@@ -33,6 +37,7 @@ class EvidenceCheckFlowTest < ActionDispatch::IntegrationTest
     check = Check.last
     assert_redirected_to check_path(check)
     assert_equal "done", check.reload.status
+    assert_equal @facility.id, check.facility_id
     follow_redirect!
     assert_response :success
     assert_select "article#card_D0150"
@@ -42,12 +47,15 @@ class EvidenceCheckFlowTest < ActionDispatch::IntegrationTest
     assert_match(/Mock audit projection/, response.body)
   end
 
-  test "with DEMO_PASSWORD set the app requires HTTP basic auth, and the health check does not" do
+  test "with DEMO_PASSWORD set the app requires HTTP basic auth before Devise even gets a say, and the health check is unaffected" do
     ENV["DEMO_PASSWORD"] = "bell"
-    get root_path
+    sign_out @nurse
+    get new_check_path
     assert_response :unauthorized
-    get root_path, headers: { "Authorization" => ActionController::HttpAuthentication::Basic.encode_credentials("anyone", "bell") }
-    assert_response :success
+
+    get new_check_path, headers: { "Authorization" => ActionController::HttpAuthentication::Basic.encode_credentials("anyone", "bell") }
+    assert_redirected_to new_user_session_path # basic auth passed; Devise still requires a real sign-in
+
     get "/up"
     assert_response :success
   ensure

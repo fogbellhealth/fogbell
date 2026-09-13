@@ -1,6 +1,8 @@
 require "test_helper"
 
 class RulebookBrowserTest < ActionDispatch::IntegrationTest
+  setup { sign_in create_user(role: "verifier") }
+
   test "index shows headline counts and items grouped by instrument then section" do
     get rulebook_path
     assert_response :success
