@@ -1,0 +1,9 @@
+<%# locals: metrics ([{label:, value:}]) %>
+<div class="inline-grid grid-flow-col rounded border border-rule bg-white">
+  <% metrics.each do |m| %>
+    <div class="flex flex-col gap-0.5 border-r border-rule px-5 py-3 last:border-r-0">
+      <div class="text-[11px] font-semibold uppercase tracking-[.06em] text-muted"><%= m[:label] %></div>
+      <div class="text-2xl font-semibold tracking-tight"><%= m[:value] %></div>
+    </div>
+  <% end %>
+</div>

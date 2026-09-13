@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Figtree:wght@400;500;600;700&family=Archivo:wdth,wght@75..125,400;75..125,500;75..125,600;75..125,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#e9e7e2;color:#1a1918;font-family:Figtree,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}a:hover{color:#3a3936}
+</style>
+</helmet>
+
+<section style="padding:40px 48px 64px;display:flex;flex-direction:column;gap:24px">
+  <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#6b6964">Turn 1 · three directions for the overall feel</div>
+    <div style="font-size:13px;color:#6b6964">Same content in each: the most urgent Today card, status labels, a citation. Only the feel changes.</div>
+  </div>
+
+  <div style="display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap">
+
+    <!-- ================= 1a LEDGER ================= -->
+    <div id="1a" style="width:600px;flex:0 0 auto;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <a href="#1a" style="font-family:'IBM Plex Mono',monospace;font-size:12px;background:#1a1918;color:#fff;padding:3px 7px;text-decoration:none">1a</a>
+        <div style="font-size:14px;font-weight:600">Ledger</div>
+        <div style="font-size:13px;color:#6b6964">Warm paper, serif headings, hairline rules. Reads like a regulatory reference.</div>
+      </div>
+      <div style="background:#f7f4ee;color:#221f1a;font-family:Figtree,sans-serif;padding:32px;display:flex;flex-direction:column;gap:28px;border:1px solid #d9d3c7">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #221f1a;padding-bottom:12px">
+          <div style="font-family:Newsreader,serif;font-size:24px;font-weight:500;letter-spacing:-.01em">Fogbell</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#6e6759">◇ Synthetic data</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#6e6759">Type · Newsreader / Figtree / IBM Plex Mono</div>
+          <div style="font-family:Newsreader,serif;font-size:34px;line-height:1.1;font-weight:500;letter-spacing:-.015em">3 windows closing this week</div>
+          <div style="font-size:14px;line-height:1.5;color:#3d3830;max-width:46ch;text-wrap:pretty">Only documentation charted inside the look-back window counts. Once the window closes, nothing can be added.</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#6e6759">Color roles</div>
+          <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6e6759">
+            <div><div style="height:28px;background:#221f1a"></div>Ink</div>
+            <div><div style="height:28px;background:#f7f4ee;border:1px solid #d9d3c7"></div>Paper</div>
+            <div><div style="height:28px;background:#ebe5d8"></div>Window</div>
+            <div><div style="height:28px;background:#8a5a1e"></div>Closing</div>
+            <div><div style="height:28px;background:#2f5d50"></div>Supported</div>
+            <div><div style="height:28px;background:#a8a094"></div>Stranded</div>
+          </div>
+        </div>
+
+        <!-- card -->
+        <div style="border-top:1px solid #221f1a;border-bottom:1px solid #d9d3c7;padding:18px 0;display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+            <div style="font-family:Newsreader,serif;font-size:20px;font-weight:500">Resident 07 <span style="color:#6e6759">· quarterly</span></div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8a5a1e;display:flex;align-items:center;gap:6px"><span style="display:inline-block;width:8px;height:8px;background:#8a5a1e;transform:rotate(45deg)"></span>Closes tomorrow</div>
+          </div>
+          <div style="font-size:14px;line-height:1.45;color:#3d3830"><span style="font-family:'IBM Plex Mono',monospace;color:#221f1a">D0500</span> staff assessment of mood · 7-day look-back · coded 2, documentation supports 1 episode</div>
+          <!-- timeline: 9 day cells, 2 outside + 7 inside, ARD at right -->
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <div style="display:grid;grid-template-columns:repeat(9,minmax(0,1fr));font-family:'IBM Plex Mono',monospace;font-size:10px;color:#a8a094">
+              <div>27</div><div>28</div><div style="color:#6e6759">29</div><div>30</div><div>31</div><div>1</div><div>2</div><div style="color:#8a5a1e">3</div><div style="color:#221f1a">4</div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(9,minmax(0,1fr));height:28px;border-bottom:1px dotted #a8a094">
+              <div style="display:flex;align-items:center;justify-content:center"></div>
+              <div style="display:flex;align-items:center;justify-content:center"><span style="width:10px;height:10px;border:1.5px solid #a8a094;background:repeating-linear-gradient(135deg,#a8a094 0 1px,transparent 1px 3px)"></span></div>
+              <div style="display:flex;align-items:center;justify-content:center;background:#ebe5d8;border-left:1px solid #221f1a"></div>
+              <div style="display:flex;align-items:center;justify-content:center;background:#ebe5d8"><span style="width:10px;height:10px;background:#221f1a"></span></div>
+              <div style="background:#ebe5d8"></div><div style="background:#ebe5d8"></div><div style="background:#ebe5d8"></div>
+              <div style="background:#ebe5d8;border-left:1px dashed #8a5a1e"></div>
+              <div style="background:#ebe5d8;border-right:3px solid #221f1a"></div>
+            </div>
+            <div style="display:grid;grid-template-columns:2fr 5fr 1fr 1fr;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6e6759">
+              <div>outside window</div><div style="padding-left:6px">7-day window · Jan 29–Feb 4</div><div style="color:#8a5a1e">today</div><div style="text-align:right;color:#221f1a">ARD</div>
+            </div>
+          </div>
+          <div style="font-size:14px;line-height:1.5;color:#3d3830;text-wrap:pretty">One episode charted Jan 30 supports a lower code. The Jan 28 note falls outside the window and cannot be counted.</div>
+          <div style="display:flex;gap:16px;align-items:center">
+            <div style="background:#221f1a;color:#f7f4ee;font-size:13px;font-weight:500;padding:8px 14px">Open check</div>
+            <div style="font-size:13px;text-decoration:underline;text-underline-offset:3px">See the rule →</div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#6e6759">Status · label + shape</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:12px">
+            <div style="display:flex;align-items:center;gap:6px;border:1px solid #8a5a1e;color:#8a5a1e;padding:4px 8px"><span style="width:8px;height:8px;background:#8a5a1e;transform:rotate(45deg)"></span>Closes tomorrow</div>
+            <div style="display:flex;align-items:center;gap:6px;border:1px solid #a8a094;color:#3d3830;padding:4px 8px"><span style="width:8px;height:8px;border:1.5px solid #3d3830;transform:rotate(45deg)"></span>Closes in 5 days</div>
+            <div style="display:flex;align-items:center;gap:6px;border:1px solid #2f5d50;color:#2f5d50;padding:4px 8px"><span style="width:8px;height:8px;background:#2f5d50"></span>Supported</div>
+            <div style="display:flex;align-items:center;gap:6px;border:1px dashed #6e6759;color:#3d3830;padding:4px 8px"><span style="width:8px;height:8px;border:1.5px solid #3d3830"></span>Provisional</div>
+            <div style="display:flex;align-items:center;gap:6px;border:1px dashed #6e6759;color:#3d3830;padding:4px 8px">○ Unverified</div>
+            <div style="display:flex;align-items:center;gap:6px;background:#ebe5d8;color:#3d3830;padding:4px 8px">● Verified</div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#6e6759">Citation</div>
+          <div style="border-left:1px solid #221f1a;padding:2px 0 2px 16px;display:flex;flex-direction:column;gap:6px">
+            <div style="font-family:Newsreader,serif;font-style:italic;font-size:17px;line-height:1.4;color:#221f1a">“The standard look-back period for the MDS 3.0 is 7 days, unless otherwise stated.”</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6e6759">RAI Manual v1.20.1, p. 3-3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= 1b CHART ================= -->
+    <div id="1b" style="width:600px;flex:0 0 auto;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <a href="#1b" style="font-family:'IBM Plex Mono',monospace;font-size:12px;background:#1a1918;color:#fff;padding:3px 7px;text-decoration:none">1b</a>
+        <div style="font-size:14px;font-weight:600">Chart</div>
+        <div style="font-size:13px;color:#6b6964">Cool white, one sans, boxed structure. Reads like clinical instrumentation.</div>
+      </div>
+      <div style="background:#fbfcfd;color:#14202b;font-family:Figtree,sans-serif;padding:32px;display:flex;flex-direction:column;gap:28px;border:1px solid #c9d1d9;border-radius:4px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="font-size:20px;font-weight:700;letter-spacing:-.02em;display:flex;align-items:center;gap:8px"><span style="width:14px;height:14px;background:#14202b;border-radius:50% 50% 2px 2px"></span>Fogbell</div>
+          <div style="font-size:12px;font-weight:500;color:#4a5a69;border:1px solid #c9d1d9;border-radius:3px;padding:3px 8px;display:flex;gap:6px;align-items:center"><span style="width:8px;height:8px;border:1.5px solid #4a5a69;transform:rotate(45deg)"></span>Synthetic data</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#6a7a88">Type · Figtree only, tabular numerals</div>
+          <div style="font-size:30px;line-height:1.15;font-weight:600;letter-spacing:-.02em">3 windows closing this week</div>
+          <div style="font-size:14px;line-height:1.5;color:#3b4a58;max-width:46ch;text-wrap:pretty">Only documentation charted inside the look-back window counts. Once the window closes, nothing can be added.</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#6a7a88">Color roles</div>
+          <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;font-size:10px;font-weight:500;color:#6a7a88">
+            <div><div style="height:28px;background:#14202b;border-radius:3px"></div>Ink</div>
+            <div><div style="height:28px;background:#fbfcfd;border:1px solid #c9d1d9;border-radius:3px"></div>Paper</div>
+            <div><div style="height:28px;background:#e4ecf3;border-radius:3px"></div>Window</div>
+            <div><div style="height:28px;background:#b4471c;border-radius:3px"></div>Closing</div>
+            <div><div style="height:28px;background:#1f6a4e;border-radius:3px"></div>Supported</div>
+            <div><div style="height:28px;background:#9aa8b4;border-radius:3px"></div>Stranded</div>
+          </div>
+        </div>
+
+        <div style="border:1px solid #c9d1d9;border-radius:4px;padding:18px 20px;display:flex;flex-direction:column;gap:14px;background:#fff">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+            <div style="font-size:16px;font-weight:600;flex:1;white-space:nowrap">Resident 07 <span style="color:#6a7a88;font-weight:500">· quarterly</span></div>
+            <div style="font-size:12px;font-weight:600;color:#fff;background:#b4471c;border-radius:3px;padding:3px 8px;display:flex;align-items:center;gap:6px;flex-shrink:0;white-space:nowrap"><span style="width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:9px solid #fff"></span>Closes tomorrow</div>
+          </div>
+          <div style="font-size:14px;line-height:1.45;color:#3b4a58"><span style="font-weight:600;color:#14202b">D0500</span> staff assessment of mood · 7-day look-back · coded 2, documentation supports 1 episode</div>
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <div style="display:grid;grid-template-columns:repeat(9,minmax(0,1fr));height:32px;gap:2px">
+              <div style="border-radius:2px;background:#f1f4f7"></div>
+              <div style="border-radius:2px;background:#f1f4f7;display:flex;align-items:center;justify-content:center"><span style="width:12px;height:12px;border-radius:50%;border:2px dashed #6a7a88"></span></div>
+              <div style="border-radius:2px;background:#e4ecf3"></div>
+              <div style="border-radius:2px;background:#e4ecf3;display:flex;align-items:center;justify-content:center"><span style="width:12px;height:12px;border-radius:50%;background:#14202b"></span></div>
+              <div style="border-radius:2px;background:#e4ecf3"></div><div style="border-radius:2px;background:#e4ecf3"></div><div style="border-radius:2px;background:#e4ecf3"></div>
+              <div style="border-radius:2px;background:#e4ecf3;outline:2px solid #b4471c;outline-offset:-2px"></div>
+              <div style="border-radius:2px;background:#e4ecf3;border-right:4px solid #14202b"></div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(9,minmax(0,1fr));font-size:10px;font-weight:500;color:#9aa8b4;font-variant-numeric:tabular-nums">
+              <div>Jan 27</div><div>28</div><div style="color:#3b4a58">29</div><div>30</div><div>31</div><div>Feb 1</div><div>2</div><div style="color:#b4471c">3 today</div><div style="color:#14202b;text-align:right">4 ARD</div>
+            </div>
+          </div>
+          <div style="font-size:14px;line-height:1.5;color:#3b4a58;text-wrap:pretty">One episode charted Jan 30 supports a lower code. The Jan 28 note falls outside the window and cannot be counted.</div>
+          <div style="display:flex;gap:10px;align-items:center">
+            <div style="background:#14202b;color:#fff;font-size:13px;font-weight:600;padding:8px 14px;border-radius:3px">Open check</div>
+            <div style="font-size:13px;font-weight:600;color:#14202b;padding:8px 12px;border:1px solid #c9d1d9;border-radius:3px">See the rule →</div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#6a7a88">Status · label + shape</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;font-size:12px;font-weight:600">
+            <div style="display:flex;align-items:center;gap:6px;background:#b4471c;color:#fff;border-radius:3px;padding:4px 8px"><span style="width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:9px solid #fff"></span>Closes tomorrow</div>
+            <div style="display:flex;align-items:center;gap:6px;border:1px solid #c9d1d9;color:#14202b;border-radius:3px;padding:4px 8px"><span style="width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:9px solid #14202b"></span>Closes in 5 days</div>
+            <div style="display:flex;align-items:center;gap:6px;background:#1f6a4e;color:#fff;border-radius:3px;padding:4px 8px"><span style="width:9px;height:9px;border-radius:50%;background:#fff"></span>Supported</div>
+            <div style="display:flex;align-items:center;gap:6px;border:1px dashed #6a7a88;color:#3b4a58;border-radius:3px;padding:4px 8px"><span style="width:9px;height:9px;border-radius:50%;border:1.5px dashed #3b4a58"></span>Provisional</div>
+            <div style="display:flex;align-items:center;gap:6px;border:1px dashed #6a7a88;color:#3b4a58;border-radius:3px;padding:4px 8px">○ Unverified</div>
+            <div style="display:flex;align-items:center;gap:6px;background:#e4ecf3;color:#14202b;border-radius:3px;padding:4px 8px">● Verified</div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#6a7a88">Citation</div>
+          <div style="background:#f1f4f7;border-radius:4px;padding:14px 16px;display:flex;flex-direction:column;gap:6px">
+            <div style="font-size:14px;line-height:1.5;color:#14202b">“The standard look-back period for the MDS 3.0 is 7 days, unless otherwise stated.”</div>
+            <div style="font-size:12px;font-weight:600;color:#4a5a69;display:flex;gap:6px;align-items:center"><span style="width:8px;height:8px;border-radius:50%;background:#1f6a4e"></span>RAI Manual v1.20.1, p. 3-3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= 1c SIGNAL ================= -->
+    <div id="1c" style="width:600px;flex:0 0 auto;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <a href="#1c" style="font-family:'IBM Plex Mono',monospace;font-size:12px;background:#1a1918;color:#fff;padding:3px 7px;text-decoration:none">1c</a>
+        <div style="font-size:14px;font-weight:600">Signal</div>
+        <div style="font-size:13px;color:#6b6964">Black ink, heavy rules, time as the loudest element. Reads like a nautical notice.</div>
+      </div>
+      <div style="background:#f3f2ee;color:#111;font-family:Archivo,sans-serif;padding:32px;display:flex;flex-direction:column;gap:28px;border:2px solid #111">
+        <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #111;padding-bottom:12px">
+          <div style="font-size:22px;font-weight:700;letter-spacing:-.03em;font-stretch:110%">FOGBELL</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;border:1.5px solid #111;padding:3px 8px">◇ Synthetic data</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#555">Type · Archivo / IBM Plex Mono</div>
+          <div style="font-size:36px;line-height:1;font-weight:600;letter-spacing:-.03em"><span style="font-stretch:110%">3 windows</span> closing this week</div>
+          <div style="font-size:14px;line-height:1.5;color:#333;max-width:46ch;text-wrap:pretty">Only documentation charted inside the look-back window counts. Once the window closes, nothing can be added.</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#555">Color roles</div>
+          <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#555">
+            <div><div style="height:28px;background:#111"></div>Ink</div>
+            <div><div style="height:28px;background:#f3f2ee;border:1.5px solid #111"></div>Paper</div>
+            <div><div style="height:28px;background:#fff;border:1.5px solid #111"></div>Window</div>
+            <div><div style="height:28px;background:#d9a300"></div>Closing</div>
+            <div><div style="height:28px;background:#111"></div>Supported</div>
+            <div><div style="height:28px;background:repeating-linear-gradient(135deg,#111 0 1px,transparent 1px 4px)"></div>Stranded</div>
+          </div>
+        </div>
+
+        <div style="border:2px solid #111;background:#fff;display:flex;flex-direction:column">
+          <div style="display:grid;grid-template-columns:1fr auto;border-bottom:2px solid #111">
+            <div style="padding:14px 16px;display:flex;flex-direction:column;gap:2px">
+              <div style="font-size:16px;font-weight:600">Resident 07 <span style="color:#555;font-weight:400">· quarterly</span></div>
+              <div style="font-size:13px;color:#333"><span style="font-family:'IBM Plex Mono',monospace">D0500</span> staff assessment of mood · 7-day look-back · coded 2, documentation supports 1 episode</div>
+            </div>
+            <div style="border-left:2px solid #111;background:#d9a300;padding:10px 16px;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;min-width:110px">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase">Closes</div>
+              <div style="font-size:26px;font-weight:700;letter-spacing:-.03em;line-height:1">tomorrow</div>
+            </div>
+          </div>
+          <div style="padding:16px;display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <div style="display:grid;grid-template-columns:repeat(9,minmax(0,1fr));height:34px">
+                <div style="border-bottom:1.5px dotted #999"></div>
+                <div style="border-bottom:1.5px dotted #999;display:flex;align-items:center;justify-content:center"><span style="width:14px;height:14px;border:1.5px solid #111;background:repeating-linear-gradient(135deg,#111 0 1px,transparent 1px 4px)"></span></div>
+                <div style="border:2px solid #111;border-right:0"></div>
+                <div style="border-top:2px solid #111;border-bottom:2px solid #111;display:flex;align-items:center;justify-content:center"><span style="width:14px;height:14px;background:#111"></span></div>
+                <div style="border-top:2px solid #111;border-bottom:2px solid #111"></div>
+                <div style="border-top:2px solid #111;border-bottom:2px solid #111"></div>
+                <div style="border-top:2px solid #111;border-bottom:2px solid #111"></div>
+                <div style="border-top:2px solid #111;border-bottom:2px solid #111;background:#d9a300"></div>
+                <div style="border-top:2px solid #111;border-bottom:2px solid #111;border-right:6px solid #111"></div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(9,minmax(0,1fr));font-family:'IBM Plex Mono',monospace;font-size:10px;color:#777">
+                <div>27</div><div>28</div><div style="color:#111">29</div><div>30</div><div>31</div><div>1</div><div>2</div><div style="color:#111">3·today</div><div style="color:#111;text-align:right">ARD</div>
+              </div>
+            </div>
+            <div style="font-size:14px;line-height:1.5;color:#333;text-wrap:pretty">One episode charted Jan 30 supports a lower code. The Jan 28 note falls outside the window and cannot be counted.</div>
+            <div style="display:flex;gap:0;align-items:stretch;border:2px solid #111;width:fit-content">
+              <div style="background:#111;color:#fff;font-size:13px;font-weight:600;padding:8px 14px">Open check</div>
+              <div style="font-size:13px;font-weight:600;padding:8px 14px">See the rule →</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#555">Status · label + shape</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;font-size:12px;font-weight:600">
+            <div style="display:flex;align-items:center;gap:6px;background:#d9a300;border:1.5px solid #111;padding:4px 8px"><span style="width:8px;height:8px;background:#111;transform:rotate(45deg)"></span>Closes tomorrow</div>
+            <div style="display:flex;align-items:center;gap:6px;border:1.5px solid #111;padding:4px 8px"><span style="width:8px;height:8px;border:1.5px solid #111;transform:rotate(45deg)"></span>Closes in 5 days</div>
+            <div style="display:flex;align-items:center;gap:6px;background:#111;color:#fff;padding:4px 8px"><span style="width:8px;height:8px;background:#fff"></span>Supported</div>
+            <div style="display:flex;align-items:center;gap:6px;border:1.5px dashed #111;padding:4px 8px"><span style="width:8px;height:8px;border:1.5px solid #111"></span>Provisional</div>
+            <div style="display:flex;align-items:center;gap:6px;border:1.5px dashed #111;padding:4px 8px">○ Unverified</div>
+            <div style="display:flex;align-items:center;gap:6px;border:1.5px solid #111;background:#fff;padding:4px 8px">● Verified</div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#555">Citation</div>
+          <div style="border:1.5px solid #111;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:end;background:#fff">
+            <div style="font-size:15px;line-height:1.45;color:#111">“The standard look-back period for the MDS 3.0 is 7 days, unless otherwise stated.”</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#333;text-align:right;line-height:1.4">RAI Manual v1.20.1<br>p. 3-3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</x-dc>
+</body>
+</html>

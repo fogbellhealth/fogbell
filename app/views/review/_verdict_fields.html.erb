@@ -1,10 +1,23 @@
 <%# locals: name (e.g. "rules[2]" or "criteria[0]") %>
-<fieldset class="mt-2">
-  <legend class="sr-only">Verdict</legend>
-  <div class="flex flex-wrap items-center gap-4 text-sm">
-    <label class="flex items-center gap-1.5"><input type="radio" name="<%= name %>[verdict]" value="correct" checked class="text-emerald-700 focus:ring-emerald-600"> correct</label>
-    <label class="flex items-center gap-1.5"><input type="radio" name="<%= name %>[verdict]" value="wrong" class="text-rose-700 focus:ring-rose-600"> wrong</label>
-    <label class="flex items-center gap-1.5"><input type="radio" name="<%= name %>[verdict]" value="different" class="text-amber-700 focus:ring-amber-600"> auditors apply it differently</label>
-    <input type="text" name="<%= name %>[note]" placeholder="if wrong or different, how?" class="min-w-0 flex-1 rounded-md border border-slate-300 px-2 py-1 text-xs shadow-sm focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500">
+<div data-controller="verdict" class="mt-3 flex flex-col gap-3">
+  <div class="grid grid-cols-3 gap-2.5">
+    <% [
+         [ "correct", "Correct", "Matches the source and how auditors apply it.", true ],
+         [ "wrong", "Wrong — how?", "The extraction misreads the source.", false ],
+         [ "different", "Auditors apply it differently — how?", "Source is read correctly, practice differs.", false ]
+       ].each do |value, label, helper, default| %>
+      <label data-verdict-target="card" data-verdict-value="<%= value %>" class="flex cursor-pointer flex-col gap-1.5 rounded border <%= default ? 'border-ink bg-window' : 'border-rule bg-white' %> px-4 py-3.5">
+        <div class="flex items-center gap-2">
+          <input type="radio" name="<%= name %>[verdict]" value="<%= value %>" <%= "checked" if default %> data-verdict-target="radio" data-action="change->verdict#update" class="h-3.5 w-3.5 border-2 border-ink text-ink focus:ring-ink">
+          <span class="text-sm font-semibold"><%= label %></span>
+        </div>
+        <span class="text-xs leading-[1.45] text-body"><%= helper %></span>
+      </label>
+    <% end %>
   </div>
-</fieldset>
+
+  <div data-verdict-target="howWrapper" class="hidden flex-col gap-1.5">
+    <label data-verdict-target="howLabel" class="text-[11px] font-semibold uppercase tracking-[.06em] text-muted">How is it wrong?</label>
+    <textarea name="<%= name %>[note]" data-verdict-target="howInput" rows="3" class="min-h-[88px] rounded border border-rule bg-white px-4 py-3 text-sm text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"></textarea>
+  </div>
+</div>

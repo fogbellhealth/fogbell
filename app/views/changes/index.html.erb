@@ -1,34 +1,34 @@
 <% content_for :title, "Fogbell — rule changes" %>
 
 <div class="mb-8 max-w-3xl">
-  <h1 class="text-2xl font-semibold tracking-tight text-slate-900">Rule changes</h1>
-  <p class="mt-2 text-sm leading-relaxed text-slate-600">When a source document changes, or a new one is added to the corpus, it shows up here — with the exact passage, both versions, cited. Factual, not alarmist: a regulator revising its own protocol is normal; not knowing about it is the risk.</p>
+  <h1 class="text-3xl font-semibold leading-none tracking-tight">Rule changes</h1>
+  <p class="mt-2 text-sm leading-relaxed text-body">When a source document changes, or a new one is added to the corpus, it shows up here — with the exact passage, both versions, cited. Factual, not alarmist: a regulator revising its own protocol is normal; not knowing about it is the risk.</p>
 </div>
 
-<div class="space-y-6">
+<div class="flex flex-col gap-6">
   <% @entries.each do |entry| %>
-    <article class="rounded-lg border border-slate-200 bg-white p-5">
-      <header class="flex flex-wrap items-center gap-2 text-xs text-slate-500">
-        <span class="font-medium text-slate-700"><%= entry.date.strftime("%B %-d, %Y") %></span>
+    <article class="rounded border border-rule bg-white p-5">
+      <header class="flex flex-wrap items-center gap-2 text-xs text-muted">
+        <span class="font-semibold text-meta"><%= entry.date.strftime("%B %-d, %Y") %></span>
         <span aria-hidden="true">·</span>
         <span class="font-mono"><%= manifest.name(entry.document) %></span>
-        <span class="rounded bg-slate-100 px-1.5 py-0.5 font-medium text-slate-600"><%= entry.kind == "revision" ? "Revision" : "Corpus addition" %></span>
+        <span class="rounded bg-ground px-1.5 py-0.5 font-medium text-body"><%= entry.kind == "revision" ? "Revision" : "Corpus addition" %></span>
       </header>
-      <p class="mt-2 text-sm text-slate-800"><%= entry.summary %></p>
+      <p class="mt-2 text-sm text-ink"><%= entry.summary %></p>
 
       <% if entry.diff.present? %>
-        <div class="mt-4 space-y-4">
+        <div class="mt-4 flex flex-col gap-4">
           <% entry.diff.each do |d| %>
             <div>
-              <p class="mb-1 text-xs font-semibold uppercase tracking-wider text-slate-500"><%= d[:area] %></p>
+              <p class="mb-1 text-[11px] font-semibold uppercase tracking-[.06em] text-muted"><%= d[:area] %></p>
               <div class="grid gap-3 md:grid-cols-2">
-                <div class="rounded-md border border-rose-200 bg-rose-50 p-3">
-                  <p class="mb-1 text-[11px] font-medium text-rose-700"><%= d[:before][:label] %> · <%= d[:before][:loc] %></p>
-                  <p class="whitespace-pre-line text-xs text-rose-900"><%= d[:before][:quote] %></p>
+                <div class="rounded border border-rule bg-ground p-3">
+                  <p class="mb-1 text-[11px] font-semibold text-muted"><%= d[:before][:label] %> · <%= d[:before][:loc] %></p>
+                  <p class="whitespace-pre-line text-xs text-body"><%= d[:before][:quote] %></p>
                 </div>
-                <div class="rounded-md border border-emerald-200 bg-emerald-50 p-3">
-                  <p class="mb-1 text-[11px] font-medium text-emerald-700"><%= d[:after][:label] %> · <%= d[:after][:loc] %></p>
-                  <p class="whitespace-pre-line text-xs text-emerald-900"><%= d[:after][:quote] %></p>
+                <div class="rounded border border-ink bg-window p-3">
+                  <p class="mb-1 text-[11px] font-semibold text-ink"><%= d[:after][:label] %> · <%= d[:after][:loc] %></p>
+                  <p class="whitespace-pre-line text-xs text-ink"><%= d[:after][:quote] %></p>
                 </div>
               </div>
             </div>
@@ -38,11 +38,11 @@
 
       <% if entry.item_ids.any? %>
         <div class="mt-4 flex flex-wrap items-center gap-2">
-          <span class="text-xs text-slate-500">Affected items:</span>
+          <span class="text-xs text-muted">Affected items:</span>
           <% entry.item_ids.first(12).each do |id| %>
-            <%= link_to id, rulebook_item_path(id), class: "rounded-md bg-slate-100 px-2 py-0.5 font-mono text-xs text-slate-700 hover:bg-slate-200" %>
+            <%= link_to id, rulebook_item_path(id), class: "rounded bg-ground px-2 py-0.5 font-mono text-xs text-body hover:bg-window" %>
           <% end %>
-          <% if entry.item_ids.size > 12 %><span class="text-xs text-slate-400">+ <%= entry.item_ids.size - 12 %> more</span><% end %>
+          <% if entry.item_ids.size > 12 %><span class="text-xs text-faint">+ <%= entry.item_ids.size - 12 %> more</span><% end %>
         </div>
       <% end %>
     </article>

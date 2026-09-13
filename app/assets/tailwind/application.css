@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+/*
+ * Fogbell visual system tokens — see design_handoff_fogbell/README.md.
+ * Tailwind v4 uses this @theme block instead of tailwind.config.js; every value below is the
+ * same token the handoff specifies, just declared the v4-native way. Each --color-* becomes a
+ * full utility set (bg-ink, text-ink, border-ink, etc.) automatically.
+ */
+@theme {
+  --font-sans: "Figtree", system-ui, sans-serif;
+
+  --color-ink: #14202b;       /* text, primary button, ARD edge, selected states */
+  --color-body: #3b4a58;      /* secondary text */
+  --color-meta: #4a5a69;      /* citation source lines, chip text */
+  --color-muted: #6a7a88;     /* labels, stranded evidence outline, placeholders */
+  --color-faint: #9aa8b4;     /* day numbers outside window, disabled text */
+  --color-rule: #c9d1d9;      /* every border */
+  --color-window: #e4ecf3;    /* in-window day cells, verified chip, selected row */
+  --color-ground: #f1f4f7;    /* outside-window cells, citation blocks, banner metric cell */
+  --color-paper: #fbfcfd;     /* page background, card side panel */
+  --color-closing: #b4471c;   /* <=1 day left, today marker, Not supported outline — the only "urgent" accent */
+  --color-supported: #1f6a4e; /* Supported verdict only — the only "positive" accent */
+}

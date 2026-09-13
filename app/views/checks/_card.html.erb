@@ -1,83 +1,133 @@
-<% item = Fogbell::Rulebook.instance.find(result["item_id"]) || Fogbell::Rulebook.instance.find(check.item_ids.find { |id| result["item_id"].start_with?(id) }) %>
-<% rs = rule_set || rule_set_for(check) %>
-<article class="rounded-lg border border-slate-200 bg-white p-5" id="card_<%= result["item_id"] %>">
-  <header class="flex flex-wrap items-start justify-between gap-3">
-    <div>
-      <h3 class="text-base font-semibold text-slate-900">
-        <% if item %><%= link_to result["item_id"], rulebook_item_path(item.item_id), class: "font-mono text-sm text-slate-600 hover:text-slate-900 hover:underline" %><% else %><span class="font-mono text-sm text-slate-600"><%= result["item_id"] %></span><% end %>
+<%
+item = Fogbell::Rulebook.instance.find(result["item_id"]) || Fogbell::Rulebook.instance.find(check.item_ids.find { |id| result["item_id"].start_with?(id) })
+rs = rule_set || rule_set_for(check)
+days = (check.ard - Date.current).to_i
+%>
+<article class="flex flex-col gap-6" id="card_<%= result["item_id"] %>">
+  <!-- item header -->
+  <div class="flex items-start justify-between gap-6">
+    <div class="flex flex-col gap-1.5">
+      <p class="text-[13px] font-medium text-muted">Evidence check · ARD <%= check.ard.strftime("%b %-d, %Y") %></p>
+      <h2 class="text-[26px] font-semibold leading-[1.15] tracking-tight">
+        <% if item %><%= link_to result["item_id"], rulebook_item_path(item.item_id), class: "font-medium text-muted hover:underline" %><% else %><span class="font-medium text-muted"><%= result["item_id"] %></span><% end %>
         <%= item&.item_name %>
-      </h3>
-      <% if result["window"] && result["window"]["first_day"] %>
-        <p class="mt-0.5 text-xs text-slate-500">Window <%= Date.parse(result["window"]["first_day"]).strftime("%b %-d") %> – <%= Date.parse(result["window"]["last_day"]).strftime("%b %-d, %Y") %> (<%= result["window"]["days"] %> days)</p>
-      <% elsif item && item.lookback_days.nil? %>
-        <p class="mt-0.5 text-xs text-slate-500">No window stated in the manual for this item</p>
+      </h2>
+      <p class="text-sm text-body">
+        <% if result["window"] && result["window"]["first_day"] %><%= result["window"]["days"] %>-day look-back · <%= Date.parse(result["window"]["first_day"]).strftime("%b %-d") %> – <%= Date.parse(result["window"]["last_day"]).strftime("%b %-d") %> · <% end %>Provisional until the window closes
+      </p>
+    </div>
+    <div class="flex shrink-0 flex-col items-end gap-0.5">
+      <% if days <= 1 %>
+        <div class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[.06em] text-closing"><%= glyph(:triangle) %>Closes</div>
+        <div class="text-[28px] font-semibold leading-none tracking-tight text-closing"><%= days <= 0 ? "today" : "tomorrow" %></div>
+      <% else %>
+        <div class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[.06em] text-ink"><%= glyph(:triangle) %>Closes</div>
+        <div class="text-[28px] font-semibold leading-none tracking-tight">in <%= days %> days</div>
       <% end %>
     </div>
-    <%= status_badge(result["status"]) %>
-  </header>
-
-  <div class="mt-3 rounded-md bg-slate-50/60 px-3 py-2">
-    <%= render "shared/lookback_timeline", timeline: Fogbell::LookbackTimeline.new(
-          ard: check.ard, lookback_days: result.dig("window", "days") || item&.lookback_days,
-          evidence: result["evidence"], outside_window_evidence: result["outside_window_evidence"]
-        ) %>
   </div>
 
-  <dl class="mt-4 grid gap-4 text-sm sm:grid-cols-[140px_1fr]">
-    <dt class="text-slate-500">Suggested coding</dt>
-    <dd class="text-slate-800"><%= result["suggested_coding"] %><% if result["downgraded"] %> <span class="text-rose-700">(downgraded: no in-window evidence)</span><% end %></dd>
-
-    <dt class="text-slate-500">What the record shows</dt>
-    <dd class="text-slate-800"><%= result["rationale"] %></dd>
-
-    <% if result["evidence"].any? %>
-      <dt class="text-slate-500">In-window evidence</dt>
-      <dd>
-        <ul class="space-y-2">
-          <% result["evidence"].each do |e| %>
-            <li class="border-l-2 border-emerald-300 pl-3"><span class="font-medium text-slate-700"><%= e["date"] %></span> · <span class="text-slate-500"><%= e["author"] %></span><br><span class="text-slate-800">“<%= e["quote"] %>”</span></li>
-          <% end %>
-        </ul>
-      </dd>
-    <% end %>
-
-    <% if result["outside_window_evidence"].any? %>
-      <dt class="text-slate-500">Outside the window</dt>
-      <dd>
-        <p class="mb-1 text-xs text-amber-800">Exists in the chart but cannot be counted for this assessment.</p>
-        <ul class="space-y-2">
-          <% result["outside_window_evidence"].each do |e| %>
-            <li class="border-l-2 border-amber-300 pl-3 text-slate-600"><span class="font-medium"><%= e["date"] %></span> · <%= e["author"] %><br>“<%= e["quote"] %>”</li>
-          <% end %>
-        </ul>
-      </dd>
-    <% end %>
-
-    <% if result["gaps"].any? %>
-      <dt class="text-slate-500">Gaps a reviewer would flag</dt>
-      <dd><ul class="list-disc space-y-1 pl-5 text-slate-800"><% result["gaps"].each do |g| %><li><%= g %></li><% end %></ul></dd>
-    <% end %>
-
-    <% if result["chart_today_action"].present? %>
-      <dt class="text-slate-500">Chart today</dt>
-      <dd class="text-slate-800"><%= result["chart_today_action"] %> <span class="text-xs text-slate-500">(only care actually occurring now; never document care that did not occur)</span></dd>
-    <% end %>
-  </dl>
-
-  <details class="mt-4 rounded-md bg-slate-50 px-4 py-3 text-sm">
-    <summary class="cursor-pointer font-medium text-slate-800">Why? — rules applied, with citations</summary>
-    <% applied = Array(result["rules_applied"]).filter_map { |n| rs.find(n.to_i) } %>
-    <% applied = rs.for_item(result["item_id"]) if applied.empty? %>
-    <ol class="mt-3 space-y-3">
-      <% applied.each do |r| %>
-        <li class="border-l-2 border-slate-300 pl-3">
-          <p class="text-slate-800"><span class="font-mono text-xs text-slate-500">R<%= r.n %></span> <%= r.text %><%= jurisdiction_badge(r.source) %></p>
-          <p class="mt-1 text-xs text-slate-500"><%= cite(r.source) %><% if r.source["quote"].present? %> — “<%= r.source["quote"] %>”<% end %></p>
-        </li>
+  <!-- verdict card -->
+  <div class="flex flex-col rounded border border-rule bg-white">
+    <div class="flex items-center gap-3 border-b border-rule px-6 py-4">
+      <% if result["status"] == "supported" %>
+        <span class="h-4 w-4 shrink-0 rounded-full bg-supported" aria-hidden="true"></span>
+        <div class="text-base font-semibold">Supported</div>
+      <% elsif result["status"] == "partial" %>
+        <span class="h-4 w-4 shrink-0 rounded-full border-2 border-ink bg-[linear-gradient(90deg,#14202b_50%,#fff_50%)]" aria-hidden="true"></span>
+        <div class="text-base font-semibold">Partially supported</div>
+      <% elsif result["status"] == "unsupported" %>
+        <span class="h-4 w-4 shrink-0 rounded-full border-[2.5px] border-closing" aria-hidden="true"></span>
+        <div class="text-base font-semibold">Not supported</div>
+      <% else %>
+        <%= glyph(:square_dashed) %>
+        <div class="text-base font-semibold">Not applicable</div>
       <% end %>
-    </ol>
-    <% if item %>
-      <p class="mt-3 text-xs text-slate-500">Item extracted <%= item.provenance_summary["extracted_at"] %> from <%= manifest.name(item.provenance_summary.dig("source_documents", 0, "doc")) %>; expert review status: <%= effective_review_status(item) %>.</p>
-    <% end %>
+      <div class="text-sm text-body">Coded <%= result["suggested_coding"] %><% if result["downgraded"] %> · downgraded: no in-window evidence<% end %></div>
+    </div>
+
+    <div class="flex flex-col gap-3 border-b border-rule px-6 py-5">
+      <%= render "shared/lookback_timeline", size: :medium, timeline: Fogbell::LookbackTimeline.new(
+            ard: check.ard, lookback_days: result.dig("window", "days") || item&.lookback_days,
+            evidence: result["evidence"], outside_window_evidence: result["outside_window_evidence"]
+          ) %>
+    </div>
+
+    <div class="grid grid-cols-2 divide-x divide-rule border-b border-rule">
+      <div class="flex flex-col gap-2 px-6 py-5">
+        <div class="text-[11px] font-semibold uppercase tracking-[.06em] text-muted">Suggested coding</div>
+        <div class="text-sm leading-relaxed text-body"><%= result["suggested_coding"] %></div>
+        <div class="text-[13px] leading-relaxed text-body"><%= result["rationale"] %></div>
+      </div>
+      <div class="flex flex-col gap-2 px-6 py-5">
+        <div class="text-[11px] font-semibold uppercase tracking-[.06em] text-muted">Documentation gap</div>
+        <% if result["gaps"].any? %>
+          <ul class="list-disc space-y-1 pl-5 text-sm leading-relaxed text-ink">
+            <% result["gaps"].each do |g| %><li><%= g %></li><% end %>
+          </ul>
+          <% if result["chart_today_action"].present? %>
+            <div class="mt-1 flex items-center gap-2">
+              <%= primary_button "Chart today", "#", class: "pointer-events-none opacity-90" %>
+              <span class="text-xs text-muted"><%= days %> day<%= "s" unless days == 1 %> remain inside the window</span>
+            </div>
+          <% end %>
+        <% else %>
+          <div class="text-sm leading-relaxed text-body">None identified. No action needed before the window closes.</div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 divide-x divide-rule">
+      <div class="flex flex-col gap-3 px-6 py-5">
+        <div class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[.06em] text-muted"><%= glyph(:circle_filled) %>Supporting evidence · <%= result["evidence"].size %></div>
+        <% if result["evidence"].any? %>
+          <% result["evidence"].each do |e| %>
+            <div class="flex flex-col gap-1.5">
+              <p class="text-sm leading-relaxed text-ink">&ldquo;<%= e["quote"] %>&rdquo;</p>
+              <p class="text-xs font-semibold text-meta"><%= e["date"] %> · <%= e["author"] %></p>
+            </div>
+          <% end %>
+        <% else %>
+          <p class="text-sm leading-relaxed text-muted">Nothing charted inside the window supports this item.</p>
+        <% end %>
+      </div>
+      <div class="flex flex-col gap-3 bg-paper px-6 py-5">
+        <div class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[.06em] text-muted"><%= glyph(:circle_dashed) %>Outside the window · <%= result["outside_window_evidence"].size %></div>
+        <% if result["outside_window_evidence"].any? %>
+          <% result["outside_window_evidence"].each do |e| %>
+            <div class="flex flex-col gap-1.5">
+              <p class="text-sm leading-relaxed text-body">&ldquo;<%= e["quote"] %>&rdquo;</p>
+              <p class="text-xs font-semibold text-muted"><%= e["date"] %> · <%= e["author"] %> — cannot be counted.</p>
+            </div>
+          <% end %>
+        <% else %>
+          <p class="text-sm leading-relaxed text-muted">No related documentation found before the window opened.</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <!-- why disclosure -->
+  <details class="rounded border border-rule bg-white" open>
+    <summary class="flex cursor-pointer items-center justify-between px-6 py-3.5 text-sm font-semibold">
+      <span>Why? <span class="font-medium text-muted">Rules applied to this check · <%= Array(result["rules_applied"]).size %></span></span>
+      <span class="text-[13px] font-semibold text-meta">Toggle</span>
+    </summary>
+    <div class="flex flex-col border-t border-rule">
+      <% applied = Array(result["rules_applied"]).filter_map { |n| rs.find(n.to_i) } %>
+      <% applied = rs.for_item(result["item_id"]) if applied.empty? %>
+      <% applied.each do |r| %>
+        <div class="grid grid-cols-2 gap-6 border-b border-rule px-6 py-[18px] last:border-b-0">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-2">
+              <div class="text-sm font-semibold">R<%= r.n %></div>
+              <%= provenance_badge(effective_review_status(item)) if item %>
+            </div>
+            <div class="text-[13px] leading-relaxed text-body"><%= r.text %><%= jurisdiction_badge(r.source) %></div>
+          </div>
+          <%= render "shared/citation", source: r.source %>
+        </div>
+      <% end %>
+    </div>
   </details>
 </article>

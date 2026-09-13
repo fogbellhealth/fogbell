@@ -1,73 +1,73 @@
 <% content_for :title, "Fogbell — coverage and gaps" %>
 
 <div class="mb-8 max-w-3xl">
-  <%= link_to "← All items", rulebook_path, class: "text-sm text-slate-500 hover:text-slate-700" %>
-  <h1 class="mt-3 text-2xl font-semibold tracking-tight text-slate-900">The rules facilities are sanctioned against are not publicly assembled</h1>
-  <p class="mt-2 text-sm leading-relaxed text-slate-600">Maine and New York aren't structurally parallel — different programs, different instruments, different document genres. What they share is a pattern: each state's own audit apparatus points at governing documentation standards that are, in practice, either silent or unreachable. That absence is the finding.</p>
+  <%= link_to "← All items", rulebook_path, class: "text-sm text-muted hover:text-body" %>
+  <h1 class="mt-3 text-3xl font-semibold leading-none tracking-tight">The rules facilities are sanctioned against are not publicly assembled</h1>
+  <p class="mt-2 text-sm leading-relaxed text-body">Maine and New York aren't structurally parallel — different programs, different instruments, different document genres. What they share is a pattern: each state's own audit apparatus points at governing documentation standards that are, in practice, either silent or unreachable. That absence is the finding.</p>
 </div>
 
 <section class="mb-10 grid gap-4 lg:grid-cols-2">
-  <div class="rounded-lg border border-violet-200 bg-violet-50 p-5">
-    <h2 class="text-sm font-semibold text-violet-950">Maine: silent by omission</h2>
-    <p class="mt-2 text-sm text-violet-900">
+  <div class="rounded border border-rule bg-window p-5">
+    <h2 class="text-sm font-semibold">Maine: silent by omission</h2>
+    <p class="mt-2 text-sm text-body">
       <%= pluralize(@mds_items.size, "MDS 3.0 item") %> promoted from the federal RAI Manual.
-      <strong><%= @mds_with_state_layer.size %></strong> carry a Maine-specific documentation delta.
+      <strong class="text-ink"><%= @mds_with_state_layer.size %></strong> carry a Maine-specific documentation delta.
     </p>
-    <p class="mt-2 text-sm text-violet-900">MaineCare's own reimbursement regulation (Ch. III §16.2) states a review program — a sample size, an error-rate formula, tiered sanctions — but never states what a chart must show for any specific MDS item. Not "for G0110A, document X." Nothing. The federal manual is the only documentation standard that exists in writing for any item, in Maine, today.</p>
+    <p class="mt-2 text-sm text-body">MaineCare's own reimbursement regulation (Ch. III §16.2) states a review program — a sample size, an error-rate formula, tiered sanctions — but never states what a chart must show for any specific MDS item. Not "for G0110A, document X." Nothing. The federal manual is the only documentation standard that exists in writing for any item, in Maine, today.</p>
   </div>
 
-  <div class="rounded-lg border border-violet-200 bg-violet-50 p-5">
-    <h2 class="text-sm font-semibold text-violet-950">New York: silent by inaccessibility</h2>
-    <p class="mt-2 text-sm text-violet-900">
+  <div class="rounded border border-rule bg-window p-5">
+    <h2 class="text-sm font-semibold">New York: silent by inaccessibility</h2>
+    <p class="mt-2 text-sm text-body">
       The OMIG ALP audit protocol (<%= @ny_areas.size %> enumerated areas) cites its own governing authorities directly — the ALP Manual Policy Guidelines (Version 2006-1) and DAL 14-09 — repeatedly, as the source for what a chart must contain.
     </p>
-    <p class="mt-2 text-sm text-violet-900">Neither is retrievable by this pipeline: the Policy Guidelines URL 404s; DAL 14-09 is blocked by bot protection on health.ny.gov. The documents a facility would need to actually meet the standard are, as of this corpus, not publicly assembled — even though the protocol assumes you have them.</p>
+    <p class="mt-2 text-sm text-body">Neither is retrievable by this pipeline: the Policy Guidelines URL 404s; DAL 14-09 is blocked by bot protection on health.ny.gov. The documents a facility would need to actually meet the standard are, as of this corpus, not publicly assembled — even though the protocol assumes you have them.</p>
   </div>
 </section>
 
-<section class="mb-10 rounded-lg border border-slate-200 bg-white p-5">
-  <h2 class="text-base font-semibold text-slate-900">Two failure modes, one conclusion</h2>
-  <p class="mt-2 text-sm text-slate-600">Maine's documentation standard doesn't exist in public writing at the item level. New York's does exist, in documents this pipeline could locate by citation but not fetch. Different mechanisms, same outcome for a facility trying to find the rule it's sanctioned against: it isn't sitting in one place, cited and current. That gap — not a comparison between the two states — is what this corpus makes visible.</p>
+<section class="mb-10 rounded border border-rule bg-white p-5">
+  <h2 class="text-base font-semibold">Two failure modes, one conclusion</h2>
+  <p class="mt-2 text-sm text-body">Maine's documentation standard doesn't exist in public writing at the item level. New York's does exist, in documents this pipeline could locate by citation but not fetch. Different mechanisms, same outcome for a facility trying to find the rule it's sanctioned against: it isn't sitting in one place, cited and current. That gap — not a comparison between the two states — is what this corpus makes visible.</p>
 </section>
 
 <section class="mb-10">
-  <h2 class="mb-3 text-base font-semibold text-slate-900">One engine, three document genres</h2>
-  <p class="mb-4 max-w-3xl text-sm text-slate-600">The architecture claim, not the coverage claim: the same schema and pipeline extracted three genres of source document into the same citable shape, with one enum value added along the way.</p>
+  <h2 class="mb-3 text-base font-semibold">One engine, three document genres</h2>
+  <p class="mb-4 max-w-3xl text-sm text-body">The architecture claim, not the coverage claim: the same schema and pipeline extracted three genres of source document into the same citable shape, with one enum value added along the way.</p>
 
   <div class="grid gap-4 lg:grid-cols-3">
-    <div class="rounded-lg border border-slate-200 bg-white p-5">
-      <h3 class="text-sm font-semibold text-slate-900">Federal clinical manual</h3>
-      <p class="mt-1 text-xs text-slate-500">RAI Manual v1.20.1 → <%= @mds_items.size %> MDS 3.0 items</p>
-      <p class="mt-3 text-sm text-slate-700">Per-item coding rules, coding levels, look-back windows.</p>
+    <div class="rounded border border-rule bg-white p-5">
+      <h3 class="text-sm font-semibold">Federal clinical manual</h3>
+      <p class="mt-1 text-xs text-muted">RAI Manual v1.20.1 → <%= @mds_items.size %> MDS 3.0 items</p>
+      <p class="mt-3 text-sm text-body">Per-item coding rules, coding levels, look-back windows.</p>
     </div>
-    <div class="rounded-lg border border-slate-200 bg-white p-5">
-      <h3 class="text-sm font-semibold text-slate-900">State reimbursement regulation</h3>
-      <p class="mt-1 text-xs text-slate-500">MaineCare Ch. III §16.2/§22.2 → <%= link_to "CONV-ME-*", rulebook_path(jurisdiction: "Maine"), class: "hover:underline" %></p>
-      <p class="mt-3 text-sm text-slate-700">Audit machinery: sample size, error-rate formula, sanction thresholds, correction deadlines.</p>
+    <div class="rounded border border-rule bg-white p-5">
+      <h3 class="text-sm font-semibold">State reimbursement regulation</h3>
+      <p class="mt-1 text-xs text-muted">MaineCare Ch. III §16.2/§22.2 → <%= link_to "CONV-ME-*", rulebook_path(jurisdiction: "Maine"), class: "hover:underline" %></p>
+      <p class="mt-3 text-sm text-body">Audit machinery: sample size, error-rate formula, sanction thresholds, correction deadlines.</p>
     </div>
-    <div class="rounded-lg border border-slate-200 bg-white p-5">
-      <h3 class="text-sm font-semibold text-slate-900">State audit protocol</h3>
-      <p class="mt-1 text-xs text-slate-500">OMIG ALP protocol → <%= link_to "CONV-NY-OMIG-ALP-*", rulebook_path(jurisdiction: "New York"), class: "hover:underline" %></p>
-      <p class="mt-3 text-sm text-slate-700">Enumerated disallowance areas, each an independently citable audit criterion.</p>
+    <div class="rounded border border-rule bg-white p-5">
+      <h3 class="text-sm font-semibold">State audit protocol</h3>
+      <p class="mt-1 text-xs text-muted">OMIG ALP protocol → <%= link_to "CONV-NY-OMIG-ALP-*", rulebook_path(jurisdiction: "New York"), class: "hover:underline" %></p>
+      <p class="mt-3 text-sm text-body">Enumerated disallowance areas, each an independently citable audit criterion.</p>
     </div>
   </div>
-  <p class="mt-4 text-sm text-slate-500">Same <code class="rounded bg-slate-100 px-1 py-0.5 text-xs">rulebook/schema.json</code>, same <code class="rounded bg-slate-100 px-1 py-0.5 text-xs">CONV-*</code> pattern, one new <code class="rounded bg-slate-100 px-1 py-0.5 text-xs">instrument</code> value (<code class="rounded bg-slate-100 px-1 py-0.5 text-xs">UAS-NY</code>) for the whole second jurisdiction.</p>
+  <p class="mt-4 text-sm text-muted">Same <code class="rounded bg-ground px-1 py-0.5 text-xs">rulebook/schema.json</code>, same <code class="rounded bg-ground px-1 py-0.5 text-xs">CONV-*</code> pattern, one new <code class="rounded bg-ground px-1 py-0.5 text-xs">instrument</code> value (<code class="rounded bg-ground px-1 py-0.5 text-xs">UAS-NY</code>) for the whole second jurisdiction.</p>
 </section>
 
 <% if @ny_areas.any? %>
-<section class="mb-10 rounded-lg border border-amber-200 bg-amber-50 p-5">
-  <h2 class="text-base font-semibold text-amber-950">A regulator changing its own protocol twice in five weeks</h2>
-  <p class="mt-2 text-sm text-amber-900">Between the 11/20/2025 and 12/26/2025 revisions, OMIG loosened who may sign a medical evaluation or reassessment (Areas 6 and 8): previously a specific form could substitute a physician assistant or nurse practitioner for a physician; the December revision replaces that with a clean date-based rule allowing a physician, PA, or NP for services on or after 02/19/14. Two published revisions five weeks apart, with a substantive signature-requirement change between them, is itself a fact worth surfacing to a facility relying on this protocol. <%= link_to "See it on the changes feed →", changes_path, class: "font-medium hover:underline" %></p>
+<section class="mb-10 rounded border border-rule bg-white p-5">
+  <h2 class="text-base font-semibold">A regulator changing its own protocol twice in five weeks</h2>
+  <p class="mt-2 text-sm text-body">Between the 11/20/2025 and 12/26/2025 revisions, OMIG loosened who may sign a medical evaluation or reassessment (Areas 6 and 8): previously a specific form could substitute a physician assistant or nurse practitioner for a physician; the December revision replaces that with a clean date-based rule allowing a physician, PA, or NP for services on or after 02/19/14. Two published revisions five weeks apart, with a substantive signature-requirement change between them, is itself a fact worth surfacing to a facility relying on this protocol. <%= link_to "See it on the changes feed →", changes_path, class: "font-semibold text-ink hover:underline" %></p>
 </section>
 <% end %>
 
 <% if @with_conflicts.any? %>
 <section>
-  <h2 class="mb-3 text-base font-semibold text-slate-900">Every preserved conflict, corpus-wide</h2>
-  <p class="mb-3 text-sm text-slate-600"><%= @with_conflicts.size %> items carry at least one unresolved conflict between two cited passages. Nothing is dropped; both sides are shown on the item page.</p>
+  <h2 class="mb-3 text-base font-semibold">Every preserved conflict, corpus-wide</h2>
+  <p class="mb-3 text-sm text-body"><%= @with_conflicts.size %> items carry at least one unresolved conflict between two cited passages. Nothing is dropped; both sides are shown on the item page.</p>
   <div class="flex flex-wrap gap-2">
     <% @with_conflicts.each do |i| %>
-      <%= link_to i.item_id, rulebook_item_path(i.item_id), class: "rounded-md bg-white px-2 py-1 font-mono text-xs text-slate-700 ring-1 ring-inset ring-slate-200 hover:bg-slate-50" %>
+      <%= link_to i.item_id, rulebook_item_path(i.item_id), class: "rounded bg-white px-2 py-1 font-mono text-xs text-body border border-rule hover:bg-ground" %>
     <% end %>
   </div>
 </section>

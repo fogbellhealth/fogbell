@@ -1,27 +1,27 @@
 <% content_for :title, "Fogbell — #{@resident.label}" %>
 
 <div class="mb-6">
-  <%= link_to "← Today", today_path, class: "text-sm text-slate-500 hover:text-slate-700" %>
+  <%= link_to "← Residents", residents_path, class: "text-sm text-muted hover:text-body" %>
 </div>
 
 <div class="mb-6">
-  <p class="text-xs font-medium uppercase tracking-wider text-slate-400">Synthetic data</p>
-  <h1 class="mt-1 text-2xl font-semibold tracking-tight text-slate-900"><%= @resident.label %></h1>
+  <p class="text-[11px] font-semibold uppercase tracking-[.06em] text-muted">Synthetic data</p>
+  <h1 class="mt-1 text-3xl font-semibold leading-none tracking-tight"><%= @resident.label %></h1>
 </div>
 
 <section class="mb-8">
-  <h2 class="mb-2 text-sm font-semibold uppercase tracking-wider text-slate-500">Assessments</h2>
-  <div class="divide-y divide-slate-100 rounded-lg border border-slate-200 bg-white">
+  <h2 class="mb-2 text-[11px] font-semibold uppercase tracking-[.06em] text-muted">Assessments</h2>
+  <div class="divide-y divide-rule rounded border border-rule bg-white">
     <% @resident.assessments.order(ard: :desc).each do |a| %>
-      <%= link_to assessment_path(a), class: "flex items-center justify-between gap-3 px-4 py-2.5 hover:bg-slate-50" do %>
-        <span><%= a.assessment_type.tr("_", " ").capitalize %> <span class="text-slate-500">— ARD <%= a.ard.strftime("%b %-d, %Y") %></span></span>
-        <span class="rounded bg-slate-100 px-2 py-0.5 text-xs text-slate-600"><%= a.status %></span>
+      <%= link_to assessment_path(a), class: "flex items-center justify-between gap-3 px-4 py-2.5 hover:bg-ground" do %>
+        <span><%= a.assessment_type.tr("_", " ").capitalize %> <span class="text-muted">— ARD <%= a.ard.strftime("%b %-d, %Y") %></span></span>
+        <%= a.open? ? deadline_badge(a.days_remaining) : badge("closed", label: "Closed #{a.ard.strftime('%b %-d')}") %>
       <% end %>
     <% end %>
   </div>
 </section>
 
 <section>
-  <h2 class="mb-2 text-sm font-semibold uppercase tracking-wider text-slate-500">Chart</h2>
-  <pre class="whitespace-pre-wrap rounded-lg border border-slate-200 bg-white p-4 font-mono text-xs text-slate-700"><%= @resident.chart_text %></pre>
+  <h2 class="mb-2 text-[11px] font-semibold uppercase tracking-[.06em] text-muted">Chart</h2>
+  <pre class="whitespace-pre-wrap rounded border border-rule bg-white p-4 font-mono text-xs text-body"><%= @resident.chart_text %></pre>
 </section>

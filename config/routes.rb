@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root "home#index"
   get "today", to: "today#index", as: :today
 
-  resources :residents, only: [ :show ]
+  resources :residents, only: %i[index show]
   resources :assessments, only: [ :show ]
 
   # The evidence checker is reachable from a worklist card or directly for ad-hoc use.

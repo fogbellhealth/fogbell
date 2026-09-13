@@ -1,6 +1,6 @@
-# GET  /review           -> the queue, unreviewed by default
+# GET  /review           -> the queue; redirects to the first item awaiting judgment
 # GET  /review/questions -> the standing question list (review/QUESTIONS.md), Maine/NY split visible
-# GET  /review/:item_id  -> the markup form for one item
+# GET  /review/:item_id  -> queue + judgment panel for one item (the reviewer's whole app)
 # POST /review/:item_id  -> submit markup — writes a RuleReview row (status "pending"), never
 #                            touches rulebook/items/*.json. Only `rake rulebook:apply_review` does
 #                            that; see CLAUDE.md and lib/tasks/rulebook.rake.
@@ -10,12 +10,15 @@ class ReviewController < ApplicationController
   include RulebookHelper
 
   before_action { authorize :rulebook_area, policy_class: RulebookAreaPolicy }
+  before_action :load_queue, only: %i[index show]
 
   def index
-    all = Fogbell::Rulebook.instance.to_a
-    @status = params[:status].presence || "unreviewed"
-    @items = @status == "all" ? all : all.select { |i| effective_review_status(i) == @status }
-    @counts = all.group_by { |i| effective_review_status(i) }.transform_values(&:size)
+    if @items.any?
+      flash.keep # this redirect is a hop, not a page view — carry any flash (e.g. from #create) forward
+      redirect_to review_item_path(@items.first.item_id, status: @status)
+    else
+      @item = nil
+    end
   end
 
   def questions
@@ -50,6 +53,14 @@ class ReviewController < ApplicationController
   end
 
   private
+
+  def load_queue
+    all = Fogbell::Rulebook.instance.to_a
+    @status = params[:status].presence || "unreviewed"
+    @items = (@status == "all" ? all : all.select { |i| effective_review_status(i) == @status })
+             .sort_by { |i| i.provenance_summary["extracted_at"] || "" }
+    @counts = all.group_by { |i| effective_review_status(i) }.transform_values(&:size)
+  end
 
   def verdict_for(v)
     { "correct" => "correct", "wrong" => "incorrect", "different" => "applied_differently" }.fetch(v[:verdict], v[:verdict])

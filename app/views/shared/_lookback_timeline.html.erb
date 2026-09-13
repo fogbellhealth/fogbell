@@ -1,44 +1,64 @@
 <%
-# locals: timeline (Fogbell::LookbackTimeline), compact (boolean, default false)
-compact = local_assigns.fetch(:compact, false)
+# locals: timeline (Fogbell::LookbackTimeline), size (:small|:medium|:standalone, default :medium)
+size = local_assigns.fetch(:size, :medium)
+cfg = {
+  small:      { cell: "h-7", radius: "rounded-sm", gap: "gap-0.5", dot: "w-2.5 h-2.5", stranded: "w-2.5 h-2.5 border-2", ard: "border-r-4", captions: false, numbers_above: false },
+  medium:     { cell: "h-14", radius: "rounded-sm", gap: "gap-0.5", dot: "w-3.5 h-3.5", stranded: "w-3.5 h-3.5 border-2", ard: "border-r-4", captions: true, numbers_above: true },
+  standalone: { cell: "h-[88px]", radius: "rounded", gap: "gap-[3px]", dot: "w-5 h-5", stranded: "w-5 h-5 border-[2.5px]", ard: "border-r-[6px]", captions: true, numbers_above: true }
+}.fetch(size)
+grid_style = "grid-template-columns: repeat(#{timeline.column_count}, minmax(0,1fr));"
 %>
 <div class="lookback-timeline" role="img" aria-label="<%= timeline.summary %>">
   <% unless timeline.computable? %>
-    <p class="text-xs text-slate-400 italic">Look-back window not stated for this item.</p>
+    <p class="text-xs italic text-muted">Look-back window not stated for this item.</p>
   <% else %>
-    <div class="flex items-end gap-2">
-      <% if timeline.stranded.any? %>
-        <div class="flex shrink-0 items-end gap-1 border-r border-dashed border-slate-300 pr-2">
-          <% timeline.stranded.each do |s| %>
-            <div class="flex flex-col items-center" title="<%= s[:entry]['date'] %> · <%= s[:entry]['author'] %> — outside the window, does not count">
-              <div class="flex items-center justify-center rounded border border-dashed border-amber-400 bg-amber-50 text-amber-700 <%= compact ? 'h-5 w-5' : 'h-6 w-6' %>" aria-hidden="true">
-                <svg viewBox="0 0 20 20" class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 6v5M10 14v.01" stroke-linecap="round"/></svg>
-              </div>
-              <% unless compact %><span class="mt-0.5 text-[9px] text-amber-700"><%= s[:date]&.strftime("%-m/%-d") || "?" %></span><% end %>
-            </div>
+    <div class="flex flex-col <%= cfg[:gap] %>">
+      <% if cfg[:numbers_above] %>
+        <div class="grid <%= cfg[:gap] %> text-[11px] font-semibold text-faint" style="<%= grid_style %>">
+          <% prev_month = nil %>
+          <% timeline.days.each do |day| %>
+            <% show_month = prev_month != day.date.month; prev_month = day.date.month %>
+            <div class="<%= day.is_ard ? 'text-right text-ink' : day.is_today ? 'text-closing' : day.date == timeline.window_first_day ? 'text-body' : '' %>"><%= show_month ? day.date.strftime("%b %-d") : day.date.strftime("%-d") %></div>
           <% end %>
         </div>
-        <span class="sr-only">outside the window, not counted:</span>
       <% end %>
 
-      <div class="flex min-w-0 flex-1 gap-px overflow-x-auto">
+      <div class="grid <%= cfg[:gap] %>" style="<%= grid_style %>">
         <% timeline.days.each do |day| %>
-          <div class="flex shrink-0 flex-col items-center <%= compact ? 'w-5' : 'w-7' %>">
-            <div class="w-full items-center justify-center gap-0.5 rounded-sm flex <%= compact ? 'h-5' : 'h-6' %> <%= day.is_ard ? 'border-r-2 border-slate-800' : 'border border-slate-100' %> <%= day.entries.any? ? 'bg-emerald-50' : 'bg-slate-50' %>">
-              <% day.entries.each do |e| %>
-                <span class="inline-block h-2 w-2 rounded-full bg-emerald-600" title="<%= e['date'] %> · <%= e['author'] %> — <%= e['quote'] %>" aria-hidden="true"></span>
-              <% end %>
-              <span class="sr-only"><%= day.entries.size %> supporting note<%= 's' unless day.entries.size == 1 %> on <%= day.date.iso8601 %></span>
-            </div>
-            <% unless compact %>
-              <span class="mt-0.5 text-[9px] <%= day.is_ard ? 'font-semibold text-slate-800' : 'text-slate-400' %>"><%= day.date.strftime("%-m/%-d") %><%= " · ARD" if day.is_ard %></span>
+          <div class="flex items-center justify-center gap-0.5 <%= cfg[:radius] %> <%= cfg[:cell] %> <%= day.in_window ? 'bg-window' : 'bg-ground' %> <%= 'border-r-4 border-ink' if day.is_ard && size != :standalone %> <%= 'border-r-[6px] border-ink' if day.is_ard && size == :standalone %> <%= 'outline outline-2 -outline-offset-2 outline-closing' if day.is_today %>">
+            <% day.entries.each do %>
+              <span class="<%= cfg[:dot] %> rounded-full bg-ink" aria-hidden="true"></span>
             <% end %>
+            <% day.outside_entries.each do %>
+              <span class="<%= cfg[:stranded] %> rounded-full border-dashed border-muted" aria-hidden="true"></span>
+            <% end %>
+            <span class="sr-only"><%= (day.entries + day.outside_entries).size %> note(s) on <%= day.date.iso8601 %></span>
           </div>
         <% end %>
       </div>
+
+      <% if cfg[:captions] %>
+        <div class="grid <%= cfg[:gap] %> text-[11px] leading-[1.35] text-muted" style="<%= grid_style %>">
+          <% timeline.days.each do |day| %>
+            <div class="<%= 'text-right' if day.is_ard %>">
+              <% if day.plotted? %>
+                <% e = (day.entries + day.outside_entries).first %>
+                <span class="font-semibold <%= 'text-ink' if day.in_window %>"><%= e["author"] %></span><br><%= day.in_window ? "#{(day.entries.size)} note#{'s' unless day.entries.size == 1}" : "outside window" %>
+              <% elsif day.is_today %>
+                <span class="font-semibold text-closing">Today</span>
+              <% elsif day.is_ard %>
+                <span class="font-semibold text-ink">ARD</span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="grid grid-cols-[2fr_5fr_2fr] text-[10px] font-medium text-faint">
+          <div><%= timeline.range_first_day.strftime("%b %-d") %></div>
+          <div class="text-body"><%= timeline.window_first_day.strftime("%b %-d") %> – <%= timeline.last_day.strftime("%b %-d") %></div>
+          <div class="text-right text-ink">ARD <%= timeline.last_day.strftime("%b %-d") %></div>
+        </div>
+      <% end %>
     </div>
-    <% unless compact %>
-      <p class="mt-2 text-[11px] text-slate-500"><%= timeline.summary %></p>
-    <% end %>
   <% end %>
 </div>

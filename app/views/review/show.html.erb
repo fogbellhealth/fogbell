@@ -1,57 +1,97 @@
 <% content_for :title, "Fogbell — review #{@item.item_id}" %>
+<% content_for :dark_header, true %>
+<% content_for :header_subtitle, "#{@counts.values_at('unreviewed', 'pending', 'in_review').compact.sum} rules awaiting judgment" %>
+<%
+federal_doc = @item.supportive_documentation.fetch("federal", [])
+source_numbers = number_sources(@item)
+position = @items.index { |i| i.item_id == @item.item_id }
+%>
 
-<div class="mb-6">
-  <%= link_to "← Review queue", review_path, class: "text-sm text-slate-500 hover:text-slate-700" %>
-</div>
-
-<div class="mb-6">
-  <p class="text-sm font-mono text-slate-500"><%= @item.item_id %> · Section <%= @item.section %> · <%= instrument_name(@item.instrument) %></p>
-  <h1 class="mt-1 text-2xl font-semibold tracking-tight text-slate-900"><%= @item.item_name %></h1>
-  <div class="mt-2 flex items-center gap-2">
-    <%= review_status_badge(effective_review_status(@item)) %>
-    <span class="text-xs text-slate-400">signed in as <%= current_user.email %></span>
-    <%= link_to "View the rulebook page →", rulebook_item_path(@item.item_id), class: "text-xs text-slate-500 hover:underline" %>
+<div class="grid min-h-[640px] grid-cols-[300px_1fr]">
+  <!-- queue -->
+  <div class="flex flex-col border-r border-rule bg-white">
+    <div class="flex items-center justify-between border-b border-rule px-5 py-3.5">
+      <div class="text-[11px] font-semibold uppercase tracking-[.06em] text-muted">Queue · oldest first</div>
+      <div class="flex gap-2 text-xs font-semibold text-meta">
+        <%= link_to "Unreviewed", review_path(status: "unreviewed"), class: @status == "unreviewed" ? "text-ink" : "" %>
+        <%= link_to "Pending", review_path(status: "pending"), class: @status == "pending" ? "text-ink" : "" %>
+        <%= link_to "All", review_path(status: "all"), class: @status == "all" ? "text-ink" : "" %>
+      </div>
+    </div>
+    <% @items.first(30).each do |item| %>
+      <% selected = item.item_id == @item.item_id %>
+      <%= link_to review_item_path(item.item_id, status: @status), class: "flex flex-col gap-1 border-b border-rule px-5 py-3.5 #{selected ? 'border-l-[3px] border-l-ink bg-window' : 'hover:bg-ground'}" do %>
+        <div class="text-sm font-semibold"><span class="font-medium text-muted"><%= item.item_id %></span> <%= item.item_name %></div>
+        <div class="flex items-center gap-2.5 text-xs text-body">
+          <%= provenance_badge(effective_review_status(item)) %>
+          <span><%= pluralize(number_sources(item).size, "source") %></span>
+        </div>
+      <% end %>
+    <% end %>
+    <% if @items.size > 30 %><div class="px-5 py-3.5 text-xs text-muted"><%= @items.size - 30 %> more</div><% end %>
   </div>
-</div>
 
-<%= form_with url: review_item_path(@item.item_id), method: :post, class: "space-y-6" do %>
-  <% if @item.federal_coding_rules.any? %>
-    <fieldset class="rounded-lg border border-slate-200 bg-white p-4">
-      <legend class="px-1 text-sm font-semibold text-slate-900">Rules</legend>
-      <div class="mt-2 space-y-4">
+  <!-- judgment -->
+  <div class="flex flex-col gap-6 px-8 pb-9 pt-7">
+    <div class="flex items-start justify-between gap-6 border-b border-ink pb-4">
+      <div class="flex flex-col gap-1">
+        <div class="text-[13px] text-muted">Rule <%= position ? position + 1 : "?" %> of <%= @items.size %> · <%= instrument_name(@item.instrument) %> Section <%= @item.section %></div>
+        <div class="text-2xl font-semibold leading-[1.15] tracking-tight"><span class="font-medium text-muted"><%= @item.item_id %></span> <%= @item.item_name %></div>
+      </div>
+      <%= secondary_button "Open full rule →", rulebook_item_path(@item.item_id) %>
+    </div>
+
+    <%= form_with url: review_item_path(@item.item_id, status: @status), method: :post, class: "flex flex-col gap-8" do %>
+      <% if @item.federal_coding_rules.any? %>
+        <div class="flex flex-col gap-2">
+          <div class="text-[11px] font-semibold uppercase tracking-[.06em] text-muted">Plain-English rendering · as Fogbell applies it · <%= @item.federal_coding_rules.size %> rules</div>
+        </div>
         <% @item.federal_coding_rules.each_with_index do |r, i| %>
-          <div class="border-t border-slate-100 pt-3 first:border-t-0 first:pt-0">
-            <p class="text-sm text-slate-800"><span class="font-mono text-xs text-slate-500">R<%= i + 1 %></span> <%= r["rule"] %><%= render "pending_badge", pending: @pending["rule:#{i}"] %></p>
-            <p class="mt-0.5 text-xs text-slate-500"><%= cite(r["source"]) %><% if r["source"]["quote"].present? %> — “<%= r["source"]["quote"] %>”<% end %></p>
+          <div class="flex flex-col gap-3 border-t border-rule pt-6 first:border-t-0 first:pt-0">
+            <div class="flex items-center gap-2">
+              <div class="text-base font-semibold leading-[1.55]">R<%= i + 1 %>. <%= r["rule"] %></div>
+              <%= source_tag(r["source"], source_numbers) %>
+            </div>
+            <div class="grid grid-cols-2 gap-2.5">
+              <%= render "shared/citation", source: r["source"] %>
+            </div>
             <%= render "verdict_fields", name: "rules[#{i}]" %>
           </div>
         <% end %>
-      </div>
-    </fieldset>
-  <% end %>
+      <% end %>
 
-  <% federal_criteria = @item.supportive_documentation.fetch("federal", []) %>
-  <% if federal_criteria.any? %>
-    <fieldset class="rounded-lg border border-slate-200 bg-white p-4">
-      <legend class="px-1 text-sm font-semibold text-slate-900">Documentation criteria</legend>
-      <div class="mt-2 space-y-4">
-        <% federal_criteria.each_with_index do |c, i| %>
-          <div class="border-t border-slate-100 pt-3 first:border-t-0 first:pt-0">
-            <p class="text-sm text-slate-800"><%= c["criterion"] %> <span class="text-xs text-slate-400">(audit weight: <%= c["audit_weight"] %>)</span><% if c["verified_by_expert"] %> <span class="rounded bg-emerald-50 px-1.5 py-0.5 text-[11px] font-medium text-emerald-800 ring-1 ring-inset ring-emerald-200">previously verified</span><% end %><%= render "pending_badge", pending: @pending["criterion:#{i}"] %></p>
-            <p class="mt-0.5 text-xs text-slate-500"><%= cite(c["source"]) %></p>
-            <%= render "verdict_fields", name: "criteria[#{i}]" %>
+      <% federal_doc.each_with_index do |c, i| %>
+        <div class="flex flex-col gap-3 border-t border-rule pt-6">
+          <div class="flex items-center gap-2">
+            <div class="text-base font-semibold leading-[1.55]">Documentation criterion <%= i + 1 %>. <%= c["criterion"] %></div>
+            <%= source_tag(c["source"], source_numbers) %>
+            <% if c["verified_by_expert"] %><%= badge("verified") %><% end %>
           </div>
-        <% end %>
+          <div class="grid grid-cols-2 gap-2.5">
+            <%= render "shared/citation", source: c["source"] %>
+          </div>
+          <%= render "verdict_fields", name: "criteria[#{i}]" %>
+        </div>
+      <% end %>
+
+      <% if @item.conflicts.any? %>
+        <div class="flex items-center gap-2 text-[13px] text-body">
+          <%= glyph(:square_outline) %><%= pluralize(@item.conflicts.size, "conflict") %> between sources — see the full rule for both positions.
+        </div>
+      <% end %>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-[11px] font-semibold uppercase tracking-[.06em] text-muted">Notes · optional, applies to the whole submission</label>
+        <textarea name="overall_notes" rows="3" placeholder="Anything the next reviewer or the extraction team should know." class="min-h-16 rounded border border-rule bg-white px-4 py-3 text-sm text-ink placeholder:text-faint focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"></textarea>
       </div>
-    </fieldset>
-  <% end %>
 
-  <% if @item.federal_coding_rules.empty? && federal_criteria.empty? %>
-    <p class="rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-500">Nothing to mark up — this item has no rules or documentation criteria (a NOT_FOUND result).</p>
-  <% end %>
-
-  <div class="flex items-center gap-3">
-    <button type="submit" class="rounded-md bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-slate-800">Submit markup</button>
-    <p class="text-xs text-slate-500">Queues your markup as pending. <code class="rounded bg-slate-100 px-1 py-0.5 text-xs">rake rulebook:apply_review</code> materializes it into the item JSON and the changelog — nothing here writes to the corpus directly.</p>
+      <div class="flex items-center justify-between gap-3 border-t border-rule pt-4">
+        <div class="text-xs text-muted">Your judgment is recorded with your name and date. It's applied to the rulebook only after <code class="rounded bg-ground px-1 py-0.5">rake rulebook:apply_review</code> runs.</div>
+        <div class="flex items-center gap-2">
+          <%= secondary_button "Skip for now", review_path(status: @status) %>
+          <button type="submit" class="<%= DesignSystemHelper::PRIMARY_BUTTON %>">Submit judgment</button>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>

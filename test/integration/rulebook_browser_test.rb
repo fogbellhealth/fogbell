@@ -6,7 +6,7 @@ class RulebookBrowserTest < ActionDispatch::IntegrationTest
   test "index shows headline counts and items grouped by instrument then section" do
     get rulebook_path
     assert_response :success
-    assert_match(/promoted items/, response.body)
+    assert_match(/promoted items/i, response.body)
     assert_select "h2", text: /MDS 3.0/
   end
 

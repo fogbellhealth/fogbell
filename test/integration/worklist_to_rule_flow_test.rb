@@ -45,7 +45,7 @@ class WorklistToRuleFlowTest < ActionDispatch::IntegrationTest
     assert_redirected_to check_path(check)
     follow_redirect!
     assert_response :success
-    assert_select "article#card_E0800 span", text: "UNSUPPORTED"
+    assert_select "article#card_E0800", text: /Not supported/
 
     assert_select "article#card_E0800 a[href=?]", rulebook_item_path("E0800")
     get rulebook_item_path("E0800")

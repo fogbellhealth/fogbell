@@ -1,14 +1,6 @@
 module RulebookHelper
   INSTRUMENT_NAMES = { "MDS-3.0" => "MDS 3.0", "MDS-RCA" => "MDS-RCA", "MDS-AH" => "MDS-AH", "UAS-NY" => "UAS-NY" }.freeze
 
-  REVIEW_STATUS_STYLES = {
-    "unreviewed" => "bg-slate-100 text-slate-700 ring-slate-200",
-    "in_review" => "bg-blue-50 text-blue-800 ring-blue-200",
-    "pending" => "bg-amber-50 text-amber-800 ring-amber-200",
-    "verified" => "bg-emerald-50 text-emerald-800 ring-emerald-200",
-    "disputed" => "bg-rose-50 text-rose-800 ring-rose-200"
-  }.freeze
-
   # The provenance_summary.expert_review_status the JSON actually carries, upgraded to "pending"
   # when a RuleReview exists for this item that hasn't been materialized yet by
   # `rake rulebook:apply_review`. "pending" is a display-layer state only — it is never written
@@ -30,8 +22,24 @@ module RulebookHelper
     INSTRUMENT_NAMES.fetch(instrument, instrument)
   end
 
-  def review_status_badge(status)
-    tag.span(status.to_s.tr("_", " "), class: "inline-flex items-center rounded-md px-2 py-0.5 text-[11px] font-semibold tracking-wide ring-1 ring-inset #{REVIEW_STATUS_STYLES.fetch(status, REVIEW_STATUS_STYLES['unreviewed'])}")
+  # Numbers every unique citation on +item+ in first-appearance order (S1, S2, ...) so rules,
+  # criteria and conflicts can reference them inline — the design's "§6 Sources" footnote scheme.
+  def number_sources(item)
+    numbers = {}
+    key = ->(s) { [ s["doc"], s["loc"], s["quote"] ] }
+    add = ->(s) { numbers[key.call(s)] ||= numbers.size + 1 if s.present? }
+    item.federal_coding_rules.each { |r| add.call(r["source"]) }
+    item.supportive_documentation.fetch("federal", []).each { |c| add.call(c["source"]) }
+    item.conflicts.each { |c| c["positions"].each { |p| add.call(p["source"]) } }
+    add.call(item.lookback_source)
+    numbers
+  end
+
+  def source_tag(source, numbers)
+    return "".html_safe if source.blank?
+
+    n = numbers[[ source["doc"], source["loc"], source["quote"] ]]
+    n ? content_tag(:span, "[S#{n}]", class: "text-xs font-semibold text-muted") : "".html_safe
   end
 
   def not_found_label(key)

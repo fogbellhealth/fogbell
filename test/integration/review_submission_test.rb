@@ -21,6 +21,7 @@ class ReviewSubmissionTest < ActionDispatch::IntegrationTest
       criteria: { "0" => { verdict: "wrong", note: "the manual actually says something else" } }
     }
     assert_redirected_to review_path
+    follow_redirect! # -> /review, which itself redirects to the first queued item
     follow_redirect!
     assert_match(/Submitted 2 markups/, response.body)
 
@@ -38,6 +39,8 @@ class ReviewSubmissionTest < ActionDispatch::IntegrationTest
     RuleReview.create!(item_id: @item_id, target: "rule:0", verdict: "correct", reviewer: @verifier)
 
     get review_path(status: "pending")
+    assert_response :redirect
+    follow_redirect!
     assert_response :success
     assert_match(/#{Regexp.escape(@item_id)}/, response.body)
   end

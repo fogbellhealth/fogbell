@@ -143,6 +143,8 @@ class DomainPolicyTest < ActionDispatch::IntegrationTest
     get today_path
     assert_response :success
     get review_path
+    assert_response :redirect
+    follow_redirect!
     assert_response :success
   end
 end

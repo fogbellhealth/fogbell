@@ -1,198 +1,185 @@
 <% content_for :title, "Fogbell — #{@item.item_id}" %>
-<% j = item_jurisdiction(@item) %>
+<%
+j = item_jurisdiction(@item)
+federal_doc = @item.supportive_documentation.fetch("federal", [])
+state_doc = @item.supportive_documentation.fetch("state", {})
+source_numbers = number_sources(@item)
+tag_for = ->(s) { source_tag(s, source_numbers) }
+%>
 
-<div class="mb-6">
-  <%= link_to "← All items", rulebook_path, class: "text-sm text-slate-500 hover:text-slate-700" %>
-</div>
-
-<div class="mb-8 flex flex-wrap items-start justify-between gap-4">
-  <div>
-    <p class="text-sm font-mono text-slate-500"><%= @item.item_id %> · Section <%= @item.section %> · <%= instrument_name(@item.instrument) %></p>
-    <h1 class="mt-1 text-2xl font-semibold tracking-tight text-slate-900"><%= @item.item_name %></h1>
-    <div class="mt-2 flex flex-wrap items-center gap-2">
-      <%= review_status_badge(effective_review_status(@item)) %>
-      <% if j != "Federal" %>
-        <span class="rounded bg-violet-50 px-2 py-0.5 text-[11px] font-medium text-violet-800 ring-1 ring-inset ring-violet-200"><%= j %> layer — provisional pending expert review</span>
-      <% end %>
-      <span class="rounded bg-slate-100 px-2 py-0.5 text-[11px] text-slate-600">extracted <%= @item.provenance_summary["extracted_at"] %></span>
+<div class="flex flex-col gap-8">
+  <div class="flex flex-col gap-3 border-b border-ink pb-6">
+    <div class="flex items-start justify-between gap-6">
+      <p class="text-[13px] font-medium text-muted"><%= instrument_name(@item.instrument) %> · Section <%= @item.section %></p>
+      <div class="flex shrink-0 items-center gap-2">
+        <%= provenance_badge(effective_review_status(@item)) %>
+        <% if j != "Federal" %><%= badge("provisional", label: "#{j} layer — provisional pending expert review") %><% end %>
+      </div>
     </div>
-  </div>
-  <% if @item.section != "CONV" %>
-    <%= link_to "Run a check using this item", new_check_path(check: { item_ids: [ @item.item_id ] }), class: "shrink-0 rounded-md bg-slate-900 px-3 py-2 text-xs font-semibold text-white shadow-sm hover:bg-slate-800" %>
-  <% end %>
-</div>
-
-<div class="space-y-8">
-  <section>
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500">Look-back window</h2>
-    <p class="mt-2 text-sm text-slate-800">
-      <% if @item.lookback_days.nil? %>
-        <span class="text-slate-500">Not stated in the source document for this item.</span>
-      <% else %>
-        <strong><%= @item.lookback_days %> days</strong>
-        <% if @item.lookback_source %> — <%= cite(@item.lookback_source) %><% end %>
-      <% end %>
-    </p>
-    <% if @item.lookback_notes.present? %>
-      <p class="mt-1 text-sm text-slate-600"><%= @item.lookback_notes %></p>
+    <h1 class="text-3xl font-semibold leading-[1.15] tracking-tight"><span class="font-medium text-muted"><%= @item.item_id %></span> <%= @item.item_name %></h1>
+    <div class="grid w-fit grid-flow-col gap-x-8 text-[13px]">
+      <div class="flex flex-col gap-0.5">
+        <div class="text-[11px] font-semibold uppercase tracking-[.06em] text-muted">Instrument</div>
+        <div class="font-semibold"><%= instrument_name(@item.instrument) %></div>
+      </div>
+      <div class="flex flex-col gap-0.5">
+        <div class="text-[11px] font-semibold uppercase tracking-[.06em] text-muted">Look-back</div>
+        <div class="font-semibold"><%= @item.lookback_days ? "#{@item.lookback_days} days#{' · see conflict' if @item.conflicts.any? { |c| c['topic'].to_s.match?(/window|look-?back|period/i) }}" : "not stated" %></div>
+      </div>
+      <div class="flex flex-col gap-0.5">
+        <div class="text-[11px] font-semibold uppercase tracking-[.06em] text-muted">Jurisdiction</div>
+        <div class="font-semibold"><%= j %></div>
+      </div>
+      <div class="flex flex-col gap-0.5">
+        <div class="text-[11px] font-semibold uppercase tracking-[.06em] text-muted">Extracted</div>
+        <div class="font-semibold"><%= @item.provenance_summary["extracted_at"] %> · <%= source_numbers.size %> source<%= "s" unless source_numbers.size == 1 %></div>
+      </div>
+    </div>
+    <% if @item.section != "CONV" %>
+      <div><%= primary_button "Run a check using this item", new_check_path(check: { item_ids: [ @item.item_id ] }) %></div>
     <% end %>
-    <% if @item.lookback_days.present? %>
-      <div class="mt-4">
-        <p class="mb-1 text-xs font-medium uppercase tracking-wider text-slate-400">Illustration — example dates, not real evidence</p>
-        <% illustrative_ard = Date.current %>
-        <%= render "shared/lookback_timeline", timeline: Fogbell::LookbackTimeline.new(
-              ard: illustrative_ard, lookback_days: @item.lookback_days, illustrative: true,
-              evidence: [
-                { "date" => (illustrative_ard - 1).iso8601, "author" => "example", "quote" => "a supporting note, counted" }
-              ],
-              outside_window_evidence: [
-                { "date" => (illustrative_ard - @item.lookback_days - 2).iso8601, "author" => "example", "quote" => "documented too early to count" }
-              ]
+  </div>
+
+  <% if @item.lookback_days.present? %>
+    <div class="grid grid-cols-[160px_1fr] gap-6">
+      <div class="pt-0.5 text-[13px] font-semibold text-muted">Illustration</div>
+      <div>
+        <p class="mb-2 text-xs text-muted">Example dates, not real evidence — illustrates this item's <%= @item.lookback_days %>-day window.</p>
+        <% illustrative_ard = Date.current + 1 %>
+        <%= render "shared/lookback_timeline", size: :standalone, timeline: Fogbell::LookbackTimeline.new(
+              ard: illustrative_ard, lookback_days: @item.lookback_days,
+              evidence: [ { "date" => (illustrative_ard - 1).iso8601, "author" => "example", "quote" => "a supporting note, counted" } ],
+              outside_window_evidence: [ { "date" => (illustrative_ard - @item.lookback_days).iso8601, "author" => "example", "quote" => "documented too early to count" } ]
             ) %>
       </div>
-    <% end %>
-  </section>
+    </div>
+  <% end %>
 
   <% if @item.coding_levels.any? %>
-    <section>
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500">Coding levels</h2>
-      <div class="mt-3 overflow-x-auto rounded-md border border-slate-200">
-        <table class="min-w-full divide-y divide-slate-200 text-sm">
-          <thead class="bg-slate-50">
-            <tr>
-              <th class="px-3 py-2 text-left font-medium text-slate-600">Code</th>
-              <th class="px-3 py-2 text-left font-medium text-slate-600">Label</th>
-              <th class="px-3 py-2 text-left font-medium text-slate-600">Definition</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-100 bg-white">
-            <% @item.coding_levels.each do |l| %>
-              <tr>
-                <td class="px-3 py-2 font-mono text-xs text-slate-700"><%= l["code"] %></td>
-                <td class="px-3 py-2 text-slate-800"><%= l["label"] %></td>
-                <td class="px-3 py-2 text-slate-600"><%= l["definition"] %> <span class="text-xs text-slate-400"><%= cite(l["source"]) %></span></td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
+    <div class="grid grid-cols-[160px_1fr] gap-6">
+      <div class="pt-0.5 text-[13px] font-semibold text-muted">§1 Coding levels</div>
+      <div class="grid grid-cols-[48px_1fr_1fr] border-t border-ink text-sm">
+        <% @item.coding_levels.each do |l| %>
+          <div class="border-b border-rule py-2.5 font-semibold"><%= l["code"] %></div>
+          <div class="border-b border-rule px-3 py-2.5 font-semibold"><%= l["label"] %></div>
+          <div class="border-b border-rule py-2.5 text-body"><%= l["definition"] %> <%= tag_for.call(l["source"]) %></div>
+        <% end %>
       </div>
-    </section>
+    </div>
   <% end %>
 
-  <section>
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500">Rules</h2>
+  <div class="grid grid-cols-[160px_1fr] gap-6">
+    <div class="pt-0.5 text-[13px] font-semibold text-muted">§2 Coding rules</div>
     <% if @item.federal_coding_rules.empty? %>
-      <p class="mt-2 text-sm text-slate-500">The source document does not state coding rules for this item.</p>
+      <p class="text-sm text-muted">Not stated in the source.</p>
     <% else %>
-      <ol class="mt-3 space-y-3">
+      <div class="flex flex-col gap-3 text-sm leading-[1.55]">
         <% @item.federal_coding_rules.each_with_index do |r, i| %>
-          <li class="border-l-2 border-slate-300 pl-3 text-sm">
-            <p class="text-slate-800"><span class="font-mono text-xs text-slate-500">R<%= i + 1 %></span> <%= r["rule"] %></p>
-            <p class="mt-0.5 text-xs text-slate-500"><%= cite(r["source"]) %><% if r["source"]["quote"].present? %> — “<%= r["source"]["quote"] %>”<% end %></p>
-          </li>
-        <% end %>
-      </ol>
-    <% end %>
-  </section>
-
-  <section>
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500">Documentation criteria</h2>
-    <% federal_doc = @item.supportive_documentation.fetch("federal", []) %>
-    <% state_doc = @item.supportive_documentation.fetch("state", {}) %>
-    <% if federal_doc.empty? && state_doc.values.all? { |v| v.empty? } %>
-      <p class="mt-2 text-sm text-slate-500">The source document does not state documentation requirements for this item.</p>
-    <% else %>
-      <ul class="mt-3 space-y-2 text-sm">
-        <% federal_doc.each do |c| %>
-          <li class="border-l-2 border-slate-300 pl-3">
-            <p class="text-slate-800"><%= c["criterion"] %> <span class="text-xs text-slate-400">(audit weight: <%= c["audit_weight"] %>)</span></p>
-            <p class="mt-0.5 text-xs text-slate-500"><%= cite(c["source"]) %></p>
-          </li>
-        <% end %>
-        <% state_doc.each do |st, criteria| %>
-          <% next if criteria.empty? %>
-          <% criteria.each do |c| %>
-            <li class="border-l-2 border-violet-300 pl-3">
-              <p class="text-slate-800"><%= c["criterion"] %> <span class="rounded bg-violet-50 px-1.5 py-0.5 text-[11px] font-medium text-violet-800 ring-1 ring-inset ring-violet-200"><%= st %> layer — provisional pending expert review</span></p>
-              <p class="mt-0.5 text-xs text-slate-500"><%= cite(c["source"]) %></p>
-            </li>
-          <% end %>
-        <% end %>
-      </ul>
-    <% end %>
-  </section>
-
-  <% if @item.state_deltas.any? %>
-    <section>
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500">State differences</h2>
-      <ul class="mt-3 space-y-2 text-sm">
-        <% @item.state_deltas.each do |d| %>
-          <li class="border-l-2 border-violet-300 pl-3">
-            <p class="text-slate-800"><strong><%= d["state"] %>:</strong> <%= d["delta"] %></p>
-            <p class="mt-0.5 text-xs text-slate-500"><%= cite(d["source"]) %></p>
-          </li>
-        <% end %>
-      </ul>
-    </section>
-  <% end %>
-
-  <% if @item.conflicts.any? %>
-    <section class="rounded-md border border-amber-200 bg-amber-50 p-4">
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-amber-900">⚠ Conflicts — both positions preserved</h2>
-      <div class="mt-3 space-y-4">
-        <% @item.conflicts.each do |c| %>
-          <div>
-            <p class="text-sm font-medium text-amber-950"><%= c["topic"] %></p>
-            <ul class="mt-1 space-y-1 text-sm text-amber-900">
-              <% c["positions"].each do |pos| %>
-                <li>— <%= pos["claim"] %> <span class="text-xs text-amber-700"><%= cite(pos["source"]) %></span></li>
-              <% end %>
-            </ul>
-            <p class="mt-1 text-xs font-medium text-amber-800">Status: <%= c["resolution"] %></p>
+          <div class="grid grid-cols-[28px_1fr] gap-2">
+            <div class="font-semibold text-muted">2.<%= i + 1 %></div>
+            <div><%= r["rule"] %> <%= tag_for.call(r["source"]) %></div>
           </div>
         <% end %>
       </div>
-    </section>
-  <% end %>
+    <% end %>
+  </div>
 
-  <% if @item.case_mix_relevance["level"] != "unknown" %>
-    <section>
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500">Case-mix relevance</h2>
-      <p class="mt-2 text-sm text-slate-800"><strong class="capitalize"><%= @item.case_mix_relevance["level"] %></strong> — <%= @item.case_mix_relevance["notes"] %>
-        <% if @item.case_mix_relevance["source"] %><span class="text-xs text-slate-500"><%= cite(@item.case_mix_relevance["source"]) %></span><% end %>
-      </p>
-    </section>
-  <% end %>
-
-  <% if @item.common_audit_citations.any? %>
-    <section>
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500">Common audit citations</h2>
-      <ul class="mt-3 space-y-1 text-sm text-slate-700">
-        <% @item.common_audit_citations.each do |c| %>
-          <li><span class="font-mono text-xs text-slate-500"><%= c["citation"] %></span> — <%= c["notes"] %> <span class="text-xs text-slate-400"><%= cite(c["source"]) %></span></li>
+  <div class="grid grid-cols-[160px_1fr] gap-6">
+    <div class="pt-0.5 text-[13px] font-semibold text-muted">§3 Documentation criteria</div>
+    <% if federal_doc.empty? && state_doc.values.all?(&:empty?) %>
+      <p class="text-sm text-muted">Not stated in the source.</p>
+    <% else %>
+      <div class="flex flex-col gap-3 text-sm leading-[1.55]">
+        <% federal_doc.each_with_index do |c, i| %>
+          <div class="grid grid-cols-[28px_1fr] gap-2">
+            <div class="font-semibold text-muted">3.<%= i + 1 %></div>
+            <div><%= c["criterion"] %> <%= tag_for.call(c["source"]) %></div>
+          </div>
         <% end %>
-      </ul>
-    </section>
+        <% state_doc.each do |st, criteria| %>
+          <% criteria.each do |c| %>
+            <div class="grid grid-cols-[28px_1fr] gap-2">
+              <div></div>
+              <div><%= c["criterion"] %> <%= badge("provisional", label: "#{st} layer — provisional pending expert review") %> <%= tag_for.call(c["source"]) %></div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <% @item.conflicts.each_with_index do |c, idx| %>
+    <div class="grid grid-cols-[160px_1fr] gap-6">
+      <div class="pt-0.5 text-[13px] font-semibold text-muted"><%= idx.zero? ? "§4 Conflicts between sources" : "" %></div>
+      <div class="flex flex-col rounded border border-rule bg-white">
+        <div class="flex items-center justify-between gap-3 border-b border-rule px-5 py-3.5 text-sm font-semibold">
+          <div><%= c["topic"] %></div>
+          <div class="text-xs font-semibold text-body">Unresolved · <%= c["resolution"] %></div>
+        </div>
+        <div class="grid grid-cols-2">
+          <% c["positions"].each_with_index do |pos, i| %>
+            <div class="flex flex-col gap-1.5 px-5 py-4 <%= 'border-r border-rule' if i.zero? %>">
+              <div class="text-[11px] font-semibold uppercase tracking-[.06em] text-muted">Position <%= (65 + i).chr %> · <%= tag_for.call(pos["source"]) %></div>
+              <div class="text-sm leading-relaxed"><%= pos["claim"] %></div>
+              <div class="text-xs font-semibold text-meta"><%= cite(pos["source"]) %></div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
   <% end %>
 
   <% if @item.not_found.any? %>
-    <section>
-      <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500">Not found in the source</h2>
-      <p class="mt-2 text-sm text-slate-500">The extraction looked for the following and could not find them. Blank is honest; nothing was guessed.</p>
-      <ul class="mt-2 list-disc space-y-0.5 pl-5 text-sm text-slate-700">
-        <% @item.not_found.each do |k| %><li><%= not_found_label(k) %></li><% end %>
-      </ul>
-    </section>
+    <div class="grid grid-cols-[160px_1fr] gap-6">
+      <div class="pt-0.5 text-[13px] font-semibold text-muted">§5 Not stated in the sources</div>
+      <div class="flex flex-col gap-2 text-sm leading-[1.55] text-body">
+        <% @item.not_found.each do |k| %>
+          <div class="grid grid-cols-[16px_1fr] gap-2"><div class="text-faint">—</div><div><%= not_found_label(k) %></div></div>
+        <% end %>
+      </div>
+    </div>
   <% end %>
 
-  <section class="border-t border-slate-200 pt-6">
-    <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500">Sources</h2>
-    <% citations = @item.citations.uniq { |c| [ c["doc"], c["loc"], c["quote"] ] } %>
-    <ul class="mt-3 space-y-2 text-sm">
-      <% citations.each do |c| %>
-        <li class="text-slate-600"><span class="font-medium text-slate-800"><%= manifest.name(c["doc"]) %></span>, <%= c["loc"] %><% if c["quote"].present? %> — “<%= c["quote"] %>”<% end %></li>
+  <div class="grid grid-cols-[160px_1fr] gap-6">
+    <div class="pt-0.5 text-[13px] font-semibold text-muted">§6 Sources</div>
+    <div class="flex flex-col gap-3">
+      <% source_numbers.sort_by { |_, n| n }.each do |key, n| %>
+        <% doc, loc, quote = key %>
+        <div class="grid grid-cols-[32px_1fr] gap-3">
+          <div class="pt-3.5 text-xs font-semibold text-muted">S<%= n %></div>
+          <%= render "shared/citation", source: { "doc" => doc, "loc" => loc, "quote" => quote } %>
+        </div>
       <% end %>
-    </ul>
-    <p class="mt-4 text-xs text-slate-400">Extracted <%= @item.provenance_summary["extracted_at"] %> by <%= @item.provenance_summary["model"] %> · rulebook version <%= @item.version %></p>
-  </section>
+    </div>
+  </div>
+
+  <% if @item.case_mix_relevance["level"] != "unknown" %>
+    <div class="grid grid-cols-[160px_1fr] gap-6">
+      <div class="pt-0.5 text-[13px] font-semibold text-muted">§7 Case-mix relevance</div>
+      <div class="text-sm leading-relaxed text-body"><strong class="capitalize text-ink"><%= @item.case_mix_relevance["level"] %></strong> — <%= @item.case_mix_relevance["notes"] %><% if @item.case_mix_relevance["source"] %> <%= tag_for.call(@item.case_mix_relevance["source"]) %><% end %></div>
+    </div>
+  <% end %>
+
+  <% if @item.common_audit_citations.any? %>
+    <div class="grid grid-cols-[160px_1fr] gap-6">
+      <div class="pt-0.5 text-[13px] font-semibold text-muted">§8 Common audit citations</div>
+      <div class="flex flex-col gap-1.5 text-sm text-body">
+        <% @item.common_audit_citations.each do |c| %>
+          <div><span class="font-mono text-xs text-muted"><%= c["citation"] %></span> — <%= c["notes"] %></div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+
+  <% if @item.state_deltas.any? %>
+    <div class="grid grid-cols-[160px_1fr] gap-6">
+      <div class="pt-0.5 text-[13px] font-semibold text-muted">§9 State differences</div>
+      <div class="flex flex-col gap-2 text-sm leading-relaxed text-body">
+        <% @item.state_deltas.each do |d| %>
+          <div><strong class="text-ink"><%= d["state"] %>:</strong> <%= d["delta"] %> <span class="text-xs font-semibold text-meta"><%= cite(d["source"]) %></span></div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  </div>
 </div>

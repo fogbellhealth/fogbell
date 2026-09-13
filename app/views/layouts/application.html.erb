@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full bg-slate-50">
+<html lang="en" class="h-full bg-paper">
   <head>
     <title><%= content_for(:title) || "Fogbell — evidence check" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,57 +7,64 @@
     <%= csp_meta_tag %>
     <%= yield :head %>
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-  <body class="min-h-full text-slate-800 antialiased">
-    <header class="border-b border-slate-200 bg-white">
-      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-6 py-4">
+  <body class="min-h-full font-sans text-ink tabular-nums antialiased">
+    <% dark_header = user_signed_in? && content_for?(:dark_header) %>
+    <header class="border-b border-rule <%= dark_header ? 'bg-ink text-white' : 'bg-white' %>">
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-8 py-3.5">
         <div class="flex flex-wrap items-center gap-6">
-          <%= link_to root_path, class: "flex items-baseline gap-2 no-underline" do %>
-            <span class="text-xl" aria-hidden="true">🔔</span>
-            <span class="text-lg font-semibold tracking-tight text-slate-900">Fogbell</span>
+          <%= link_to root_path, class: "flex items-center gap-2 no-underline" do %>
+            <span class="h-[13px] w-[13px] rounded-t-full rounded-b-sm <%= dark_header ? 'bg-white' : 'bg-ink' %>" aria-hidden="true"></span>
+            <span class="text-lg font-bold tracking-tight <%= dark_header ? 'text-white' : 'text-ink' %>">Fogbell<% if dark_header %> <span class="font-medium text-faint">Review</span><% end %></span>
           <% end %>
-          <% if user_signed_in? %>
-            <nav class="flex flex-wrap gap-4 text-sm text-slate-600">
+          <% if user_signed_in? && !dark_header %>
+            <nav class="flex flex-wrap gap-5 text-sm font-medium text-muted">
               <% if current_user.facility_domain? %>
-                <%= link_to "Today", today_path, class: "hover:text-slate-900 #{'font-semibold text-slate-900' if current_page?(today_path)}" %>
-                <%= link_to "New check", new_check_path, class: "hover:text-slate-900 #{'font-semibold text-slate-900' if current_page?(new_check_path)}" %>
+                <%= link_to "Today", today_path, class: "pb-0.5 #{current_page?(today_path) ? 'border-b-2 border-ink font-semibold text-ink' : ''}" %>
+                <%= link_to "Residents", residents_path, class: "pb-0.5 #{controller_name == 'residents' ? 'border-b-2 border-ink font-semibold text-ink' : ''}" %>
               <% end %>
-              <%= link_to "Rulebook", rulebook_path, class: "hover:text-slate-900 #{'font-semibold text-slate-900' if current_page?(rulebook_path)}" %>
-              <%= link_to "Changes", changes_path, class: "hover:text-slate-900 #{'font-semibold text-slate-900' if current_page?(changes_path)}" %>
-              <% if current_user.rulebook_domain? %>
-                <%= link_to "Review", review_path, class: "hover:text-slate-900 #{'font-semibold text-slate-900' if current_page?(review_path)}" %>
-                <%= link_to "Questions", review_questions_path, class: "hover:text-slate-900 #{'font-semibold text-slate-900' if current_page?(review_questions_path)}" %>
-              <% end %>
+              <%= link_to "Rules", rulebook_path, class: "pb-0.5 #{controller_name == 'rulebook' ? 'border-b-2 border-ink font-semibold text-ink' : ''}" %>
+              <%= link_to "Changes", changes_path, class: "pb-0.5 #{current_page?(changes_path) ? 'border-b-2 border-ink font-semibold text-ink' : ''}" %>
             </nav>
+          <% end %>
+          <% if dark_header %>
+            <div class="text-[13px] text-rule"><%= yield :header_subtitle %></div>
           <% end %>
         </div>
         <div class="flex items-center gap-3">
           <% if user_signed_in? %>
-            <% if current_user.facility_domain? %>
-              <span class="rounded-md bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-900 ring-1 ring-inset ring-amber-200">Demo only — synthetic data. Never enter real resident information.</span>
+            <% if dark_header %>
+              <div class="flex items-center gap-1.5 text-[13px] text-rule"><%= glyph(:square_outline) %>No resident data in this application</div>
+              <span class="text-[13px] text-rule"><%= current_user.email %></span>
             <% else %>
-              <span class="rounded-md bg-violet-50 px-3 py-1 text-xs font-semibold text-violet-800 ring-1 ring-inset ring-violet-200">Rulebook domain — no resident data reachable from this account</span>
+              <%= badge("synthetic") %>
+              <span class="text-[13px] text-body"><%= current_user.facility&.name %></span>
             <% end %>
-            <span class="hidden text-xs text-slate-500 sm:inline"><%= current_user.email %> · <%= current_user.role %></span>
-            <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "rounded-md px-2 py-1 text-xs font-medium text-slate-500 hover:bg-slate-100 hover:text-slate-700" %>
+            <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "rounded px-2 py-1 text-xs font-medium #{dark_header ? 'text-rule hover:bg-white/10' : 'text-muted hover:bg-ground hover:text-body'}" %>
           <% end %>
         </div>
       </div>
     </header>
-    <main class="mx-auto max-w-6xl px-6 py-8">
+    <main class="mx-auto max-w-6xl <%= dark_header ? '' : 'p-8' %>">
       <% if notice %>
-        <div class="mb-6 rounded-md border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900"><%= notice %></div>
+        <div class="mb-6 rounded border border-rule bg-window px-4 py-3 text-sm text-ink">
+          <%= badge("verified") %> <%= notice %>
+        </div>
       <% end %>
       <% if flash[:alert] %>
-        <div class="mb-6 rounded-md border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-900"><%= flash[:alert] %></div>
+        <div class="mb-6 rounded border border-closing px-4 py-3 text-sm text-closing"><%= flash[:alert] %></div>
       <% end %>
       <%= yield %>
     </main>
-    <footer class="mx-auto max-w-6xl px-6 pb-10 pt-4 text-xs leading-relaxed text-slate-500">
-      <p><strong class="text-slate-700">Demo only — synthetic data only. Never enter real resident information.</strong> Every finding on this site is a draft for nurse review, generated from public regulatory text with page citations. Rules drawn from state materials (Maine, New York) are provisional pending review by a state-qualified expert. Nothing here is coding advice, legal advice, or a substitute for the underlying manual or protocol.</p>
-    </footer>
+    <% unless dark_header %>
+      <footer class="mx-auto max-w-6xl px-8 pb-10 pt-4 text-xs leading-relaxed text-muted">
+        <p><strong class="text-body">Demo only — synthetic data only. Never enter real resident information.</strong> Every finding on this site is a draft for nurse review, generated from public regulatory text with page citations. Rules drawn from state materials (Maine, New York) are provisional pending review by a state-qualified expert. Nothing here is coding advice, legal advice, or a substitute for the underlying manual or protocol.</p>
+      </footer>
+    <% end %>
   </body>
 </html>

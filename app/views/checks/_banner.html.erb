@@ -1,10 +1,19 @@
 <% if check.done? %>
   <% proj = audit_projection(check) %>
-  <section class="rounded-lg border border-slate-200 bg-white p-5 text-sm leading-relaxed text-slate-800">
-    <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-500">Mock audit projection</h2>
-    <% if proj.available? && proj.checked.positive? %>
-      <% src = ->(s) { tag.span("(#{cite(s)})", class: "text-slate-500") } %>
-      <p class="mt-2">
+  <div class="grid grid-cols-[auto_1fr] rounded border border-rule bg-white">
+    <div class="flex min-w-[150px] flex-col gap-0.5 border-r border-rule bg-ground px-5 py-4">
+      <div class="text-[11px] font-semibold uppercase tracking-[.06em] text-muted">Audit projection</div>
+      <% if proj.available? && proj.checked.positive? %>
+        <div class="text-[28px] font-semibold leading-tight tracking-tight"><%= proj.unsupported + proj.partial %> of <%= proj.checked %></div>
+        <div class="text-xs text-body">items lack support · <%= proj.error_rate_pct %>%</div>
+      <% else %>
+        <div class="text-[28px] font-semibold leading-tight tracking-tight">—</div>
+        <div class="text-xs text-body">no projection available</div>
+      <% end %>
+    </div>
+    <div class="px-5 py-4 text-sm leading-[1.55] text-ink [text-wrap:pretty]">
+      <% if proj.available? && proj.checked.positive? %>
+        <% src = ->(s) { tag.span("(#{cite(s)})", class: "text-muted") } %>
         If this record were sampled under the state's MDS assessment review<% if proj.sample %> (<%= proj.sample.value[:pct] %>% sample, minimum <%= proj.sample.value[:min_records] %> records <%= src.call(proj.sample.source) %>)<% end %>,
         <strong><%= proj.unsupported %> of <%= proj.checked %></strong> checked items lack supporting documentation<% if proj.partial.positive? %> and <%= proj.partial %> <%= proj.partial == 1 ? "is" : "are" %> partially supported<% end %>:
         a projected error rate of <strong><%= proj.error_rate_pct %>%</strong>
@@ -14,12 +23,12 @@
           — below the <%= proj.next_tier.error_rate_min %>% threshold for a <%= proj.next_tier.reduction_pct %>% Direct Care Rate reduction <%= src.call(proj.next_tier.source) %>.
         <% end %>
         <% if proj.correction_days %>Corrections must be completed within <%= proj.correction_days.value %> days of a written request <%= src.call(proj.correction_days.source) %>.<% end %>
-      </p>
-      <p class="mt-2 text-xs text-slate-500">Illustrative projection for this single record; actual reviews sample across records. Method: unsupported items count 1, partially supported items count <%= Fogbell::EvidenceCheck::AuditProjection::PARTIAL_WEIGHT %>, not-applicable items are excluded. Thresholds are read from the cited state rule text; nothing is assumed.<%= jurisdiction_badge(proj.tier&.source || proj.tiers.first.source) %></p>
-    <% elsif proj.checked.zero? %>
-      <p class="mt-2 text-slate-600">No checkable items in this record.</p>
-    <% else %>
-      <p class="mt-2 text-slate-600">No state review machinery is available in the rulebook for this instrument yet, so no projection is shown. <%= proj.unsupported %> of <%= proj.checked %> checked items lack supporting documentation.</p>
-    <% end %>
-  </section>
+        <br><span class="text-xs text-muted">Illustrative projection for this single record; actual reviews sample across records.<%= jurisdiction_badge(proj.tier&.source || proj.tiers.first.source) %></span>
+      <% elsif proj.checked.zero? %>
+        No checkable items in this record.
+      <% else %>
+        No state review machinery is available in the rulebook for this instrument yet. <%= proj.unsupported %> of <%= proj.checked %> checked items lack supporting documentation.
+      <% end %>
+    </div>
+  </div>
 <% end %>

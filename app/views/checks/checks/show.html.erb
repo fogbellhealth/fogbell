@@ -1,19 +1,21 @@
 <% content_for :title, "Fogbell — check ##{@check.id}" %>
 <%= turbo_stream_from @check %>
-<div class="mb-6 flex items-baseline justify-between">
-  <div>
-    <h1 class="text-2xl font-semibold tracking-tight text-slate-900">Evidence check</h1>
-    <p class="mt-1 text-sm text-slate-600">ARD <%= @check.ard.strftime("%B %-d, %Y") %> · <%= @check.item_ids.size %> items · <%= link_to "start another", new_check_path, class: "underline decoration-slate-300 hover:decoration-slate-600" %></p>
+
+<div class="flex flex-col gap-6">
+  <div class="flex items-baseline justify-between">
+    <p class="flex items-center gap-2 text-[13px] text-muted">
+      <%= link_to "Today", today_path %><span>›</span><span class="font-semibold text-ink">Evidence check ARD <%= @check.ard.strftime("%b %-d, %Y") %></span>
+    </p>
+    <%= render "checks/status", check: @check %>
   </div>
-  <%= render "checks/status", check: @check %>
+
+  <div id="banner"><%= render "checks/banner", check: @check %></div>
+
+  <div id="cards" class="flex flex-col gap-10">
+    <% @check.results.each do |result| %>
+      <%= render "checks/card", result: result, check: @check, rule_set: rule_set_for(@check) %>
+    <% end %>
+  </div>
+
+  <p class="text-xs text-muted">Synthetic data only. Every card is a draft for nurse review; expand "Why?" to see the rules applied with their citations. <%= link_to "start another", new_check_path, class: "underline decoration-rule hover:decoration-muted" %></p>
 </div>
-
-<div id="banner"><%= render "checks/banner", check: @check %></div>
-
-<div id="cards" class="mt-6 space-y-4">
-  <% @check.results.each do |result| %>
-    <%= render "checks/card", result: result, check: @check, rule_set: rule_set_for(@check) %>
-  <% end %>
-</div>
-
-<p class="mt-8 text-xs text-slate-500">Synthetic data only. Every card is a draft for nurse review; expand “Why?” to see the rules applied with their citations.</p>

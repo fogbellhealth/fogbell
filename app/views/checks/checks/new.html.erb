@@ -1,39 +1,39 @@
 <% content_for :title, "Fogbell — check a chart" %>
 <div class="mb-8 max-w-3xl">
-  <h1 class="text-2xl font-semibold tracking-tight text-slate-900">Does the chart support the coding?</h1>
-  <p class="mt-2 text-sm leading-relaxed text-slate-600">Paste chart documentation, set the assessment reference date, choose the MDS items, and Fogbell checks each item against the cited coding rules while the look-back window is still open. Evidence outside the window is shown but never counted.</p>
+  <h1 class="text-3xl font-semibold leading-none tracking-tight">Does the chart support the coding?</h1>
+  <p class="mt-2 text-sm leading-relaxed text-body">Paste chart documentation, set the assessment reference date, choose the MDS items, and Fogbell checks each item against the cited coding rules while the look-back window is still open. Evidence outside the window is shown but never counted.</p>
 </div>
 
 <%= form_with model: @check, url: checks_path, class: "grid gap-8 lg:grid-cols-[1fr_320px]" do |f| %>
   <div class="space-y-6">
-    <div class="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-      <strong>Demo only — synthetic data only.</strong> Never enter real resident information. The chart below is an invented record for a fictional facility.
+    <div class="rounded border border-rule bg-ground px-4 py-3 text-sm text-body">
+      <%= badge("synthetic") %> <strong class="text-ink">Never enter real resident information.</strong> The chart below is an invented record for a fictional facility.
     </div>
     <div>
-      <%= f.label :chart_text, "Chart documentation", class: "block text-sm font-medium text-slate-800" %>
-      <p class="mb-2 text-xs text-slate-500">Nursing notes, MAR excerpts, orders, the MDS coding worksheet — pasted as text, with dates and authors as written.</p>
-      <%= f.text_area :chart_text, rows: 28, class: "block w-full rounded-md border border-slate-300 bg-white px-3 py-2 font-mono text-[13px] leading-relaxed text-slate-800 shadow-sm focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500" %>
+      <%= f.label :chart_text, "Chart documentation", class: "block text-sm font-medium text-ink" %>
+      <p class="mb-2 text-xs text-muted">Nursing notes, MAR excerpts, orders, the MDS coding worksheet — pasted as text, with dates and authors as written.</p>
+      <%= f.text_area :chart_text, rows: 28, class: "block w-full rounded border border-rule bg-white px-3 py-2 font-mono text-[13px] leading-relaxed text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink" %>
     </div>
   </div>
 
   <aside class="space-y-6">
     <div>
-      <%= f.label :ard, "Assessment reference date (ARD)", class: "block text-sm font-medium text-slate-800" %>
-      <%= f.date_field :ard, class: "mt-1 block w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm shadow-sm focus:border-slate-500 focus:outline-none focus:ring-1 focus:ring-slate-500" %>
-      <p class="mt-1 text-xs text-slate-500">Windows count back from this day; the ARD is day 1.</p>
+      <%= f.label :ard, "Assessment reference date (ARD)", class: "block text-sm font-medium text-ink" %>
+      <%= f.date_field :ard, class: "mt-1 block w-full rounded border border-rule bg-white px-3 py-2 text-sm text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink" %>
+      <p class="mt-1 text-xs text-muted">Windows count back from this day; the ARD is day 1.</p>
     </div>
 
     <fieldset>
-      <legend class="text-sm font-medium text-slate-800">Items to check</legend>
-      <p class="mb-2 text-xs text-slate-500">Promoted rulebook items only. General conventions are applied automatically.</p>
-      <div class="max-h-[32rem] space-y-4 overflow-y-auto rounded-md border border-slate-200 bg-white p-3">
+      <legend class="text-sm font-medium text-ink">Items to check</legend>
+      <p class="mb-2 text-xs text-muted">Promoted rulebook items only. General conventions are applied automatically.</p>
+      <div class="max-h-[32rem] space-y-4 overflow-y-auto rounded border border-rule bg-white p-3">
         <% @sections.each do |section, items| %>
           <div>
-            <div class="mb-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">Section <%= section %></div>
+            <div class="mb-1 text-[11px] font-semibold uppercase tracking-[.06em] text-muted">Section <%= section %></div>
             <% items.each do |item| %>
               <label class="flex items-start gap-2 py-1 text-sm">
-                <%= check_box_tag "check[item_ids][]", item.item_id, @check.item_ids.include?(item.item_id), id: "item_#{item.item_id}", class: "mt-0.5 h-4 w-4 rounded border-slate-300 text-slate-800 focus:ring-slate-500" %>
-                <span><span class="font-mono text-xs font-semibold text-slate-700"><%= item.item_id %></span> <span class="text-slate-700"><%= item.item_name %></span><%= lookback_badge(item) %></span>
+                <%= check_box_tag "check[item_ids][]", item.item_id, @check.item_ids.include?(item.item_id), id: "item_#{item.item_id}", class: "mt-0.5 h-4 w-4 rounded border-rule text-ink focus:ring-ink" %>
+                <span><span class="font-mono text-xs font-semibold text-ink"><%= item.item_id %></span> <span class="text-body"><%= item.item_name %></span> <span class="text-[11px] text-muted">· <%= item.lookback_days ? "#{item.lookback_days}-day window" : "window not stated" %></span></span>
               </label>
             <% end %>
           </div>
@@ -41,7 +41,7 @@
       </div>
     </fieldset>
 
-    <%= f.button "Check the chart", type: "submit", class: "w-full rounded-md bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 disabled:opacity-60", data: { turbo_submits_with: "Checking…" } %>
-    <p class="text-xs text-slate-500">One model call per check. Results appear item by item and are drafts for nurse review.</p>
+    <%= f.button "Check the chart", type: "submit", class: "w-full #{DesignSystemHelper::PRIMARY_BUTTON} py-2.5 disabled:opacity-60", data: { turbo_submits_with: "Checking…" } %>
+    <p class="text-xs text-muted">One model call per check. Results appear item by item and are drafts for nurse review.</p>
   </aside>
 <% end %>

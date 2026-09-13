@@ -41,10 +41,10 @@ class EvidenceCheckFlowTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_response :success
     assert_select "article#card_D0150"
-    assert_select "article#card_E0200 span", text: "UNSUPPORTED"
+    assert_select "article#card_E0200", text: /Not supported/
     assert_select "details summary", text: /Why\?/
     assert_match(/rai-manual-v1.20.1|RAI Manual/, response.body)
-    assert_match(/Mock audit projection/, response.body)
+    assert_match(/Audit projection/, response.body)
   end
 
   test "with DEMO_PASSWORD set the app requires HTTP basic auth before Devise even gets a say, and the health check is unaffected" do

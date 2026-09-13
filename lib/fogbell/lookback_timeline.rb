@@ -2,53 +2,63 @@
 
 module Fogbell
   # Presents one item's look-back window for one ARD as a day-by-day strip, for the
-  # app/views/shared/_lookback_timeline partial. Evidence outside the window is kept separate
-  # and rendered visibly stranded — that separation is the point of the component.
+  # app/views/shared/_lookback_timeline partial. Always renders 2 lead days before the window
+  # plus the window itself (a 7-day window -> 9 columns), per design_handoff_fogbell/README.md.
+  # Evidence dated earlier than that lead-in is not plotted on the strip (it is still listed in
+  # the surrounding evidence text) — the timeline is a small, fixed-size strip, not a full history.
   class LookbackTimeline
-    Day = Data.define(:date, :entries, :is_ard)
+    LEAD_DAYS = 2
 
-    attr_reader :ard, :lookback_days, :item_name
+    Day = Data.define(:date, :in_window, :is_ard, :is_today, :entries, :outside_entries) do
+      def plotted? = entries.any? || outside_entries.any?
+    end
 
-    def initialize(ard:, lookback_days:, item_name: nil, evidence: [], outside_window_evidence: [], illustrative: false)
+    attr_reader :ard, :lookback_days
+
+    def initialize(ard:, lookback_days:, evidence: [], outside_window_evidence: [], today: Date.current)
       @ard = ard
       @lookback_days = lookback_days
-      @item_name = item_name
       @evidence = evidence || []
       @outside_window_evidence = outside_window_evidence || []
-      @illustrative = illustrative
+      @today = today
       @window = EvidenceCheck::Window.new(ard, lookback_days)
     end
 
-    def illustrative? = @illustrative
     def computable? = @window.computable?
-    def first_day = @window.first_day
+    def window_first_day = @window.first_day
     def last_day = @window.last_day
+    def range_first_day = computable? ? window_first_day - LEAD_DAYS : nil
+    def column_count = computable? ? lookback_days + LEAD_DAYS : 0
 
-    # One Day per calendar day in the window, first_day..last_day inclusive, each carrying the
-    # evidence entries (if any) whose parsed date falls on it.
     def days
       return [] unless computable?
 
-      (first_day..last_day).map do |date|
-        entries = @evidence.select { |e| @window.parse(e["date"]) == date }
-        Day.new(date: date, entries: entries, is_ard: date == last_day)
+      (range_first_day..last_day).map do |date|
+        in_window = date >= window_first_day
+        Day.new(
+          date: date, in_window: in_window, is_ard: date == last_day, is_today: date == @today,
+          entries: in_window ? @evidence.select { |e| @window.parse(e["date"]) == date } : [],
+          outside_entries: in_window ? [] : @outside_window_evidence.select { |e| @window.parse(e["date"]) == date }
+        )
       end
-    end
-
-    # Outside-window entries, each with its parsed date attached (nil if unparseable), oldest first.
-    def stranded
-      @outside_window_evidence.map { |e| { entry: e, date: @window.parse(e["date"]) } }
-                               .sort_by { |s| s[:date] || Date.new(0) }
     end
 
     def evidence_count = @evidence.size
     def stranded_count = @outside_window_evidence.size
     def sparse? = computable? && evidence_count <= 1
 
+    # Real evidence that exists but falls earlier than the rendered lead-in — still true, still
+    # listed elsewhere on the page, just not something this small a strip can plot.
+    def unplotted_count
+      return 0 unless computable?
+
+      (evidence_count + stranded_count) - days.sum { |d| d.entries.size + d.outside_entries.size }
+    end
+
     def summary
       return "Look-back window not stated for this item; evidence dates are not plotted." unless computable?
 
-      parts = [ "#{lookback_days}-day window, #{first_day.strftime('%b %-d')} through #{last_day.strftime('%b %-d, %Y')} (ARD)." ]
+      parts = [ "#{lookback_days}-day window, #{window_first_day.strftime('%b %-d')} through #{last_day.strftime('%b %-d, %Y')} (ARD)." ]
       parts << (evidence_count.zero? ? "No supporting evidence found in the window." : "#{pluralize_note(evidence_count, 'supporting note')} in the window.")
       parts << "#{pluralize_note(stranded_count, 'note')} outside the window and not counted." if stranded_count.positive?
       parts.join(" ")

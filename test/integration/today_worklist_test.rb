@@ -30,15 +30,16 @@ class TodayWorklistTest < ActionDispatch::IntegrationTest
     assert_no_match(/Resident Closed/, response.body)
   end
 
-  test "worklist cards show the item at risk, its status, and both actions" do
+  test "worklist cards show the item at risk, the deadline, and both actions" do
     a = make_assessment(label: "Resident Card", ard_offset: 2, status: "open", item_id: "E0800", finding_status: "unsupported")
 
     get today_path
     assert_response :success
     assert_select "article#assessment_#{a.id}" do
-      assert_select "span", text: "UNSUPPORTED"
+      assert_select "*", text: "Closes"
+      assert_select "*", text: "in 2 days"
       assert_select "a", text: "Open check"
-      assert_select "a", text: "See the rule"
+      assert_select "a", text: "See the rule →"
     end
     assert_match(/Demo only — synthetic data/, response.body)
   end
